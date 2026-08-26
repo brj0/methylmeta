@@ -1,0 +1,5662 @@
+ADCCA:
+  name: Adenoid cystic carcinoma
+  who_volume: Head and Neck Tumours
+  site: Salivary gland
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ADAEWS:
+  name: Adamantinoma-like Ewing sarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Ewing sarcoma family
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ADREN_CA:
+  name: Adrenocortical carcinoma
+  who_volume: Endocrine and Neuroendocrine Tumours
+  site: Adrenal gland
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Adrenal tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ADREN_CA_CELLC:
+  name: Adrenocortical carcinoma, cell culture
+  who_volume: Endocrine and Neuroendocrine Tumours
+  site: Adrenal gland
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Adrenal tumor
+  - Carcinoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+AFH:
+  name: Angiomatoid fibrous histiocytoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Soft tissue tumor
+  - Sarcoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+A_IDH:
+  name: IDH glioma, astrocytoma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Astrocytoma
+  - IDH-mutant glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+A_IDH_HG:
+  name: IDH glioma, high-grade astrocytoma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Astrocytoma
+  - IDH-mutant glioma
+  - High-grade glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ALL:
+  name: Acute lymphoblastic leukemia
+  who_volume: Haematolymphoid Tumours
+  site: Blood
+  lineage_broad: Hematolymphoid
+  lineage_detail: null
+  families:
+  - Leukemia
+  - Lymphoid neoplasm
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ALCL_ALK_POS:
+  name: Anaplastic large-cell lymphoma, ALK-positive
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: T-Cell
+  families:
+  - Lymphoma
+  - T-cell lymphoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ALMO_MPC:
+  name: Angioleiomyoma / myopericytoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Soft tissue tumor
+  - Perivascular tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ALT:
+  name: Atypical lipomatous tumor
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Soft tissue tumor
+  - Adipocytic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+AMH_UMB:
+  name: Angio-mesenchymal hamartoma of the umbilical cord
+  who_volume: null
+  site: Umbilical cord
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Hamartoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+AML:
+  name: Acute myeloid leukemia
+  who_volume: Haematolymphoid Tumours
+  site: Blood
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - Leukemia
+  - Myeloid neoplasm
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ANA_PA:
+  name: Anaplastic pilocytic astrocytoma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Astrocytoma
+  - Pilocytic astrocytoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+APP_CONTR:
+  name: Normal appendix
+  who_volume: Digestive System Tumours
+  site: Appendix
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Gastrointestinal
+  synonym_of: null
+  source: solid_tumor_sketch
+
+APP_GOBCOID:
+  name: Goblet cell carcinoid of the appendix
+  who_volume: Digestive System Tumours
+  site: Appendix
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Appendiceal tumor
+  - Neuroendocrine tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+APP_ITIS:
+  name: Acute ulcerophlegmonous appendicitis
+  who_volume: Digestive System Tumours
+  site: Appendix
+  lineage_broad: Inflammatory
+  lineage_detail: null
+  families:
+  - Inflammatory
+  - Appendix
+  synonym_of: null
+  source: solid_tumor_sketch
+
+APP_NET:
+  name: Neuroendocrine tumor of the appendix
+  who_volume: Digestive System Tumours
+  site: Appendix
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Appendiceal tumor
+  - Neuroendocrine tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+AS:
+  name: Angiosarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Vascular tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ASPS:
+  name: Alveolar soft part sarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Soft tissue tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ATRT_MYC:
+  name: Atypical teratoid/rhabdoid tumor, MYC subclass
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Embryonal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Embryonal tumor
+  - Atypical teratoid/rhabdoid tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ATRT_SHH:
+  name: Atypical teratoid/rhabdoid tumor, SHH subclass
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Embryonal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Embryonal tumor
+  - Atypical teratoid/rhabdoid tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ATRT_TYR:
+  name: Atypical teratoid/rhabdoid tumor, TYR subclass
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Embryonal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Embryonal tumor
+  - Atypical teratoid/rhabdoid tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+AFX_PDS:
+  name: Atypical fibroxanthoma / pleomorphic dermal sarcoma
+  who_volume: Skin Tumours
+  site: Skin
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Skin tumor
+  - Sarcoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ABCDY:
+  name: Aneurysmal bone cyst
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Bone tumor
+  - Fibro-osseous tumor
+  synonym_of: ABCY
+  source: solid_tumor_sketch
+
+ABCY:
+  name: Aneurysmal bone cyst
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Bone tumor
+  - Fibro-osseous tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+BC_AD:
+  name: Basal cell adenoma
+  who_volume: Head and Neck Tumours
+  site: Salivary gland
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+  - Adenoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+BLADURO_CA:
+  name: Bladder urothelial carcinoma
+  who_volume: Urinary and Male Genital Tumours
+  site: Bladder
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Urinary tract tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+BLADURO_CA_CELLC:
+  name: Bladder urothelial carcinoma, cell culture
+  who_volume: Urinary and Male Genital Tumours
+  site: Bladder
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Urinary tract tumor
+  - Carcinoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+BR_CA:
+  name: Breast carcinoma
+  who_volume: Breast Tumours
+  site: Breast
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Breast tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+BR_CA_CELLC:
+  name: Breast carcinoma, cell culture
+  who_volume: Breast Tumours
+  site: Breast
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Breast tumor
+  - Carcinoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+BR_FAD:
+  name: Fibroadenoma of the breast
+  who_volume: Breast Tumours
+  site: Breast
+  lineage_broad: Epithelial / stromal
+  lineage_detail: null
+  families:
+  - Breast tumor
+  - Benign tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+BR_FEPNOS:
+  name: Fibroepithelial lesion of the breast, NOS
+  who_volume: Breast Tumours
+  site: Breast
+  lineage_broad: Epithelial / stromal
+  lineage_detail: null
+  families:
+  - Breast tumor
+  - Fibroepithelial tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+BR_CELLC:
+  name: Breast control analyte, cell culture
+  who_volume: Breast Tumours
+  site: Breast
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Breast
+  - Cell culture
+  - Control
+  synonym_of: null
+  source: solid_tumor_sketch
+
+BURK:
+  name: Burkitt lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - B-cell lymphoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CB:
+  name: Chondroblastoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Bone tumor
+  - Cartilaginous tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CCS_KIDN:
+  name: Clear cell sarcoma of the kidney
+  who_volume: Urinary and Male Genital Tumours
+  site: Kidney
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Renal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CAVER:
+  name: Cavernous hemangioma / cavernoma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Vascular
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Vascular tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CERAD_CA:
+  name: Cervical adenocarcinoma
+  who_volume: Female Genital Tumours
+  site: Cervix
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Gynecologic tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CERAD_CA_CELLC:
+  name: Cervical adenocarcinoma, cell culture
+  who_volume: Female Genital Tumours
+  site: Cervix
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Gynecologic tumor
+  - Carcinoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CERSQ_CA:
+  name: Cervical squamous cell carcinoma
+  who_volume: Female Genital Tumours
+  site: Cervix
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Gynecologic tumor
+  - Carcinoma
+  - Squamous cell carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CERSQ_CA_CELLC:
+  name: Cervical squamous cell carcinoma, cell culture
+  who_volume: Female Genital Tumours
+  site: Cervix
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Gynecologic tumor
+  - Carcinoma
+  - Squamous cell carcinoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CERSQ_CA_HPV:
+  name: Cervical squamous cell carcinoma, HPV-positive
+  who_volume: Female Genital Tumours
+  site: Cervix
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Gynecologic tumor
+  - Carcinoma
+  - Squamous cell carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CHGL:
+  name: Chordoid glioma of the third ventricle
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Glial tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CHOL_CA:
+  name: Cholangiocarcinoma
+  who_volume: Digestive System Tumours
+  site: Bile duct
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Hepatobiliary tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CHOL_CA_CELLC:
+  name: Cholangiocarcinoma, cell culture
+  who_volume: Digestive System Tumours
+  site: Bile duct
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Hepatobiliary tumor
+  - Carcinoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CHORD:
+  name: Chordoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Bone tumor
+  - Chordoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CHOR_DEDIFF:
+  name: Dedifferentiated chordoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Bone tumor
+  - Chordoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CHORCA:
+  name: Choriocarcinoma
+  who_volume: Urinary and Male Genital Tumours
+  site: Testis / placenta
+  lineage_broad: Trophoblastic
+  lineage_detail: null
+  families:
+  - Germ cell tumor
+  - Trophoblastic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CLL:
+  name: Chronic lymphocytic leukemia
+  who_volume: Haematolymphoid Tumours
+  site: Blood
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Leukemia
+  - B-cell neoplasm
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CMFI:
+  name: Chondromyxoid fibroma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Bone tumor
+  - Cartilaginous tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CN:
+  name: Central neurocytoma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Neuronal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Neurocytic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CNFT:
+  name: Cutaneous neurocristic EWSR1::FLI1 fusion tumor
+  who_volume: Skin Tumours
+  site: Skin
+  lineage_broad: Neural crest
+  lineage_detail: null
+  families:
+  - Skin tumor
+  - Ewing-like tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CNS_EPCYST:
+  name: Epidermoid cyst
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - CNS lesion
+  - Cyst
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CNS_NB_FOXR2:
+  name: CNS neuroblastoma with FOXR2 activation
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Neuronal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Neuroblastoma
+  - Embryonal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+COL_AD:
+  name: Colon adenoma
+  who_volume: Digestive System Tumours
+  site: Colon
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Gastrointestinal tumor
+  - Adenoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+COL_CA:
+  name: Colon carcinoma
+  who_volume: Digestive System Tumours
+  site: Colon
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Gastrointestinal tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+COL_CA_CELLC:
+  name: Colon carcinoma, cell culture
+  who_volume: Digestive System Tumours
+  site: Colon
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Gastrointestinal tumor
+  - Carcinoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+COL_CELLC:
+  name: Colon control analyte, cell culture
+  who_volume: Digestive System Tumours
+  site: Colon
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Colon
+  - Cell culture
+  - Control
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_ADENOPIT:
+  name: Normal anterior pituitary
+  who_volume: Central Nervous System Tumours
+  site: Pituitary gland
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - CNS
+  - Pituitary
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_ADREN:
+  name: Normal adrenal gland
+  who_volume: Endocrine and Neuroendocrine Tumours
+  site: Adrenal gland
+  lineage_broad: Endocrine
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Adrenal
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_BLA:
+  name: Normal bladder
+  who_volume: Urinary and Male Genital Tumours
+  site: Bladder
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Urinary tract
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_BLOOD:
+  name: Blood / leukocyte signature
+  who_volume: Haematolymphoid Tumours
+  site: Blood
+  lineage_broad: Hematolymphoid
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Blood
+  - Control
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_BREAST:
+  name: Normal breast tissue
+  who_volume: Breast Tumours
+  site: Breast
+  lineage_broad: Epithelial / stromal
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Breast
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_CEBM:
+  name: Normal cerebellar hemisphere
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Neural
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Brain
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_CERV:
+  name: Normal uterine cervix
+  who_volume: Female Genital Tumours
+  site: Cervix
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Gynecologic
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_CHOL:
+  name: Normal bile duct
+  who_volume: Digestive System Tumours
+  site: Bile duct
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Hepatobiliary
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_COL:
+  name: Normal colon
+  who_volume: Digestive System Tumours
+  site: Colon
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Gastrointestinal
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_ENDOM:
+  name: Normal endometrium
+  who_volume: Female Genital Tumours
+  site: Endometrium
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Gynecologic
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_ESO:
+  name: Normal esophagus
+  who_volume: Digestive System Tumours
+  site: Esophagus
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Gastrointestinal
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_HEMI:
+  name: Normal cerebral cortex
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Neural
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Brain
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_HN:
+  name: Normal head and neck mucosa
+  who_volume: Head and Neck Tumours
+  site: Head and neck
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Head and neck
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_HYPTHAL:
+  name: Normal hypothalamus
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Neural
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Brain
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_INFLAM:
+  name: Inflammatory tumor microenvironment
+  who_volume: null
+  site: Multiple
+  lineage_broad: Immune
+  lineage_detail: null
+  families:
+  - Control
+  - Inflammatory
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_KIDNEY:
+  name: Normal kidney
+  who_volume: Urinary and Male Genital Tumours
+  site: Kidney
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Renal
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_LIVER:
+  name: Normal liver
+  who_volume: Digestive System Tumours
+  site: Liver
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Hepatobiliary
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_LUNG:
+  name: Normal lung
+  who_volume: Thoracic Tumours
+  site: Lung
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Thoracic
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_MUS:
+  name: Normal muscle
+  who_volume: null
+  site: Muscle
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Muscle
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_OVA:
+  name: Normal ovary
+  who_volume: Female Genital Tumours
+  site: Ovary
+  lineage_broad: Epithelial / stromal
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Gynecologic
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_PAN:
+  name: Normal pancreas
+  who_volume: Digestive System Tumours
+  site: Pancreas
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Gastrointestinal
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_PINEAL:
+  name: Normal pineal gland
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Brain
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_PONS:
+  name: Normal pons
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Neural
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Brain
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_PR:
+  name: Normal prostate
+  who_volume: Urinary and Male Genital Tumours
+  site: Prostate
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Genitourinary
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_REA:
+  name: Normal reactive tissue
+  who_volume: null
+  site: Multiple
+  lineage_broad: Mixed
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Reactive
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_REACT:
+  name: Reactive tumor microenvironment
+  who_volume: null
+  site: Multiple
+  lineage_broad: Immune / stromal
+  lineage_detail: null
+  families:
+  - Control
+  - Reactive
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_SKIN:
+  name: Normal skin
+  who_volume: Skin Tumours
+  site: Skin
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Skin
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_SOFT:
+  name: Normal soft tissue
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Soft tissue
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_STOM:
+  name: Normal stomach
+  who_volume: Digestive System Tumours
+  site: Stomach
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Gastrointestinal
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_TES:
+  name: Normal testis
+  who_volume: Urinary and Male Genital Tumours
+  site: Testis
+  lineage_broad: Germ cell
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Testis
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_THYM:
+  name: Normal thymus
+  who_volume: Thoracic Tumours
+  site: Thymus
+  lineage_broad: Hematolymphoid
+  lineage_detail: Lymphoid
+  families:
+  - Normal tissue
+  - Lymphoid
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_THYR:
+  name: Normal thyroid gland
+  who_volume: Endocrine and Neuroendocrine Tumours
+  site: Thyroid
+  lineage_broad: Endocrine
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Endocrine
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_TUB:
+  name: Normal fallopian tube
+  who_volume: Female Genital Tumours
+  site: Fallopian tube
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Gynecologic
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CONTR_WM:
+  name: Normal white matter
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Neural / glial
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Brain
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CPC_PED:
+  name: Choroid plexus carcinoma, pediatric
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Choroid plexus tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CPH_ADM:
+  name: Adamantinomatous craniopharyngioma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Craniopharyngioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CPH_PAP:
+  name: Papillary craniopharyngioma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Craniopharyngioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CSA_CC:
+  name: Clear cell chondrosarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone / soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Chondrosarcoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CSA_DD:
+  name: Dedifferentiated chondrosarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone / soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Chondrosarcoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CSA_EM:
+  name: Extraskeletal myxoid chondrosarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Chondrosarcoma
+  synonym_of: EMCS
+  source: solid_tumor_sketch
+
+CSA_IDH_MUT_A:
+  name: Chondrosarcoma, IDH-mutant methylation class A
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone / soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Chondrosarcoma
+  - IDH-mutant
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CSA_IDH_MUT_B:
+  name: Chondrosarcoma, IDH-mutant methylation class B
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone / soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Chondrosarcoma
+  - IDH-mutant
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CSA_IDH_WT_A:
+  name: Chondrosarcoma, IDH-wildtype group A
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone / soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Chondrosarcoma
+  - IDH-wildtype
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CSA_IDH_WT_B:
+  name: Chondrosarcoma, IDH-wildtype group B
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone / soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Chondrosarcoma
+  - IDH-wildtype
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CSA_MES:
+  name: Mesenchymal chondrosarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone / soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Chondrosarcoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+CSA_NOS:
+  name: Chondrosarcoma, NOS
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone / soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Chondrosarcoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+DDLS:
+  name: Dedifferentiated liposarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Adipocytic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+DG_F3T3_O:
+  name: Diffuse glioma, FGFR3-TACC3 fusion
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - High-grade glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+DLBCL:
+  name: Diffuse large B-cell lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - B-cell lymphoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+DLBCL_ABC:
+  name: Diffuse large B-cell lymphoma, activated B-cell type
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - B-cell lymphoma
+  - DLBCL
+  synonym_of: null
+  source: solid_tumor_sketch
+
+DLBCL_CELLC:
+  name: Diffuse large B-cell lymphoma, cell culture
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - B-cell lymphoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+DLBCL_GCB:
+  name: Diffuse large B-cell lymphoma, germinal-center B-cell type
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - B-cell lymphoma
+  - DLBCL
+  synonym_of: null
+  source: solid_tumor_sketch
+
+DLGNT:
+  name: Diffuse leptomeningeal glioneuronal tumor
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glioneuronal
+  lineage_detail: null
+  families:
+  - Glioma
+  - Glioneuronal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+DMG_K27:
+  name: Diffuse midline glioma, H3 K27-altered
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - High-grade glioma
+  - Diffuse midline glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+DNADEG:
+  name: Degraded DNA
+  who_volume: null
+  site: Multiple
+  lineage_broad: Unknown
+  lineage_detail: null
+  families:
+  - Technical
+  - Poor-quality sample
+  synonym_of: null
+  source: solid_tumor_sketch
+
+DS:
+  name: Desmoid-type fibromatosis
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Soft tissue tumor
+  - Fibroblastic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+DSRCT:
+  name: Desmoplastic small round cell tumor
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Small round cell tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+DTFM:
+  name: Desmoid-type fibromatosis
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Soft tissue tumor
+  - Fibroblastic tumor
+  synonym_of: DS
+  source: solid_tumor_sketch
+
+DUO_CA:
+  name: Duodenal adenocarcinoma
+  who_volume: Digestive System Tumours
+  site: Duodenum
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Gastrointestinal tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+EATCL:
+  name: Enteropathy-associated T-cell lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Small intestine
+  lineage_broad: Hematolymphoid
+  lineage_detail: T-Cell
+  families:
+  - Lymphoma
+  - T-cell lymphoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+EBVTCL:
+  name: EBV-associated T-cell lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: T-Cell
+  families:
+  - Lymphoma
+  - T-cell lymphoma
+  - EBV-associated
+  synonym_of: null
+  source: solid_tumor_sketch
+
+EHE:
+  name: Epithelioid hemangioendothelioma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Vascular
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Vascular tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ELST:
+  name: Endolymphatic sac tumor
+  who_volume: Central Nervous System Tumours
+  site: Temporal bone
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Ear tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+EMBCA_T:
+  name: Testicular embryonal carcinoma
+  who_volume: Urinary and Male Genital Tumours
+  site: Testis
+  lineage_broad: Germ cell
+  lineage_detail: null
+  families:
+  - Germ cell tumor
+  - Testicular tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+EMCS:
+  name: Extraskeletal myxoid chondrosarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Chondrosarcoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ENB_A:
+  name: Esthesioneuroblastoma, subclass A
+  who_volume: Head and Neck Tumours
+  site: Nasal cavity
+  lineage_broad: Neuroectodermal
+  lineage_detail: null
+  families:
+  - Sinonasal tumor
+  - Neuroendocrine tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ENB_B:
+  name: Esthesioneuroblastoma, subclass B
+  who_volume: Head and Neck Tumours
+  site: Nasal cavity
+  lineage_broad: Neuroectodermal
+  lineage_detail: null
+  families:
+  - Sinonasal tumor
+  - Neuroendocrine tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+EPN_MPE:
+  name: Myxopapillary ependymoma
+  who_volume: Central Nervous System Tumours
+  site: Spinal cord
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Ependymoma
+  - Glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+EPN_PF_A:
+  name: Ependymoma, posterior fossa group A
+  who_volume: Central Nervous System Tumours
+  site: Posterior fossa
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Ependymoma
+  - Glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+EPN_PF_B:
+  name: Ependymoma, posterior fossa group B
+  who_volume: Central Nervous System Tumours
+  site: Posterior fossa
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Ependymoma
+  - Glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+EPN_RELA:
+  name: Ependymoma, ZFTA/RELA fusion-positive
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Ependymoma
+  - Glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+EPN_SPINE:
+  name: Spinal ependymoma
+  who_volume: Central Nervous System Tumours
+  site: Spinal cord
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Ependymoma
+  - Glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+EPN_SPINE_MYCN:
+  name: Spinal ependymoma, MYCN-amplified
+  who_volume: Central Nervous System Tumours
+  site: Spinal cord
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Ependymoma
+  - Glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+EPN_YAP:
+  name: Ependymoma, YAP1 fusion-positive
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Ependymoma
+  - Glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+EPMYOC:
+  name: Epithelial-myoepithelial carcinoma
+  who_volume: Head and Neck Tumours
+  site: Salivary gland
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ES:
+  name: Epithelioid sarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Soft tissue tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ESO_CA:
+  name: Esophageal carcinoma
+  who_volume: Digestive System Tumours
+  site: Esophagus
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Gastrointestinal tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ESO_CA_AD:
+  name: Esophageal adenocarcinoma
+  who_volume: Digestive System Tumours
+  site: Esophagus
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Gastrointestinal tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ESO_CA_CELLC:
+  name: Esophageal carcinoma, cell culture
+  who_volume: Digestive System Tumours
+  site: Esophagus
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Gastrointestinal tumor
+  - Carcinoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ESO_CA_SQ:
+  name: Esophageal squamous cell carcinoma
+  who_volume: Digestive System Tumours
+  site: Esophagus
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Gastrointestinal tumor
+  - Carcinoma
+  - Squamous cell carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ETMR:
+  name: Embryonal tumor with multilayered rosettes
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Embryonal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Embryonal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+EVN:
+  name: Extraventricular neurocytoma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Neuronal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Neurocytic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+EFT_CIC:
+  name: CNS Ewing sarcoma family tumor with CIC alteration
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Sarcoma
+  - Ewing-like tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+EWS:
+  name: Ewing sarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone / soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Ewing sarcoma family
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ESS_HG:
+  name: High-grade endometrial stromal sarcoma
+  who_volume: Female Genital Tumours
+  site: Uterus
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Gynecologic tumor
+  - Sarcoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ESS_LG:
+  name: Low-grade endometrial stromal sarcoma
+  who_volume: Female Genital Tumours
+  site: Uterus
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Gynecologic tumor
+  - Sarcoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+FIDYS:
+  name: Fibrous dysplasia
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Bone lesion
+  - Fibro-osseous lesion
+  synonym_of: null
+  source: solid_tumor_sketch
+
+GCFB_DFSP:
+  name: Giant cell fibroblastoma with transition to dermatofibrosarcoma protuberans
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue / skin
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Soft tissue tumor
+  - Fibroblastic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+GCTB:
+  name: Giant cell tumor of bone
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Bone tumor
+  - Giant cell tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+GCTT:
+  name: Tenosynovial giant cell tumor
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Soft tissue tumor
+  - Giant cell tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+GBM_G34:
+  name: Glioblastoma, IDH-wildtype, H3.3 G34-mutant
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Glioblastoma
+  - High-grade glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+GBM_LOW:
+  name: Glioblastoma, IDH-wildtype, low tumor cell content
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Glioblastoma
+  - Low tumor content
+  synonym_of: null
+  source: solid_tumor_sketch
+
+GBM_MES:
+  name: Glioblastoma, IDH-wildtype, mesenchymal subclass
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Glioblastoma
+  - High-grade glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+GBM_MID:
+  name: Glioblastoma, IDH-wildtype, midline subclass
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Glioblastoma
+  - High-grade glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+GBM_MYCN:
+  name: Glioblastoma, IDH-wildtype, MYCN subclass
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Glioblastoma
+  - High-grade glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+GBM_NOS:
+  name: Glioblastoma, NOS
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Glioblastoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+GBM_NT:
+  name: Normal brain tissue associated with glioblastoma dataset
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Neural
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Brain
+  - Control
+  synonym_of: null
+  source: solid_tumor_sketch
+
+GBM_PNC:
+  name: Glioblastoma, IDH-wildtype, with primitive neuronal component
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Glioblastoma
+  - High-grade glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+GBM_RTK_I:
+  name: Glioblastoma, IDH-wildtype, RTK I
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Glioblastoma
+  - High-grade glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+GBM_RTK_II:
+  name: Glioblastoma, IDH-wildtype, RTK II
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Glioblastoma
+  - High-grade glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+GBM_RTK_III:
+  name: Glioblastoma, IDH-wildtype, RTK III
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Glioblastoma
+  - High-grade glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+GLIMES:
+  name: GLI-altered mesenchymal tumor
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Mesenchymal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+GIST:
+  name: Gastrointestinal stromal tumor
+  who_volume: Digestive System Tumours
+  site: Gastrointestinal tract
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Gastrointestinal tumor
+  - Mesenchymal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+GLOAN:
+  name: Glomangioma / glomus tumor
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Soft tissue tumor
+  - Perivascular tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+GN:
+  name: Ganglioneuroma
+  who_volume: null
+  site: Peripheral nervous system
+  lineage_broad: Neural
+  lineage_detail: null
+  families:
+  - Neural tumor
+  - Ganglioneuroma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+GERMI_CNS:
+  name: CNS germinoma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Germ cell
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Germ cell tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+GRCT:
+  name: Granular cell tumor
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Neural / Schwannian
+  lineage_detail: null
+  families:
+  - Soft tissue tumor
+  - Neural tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+HCA:
+  name: Hepatocellular adenoma
+  who_volume: Digestive System Tumours
+  site: Liver
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Hepatobiliary tumor
+  - Adenoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+HCC:
+  name: Hepatocellular carcinoma
+  who_volume: Digestive System Tumours
+  site: Liver
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Hepatobiliary tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+HCC_CELLC:
+  name: Hepatocellular carcinoma, cell culture
+  who_volume: Digestive System Tumours
+  site: Liver
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Hepatobiliary tumor
+  - Carcinoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+HGG_B:
+  name: Adult-type diffuse high-grade glioma, IDH-wildtype, subtype B
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - High-grade glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+HGG_F:
+  name: High-grade glioma, methylation class F
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - High-grade glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+HGAP:
+  name: High-grade astrocytoma with piloid features
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Astrocytoma
+  - High-grade glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+HGNET_BCOR:
+  name: CNS high-grade neuroepithelial tumor with BCOR alteration
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Neuroepithelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - High-grade neuroepithelial tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+HGNET_MN1:
+  name: CNS high-grade neuroepithelial tumor with MN1 alteration
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Neuroepithelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - High-grade neuroepithelial tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+HGNET_NOS6:
+  name: CNS high-grade neuroepithelial tumor, NOS
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Neuroepithelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - High-grade neuroepithelial tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+HISTSARC:
+  name: Histiocytic sarcoma
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue / soft tissue
+  lineage_broad: Histiocytic
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Histiocytic neoplasm
+  synonym_of: null
+  source: solid_tumor_sketch
+
+HMB:
+  name: Hemangioblastoma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Stromal / vascular
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Vascular tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+HNSQ_CA:
+  name: Head and neck squamous cell carcinoma
+  who_volume: Head and Neck Tumours
+  site: Head and neck
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Head and neck tumor
+  - Carcinoma
+  - Squamous cell carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+HNSQ_CA_CELLC:
+  name: Head and neck squamous cell carcinoma, cell culture
+  who_volume: Head and Neck Tumours
+  site: Head and neck
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Head and neck tumor
+  - Carcinoma
+  - Squamous cell carcinoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+HODG_CL:
+  name: Classical Hodgkin lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - Hodgkin lymphoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+HODG_NS:
+  name: Hodgkin lymphoma, nodular sclerosis
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - Hodgkin lymphoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+IFS:
+  name: Infantile fibrosarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Fibroblastic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+IHG:
+  name: Infantile hemispheric glioma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Pediatric glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ICMT:
+  name: Intracranial mesenchymal tumor with FET/CREB fusion
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Mesenchymal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+IMET_FET:
+  name: Intracranial mesenchymal tumor, FET::CREB fusion
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Mesenchymal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+IMFT:
+  name: Inflammatory myofibroblastic tumor
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Soft tissue tumor
+  - Fibroblastic tumor
+  - Inflammatory tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+IMN:
+  name: Infectious mononucleosis
+  who_volume: null
+  site: Lymphoid tissue
+  lineage_broad: Immune
+  lineage_detail: null
+  families:
+  - Reactive
+  - Lymphoid
+  synonym_of: null
+  source: solid_tumor_sketch
+
+INFFIB:
+  name: Infantile fibromatosis
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Soft tissue tumor
+  - Fibroblastic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+INFL_NOS:
+  name: Inflammatory reaction, NOS
+  who_volume: null
+  site: Multiple
+  lineage_broad: Immune
+  lineage_detail: null
+  families:
+  - Reactive
+  - Inflammatory
+  synonym_of: null
+  source: solid_tumor_sketch
+
+KPGCT:
+  name: Cytokeratin-positive giant cell tumor
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone / soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Giant cell tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LCH:
+  name: Langerhans cell histiocytosis
+  who_volume: Haematolymphoid Tumours
+  site: Multiple
+  lineage_broad: Histiocytic
+  lineage_detail: null
+  families:
+  - Histiocytic neoplasm
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LEC:
+  name: Lymphoepithelial carcinoma
+  who_volume: null
+  site: Multiple
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LEMY:
+  name: Leiomyoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Soft tissue tumor
+  - Smooth muscle tumor
+  synonym_of: LMO
+  source: solid_tumor_sketch
+
+LGFS:
+  name: Low-grade fibrosarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Fibroblastic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LGFMS:
+  name: Low-grade fibromyxoid sarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Fibroblastic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LGG:
+  name: Lower-grade glioma, NOS
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Low-grade glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LGG_CELLC:
+  name: Lower-grade glioma, cell culture
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Low-grade glioma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LGG_DIG_DIA:
+  name: Desmoplastic infantile astrocytoma / ganglioglioma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glioneuronal
+  lineage_detail: null
+  families:
+  - Glioma
+  - Low-grade glioma
+  - Glioneuronal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LGG_DNT:
+  name: Dysembryoplastic neuroepithelial tumor
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glioneuronal
+  lineage_detail: null
+  families:
+  - Low-grade glioma
+  - Glioneuronal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LGG_GG:
+  name: Ganglioglioma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glioneuronal
+  lineage_detail: null
+  families:
+  - Low-grade glioma
+  - Glioneuronal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LGG_MYB:
+  name: Low-grade glioma, MYB/MYBL1-altered
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Low-grade glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LGG_PA_GG_ST:
+  name: Hemispheric pilocytic astrocytoma / ganglioglioma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glioneuronal
+  lineage_detail: null
+  families:
+  - Low-grade glioma
+  - Pilocytic astrocytoma
+  - Glioneuronal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LGG_PA_MID:
+  name: Midline pilocytic astrocytoma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Low-grade glioma
+  - Pilocytic astrocytoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LGG_PA_PF:
+  name: Posterior fossa pilocytic astrocytoma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Low-grade glioma
+  - Pilocytic astrocytoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LGG_RGNT:
+  name: Rosette-forming glioneuronal tumor
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glioneuronal
+  lineage_detail: null
+  families:
+  - Low-grade glioma
+  - Glioneuronal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LGG_SEGA:
+  name: Subependymal giant cell astrocytoma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Low-grade glioma
+  - Astrocytoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LIPN:
+  name: Cerebellar liponeurocytoma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glioneuronal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Glioneuronal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LIPO:
+  name: Lipoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Soft tissue tumor
+  - Adipocytic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LIPSAR:
+  name: Liposarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Adipocytic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LMO:
+  name: Leiomyoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Soft tissue tumor
+  - Smooth muscle tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LMS:
+  name: Leiomyosarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Smooth muscle tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LCTCL:
+  name: Large-cell lymphoma of T-cell type
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: T-Cell
+  families:
+  - Lymphoma
+  - T-cell lymphoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LYMPHO:
+  name: Lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: null
+  families:
+  - Lymphoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LYM_B_LPL:
+  name: Lymphoplasmacytic lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - B-cell lymphoma
+  synonym_of: LPL
+  source: solid_tumor_sketch
+
+LYM_B_LPL_DLBCL:
+  name: Lymphoplasmacytic lymphoma with transformation to DLBCL
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - B-cell lymphoma
+  - DLBCL
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LYM_B_MZL_DLBCL:
+  name: Marginal zone B-cell lymphoma with transformation to DLBCL
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - B-cell lymphoma
+  - DLBCL
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LYM_B_MZL_EYE:
+  name: Marginal zone B-cell lymphoma of eye / lacrimal gland
+  who_volume: Haematolymphoid Tumours
+  site: Eye / lacrimal gland
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - B-cell lymphoma
+  - Marginal zone lymphoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LYM_B_MZL_LN:
+  name: Marginal zone B-cell lymphoma of lymph node
+  who_volume: Haematolymphoid Tumours
+  site: Lymph node
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - B-cell lymphoma
+  - Marginal zone lymphoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LYM_B_MZL_LUN:
+  name: Marginal zone B-cell lymphoma of lung
+  who_volume: Haematolymphoid Tumours
+  site: Lung
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - B-cell lymphoma
+  - Marginal zone lymphoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LYM_B_MZL_MALT:
+  name: Marginal zone B-cell lymphoma, MALT type
+  who_volume: Haematolymphoid Tumours
+  site: Extranodal
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - B-cell lymphoma
+  - Marginal zone lymphoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LYM_B_MZL_NOS:
+  name: Marginal zone B-cell lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - B-cell lymphoma
+  - Marginal zone lymphoma
+  synonym_of: MZBL
+  source: solid_tumor_sketch
+
+LYM_B_MZL_SP:
+  name: Marginal zone B-cell lymphoma of spleen
+  who_volume: Haematolymphoid Tumours
+  site: Spleen
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - B-cell lymphoma
+  - Marginal zone lymphoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LYM_B_MZL_STO:
+  name: Marginal zone B-cell lymphoma of stomach
+  who_volume: Haematolymphoid Tumours
+  site: Stomach
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - B-cell lymphoma
+  - Marginal zone lymphoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LYM_MAN:
+  name: Mantle cell lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - B-cell lymphoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+LYM_MAN_BLA:
+  name: Blastoid mantle cell lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - B-cell lymphoma
+  - Mantle cell lymphoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MB_G3:
+  name: Medulloblastoma, group 3
+  who_volume: Central Nervous System Tumours
+  site: Cerebellum
+  lineage_broad: Embryonal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Medulloblastoma
+  - Embryonal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MB_G4:
+  name: Medulloblastoma, group 4
+  who_volume: Central Nervous System Tumours
+  site: Cerebellum
+  lineage_broad: Embryonal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Medulloblastoma
+  - Embryonal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MB_SHH_CHL_AD:
+  name: Medulloblastoma, SHH A
+  who_volume: Central Nervous System Tumours
+  site: Cerebellum
+  lineage_broad: Embryonal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Medulloblastoma
+  - Embryonal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MB_SHH_INF:
+  name: Medulloblastoma, SHH B, infant
+  who_volume: Central Nervous System Tumours
+  site: Cerebellum
+  lineage_broad: Embryonal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Medulloblastoma
+  - Embryonal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MB_WNT:
+  name: Medulloblastoma, WNT
+  who_volume: Central Nervous System Tumours
+  site: Cerebellum
+  lineage_broad: Embryonal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Medulloblastoma
+  - Embryonal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MELAN:
+  name: Melanoma
+  who_volume: null
+  site: Skin / multiple
+  lineage_broad: Melanocytic
+  lineage_detail: null
+  families:
+  - Melanocytic tumor
+  - Melanoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MELAN_CUT:
+  name: Cutaneous melanoma
+  who_volume: Skin Tumours
+  site: Skin
+  lineage_broad: Melanocytic
+  lineage_detail: null
+  families:
+  - Melanocytic tumor
+  - Melanoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MELAN_CUT_CELLC:
+  name: Cutaneous melanoma, cell culture
+  who_volume: Skin Tumours
+  site: Skin
+  lineage_broad: Melanocytic
+  lineage_detail: null
+  families:
+  - Melanocytic tumor
+  - Melanoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MELAN_UVE:
+  name: Uveal melanoma
+  who_volume: Eye Tumours
+  site: Eye
+  lineage_broad: Melanocytic
+  lineage_detail: null
+  families:
+  - Melanocytic tumor
+  - Melanoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MELAN_UVE_CELLC:
+  name: Uveal melanoma, cell culture
+  who_volume: Eye Tumours
+  site: Eye
+  lineage_broad: Melanocytic
+  lineage_detail: null
+  families:
+  - Melanocytic tumor
+  - Melanoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MELCYT:
+  name: Melanocytoma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Melanocytic
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Melanocytic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MERKELCA:
+  name: Merkel cell carcinoma
+  who_volume: Skin Tumours
+  site: Skin
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Skin tumor
+  - Carcinoma
+  - Neuroendocrine tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MESOT:
+  name: Mesothelioma
+  who_volume: Thoracic Tumours
+  site: Pleura / peritoneum
+  lineage_broad: Mesothelial
+  lineage_detail: null
+  families:
+  - Thoracic tumor
+  - Mesothelial tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MESOT_CELLC:
+  name: Mesothelioma, cell culture
+  who_volume: Thoracic Tumours
+  site: Pleura / peritoneum
+  lineage_broad: Mesothelial
+  lineage_detail: null
+  families:
+  - Thoracic tumor
+  - Mesothelial tumor
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+METST:
+  name: Myoepithelioma of soft tissue
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Soft tissue tumor
+  - Myoepithelial tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MNG:
+  name: Meningioma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Meningothelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Meningioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MNG_BEN_1:
+  name: Meningioma, benign grade 1
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Meningothelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Meningioma
+  - Benign tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MNG_BEN_2:
+  name: Meningioma, benign group 2
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Meningothelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Meningioma
+  - Benign tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MNG_BEN_3:
+  name: Meningioma, benign group 3
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Meningothelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Meningioma
+  - Benign tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MNG_CC:
+  name: Clear cell meningioma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Meningothelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Meningioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MNG_INT_A:
+  name: Meningioma, intermediate group A
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Meningothelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Meningioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MNG_INT_B:
+  name: Meningioma, intermediate group B
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Meningothelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Meningioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MNG_MAL:
+  name: Malignant meningioma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Meningothelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Meningioma
+  - Malignant tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MO:
+  name: Myositis ossificans
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Reactive lesion
+  - Soft tissue
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MPNST:
+  name: Malignant peripheral nerve sheath tumor
+  who_volume: null
+  site: Peripheral nervous system
+  lineage_broad: Neural
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Peripheral nerve sheath tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MPNST_HG:
+  name: High-grade malignant peripheral nerve sheath tumor
+  who_volume: null
+  site: Peripheral nervous system
+  lineage_broad: Neural
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Peripheral nerve sheath tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MPNST_LG:
+  name: Low-grade malignant peripheral nerve sheath tumor
+  who_volume: null
+  site: Peripheral nervous system
+  lineage_broad: Neural
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Peripheral nerve sheath tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MRT:
+  name: Malignant rhabdoid tumor
+  who_volume: null
+  site: Multiple
+  lineage_broad: Embryonal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Embryonal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MYFS:
+  name: Myxofibrosarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Fibroblastic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MYOSSI:
+  name: Myositis ossificans
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Reactive lesion
+  - Soft tissue
+  synonym_of: MO
+  source: solid_tumor_sketch
+
+MYPROL:
+  name: Myositis proliferans
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Reactive lesion
+  - Soft tissue
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MYO:
+  name: Myoepithelioma
+  who_volume: Head and Neck Tumours
+  site: Salivary gland
+  lineage_broad: Epithelial / myoepithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+  - Myoepithelial tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+MYXGNT:
+  name: Myxoid glioneuronal tumor
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glioneuronal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Glioneuronal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+NBL:
+  name: Neuroblastoma
+  who_volume: null
+  site: Peripheral nervous system
+  lineage_broad: Neural
+  lineage_detail: null
+  families:
+  - Neuroblastoma
+  - Embryonal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+NESA:
+  name: NEC-like SMARCA4/ARID1A-enriched tumor
+  who_volume: null
+  site: Multiple
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+NET_PLAGL1_FUS:
+  name: Neuroepithelial tumor with PLAGL1 fusion
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Neuroepithelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Neuroepithelial tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+NFATC2S:
+  name: NATC2-altered sarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue / bone
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+NFA:
+  name: Nodular fasciitis
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Reactive lesion
+  - Fibroblastic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+NFIB:
+  name: Neurofibroma
+  who_volume: null
+  site: Peripheral nervous system
+  lineage_broad: Neural
+  lineage_detail: null
+  families:
+  - Peripheral nerve sheath tumor
+  - Benign tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+NFIB_PLEX:
+  name: Plexiform neurofibroma
+  who_volume: null
+  site: Peripheral nervous system
+  lineage_broad: Neural
+  lineage_detail: null
+  families:
+  - Peripheral nerve sheath tumor
+  - Benign tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+NSCLC:
+  name: Non-small cell lung carcinoma
+  who_volume: Thoracic Tumours
+  site: Lung
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Lung tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+NSCLC_AD:
+  name: Lung adenocarcinoma
+  who_volume: Thoracic Tumours
+  site: Lung
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Lung tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+NSCLC_AD_CELLC:
+  name: Lung adenocarcinoma, cell culture
+  who_volume: Thoracic Tumours
+  site: Lung
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Lung tumor
+  - Carcinoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+NSCLC_SC:
+  name: Lung squamous cell carcinoma
+  who_volume: Thoracic Tumours
+  site: Lung
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Lung tumor
+  - Carcinoma
+  - Squamous cell carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+NSCLC_SC_CELLC:
+  name: Lung squamous cell carcinoma, cell culture
+  who_volume: Thoracic Tumours
+  site: Lung
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Lung tumor
+  - Carcinoma
+  - Squamous cell carcinoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+NSEM_GCT:
+  name: Non-seminomatous germ cell tumor
+  who_volume: Urinary and Male Genital Tumours
+  site: Testis
+  lineage_broad: Germ cell
+  lineage_detail: null
+  families:
+  - Germ cell tumor
+  - Testicular tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+NUTMID_CA:
+  name: NUT midline carcinoma
+  who_volume: Head and Neck Tumours
+  site: Head and neck / thorax
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+  - Midline carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+OB:
+  name: Osteoblastoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Bone tumor
+  - Osteogenic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+OFMT:
+  name: Ossifying fibromyxoid tumor
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Soft tissue tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+OMY:
+  name: Odontogenic myxoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Jaw
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Bone tumor
+  - Odontogenic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+O_IDH:
+  name: IDH-mutant, 1p/19q-codeleted oligodendroglioma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Oligodendroglioma
+  - IDH-mutant glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+O_IDH_ANA:
+  name: Anaplastic oligodendroglioma, IDH-mutant, 1p/19q-codeleted
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Oligodendroglioma
+  - High-grade glioma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+OS_CONV:
+  name: Conventional osteosarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Bone tumor
+  - Osteogenic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+OS_LG:
+  name: Low-grade osteosarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Bone tumor
+  - Osteogenic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+OS_MDM2:
+  name: MDM2-amplified osteosarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Bone tumor
+  - Osteogenic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+OSOB:
+  name: Osteoblastic osteosarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Bone tumor
+  - Osteogenic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+OVA_CA:
+  name: Ovarian carcinoma
+  who_volume: Female Genital Tumours
+  site: Ovary
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Gynecologic tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+OVA_CA_CELLC:
+  name: Ovarian carcinoma, cell culture
+  who_volume: Female Genital Tumours
+  site: Ovary
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Gynecologic tumor
+  - Carcinoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PAN_CA:
+  name: Pancreatic carcinoma
+  who_volume: Digestive System Tumours
+  site: Pancreas
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Gastrointestinal tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PAN_CA_CELLC:
+  name: Pancreatic carcinoma, cell culture
+  who_volume: Digestive System Tumours
+  site: Pancreas
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Gastrointestinal tumor
+  - Carcinoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PHEO:
+  name: Pheochromocytoma
+  who_volume: Endocrine and Neuroendocrine Tumours
+  site: Adrenal gland
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Adrenal tumor
+  - Neuroendocrine tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PHYT_BEN:
+  name: Benign phyllodes tumor
+  who_volume: Breast Tumours
+  site: Breast
+  lineage_broad: Epithelial / stromal
+  lineage_detail: null
+  families:
+  - Breast tumor
+  - Fibroepithelial tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PHYT_BOR:
+  name: Borderline phyllodes tumor
+  who_volume: Breast Tumours
+  site: Breast
+  lineage_broad: Epithelial / stromal
+  lineage_detail: null
+  families:
+  - Breast tumor
+  - Fibroepithelial tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PHYT_MAL:
+  name: Malignant phyllodes tumor
+  who_volume: Breast Tumours
+  site: Breast
+  lineage_broad: Epithelial / stromal
+  lineage_detail: null
+  families:
+  - Breast tumor
+  - Fibroepithelial tumor
+  - Sarcoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PHYT_NOS:
+  name: Phyllodes tumor, NOS
+  who_volume: Breast Tumours
+  site: Breast
+  lineage_broad: Epithelial / stromal
+  lineage_detail: null
+  families:
+  - Breast tumor
+  - Fibroepithelial tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PGG_EXAD:
+  name: Extra-adrenal paraganglioma
+  who_volume: null
+  site: Peripheral nervous system
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Paraganglioma
+  - Neuroendocrine tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PGG_EXAD_CELLC:
+  name: Extra-adrenal paraganglioma, cell culture
+  who_volume: null
+  site: Peripheral nervous system
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Paraganglioma
+  - Neuroendocrine tumor
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PGG_NC:
+  name: Spinal paraganglioma, non-CIMP
+  who_volume: Central Nervous System Tumours
+  site: Spinal cord
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Paraganglioma
+  - Neuroendocrine tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PGNT:
+  name: Papillary glioneuronal tumor
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glioneuronal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Glioneuronal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PIN_CYT:
+  name: Pineocytoma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Pineal / neuronal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Pineal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PIN_T_PB_A:
+  name: Pineoblastoma group A / intracranial retinoblastoma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Embryonal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Pineal tumor
+  - Embryonal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PIN_T_PB_B:
+  name: Pineoblastoma group B
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Embryonal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Pineal tumor
+  - Embryonal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PIN_T_PPT:
+  name: Pineal parenchymal tumor
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Pineal / neuronal
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Pineal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PITAD:
+  name: Pituitary adenoma, NOS
+  who_volume: Central Nervous System Tumours
+  site: Pituitary gland
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Pituitary tumor
+  - Neuroendocrine tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PITAD_ACTH:
+  name: Pituitary adenoma, ACTH
+  who_volume: Central Nervous System Tumours
+  site: Pituitary gland
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Pituitary tumor
+  - Neuroendocrine tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PITAD_FSH_LH:
+  name: Pituitary adenoma, FSH/LH
+  who_volume: Central Nervous System Tumours
+  site: Pituitary gland
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Pituitary tumor
+  - Neuroendocrine tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PITAD_PRL:
+  name: Pituitary adenoma, prolactin
+  who_volume: Central Nervous System Tumours
+  site: Pituitary gland
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Pituitary tumor
+  - Neuroendocrine tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PITAD_STH_DNS_A:
+  name: Pituitary adenoma, densely granulated STH, group A
+  who_volume: Central Nervous System Tumours
+  site: Pituitary gland
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Pituitary tumor
+  - Neuroendocrine tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PITAD_STH_DNS_B:
+  name: Pituitary adenoma, densely granulated STH, group B
+  who_volume: Central Nervous System Tumours
+  site: Pituitary gland
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Pituitary tumor
+  - Neuroendocrine tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PITAD_STH_SPA:
+  name: Pituitary adenoma, sparsely granulated STH
+  who_volume: Central Nervous System Tumours
+  site: Pituitary gland
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Pituitary tumor
+  - Neuroendocrine tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PITAD_TSH:
+  name: Pituitary adenoma, TSH
+  who_volume: Central Nervous System Tumours
+  site: Pituitary gland
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Pituitary tumor
+  - Neuroendocrine tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PIT_CARC:
+  name: Pituitary carcinoma
+  who_volume: Central Nervous System Tumours
+  site: Pituitary gland
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Pituitary tumor
+  - Neuroendocrine tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PITUI_SCO_GCT:
+  name: Pituicytoma / granular cell tumor / spindle cell oncocytoma
+  who_volume: Central Nervous System Tumours
+  site: Pituitary gland
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Pituitary tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PLEX_AD:
+  name: Choroid plexus tumor, adult
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Choroid plexus tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PLEX_PED_A:
+  name: Choroid plexus tumor, pediatric A
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Choroid plexus tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PLEX_PED_B:
+  name: Choroid plexus tumor, pediatric B
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Choroid plexus tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PLASMA:
+  name: Plasmacytoma / multiple myeloma
+  who_volume: Haematolymphoid Tumours
+  site: Bone / blood
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Plasma cell neoplasm
+  - Hematolymphoid
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PLIP:
+  name: Pleomorphic lipoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Soft tissue tumor
+  - Adipocytic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PMBCL:
+  name: Primary mediastinal B-cell lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Mediastinum
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - B-cell lymphoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PNST_NF_BO:
+  name: Borderline peripheral nerve sheath tumor
+  who_volume: null
+  site: Peripheral nervous system
+  lineage_broad: Neural
+  lineage_detail: null
+  families:
+  - Peripheral nerve sheath tumor
+  - Borderline tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PTCL:
+  name: Peripheral T-cell lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: T-Cell
+  families:
+  - Lymphoma
+  - T-cell lymphoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PTLD_DLBCL_EBV:
+  name: Monomorphic PTLD, DLBCL type, EBV-associated
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - B-cell lymphoma
+  - DLBCL
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PTPR_A:
+  name: Papillary tumor of the pineal region, group A
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Pineal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PTPR_B:
+  name: Papillary tumor of the pineal region, group B
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Pineal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+PXA:
+  name: Pleomorphic xanthoastrocytoma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - Glioma
+  - Astrocytoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+RETB:
+  name: Retinoblastoma
+  who_volume: Eye Tumours
+  site: Eye
+  lineage_broad: Embryonal
+  lineage_detail: null
+  families:
+  - Ocular tumor
+  - Embryonal tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+RBLAST:
+  name: Retinoblastoma
+  who_volume: Eye Tumours
+  site: Eye
+  lineage_broad: Embryonal
+  lineage_detail: null
+  families:
+  - Ocular tumor
+  - Embryonal tumor
+  synonym_of: RETB
+  source: solid_tumor_sketch
+
+RECT_CA:
+  name: Rectal adenocarcinoma
+  who_volume: Digestive System Tumours
+  site: Rectum
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Gastrointestinal tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+RCC_CC:
+  name: Clear cell renal cell carcinoma
+  who_volume: Urinary and Male Genital Tumours
+  site: Kidney
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Renal tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+RCC_CC_CELLC:
+  name: Clear cell renal cell carcinoma, cell culture
+  who_volume: Urinary and Male Genital Tumours
+  site: Kidney
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Renal tumor
+  - Carcinoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+RCC_CP:
+  name: Chromophobe renal cell tumor
+  who_volume: Urinary and Male Genital Tumours
+  site: Kidney
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Renal tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+RCC_CP_CELLC:
+  name: Chromophobe renal cell tumor, cell culture
+  who_volume: Urinary and Male Genital Tumours
+  site: Kidney
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Renal tumor
+  - Carcinoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+RCC_PAP:
+  name: Papillary renal cell carcinoma
+  who_volume: Urinary and Male Genital Tumours
+  site: Kidney
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Renal tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+RCC_PAP_CELLC:
+  name: Papillary renal cell carcinoma, cell culture
+  who_volume: Urinary and Male Genital Tumours
+  site: Kidney
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Renal tumor
+  - Carcinoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+RMS_ALV:
+  name: Alveolar rhabdomyosarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Rhabdomyosarcoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+RMS_EMB:
+  name: Embryonal rhabdomyosarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Rhabdomyosarcoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+RMS_MYOD1:
+  name: Rhabdomyosarcoma, MYOD1-mutant
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Rhabdomyosarcoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SARC_CELLC:
+  name: Sarcoma, NOS, cell culture
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SARC_DICER1:
+  name: Sarcoma with DICER1 mutation
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SARC_NOS:
+  name: Sarcoma, NOS
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SARC_PSPIN:
+  name: Paraspinal sarcoma, H3K27me3 retained
+  who_volume: Soft Tissue and Bone Tumours
+  site: Spine / soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SCHW:
+  name: Schwannoma
+  who_volume: null
+  site: Peripheral nervous system
+  lineage_broad: Neural
+  lineage_detail: null
+  families:
+  - Peripheral nerve sheath tumor
+  - Benign tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SCHW_MEL:
+  name: Melanotic schwannoma
+  who_volume: null
+  site: Peripheral nervous system
+  lineage_broad: Neural
+  lineage_detail: null
+  families:
+  - Peripheral nerve sheath tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SBRCT_BCOR:
+  name: Small blue round cell tumor with BCOR alteration
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Small round cell tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SBRCT_CIC:
+  name: Small blue round cell tumor with CIC alteration
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Small round cell tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SCC_CUT:
+  name: Cutaneous squamous cell carcinoma
+  who_volume: Skin Tumours
+  site: Skin
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Skin tumor
+  - Carcinoma
+  - Squamous cell carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SEF:
+  name: Sclerosing epithelioid fibrosarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Fibroblastic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SEMIN:
+  name: Seminoma
+  who_volume: Urinary and Male Genital Tumours
+  site: Testis
+  lineage_broad: Germ cell
+  lineage_detail: null
+  families:
+  - Germ cell tumor
+  - Testicular tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SFT_HMPC:
+  name: Solitary fibrous tumor / hemangiopericytoma
+  who_volume: Central Nervous System Tumours
+  site: Soft tissue / central nervous system
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Fibroblastic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SFT_HMPC_MAL:
+  name: Malignant solitary fibrous tumor / hemangiopericytoma
+  who_volume: Central Nervous System Tumours
+  site: Soft tissue / central nervous system
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Fibroblastic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SI_CA:
+  name: Small-intestinal adenocarcinoma
+  who_volume: Digestive System Tumours
+  site: Small intestine
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Gastrointestinal tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SKM_ALS:
+  name: Skeletal muscle, amyotrophic lateral sclerosis
+  who_volume: null
+  site: Skeletal muscle
+  lineage_broad: Muscle
+  lineage_detail: null
+  families:
+  - Muscle
+  - Neuromuscular disease
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SKM_CONTR:
+  name: Normal skeletal muscle
+  who_volume: null
+  site: Skeletal muscle
+  lineage_broad: Muscle
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Muscle
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SKM_DM:
+  name: Skeletal muscle, dermatomyositis
+  who_volume: null
+  site: Skeletal muscle
+  lineage_broad: Muscle
+  lineage_detail: null
+  families:
+  - Muscle
+  - Inflammatory disease
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SKM_IBM:
+  name: Skeletal muscle, inclusion body myositis
+  who_volume: null
+  site: Skeletal muscle
+  lineage_broad: Muscle
+  lineage_detail: null
+  families:
+  - Muscle
+  - Inflammatory disease
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SKM_INF:
+  name: Inflammatory myopathy, NOS
+  who_volume: null
+  site: Skeletal muscle
+  lineage_broad: Muscle
+  lineage_detail: null
+  families:
+  - Muscle
+  - Inflammatory disease
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SKM_MCA:
+  name: Skeletal muscle, McArdle disease
+  who_volume: null
+  site: Skeletal muscle
+  lineage_broad: Muscle
+  lineage_detail: null
+  families:
+  - Muscle
+  - Neuromuscular disease
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SKM_NMA:
+  name: Skeletal muscle, neurogenic atrophy
+  who_volume: null
+  site: Skeletal muscle
+  lineage_broad: Muscle
+  lineage_detail: null
+  families:
+  - Muscle
+  - Neuromuscular disease
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SKM_NEKR:
+  name: Skeletal muscle, necrotizing myopathy
+  who_volume: null
+  site: Skeletal muscle
+  lineage_broad: Muscle
+  lineage_detail: null
+  families:
+  - Muscle
+  - Inflammatory disease
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SKM_PM:
+  name: Skeletal muscle, polymyositis
+  who_volume: null
+  site: Skeletal muscle
+  lineage_broad: Muscle
+  lineage_detail: null
+  families:
+  - Muscle
+  - Inflammatory disease
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SKM_POM:
+  name: Skeletal muscle, Pompe disease
+  who_volume: null
+  site: Skeletal muscle
+  lineage_broad: Muscle
+  lineage_detail: null
+  families:
+  - Muscle
+  - Neuromuscular disease
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SMARCDEF:
+  name: SMARCB1/SMARCA4-deficient tumor, NOS
+  who_volume: null
+  site: Multiple
+  lineage_broad: Multiple
+  lineage_detail: null
+  families:
+  - SMARCB1/SMARCA4-deficient tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SMARCB1:
+  name: Sinonasal SMARCB1-deficient carcinoma
+  who_volume: Head and Neck Tumours
+  site: Sinonasal tract
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Sinonasal tumor
+  - Carcinoma
+  - SMARCB1-deficient tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SMIX:
+  name: Salivary gland mixed group tumor
+  who_volume: Head and Neck Tumours
+  site: Salivary gland
+  lineage_broad: Epithelial / myoepithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SPC_REACT:
+  name: Spinal cord tissue with reactive changes
+  who_volume: Central Nervous System Tumours
+  site: Spinal cord
+  lineage_broad: Neural
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Reactive
+  synonym_of: null
+  source: solid_tumor_sketch
+
+STOM_CA:
+  name: Stomach carcinoma
+  who_volume: Digestive System Tumours
+  site: Stomach
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Gastrointestinal tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+STOM_CA_CELLC:
+  name: Stomach carcinoma, cell culture
+  who_volume: Digestive System Tumours
+  site: Stomach
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Gastrointestinal tumor
+  - Carcinoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+STUMP:
+  name: Smooth muscle tumor of uncertain malignant potential
+  who_volume: Female Genital Tumours
+  site: Uterus
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Gynecologic tumor
+  - Smooth muscle tumor
+  - Borderline tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SUBEPN_PF:
+  name: Subependymoma, posterior fossa
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Ependymoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SUBEPN_SPINE:
+  name: Subependymoma, spinal
+  who_volume: Central Nervous System Tumours
+  site: Spinal cord
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Ependymoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SUBEPN_ST:
+  name: Subependymoma, supratentorial
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Ependymoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+SYSA:
+  name: Synovial sarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Soft tissue tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+TGCT_CELLC:
+  name: Testicular germ cell tumor, cell culture
+  who_volume: Urinary and Male Genital Tumours
+  site: Testis
+  lineage_broad: Germ cell
+  lineage_detail: null
+  families:
+  - Germ cell tumor
+  - Testicular tumor
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+TCL_NOS:
+  name: T-cell lymphoma, NOS
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: T-Cell
+  families:
+  - Lymphoma
+  - T-cell lymphoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+THYMO:
+  name: Thymoma
+  who_volume: Thoracic Tumours
+  site: Thymus
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Thymic tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+THYMO_A:
+  name: Thymoma, type A
+  who_volume: Thoracic Tumours
+  site: Thymus
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Thymic tumor
+  - Thymoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+THYMO_AB:
+  name: Thymoma, type AB
+  who_volume: Thoracic Tumours
+  site: Thymus
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Thymic tumor
+  - Thymoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+THYMO_B1:
+  name: Thymoma, type B1
+  who_volume: Thoracic Tumours
+  site: Thymus
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Thymic tumor
+  - Thymoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+THYMO_B2:
+  name: Thymoma, type B2
+  who_volume: Thoracic Tumours
+  site: Thymus
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Thymic tumor
+  - Thymoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+THYMO_B3:
+  name: Thymoma, type B3
+  who_volume: Thoracic Tumours
+  site: Thymus
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Thymic tumor
+  - Thymoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+THYMO_C:
+  name: Thymic carcinoma
+  who_volume: Thoracic Tumours
+  site: Thymus
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Thymic tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+THYMO_CELLC:
+  name: Thymoma, cell culture
+  who_volume: Thoracic Tumours
+  site: Thymus
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Thymic tumor
+  - Thymoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+THYR_CA:
+  name: Thyroid carcinoma, NOS
+  who_volume: Endocrine and Neuroendocrine Tumours
+  site: Thyroid
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Thyroid tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+THYR_CA_CELLC:
+  name: Thyroid carcinoma, cell culture
+  who_volume: Endocrine and Neuroendocrine Tumours
+  site: Thyroid
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Thyroid tumor
+  - Carcinoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+THYR_CA_FOL:
+  name: Thyroid follicular carcinoma
+  who_volume: Endocrine and Neuroendocrine Tumours
+  site: Thyroid
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Thyroid tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+THYR_CA_PAP:
+  name: Thyroid papillary carcinoma
+  who_volume: Endocrine and Neuroendocrine Tumours
+  site: Thyroid
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Thyroid tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+THYR_CA_TAL:
+  name: Thyroid tall-cell carcinoma
+  who_volume: Endocrine and Neuroendocrine Tumours
+  site: Thyroid
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Thyroid tumor
+  - Carcinoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+TSGCT:
+  name: Tenosynovial giant cell tumor
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Soft tissue tumor
+  - Giant cell tumor
+  synonym_of: GCTT
+  source: solid_tumor_sketch
+
+UCS:
+  name: Uterine carcinosarcoma
+  who_volume: Female Genital Tumours
+  site: Uterus
+  lineage_broad: Mixed epithelial / mesenchymal
+  lineage_detail: null
+  families:
+  - Gynecologic tumor
+  - Carcinoma
+  - Sarcoma
+  synonym_of: null
+  source: solid_tumor_sketch
+
+UCS_CELLC:
+  name: Uterine carcinosarcoma, cell culture
+  who_volume: Female Genital Tumours
+  site: Uterus
+  lineage_broad: Mixed epithelial / mesenchymal
+  lineage_detail: null
+  families:
+  - Gynecologic tumor
+  - Carcinoma
+  - Sarcoma
+  - Cell culture
+  synonym_of: null
+  source: solid_tumor_sketch
+
+UPS:
+  name: Undifferentiated pleomorphic sarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Soft tissue tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+YKSA:
+  name: YAP1::KMT2A fusion-driven sarcoma
+  who_volume: Soft Tissue and Bone Tumours
+  site: Soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Sarcoma
+  - Soft tissue tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+YST_T:
+  name: Testicular yolk sac tumor
+  who_volume: Urinary and Male Genital Tumours
+  site: Testis
+  lineage_broad: Germ cell
+  lineage_detail: null
+  families:
+  - Germ cell tumor
+  - Testicular tumor
+  synonym_of: null
+  source: solid_tumor_sketch
+
+ALCL:
+  name: ALCL
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid
+  lineage_broad: Hematolymphoid
+  lineage_detail: T/NK
+  families:
+  - mature_t_nk
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+ALKLBCL:
+  name: ALK+ large B-cell lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - mature_b_non_small_cell
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+AMKL_MIXED:
+  name: AMKL (mixed)
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - AML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+ANEUPLOIDY:
+  name: Aneuploidy
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - BCP-ALL
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+BCL11B:
+  name: BCL11B-activated
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: T-Cell
+  families:
+  - T-ALL
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+BCRABL1:
+  name: BCR-ABL1 B-ALL
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - BCP-ALL
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+BCRABL1_LIKE:
+  name: BCR-ABL1-like B-ALL
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - BCP-ALL
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+BPLL:
+  name: B-prolymphocytic leukemia
+  who_volume: Haematolymphoid Tumours
+  site: Blood
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - mature_b_small_cell
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+BPDCN:
+  name: BPDCN
+  who_volume: Haematolymphoid Tumours
+  site: Blood
+  lineage_broad: Hematolymphoid
+  lineage_detail: Plasmacytoid Dendritic Cell
+  families:
+  - BPDCN
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+CBFA2T3GLIS2:
+  name: CBFA2T3-GLIS2
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - AML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+CBFBMYH11:
+  name: CBFB-MYH11
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - AML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+CEBPA:
+  name: CEBPA
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - AML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+CLYMPH:
+  name: Control lymph node
+  who_volume: Haematolymphoid Tumours
+  site: Lymph Node
+  lineage_broad: Hematolymphoid
+  lineage_detail: Lymphoid
+  families:
+  - control
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+CML:
+  name: CML
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - MPN
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+CMARROW:
+  name: Control marrow
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Hematopoietic
+  families:
+  - control
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+CMML:
+  name: CMML
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - MDS_MPN
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+CSKIN:
+  name: Control skin
+  who_volume: Haematolymphoid Tumours
+  site: Skin
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - control
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+DEKNUP214:
+  name: DEK-NUP214
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - AML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+DS_GATA1:
+  name: Down syndrome / GATA1 AML
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - AML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+DUX4:
+  name: DUX4-rearranged
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - BCP-ALL
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+EBVBL:
+  name: Burkitt lymphoma (EBV+)
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - mature_b_non_small_cell
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+ENKTL:
+  name: Extranodal NK/T-cell lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid
+  lineage_broad: Hematolymphoid
+  lineage_detail: T/NK
+  families:
+  - mature_t_nk
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+ETP:
+  name: ETP-enriched
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: T-Cell
+  families:
+  - T-ALL
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+ETCL_NONSETD2:
+  name: Extranodal T-cell lymphoma (non-SETD2)
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid
+  lineage_broad: Hematolymphoid
+  lineage_detail: T-Cell
+  families:
+  - mature_t_nk
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+ETCL_SETD2:
+  name: Extranodal T-cell lymphoma (SETD2)
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid
+  lineage_broad: Hematolymphoid
+  lineage_detail: T-Cell
+  families:
+  - mature_t_nk
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+ET:
+  name: Essential thrombocythemia
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - MPN
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+ETV6MNX1:
+  name: ETV6MNX1-rearranged
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - AML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+ETV6RUNX1:
+  name: ETV6-RUNX1
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - BCP-ALL
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+FETETS:
+  name: FET-ETS family fusion
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - AML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+FDCS:
+  name: Follicular dendritic cell sarcoma
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid
+  lineage_broad: Hematolymphoid
+  lineage_detail: Dendritic/Stromal
+  families:
+  - dendritic_stromal
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+FL:
+  name: Follicular lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - mature_b_non_small_cell
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+FTHCL:
+  name: Follicular T-helper cell lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid
+  lineage_broad: Hematolymphoid
+  lineage_detail: T-Cell
+  families:
+  - mature_t_nk
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+HCL:
+  name: Hairy cell leukemia
+  who_volume: Haematolymphoid Tumours
+  site: Blood
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - mature_b_small_cell
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+HCLv:
+  name: Hairy cell leukemia variant
+  who_volume: Haematolymphoid Tumours
+  site: Blood
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - mature_b_small_cell
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+HL:
+  name: Hodgkin lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Hodgkin_lymphoma
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+HSTCL:
+  name: Hepatosplenic T-cell lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid
+  lineage_broad: Hematolymphoid
+  lineage_detail: T-Cell
+  families:
+  - mature_t_nk
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+HTLV1_ATL:
+  name: HTLV-1 adult T-cell leukemia/lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Blood
+  lineage_broad: Hematolymphoid
+  lineage_detail: T-Cell
+  families:
+  - mature_t_nk
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+IDH:
+  name: IDH1/2
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - AML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+IGHMYC:
+  name: IGH-MYC B-ALL
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - BCP-ALL
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+iAMP21:
+  name: iAMP21
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - BCP-ALL
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+JMMLh:
+  name: JMML (high methylation)
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - JMML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+JMMLl:
+  name: JMML (low methylation)
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - JMML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+JMMLm:
+  name: JMML (medium methylation)
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - JMML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+KMT2AAML_FOXC1:
+  name: KMT2A-AML (FOXC1)
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - AML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+KMT2AAML_HMX3:
+  name: KMT2A-AML (HMX3)
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - AML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+KMT2AAML_HOXAB:
+  name: KMT2A-AML (HOXA/B)
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - AML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+KMT2AAML_MECOM:
+  name: KMT2A-AML (MECOM)
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - AML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+KMT2ABALL:
+  name: KMT2A-rearranged B-ALL
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - BCP-ALL
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+LCH_ECD:
+  name: Langerhans cell histiocytosis / Erdheim-Chester disease
+  who_volume: Haematolymphoid Tumours
+  site: Multisystem
+  lineage_broad: Histiocytic
+  lineage_detail: null
+  families:
+  - histiocytic
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+lMDS:
+  name: Low-risk MDS
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - MDS
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+LPL:
+  name: Lymphoplasmacytic lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - mature_b_small_cell
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+M-CLL:
+  name: CLL (IGHV mutated)
+  who_volume: Haematolymphoid Tumours
+  site: Blood
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - mature_b_small_cell
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+MCL_SOX11N:
+  name: Mantle cell lymphoma (SOX11-)
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - mature_b_small_cell
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+MCL_SOX11P:
+  name: Mantle cell lymphoma (SOX11+)
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - mature_b_small_cell
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+MEF2D:
+  name: MEF2D-rearranged
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - BCP-ALL
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+MZBL:
+  name: Marginal zone B-cell lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - mature_b_small_cell
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+nebvBL:
+  name: Burkitt lymphoma (EBV-)
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - mature_b_non_small_cell
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+NOTCH1_TLBL:
+  name: NOTCH1-rearranged T-LBL
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: T-Cell
+  families:
+  - T-ALL
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+NPM1:
+  name: NPM1
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - AML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+NPM1_DNMT3A:
+  name: NPM1 + DNMT3A
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - AML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+NPM1_IDH:
+  name: NPM1 + IDH
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - AML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+NPM1_TET2:
+  name: NPM1 + TET2
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - AML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+NUP98NSD1:
+  name: NUP98-NSD1
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - AML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+NUTM1:
+  name: NUTM1-rearranged
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - BCP-ALL
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+nphMPN:
+  name: Non-Ph MPN
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - MPN
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+PAX5ALT:
+  name: PAX5-altered
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - BCP-ALL
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+PAX5P80R:
+  name: PAX5 P80R
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - BCP-ALL
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+PLASMA_CELL:
+  name: Plasma cell neoplasm
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Plasma Cell
+  families:
+  - plasma_cell
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+PMLRARA:
+  name: PML-RARA
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - AML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+prePMF:
+  name: Prefibrotic primary myelofibrosis
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - MPN
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+PTFL:
+  name: Pediatric-type follicular lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - mature_b_non_small_cell
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+RUNX1RUNX1T1:
+  name: RUNX1-RUNX1T1
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - AML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+SZ:
+  name: Sézary syndrome
+  who_volume: Haematolymphoid Tumours
+  site: Skin
+  lineage_broad: Hematolymphoid
+  lineage_detail: T-Cell
+  families:
+  - mature_t_nk
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+TALLOTHER:
+  name: Other T-ALL/LBL
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: T-Cell
+  families:
+  - T-ALL
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+TALR:
+  name: TAL1-like
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: T-Cell
+  families:
+  - T-ALL
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+TCF3HLF:
+  name: TCF3-HLF
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - BCP-ALL
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+TCF3PBX1:
+  name: TCF3-PBX1
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - BCP-ALL
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+TLGLL:
+  name: T-cell large granular lymphocytic leukemia
+  who_volume: Haematolymphoid Tumours
+  site: Blood
+  lineage_broad: Hematolymphoid
+  lineage_detail: T-Cell
+  families:
+  - mature_t_nk
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+TPLL:
+  name: T-prolymphocytic leukemia
+  who_volume: Haematolymphoid Tumours
+  site: Blood
+  lineage_broad: Hematolymphoid
+  lineage_detail: T-Cell
+  families:
+  - mature_t_nk
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+UBTF_ITD:
+  name: UBTF-ITD
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - AML
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+U-CLL:
+  name: CLL (IGHV unmutated)
+  who_volume: Haematolymphoid Tumours
+  site: Blood
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - mature_b_small_cell
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+ZNF384:
+  name: ZNF384-rearranged
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - BCP-ALL
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
+
+hMDS:
+  name: High-risk MDS / Secondary AML
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - MDS
+  synonym_of: null
+  source: hematolymphoid_classifier_sketch
