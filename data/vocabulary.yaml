@@ -1,0 +1,51 @@
+lineages:
+  - Embryonal
+  - Endocrine
+  - Epithelial
+  - Epithelial / myoepithelial
+  - Epithelial / stromal
+  - Germ cell
+  - Glial
+  - Glioneuronal
+  - Hematolymphoid
+  - Histiocytic
+  - Immune
+  - Immune / stromal
+  - Inflammatory
+  - Melanocytic
+  - Meningothelial
+  - Mesenchymal
+  - Mesothelial
+  - Mixed
+  - Mixed epithelial / mesenchymal
+  - Multiple
+  - Muscle
+  - Neural
+  - Neural / Schwannian
+  - Neural / glial
+  - Neural crest
+  - Neuroectodermal
+  - Neuroendocrine
+  - Neuroepithelial
+  - Neuronal
+  - Pineal / neuronal
+  - Stromal / vascular
+  - Trophoblastic
+  - Unknown
+  - Vascular
+
+who_volume:
+  - Central Nervous System Tumours
+  - Soft Tissue and Bone Tumours
+  - Haematolymphoid Tumours
+  - Breast Tumours
+  - Digestive System Tumours
+  - Endocrine and Neuroendocrine Tumours
+  - Female Genital Tumours
+  - Urinary and Male Genital Tumours
+  - Head and Neck Tumours
+  - Skin Tumours
+  - Thoracic Tumours
+  - Paediatric Tumours
+  - Eye Tumours
+  - Odontogenic and Maxillofacial Bone Tumours
