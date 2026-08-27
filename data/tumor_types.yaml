@@ -609,6 +609,33 @@ COL_CELLC:
   - Cell culture
   - Control
 
+CONTR_ANAL:
+  name: Control - Anal
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+CONTR_ADIPOSE:
+  name: Control - Adipose
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+CONTR_BONE:
+  name: Control - Bone
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
 CONTR_ADENOPIT:
   name: Normal anterior pituitary
   who_volume: Central Nervous System Tumours
@@ -731,6 +758,33 @@ CONTR_ESO:
   - Normal tissue
   - Gastrointestinal
 
+CONTR_EYE:
+  name: Control - Eye
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+CONTR_GASTRIC:
+  name: Control - Gastric
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+CONTR_GREY:
+  name: Control - Grey
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
 CONTR_HEMI:
   name: Normal cerebral cortex
   who_volume: Central Nervous System Tumours
@@ -801,6 +855,33 @@ CONTR_LUNG:
   - Normal tissue
   - Thoracic
 
+CONTR_LYMPH:
+  name: Control lymph node
+  who_volume: Haematolymphoid Tumours
+  site: Lymph Node
+  lineage_broad: Hematolymphoid
+  lineage_detail: Lymphoid
+  families:
+  - control
+
+CONTR_SALIVARY:
+  name: Control - Salivary Gland
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+CONTR_SINONASAL:
+  name: Control - Sinonasal
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
 CONTR_SKM:
   name: Normal skeletal muscle
   who_volume: null
@@ -810,6 +891,15 @@ CONTR_SKM:
   families:
   - Normal tissue
   - Muscle
+
+CONTR_SMALLINT:
+  name: Control - Small Intestine
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
 
 CONTR_OVA:
   name: Normal ovary
@@ -840,6 +930,15 @@ CONTR_PINEAL:
   families:
   - Normal tissue
   - Brain
+
+CONTR_PLEURA:
+  name: Control - Pleura
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
 
 CONTR_PONS:
   name: Normal pons
@@ -1756,6 +1855,27 @@ HGG_F:
   families:
   - Glioma
   - High-grade glioma
+
+
+HGG_PED_RTK1A:
+  name: Pediatric-type high-grade glioma, RTK 1A
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: Astrocytic
+  families:
+  - Glioma
+  - Pediatric high-grade glioma
+
+HGG_PED_RTK1B:
+  name: Pediatric-type high-grade glioma, RTK 1B
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: Astrocytic
+  families:
+  - Glioma
+  - Pediatric high-grade glioma
 
 HGAP:
   name: High-grade astrocytoma with piloid features
@@ -3982,15 +4102,6 @@ CEBPA:
   families:
   - AML
 
-CLYMPH:
-  name: Control lymph node
-  who_volume: Haematolymphoid Tumours
-  site: Lymph Node
-  lineage_broad: Hematolymphoid
-  lineage_detail: Lymphoid
-  families:
-  - control
-
 CML:
   name: CML
   who_volume: Haematolymphoid Tumours
@@ -4661,15 +4772,6 @@ ZNF384:
   families:
   - BCP-ALL
 
-ACA:
-  name: Adrenocortical Adenoma
-  who_volume: null
-  site: null
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Epithelial tumor
-
 ADAM:
   name: Adamantinoma
   who_volume: null
@@ -4814,33 +4916,6 @@ BT:
   families:
   - Bone tumor
 
-CADIPOSE:
-  name: Control - Adipose
-  who_volume: null
-  site: null
-  lineage_broad: Normal tissue
-  lineage_detail: null
-  families:
-  - Control
-
-CANAL:
-  name: Control - Anal
-  who_volume: null
-  site: null
-  lineage_broad: Normal tissue
-  lineage_detail: null
-  families:
-  - Control
-
-CBONE:
-  name: Control - Bone
-  who_volume: null
-  site: null
-  lineage_broad: Normal tissue
-  lineage_detail: null
-  families:
-  - Control
-
 CCA_BD:
   name: Cholangiocarcinoma - Bile Duct
   who_volume: null
@@ -4895,51 +4970,6 @@ CELLC_MEL:
   families:
   - Cell culture
 
-CENDOMETRIUM:
-  name: Control - Endometrium
-  who_volume: null
-  site: null
-  lineage_broad: Normal tissue
-  lineage_detail: null
-  families:
-  - Control
-
-CEYE:
-  name: Control - Eye
-  who_volume: null
-  site: null
-  lineage_broad: Normal tissue
-  lineage_detail: null
-  families:
-  - Control
-
-CGASTRIC:
-  name: Control - Gastric
-  who_volume: null
-  site: null
-  lineage_broad: Normal tissue
-  lineage_detail: null
-  families:
-  - Control
-
-CGREY:
-  name: Control - Grey
-  who_volume: null
-  site: null
-  lineage_broad: Normal tissue
-  lineage_detail: null
-  families:
-  - Control
-
-CHEADNECK:
-  name: Control - Head and Neck
-  who_volume: null
-  site: null
-  lineage_broad: Normal tissue
-  lineage_detail: null
-  families:
-  - Control
-
 CHRPL:
   name: Chronic Pleuritis
   who_volume: null
@@ -4976,15 +5006,6 @@ COMEL:
   families:
   - Melanocytic tumor
 
-CPLEURA:
-  name: Control - Pleura
-  who_volume: null
-  site: null
-  lineage_broad: Normal tissue
-  lineage_detail: null
-  families:
-  - Control
-
 CRA:
   name: Colorectal Adenoma
   who_volume: null
@@ -5002,33 +5023,6 @@ CRNET:
   lineage_detail: null
   families:
   - Neuroendocrine tumor
-
-CSALIVARY:
-  name: Control - Salivary Gland
-  who_volume: null
-  site: null
-  lineage_broad: Normal tissue
-  lineage_detail: null
-  families:
-  - Control
-
-CSINONASAL:
-  name: Control - Sinonasal
-  who_volume: null
-  site: null
-  lineage_broad: Normal tissue
-  lineage_detail: null
-  families:
-  - Control
-
-CSMALLINT:
-  name: Control - Small Intestine
-  who_volume: null
-  site: null
-  lineage_broad: Normal tissue
-  lineage_detail: null
-  families:
-  - Control
 
 CUPS:
   name: Cancer of Unknown Primary
@@ -5247,7 +5241,7 @@ HNET:
   - Neuroendocrine tumor
 
 HNSCC_DEK_AFF2:
-  name: "DEK::AFF2 Squamous Cell Carcinoma"
+  name: DEK::AFF2 Squamous Cell Carcinoma
   who_volume: null
   site: null
   lineage_broad: Epithelial
@@ -5324,6 +5318,7 @@ ITAC:
   site: null
   lineage_broad: Epithelial
   lineage_detail: null
+  parent: SNAD
   families:
   - Carcinoma
 
@@ -5372,7 +5367,7 @@ LB:
   families:
   - Adipocytic tumor
 
-LS_M:
+MLS:
   name: Myxoid Liposarcoma
   who_volume: null
   site: null
@@ -5570,6 +5565,17 @@ NECIDH2:
   families:
   - Neuroendocrine tumor
 
+
+NE_CA:
+  name: Neuroendocrine carcinoma, NOS
+  who_volume: Endocrine and Neuroendocrine Tumours
+  site: Multiple
+  lineage_broad: Neuroendocrine
+  lineage_detail: Neuroendocrine
+  families:
+  - Neuroendocrine carcinoma
+  - Carcinoma
+
 NF:
   name: Neurofibroma
   who_volume: null
@@ -5594,6 +5600,7 @@ NITAC:
   site: null
   lineage_broad: Epithelial
   lineage_detail: null
+  parent: SNAD
   families:
   - Carcinoma
 
@@ -6271,3 +6278,179 @@ WT:
   lineage_detail: null
   families:
   - Renal tumor
+B_ALL:
+  name: Acute lymphoblastic leukemia
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - BCP-ALL
+
+CARCI_A_LUN:
+  name: Atypical carcinoid of the lung
+  who_volume: Thoracic Tumours
+  site: Lung
+  lineage_broad: Neuroendocrine
+  lineage_detail: Neuroendocrine
+  families:
+  - Lung tumor
+  - Neuroendocrine neoplasm
+
+CNS_LYMPHO:
+  name: CNS lymphoma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - CNS tumor
+
+CSA_NOS:
+  name: Chondrosarcoma, NOS
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone
+  lineage_broad: Mesenchymal
+  lineage_detail: Chondrogenic
+  families:
+  - Chondrosarcoma
+  - Sarcoma
+
+CUT_LYM:
+  name: Cutaneous lymphoma
+  who_volume: Skin Tumours
+  site: Skin
+  lineage_broad: Hematolymphoid
+  lineage_detail: Lymphoid
+  families:
+  - Lymphoma
+  - Skin tumor
+
+DMT_SMARCB1:
+  name: Desmoplastic myxoid tumor, SMARCB1-mutant
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Mesenchymal
+  lineage_detail: Mesenchymal
+  families:
+  - Desmoplastic myxoid tumor
+  - SMARCB1-deficient tumor
+
+ENDOM_CA:
+  name: Endometrial carcinoma
+  who_volume: Female Genital Tumours
+  site: Uterus
+  lineage_broad: Epithelial
+  lineage_detail: Epithelial
+  families:
+  - Endometrial carcinoma
+  - Carcinoma
+
+ESO_CA:
+  name: Esophageal carcinoma, NOS
+  who_volume: Digestive System Tumours
+  site: Esophagus
+  lineage_broad: Epithelial
+  lineage_detail: Epithelial
+  families:
+  - Esophageal carcinoma
+  - Carcinoma
+
+HPAP:
+  name: High-grade glioma with pleomorphic and pseudopapillary features
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glial
+  lineage_detail: Astrocytic
+  families:
+  - Glioma
+  - High-grade glioma
+
+IMTER_T:
+  name: Testicular immature teratoma
+  who_volume: Urinary and Male Genital Tumours
+  site: Testis
+  lineage_broad: Germ cell
+  lineage_detail: Germ cell
+  families:
+  - Teratoma
+  - Germ cell tumor
+
+LGG_DIG_DIA:
+  name: Desmoplastic infantile astrocytoma / ganglioglioma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Glioneuronal
+  lineage_detail: Glioneuronal
+  families:
+  - Glioma
+  - Low-grade glioma
+  - Glioneuronal tumor
+
+LYM_B_LPL:
+  name: Lymphoplasmacytic lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - B-cell lymphoma
+
+LYM_FOL_HG:
+  name: Follicular lymphoma, high grade
+  who_volume: Haematolymphoid Tumours
+  site: Lymph node
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - Follicular lymphoma
+
+LYM_FOL_LG:
+  name: Follicular lymphoma, low grade
+  who_volume: Haematolymphoid Tumours
+  site: Lymph node
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - Follicular lymphoma
+
+MATTER_T:
+  name: Testicular mature teratoma
+  who_volume: Urinary and Male Genital Tumours
+  site: Testis
+  lineage_broad: Germ cell
+  lineage_detail: Germ cell
+  families:
+  - Teratoma
+  - Germ cell tumor
+
+MNG_BEN_1:
+  name: Meningioma, benign subtype 1
+  who_volume: Central Nervous System Tumours
+  site: Meninges
+  lineage_broad: Meningothelial
+  lineage_detail: Meningothelial
+  families:
+  - Meningioma
+
+MNG_BEN_2:
+  name: Meningioma, benign subtype 2
+  who_volume: Central Nervous System Tumours
+  site: Meninges
+  lineage_broad: Meningothelial
+  lineage_detail: Meningothelial
+  families:
+  - Meningioma
+
+MNG_BEN_3:
+  name: Meningioma, benign subtype 3
+  who_volume: Central Nervous System Tumours
+  site: Meninges
+  lineage_broad: Meningothelial
+  lineage_detail: Meningothelial
+  families:
+  - Meningioma
