@@ -49,7 +49,7 @@ AFH:
   - Soft tissue tumor
   - Sarcoma
 
-A_IDH:
+ASTRO_IDH:
   name: IDH glioma, astrocytoma
   who_volume: Central Nervous System Tumours
   site: Central nervous system
@@ -60,7 +60,7 @@ A_IDH:
   - Astrocytoma
   - IDH-mutant glioma
 
-A_IDH_HG:
+ASTRO_IDH_HG:
   name: IDH glioma, high-grade astrocytoma
   who_volume: Central Nervous System Tumours
   site: Central nervous system
@@ -81,6 +81,16 @@ ALL:
   families:
   - Leukemia
   - Lymphoid neoplasm
+
+ALCL_ALK_NEG:
+  name: Anaplastic large-cell lymphoma, ALK-negative
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: T-Cell
+  families:
+  - Lymphoma
+  - T-cell lymphoma
 
 ALCL_ALK_POS:
   name: Anaplastic large-cell lymphoma, ALK-positive
@@ -141,16 +151,6 @@ ANA_PA:
   - Glioma
   - Astrocytoma
   - Pilocytic astrocytoma
-
-APP_CONTR:
-  name: Normal appendix
-  who_volume: Digestive System Tumours
-  site: Appendix
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Normal tissue
-  - Gastrointestinal
 
 APP_GOBCOID:
   name: Goblet cell carcinoid of the appendix
@@ -369,6 +369,16 @@ CAVER:
   - CNS tumor
   - Vascular tumor
 
+CCA:
+  name: Cholangiocarcinoma
+  who_volume: Digestive System Tumours
+  site: Bile duct
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Hepatobiliary tumor
+  - Carcinoma
+
 CERAD_CA:
   name: Cervical adenocarcinoma
   who_volume: Female Genital Tumours
@@ -434,16 +444,6 @@ CHGL:
   - Glioma
   - Glial tumor
 
-CHOL_CA:
-  name: Cholangiocarcinoma
-  who_volume: Digestive System Tumours
-  site: Bile duct
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Hepatobiliary tumor
-  - Carcinoma
-
 CHOL_CA_CELLC:
   name: Cholangiocarcinoma, cell culture
   who_volume: Digestive System Tumours
@@ -495,7 +495,7 @@ CLL:
   - Leukemia
   - B-cell neoplasm
 
-CMFI:
+CMF:
   name: Chondromyxoid fibroma
   who_volume: Soft Tissue and Bone Tumours
   site: Bone
@@ -629,6 +629,16 @@ CONTR_ADREN:
   families:
   - Normal tissue
   - Adrenal
+
+CONTR_APP:
+  name: Normal appendix
+  who_volume: Digestive System Tumours
+  site: Appendix
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Gastrointestinal
 
 CONTR_BLA:
   name: Normal bladder
@@ -791,8 +801,8 @@ CONTR_LUNG:
   - Normal tissue
   - Thoracic
 
-CONTR_MUS:
-  name: Normal muscle
+CONTR_SKM:
+  name: Normal skeletal muscle
   who_volume: null
   site: Muscle
   lineage_broad: Mesenchymal
@@ -841,7 +851,7 @@ CONTR_PONS:
   - Normal tissue
   - Brain
 
-CONTR_PR:
+CONTR_PROSTATE:
   name: Normal prostate
   who_volume: Urinary and Male Genital Tumours
   site: Prostate
@@ -880,6 +890,16 @@ CONTR_SKIN:
   families:
   - Normal tissue
   - Skin
+
+CONTR_SKM:
+  name: Normal skeletal muscle
+  who_volume: null
+  site: Skeletal muscle
+  lineage_broad: Muscle
+  lineage_detail: null
+  families:
+  - Normal tissue
+  - Muscle
 
 CONTR_SOFT:
   name: Normal soft tissue
@@ -961,12 +981,23 @@ CPC_PED:
   - CNS tumor
   - Choroid plexus tumor
 
+CPH:
+  name: Craniopharyngioma
+  who_volume: Central Nervous System Tumours
+  site: Central nervous system
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+  - Craniopharyngioma
+
 CPH_ADM:
   name: Adamantinomatous craniopharyngioma
   who_volume: Central Nervous System Tumours
   site: Central nervous system
   lineage_broad: Epithelial
   lineage_detail: null
+  parent: CPH
   families:
   - CNS tumor
   - Craniopharyngioma
@@ -977,6 +1008,7 @@ CPH_PAP:
   site: Central nervous system
   lineage_broad: Epithelial
   lineage_detail: null
+  parent: CPH
   families:
   - CNS tumor
   - Craniopharyngioma
@@ -997,50 +1029,42 @@ CSA_DD:
   site: Bone / soft tissue
   lineage_broad: Mesenchymal
   lineage_detail: null
+  parent: CSA
   families:
   - Sarcoma
   - Chondrosarcoma
 
-CSA_IDH_MUT_A:
-  name: Chondrosarcoma, IDH-mutant methylation class A
+CSA_SB:
+  name: Chondrosarcoma, scull base group
   who_volume: Soft Tissue and Bone Tumours
   site: Bone / soft tissue
   lineage_broad: Mesenchymal
   lineage_detail: null
+  parent: CSA
+  families:
+  - Sarcoma
+  - Chondrosarcoma
+
+CSA_IDH_MUT:
+  name: Chondrosarcoma, IDH-mutant methylation class
+  who_volume: Soft Tissue and Bone Tumours
+  site: Bone / soft tissue
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  parent: CSA
   families:
   - Sarcoma
   - Chondrosarcoma
   - IDH-mutant
 
-CSA_IDH_MUT_B:
-  name: Chondrosarcoma, IDH-mutant methylation class B
+CSA_IDH_WT:
+  name: Chondrosarcoma, IDH-wildtype group
   who_volume: Soft Tissue and Bone Tumours
   site: Bone / soft tissue
   lineage_broad: Mesenchymal
   lineage_detail: null
   families:
-  - Sarcoma
-  - Chondrosarcoma
-  - IDH-mutant
-
-CSA_IDH_WT_A:
-  name: Chondrosarcoma, IDH-wildtype group A
-  who_volume: Soft Tissue and Bone Tumours
-  site: Bone / soft tissue
-  lineage_broad: Mesenchymal
-  lineage_detail: null
-  families:
-  - Sarcoma
-  - Chondrosarcoma
-  - IDH-wildtype
-
-CSA_IDH_WT_B:
-  name: Chondrosarcoma, IDH-wildtype group B
-  who_volume: Soft Tissue and Bone Tumours
-  site: Bone / soft tissue
-  lineage_broad: Mesenchymal
-  lineage_detail: null
-  families:
+  parent: CSA
   - Sarcoma
   - Chondrosarcoma
   - IDH-wildtype
@@ -1055,7 +1079,7 @@ CSA_MES:
   - Sarcoma
   - Chondrosarcoma
 
-CSA_NOS:
+CSA:
   name: Chondrosarcoma, NOS
   who_volume: Soft Tissue and Bone Tumours
   site: Bone / soft tissue
@@ -1210,6 +1234,15 @@ EBVTCL:
   - T-cell lymphoma
   - EBV-associated
 
+ECD:
+  name: Erdheim-Chester disease
+  who_volume: Haematolymphoid Tumours
+  site: Multisystem
+  lineage_broad: Histiocytic
+  lineage_detail: null
+  families:
+  - histiocytic
+
 EHE:
   name: Epithelioid hemangioendothelioma
   who_volume: Soft Tissue and Bone Tumours
@@ -1230,7 +1263,7 @@ ELST:
   - CNS tumor
   - Ear tumor
 
-EMBCA_T:
+EMBCA:
   name: Testicular embryonal carcinoma
   who_volume: Urinary and Male Genital Tumours
   site: Testis
@@ -1370,7 +1403,7 @@ ESO_CA:
   - Gastrointestinal tumor
   - Carcinoma
 
-ESO_CA_AD:
+ESO_ADC:
   name: Esophageal adenocarcinoma
   who_volume: Digestive System Tumours
   site: Esophagus
@@ -1391,7 +1424,7 @@ ESO_CA_CELLC:
   - Carcinoma
   - Cell culture
 
-ESO_CA_SQ:
+ESO_SCC:
   name: Esophageal squamous cell carcinoma
   who_volume: Digestive System Tumours
   site: Esophagus
@@ -1868,7 +1901,7 @@ IMET_FET:
   - CNS tumor
   - Mesenchymal tumor
 
-IMFT:
+IMT:
   name: Inflammatory myofibroblastic tumor
   who_volume: Soft Tissue and Bone Tumours
   site: Soft tissue
@@ -2640,7 +2673,7 @@ NSCLC_AD_CELLC:
   - Carcinoma
   - Cell culture
 
-NSCLC_SC:
+NSCLC_SCC:
   name: Lung squamous cell carcinoma
   who_volume: Thoracic Tumours
   site: Lung
@@ -2712,7 +2745,7 @@ OMY:
   - Bone tumor
   - Odontogenic tumor
 
-O_IDH:
+OLIGO_IDH:
   name: IDH-mutant, 1p/19q-codeleted oligodendroglioma
   who_volume: Central Nervous System Tumours
   site: Central nervous system
@@ -2723,7 +2756,7 @@ O_IDH:
   - Oligodendroglioma
   - IDH-mutant glioma
 
-O_IDH_ANA:
+OLIGO_IDH_ANA:
   name: Anaplastic oligodendroglioma, IDH-mutant, 1p/19q-codeleted
   who_volume: Central Nervous System Tumours
   site: Central nervous system
@@ -2800,7 +2833,7 @@ OVA_CA_CELLC:
   - Cell culture
 
 PAN_CA:
-  name: Pancreatic carcinoma
+  name: Pancreatic ductal adenocarcinoma
   who_volume: Digestive System Tumours
   site: Pancreas
   lineage_broad: Epithelial
@@ -3435,16 +3468,6 @@ SKM_ALS:
   - Muscle
   - Neuromuscular disease
 
-SKM_CONTR:
-  name: Normal skeletal muscle
-  who_volume: null
-  site: Skeletal muscle
-  lineage_broad: Muscle
-  lineage_detail: null
-  families:
-  - Normal tissue
-  - Muscle
-
 SKM_DM:
   name: Skeletal muscle, dermatomyositis
   who_volume: null
@@ -3841,7 +3864,7 @@ YKSA:
   - Sarcoma
   - Soft tissue tumor
 
-YST_T:
+YST:
   name: Testicular yolk sac tumor
   who_volume: Urinary and Male Genital Tumours
   site: Testis
@@ -4283,15 +4306,6 @@ KMT2ABALL:
   families:
   - BCP-ALL
 
-LCH_ECD:
-  name: Langerhans cell histiocytosis / Erdheim-Chester disease
-  who_volume: Haematolymphoid Tumours
-  site: Multisystem
-  lineage_broad: Histiocytic
-  lineage_detail: null
-  families:
-  - histiocytic
-
 LPL:
   name: Lymphoplasmacytic lymphoma
   who_volume: Haematolymphoid Tumours
@@ -4646,3 +4660,1614 @@ ZNF384:
   lineage_detail: B-Cell
   families:
   - BCP-ALL
+
+ACA:
+  name: Adrenocortical Adenoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Epithelial tumor
+
+ADAM:
+  name: Adamantinoma
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Bone tumor
+
+AITL:
+  name: Angioimmunoblastic T-cell Lymphoma
+  who_volume: null
+  site: null
+  lineage_broad: Hematolymphoid
+  lineage_detail: null
+  families:
+  - Hematolymphoid neoplasm
+
+AK:
+  name: Actinic Keratosis
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Squamous lesion
+
+AMBL:
+  name: Ameloblastoma
+  who_volume: null
+  site: null
+  lineage_broad: Unknown
+  lineage_detail: null
+  families:
+  - Undefined
+
+AMPAD:
+  name: Ampullary Adenocarcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+
+ANALSCC:
+  name: Anal Squamous Cell Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Squamous lesion
+
+BCC:
+  name: Basal Cell Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Skin adnexal tumor
+
+BC_HER2:
+  name: Breast Carcinoma - HER2+
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+
+BC_HRP:
+  name: Breast Carcinoma - Hormone Receptor Positive
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+
+BC_TN:
+  name: Breast Carcinoma - Triple Negative
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+
+BD:
+  name: Bowen's Disease of the Skin
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Squamous lesion
+
+BE:
+  name: Barrett's Esophagus
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+BMN:
+  name: Benign Melanocytic Nevus
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+BOT:
+  name: Borderline Ovarian Tumor
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Premalignant lesion
+
+BSNS:
+  name: Biphenotypic sinonasal sarcoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Sinonasal tumor
+
+BT:
+  name: Hyperparathyroidism-associated Brown Tumor
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Bone tumor
+
+CADIPOSE:
+  name: Control - Adipose
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+CANAL:
+  name: Control - Anal
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+CBONE:
+  name: Control - Bone
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+CCA_BD:
+  name: Cholangiocarcinoma - Bile Duct
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+
+CCOC:
+  name: Clear Cell Ovarian Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+
+CCS:
+  name: Clear Cell Sarcoma of Soft Parts
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Small round cell tumor
+
+CD34FT:
+  name: Superficial CD34+ Fibroblastic Tumor
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Myo-fibroblastic tumor
+
+CDFOLLICLE:
+  name: Control - Dental Follicle
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+CELLC_MEL:
+  name: Clear Culture Melanocytes
+  who_volume: null
+  site: null
+  lineage_broad: Unknown
+  lineage_detail: null
+  families:
+  - Cell culture
+
+CENDOMETRIUM:
+  name: Control - Endometrium
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+CEYE:
+  name: Control - Eye
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+CGASTRIC:
+  name: Control - Gastric
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+CGREY:
+  name: Control - Grey
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+CHEADNECK:
+  name: Control - Head and Neck
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+CHRPL:
+  name: Chronic Pleuritis
+  who_volume: null
+  site: null
+  lineage_broad: Unknown
+  lineage_detail: null
+  families:
+  - Undefined
+
+CIN:
+  name: Cervical Intraepithelial Neoplasia
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Squamous lesion
+
+CNSL:
+  name: Primary Central Nervous System Lymphoma
+  who_volume: null
+  site: null
+  lineage_broad: Hematolymphoid
+  lineage_detail: null
+  families:
+  - Hematolymphoid neoplasm
+
+COMEL:
+  name: Conjunctival Melanoma
+  who_volume: null
+  site: null
+  lineage_broad: Melanocytic
+  lineage_detail: null
+  families:
+  - Melanocytic tumor
+
+CPLEURA:
+  name: Control - Pleura
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+CRA:
+  name: Colorectal Adenoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Premalignant lesion
+
+CRNET:
+  name: Colorectal Neuroendocrine Tumor
+  who_volume: null
+  site: null
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Neuroendocrine tumor
+
+CSALIVARY:
+  name: Control - Salivary Gland
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+CSINONASAL:
+  name: Control - Sinonasal
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+CSMALLINT:
+  name: Control - Small Intestine
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+CUPS:
+  name: Cancer of Unknown Primary
+  who_volume: null
+  site: null
+  lineage_broad: Unknown
+  lineage_detail: null
+  families:
+  - Unclear
+
+CXPA:
+  name: Carcinoma ex Pleomorphic Adenoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+C_ALCL:
+  name: Primary Cutaneous Anaplastic Large Cell Lymphoma
+  who_volume: null
+  site: null
+  lineage_broad: Hematolymphoid
+  lineage_detail: null
+  families:
+  - Hematolymphoid neoplasm
+
+DCIS:
+  name: Ductal Carcinoma in Situ
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+
+DFSP:
+  name: Dermatofibrosarcoma Protuberans
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Myo-fibroblastic tumor
+
+DICER1_HG:
+  name: High-Grade DICER1-associated Tumor
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Small round cell tumor
+
+DICER1_LG:
+  name: Low-Grade DICER1-associated Tumor
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Small round cell tumor
+
+DNET:
+  name: Duodenal Neuroendocrine Tumor
+  who_volume: null
+  site: null
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Neuroendocrine tumor
+
+EATL:
+  name: Enteropathy-associated T-cell Lymphoma
+  who_volume: null
+  site: null
+  lineage_broad: Hematolymphoid
+  lineage_detail: null
+  families:
+  - Hematolymphoid neoplasm
+
+EMAD:
+  name: Endometrioid Adenocarcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+
+EMH:
+  name: Endometrial Hyperplasia
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Epithelial tumor
+
+EMSCAD:
+  name: Endometrioid Serous Cystadenocarcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+
+EMUND:
+  name: Endometrioid - Undefined
+  who_volume: null
+  site: null
+  lineage_broad: Unknown
+  lineage_detail: null
+  families:
+  - Undefined
+
+FMYX_UND:
+  name: Fibromyxosarcoma - Undefined
+  who_volume: null
+  site: null
+  lineage_broad: Unknown
+  lineage_detail: null
+  families:
+  - Undefined
+
+GCT_AD:
+  name: Adult Granulosa Cell Tumor
+  who_volume: null
+  site: null
+  lineage_broad: Germ cell
+  lineage_detail: null
+  families:
+  - Germ cell tumor
+
+GCT_JUV:
+  name: Juvenile Granulosa Cell Tumor
+  who_volume: null
+  site: null
+  lineage_broad: Germ cell
+  lineage_detail: null
+  families:
+  - Germ cell tumor
+
+GNET:
+  name: Gastric Neuroendocrine Tumor
+  who_volume: null
+  site: null
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Neuroendocrine tumor
+
+GPC:
+  name: Sinonasal Glomangiopericytoma
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Perivascular tumor
+
+HB:
+  name: Hepatoblastoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Hepatobiliary tumor
+
+HCCC:
+  name: Hyalinizing clear cell carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+HGSOC:
+  name: High Grade Serous Ovarian Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+
+HL_NOS:
+  name: Hematolymphoid Tumor, Not otherwise specified
+  who_volume: null
+  site: null
+  lineage_broad: Hematolymphoid
+  lineage_detail: null
+  families:
+  - Hematolymphoid neoplasm
+
+HMSC:
+  name: HPV-Related Multiphenotypic Sinonasal Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Sinonasal tumor
+
+HNET:
+  name: Hepatic Neuroendocrine Tumor
+  who_volume: null
+  site: null
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Neuroendocrine tumor
+
+HNSCC_DEK_AFF2:
+  name: "DEK::AFF2 Squamous Cell Carcinoma"
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Squamous lesion
+
+HNSCC_EBV_POS:
+  name: EBV-Associated Head and Neck Squamous Cell Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Squamous lesion
+
+HNSCC_HPV_NEG:
+  name: HPV-Negative Head and Neck Squamous Cell Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Squamous lesion
+
+HNSCC_HPV_POS:
+  name: HPV-Associated Head and Neck Squamous Cell Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Squamous lesion
+
+HOCT:
+  name: Hybrid Oncocytic Tumor
+  who_volume: null
+  site: null
+  lineage_broad: Unknown
+  lineage_detail: null
+  families:
+  - Undefined
+
+HPMCN:
+  name: Hepato-Pancreatic Mucinous Cystic Neoplasm
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+
+HSG:
+  name: Histiocytic Infiltrates of Suture Granulomas (Benign)
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+IDA:
+  name: Intercalated Duct Adenoma and Hyperplasia
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+ITAC:
+  name: Intestinal-type Sinonasal Adenocarcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+
+JMML:
+  name: Juvenile Myelomonocytic Leukemia
+  who_volume: null
+  site: null
+  lineage_broad: Hematolymphoid
+  lineage_detail: null
+  families:
+  - Hematolymphoid neoplasm
+
+KC:
+  name: Keratocystoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+KS:
+  name: Kaposi Sarcoma
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Vascular tumor
+
+LA:
+  name: Lymphadenoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+LB:
+  name: Lipoblastoma
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Adipocytic tumor
+
+LS_M:
+  name: Myxoid Liposarcoma
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Adipocytic tumor
+
+LULCNEC:
+  name: Lung Large Cell Neuroendocrine Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Neuroendocrine tumor
+
+LULCNET:
+  name: Lung Typical Carcinoid
+  who_volume: null
+  site: null
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Neuroendocrine tumor
+
+MCL:
+  name: Mantle Cell Lymphoma
+  who_volume: null
+  site: null
+  lineage_broad: Hematolymphoid
+  lineage_detail: null
+  families:
+  - Hematolymphoid neoplasm
+
+MEC:
+  name: Salivary Gland Mucoepidermoid Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+MEITL:
+  name: Monomorphic Epitheliotropic Intestinal T-cell Lymphoma
+  who_volume: null
+  site: null
+  lineage_broad: Hematolymphoid
+  lineage_detail: null
+  families:
+  - Hematolymphoid neoplasm
+
+MEN:
+  name: Meningioma
+  who_volume: null
+  site: null
+  lineage_broad: Meningothelial
+  lineage_detail: null
+  families:
+  - CNS tumor
+
+MFEGFR:
+  name: Myofibroblastic Lesions with EGFR Aberrations
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Myo-fibroblastic tumor
+
+MFS:
+  name: Myxoid Fibrosarcoma
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Myo-fibroblastic tumor
+
+MG:
+  name: Multinodular Goiter
+  who_volume: null
+  site: null
+  lineage_broad: Unknown
+  lineage_detail: null
+  families:
+  - Undefined
+
+MGA:
+  name: Microglandular Adenosis
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+
+MGCT:
+  name: Mixed Germ-Cell Tumor
+  who_volume: null
+  site: null
+  lineage_broad: Germ cell
+  lineage_detail: null
+  families:
+  - Germ cell tumor
+
+MIFS:
+  name: Myxoinflammatory Fibrosarcoma
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Myo-fibroblastic tumor
+
+MMEL:
+  name: Mucosal Melanoma
+  who_volume: null
+  site: null
+  lineage_broad: Melanocytic
+  lineage_detail: null
+  families:
+  - Melanocytic tumor
+
+MNA:
+  name: Metanephric Adenoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Epithelial tumor
+
+MP:
+  name: Myositis Proliferans
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Myo-fibroblastic tumor
+
+MTC:
+  name: Medullary Thyroid Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Neuroendocrine tumor
+
+MYO_PA:
+  name: Salivary Gland Myoepithelioma / Pleomorphic Adenoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+MYX:
+  name: Myxoma
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Myo-fibroblastic tumor
+
+MZL:
+  name: Nodal Marginal Zone Lymphoma
+  who_volume: null
+  site: null
+  lineage_broad: Hematolymphoid
+  lineage_detail: null
+  families:
+  - Hematolymphoid neoplasm
+
+NBL_GNBL:
+  name: Neuroblastoma / Ganglioneuroblastoma
+  who_volume: null
+  site: null
+  lineage_broad: Neuroepithelial
+  lineage_detail: null
+  families:
+  - Neuroepithelial tumor
+
+NECIDH2:
+  name: Sinonasal Neuroendocrine Carcinoma with IDH2 mutations
+  who_volume: null
+  site: null
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Neuroendocrine tumor
+
+NF:
+  name: Neurofibroma
+  who_volume: null
+  site: null
+  lineage_broad: Neural
+  lineage_detail: null
+  families:
+  - Peripheral nerve sheath tumor
+
+NFATC2:
+  name: NFATC2-rearranged sarcoma
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Myo-fibroblastic tumor
+
+NITAC:
+  name: Non-intestinal-type Sinonasal Adenocarcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+
+NOF:
+  name: Non-Ossifying Fibroma
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Myo-fibroblastic tumor
+
+OFD:
+  name: Osteofibrous Dysplasia
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Bone tumor
+
+OLP:
+  name: Oral Lichen Planus
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+OML:
+  name: Oral Mucosal Leukoplakia
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Premalignant lesion
+
+ONB:
+  name: Olfactory Neuroblastoma
+  who_volume: null
+  site: null
+  lineage_broad: Neuroepithelial
+  lineage_detail: null
+  families:
+  - Neuroepithelial tumor
+
+PAD:
+  name: Polymorphous Adenocarcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+PCFCL:
+  name: Primary Cutaneous Follicle Center Lymphoma
+  who_volume: null
+  site: null
+  lineage_broad: Hematolymphoid
+  lineage_detail: null
+  families:
+  - Hematolymphoid neoplasm
+
+PCGD:
+  name: Primary Cutaneous Gamma Delta T-cell Lymphoma
+  who_volume: null
+  site: null
+  lineage_broad: Hematolymphoid
+  lineage_detail: null
+  families:
+  - Hematolymphoid neoplasm
+
+PEC:
+  name: Perivascular Epithelioid Cell Tumor (PEComa)
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Perivascular tumor
+
+PGG:
+  name: Paraganglioma
+  who_volume: null
+  site: null
+  lineage_broad: Neuroepithelial
+  lineage_detail: null
+  families:
+  - Neuroepithelial tumor
+
+PIN:
+  name: Prostatic intraepithelial Neoplasia
+  who_volume: null
+  site: null
+  lineage_broad: Unknown
+  lineage_detail: null
+  families:
+  - Undefined
+
+PLAG1:
+  name: Cutaneous PLAG1-rearranged mixed Tumor
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+PNEC:
+  name: Pancreatic Neuroendocrine Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Neuroendocrine tumor
+
+PRAD:
+  name: Prostate Adenocarcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+
+RAML:
+  name: Renal Angiomyolipoma
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Perivascular tumor
+
+RB_MYCN:
+  name: Retinoblastoma MYCN-driven
+  who_volume: null
+  site: null
+  lineage_broad: Neuroepithelial
+  lineage_detail: null
+  families:
+  - Neuroepithelial tumor
+
+RCC_FH:
+  name: Fumarate Hydratase-deficient Renal Cell Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+
+RCC_RP:
+  name: Renal Cell Carcinoma with Reverse Polarity
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+
+RCC_TR:
+  name: Translocation Renal Cell Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+
+RDD:
+  name: Rosai-Dorfman-Disease
+  who_volume: null
+  site: null
+  lineage_broad: Histiocytic
+  lineage_detail: null
+  families:
+  - Histiocytic neoplasm
+
+RMS_PLEO:
+  name: Pleomorphic Rhabdomyosarcoma
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Rhabdomyosarcoma
+
+SACC:
+  name: Salivary Gland Acinic Cell Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+SARC_RMSL:
+  name: Rhabdomyosarcoma-like Sarcoma
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Rhabdomyosarcoma
+
+SBCAD:
+  name: Salivary Gland Basal Cell Adenocarcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+SBL:
+  name: Sialoblastoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+SBMC5P5Q:
+  name: Salivary Gland Biphasic Myoepithelial Carcinoma with 5p/5q Loss
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+SCA:
+  name: Salivary Gland Canalicular Adenoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+SCADC:
+  name: Cribriform Adenocarcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+SCCOHT:
+  name: Small Cell Carcinoma of the Ovary, Hypercalcemic Type
+  who_volume: null
+  site: null
+  lineage_broad: Unknown
+  lineage_detail: null
+  families:
+  - Sarcoma
+
+SCLC:
+  name: Small Cell Lung Cancer
+  who_volume: null
+  site: null
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Neuroendocrine tumor
+
+SCS:
+  name: Spindle Cell Sarcoma
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Myo-fibroblastic tumor
+
+SDA:
+  name: Striated Duct Adenoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+SDC:
+  name: Salivary Duct Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+SDP:
+  name: Salivary Gland Ductal Papillomas
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+SEA:
+  name: Sebaceous Adenoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+SEAD:
+  name: Sebaceous Adenocarcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+SFT:
+  name: Solitary Fibrous Tumor
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Myo-fibroblastic tumor
+
+SGCA:
+  name: Cystadenoma of the Salivary Glands
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+SGSCC:
+  name: Salivary Gland Squamous Cell Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Squamous lesion
+
+SIAD:
+  name: Small Intestine Adenocarcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+
+SIDC:
+  name: Salivary Gland Intraductal Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+SINEC:
+  name: Small Intestinal Neuroendocrine Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Neuroendocrine tumor
+
+SK:
+  name: Seborrheic Keratosis
+  who_volume: null
+  site: null
+  lineage_broad: Normal tissue
+  lineage_detail: null
+  families:
+  - Control
+
+SL:
+  name: Sialolipoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+SLCT:
+  name: Sertoli-Leydig Cell Tumor
+  who_volume: null
+  site: null
+  lineage_broad: Germ cell
+  lineage_detail: null
+  families:
+  - Germ cell tumor
+
+SLCT_DICER1:
+  name: Sertoli-Leydig Cell Tumor with DICER1 mutation
+  who_volume: null
+  site: null
+  lineage_broad: Germ cell
+  lineage_detail: null
+  families:
+  - Germ cell tumor
+
+SMA:
+  name: Sclerosing Microcystic Adenocarcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+SMAD:
+  name: Mucinous Adenocarcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+SMSAD:
+  name: Salivary Gland Microsecretory Adenocarcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+SMYOC:
+  name: Salivary Gland Myoepithelial Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+SNAD:
+  name: Sinonasal Adenocarcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Sinonasal tumor
+
+SNAF:
+  name: Sinonasal Tract Angiofibroma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Sinonasal tumor
+
+SNEP:
+  name: Sinonasal Papilloma, Exophytic
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Sinonasal tumor
+
+SNIP:
+  name: Sinonasal Papilloma, Inverted
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Sinonasal tumor
+
+SNNEC_SMARCA4:
+  name: Sinonasal Neuroendocrine Carcinoma with SMARCA4/ARID1A Mutations
+  who_volume: null
+  site: null
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Neuroendocrine tumor
+
+SNOP:
+  name: Sinonasal Papilloma, Oncocytic
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Sinonasal tumor
+
+SNSCC:
+  name: Sinonasal Squamous Cell Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Squamous lesion
+
+SNUC:
+  name: Sinonasal Undifferentiated Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Sinonasal tumor
+
+SONCO:
+  name: Salivary Gland Oncocytoma
+  who_volume: null
+  site: null
+  lineage_broad: Unknown
+  lineage_detail: null
+  families:
+  - Undefined
+
+SSA:
+  name: Sessile Serrated Adenoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Premalignant lesion
+
+SSC:
+  name: Salivary Gland Secretory Carcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+SSP:
+  name: Sialadenoma Papilliferum
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+SSPA:
+  name: Salivary Gland Sclerosing Polycystic Adenoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Epithelial tumor
+
+STMAD:
+  name: Somatic-Type Malignancy Adenocarcinoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+
+STMRMS:
+  name: Somatic-Type Malignancy Rhabdomyosarcoma
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Rhabdomyosarcoma
+
+TCS:
+  name: Teratocarcinosarcoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+TE:
+  name: Teratoma
+  who_volume: null
+  site: null
+  lineage_broad: Germ cell
+  lineage_detail: null
+  families:
+  - Germ cell tumor
+
+THYRA:
+  name: Thyroid Adenoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Epithelial tumor
+
+THYRAC:
+  name: Thyroid Anaplastic Cancer
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Carcinoma
+
+THY_MN:
+  name: Micronodular Thymoma
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Thymic tumor
+
+T_ALL:
+  name: T-cell Acute Lymphoblastic Leukemia
+  who_volume: null
+  site: null
+  lineage_broad: Hematolymphoid
+  lineage_detail: null
+  families:
+  - Hematolymphoid neoplasm
+
+USARC:
+  name: Undifferentiated Sarcoma
+  who_volume: null
+  site: null
+  lineage_broad: Unknown
+  lineage_detail: null
+  families:
+  - Sarcoma
+
+WARTH:
+  name: Warthin Tumor
+  who_volume: null
+  site: null
+  lineage_broad: Epithelial
+  lineage_detail: null
+  families:
+  - Salivary gland tumor
+
+WD_DDLS:
+  name: Well Differentiated or Dedifferentiated Liposarcoma
+  who_volume: null
+  site: null
+  lineage_broad: Mesenchymal
+  lineage_detail: null
+  families:
+  - Adipocytic tumor
+
+WT:
+  name: Nephroblastoma (Wilms Tumor)
+  who_volume: null
+  site: null
+  lineage_broad: Embryonal
+  lineage_detail: null
+  families:
+  - Renal tumor
