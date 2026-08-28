@@ -223,6 +223,4 @@ class MetadataMerger:
         )
 
         if not duplicates.is_empty():
-            raise ValueError(
-                f"Duplicate sample_id detected:\n{duplicates}"
-            )
+            raise ValueError(f"Duplicate sample_id detected:\n{duplicates}")

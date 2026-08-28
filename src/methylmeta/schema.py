@@ -1,9 +1,26 @@
 from __future__ import annotations
 
 from enum import StrEnum
+from functools import lru_cache
+from pathlib import Path
 
+import yaml
 from mepylome.dtypes import ArrayType
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
+
+from methylmeta.paths import TUMOR_TYPES_PATH
+
+
+@lru_cache(maxsize=1)
+def load_valid_methylation_classes() -> frozenset[str]:
+    """Return the set of WHO-standard acronyms defined in tumor_types.yaml.
+
+    This is the single source of truth for `methylation_class`: any value
+    assigned in a dataset config must be a key in tumor_types.yaml.
+    """
+    with TUMOR_TYPES_PATH.open() as f:
+        tumor_types = yaml.safe_load(f)
+    return frozenset(tumor_types)
 
 
 class SampleType(StrEnum):
@@ -136,3 +153,21 @@ class SampleMetadata(BaseModel):
             "Illumina methylation array type used to generate the sample data"
         ),
     )
+
+    @field_validator("methylation_class")
+    @classmethod
+    def validate_methylation_class(cls, value: str | None) -> str | None:
+        if value is None:
+            return value
+
+        valid = load_valid_methylation_classes()
+
+        if value not in valid:
+            raise ValueError(
+                f"methylation_class {value!r} is not a WHO acronym defined "
+                "in data/tumor_types.yaml. Add it there first if it is a "
+                "genuinely new entity, or fix the dataset config if it's a "
+                "typo/legacy acronym."
+            )
+
+        return value

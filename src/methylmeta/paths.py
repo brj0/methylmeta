@@ -33,5 +33,5 @@ def get_resource_path(package: str, resource_name: str = "") -> Path:
 
 PACKAGE_DIR = get_resource_path(APP_NAME)
 DATA_DIR = PACKAGE_DIR / "data"
-CONFIGS_DIR = PACKAGE_DIR / "configs" / "datasets"
+CONFIGS_DIR = PACKAGE_DIR.parent.parent / "configs" / "datasets"
 TUMOR_TYPES_PATH = DATA_DIR / "tumor_types.yaml"
