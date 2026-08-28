@@ -1045,14 +1045,64 @@ CSA_IDH_MUT:
   - Chondrosarcoma
   - IDH-mutant
 
+CONTR_MELANOCYTE:
+  name: Control - Cultured melanocytes
+  who_volume: Skin Tumours
+  site: Skin
+  lineage_broad: Melanocytic
+  lineage_detail: null
+  families:
+  - Control tissue
+
+PMF:
+  name: Primary myelofibrosis, overt fibrotic stage
+  who_volume: Haematolymphoid Tumours
+  site: Bone Marrow
+  lineage_broad: Hematolymphoid
+  lineage_detail: Myeloid
+  families:
+  - Myeloproliferative neoplasm
+  - Myelofibrosis
+
+HGBCL:
+  name: High-grade B-cell lymphoma, NOS
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - B-cell lymphoma
+
+DLBCL_EBV_POS:
+  name: EBV-positive diffuse large B-cell lymphoma
+  who_volume: Haematolymphoid Tumours
+  site: Lymphoid tissue
+  lineage_broad: Hematolymphoid
+  lineage_detail: B-Cell
+  families:
+  - Lymphoma
+  - B-cell lymphoma
+  - EBV-associated lymphoma
+
+THYMO_NET:
+  name: Thymic neuroendocrine tumor
+  who_volume: Thoracic Tumours
+  site: Thymus
+  lineage_broad: Neuroendocrine
+  lineage_detail: null
+  families:
+  - Thymic tumor
+  - Neuroendocrine tumor
+
 CSA_IDH_WT:
   name: Chondrosarcoma, IDH-wildtype group
   who_volume: Soft Tissue and Bone Tumours
   site: Bone / soft tissue
   lineage_broad: Mesenchymal
   lineage_detail: null
-  families:
   parent: CSA
+  families:
   - Sarcoma
   - Chondrosarcoma
   - IDH-wildtype

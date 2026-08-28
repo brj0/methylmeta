@@ -10,7 +10,6 @@ APP_NAME = "methylmeta"
 CACHE_DIR = Path(user_cache_dir(APP_NAME))
 DATASETS_DIR = CACHE_DIR / "datasets"
 LOG_DIR = CACHE_DIR / "logs"
-CONFIGS_DIR = Path("configs/datasets/").resolve()
 
 
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
@@ -30,3 +29,9 @@ def get_resource_path(package: str, resource_name: str = "") -> Path:
     """Returns the full path to the resource within the specified package."""
     resource = files(package).joinpath(resource_name)
     return cast(Path, resource)
+
+
+PACKAGE_DIR = get_resource_path(APP_NAME)
+DATA_DIR = PACKAGE_DIR / "data"
+CONFIGS_DIR = PACKAGE_DIR / "configs" / "datasets"
+TUMOR_TYPES_PATH = DATA_DIR / "tumor_types.yaml"

@@ -15,6 +15,7 @@ dependencies = [
     "platformdirs",
     "pydantic",
     "polars",
+    "pyyaml",
 ]
 
 [project.optional-dependencies]

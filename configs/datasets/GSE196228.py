@@ -40,18 +40,18 @@ def preservation(row):
 
 def methylation_class(row):
     mapping = {
-        "ACC": "ADCCA",
+        "ACC": "ADCC",
         "ADC": "SNAD",
         "ALV RMS": "RMS_ALV",
         "BP SSARC": "BSNS",
-        "CTRL": "CSINONASAL",
+        "CTRL": "CONTR_SINONASAL",
         "EMB RMS": "RMS_EMB",
         "LECA": "LEC",
         "MELA": "MMEL",
         "PIT AD": "PITAD",
         "RHB MEN": "MEN",
         "SCC": "SNSCC",
-        "SMARCB1": "SNC_SMARCB1",
+        "SMARCB1": "SMARCB1",
         "NEC-like IDH2": "NECIDH2",
         "NEC-like SMARCA4 ARID1A": "SNNEC_SMARCA4",
         None: None,
