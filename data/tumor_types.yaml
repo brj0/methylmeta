@@ -28,17 +28,6 @@ ACC:
   - Adrenal tumor
   - Carcinoma
 
-ADREN_CA_CELLC:
-  name: Adrenocortical carcinoma, cell culture
-  who_volume: Endocrine and Neuroendocrine Tumours
-  site: Adrenal gland
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Adrenal tumor
-  - Carcinoma
-  - Cell culture
-
 AFH:
   name: Angiomatoid fibrous histiocytoma
   who_volume: Soft Tissue and Bone Tumours
@@ -266,17 +255,6 @@ BC_AD:
   - Salivary gland tumor
   - Adenoma
 
-BLADURO_CA_CELLC:
-  name: Bladder urothelial carcinoma, cell culture
-  who_volume: Urinary and Male Genital Tumours
-  site: Bladder
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Urinary tract tumor
-  - Carcinoma
-  - Cell culture
-
 BRCA:
   name: Breast carcinoma
   who_volume: Breast Tumours
@@ -286,17 +264,6 @@ BRCA:
   families:
   - Breast tumor
   - Carcinoma
-
-BRCA_CELLC:
-  name: Breast carcinoma, cell culture
-  who_volume: Breast Tumours
-  site: Breast
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Breast tumor
-  - Carcinoma
-  - Cell culture
 
 BR_FAD:
   name: Fibroadenoma of the breast
@@ -317,17 +284,6 @@ BR_FEPNOS:
   families:
   - Breast tumor
   - Fibroepithelial tumor
-
-BR_CELLC:
-  name: Breast control analyte, cell culture
-  who_volume: Breast Tumours
-  site: Breast
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Breast
-  - Cell culture
-  - Control
 
 BURK:
   name: Burkitt lymphoma
@@ -389,17 +345,6 @@ CERAD_CA:
   - Gynecologic tumor
   - Carcinoma
 
-CERAD_CA_CELLC:
-  name: Cervical adenocarcinoma, cell culture
-  who_volume: Female Genital Tumours
-  site: Cervix
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Gynecologic tumor
-  - Carcinoma
-  - Cell culture
-
 CERSQ_CA:
   name: Cervical squamous cell carcinoma
   who_volume: Female Genital Tumours
@@ -410,18 +355,6 @@ CERSQ_CA:
   - Gynecologic tumor
   - Carcinoma
   - Squamous cell carcinoma
-
-CERSQ_CA_CELLC:
-  name: Cervical squamous cell carcinoma, cell culture
-  who_volume: Female Genital Tumours
-  site: Cervix
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Gynecologic tumor
-  - Carcinoma
-  - Squamous cell carcinoma
-  - Cell culture
 
 CERSQ_CA_HPV:
   name: Cervical squamous cell carcinoma, HPV-positive
@@ -443,17 +376,6 @@ CHGL:
   families:
   - Glioma
   - Glial tumor
-
-CHOL_CA_CELLC:
-  name: Cholangiocarcinoma, cell culture
-  who_volume: Digestive System Tumours
-  site: Bile duct
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Hepatobiliary tumor
-  - Carcinoma
-  - Cell culture
 
 CHORD:
   name: Chordoma
@@ -515,17 +437,6 @@ CMEL:
   - Melanocytic tumor
   - Melanoma
 
-CMEL_CELLC:
-  name: Cutaneous melanoma, cell culture
-  who_volume: Skin Tumours
-  site: Skin
-  lineage_broad: Melanocytic
-  lineage_detail: null
-  families:
-  - Melanocytic tumor
-  - Melanoma
-  - Cell culture
-
 CN:
   name: Central neurocytoma
   who_volume: Central Nervous System Tumours
@@ -586,28 +497,6 @@ COL_CA:
   families:
   - Gastrointestinal tumor
   - Carcinoma
-
-COL_CA_CELLC:
-  name: Colon carcinoma, cell culture
-  who_volume: Digestive System Tumours
-  site: Colon
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Gastrointestinal tumor
-  - Carcinoma
-  - Cell culture
-
-COL_CELLC:
-  name: Colon control analyte, cell culture
-  who_volume: Digestive System Tumours
-  site: Colon
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Colon
-  - Cell culture
-  - Control
 
 CONTR_ANAL:
   name: Control - Anal
@@ -1229,17 +1118,6 @@ DLBCL_ABC:
   - B-cell lymphoma
   - DLBCL
 
-DLBCL_CELLC:
-  name: Diffuse large B-cell lymphoma, cell culture
-  who_volume: Haematolymphoid Tumours
-  site: Lymphoid tissue
-  lineage_broad: Hematolymphoid
-  lineage_detail: B-Cell
-  families:
-  - Lymphoma
-  - B-cell lymphoma
-  - Cell culture
-
 DLBCL_GCB:
   name: Diffuse large B-cell lymphoma, germinal-center B-cell type
   who_volume: Haematolymphoid Tumours
@@ -1511,17 +1389,6 @@ ESO_ADC:
   families:
   - Gastrointestinal tumor
   - Carcinoma
-
-ESO_CA_CELLC:
-  name: Esophageal carcinoma, cell culture
-  who_volume: Digestive System Tumours
-  site: Esophagus
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Gastrointestinal tumor
-  - Carcinoma
-  - Cell culture
 
 ESO_SCC:
   name: Esophageal squamous cell carcinoma
@@ -1825,17 +1692,6 @@ HCC:
   - Hepatobiliary tumor
   - Carcinoma
 
-HCC_CELLC:
-  name: Hepatocellular carcinoma, cell culture
-  who_volume: Digestive System Tumours
-  site: Liver
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Hepatobiliary tumor
-  - Carcinoma
-  - Cell culture
-
 HGG_B:
   name: Adult-type diffuse high-grade glioma, IDH-wildtype, subtype B
   who_volume: Central Nervous System Tumours
@@ -1855,7 +1711,6 @@ HGG_F:
   families:
   - Glioma
   - High-grade glioma
-
 
 HGG_PED_RTK1A:
   name: Pediatric-type high-grade glioma, RTK 1A
@@ -1948,18 +1803,6 @@ HNSCC:
   - Head and neck tumor
   - Carcinoma
   - Squamous cell carcinoma
-
-HNSCC_CELLC:
-  name: Head and neck squamous cell carcinoma, cell culture
-  who_volume: Head and Neck Tumours
-  site: Head and neck
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Head and neck tumor
-  - Carcinoma
-  - Squamous cell carcinoma
-  - Cell culture
 
 HODG_CL:
   name: Classical Hodgkin lymphoma
@@ -2118,17 +1961,6 @@ LGG:
   families:
   - Glioma
   - Low-grade glioma
-
-LGG_CELLC:
-  name: Lower-grade glioma, cell culture
-  who_volume: Central Nervous System Tumours
-  site: Central nervous system
-  lineage_broad: Glial
-  lineage_detail: null
-  families:
-  - Glioma
-  - Low-grade glioma
-  - Cell culture
 
 LGG_DIG_DIA:
   name: Desmoplastic infantile astrocytoma / ganglioglioma
@@ -2499,17 +2331,6 @@ MESOT:
   - Thoracic tumor
   - Mesothelial tumor
 
-MESOT_CELLC:
-  name: Mesothelioma, cell culture
-  who_volume: Thoracic Tumours
-  site: Pleura / peritoneum
-  lineage_broad: Mesothelial
-  lineage_detail: null
-  families:
-  - Thoracic tumor
-  - Mesothelial tumor
-  - Cell culture
-
 METST:
   name: Myoepithelioma of soft tissue
   who_volume: Soft Tissue and Bone Tumours
@@ -2782,17 +2603,6 @@ NSCLC_AD:
   - Lung tumor
   - Carcinoma
 
-NSCLC_AD_CELLC:
-  name: Lung adenocarcinoma, cell culture
-  who_volume: Thoracic Tumours
-  site: Lung
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Lung tumor
-  - Carcinoma
-  - Cell culture
-
 NSCLC_SCC:
   name: Lung squamous cell carcinoma
   who_volume: Thoracic Tumours
@@ -2803,18 +2613,6 @@ NSCLC_SCC:
   - Lung tumor
   - Carcinoma
   - Squamous cell carcinoma
-
-NSCLC_SC_CELLC:
-  name: Lung squamous cell carcinoma, cell culture
-  who_volume: Thoracic Tumours
-  site: Lung
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Lung tumor
-  - Carcinoma
-  - Squamous cell carcinoma
-  - Cell culture
 
 NSEM_GCT:
   name: Non-seminomatous germ cell tumor
@@ -2941,17 +2739,6 @@ OVA_CA:
   - Gynecologic tumor
   - Carcinoma
 
-OVA_CA_CELLC:
-  name: Ovarian carcinoma, cell culture
-  who_volume: Female Genital Tumours
-  site: Ovary
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Gynecologic tumor
-  - Carcinoma
-  - Cell culture
-
 PAN_CA:
   name: Pancreatic ductal adenocarcinoma
   who_volume: Digestive System Tumours
@@ -2961,17 +2748,6 @@ PAN_CA:
   families:
   - Gastrointestinal tumor
   - Carcinoma
-
-PAN_CA_CELLC:
-  name: Pancreatic carcinoma, cell culture
-  who_volume: Digestive System Tumours
-  site: Pancreas
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Gastrointestinal tumor
-  - Carcinoma
-  - Cell culture
 
 PCC:
   name: Pheochromocytoma
@@ -3033,17 +2809,6 @@ PGG_EXAD:
   families:
   - Paraganglioma
   - Neuroendocrine tumor
-
-PGG_EXAD_CELLC:
-  name: Extra-adrenal paraganglioma, cell culture
-  who_volume: null
-  site: Peripheral nervous system
-  lineage_broad: Neuroendocrine
-  lineage_detail: null
-  families:
-  - Paraganglioma
-  - Neuroendocrine tumor
-  - Cell culture
 
 PGG_NC:
   name: Spinal paraganglioma, non-CIMP
@@ -3358,17 +3123,6 @@ RCC_CC:
   - Renal tumor
   - Carcinoma
 
-RCC_CC_CELLC:
-  name: Clear cell renal cell carcinoma, cell culture
-  who_volume: Urinary and Male Genital Tumours
-  site: Kidney
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Renal tumor
-  - Carcinoma
-  - Cell culture
-
 RCC_CP:
   name: Chromophobe renal cell tumor
   who_volume: Urinary and Male Genital Tumours
@@ -3379,17 +3133,6 @@ RCC_CP:
   - Renal tumor
   - Carcinoma
 
-RCC_CP_CELLC:
-  name: Chromophobe renal cell tumor, cell culture
-  who_volume: Urinary and Male Genital Tumours
-  site: Kidney
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Renal tumor
-  - Carcinoma
-  - Cell culture
-
 RCC_PAP:
   name: Papillary renal cell carcinoma
   who_volume: Urinary and Male Genital Tumours
@@ -3399,17 +3142,6 @@ RCC_PAP:
   families:
   - Renal tumor
   - Carcinoma
-
-RCC_PAP_CELLC:
-  name: Papillary renal cell carcinoma, cell culture
-  who_volume: Urinary and Male Genital Tumours
-  site: Kidney
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Renal tumor
-  - Carcinoma
-  - Cell culture
 
 RMS_ALV:
   name: Alveolar rhabdomyosarcoma
@@ -3440,16 +3172,6 @@ RMS_MYOD1:
   families:
   - Sarcoma
   - Rhabdomyosarcoma
-
-SARC_CELLC:
-  name: Sarcoma, NOS, cell culture
-  who_volume: Soft Tissue and Bone Tumours
-  site: Soft tissue
-  lineage_broad: Mesenchymal
-  lineage_detail: null
-  families:
-  - Sarcoma
-  - Cell culture
 
 SARC_DICER1:
   name: Sarcoma with DICER1 mutation
@@ -3717,17 +3439,6 @@ STOM_CA:
   - Gastrointestinal tumor
   - Carcinoma
 
-STOM_CA_CELLC:
-  name: Stomach carcinoma, cell culture
-  who_volume: Digestive System Tumours
-  site: Stomach
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Gastrointestinal tumor
-  - Carcinoma
-  - Cell culture
-
 STUMP:
   name: Smooth muscle tumor of uncertain malignant potential
   who_volume: Female Genital Tumours
@@ -3778,17 +3489,6 @@ SS:
   families:
   - Sarcoma
   - Soft tissue tumor
-
-TGCT_CELLC:
-  name: Testicular germ cell tumor, cell culture
-  who_volume: Urinary and Male Genital Tumours
-  site: Testis
-  lineage_broad: Germ cell
-  lineage_detail: null
-  families:
-  - Germ cell tumor
-  - Testicular tumor
-  - Cell culture
 
 TCL_NOS:
   name: T-cell lymphoma, NOS
@@ -3869,17 +3569,6 @@ THYMO_C:
   - Thymic tumor
   - Carcinoma
 
-THYMO_CELLC:
-  name: Thymoma, cell culture
-  who_volume: Thoracic Tumours
-  site: Thymus
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Thymic tumor
-  - Thymoma
-  - Cell culture
-
 THYR_CA:
   name: Thyroid carcinoma, NOS
   who_volume: Endocrine and Neuroendocrine Tumours
@@ -3889,17 +3578,6 @@ THYR_CA:
   families:
   - Thyroid tumor
   - Carcinoma
-
-THYR_CA_CELLC:
-  name: Thyroid carcinoma, cell culture
-  who_volume: Endocrine and Neuroendocrine Tumours
-  site: Thyroid
-  lineage_broad: Epithelial
-  lineage_detail: null
-  families:
-  - Thyroid tumor
-  - Carcinoma
-  - Cell culture
 
 THYR_CA_FOL:
   name: Thyroid follicular carcinoma
@@ -3951,18 +3629,6 @@ UCS:
   - Gynecologic tumor
   - Carcinoma
   - Sarcoma
-
-UCS_CELLC:
-  name: Uterine carcinosarcoma, cell culture
-  who_volume: Female Genital Tumours
-  site: Uterus
-  lineage_broad: Mixed epithelial / mesenchymal
-  lineage_detail: null
-  families:
-  - Gynecologic tumor
-  - Carcinoma
-  - Sarcoma
-  - Cell culture
 
 UPS:
   name: Undifferentiated pleomorphic sarcoma
@@ -4741,17 +4407,6 @@ UMEL:
   - Melanocytic tumor
   - Melanoma
 
-UMEL_CELLC:
-  name: Uveal melanoma, cell culture
-  who_volume: Eye Tumours
-  site: Eye
-  lineage_broad: Melanocytic
-  lineage_detail: null
-  families:
-  - Melanocytic tumor
-  - Melanoma
-  - Cell culture
-
 ULM:
   name: Uterine leiomyoma
   who_volume: Female Genital Tumours
@@ -4960,15 +4615,6 @@ CDFOLLICLE:
   lineage_detail: null
   families:
   - Control
-
-CELLC_MEL:
-  name: Clear Culture Melanocytes
-  who_volume: null
-  site: null
-  lineage_broad: Unknown
-  lineage_detail: null
-  families:
-  - Cell culture
 
 CHRPL:
   name: Chronic Pleuritis

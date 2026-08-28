@@ -1,9 +1,139 @@
 [project]
 name = "methylmeta"
 version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
-requires-python = ">=3.13"
+description = "Metadata harmonization for Illumina methylation datasets"
+readme = { file = "README.md", content-type = "text/markdown" }
+authors = [
+    { name = "Jon Brugger" }
+]
+license = "Apache-2.0"
+keywords = ["Illumina", "Methylation", "Infinum", "Microarray"]
+requires-python = ">=3.12"
 dependencies = [
     "mepylome>=0.12.0",
+    "click",
+    "platformdirs",
+    "pydantic",
+    "polars",
 ]
+
+[project.optional-dependencies]
+dev = [
+    "mypy",
+    "pytest",
+    "pytest-cov",
+    "ruff",
+]
+
+[project.urls]
+Homepage = "https://github.com/brj0/methylmeta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+select = [
+    # Annotation
+    "ANN",
+    # pycodestyle - missing docstring
+    "D",
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+    # pandas-vet
+    "PD",
+    # Pylint
+    "PL",
+    # Trailing whitespace
+    "W",
+]
+ignore = [
+    # Dynamically typed expressions (typing.Any) are disallowed in `*args`
+    "ANN401",
+    # Relax the convention by _not_ requiring documentation for every function
+    # parameter.
+    "D417",
+    # Missing docstring in `__init__`
+    "D107",
+    # Missing docstring in public method
+    "D102",
+    # Missing docstring in magic method
+    "D105",
+    # Missing docstring in public module
+    "D100",
+    # Missing docstring in public class
+    "D101",
+    # Use `.to_numpy()` instead of `.values`
+    "PD011",
+    # `print` found
+    "T201",
+    # Trailing comma missing
+    "COM812",
+    # Magic value used in comparison
+    "PLR2004",
+    # Too many return statements
+    "PLR0911",
+    # `import` should be at the top-level of a file
+    "SIM115",
+    # Too many arguments in function definition
+    "PLC0415",
+    # Method could be a function, class method, or static method
+    "PLR6301",
+    # Too many branches
+    "PLR0912",
+    # Too many arguments in function definition
+    "PLR0913",
+    # Too many statements
+    "PLR0915",
+    # Too many local variables
+    "PLR0914",
+    # Too many positional arguments
+    "PLR0917",
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["D103", "PLC2701"]
+"configs/datasets/**/*.py" = [
+    "ANN",
+    "D",
+    "E501",
+]
+
+[tool.mypy]
+python_version = "3.13"
+ignore_missing_imports = true
+disallow_untyped_defs = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+show_column_numbers = true
+pretty = true
+exclude = ["build", "junk/"]
+
+[tool.ty.terminal]
+output-format = "concise"
+
+[tool.ty.rules]
+unresolved-import = "ignore"
