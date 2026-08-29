@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from enum import StrEnum
 from functools import lru_cache
-from pathlib import Path
 
 import yaml
 from mepylome.dtypes import ArrayType

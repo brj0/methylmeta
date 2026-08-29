@@ -1,9 +1,9 @@
 def dataset_id(row):
-    return "E-MTAB-10576"
+    return "E-MTAB-10578"
 
 
 def description(row):
-    return "HNSCC_HPV_NEG"
+    return "HNSCC"
 
 
 def sample_id(row):
@@ -15,7 +15,7 @@ def diagnosis(row):
 
 
 def methylation_class(row):
-    return "HNSCC_HPV_NEG"
+    return "HNSCC"
 
 
 def sample_site(row):
