@@ -19,12 +19,12 @@ def methylation_class(row):
     mapping = {
         "5p5q_class": "SBMC5P5Q",
         "ACC": "SACC",
-        "BC_AD": "BC_AD",
+        "ADCCA": "ADCC",
         "BC": "SBCAD",
+        "BC_AD": "BC_AD",
         "CADC": "SCADC",
         "CCC": "HCCC",
         "C_AD": "SCA",
-        "SCA": "SSC",
         "EPMYOC": "EMC",
         "IDC": "SIDC",
         "MC": "MEC",
@@ -34,8 +34,10 @@ def methylation_class(row):
         "NOR": "CONTR_SALIVARY",
         "ONCO": "SONCO",
         "P_ADC": "PAD",
+        "SCA": "SSC",
         "SDCA": "SDC",
         "SPA": "SSPA",
+        "WARTH": "WARTH",
     }
     return mapping[value]
 

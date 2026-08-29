@@ -48,8 +48,8 @@ def sample_type(row):
 
 
 def sex(row):
-    return row['"sex"']
+    return row['""sex""']
 
 
 def age(row):
-    return row['"age"']
+    return row['""age""']

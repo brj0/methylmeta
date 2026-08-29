@@ -30,16 +30,21 @@ def sample_type(row):
     return "primary"
 
 
-def preservation(row):
-    value = row["tissue"]
-    mapping = {
-        "fresh_OR_specimen": "FROZEN",
-    }
-    return mapping[value]
+def material(row):
+    value = row["treatment"]
+    if "cell_culture" in value:
+        return cell_line
+    return None
 
 
 def sex(row):
-    return row["Sex"]
+    value = row["Sex"]
+    mapping = {
+        "M": "male",
+        "F": "female",
+        None: None,
+    }
+    return mapping[value]
 
 
 def age(row):

@@ -33,7 +33,7 @@ def methylation_class(row):
         "Normal melanocytes": "CONTR_MELANOCYTE",
         "Uveal melanoma": "UMEL",
     }
-    return mapping[value]
+    return mapping.get(value, value)
 
 
 def sample_site(row):
@@ -46,7 +46,7 @@ def sample_site(row):
         "Skin": "Skin",
         "Uvea": "Uvea",
     }
-    return mapping[value]
+    return mapping.get(value, value)
 
 
 def primary_site(row):
@@ -59,7 +59,7 @@ def primary_site(row):
         "Skin": "Skin",
         "Uvea": "Uvea",
     }
-    return mapping[value]
+    return mapping.get(value, value)
 
 
 def preservation(row):

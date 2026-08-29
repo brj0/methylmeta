@@ -82,7 +82,7 @@ def sample_site(row):
     mapping = {
         "--": None,
     }
-    return mapping[value]
+    return mapping.get(value, value)
 
 
 def preservation(row):
@@ -90,6 +90,7 @@ def preservation(row):
     mapping = {
         "Frozen": "FROZEN",
         "PB": None,
+        "FFPE": "FFPE",
     }
     return mapping[value]
 

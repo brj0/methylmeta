@@ -72,7 +72,7 @@ class SampleMetadata(BaseModel):
         ),
     )
 
-    sample_id: str = Field(
+    sample_id: str | None = Field(
         description=(
             "Unique identifier for the biological sample (often sentrix id)"
         ),
@@ -141,7 +141,7 @@ class SampleMetadata(BaseModel):
         description="Sex of the patient",
     )
 
-    age: int | None = Field(
+    age: float | None = Field(
         default=None,
         description="Age in years at sampling",
     )

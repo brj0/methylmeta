@@ -23,7 +23,8 @@ def sample_site(row):
 
 
 def age(row):
-    return row["Characteristics[age]"]
+    value = row["Characteristics[age]"]
+    return None if value == "unknown" else value
 
 
 def tumor_grade(row):

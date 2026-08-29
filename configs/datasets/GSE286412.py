@@ -58,5 +58,6 @@ def preservation(row):
     value = row["tissue type"]
     mapping = {
         "Fresh frozen": "FROZEN",
+        "FFPE": "FFPE",
     }
     return mapping[value]

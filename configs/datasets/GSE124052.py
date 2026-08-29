@@ -15,8 +15,10 @@ def diagnosis(row):
 
 
 def methylation_class(row):
-    title = row["Title"]
-    hpv_geno = row["hpv genotyping"]
+    title = row["Title"] if row["Title"] is not None else ""
+    hpv_geno = (
+        row["hpv genotyping"] if row["hpv genotyping"] is not None else ""
+    )
     p16 = row["p16 immunohistochemistry"]
     if "lung" in title:
         return "NSCLC_SCC"
@@ -35,7 +37,7 @@ def primary_site(row):
     mapping = {
         "Not applicable": "Lung",
     }
-    return mapping[value]
+    return mapping.get(value, value)
 
 
 def sample_type(row):

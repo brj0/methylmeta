@@ -17,9 +17,8 @@ def diagnosis(row):
         "EWSR1-VGLL1": "Schwannoma (EWSR1-VGLL1 Mutation)",
         "EWSR1-intergenic_HTATSF1-VGLL1": "Schwannoma (EWSR1-intergenic_HTATSF1-VGLL1 Mutation)",
         "SS18-VGLL3": "Schwannoma (SS18-VGLL3)",
-        "": "Schwannoma",
     }
-    return mapping[value]
+    return mapping.get(value, "Schwannoma")
 
 
 def methylation_class(row):

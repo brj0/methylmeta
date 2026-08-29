@@ -7,7 +7,10 @@ def description(row):
 
 
 def sample_id(row):
-    return row["Sample_ID"]
+    value = row["Sample_ID"]
+    if value == "NONE":
+        return None
+    return value
 
 
 def diagnosis(row):
@@ -15,29 +18,18 @@ def diagnosis(row):
 
 
 def methylation_class(row):
+    value = row["Sample_ID"]
+    if value == "NONE":
+        return None
+    return "MCC"
+
+
+def material(row):
     value = row["cell line"]
-    mapping = {
-        "Merkel cell carcinoma tissue": "MCC",
-    }
-    return mapping[value]
+    if "tissue" in value:
+        return "tissue"
+    return "cell_line"
 
 
 def sample_site(row):
     return row["Source"]
-
-
-def sex(row):
-    translate = {"M": "male", "F": "female"}
-    try:
-        # Expect format: gender_<M/F>_age_<number>_years_<type>_...
-        return translate[row["sample type"].split("_")[1]]
-    except Exception:
-        return None
-
-
-def age(row):
-    try:
-        # Expect format: gender_<M/F>_age_<number>_years_<type>_...
-        return int(row["sample type"].split("_")[3])
-    except Exception:
-        return None

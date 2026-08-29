@@ -24,6 +24,7 @@ def methylation_class(row):
     value = row["condition"]
     mapping = {
         "SCC arising in SNIP": "SNSCC",
+        "SNIP": "SNIP",
     }
     return mapping[value]
 

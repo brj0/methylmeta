@@ -18,7 +18,8 @@ def methylation_class(row):
     value = row["p16_status"]
     mapping = {
         "neg": "HNSCC_HPV_NEG",
-        "pos": "HNSCC_HPV_NEG",
+        "pos": "HNSCC_HPV_POS",
+        "NA": "HNSCC",
         None: "HNSCC",
     }
     return mapping[value]
@@ -44,5 +45,7 @@ def sex(row):
     value = row["Sex"]
     mapping = {
         "sex": None,
+        "m": "male",
+        "f": "female",
     }
     return mapping[value]

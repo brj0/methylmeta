@@ -59,9 +59,12 @@ class MetadataHarmonizer:
         """Harmonize a raw annotation table."""
         rows = [self._harmonize_row(row) for row in raw.iter_rows(named=True)]
 
-        return pl.DataFrame(
-            [metadata.model_dump(mode="json") for metadata in rows]
-        )
+        if not rows:
+            return pl.DataFrame()
+
+        data = [metadata.model_dump(mode="python") for metadata in rows]
+
+        return pl.DataFrame(data, infer_schema_length=None)
 
     def _harmonize_row(
         self,

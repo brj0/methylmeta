@@ -1,8 +1,8 @@
-def dataset_id():
+def dataset_id(row):
     return "E-MTAB-2926"
 
 
-def description():
+def description(row):
     return "DLBCL and lymphoid controls"
 
 

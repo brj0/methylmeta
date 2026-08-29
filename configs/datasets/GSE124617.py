@@ -26,10 +26,11 @@ def diagnosis(row):
 def methylation_class(row):
     value = row["disease state"]
     mapping = {
+        "AML": "AML",
         "Astrocytoma": "ASTRO_IDH",
+        "Breast Cancer": "BRCA",
         "Cholangiocarcinoma": "CCA",
         "Oligodendroglioma": "OLIGO_IDH",
-        "Breast Cancer": "BRCA",
         "SNUC": "NECIDH2",
     }
     return mapping[value]
