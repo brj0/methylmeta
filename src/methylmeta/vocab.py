@@ -35,7 +35,7 @@ class TumorType:
 @lru_cache(maxsize=1)
 def _load() -> dict[str, TumorType]:
     with TUMOR_TYPES_PATH.open() as f:
-        raw = yaml.safe_load(f)
+        raw = yaml.safe_load(f)["tumor_types"]
     return {
         acronym: TumorType(acronym=acronym, **entry)
         for acronym, entry in raw.items()

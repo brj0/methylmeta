@@ -18,7 +18,7 @@ def load_valid_methylation_classes() -> frozenset[str]:
     assigned in a dataset config must be a key in tumor_types.yaml.
     """
     with TUMOR_TYPES_PATH.open() as f:
-        tumor_types = yaml.safe_load(f)
+        tumor_types = yaml.safe_load(f)["tumor_types"]
     return frozenset(tumor_types)
 
 
