@@ -8,12 +8,10 @@ from platformdirs import user_cache_dir
 APP_NAME = "methylmeta"
 
 CACHE_DIR = Path(user_cache_dir(APP_NAME))
-DATASETS_DIR = CACHE_DIR / "datasets"
 LOG_DIR = CACHE_DIR / "logs"
 
 
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
-DATASETS_DIR.mkdir(parents=True, exist_ok=True)
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 

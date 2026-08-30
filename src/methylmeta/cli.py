@@ -4,6 +4,7 @@ from pathlib import Path
 import click
 
 from methylmeta.merger import MetadataMerger
+from methylmeta.paths import CONFIGS_DIR
 
 logging.basicConfig(level=logging.INFO)
 
@@ -16,13 +17,13 @@ def cli() -> None:
 
 @cli.command()
 @click.option(
-    "--config-dir", type=Path, default="configs/datasets", show_default=True
+    "--config_dir", type=Path, default=CONFIGS_DIR, show_default=True
 )
-@click.option("--dataset-dir", type=Path, default=None)
+@click.option("--dataset_dir", type=Path, required=True)
 @click.option("--output", type=Path, default=None)
-@click.option("--strict/--no-strict", default=True)
+@click.option("--strict/--no_strict", default=True)
 @click.option(
-    "--array-types/--no-array-types",
+    "--array_types/--no_array_types",
     default=True,
     help=(
         "Fill in array_type by reading each sample's IDAT header. Slow on "
@@ -40,7 +41,7 @@ def cli() -> None:
     ),
 )
 @click.option(
-    "--list-missing",
+    "--list_missing",
     is_flag=True,
     help=(
         "With --datasets, just print which of them have no config yet "
@@ -49,7 +50,7 @@ def cli() -> None:
 )
 def merge(
     config_dir: Path,
-    dataset_dir: Path | None,
+    dataset_dir: Path,
     output: Path | None,
     strict: bool,
     array_types: bool,
@@ -57,35 +58,27 @@ def merge(
     list_missing: bool,
 ) -> None:
     """Harmonize and merge dataset(s) into one metadata table."""
+    merger = MetadataMerger(
+        config_dir=config_dir,
+        dataset_dir=dataset_dir,
+        strict=strict,
+    )
     dataset_ids = (
         [d.strip() for d in datasets.split(",") if d.strip()]
         if datasets
-        else None
+        else []
     )
 
     if list_missing:
-        from methylmeta.merger import missing_configs
-
-        wanted = dataset_ids or []
-        missing = missing_configs(config_dir, wanted)
+        missing = merger.missing_configs(dataset_ids)
         if missing:
             click.echo("Missing configs for:\n" + "\n".join(missing))
         else:
             click.echo("All requested datasets already have a config.")
         return
 
-    if dataset_dir is None:
-        raise click.UsageError(
-            "--dataset-dir is required unless --list-missing."
-        )
     if output is None:
-        raise click.UsageError("--output is required unless --list-missing.")
-
-    merger = MetadataMerger(
-        config_dir=config_dir,
-        dataset_dir=dataset_dir,
-        strict=strict,
-    )
+        raise click.UsageError("--output is required unless --list_missing.")
 
     output = Path(output).expanduser()
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -104,10 +97,10 @@ def merge(
 
 @cli.command()
 @click.option(
-    "--config-dir", type=Path, default="configs/datasets", show_default=True
+    "--config_dir", type=Path, default=CONFIGS_DIR, show_default=True
 )
-@click.option("--dataset-dir", type=Path, required=True)
-@click.option("--max-unique", type=int, default=15, show_default=True)
+@click.option("--dataset_dir", type=Path, required=True)
+@click.option("--max_unique", type=int, default=15, show_default=True)
 @click.argument("dataset_id")
 def profile(
     config_dir: Path,
@@ -122,9 +115,9 @@ def profile(
 
 @cli.command()
 @click.option(
-    "--config-dir", type=Path, default="configs/datasets", show_default=True
+    "--config_dir", type=Path, default=CONFIGS_DIR, show_default=True
 )
-@click.option("--dataset-dir", type=Path, required=True)
+@click.option("--dataset_dir", type=Path, required=True)
 @click.argument("dataset_id")
 def test(
     config_dir: Path,
@@ -142,7 +135,7 @@ def test(
     raise SystemExit(0 if report.success else 1)
 
 
-@cli.command("search-vocab")
+@cli.command("search_vocab")
 @click.argument("query")
 @click.option("--limit", type=int, default=10, show_default=True)
 def search_vocab(query: str, limit: int) -> None:
