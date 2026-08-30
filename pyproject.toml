@@ -40,6 +40,9 @@ include-package-data = true
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
+[project.scripts]
+methylmeta = "methylmeta.cli:cli"
+
 [tool.ruff]
 line-length = 79
 

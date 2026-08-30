@@ -321,7 +321,10 @@ class MetadataMerger:
 
     Typical usecase:
 
-        merger = MetadataMerger(config_dir="configs/datasets", input_dir="raw")
+        merger = MetadataMerger(
+            config_dir="/path/to/configs/datasets",
+            dataset_dir="/path/to/datasets",
+        )
 
         # 1. Figure out which of the datasets you want don't have a config yet.
         wanted = ["GSE197094", "GSE196228", "GSE999999"]
@@ -333,26 +336,28 @@ class MetadataMerger:
 
         # Or, to merge everything that currently has both a config and data:
         df = merger.merge()
+
+        # 3. If dataset_dir/<dataset_id>/ also contains IDAT files, fill in
+        # array_type by reading them. This is a separate, slower step - write
+        # df out as a checkpoint first if merging at scale.
+        df = merger.add_array_types(df)
+
+    `dataset_dir` is expected to contain one subdirectory per dataset_id,
+    each holding both that dataset's metadata file and (optionally) its own
+    IDAT files - IDATs are never looked up outside a dataset's own folder,
+    since generic filenames (e.g. "sample1_Grn.idat") can collide across
+    different datasets, especially ArrayExpress or private cohorts.
     """
 
     def __init__(
         self,
         config_dir: str | Path,
-        input_dir: str | Path,
+        dataset_dir: str | Path,
         strict: bool = True,
-        idat_dir: str | Path | None = None,
     ) -> None:
         self.config_dir = Path(config_dir)
-        self.input_dir = Path(input_dir)
+        self.dataset_dir = Path(dataset_dir)
         self.strict = strict
-
-        self.id_to_basepath: dict[str, Path] = {}
-
-        if idat_dir is not None:
-            from mepylome.dtypes.beads import idat_basepaths
-
-            basepaths = idat_basepaths(Path(idat_dir))
-            self.id_to_basepath = {p.name: p for p in basepaths}
 
         self._id_to_config: dict[str, Path] | None = None
 
@@ -372,7 +377,7 @@ class MetadataMerger:
                 f"No dataset config .py files found in {self.config_dir}. "
                 "config_dir should point at your harmonizer configs (e.g. "
                 "'configs/datasets'), not at a raw-data/download directory "
-                "- double check you haven't swapped config_dir and input_dir."
+                "- double check you haven't swapped config_dir and dataset_dir."
             )
 
         index: dict[str, Path] = {}
@@ -435,17 +440,17 @@ class MetadataMerger:
 
         for dataset_id in dataset_ids:
             config_path = index[dataset_id]
-            dataset_dir = self.input_dir / dataset_id
+            dataset_path = self.dataset_dir / dataset_id
 
-            if not dataset_dir.is_dir():
+            if not dataset_path.is_dir():
                 if self.strict:
                     raise FileNotFoundError(
-                        f"{dataset_id}: directory not found: {dataset_dir}"
+                        f"{dataset_id}: directory not found: {dataset_path}"
                     )
                 logger.warning("Skipping %s: no data directory", dataset_id)
                 continue
 
-            metadata_file = find_metadata_file(dataset_dir)
+            metadata_file = find_metadata_file(dataset_path)
 
             logger.info("Processing %s", dataset_id)
 
@@ -463,6 +468,63 @@ class MetadataMerger:
 
         return result
 
+    def add_array_types(
+        self,
+        df: pl.DataFrame,
+        show_progress: bool = True,
+    ) -> pl.DataFrame:
+        """Fill in `array_type` by reading each sample's own IDAT header."""
+        from mepylome.dtypes import ArrayType
+        from mepylome.dtypes.beads import idat_basepaths
+
+        if "dataset_id" not in df.columns or "sample_id" not in df.columns:
+            raise ValueError("df must have dataset_id and sample_id columns")
+
+        rows = df.select("dataset_id", "sample_id").iter_rows()
+        if show_progress:
+            try:
+                from tqdm import tqdm
+
+                rows = tqdm(
+                    rows, total=df.height, desc="Computing array types"
+                )
+            except ImportError:
+                pass
+
+        basepaths_by_dataset: dict[str, dict[str, Path]] = {}
+        array_types: list[str | None] = []
+
+        for dataset_id, sample_id in rows:
+            if dataset_id not in basepaths_by_dataset:
+                dataset_path = self.dataset_dir / dataset_id
+                found = (
+                    idat_basepaths(dataset_path, only_valid=True)
+                    if dataset_path.is_dir()
+                    else []
+                )
+                basepaths_by_dataset[dataset_id] = {
+                    p.name: p for p in found
+                }
+
+            basepath = basepaths_by_dataset[dataset_id].get(sample_id)
+
+            if basepath is None:
+                array_types.append(None)
+                continue
+
+            try:
+                array_types.append(str(ArrayType.from_idat(basepath)))
+            except Exception:
+                logger.warning(
+                    "%s/%s: could not determine array type from %s",
+                    dataset_id,
+                    sample_id,
+                    basepath,
+                )
+                array_types.append("invalid_array")
+
+        return df.with_columns(pl.Series("array_type", array_types))
+
     def profile(
         self,
         dataset_id: str,
@@ -474,7 +536,7 @@ class MetadataMerger:
         that comes *before* writing one, so you (or an agent) can see real
         column names and values instead of guessing at a value_mapping dict.
         """
-        metadata_file = find_metadata_file(self.input_dir / dataset_id)
+        metadata_file = find_metadata_file(self.dataset_dir / dataset_id)
 
         raw = read_metadata(metadata_file)
 
@@ -517,7 +579,7 @@ class MetadataMerger:
                 f"No config found for {dataset_id!r} (see missing_configs())."
             )
 
-        metadata_file = find_metadata_file(self.input_dir / dataset_id)
+        metadata_file = find_metadata_file(self.dataset_dir / dataset_id)
 
         dataset = load_dataset_module(index[dataset_id])
         raw = read_metadata(metadata_file)
@@ -540,8 +602,11 @@ class MetadataMerger:
 
         duplicates = df.filter(
             pl.col("sample_id").is_not_null()
-            & pl.col("sample_id").is_duplicated()
+            & pl.struct("dataset_id", "sample_id").is_duplicated()
         )
 
         if not duplicates.is_empty():
-            raise ValueError(f"Duplicate sample_id detected:\n{duplicates}")
+            raise ValueError(
+                "Duplicate (dataset_id, sample_id) detected:\n"
+                f"{duplicates}"
+            )

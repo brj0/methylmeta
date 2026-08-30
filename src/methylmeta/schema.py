@@ -170,3 +170,24 @@ class SampleMetadata(BaseModel):
             )
 
         return value
+
+
+def describe_fields() -> str:
+    """Render every canonical field's name, type, and description.
+
+    Pulled live from SampleMetadata rather than duplicated by hand
+    elsewhere (e.g. in the config-writing spec), so it can't drift out of
+    sync when a field is added, renamed, or redescribed.
+    """
+    import typing
+
+    lines = []
+    for name, info in SampleMetadata.model_fields.items():
+        annotation = info.annotation
+        args = [a for a in typing.get_args(annotation) if a is not type(None)]
+        display_type = args[0] if len(args) == 1 else annotation
+        type_name = getattr(display_type, "__name__", str(display_type))
+
+        required = " (required)" if info.is_required() else ""
+        lines.append(f"{name}: {type_name}{required} - {info.description or ''}")
+    return "\n".join(lines)
