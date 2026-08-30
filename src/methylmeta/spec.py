@@ -6,7 +6,7 @@ later, a pydantic-ai agent - needs to follow this exact contract.
 
 from methylmeta.schema import describe_fields
 
-_TEMPLATE = '''\
+_TEMPLATE = """\
 A dataset config is a single Python file at configs/datasets/<dataset_id>.py.
 It contains plain top-level functions, one per canonical field, each with
 the signature:
@@ -93,7 +93,7 @@ Workflow for writing/fixing a config:
        row hiding the rest. Iterate until report.success is True.
     4. Once every dataset you want passes test(), merger.merge(dataset_ids)
        does the real multi-dataset merge.
-'''
+"""
 
 CONFIG_SPEC = _TEMPLATE.format(
     fields="\n".join(f"    {line}" for line in describe_fields().splitlines())

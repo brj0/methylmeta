@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import difflib
+import re
 from dataclasses import dataclass
 from functools import lru_cache
 
@@ -49,6 +50,7 @@ def get_tumor_type(acronym: str) -> TumorType | None:
 def all_tumor_types() -> list[TumorType]:
     """Every entry in tumor_types.yaml."""
     return list(_load().values())
+
 
 def fuzzy_word_score(query: str, text: str) -> float:
     """Score how well query words approximately match words in text."""

@@ -9,7 +9,8 @@ logging.basicConfig(level=logging.INFO)
 
 
 @click.group()
-def cli():
+def cli() -> None:
+    """Methylmeta command-line interface."""
     pass
 
 
@@ -17,8 +18,7 @@ def cli():
 @click.option(
     "--config-dir", type=Path, default="configs/datasets", show_default=True
 )
-@click.option("--dataset-dir", type=Path, required=True)
-@click.option("--output", type=Path, default=None)
+@click.option("--dataset-dir", type=Path, default=None)
 @click.option("--strict/--no-strict", default=True)
 @click.option(
     "--array-types/--no-array-types",
@@ -47,8 +47,14 @@ def cli():
     ),
 )
 def merge(
-    config_dir, dataset_dir, output, strict, array_types, datasets, list_missing
-):
+    config_dir: Path,
+    dataset_dir: Path | None,
+    output: Path | None,
+    strict: bool,
+    array_types: bool,
+    datasets: str | None,
+    list_missing: bool,
+) -> None:
     """Harmonize and merge dataset(s) into one metadata table."""
     merger = MetadataMerger(
         config_dir=config_dir,
@@ -79,7 +85,9 @@ def merge(
 
     df = merger.merge(dataset_ids=dataset_ids)
     df.write_csv(output, separator="\t")
-    click.echo(f"Wrote {len(df)} samples → {output} (checkpoint, no array_type yet)")
+    click.echo(
+        f"Wrote {len(df)} samples → {output} (checkpoint, no array_type yet)"
+    )
 
     if array_types:
         df = merger.add_array_types(df)
@@ -94,8 +102,13 @@ def merge(
 @click.option("--dataset-dir", type=Path, required=True)
 @click.option("--max-unique", type=int, default=15, show_default=True)
 @click.argument("dataset_id")
-def profile(config_dir, dataset_dir, max_unique, dataset_id):
-    """Summarize a raw metadata file's columns - run this before writing a config."""
+def profile(
+    config_dir: Path,
+    dataset_dir: Path,
+    max_unique: int,
+    dataset_id: str,
+) -> None:
+    """Summarize metadata columns before writing a config."""
     merger = MetadataMerger(config_dir=config_dir, dataset_dir=dataset_dir)
     click.echo(merger.profile(dataset_id, max_unique=max_unique).summary())
 
@@ -106,7 +119,11 @@ def profile(config_dir, dataset_dir, max_unique, dataset_id):
 )
 @click.option("--dataset-dir", type=Path, required=True)
 @click.argument("dataset_id")
-def test(config_dir, dataset_dir, dataset_id):
+def test(
+    config_dir: Path,
+    dataset_dir: Path,
+    dataset_id: str,
+) -> None:
     """Dry-run one dataset's config against its real metadata.
 
     Reports every failing row and why (grouped by identical error), without
@@ -121,8 +138,8 @@ def test(config_dir, dataset_dir, dataset_id):
 @cli.command("search-vocab")
 @click.argument("query")
 @click.option("--limit", type=int, default=10, show_default=True)
-def search_vocab(query, limit):
-    """Search WHO tumor types by free-text (diagnosis -> methylation_class candidates)."""
+def search_vocab(query: str, limit: int) -> None:
+    """Search WHO tumor types by free-text."""
     from methylmeta import search_tumor_types
 
     for tt in search_tumor_types(query, limit=limit):

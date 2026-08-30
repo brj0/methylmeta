@@ -189,5 +189,7 @@ def describe_fields() -> str:
         type_name = getattr(display_type, "__name__", str(display_type))
 
         required = " (required)" if info.is_required() else ""
-        lines.append(f"{name}: {type_name}{required} - {info.description or ''}")
+        lines.append(
+            f"{name}: {type_name}{required} - {info.description or ''}"
+        )
     return "\n".join(lines)

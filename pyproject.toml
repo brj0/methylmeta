@@ -136,7 +136,7 @@ warn_unused_ignores = true
 warn_redundant_casts = true
 show_column_numbers = true
 pretty = true
-exclude = ["build", "junk/"]
+exclude = ["build", "junk/", "configs/"]
 
 [tool.ty.terminal]
 output-format = "concise"

@@ -61,6 +61,7 @@ CSV_NULL_VALUES = [
 
 
 def read_metadata(path: Path) -> pl.DataFrame:
+    """Read a CSV, TSV, XLSX, or XLS metadata file."""
     suffix = path.suffix.lower()
 
     if suffix == ".csv":
@@ -190,7 +191,8 @@ class HarmonizeReport:
                 lines.append(f"  [{len(rows)}x] {error_msg}")
                 for row_err in rows[:max_examples]:
                     lines.append(
-                        f"      e.g. row {row_err.row_index}: {row_err.raw_row}"
+                        "      e.g. row "
+                        f"{row_err.row_index}: {row_err.raw_row}"
                     )
         else:
             lines.append("All rows harmonized successfully.")
@@ -299,6 +301,7 @@ class MetadataHarmonizer:
 
 
 def find_metadata_file(dataset_dir: Path) -> Path:
+    """Searches and returns spreadsheed path in 'dataset_dir' if unique."""
     extensions = {".csv", ".tsv", ".xlsx", ".xls"}
 
     files = sorted(
@@ -329,9 +332,11 @@ class MetadataMerger:
         # 1. Figure out which of the datasets you want don't have a config yet.
         wanted = ["GSE197094", "GSE196228", "GSE999999"]
         missing = merger.missing_configs(wanted)
-        # -> ["GSE999999"]  (this is what an agent should generate .py files for)
+        # -> ["GSE999999"]  (this is what an agent should generate .py files
+        # for)
 
-        # 2. Once configs/datasets/GSE999999.py exists, merge just what you want.
+        # 2. Once configs/datasets/GSE999999.py exists, merge just what you
+        # want.
         df = merger.merge(dataset_ids=wanted)
 
         # Or, to merge everything that currently has both a config and data:
@@ -376,8 +381,8 @@ class MetadataMerger:
             raise ValueError(
                 f"No dataset config .py files found in {self.config_dir}. "
                 "config_dir should point at your harmonizer configs (e.g. "
-                "'configs/datasets'), not at a raw-data/download directory "
-                "- double check you haven't swapped config_dir and dataset_dir."
+                "'configs/datasets'), not at a raw-data/download directory - "
+                "double check you haven't swapped config_dir and dataset_dir."
             )
 
         index: dict[str, Path] = {}
@@ -502,9 +507,7 @@ class MetadataMerger:
                     if dataset_path.is_dir()
                     else []
                 )
-                basepaths_by_dataset[dataset_id] = {
-                    p.name: p for p in found
-                }
+                basepaths_by_dataset[dataset_id] = {p.name: p for p in found}
 
             basepath = basepaths_by_dataset[dataset_id].get(sample_id)
 
@@ -607,6 +610,5 @@ class MetadataMerger:
 
         if not duplicates.is_empty():
             raise ValueError(
-                "Duplicate (dataset_id, sample_id) detected:\n"
-                f"{duplicates}"
+                f"Duplicate (dataset_id, sample_id) detected:\n{duplicates}"
             )

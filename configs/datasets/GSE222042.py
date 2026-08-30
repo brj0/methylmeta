@@ -33,7 +33,7 @@ def sample_type(row):
 def material(row):
     value = row["treatment"]
     if "cell_culture" in value:
-        return cell_line
+        return "cell_line"
     return None
 
 
