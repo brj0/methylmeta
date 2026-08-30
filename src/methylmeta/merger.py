@@ -468,9 +468,8 @@ class MetadataMerger:
         if not merged:
             raise ValueError("No datasets were processed.")
 
-        result = (
-            pl.concat(merged, how="vertical_relaxed")
-            .unique(maintain_order=True)
+        result = pl.concat(merged, how="vertical_relaxed").unique(
+            maintain_order=True
         )
         self._validate_unique_sample_ids(result)
 

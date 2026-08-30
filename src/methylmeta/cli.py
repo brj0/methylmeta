@@ -19,6 +19,7 @@ def cli() -> None:
     "--config-dir", type=Path, default="configs/datasets", show_default=True
 )
 @click.option("--dataset-dir", type=Path, default=None)
+@click.option("--output", type=Path, default=None)
 @click.option("--strict/--no-strict", default=True)
 @click.option(
     "--array-types/--no-array-types",
@@ -56,12 +57,6 @@ def merge(
     list_missing: bool,
 ) -> None:
     """Harmonize and merge dataset(s) into one metadata table."""
-    merger = MetadataMerger(
-        config_dir=config_dir,
-        dataset_dir=dataset_dir,
-        strict=strict,
-    )
-
     dataset_ids = (
         [d.strip() for d in datasets.split(",") if d.strip()]
         if datasets
@@ -69,16 +64,28 @@ def merge(
     )
 
     if list_missing:
+        from methylmeta.merger import missing_configs
+
         wanted = dataset_ids or []
-        missing = merger.missing_configs(wanted)
+        missing = missing_configs(config_dir, wanted)
         if missing:
             click.echo("Missing configs for:\n" + "\n".join(missing))
         else:
             click.echo("All requested datasets already have a config.")
         return
 
+    if dataset_dir is None:
+        raise click.UsageError(
+            "--dataset-dir is required unless --list-missing."
+        )
     if output is None:
         raise click.UsageError("--output is required unless --list-missing.")
+
+    merger = MetadataMerger(
+        config_dir=config_dir,
+        dataset_dir=dataset_dir,
+        strict=strict,
+    )
 
     output = Path(output).expanduser()
     output.parent.mkdir(parents=True, exist_ok=True)
