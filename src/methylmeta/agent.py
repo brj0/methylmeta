@@ -1,11 +1,13 @@
 from __future__ import annotations
 
 import ast
+import importlib.util
 import os
 import re
 import shutil
 from dataclasses import dataclass
 from pathlib import Path
+
 from pydantic import BaseModel
 
 from methylmeta.loader import load_dataset_module
@@ -13,6 +15,14 @@ from methylmeta.merger import MetadataMerger
 from methylmeta.schema import describe_fields
 from methylmeta.spec import CONFIG_SPEC
 from methylmeta.vocab import search_tumor_types
+
+# Real module-level names (not TYPE_CHECKING-only), since pydantic-ai needs
+# to resolve RunContext at runtime for the @agent.tool signatures below.
+if importlib.util.find_spec("pydantic_ai") is not None:
+    from pydantic_ai import Agent, RunContext
+else:
+    Agent = None
+    RunContext = None
 
 DEFAULT_AGENT_MODEL = "google:gemini-2.5-pro"
 
@@ -87,15 +97,15 @@ def _validate_config_source(source: str) -> str:
     return source + "\n"
 
 
-def create_agent(model: str = DEFAULT_AGENT_MODEL):
+def create_agent(
+    model: str = DEFAULT_AGENT_MODEL,
+) -> Agent[AgentDeps, AgentResult]:
     """Create the Pydantic AI metadata-config agent."""
-    try:
-        from pydantic_ai import Agent, RunContext
-    except ImportError as exc:
+    if Agent is None:
         raise RuntimeError(
             "The AI agent dependencies are not installed. Run "
             '`uv add "pydantic-ai-slim[google]"`.'
-        ) from exc
+        )
 
     agent: Agent[AgentDeps, AgentResult] = Agent(
         model=model,
@@ -197,8 +207,7 @@ def create_agent(model: str = DEFAULT_AGENT_MODEL):
         except Exception as exc:  # noqa: BLE001
             path.unlink(missing_ok=True)
             return (
-                "WRITE REFUSED: generated config could not be loaded: "
-                f"{exc}"
+                f"WRITE REFUSED: generated config could not be loaded: {exc}"
             )
 
         if actual_id != ctx.deps.dataset_id:
@@ -279,8 +288,7 @@ def run_agent(
             test_summary = report.summary(max_examples=3)
         except Exception as exc:  # noqa: BLE001 - surface the final failure
             test_summary = (
-                "Final test could not run: "
-                f"{type(exc).__name__}: {exc}"
+                f"Final test could not run: {type(exc).__name__}: {exc}"
             )
 
     summary = result.output.summary
