@@ -135,6 +135,52 @@ def test(
     raise SystemExit(0 if report.success else 1)
 
 
+@cli.command()
+@click.argument("dataset_id")
+@click.option(
+    "--config_dir", type=Path, default=CONFIGS_DIR, show_default=True
+)
+@click.option("--dataset_dir", type=Path, required=True)
+@click.option("--model", default="gemini-2.5-pro", show_default=True)
+@click.option(
+    "--prompt", default=None, help="Additional instructions for the agent."
+)
+@click.option(
+    "--force", is_flag=True, help="Allow replacing an existing config."
+)
+@click.option(
+    "--write/--no-write",
+    default=True,
+    help="Allow the agent to write the dataset config.",
+)
+def agent(
+    dataset_id: str,
+    config_dir: Path,
+    dataset_dir: Path,
+    model: str,
+    prompt: str | None,
+    force: bool,
+    write: bool,
+) -> None:
+    """Create or repair a dataset config with an AI agent."""
+    from methylmeta.agent import run_agent
+
+    result = run_agent(
+        dataset_id,
+        config_dir=config_dir,
+        dataset_dir=dataset_dir,
+        model=model,
+        prompt=prompt,
+        allow_write=write,
+        force=force,
+    )
+    click.echo(result.summary)
+    if result.config_path:
+        click.echo(f"Config: {result.config_path}")
+    if not result.success:
+        raise SystemExit(1)
+
+
 @cli.command("search_vocab")
 @click.argument("query")
 @click.option("--limit", type=int, default=10, show_default=True)
