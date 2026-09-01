@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import ast
-import importlib.util
 import os
 import re
 import shutil
@@ -15,6 +14,7 @@ from methylmeta.loader import load_dataset_module
 from methylmeta.merger import MetadataMerger
 from methylmeta.schema import describe_fields
 from methylmeta.spec import CONFIG_SPEC
+from methylmeta.study_info import fetch_study_description
 from methylmeta.vocab import search_tumor_types
 
 DEFAULT_AGENT_MODEL = "google:gemini-2.5-pro"
@@ -112,16 +112,22 @@ def create_agent(
             "WORKFLOW (follow this order):\n"
             "1. Call get_profile first. Never guess raw column names or "
             "values.\n"
-            "2. If a config already exists, call read_config and "
+            "2. Call get_study_description to see what the study is "
+            "actually about (title/summary/design from GEO or "
+            "ArrayExpress). Raw columns often use abbreviations, "
+            "cohort-specific codes, or bare numbers that only make sense "
+            "once you know the study's tumor type and design - use this "
+            "as context, not as a substitute for the real columns.\n"
+            "3. If a config already exists, call read_config and "
             "test_config.\n"
-            "3. Use search_tumor_types for diagnosis text when choosing a "
+            "4. Use search_tumor_types for diagnosis text when choosing a "
             "methylation_class. Never invent a WHO acronym.\n"
-            "4. Write the smallest clear config possible. Prefer direct "
+            "5. Write the smallest clear config possible. Prefer direct "
             "passthrough, exact mappings, constants, and simple if/elif "
             "logic.\n"
-            "5. Call test_config after every write. Fix all failures you "
+            "6. Call test_config after every write. Fix all failures you "
             "can.\n"
-            "6. Stop only when test_config reports success, or when a "
+            "7. Stop only when test_config reports success, or when a "
             "remaining "
             "problem genuinely requires human judgement.\n\n"
             "IMPORTANT: Every raw metadata row must be harmonized. Do not add "
@@ -141,6 +147,16 @@ def create_agent(
         return profile.summary()
 
     @agent.tool
+    def get_study_description(ctx: RunContext[AgentDeps]) -> str:
+        """Fetch the public GEO/ArrayExpress study description summary.
+
+        Cached to disk after the first fetch. Not available for private
+        cohorts or unrecognized accessions - that's fine, it's optional
+        context, not a required input.
+        """
+        return fetch_study_description(ctx.deps.dataset_id)
+
+    @agent.tool
     def read_config(ctx: RunContext[AgentDeps]) -> str:
         """Read the current dataset config, if one exists."""
         path = _config_path(ctx.deps)
@@ -148,7 +164,7 @@ def create_agent(
             return f"No config exists yet: {path}"
         return path.read_text(encoding="utf-8")
 
-    @agent.tool
+    @agent.tool_plain
     def search_tumor_vocabulary(query: str) -> str:
         """Search WHO tumor vocabulary for methylation class candidates."""
         results = search_tumor_types(query, limit=10)
