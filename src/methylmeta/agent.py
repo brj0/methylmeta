@@ -9,20 +9,13 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from pydantic import BaseModel
+from pydantic_ai import Agent, RunContext
 
 from methylmeta.loader import load_dataset_module
 from methylmeta.merger import MetadataMerger
 from methylmeta.schema import describe_fields
 from methylmeta.spec import CONFIG_SPEC
 from methylmeta.vocab import search_tumor_types
-
-# Real module-level names (not TYPE_CHECKING-only), since pydantic-ai needs
-# to resolve RunContext at runtime for the @agent.tool signatures below.
-if importlib.util.find_spec("pydantic_ai") is not None:
-    from pydantic_ai import Agent, RunContext
-else:
-    Agent = None
-    RunContext = None
 
 DEFAULT_AGENT_MODEL = "google:gemini-2.5-pro"
 
