@@ -8,7 +8,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from pydantic import BaseModel
-from pydantic_ai import Agent, RunContext
+from pydantic_ai import Agent, RunContext, UsageLimits
 
 from methylmeta.loader import load_dataset_module
 from methylmeta.merger import MetadataMerger
@@ -65,7 +65,7 @@ def _validate_config_source(source: str) -> str:
             f"Generated config has invalid Python: {exc}"
         ) from exc
 
-    allowed = (ast.FunctionDef, ast.AsyncFunctionDef)
+    allowed = ast.FunctionDef
     for node in tree.body:
         if not isinstance(node, allowed):
             raise ValueError(
@@ -78,14 +78,6 @@ def _validate_config_source(source: str) -> str:
     }
     if "dataset_id" not in function_names:
         raise ValueError("Config must define dataset_id(row).")
-
-    if any(
-        isinstance(node, (ast.Import, ast.ImportFrom))
-        for node in ast.walk(tree)
-    ):
-        raise ValueError(
-            "Imports are not allowed in generated dataset configs."
-        )
 
     return source + "\n"
 
@@ -112,27 +104,37 @@ def create_agent(
             "WORKFLOW (follow this order):\n"
             "1. Call get_profile first. Never guess raw column names or "
             "values.\n"
-            "2. Call get_study_description to see what the study is "
-            "actually about (title/summary/design from GEO or "
+            "2. Call get_study_description for context on the study's "
+            "tumor type and design (title/summary from GEO or "
             "ArrayExpress). Raw columns often use abbreviations, "
             "cohort-specific codes, or bare numbers that only make sense "
-            "once you know the study's tumor type and design - use this "
-            "as context, not as a substitute for the real columns.\n"
-            "3. If a config already exists, call read_config and "
-            "test_config.\n"
-            "4. Use search_tumor_types for diagnosis text when choosing a "
-            "methylation_class. Never invent a WHO acronym.\n"
-            "5. Write the smallest clear config possible. Prefer direct "
+            "once you know what the study actually is - use this as "
+            "context, not as a substitute for the real columns.\n"
+            "3. Call list_configs to see what other datasets have been "
+            "configured. Existing configs are manually validated examples "
+            "of project conventions and you may use them as templates, "
+            "but never assume their raw column names or mappings apply to "
+            "the current dataset - always confirm with get_profile.\n"
+            "4. If a config already exists for this dataset, call "
+            "read_config and test_config before changing anything.\n"
+            "5. Use search_tumor_vocabulary for diagnosis text when "
+            "choosing a methylation_class. Never invent a WHO acronym.\n"
+            "6. Write the smallest clear config possible. Prefer direct "
             "passthrough, exact mappings, constants, and simple if/elif "
             "logic.\n"
-            "6. Call test_config after every write. Fix all failures you "
+            "7. Call test_config after every write. Fix all failures you "
             "can.\n"
-            "7. Stop only when test_config reports success, or when a "
+            "8. Stop only when test_config reports success, or when a "
             "remaining "
             "problem genuinely requires human judgement.\n\n"
-            "IMPORTANT: Every raw metadata row must be harmonized. Do not add "
-            "row filtering. Do not use regex. Do not create new WHO acronyms. "
-            "Do not change methylmeta source code or tumor_types.yaml.\n\n"
+            "IMPORTANT: Every raw metadata row must be harmonized. Some raw "
+            "metadata values may be incorrect, inconsistent, malformed, or "
+            "otherwise invalid. Do not filter, skip, or drop rows because of "
+            "invalid metadata; harmonize every row as far as possible. Rows "
+            "may be removed later by downstream validation or quality-control "
+            "steps. Do not add row filtering. Do not use regex. Do not create "
+            "new WHO acronyms. Do not change methylmeta source code or "
+            "tumor_types.yaml.\n"
             "The config contract is:\n\n"
             + CONFIG_SPEC
             + "\n\nCanonical fields:\n"
@@ -155,6 +157,15 @@ def create_agent(
         context, not a required input.
         """
         return fetch_study_description(ctx.deps.dataset_id)
+
+    @agent.tool
+    def list_configs(ctx: RunContext[AgentDeps]) -> list[str]:
+        """List existing dataset configs that can be used as examples."""
+        return sorted(
+            p.stem
+            for p in ctx.deps.config_dir.glob("*.py")
+            if p.name != "__init__.py"
+        )
 
     @agent.tool
     def read_config(ctx: RunContext[AgentDeps]) -> str:
@@ -244,14 +255,6 @@ def run_agent(
     force: bool = False,
 ) -> AgentResult:
     """Run the metadata agent for one dataset."""
-    try:
-        from pydantic_ai import UsageLimits
-    except ImportError as exc:
-        raise RuntimeError(
-            "The AI agent dependencies are not installed. Run "
-            '`uv add "pydantic-ai-slim[google]"`.'
-        ) from exc
-
     config_dir = Path(config_dir).expanduser().resolve()
     dataset_dir = Path(dataset_dir).expanduser().resolve()
     dataset_path = dataset_dir / dataset_id
