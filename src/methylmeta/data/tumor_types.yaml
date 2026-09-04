@@ -23,7 +23,7 @@ tumor_types:
     - Sarcoma
     - Ewing sarcoma family
 
-  ACC:
+  ADREN_CA:
     name: Adrenocortical carcinoma
     who_volume: Endocrine and Neuroendocrine Tumours
     site: Adrenal gland
@@ -44,7 +44,7 @@ tumor_types:
     - Sarcoma
 
   ASTRO_IDH:
-    name: IDH glioma, astrocytoma
+    name: Astrocytoma, IDH-mutant
     who_volume: Central Nervous System Tumours
     site: Central nervous system
     lineage_broad: Glial
@@ -55,7 +55,7 @@ tumor_types:
     - IDH-mutant glioma
 
   ASTRO_IDH_HG:
-    name: IDH glioma, high-grade astrocytoma
+    name: Astrocytoma, IDH-mutant, high-grade
     who_volume: Central Nervous System Tumours
     site: Central nervous system
     lineage_broad: Glial
@@ -250,7 +250,7 @@ tumor_types:
     - Fibro-osseous tumor
 
 
-  BC_AD:
+  BCA:
     name: Basal cell adenoma
     who_volume: Head and Neck Tumours
     site: Salivary gland
@@ -259,6 +259,15 @@ tumor_types:
     families:
     - Salivary gland tumor
     - Adenoma
+
+  BCAC:
+    name: Salivary Gland Basal Cell Adenocarcinoma
+    who_volume: null
+    site: null
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Salivary gland tumor
 
   BRCA:
     name: Breast carcinoma
@@ -3305,6 +3314,16 @@ tumor_types:
     - Carcinoma
     - Squamous cell carcinoma
 
+  SCSARC:
+    name: Carcinosarcoma of the salivary glands
+    who_volume: Head and Neck Tumours
+    site: Salivary gland
+    lineage_broad: Epithelial / myoepithelial
+    lineage_detail: null
+    families:
+    - Salivary gland tumor
+    - Carcinosarcoma
+
   SEF:
     name: Sclerosing epithelioid fibrosarcoma
     who_volume: Soft Tissue and Bone Tumours
@@ -5512,15 +5531,6 @@ tumor_types:
     families:
     - Rhabdomyosarcoma
 
-  SBCAD:
-    name: Salivary Gland Basal Cell Adenocarcinoma
-    who_volume: null
-    site: null
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Salivary gland tumor
-
   SBL:
     name: Sialoblastoma
     who_volume: null
@@ -5836,8 +5846,8 @@ tumor_types:
     families:
     - Undefined
 
-  SSA:
-    name: Sessile Serrated Adenoma
+  SSL:
+    name: Sessile Serrated Lesion
     who_volume: null
     site: null
     lineage_broad: Epithelial

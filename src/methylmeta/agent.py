@@ -17,7 +17,7 @@ from methylmeta.spec import CONFIG_SPEC
 from methylmeta.study_info import fetch_study_description
 from methylmeta.vocab import search_tumor_types
 
-DEFAULT_AGENT_MODEL = "google:gemini-2.5-pro"
+DEFAULT_AGENT_MODEL = "google:gemini-3.6-flash"
 
 
 class AgentResult(BaseModel):

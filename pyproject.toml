@@ -124,6 +124,7 @@ convention = "google"
 
 [tool.ruff.lint.per-file-ignores]
 "tests/**/*.py" = ["D103", "PLC2701"]
+"scripts/**/*.py" = ["D103", "PLC2701"]
 "configs/datasets/**/*.py" = [
     "ANN",
     "D",
