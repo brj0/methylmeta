@@ -11,16 +11,7 @@ def sample_id(row):
 
 
 def diagnosis(row):
-    value = row["type"]
-    mapping = {
-        "Conjunctival melanoma": "Conjunctival Melanoma",
-        "Cutaneous melanoma": "Cutaneous Melanoma",
-        "Mucosal melanoma": "Mucosal Melanoma",
-        "Mucosal": "Genital Melanoma",
-        "Normal melanocytes": "Normal Melanocytes Cellculture",
-        "Uveal melanoma": "Uveal Melanoma",
-    }
-    return mapping[value]
+    return row["type"]
 
 
 def methylation_class(row):
@@ -34,6 +25,13 @@ def methylation_class(row):
         "Uveal melanoma": "UMEL",
     }
     return mapping.get(value, value)
+
+
+def material_type(row):
+    value = row["exact anatomic site"]
+    if value == "Melanocytes":
+        return "cell_line"
+    return "tissue"
 
 
 def sample_site(row):
