@@ -76,6 +76,16 @@ tumor_types:
     - Leukemia
     - Lymphoid neoplasm
 
+  ALCL:
+    name: ALCL
+    who_volume: Haematolymphoid Tumours
+    site: Lymphoid
+    lineage_broad: Hematolymphoid
+    lineage_detail: T/NK
+    families:
+    - mature_t_nk
+
+
   ALCL_ALK_NEG:
     name: Anaplastic large-cell lymphoma, ALK-negative
     who_volume: Haematolymphoid Tumours
@@ -1192,6 +1202,17 @@ tumor_types:
     - Lymphoma
     - B-cell lymphoma
     - DLBCL
+
+  DLBCL_PC_LEG:
+    name: Primary cutaneous diffuse large B-cell lymphoma, leg type
+    who_volume: Haematolymphoid Tumours
+    site: Skin
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    families:
+      - Lymphoma
+      - B-cell lymphoma
+      - DLBCL
 
   DLGNT:
     name: Diffuse leptomeningeal glioneuronal tumor
@@ -3734,15 +3755,6 @@ tumor_types:
     - Germ cell tumor
     - Testicular tumor
 
-  ALCL:
-    name: ALCL
-    who_volume: Haematolymphoid Tumours
-    site: Lymphoid
-    lineage_broad: Hematolymphoid
-    lineage_detail: T/NK
-    families:
-    - mature_t_nk
-
   ALKLBCL:
     name: ALK+ large B-cell lymphoma
     who_volume: Haematolymphoid Tumours
@@ -4379,7 +4391,7 @@ tumor_types:
     families:
     - AML
 
-  SZ:
+  SEZARY:
     name: Sézary syndrome
     who_volume: Haematolymphoid Tumours
     site: Skin

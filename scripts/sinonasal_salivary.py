@@ -135,6 +135,12 @@ ACRONYM_TRANSLATOR = {
     "SNIP": "SNIP",
     "SNNEC_SMARCA4": "SNNEC_SMARCA4",
     "SNOP": "SNOP",
+    # Varia"
+    "BRCA": "BC",
+    "BURK": "BL",
+    "HISTSARC": "HS",
+    "CPH_ADM": "ACPH",
+    "NSCLC_SCC": "LSCC",
 }
 
 DATASET_DIR = Path("~/methylmeta/data").expanduser()
@@ -185,6 +191,9 @@ def main() -> None:
 
     # 3. Harmonize and merge.
     df = merger.merge(dataset_ids=WANTED_DATASETS)
+    df = df.with_columns(
+        pl.col("methylation_class").replace(ACRONYM_TRANSLATOR)
+    )
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     df.write_csv(OUTPUT, separator="\t")
     logger.info("Wrote %d samples -> %s", len(df), OUTPUT)
@@ -192,9 +201,6 @@ def main() -> None:
     # 4. Optional: fill in array_type from each sample's IDAT header.
     if COMPUTE_ARRAY_TYPES:
         df = merger.add_array_types(df)
-        df = df.with_columns(
-            pl.col("methylation_class").replace(ACRONYM_TRANSLATOR)
-        )
         df.write_csv(OUTPUT, separator="\t")
         logger.info(
             "Wrote %d samples -> %s (with array_type)", len(df), OUTPUT
