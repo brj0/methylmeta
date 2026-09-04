@@ -339,6 +339,15 @@ tumor_types:
     - Sarcoma
     - Renal tumor
 
+  CAST:
+    name: Castleman disease
+    who_volume: Haematolymphoid Tumours
+    site: Lymphoid tissue
+    lineage_broad: Hematolymphoid
+    lineage_detail: null
+    families:
+    - Lymphoproliferative disorder
+
   CAVER:
     name: Cavernous hemangioma / cavernoma
     who_volume: Central Nervous System Tumours

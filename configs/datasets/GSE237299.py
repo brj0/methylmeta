@@ -82,7 +82,7 @@ def methylation_class(row):
         "hairy cell": "HCL",
         "bl, ebv": "BURK",
         "burkitt": "BURK",
-        "sezary": "SZ",  # fixed: WHO acronym is SZ, not SEZARY
+        "sezary": "SEZARY",  # fixed: WHO acronym is SZ, not SEZARY
         "plasma cell neoplasm": "PLASMA_CELL",
         "plasmazytoma": "PLASMA",
         "plasmacytoma": "PLASMA",
