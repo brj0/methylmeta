@@ -17,8 +17,6 @@ from methylmeta.spec import CONFIG_SPEC
 from methylmeta.study_info import fetch_study_description
 from methylmeta.vocab import search_tumor_types
 
-DEFAULT_AGENT_MODEL = "google:gemini-3.6-flash"
-
 
 class AgentResult(BaseModel):
     """Final structured result returned by the metadata agent."""
@@ -83,7 +81,7 @@ def _validate_config_source(source: str) -> str:
 
 
 def create_agent(
-    model: str = DEFAULT_AGENT_MODEL,
+    model: str,
 ) -> Agent[AgentDeps, AgentResult]:
     """Create the Pydantic AI metadata-config agent."""
     if Agent is None:
@@ -249,7 +247,7 @@ def run_agent(
     *,
     config_dir: str | Path,
     dataset_dir: str | Path,
-    model: str = DEFAULT_AGENT_MODEL,
+    model: str,
     prompt: str | None = None,
     allow_write: bool = True,
     force: bool = False,

@@ -17,7 +17,6 @@ dependencies = [
     "polars",
     "pyyaml",
     "pydantic-ai>=2.36.0",
-    "pydantic-ai-slim[google]>=2.36.0",
 ]
 
 [project.optional-dependencies]
