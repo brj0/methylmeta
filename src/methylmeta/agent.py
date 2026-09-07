@@ -9,6 +9,7 @@ from pathlib import Path
 
 from pydantic import BaseModel
 from pydantic_ai import Agent, RunContext, UsageLimits
+from pydantic_ai.usage import RunUsage
 
 from methylmeta.loader import load_dataset_module
 from methylmeta.merger import MetadataMerger
@@ -25,6 +26,7 @@ class AgentResult(BaseModel):
     success: bool
     config_path: str | None = None
     summary: str
+    usage: RunUsage
 
 
 @dataclass
@@ -84,12 +86,6 @@ def create_agent(
     model: str,
 ) -> Agent[AgentDeps, AgentResult]:
     """Create the Pydantic AI metadata-config agent."""
-    if Agent is None:
-        raise RuntimeError(
-            "The AI agent dependencies are not installed. Run "
-            '`uv add "pydantic-ai-slim[google]"`.'
-        )
-
     agent: Agent[AgentDeps, AgentResult] = Agent(
         model=model,
         deps_type=AgentDeps,
@@ -123,8 +119,7 @@ def create_agent(
             "7. Call test_config after every write. Fix all failures you "
             "can.\n"
             "8. Stop only when test_config reports success, or when a "
-            "remaining "
-            "problem genuinely requires human judgement.\n\n"
+            "remaining problem genuinely requires human judgement.\n\n"
             "IMPORTANT: Every raw metadata row must be harmonized. Some raw "
             "metadata values may be incorrect, inconsistent, malformed, or "
             "otherwise invalid. Do not filter, skip, or drop rows because of "
@@ -260,12 +255,6 @@ def run_agent(
     if not dataset_path.is_dir():
         raise ValueError(f"Dataset directory does not exist: {dataset_path}")
 
-    if not os.environ.get("GOOGLE_API_KEY"):
-        raise RuntimeError(
-            "GOOGLE_API_KEY is not set. Create a free Gemini API key in "
-            "Google AI Studio and export it before running the agent."
-        )
-
     merger = MetadataMerger(config_dir=config_dir, dataset_dir=dataset_dir)
     deps = AgentDeps(
         merger=merger,
@@ -285,12 +274,18 @@ def run_agent(
     result = agent.run_sync(
         user_prompt,
         deps=deps,
-        usage_limits=UsageLimits(request_limit=12, tool_calls_limit=30),
+        usage_limits=UsageLimits(
+            request_limit=20,
+            tool_calls_limit=50,
+        ),
     )
+
+    usage = result.usage
 
     path = _config_path(deps)
     actual_success = False
     test_summary = ""
+
     if path.exists():
         try:
             report = merger.test(dataset_id)
@@ -310,4 +305,5 @@ def run_agent(
         success=actual_success,
         config_path=str(path) if path.exists() else None,
         summary=summary,
+        usage=usage,
     )

@@ -144,7 +144,6 @@ ACRONYM_TRANSLATOR = {
 }
 
 DATASET_DIR = Path("~/methylmeta/data").expanduser()
-CONFIG_DIR = CONFIGS_DIR  # or point at your own configs/datasets folder
 OUTPUT = Path(
     "~/methylmeta/merged_metadata_sinonasal_salivary.tsv"
 ).expanduser()
@@ -157,7 +156,7 @@ COMPUTE_ARRAY_TYPES = False  # requires idats on disk; slow on large merges
 
 
 def main() -> None:
-    merger = MetadataMerger(config_dir=CONFIG_DIR, dataset_dir=DATASET_DIR)
+    merger = MetadataMerger(config_dir=CONFIGS_DIR, dataset_dir=DATASET_DIR)
 
     # 1. Every wanted dataset needs a harmonizer config before it can be
     # merged - fail fast and say which ones are missing, rather than

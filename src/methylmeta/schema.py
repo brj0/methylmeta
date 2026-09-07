@@ -4,7 +4,6 @@ from enum import StrEnum
 from functools import lru_cache
 
 import yaml
-from mepylome.dtypes import ArrayType
 from pydantic import BaseModel, Field, field_validator
 
 from methylmeta.paths import TUMOR_TYPES_PATH
@@ -41,6 +40,7 @@ class Preservation(StrEnum):
 
 
 class TumorGrade(StrEnum):
+    G0 = "G0"
     G1 = "G1"
     G2 = "G2"
     G3 = "G3"
@@ -144,13 +144,6 @@ class SampleMetadata(BaseModel):
     age: float | None = Field(
         default=None,
         description="Age in years at sampling",
-    )
-
-    array_type: ArrayType | None = Field(
-        default=None,
-        description=(
-            "Illumina methylation array type used to generate the sample data"
-        ),
     )
 
     @field_validator("methylation_class")

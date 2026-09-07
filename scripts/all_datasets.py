@@ -1,4 +1,4 @@
-"""Fetch, harmonize, and merge a chosen set of datasets into one table.
+"""Fetch, harmonize, and merge all available datasets into one table.
 
 Edit WANTED_DATASETS (and the paths below) and run:
 
@@ -17,20 +17,19 @@ from methylmeta.paths import CONFIGS_DIR
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# --- Edit this ---------------------------------------------------------
 
-WANTED_DATASETS = [
-    "GSE278138",
-    "GSE286412",
-    "E-MTAB-7478",
-]
+WANTED_DATASETS = sorted(
+    path.stem
+    for path in CONFIGS_DIR.glob("*.py")
+    if path.name != "__init__.py"
+)
 
 DATASET_DIR = Path("~/methylmeta/data").expanduser()
-OUTPUT = Path("~/methylmeta/merged_metadata_example.tsv").expanduser()
+OUTPUT = Path("~/methylmeta/merged_metadata_all.tsv").expanduser()
 
 DOWNLOAD_MISSING = True  # set False to only report what's missing
-DOWNLOAD_IDAT = True  # idats are large - opt in explicitly
-COMPUTE_ARRAY_TYPES = True  # requires idats on disk; slow on large merges
+DOWNLOAD_IDAT = False  # idats are large - opt in explicitly
+COMPUTE_ARRAY_TYPES = False  # requires idats on disk; slow on large merges
 
 # -------------------------------------------------------------------
 

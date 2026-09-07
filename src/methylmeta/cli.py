@@ -141,7 +141,9 @@ def test(
     "--config_dir", type=Path, default=CONFIGS_DIR, show_default=True
 )
 @click.option("--dataset_dir", type=Path, required=True)
-@click.option("--model", default="google:gemini-2.5-pro", show_default=True)
+@click.option(
+    "--model", default="deepseek:deepseek-v4-flash", show_default=True
+)
 @click.option(
     "--prompt", default=None, help="Additional instructions for the agent."
 )

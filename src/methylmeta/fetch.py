@@ -12,20 +12,6 @@ from methylmeta.merger import find_metadata_file
 logger = logging.getLogger(__name__)
 
 
-def read_dataset_list(path: str | Path) -> list[str]:
-    """Read dataset IDs from a text file, one per line.
-
-    Blank lines and anything after a '#' are ignored. Order is preserved.
-    """
-    path = Path(path)
-    ids = []
-    for raw_line in path.read_text(encoding="utf-8").splitlines():
-        line = raw_line.split("#", 1)[0].strip()
-        if line:
-            ids.append(line)
-    return ids
-
-
 @dataclass
 class DatasetStatus:
     """Local on-disk availability of one dataset."""
