@@ -66,11 +66,11 @@ def merge(
     dataset_ids = (
         [d.strip() for d in datasets.split(",") if d.strip()]
         if datasets
-        else []
+        else None
     )
 
     if list_missing:
-        missing = merger.missing_configs(dataset_ids)
+        missing = merger.missing_configs(dataset_ids or [])
         if missing:
             click.echo("Missing configs for:\n" + "\n".join(missing))
         else:
@@ -83,7 +83,7 @@ def merge(
     output = Path(output).expanduser()
     output.parent.mkdir(parents=True, exist_ok=True)
 
-    df = merger.merge(dataset_ids=dataset_ids)
+    df = merger.merge(dataset_ids=dataset_ids or None)
     df.write_csv(output, separator="\t")
     click.echo(
         f"Wrote {len(df)} samples → {output} (checkpoint, no array_type yet)"
@@ -133,6 +133,45 @@ def test(
     report = merger.test(dataset_id)
     click.echo(report.summary())
     raise SystemExit(0 if report.success else 1)
+
+
+@cli.command()
+@click.argument("dataset_id")
+@click.option("--dataset_dir", type=Path, required=True)
+@click.option(
+    "--idat/--no_idat",
+    default=False,
+    help="Also download IDAT files (large - opt in explicitly).",
+)
+def fetch(
+    dataset_id: str,
+    dataset_dir: Path,
+    idat: bool,
+) -> None:
+    """Download metadata (and optionally IDATs) for one dataset.
+
+    Skips anything already present on disk - only the missing piece(s)
+    are downloaded, matching the layout MetadataMerger expects
+    (dataset_dir/<dataset_id>/).
+    """
+    from methylmeta.fetch import check_datasets, download_missing
+
+    dataset_dir = Path(dataset_dir).expanduser()
+    dataset_dir.mkdir(parents=True, exist_ok=True)
+
+    before = check_datasets([dataset_id], dataset_dir, check_idat=idat)[0]
+    click.echo(f"before: {before}")
+
+    if before.is_complete:
+        click.echo(f"{dataset_id}: already complete, nothing to fetch.")
+        return
+
+    download_missing([before], dataset_dir)
+
+    after = check_datasets([dataset_id], dataset_dir, check_idat=idat)[0]
+    click.echo(f"after:  {after}")
+    if not after.is_complete:
+        raise SystemExit(1)
 
 
 @cli.command()
