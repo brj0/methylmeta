@@ -6,7 +6,7 @@ from methylmeta.agent import run_agent
 from methylmeta.paths import CONFIGS_DIR
 
 DATASET_DIR = Path("~/methylmeta/data").expanduser()
-MODEL = "deepseek:deepseek-v4-flash"
+MODEL = "deepseek:deepseek-flash"
 
 DATASET_IDS = [
     "GSE320217",

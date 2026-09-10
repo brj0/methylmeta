@@ -181,7 +181,7 @@ def fetch(
 )
 @click.option("--dataset_dir", type=Path, required=True)
 @click.option(
-    "--model", default="deepseek:deepseek-v4-flash", show_default=True
+    "--model", default="deepseek:deepseek-flash", show_default=True
 )
 @click.option(
     "--prompt", default=None, help="Additional instructions for the agent."
