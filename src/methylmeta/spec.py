@@ -27,9 +27,8 @@ Required function:
 Optional function:
     description(row) -> str
         One-line human-readable label for the dataset/cohort. If a public
-        GEO/ArrayExpress study description is available (the agent exposes
-        this as get_study_description), the study title is a good source
-        for this.
+        GEO/ArrayExpress study description is available (the agent exposes this
+        as get_study_description), the study title is a good source for this.
 
 Canonical fields (define a function for any that apply; omit entirely if a
 dataset has no data for that field):
@@ -45,18 +44,18 @@ Five idioms cover almost every case - pick the simplest one that fits:
 
 2. Exact value mapping, strict — a raw column needs translating via a
    lookup dict. This field is important, but raw metadata may be missing,
-   invalid, or represented across multiple rows for the same sample.
-   Every relevant raw row must still be processed; do not filter rows.
+   invalid, or represented across multiple rows for the same sample. Every
+   relevant raw row must still be processed; do not filter rows.
 
-   Use plain dict indexing (mapping[value]) when the expected raw values
-   can be explicitly enumerated, so an unmapped raw value fails loudly
-   with a clear KeyError instead of silently passing through. Samples for
-   which methylation_class cannot be determined may later be filtered by
-   downstream processing.
+   Use plain dict indexing (mapping[value]) when the expected raw values can be
+   explicitly enumerated, so an unmapped raw value fails loudly with a clear
+   KeyError instead of silently passing through. Samples for which
+   methylation_class cannot be determined may later be filtered by downstream
+   processing.
 
-   Do not assume that one raw metadata row always corresponds to exactly
-   one sample. Multiple rows may occasionally contribute metadata for the
-   same sample.
+   Do not assume that one raw metadata row always corresponds to exactly one
+   sample. Multiple rows may occasionally contribute metadata for the same
+   sample.
 
     def methylation_class(row):
         value = row["Factor Value[clinical information]"]
@@ -66,9 +65,9 @@ Five idioms cover almost every case - pick the simplest one that fits:
         }}
         return mapping[value]
 
-3. Exact value mapping, with fallback - use mapping.get(value, default)
-   instead when unmapped/placeholder raw values should pass through
-   unchanged (or become None) rather than raise:
+3. Exact value mapping, with fallback - use mapping.get(value, default) instead
+   when unmapped/placeholder raw values should pass through unchanged (or
+   become None) rather than raise:
 
     def sample_site(row):
         value = row["tissue_1"]
@@ -81,10 +80,10 @@ Five idioms cover almost every case - pick the simplest one that fits:
         return "Cerebellopontine angle"
 
 5. Full-text diagnosis - preserve the complete raw diagnosis (often the
-   histological diagnosis) without converting it to a WHO acronym. Prefer
-   the raw diagnosis column that contains the most specific and complete
-   diagnostic text. This value may later be used to determine
-   methylation_class or as a control column.
+   histological diagnosis) without converting it to a WHO acronym. Prefer the
+   raw diagnosis column that contains the most specific and complete diagnostic
+   text. This value may later be used to determine methylation_class or as a
+   control column.
 
     def diagnosis(row):
         return row["histological diagnosis"]
@@ -117,12 +116,12 @@ Workflow for writing/fixing a config:
     1. merger.profile(dataset_id) - see the real columns and their value
        distributions before writing any mapping logic.
     2. For a public GEO/ArrayExpress dataset, check the study's public
-       title/summary/design for context on what the raw columns likely
-       mean (the agent exposes this as get_study_description).
+       title/summary/design for context on what the raw columns likely mean
+       (the agent exposes this as get_study_description).
     3. Write configs/datasets/<dataset_id>.py per the idioms above.
-    4. merger.test(dataset_id) - dry-run against the real metadata file;
-       every failing row is reported with its exact error, without one bad
-       row hiding the rest. Iterate until report.success is True.
+    4. merger.test(dataset_id) - dry-run against the real metadata file; every
+       failing row is reported with its exact error, without one bad row hiding
+       the rest. Iterate until report.success is True.
     5. Once every dataset you want passes test(), merger.merge(dataset_ids)
        does the real multi-dataset merge.
 """

@@ -31,6 +31,7 @@ class SampleType(StrEnum):
 class MaterialType(StrEnum):
     tissue = "tissue"
     cell_line = "cell_line"
+    blood = "blood"
 
 
 class Preservation(StrEnum):
@@ -68,7 +69,8 @@ class SampleMetadata(BaseModel):
     description: str | None = Field(
         default=None,
         description=(
-            "Text description or label summarizing the dataset or cohort"
+            "Short description of the dataset or cohort. Include the first "
+            "author and publication year when known."
         ),
     )
 

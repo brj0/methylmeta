@@ -3374,9 +3374,12 @@ tumor_types:
     - Germ cell tumor
     - Testicular tumor
 
-  SFT_HMPC:
-    name: Solitary fibrous tumor / hemangiopericytoma
-    who_volume: Central Nervous System Tumours
+  SFT:
+    name: Solitary fibrous tumor
+    who_volume:
+      - Central Nervous System Tumours
+      - Soft Tissue and Bone Tumours
+      - Thoracic Tumours
     site: Soft tissue / central nervous system
     lineage_broad: Mesenchymal
     lineage_detail: null
@@ -3384,8 +3387,8 @@ tumor_types:
     - Sarcoma
     - Fibroblastic tumor
 
-  SFT_HMPC_MAL:
-    name: Malignant solitary fibrous tumor / hemangiopericytoma
+  SFT_MAL:
+    name: Malignant solitary fibrous tumor
     who_volume: Central Nervous System Tumours
     site: Soft tissue / central nervous system
     lineage_broad: Mesenchymal
