@@ -1,5 +1,5 @@
 schema_version: "0.0"
-version: "2026.08"
+version: "2026.09"
 
 tumor_types:
 
@@ -420,7 +420,7 @@ tumor_types:
     - Bone tumor
     - Chordoma
 
-  CHOR_DEDIFF:
+  CHORD_DD:
     name: Dedifferentiated chordoma
     who_volume: Soft Tissue and Bone Tumours
     site: Bone
@@ -6189,3 +6189,583 @@ tumor_types:
     lineage_detail: Meningothelial
     families:
     - Meningioma
+
+  ACT_ENC:
+    name: Atypical cartilaginous tumour / enchondroma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Bone tumor
+    - Cartilaginous tumor
+
+  ADAM_CPHLIKE:
+    name: Craniopharyngioma-like adamantinoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: ADAM
+    families:
+    - Bone tumor
+
+  AFCMT:
+    name: Acral fibrochondromyxoid tumor
+    who_volume: null
+    site: Soft tissue (acral)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+
+  AFM:
+    name: Superficial acral fibromyxoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue (acral)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
+
+  ASPLT:
+    name: Atypical spindle cell / pleomorphic lipomatous tumor
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Adipocytic tumor
+
+  CARSARC_GYN:
+    name: Carcinosarcoma (uterine / ovarian)
+    who_volume: Female Genital Tumours
+    site: Uterus / ovary
+    lineage_broad: Mixed
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Carcinosarcoma
+
+  CHORD_PD:
+    name: Chordoma, poorly differentiated
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: CHORD
+    families:
+    - Bone tumor
+    - Chordoma
+
+  COD_COF:
+    name: Cemento-osseous dysplasia / conventional ossifying fibroma
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Fibro-osseous lesion
+    - Bone lesion
+
+  CONTR_MYOMETR:
+    name: Normal myometrium
+    who_volume: null
+    site: Uterus
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Normal tissue
+
+  CSA_IDH_HR:
+    name: Chondrosarcoma, IDH-mutant, high-risk group
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone / soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: CSA_IDH_MUT
+    families:
+    - Sarcoma
+    - Chondrosarcoma
+    - IDH-mutant
+
+  CSA_IDH_LR:
+    name: Chondrosarcoma, IDH-mutant, low-risk group
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone / soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: CSA_IDH_MUT
+    families:
+    - Sarcoma
+    - Chondrosarcoma
+    - IDH-mutant
+
+  CSA_IDH_SB:
+    name: Chondrosarcoma, IDH-mutant, skull-base-restricted group
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone / soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: CSA_IDH_MUT
+    families:
+    - Sarcoma
+    - Chondrosarcoma
+    - IDH-mutant
+
+  CSA_WT_HR:
+    name: Chondrosarcoma, IDH-wildtype, high-risk group
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone / soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: CSA_IDH_WT
+    families:
+    - Sarcoma
+    - Chondrosarcoma
+    - IDH-wildtype
+
+  CSA_WT_LR:
+    name: Chondrosarcoma, IDH-wildtype, low-risk group
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone / soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: CSA_IDH_WT
+    families:
+    - Sarcoma
+    - Chondrosarcoma
+    - IDH-wildtype
+
+  CSN_TEK:
+    name: Chondroid synovial neoplasm, TEK-fusion (temporomandibular joint)
+    who_volume: null
+    site: Temporomandibular joint
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+
+  EMCMT:
+    name: Ectomesenchymal chondromyxoid tumor
+    who_volume: Head and Neck Tumours
+    site: Tongue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+
+  FHI:
+    name: Fibrous hamartoma of infancy
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
+
+  GCG:
+    name: Giant cell granuloma (central / peripheral)
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Bone lesion
+    - Giant cell lesion
+
+  GIST_SDH:
+    name: Gastrointestinal stromal tumor, SDH-deficient
+    who_volume: Digestive System Tumours
+    site: Gastrointestinal tract
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: GIST
+    families:
+    - Gastrointestinal tumor
+    - Mesenchymal tumor
+    - SDH-deficient
+
+  JPOF:
+    name: Juvenile psammomatoid ossifying fibroma
+    who_volume: Head and Neck Tumours
+    site: Craniofacial bones
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Fibro-osseous lesion
+    - Bone lesion
+
+  KDM2B_SARC:
+    name: Sarcoma with KDM2B gene fusion
+    who_volume: null
+    site: Soft tissue / bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Sarcoma
+
+  KINASE_SARC:
+    name: Kinase-altered spindle cell neoplasm (incl. NTRK1/2/3 fusion)
+    who_volume: null
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
+
+  MEL_DESMO:
+    name: Melanoma, desmoplastic / dedifferentiated / transdifferentiating
+    who_volume: null
+    site: null
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: MEL
+    families:
+    - Melanocytic tumor
+
+  MEL_MPNSTLIKE:
+    name: Melanoma, H3K27me3-deficient (MPNST-like, usually dedifferentiated)
+    who_volume: null
+    site: null
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: MEL
+    families:
+    - Melanocytic tumor
+
+  METST_CDX:
+    name: Myoepithelial tumor of soft tissue, IRF2BP2::CDX1 fusion
+    who_volume: null
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: METST
+    families:
+    - Soft tissue tumor
+    - Myoepithelial tumor
+
+  METST_KLF15:
+    name: Myoepithelial tumor of soft tissue, EWSR1::KLF15 fusion
+    who_volume: null
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: METST
+    families:
+    - Soft tissue tumor
+    - Myoepithelial tumor
+
+  METST_KLF17:
+    name: Myoepithelial tumor of soft tissue, EWSR1::KLF17 fusion
+    who_volume: null
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: METST
+    families:
+    - Soft tissue tumor
+    - Myoepithelial tumor
+
+  METST_PBX:
+    name: Myoepithelial tumor of bone, EWSR1::PBX1/3 fusion
+    who_volume: null
+    site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: METST
+    families:
+    - Bone tumor
+    - Myoepithelial tumor
+
+  METST_POU5F1:
+    name: Myoepithelial tumor of soft tissue, EWSR1::POU5F1 fusion
+    who_volume: null
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: METST
+    families:
+    - Soft tissue tumor
+    - Myoepithelial tumor
+
+  MPNST_H3K27RET:
+    name: Malignant peripheral nerve sheath tumor, H3K27me3-retained
+    who_volume: null
+    site: Peripheral nervous system
+    lineage_broad: Neural
+    lineage_detail: null
+    parent: MPNST
+    families:
+    - Sarcoma
+    - Peripheral nerve sheath tumor
+
+  MPNST_INI1:
+    name: Malignant peripheral nerve sheath tumor, epithelioid / INI1(SMARCB1)-deficient
+    who_volume: null
+    site: Peripheral nervous system
+    lineage_broad: Neural
+    lineage_detail: null
+    parent: MPNST
+    families:
+    - Sarcoma
+    - Peripheral nerve sheath tumor
+
+  NCRISTIC:
+    name: Superficial neurocristic tumor (EWSR1/FUS::FLI1)
+    who_volume: null
+    site: Skin / soft tissue
+    lineage_broad: Neural
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+
+  NF_ATY:
+    name: Atypical neurofibromatous neoplasm of uncertain biologic potential (ANNUBP)
+    who_volume: Soft Tissue and Bone Tumours
+    site: Peripheral nervous system
+    lineage_broad: Neural
+    lineage_detail: null
+    parent: NFIB
+    families:
+    - Peripheral nerve sheath tumor
+
+  NUTM1_SARC:
+    name: NUTM1-rearranged sarcoma
+    who_volume: null
+    site: Soft tissue / bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Sarcoma
+
+  OFD_ADA:
+    name: Osteofibrous dysplasia / atypical adamantinoma / adamantinoma spectrum
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: ADAM
+    families:
+    - Bone lesion
+    - Fibro-osseous lesion
+
+  OFMT_BCOR:
+    name: Ossifying fibromyxoid tumor, ZC3H7B::BCOR fusion
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: OFMT
+    families:
+    - Soft tissue tumor
+
+  OSET:
+    name: Ossifying spindled and epithelioid tumor, SRSF7::NFATC3 fusion
+    who_volume: null
+    site: Bone / soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Bone tumor
+    - Soft tissue tumor
+
+  PMT:
+    name: Phosphaturic mesenchymal tumor
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone / soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Mesenchymal tumor
+    - Soft tissue tumor
+
+  PRRX1_SARC:
+    name: PRRX1-fusion driven neoplasm
+    who_volume: null
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+
+  RMM:
+    name: Rhabdomyoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue / heart
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Skeletal muscle tumor
+
+  RMS_DICER1_CNS:
+    name: Rhabdomyosarcoma, DICER1-altered (intracranial)
+    who_volume: Soft Tissue and Bone Tumours
+    site: Central nervous system
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: RMS_EMB
+    families:
+    - Sarcoma
+    - Rhabdomyosarcoma
+
+  RMS_DICER1_GYN:
+    name: Rhabdomyosarcoma, DICER1-altered (uterus / cervix)
+    who_volume: Soft Tissue and Bone Tumours
+    site: Uterus / cervix
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: RMS_EMB
+    families:
+    - Sarcoma
+    - Rhabdomyosarcoma
+
+  RMS_TFCP2:
+    name: Rhabdomyosarcoma, EWSR1/FUS::TFCP2 fusion
+    who_volume: null
+    site: Bone / soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: RMS_EMB
+    families:
+    - Sarcoma
+    - Rhabdomyosarcoma
+
+  RMS_VGLL3:
+    name: Rhabdomyosarcoma, VGLL3-fusion driven
+    who_volume: null
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: RMS_EMB
+    families:
+    - Sarcoma
+    - Rhabdomyosarcoma
+
+  RMS_ZFP64:
+    name: Rhabdomyosarcoma, ZFP64::NCOA2/3 fusion
+    who_volume: null
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: RMS_EMB
+    families:
+    - Sarcoma
+    - Rhabdomyosarcoma
+
+  SBC_VASC:
+    name: Simple bone cyst and vascular tumor with NFATC2 fusion
+    who_volume: null
+    site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Bone lesion
+    - Vascular tumor
+
+  SCL:
+    name: Spindle cell lipoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Adipocytic tumor
+
+  SNBCP:
+    name: Sinonasal beta-catenin-positive (SFT-like) neoplasm
+    who_volume: Head and Neck Tumours
+    site: Sinonasal
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+
+  ULMS:
+    name: Uterine leiomyosarcoma
+    who_volume: Female Genital Tumours
+    site: Uterus
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: LMS
+    families:
+    - Gynecologic tumor
+    - Sarcoma
+    - Smooth muscle tumor
+
+  ULM_FHD:
+    name: Uterine leiomyoma, FH-deficient
+    who_volume: Female Genital Tumours
+    site: Uterus
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: ULM
+    families:
+    - Uterine mesenchymal tumor
+    - Smooth muscle tumor
+
+  ULM_MED12MUT:
+    name: Uterine leiomyoma, MED12-mutant
+    who_volume: Female Genital Tumours
+    site: Uterus
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: ULM
+    families:
+    - Uterine mesenchymal tumor
+    - Smooth muscle tumor
+
+  ULM_MED12WT:
+    name: Uterine leiomyoma, MED12-wildtype (incl. RAD51B or HMGA2 fusion)
+    who_volume: Female Genital Tumours
+    site: Uterus
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: ULM
+    families:
+    - Uterine mesenchymal tumor
+    - Smooth muscle tumor
+
+  URCS:
+    name: Undifferentiated round cell sarcoma, EWSR1::PATZ1 fusion
+    who_volume: null
+    site: Soft tissue / bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Sarcoma
+    - Small round cell tumor
+
+  UTROSCT:
+    name: Uterine tumor resembling ovarian sex cord tumor (GREB1::NCOA1/2/3)
+    who_volume: Female Genital Tumours
+    site: Uterus
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+
+  XGA:
+    name: Xanthogranuloma
+    who_volume: Haematolymphoid Tumours
+    site: Skin / soft tissue
+    lineage_broad: Histiocytic
+    lineage_detail: null
+    families:
+    - Histiocytic neoplasm
+
+  XGET:
+    name: Xanthogranulomatous epithelioid tumor, HMGA2::NCOR2 fusion
+    who_volume: null
+    site: Soft tissue
+    lineage_broad: Histiocytic
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Histiocytic neoplasm

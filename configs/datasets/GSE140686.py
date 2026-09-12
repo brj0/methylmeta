@@ -30,7 +30,7 @@ def methylation_class(row):
         "methylation class chondrosarcoma (group B)": "CSA",
         "methylation class chondrosarcoma (mesenchymal)": "CSA_MES",
         "methylation class chordoma": "CHORD",
-        "methylation class chordoma (dedifferentiated)": "CHOR_DEDIFF",
+        "methylation class chordoma (dedifferentiated)": "CHORD_DD",
         "methylation class fibrous dysplasia": "FIDYS",
         "methylation class giant cell tumour of bone": "GCTB",
         "methylation class osteoblastoma": "OB",

@@ -80,7 +80,7 @@ WANTED_DATASETS = [
 ACRONYM_TRANSLATOR = {
     # Chordoma
     "CHORD": "CHD",
-    "CHOR_DEDIFF": "CHD_D",
+    "CHORD_DD": "CHD_D",
     # Controls
     "CONTR_HN": "CHEADNECK",
     "CONTR_SALIVARY": "CSALIVARY",
