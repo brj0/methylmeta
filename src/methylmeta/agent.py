@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import ast
+import os
 import re
 import shutil
 from dataclasses import dataclass
@@ -246,6 +247,8 @@ def run_agent(
     prompt: str | None = None,
     allow_write: bool = True,
     force: bool = False,
+    request_limit: int = 40,
+    tool_calls_limit: int = 100,
 ) -> AgentResult:
     """Run the metadata agent for one dataset."""
     config_dir = Path(config_dir).expanduser().resolve()
@@ -279,8 +282,8 @@ def run_agent(
         user_prompt,
         deps=deps,
         usage_limits=UsageLimits(
-            request_limit=20,
-            tool_calls_limit=50,
+            request_limit=request_limit,
+            tool_calls_limit=tool_calls_limit,
         ),
     )
 

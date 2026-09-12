@@ -208,7 +208,9 @@ def fetch(
 )
 @click.option("--dataset_dir", type=Path, required=True)
 @metadata_dir_option
-@click.option("--model", default="deepseek:deepseek-v4-flash", show_default=True)
+@click.option(
+    "--model", default="deepseek:deepseek-v4-flash", show_default=True
+)
 @click.option(
     "--prompt", default=None, help="Additional instructions for the agent."
 )
@@ -220,6 +222,20 @@ def fetch(
     default=True,
     help="Allow the agent to write the dataset config.",
 )
+@click.option(
+    "--request_limit",
+    type=int,
+    default=40,
+    show_default=True,
+    help="Max LLM requests before the agent gives up (raise for messy/large datasets).",
+)
+@click.option(
+    "--tool_calls_limit",
+    type=int,
+    default=100,
+    show_default=True,
+    help="Max tool calls before the agent gives up (raise for messy/large datasets).",
+)
 def agent(
     dataset_id: str,
     config_dir: Path,
@@ -229,6 +245,8 @@ def agent(
     prompt: str | None,
     force: bool,
     write: bool,
+    request_limit: int,
+    tool_calls_limit: int,
 ) -> None:
     """Create or repair a dataset config with an AI agent."""
     from methylmeta.agent import run_agent
@@ -242,6 +260,8 @@ def agent(
         prompt=prompt,
         allow_write=write,
         force=force,
+        request_limit=request_limit,
+        tool_calls_limit=tool_calls_limit,
     )
     click.echo(result.summary)
     if result.config_path:
