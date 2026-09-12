@@ -10,6 +10,7 @@ from typing import Any
 import polars as pl
 
 from methylmeta.loader import load_dataset_module
+from methylmeta.paths import METADATA_OVERRIDES_DIR
 from methylmeta.schema import SampleMetadata
 
 logger = logging.getLogger(__name__)
@@ -69,6 +70,7 @@ def read_metadata(path: Path) -> pl.DataFrame:
             path,
             infer_schema_length=10000,
             null_values=CSV_NULL_VALUES,
+            comment_prefix="#",
         )
 
     if suffix == ".tsv":
@@ -77,6 +79,7 @@ def read_metadata(path: Path) -> pl.DataFrame:
             separator="\t",
             infer_schema_length=10000,
             null_values=CSV_NULL_VALUES,
+            comment_prefix="#",
         )
 
     if suffix in {".xlsx", ".xls"}:
@@ -122,11 +125,13 @@ class DatasetProfile:
     dataset_id: str
     n_rows: int
     columns: list[ColumnProfile]
+    source_file: Path | None = None
 
     def summary(self) -> str:
         lines = [
             "DATASET",
             f"dataset_id: {self.dataset_id}",
+            f"source_file: {self.source_file}",
             f"n_rows: {self.n_rows}",
             f"n_columns: {len(self.columns)}",
             "",
@@ -300,14 +305,15 @@ class MetadataHarmonizer:
         return value
 
 
+METADATA_EXTENSIONS = {".csv", ".tsv", ".xlsx", ".xls"}
+
+
 def find_metadata_file(dataset_dir: Path) -> Path:
     """Searches and returns spreadsheed path in 'dataset_dir' if unique."""
-    extensions = {".csv", ".tsv", ".xlsx", ".xls"}
-
     files = sorted(
         p
         for p in dataset_dir.iterdir()
-        if p.is_file() and p.suffix.lower() in extensions
+        if p.is_file() and p.suffix.lower() in METADATA_EXTENSIONS
     )
 
     if len(files) != 1:
@@ -317,6 +323,40 @@ def find_metadata_file(dataset_dir: Path) -> Path:
         )
 
     return files[0]
+
+
+def find_metadata_override(
+    overrides_dir: Path, dataset_id: str
+) -> Path | None:
+    """Look for a hand-curated `<dataset_id>.<ext>` spreadsheet.
+
+    Returns None if `overrides_dir` doesn't exist or has no matching file -
+    this is the common case, since most datasets' GEO/ArrayExpress sample
+    sheet is fine as-is. If exactly one matching file is found, it's
+    returned. Multiple matches (e.g. both a .csv and .xlsx for the same
+    dataset_id) raise, same as `find_metadata_file`.
+    """
+    if not overrides_dir.is_dir():
+        return None
+
+    matches = sorted(
+        p
+        for ext in METADATA_EXTENSIONS
+        for p in overrides_dir.glob(f"{dataset_id}{ext}")
+        if p.is_file()
+    )
+
+    if not matches:
+        return None
+
+    if len(matches) > 1:
+        raise ValueError(
+            f"Expected at most one metadata override for {dataset_id!r} in "
+            f"{overrides_dir}, found {len(matches)}: "
+            f"{[p.name for p in matches]}"
+        )
+
+    return matches[0]
 
 
 class MetadataMerger:
@@ -352,19 +392,54 @@ class MetadataMerger:
     IDAT files - IDATs are never looked up outside a dataset's own folder,
     since generic filenames (e.g. "sample1_Grn.idat") can collide across
     different datasets, especially ArrayExpress or private cohorts.
+
+    Some datasets have useless GEO/ArrayExpress metadata while the real
+    annotation is only in a paper spreadsheet. Put that file in
+    `metadata_overrides_dir` (default `data/metadata/`) as `<dataset_id>.<ext>`
+    to use it instead of the metadata in `dataset_dir`.
     """
 
     def __init__(
         self,
         config_dir: str | Path,
         dataset_dir: str | Path,
+        metadata_overrides_dir: str | Path | None = None,
         strict: bool = True,
     ) -> None:
         self.config_dir = Path(config_dir)
         self.dataset_dir = Path(dataset_dir)
         self.strict = strict
 
+        if metadata_overrides_dir is None:
+            metadata_overrides_dir = METADATA_OVERRIDES_DIR
+        self.metadata_overrides_dir = Path(metadata_overrides_dir)
+
         self._id_to_config: dict[str, Path] | None = None
+
+    def _resolve_metadata_file(self, dataset_id: str) -> Path:
+        """Pick the metadata spreadsheet to use for `dataset_id`.
+
+        A file in `metadata_overrides_dir` named `<dataset_id>.<ext>` wins
+        over whatever is sitting in that dataset's own directory under
+        `dataset_dir` - this is for datasets whose GEO/ArrayExpress sample
+        sheet is useless (bare patient numbers, no diagnoses) and where the
+        real annotation was published as a spreadsheet on the paper's page
+        instead.
+        """
+        override = find_metadata_override(
+            self.metadata_overrides_dir, dataset_id
+        )
+        if override is not None:
+            logger.info(
+                "%s: using metadata override %s (ignoring sheet, if any, in "
+                "%s)",
+                dataset_id,
+                override,
+                self.dataset_dir / dataset_id,
+            )
+            return override
+
+        return find_metadata_file(self.dataset_dir / dataset_id)
 
     def _index_configs(self) -> dict[str, Path]:
         """Build (once) the dataset_id -> config .py path index.
@@ -455,7 +530,7 @@ class MetadataMerger:
                 logger.warning("Skipping %s: no data directory", dataset_id)
                 continue
 
-            metadata_file = find_metadata_file(dataset_path)
+            metadata_file = self._resolve_metadata_file(dataset_id)
 
             logger.info("Processing %s", dataset_id)
 
@@ -541,7 +616,7 @@ class MetadataMerger:
         that comes *before* writing one, so you (or an agent) can see real
         column names and values instead of guessing at a value_mapping dict.
         """
-        metadata_file = find_metadata_file(self.dataset_dir / dataset_id)
+        metadata_file = self._resolve_metadata_file(dataset_id)
 
         raw = read_metadata(metadata_file)
 
@@ -565,7 +640,10 @@ class MetadataMerger:
             )
 
         return DatasetProfile(
-            dataset_id=dataset_id, n_rows=raw.height, columns=columns
+            dataset_id=dataset_id,
+            n_rows=raw.height,
+            columns=columns,
+            source_file=metadata_file,
         )
 
     def test(
@@ -584,7 +662,7 @@ class MetadataMerger:
                 f"No config found for {dataset_id!r} (see missing_configs())."
             )
 
-        metadata_file = find_metadata_file(self.dataset_dir / dataset_id)
+        metadata_file = self._resolve_metadata_file(dataset_id)
 
         dataset = load_dataset_module(index[dataset_id])
         raw = read_metadata(metadata_file)

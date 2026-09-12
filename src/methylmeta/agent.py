@@ -241,6 +241,7 @@ def run_agent(
     *,
     config_dir: str | Path,
     dataset_dir: str | Path,
+    metadata_overrides_dir: str | Path | None = None,
     model: str,
     prompt: str | None = None,
     allow_write: bool = True,
@@ -254,7 +255,11 @@ def run_agent(
     if not dataset_path.is_dir():
         raise ValueError(f"Dataset directory does not exist: {dataset_path}")
 
-    merger = MetadataMerger(config_dir=config_dir, dataset_dir=dataset_dir)
+    merger = MetadataMerger(
+        config_dir=config_dir,
+        dataset_dir=dataset_dir,
+        metadata_overrides_dir=metadata_overrides_dir,
+    )
     deps = AgentDeps(
         merger=merger,
         dataset_id=dataset_id,

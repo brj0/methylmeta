@@ -4,7 +4,19 @@ from pathlib import Path
 import click
 
 from methylmeta.merger import MetadataMerger
-from methylmeta.paths import CONFIGS_DIR
+from methylmeta.paths import CONFIGS_DIR, METADATA_OVERRIDES_DIR
+
+metadata_dir_option = click.option(
+    "--metadata_dir",
+    type=Path,
+    default=METADATA_OVERRIDES_DIR,
+    show_default=True,
+    help=(
+        "Directory of hand-curated <dataset_id>.<ext> spreadsheets that "
+        "override a dataset's GEO/ArrayExpress sample sheet (for datasets "
+        "whose real annotation was only published on the paper's page)."
+    ),
+)
 
 logging.basicConfig(level=logging.INFO)
 
@@ -20,6 +32,7 @@ def cli() -> None:
     "--config_dir", type=Path, default=CONFIGS_DIR, show_default=True
 )
 @click.option("--dataset_dir", type=Path, required=True)
+@metadata_dir_option
 @click.option("--output", type=Path, default=None)
 @click.option("--strict/--no_strict", default=True)
 @click.option(
@@ -51,6 +64,7 @@ def cli() -> None:
 def merge(
     config_dir: Path,
     dataset_dir: Path,
+    metadata_dir: Path,
     output: Path | None,
     strict: bool,
     array_types: bool,
@@ -61,16 +75,17 @@ def merge(
     merger = MetadataMerger(
         config_dir=config_dir,
         dataset_dir=dataset_dir,
+        metadata_overrides_dir=metadata_dir,
         strict=strict,
     )
     dataset_ids = (
         [d.strip() for d in datasets.split(",") if d.strip()]
         if datasets
-        else None
+        else []
     )
 
     if list_missing:
-        missing = merger.missing_configs(dataset_ids or [])
+        missing = merger.missing_configs(dataset_ids)
         if missing:
             click.echo("Missing configs for:\n" + "\n".join(missing))
         else:
@@ -100,16 +115,22 @@ def merge(
     "--config_dir", type=Path, default=CONFIGS_DIR, show_default=True
 )
 @click.option("--dataset_dir", type=Path, required=True)
+@metadata_dir_option
 @click.option("--max_unique", type=int, default=15, show_default=True)
 @click.argument("dataset_id")
 def profile(
     config_dir: Path,
     dataset_dir: Path,
+    metadata_dir: Path,
     max_unique: int,
     dataset_id: str,
 ) -> None:
     """Summarize metadata columns before writing a config."""
-    merger = MetadataMerger(config_dir=config_dir, dataset_dir=dataset_dir)
+    merger = MetadataMerger(
+        config_dir=config_dir,
+        dataset_dir=dataset_dir,
+        metadata_overrides_dir=metadata_dir,
+    )
     click.echo(merger.profile(dataset_id, max_unique=max_unique).summary())
 
 
@@ -118,10 +139,12 @@ def profile(
     "--config_dir", type=Path, default=CONFIGS_DIR, show_default=True
 )
 @click.option("--dataset_dir", type=Path, required=True)
+@metadata_dir_option
 @click.argument("dataset_id")
 def test(
     config_dir: Path,
     dataset_dir: Path,
+    metadata_dir: Path,
     dataset_id: str,
 ) -> None:
     """Dry-run one dataset's config against its real metadata.
@@ -129,7 +152,11 @@ def test(
     Reports every failing row and why (grouped by identical error), without
     aborting on the first bad row - the fast loop for writing/fixing configs.
     """
-    merger = MetadataMerger(config_dir=config_dir, dataset_dir=dataset_dir)
+    merger = MetadataMerger(
+        config_dir=config_dir,
+        dataset_dir=dataset_dir,
+        metadata_overrides_dir=metadata_dir,
+    )
     report = merger.test(dataset_id)
     click.echo(report.summary())
     raise SystemExit(0 if report.success else 1)
@@ -180,9 +207,8 @@ def fetch(
     "--config_dir", type=Path, default=CONFIGS_DIR, show_default=True
 )
 @click.option("--dataset_dir", type=Path, required=True)
-@click.option(
-    "--model", default="deepseek:deepseek-flash", show_default=True
-)
+@metadata_dir_option
+@click.option("--model", default="deepseek:deepseek-v4-flash", show_default=True)
 @click.option(
     "--prompt", default=None, help="Additional instructions for the agent."
 )
@@ -198,6 +224,7 @@ def agent(
     dataset_id: str,
     config_dir: Path,
     dataset_dir: Path,
+    metadata_dir: Path,
     model: str,
     prompt: str | None,
     force: bool,
@@ -210,6 +237,7 @@ def agent(
         dataset_id,
         config_dir=config_dir,
         dataset_dir=dataset_dir,
+        metadata_overrides_dir=metadata_dir,
         model=model,
         prompt=prompt,
         allow_write=write,
