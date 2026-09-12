@@ -1,0 +1,125 @@
+def dataset_id(row):
+    return "GSE140686"
+
+
+def description(row):
+    return "Sarcoma Classification by DNA-methylation profiling, Koelsche 2021"
+
+
+def sample_id(row):
+    return row["ID"]
+
+
+def diagnosis(row):
+    return row["Diagnosis"]
+
+
+def methylation_class(row):
+    value = row["Methylation Class Name"]
+    mapping = {
+        # controls
+        "methylation class control (blood)": "CONTR_BLOOD",
+        "methylation class control (muscle tissue)": "CONTR_SKM",
+        "methylation class control (reactive tissue)": "CONTR_REA",
+        # bone tumours
+        "methylation class chondroblastoma": "CB",
+        "methylation class chondrosarcoma (clear cell)": "CSA_CC",
+        "methylation class chondrosarcoma (IDH group A)": "CSA_IDH_MUT",
+        "methylation class chondrosarcoma (IDH group B)": "CSA_IDH_MUT",
+        "methylation class chondrosarcoma (group A)": "CSA",
+        "methylation class chondrosarcoma (group B)": "CSA",
+        "methylation class chondrosarcoma (mesenchymal)": "CSA_MES",
+        "methylation class chordoma": "CHORD",
+        "methylation class chordoma (dedifferentiated)": "CHOR_DEDIFF",
+        "methylation class fibrous dysplasia": "FIDYS",
+        "methylation class giant cell tumour of bone": "GCTB",
+        "methylation class osteoblastoma": "OB",
+        "methylation class osteosarcoma (high grade)": "OS_CONV",
+        # soft tissue tumours
+        "methylation class alveolar soft part sarcoma": "ASPS",
+        "methylation class angiomatoid fibrous histiocytoma": "AFH",
+        "methylation class angioleiomyoma / myopericytoma": "ALMO_MPC",
+        "methylation class angiosarcoma": "AS",
+        "methylation class atypical fibroxanthoma / pleomorphic dermal sarcoma": "AFX_PDS",
+        "methylation class clear cell sarcoma of soft parts": "CCS",
+        "methylation class dermatofibrosarcoma protuberans": "DFSP",
+        "methylation class desmoid-type fibromatosis": "DF",
+        "methylation class desmoplastic small round cell tumour": "DSRCT",
+        "methylation class epithelioid haemangioendothelioma": "EHE",
+        "methylation class epithelioid sarcoma": "ES",
+        "methylation class Ewing´s sarcoma": "EWS",
+        "methylation class extraskeletal myxoid chondrosarcoma": "EMC",
+        "methylation class infantile fibrosarcoma": "IFS",
+        "methylation class inflammatory myofibroblastic tumour": "IMT",
+        "methylation class Kaposi sarcoma": "KS",
+        "methylation class leiomyoma": "LM",
+        "methylation class leiomyosarcoma": "LMS",
+        "methylation class lipoma": "LIPO",
+        "methylation class low-grade fibromyxoid sarcoma": "LGFMS",
+        "methylation class malignant peripheral nerve sheath tumour": "MPNST",
+        "methylation class malignant rhabdoid tumour": "MRT",
+        "methylation class myositis ossificans": "MO",
+        "methylation class myositis proliferans": "MYPROL",
+        "methylation class myxoid liposarcoma": "MLS",
+        "methylation class nodular fasciitis": "NFA",
+        "methylation class ossifying fibromyxoid tumour": "OFMT",
+        "methylation class rhabdomyosarcoma (alveolar)": "RMS_ALV",
+        "methylation class rhabdomyosarcoma (embryonal)": "RMS_EMB",
+        "methylation class rhabdomyosarcoma (MYOD1)": "RMS_MYOD1",
+        "methylation class sarcoma (MPNST-like)": "MPNST",
+        "methylation class sarcoma (RMS-like)": "SARC_RMSL",
+        "methylation class sclerosing epithelioid fibrosarcoma": "SEF",
+        "methylation class small blue round cell tumour with BCOR alteration": "SBRCT_BCOR",
+        "methylation class small blue round cell tumour with CIC alteration": "SBRCT_CIC",
+        "methylation class synovial sarcoma": "SS",
+        "methylation class undifferentiated sarcoma": "USARC",
+        "methylation class well- / dedifferentiated liposarcoma": "WD_DDLS",
+        # other entities
+        "methylation class clear cell sarcoma of the kidney": "CCS_KIDN",
+        "methylation class endometrial stromal sarcoma (high grade)": "ESS_HG",
+        "methylation class endometrial stromal sarcoma (low grade)": "ESS_LG",
+        "methylation class gastrointestinal stromal tumour": "GIST",
+        "methylation class Langerhans cell histiocytosis": "LCH",
+        "methylation class melanoma (cutaneous)": "CMEL",
+        "methylation class neurofibroma": "NFIB",
+        "methylation class neurofibroma (plexiform)": "NFIB_PLEX",
+        "methylation class schwannoma": "SCHW",
+        "methylation class solitary fibrous tumour": "SFT",
+        "methylation class squamous cell carcinoma (cutaneous)": "SCC_CUT",
+    }
+    return mapping[value]
+
+
+def sample_site(row):
+    value = row["Site"]
+    return value.strip() if value is not None else None
+
+
+def sample_type(row):
+    value = row["Manifestation"]
+    mapping = {
+        "Primary": "primary",
+        "Metastasis": "metastasis",
+        "Recurrence": "recurrence",
+    }
+    return mapping.get(value)
+
+
+def material_type(row):
+    value = row["DNA"]
+    mapping = {
+        "EDTA blood": "blood",
+        "FFPE": "tissue",
+        "KRYO": "tissue",
+    }
+    return mapping[value]
+
+
+def preservation(row):
+    value = row["DNA"]
+    mapping = {
+        "EDTA blood": None,
+        "FFPE": "FFPE",
+        "KRYO": "FROZEN",
+    }
+    return mapping[value]
