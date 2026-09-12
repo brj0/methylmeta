@@ -28,6 +28,7 @@ STUDY_INFO_CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
 _GEO_RE = re.compile(r"^GSE\d+$")
 _ARRAYEXPRESS_RE = re.compile(r"^E-[A-Z]+-\d+$")
+_TCGA_RE = re.compile(r"^TCGA-[A-Z0-9]+$")
 
 _TIMEOUT = 15.0
 
@@ -120,6 +121,40 @@ def _fetch_arrayexpress(dataset_id: str) -> str:
     return "\n".join(f"{key}: {value}" for key, value in attrs.items())
 
 
+def _fetch_tcga(dataset_id: str) -> str:
+    url = f"https://api.gdc.cancer.gov/projects/{dataset_id}"
+    response = httpx.get(url, timeout=_TIMEOUT, follow_redirects=True)
+    response.raise_for_status()
+    payload = response.json()
+
+    fields = payload.get("data", {})
+    if not isinstance(fields, dict):
+        raise ValueError(f"GDC returned no project data for {dataset_id!r}.")
+
+    interesting = (
+        ("project_id", "Project ID"),
+        ("name", "Project name"),
+        ("program", "Program"),
+        ("disease_type", "Disease type"),
+        ("primary_site", "Primary site"),
+        ("project_short_name", "Short name"),
+        ("dbgap_accession_number", "dbGaP accession"),
+    )
+
+    lines = [
+        f"{label}: {fields[key]}"
+        for key, label in interesting
+        if fields.get(key)
+    ]
+
+    if not lines:
+        raise ValueError(
+            f"GDC project for {dataset_id!r} had no usable information."
+        )
+
+    return "\n".join(lines)
+
+
 def fetch_study_description(dataset_id: str, *, refresh: bool = False) -> str:
     """Return a short public description of a GEO/ArrayExpress study.
 
@@ -138,6 +173,8 @@ def fetch_study_description(dataset_id: str, *, refresh: bool = False) -> str:
         fetcher = _fetch_geo
     elif _ARRAYEXPRESS_RE.match(dataset_id):
         fetcher = _fetch_arrayexpress
+    elif _TCGA_RE.match(dataset_id):
+        fetcher = _fetch_tcga
     else:
         return (
             f"{dataset_id!r} is not a recognized GEO or ArrayExpress "
