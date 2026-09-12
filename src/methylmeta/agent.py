@@ -80,6 +80,9 @@ possible. Rows may be removed later by downstream validation or quality-control
 steps. Do not add row filtering. Do not use regex. Do not create new WHO
 acronyms. Do not change methylmeta source code or tumor_types.yaml.
 
+When returning Python code, follow PEP 8 formatting and keep lines to a maximum
+of 79 characters.
+
 The config contract is:
 
 {config_spec}
