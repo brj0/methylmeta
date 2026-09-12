@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import ast
-import os
 import re
 import shutil
 from dataclasses import dataclass
@@ -271,6 +270,24 @@ def run_agent(
         allow_write=allow_write,
         force=force,
     )
+
+    existing_config = _config_path(deps)
+    if existing_config.exists() and not force:
+        # Fail before spending a single token: write_config would refuse
+        # this anyway, so there's no point paying for a run that can only
+        # end in that refusal. Pass --force to actually replace it.
+        return AgentResult(
+            dataset_id=dataset_id,
+            success=False,
+            config_path=str(existing_config),
+            summary=(
+                f"SKIPPED: {existing_config} already exists and --force "
+                "was not given. Not running the agent - pass --force to "
+                "replace it, or run `methylmeta test` to check the "
+                "existing config first."
+            ),
+            usage=RunUsage(),
+        )
 
     agent = create_agent(model)
     user_prompt = prompt or (

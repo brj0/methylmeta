@@ -227,14 +227,20 @@ def fetch(
     type=int,
     default=40,
     show_default=True,
-    help="Max LLM requests before the agent gives up (raise for messy/large datasets).",
+    help=(
+        "Max LLM requests before the agent gives up (raise for messy/large "
+        "datasets)."
+    ),
 )
 @click.option(
     "--tool_calls_limit",
     type=int,
     default=100,
     show_default=True,
-    help="Max tool calls before the agent gives up (raise for messy/large datasets).",
+    help=(
+        "Max tool calls before the agent gives up (raise for messy/large "
+        "datasets)."
+    ),
 )
 def agent(
     dataset_id: str,
