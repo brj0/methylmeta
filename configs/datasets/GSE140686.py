@@ -69,7 +69,7 @@ def methylation_class(row):
         "methylation class sarcoma (MPNST-like)": "MPNST",
         "methylation class sarcoma (RMS-like)": "SARC_RMSL",
         "methylation class sclerosing epithelioid fibrosarcoma": "SEF",
-        "methylation class small blue round cell tumour with BCOR alteration": "SBRCT_BCOR",
+        "methylation class small blue round cell tumour with BCOR alteration": "BCOR_SARC",
         "methylation class small blue round cell tumour with CIC alteration": "SBRCT_CIC",
         "methylation class synovial sarcoma": "SS",
         "methylation class undifferentiated sarcoma": "USARC",

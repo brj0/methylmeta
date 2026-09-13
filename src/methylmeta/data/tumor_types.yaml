@@ -33,9 +33,9 @@ tumor_types:
     - Ewing sarcoma family
 
   ADAM:
-    name: Adamantinoma
-    who_volume: null
-    site: null
+    name: Adamantinoma of long bones
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
     lineage_broad: Mesenchymal
     lineage_detail: null
     families:
@@ -50,6 +50,15 @@ tumor_types:
     parent: ADAM
     families:
     - Bone tumor
+
+  ADCA_EAR:
+    name: Middle ear adenocarcinoma
+    who_volume: Head and Neck Tumours
+    site: Middle ear
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Carcinoma
 
   ADCC:
     name: Adenoid cystic carcinoma
@@ -69,6 +78,25 @@ tumor_types:
     lineage_detail: null
     families:
     - Adrenal tumor
+    - Carcinoma
+
+  ADSC:
+    name: Adenosquamous carcinoma
+    who_volume: null
+    site: null
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Carcinoma
+
+  ADSC_LAR:
+    name: Adenosquamous carcinoma (larynx)
+    who_volume: Head and Neck Tumours
+    site: Larynx
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: ADSC
+    families:
     - Carcinoma
 
   AFCMT:
@@ -94,6 +122,16 @@ tumor_types:
     name: Superficial acral fibromyxoma
     who_volume: Soft Tissue and Bone Tumours
     site: Soft tissue (acral)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
+
+  AFST:
+    name: Angiofibroma of soft tissue
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
     lineage_broad: Mesenchymal
     lineage_detail: null
     families:
@@ -186,8 +224,8 @@ tumor_types:
     - Soft tissue tumor
     - Perivascular tumor
 
-  ALT:
-    name: Atypical lipomatous tumor
+  ALT_WDLPS:
+    name: Atypical lipomatous tumour / well-differentiated liposarcoma
     who_volume: Soft Tissue and Bone Tumours
     site: Soft tissue
     lineage_broad: Mesenchymal
@@ -274,6 +312,16 @@ tumor_types:
     families:
     - Odontogenic tumor
 
+  AMFB:
+    name: Angiomyofibroblastoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue (vulvovaginal)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
+
   AMH_UMB:
     name: Angio-mesenchymal hamartoma of the umbilical cord
     who_volume: null
@@ -320,6 +368,15 @@ tumor_types:
     families:
     - Squamous lesion
 
+  ANASTOM_HEMANG:
+    name: Anastomosing haemangioma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue / kidney
+    lineage_broad: Vascular
+    lineage_detail: null
+    families:
+    - Vascular tumor
+
   ANA_PA:
     name: Anaplastic pilocytic astrocytoma
     who_volume: Central Nervous System Tumours
@@ -339,6 +396,16 @@ tumor_types:
     lineage_detail: B-Cell
     families:
     - BCP-ALL
+
+  ANGL:
+    name: Angiolipoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Adipocytic tumor
 
   AOT:
     name: Adenomatoid odontogenic tumour
@@ -465,6 +532,15 @@ tumor_types:
     - Embryonal tumor
     - Atypical teratoid/rhabdoid tumor
 
+  AVM:
+    name: Arteriovenous malformation
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Vascular
+    lineage_detail: null
+    families:
+    - Vascular malformation
+
   BCA:
     name: Basal cell adenoma
     who_volume: Head and Neck Tumours
@@ -501,6 +577,17 @@ tumor_types:
     lineage_detail: T-Cell
     families:
     - T-ALL
+
+  BCOR_SARC:
+    name: Sarcomas with BCOR genetic alterations
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: BCOR_SARC
+    families:
+    - Sarcoma
+    - Small round cell tumor
 
   BCRABL1:
     name: BCR-ABL1 B-ALL
@@ -583,6 +670,15 @@ tumor_types:
     families:
     - Control
 
+  BNCT:
+    name: Benign notochordal cell tumour
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone (axial skeleton)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Bone tumor
+
   BOT:
     name: Borderline Ovarian Tumor
     who_volume: null
@@ -609,6 +705,15 @@ tumor_types:
     lineage_detail: B-Cell
     families:
     - mature_b_small_cell
+
+  BPOP:
+    name: Bizarre parosteal osteochondromatous proliferation
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Bone tumor
 
   BRANCHIOMA:
     name: Branchioma
@@ -638,6 +743,16 @@ tumor_types:
     families:
     - Cyst
 
+  BROWN_TUMOR:
+    name: Brown tumour of hyperparathyroidism
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Bone lesion
+    - Giant cell lesion
+
   BR_FAD:
     name: Fibroadenoma of the breast
     who_volume: Breast Tumours
@@ -657,6 +772,17 @@ tumor_types:
     families:
     - Breast tumor
     - Fibroepithelial tumor
+
+  BSCC_LAR:
+    name: Basaloid squamous cell carcinoma (larynx)
+    who_volume: Head and Neck Tumours
+    site: Larynx
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: SCC_LAR
+    families:
+    - Carcinoma
+    - Squamous cell carcinoma
 
   BSNS:
     name: Biphenotypic sinonasal sarcoma
@@ -695,6 +821,26 @@ tumor_types:
     families:
     - BCP-ALL
 
+  CAF:
+    name: Calcifying aponeurotic fibroma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
+
+  CAFIB:
+    name: Cellular angiofibroma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
+
   CANA:
     name: Canalicular adenoma
     who_volume: Head and Neck Tumours
@@ -721,7 +867,7 @@ tumor_types:
     site: Oral cavity
     lineage_broad: Epithelial
     lineage_detail: null
-    parent: OR_VC
+    parent: SCC_VERR
     families:
     - Carcinoma
     - Squamous cell carcinoma
@@ -795,15 +941,6 @@ tumor_types:
 
   CCA_BD:
     name: Cholangiocarcinoma - Bile Duct
-    who_volume: null
-    site: null
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Carcinoma
-
-  OCCC:
-    name: Ovarian Clear Cell Carcinoma
     who_volume: null
     site: null
     lineage_broad: Epithelial
@@ -935,6 +1072,16 @@ tumor_types:
     - Carcinoma
     - Squamous cell carcinoma
 
+  CFT:
+    name: Calcifying fibrous tumour
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
+
   CGCE:
     name: Congenital granular cell epulis
     who_volume: Head and Neck Tumours
@@ -943,6 +1090,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Soft tissue tumor
+
+  CHDLIPO:
+    name: Chondroid lipoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Adipocytic tumor
 
   CHERUB:
     name: Cherubism
@@ -1000,7 +1157,6 @@ tumor_types:
     site: Bone
     lineage_broad: Mesenchymal
     lineage_detail: null
-    parent: CHORD
     families:
     - Bone tumor
     - Chordoma
@@ -1061,6 +1217,16 @@ tumor_types:
     families:
     - Bone tumor
     - Cartilaginous tumor
+
+  CMH_CW:
+    name: Chondromesenchymal hamartoma of chest wall
+    who_volume: Soft Tissue and Bone Tumours
+    site: Chest wall (rib)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Bone tumor
+    - Hamartoma
 
   CML:
     name: CML
@@ -1198,6 +1364,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Melanocytic tumor
+
+  COMP_HE:
+    name: Composite haemangioendothelioma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Vascular
+    lineage_detail: null
+    parent: EHE
+    families:
+    - Vascular tumor
 
   CONTR_ADENOPIT:
     name: Normal anterior pituitary
@@ -1839,6 +2015,28 @@ tumor_types:
     - Chondrosarcoma
     - Sarcoma
 
+  CSA_PERIOST:
+    name: Periosteal chondrosarcoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone (surface)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: CSA
+    families:
+    - Sarcoma
+    - Chondrosarcoma
+
+  CSA_PERIPH:
+    name: Secondary peripheral chondrosarcoma, grades 2 and 3
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone (surface, in osteochondroma)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: CSA
+    families:
+    - Sarcoma
+    - Chondrosarcoma
+
   CSA_SB:
     name: Chondrosarcoma, scull base group
     who_volume: Soft Tissue and Bone Tumours
@@ -1884,8 +2082,8 @@ tumor_types:
     - control
 
   CSN_TEK:
-    name: Chondroid synovial neoplasm, TEK-fusion (temporomandibular joint)
-    who_volume: null
+    name: Chondroid synoviocytic neoplasm
+    who_volume: Soft Tissue and Bone Tumours
     site: Temporomandibular joint
     lineage_broad: Mesenchymal
     lineage_detail: null
@@ -1929,6 +2127,15 @@ tumor_types:
     families:
     - Hematolymphoid neoplasm
 
+  DAM:
+    name: Deep (aggressive) angiomyxoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue (pelvic/perineal)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+
   DCIS:
     name: Ductal Carcinoma in Situ
     who_volume: null
@@ -1956,6 +2163,15 @@ tumor_types:
     lineage_detail: Myeloid
     families:
     - AML
+
+  DERMOID_CYST:
+    name: Dermoid cyst
+    who_volume: Head and Neck Tumours
+    site: Neck
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Cyst
 
   DF:
     name: Desmoid fibromatosis
@@ -2127,6 +2343,25 @@ tumor_types:
     families:
     - Neuroendocrine tumor
 
+  DNSM:
+    name: Dermal nerve sheath myxoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Skin
+    lineage_broad: Neural
+    lineage_detail: null
+    families:
+    - Peripheral nerve sheath tumor
+
+  DPFB:
+    name: Desmoplastic fibroblastoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
+
   DSRCT:
     name: Desmoplastic small round cell tumor
     who_volume: Soft Tissue and Bone Tumours
@@ -2145,24 +2380,6 @@ tumor_types:
     lineage_detail: Myeloid
     families:
     - AML
-
-  DERMOID_CYST:
-    name: Dermoid cyst
-    who_volume: Head and Neck Tumours
-    site: Neck
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    families:
-    - Cyst
-
-  TERATOID_CYST:
-    name: Teratoid cyst
-    who_volume: Head and Neck Tumours
-    site: Neck
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    families:
-    - Cyst
 
   DUCTPAP:
     name: Ductal papillomas (salivary gland)
@@ -2193,16 +2410,33 @@ tumor_types:
     families:
     - BCP-ALL
 
-  SCC_EAC:
-    name: Squamous cell carcinoma of the external auditory canal
+  DYSPL_LAR:
+    name: Laryngeal and hypopharyngeal epithelial dysplasia
     who_volume: Head and Neck Tumours
-    site: External auditory canal
+    site: Larynx / hypopharynx
     lineage_broad: Epithelial
     lineage_detail: null
-    parent: HNSCC
     families:
-    - Carcinoma
-    - Squamous cell carcinoma
+    - Precursor lesion
+
+  DYSPL_OR:
+    name: Oral epithelial dysplasia
+    who_volume: Head and Neck Tumours
+    site: Oral cavity
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Precursor lesion
+
+  DYSPS_OR_HPV_POS:
+    name: HPV-associated oral epithelial dysplasia
+    who_volume: Head and Neck Tumours
+    site: Oral cavity
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: DYSPL_OR
+    families:
+    - Precursor lesion
 
   EATCL:
     name: Enteropathy-associated T-cell lymphoma
@@ -2283,6 +2517,16 @@ tumor_types:
     - Sarcoma
     - Vascular tumor
 
+  ELASTOFIB:
+    name: Elastofibroma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
+
   ELST:
     name: Endolymphatic sac tumor
     who_volume: Central Nervous System Tumours
@@ -2357,28 +2601,6 @@ tumor_types:
     lineage_detail: null
     families:
     - Undefined
-
-  ONB_A:
-    name: Olfactory neuroblastoma (esthesioneuroblastoma), subclass A
-    who_volume: Head and Neck Tumours
-    site: Nasal cavity
-    lineage_broad: Neuroectodermal
-    lineage_detail: null
-    parent: ONB
-    families:
-    - Sinonasal tumor
-    - Neuroendocrine tumor
-
-  ONB_B:
-    name: Olfactory neuroblastoma (esthesioneuroblastoma), subclass B
-    who_volume: Head and Neck Tumours
-    site: Nasal cavity
-    lineage_broad: Neuroectodermal
-    lineage_detail: null
-    parent: ONB
-    families:
-    - Sinonasal tumor
-    - Neuroendocrine tumor
 
   ENDOM_CA:
     name: Endometrial carcinoma
@@ -2478,6 +2700,16 @@ tumor_types:
     families:
     - Ependymoma
     - Glioma
+
+  ERRT:
+    name: Extrarenal rhabdoid tumour
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Sarcoma
+    - Embryonal tumor
 
   ES:
     name: Epithelioid sarcoma
@@ -2624,14 +2856,25 @@ tumor_types:
     - Sarcoma
     - Ewing sarcoma family
 
-  OSTEO_EAR:
-    name: Exostosis (osteoma) of the ear
-    who_volume: Head and Neck Tumours
-    site: External auditory canal
+  EXOS:
+    name: Extraskeletal osteosarcoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Sarcoma
+    - Osteogenic tumor
+
+  FCM:
+    name: Fibrocartilaginous mesenchymoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
     lineage_broad: Mesenchymal
     lineage_detail: null
     families:
     - Bone tumor
+    - Cartilaginous tumor
 
   FDCS:
     name: Follicular dendritic cell sarcoma
@@ -2641,6 +2884,15 @@ tumor_types:
     lineage_detail: Dendritic/Stromal
     families:
     - dendritic_stromal
+
+  FETCREB_EMT:
+    name: FET-CREB family epithelioid mesenchymal tumours
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
 
   FETETS:
     name: FET-ETS family fusion
@@ -2664,6 +2916,16 @@ tumor_types:
     name: Fibrous hamartoma of infancy
     who_volume: Soft Tissue and Bone Tumours
     site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
+
+  FIB_COLLI:
+    name: Fibromatosis colli
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue (neck)
     lineage_broad: Mesenchymal
     lineage_detail: null
     families:
@@ -2698,6 +2960,17 @@ tumor_types:
     families:
     - Undefined
 
+  FOPD:
+    name: Fibro-osseous pseudotumour of digits
+    who_volume: Soft Tissue and Bone Tumours
+    site: Digits
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: MO
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
+
   FTHCL:
     name: Follicular T-helper cell lymphoma
     who_volume: Haematolymphoid Tumours
@@ -2706,6 +2979,16 @@ tumor_types:
     lineage_detail: T-Cell
     families:
     - mature_t_nk
+
+  FTS:
+    name: Fibroma of tendon sheath
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
 
   GBM_G34:
     name: Glioblastoma, IDH-wildtype, H3.3 G34-mutant
@@ -2827,6 +3110,17 @@ tumor_types:
     - Glioblastoma
     - High-grade glioma
 
+  GCFB:
+    name: Giant cell fibroblastoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: DFSP
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
+
   GCFB_DFSP:
     name: Giant cell fibroblastoma with transition to dermatofibrosarcoma protuberans
     who_volume: Soft Tissue and Bone Tumours
@@ -2867,6 +3161,16 @@ tumor_types:
     - Bone tumor
     - Giant cell tumor
 
+  GCTST:
+    name: Giant cell tumour of soft tissue
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Giant cell tumor
+
   GCT_AD:
     name: Adult Granulosa Cell Tumor
     who_volume: null
@@ -2884,6 +3188,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Germ cell tumor
+
+  GDF:
+    name: Gardner fibroma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
 
   GERMI_CNS:
     name: CNS germinoma
@@ -2917,23 +3231,14 @@ tumor_types:
     - Mesenchymal tumor
     - SDH-deficient
 
-  GLI1_STT:
-    name: GLI1-altered soft tissue tumour
+  GLI1_MES:
+    name: GLI1-altered mesenchymal tumours
     who_volume: Soft Tissue and Bone Tumours
     site: Soft tissue
     lineage_broad: Mesenchymal
     lineage_detail: null
     families:
     - Soft tissue tumor
-
-  GLIMES:
-    name: GLI-altered mesenchymal tumor
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    families:
-    - CNS tumor
     - Mesenchymal tumor
 
   GLOAN:
@@ -3049,6 +3354,26 @@ tumor_types:
     families:
     - mature_b_small_cell
 
+  HEMANG_BONE:
+    name: Haemangioma of bone
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
+    lineage_broad: Vascular
+    lineage_detail: null
+    families:
+    - Vascular tumor
+    - Bone tumor
+
+  HFLT:
+    name: Haemosiderotic fibrolipomatous tumour
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Adipocytic tumor
+
   HGAP:
     name: High-grade astrocytoma with piloid features
     who_volume: Central Nervous System Tumours
@@ -3148,6 +3473,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Carcinoma
+
+  HIB:
+    name: Hibernoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Adipocytic tumor
 
   HISTSARC:
     name: Histiocytic sarcoma
@@ -3262,15 +3597,6 @@ tumor_types:
     families:
     - Squamous lesion
 
-  NET_HN:
-    name: Neuroendocrine tumour (head and neck)
-    who_volume: Head and Neck Tumours
-    site: Head and neck
-    lineage_broad: Neuroendocrine
-    lineage_detail: null
-    families:
-    - Neuroendocrine tumor
-
   HOCT:
     name: Hybrid Oncocytic Tumor
     who_volume: null
@@ -3355,6 +3681,15 @@ tumor_types:
     families:
     - mature_t_nk
 
+  HYBRID_NST:
+    name: Hybrid nerve sheath tumour
+    who_volume: Soft Tissue and Bone Tumours
+    site: Peripheral nervous system
+    lineage_broad: Neural
+    lineage_detail: null
+    families:
+    - Peripheral nerve sheath tumor
+
   IAMP21:
     name: iAMP21
     who_volume: Haematolymphoid Tumours
@@ -3363,6 +3698,16 @@ tumor_types:
     lineage_detail: B-Cell
     families:
     - BCP-ALL
+
+  IBF:
+    name: Inclusion body fibromatosis
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue (digits)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
 
   ICMT:
     name: Intracranial mesenchymal tumor with FET/CREB fusion
@@ -3462,6 +3807,15 @@ tumor_types:
     - Teratoma
     - Germ cell tumor
 
+  IM_VASC_ANOM:
+    name: Intramuscular vascular anomalies
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue (muscle)
+    lineage_broad: Vascular
+    lineage_detail: null
+    families:
+    - Vascular malformation
+
   INFFIB:
     name: Infantile fibromatosis
     who_volume: Soft Tissue and Bone Tumours
@@ -3482,6 +3836,36 @@ tumor_types:
     - Reactive
     - Inflammatory
 
+  INTIMAL_SARC:
+    name: Intimal sarcoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Blood vessels (great vessels)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Sarcoma
+    - Vascular tumor
+
+  IRT:
+    name: Inflammatory rhabdomyoblastic tumour
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Skeletal muscle tumor
+
+  ISCFASC:
+    name: Ischaemic fasciitis
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
+
   ITAC:
     name: Intestinal-type Sinonasal Adenocarcinoma
     who_volume: Head and Neck Tumours
@@ -3491,6 +3875,16 @@ tumor_types:
     parent: SNAD
     families:
     - Carcinoma
+
+  JHF:
+    name: Juvenile hyaline fibromatosis
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
 
   JMML:
     name: Juvenile Myelomonocytic Leukemia
@@ -3548,6 +3942,16 @@ tumor_types:
     families:
     - Fibro-osseous lesion
 
+  JUX_ART_MYX:
+    name: Juxta-articular myxoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue (near joint)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: MYX
+    families:
+    - Soft tissue tumor
+
   KC:
     name: Keratocystoma
     who_volume: Head and Neck Tumours
@@ -3568,7 +3972,7 @@ tumor_types:
 
   KINASE_SARC:
     name: Kinase-altered spindle cell neoplasm (incl. NTRK1/2/3 fusion)
-    who_volume: null
+    who_volume: Soft Tissue and Bone Tumours
     site: Soft tissue
     lineage_broad: Mesenchymal
     lineage_detail: null
@@ -3631,108 +4035,13 @@ tumor_types:
     - Giant cell tumor
 
   KS:
-    name: Kaposi Sarcoma
+    name: Kaposi sarcoma
     who_volume: Soft Tissue and Bone Tumours
-    site: null
+    site: Skin / soft tissue
     lineage_broad: Mesenchymal
     lineage_detail: null
     families:
     - Vascular tumor
-
-  LYMPHAD:
-    name: Lymphadenoma
-    who_volume: Head and Neck Tumours
-    site: null
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Salivary gland tumor
-
-  ADSC:
-    name: Adenosquamous carcinoma
-    who_volume: null
-    site: null
-    lineage_broad: Epithelial
-    lineage_detail: null
-    parent: null
-    families:
-    - Carcinoma
-
-  ADSC_LAR:
-    name: Adenosquamous carcinoma (larynx)
-    who_volume: Head and Neck Tumours
-    site: Larynx
-    lineage_broad: Epithelial
-    lineage_detail: null
-    parent: ADSC
-    families:
-    - Carcinoma
-
-  BSCC_LAR:
-    name: Basaloid squamous cell carcinoma (larynx)
-    who_volume: Head and Neck Tumours
-    site: Larynx
-    lineage_broad: Epithelial
-    lineage_detail: null
-    parent: LAR_SCC
-    families:
-    - Carcinoma
-    - Squamous cell carcinoma
-
-  SCC_PAP_LAR:
-    name: Papillary squamous cell carcinoma (larynx)
-    who_volume: Head and Neck Tumours
-    site: Larynx
-    lineage_broad: Epithelial
-    lineage_detail: null
-    parent: LAR_SCC
-    families:
-    - Carcinoma
-    - Squamous cell carcinoma
-
-  SCC_LAR:
-    name: Squamous cell carcinoma, NOS (larynx/hypopharynx)
-    who_volume: Head and Neck Tumours
-    site: Larynx / hypopharynx
-    lineage_broad: Epithelial
-    lineage_detail: null
-    parent: HNSCC
-    families:
-    - Carcinoma
-    - Squamous cell carcinoma
-
-  SCC_LAR_CONV:
-    name: Conventional squamous cell carcinoma (larynx/hypopharynx)
-    who_volume: Head and Neck Tumours
-    site: Larynx / hypopharynx
-    lineage_broad: Epithelial
-    lineage_detail: null
-    parent: LAR_SCC
-    families:
-    - Carcinoma
-    - Squamous cell carcinoma
-
-  SCC_SC_LAR:
-    name: Spindle cell squamous cell carcinoma (larynx)
-    who_volume: Head and Neck Tumours
-    site: Larynx
-    lineage_broad: Epithelial
-    lineage_detail: null
-    parent: LAR_SCC
-    families:
-    - Carcinoma
-    - Squamous cell carcinoma
-
-  SCC_VERR_LAR:
-    name: Verrucous carcinoma of the hypopharynx, larynx, trachea, and parapharyngeal space
-    who_volume: Head and Neck Tumours
-    site: Larynx / hypopharynx / trachea
-    lineage_broad: Epithelial
-    lineage_detail: null
-    parent: LAR_SCC
-    families:
-    - Carcinoma
-    - Squamous cell carcinoma
 
   LB:
     name: Lipoblastoma
@@ -3741,6 +4050,26 @@ tumor_types:
     lineage_broad: Mesenchymal
     lineage_detail: null
     families:
+    - Adipocytic tumor
+
+  LBL:
+    name: Lipoblastoma and lipoblastomatosis
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Adipocytic tumor
+
+  LBLLT:
+    name: Lipoblastoma-like tumour
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
     - Adipocytic tumor
 
   LCH:
@@ -3770,6 +4099,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Carcinoma
+
+  LFM:
+    name: Lipofibromatosis
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
 
   LGFMS:
     name: Low-grade fibromyxoid sarcoma
@@ -3896,24 +4235,6 @@ tumor_types:
     - Low-grade glioma
     - Astrocytoma
 
-  DYSPL_LAR:
-    name: Laryngeal and hypopharyngeal epithelial dysplasia
-    who_volume: Head and Neck Tumours
-    site: Larynx / hypopharynx
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Precursor lesion
-
-  SPAP_LAR:
-    name: Squamous papilloma and papillomatosis (larynx/hypopharynx)
-    who_volume: Head and Neck Tumours
-    site: Larynx / hypopharynx
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Papilloma
-
   LIPN:
     name: Cerebellar liponeurocytoma
     who_volume: Central Nervous System Tumours
@@ -3932,6 +4253,36 @@ tumor_types:
     lineage_detail: null
     families:
     - Soft tissue tumor
+    - Adipocytic tumor
+
+  LIPOMATO:
+    name: Lipomatosis
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Adipocytic tumor
+
+  LIPO_BONE:
+    name: Lipoma and hibernoma of bone
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Bone tumor
+    - Adipocytic tumor
+
+  LIPO_NERVE:
+    name: Lipomatosis of nerve
+    who_volume: Soft Tissue and Bone Tumours
+    site: Peripheral nervous system
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Peripheral nerve sheath tumor
     - Adipocytic tumor
 
   LIPSAR:
@@ -3964,6 +4315,17 @@ tumor_types:
     - Sarcoma
     - Smooth muscle tumor
 
+  LMS_BONE:
+    name: Leiomyosarcoma of bone
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Sarcoma
+    - Bone tumor
+    - Smooth muscle tumor
+
   LPL:
     name: Lymphoplasmacytic lymphoma
     who_volume: Haematolymphoid Tumours
@@ -3993,6 +4355,15 @@ tumor_types:
     families:
     - Neuroendocrine tumor
 
+  LYMPHAD:
+    name: Lymphadenoma
+    who_volume: Head and Neck Tumours
+    site: null
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Salivary gland tumor
+
   LYMPHO:
     name: Lymphoma
     who_volume: Haematolymphoid Tumours
@@ -4001,6 +4372,15 @@ tumor_types:
     lineage_detail: null
     families:
     - Lymphoma
+
+  LYMPH_MALF:
+    name: Lymphatic malformation
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Vascular
+    lineage_detail: null
+    families:
+    - Vascular malformation
 
   LYM_B_LPL:
     name: Lymphoplasmacytic lymphoma
@@ -4338,6 +4718,15 @@ tumor_types:
     families:
     - CNS tumor
 
+  MEN_ECT:
+    name: Ectopic meningioma and meningothelial hamartoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Meningioma
+
   MEN_SINO:
     name: Meningioma of the sinonasal tract, ear, and temporal bone
     who_volume: Head and Neck Tumours
@@ -4422,25 +4811,6 @@ tumor_types:
     - Soft tissue tumor
     - Myoepithelial tumor
 
-  ADCA_EAR:
-    name: Middle ear adenocarcinoma
-    who_volume: Head and Neck Tumours
-    site: Middle ear
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Carcinoma
-
-  SCC_EAR:
-    name: Middle ear squamous cell carcinoma
-    who_volume: Head and Neck Tumours
-    site: Middle ear
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Carcinoma
-    - Squamous cell carcinoma
-
   MFEGFR:
     name: Myofibroblastic Lesions with EGFR Aberrations
     who_volume: null
@@ -4511,6 +4881,16 @@ tumor_types:
     lineage_broad: Melanocytic
     lineage_detail: null
     families:
+    - Melanocytic tumor
+
+  MMNST:
+    name: Malignant melanotic nerve sheath tumour
+    who_volume: Soft Tissue and Bone Tumours
+    site: Peripheral nervous system
+    lineage_broad: Neural
+    lineage_detail: null
+    families:
+    - Peripheral nerve sheath tumor
     - Melanocytic tumor
 
   MNA:
@@ -4628,9 +5008,19 @@ tumor_types:
     families:
     - Myo-fibroblastic tumor
 
+  MPLIP:
+    name: Myxoid pleomorphic liposarcoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Sarcoma
+    - Adipocytic tumor
+
   MPNST:
     name: Malignant peripheral nerve sheath tumor
-    who_volume: null
+    who_volume: Soft Tissue and Bone Tumours
     site: Peripheral nervous system
     lineage_broad: Neural
     lineage_detail: null
@@ -4640,7 +5030,7 @@ tumor_types:
 
   MPNST_H3K27RET:
     name: Malignant peripheral nerve sheath tumor, H3K27me3-retained
-    who_volume: null
+    who_volume: Soft Tissue and Bone Tumours
     site: Peripheral nervous system
     lineage_broad: Neural
     lineage_detail: null
@@ -4661,7 +5051,7 @@ tumor_types:
 
   MPNST_INI1:
     name: Malignant peripheral nerve sheath tumor, epithelioid / INI1(SMARCB1)-deficient
-    who_volume: null
+    who_volume: Soft Tissue and Bone Tumours
     site: Peripheral nervous system
     lineage_broad: Neural
     lineage_detail: null
@@ -4728,6 +5118,46 @@ tumor_types:
     - Salivary gland tumor
     - Myoepithelial tumor
 
+  MYOEP_TUM:
+    name: Myoepithelial carcinoma / mixed tumour of soft tissue
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Myoepithelial tumor
+
+  MYOFIBRO:
+    name: Myofibroblastoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
+
+  MYOLIPO:
+    name: Myolipoma of soft tissue
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Adipocytic tumor
+
+  MYOPERI:
+    name: Myopericytoma, including myofibroma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Perivascular tumor
+
   MYO_PA:
     name: Salivary Gland Myoepithelioma / Pleomorphic Adenoma
     who_volume: null
@@ -4765,6 +5195,16 @@ tumor_types:
     families:
     - CNS tumor
     - Glioneuronal tumor
+
+  MYX_IM:
+    name: Intramuscular myxoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue (muscle)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: MYX
+    families:
+    - Soft tissue tumor
 
   MZBL:
     name: Marginal zone B-cell lymphoma
@@ -4827,8 +5267,8 @@ tumor_types:
     - Hamartoma
 
   NCRISTIC:
-    name: Superficial neurocristic tumor (EWSR1/FUS::FLI1)
-    who_volume: null
+    name: Superficial FET-ETS family neurocristic tumour
+    who_volume: Soft Tissue and Bone Tumours
     site: Skin / soft tissue
     lineage_broad: Neural
     lineage_detail: null
@@ -4853,6 +5293,15 @@ tumor_types:
     families:
     - Carcinoma
 
+  NET_HN:
+    name: Neuroendocrine tumour (head and neck)
+    who_volume: Head and Neck Tumours
+    site: Head and neck
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    families:
+    - Neuroendocrine tumor
+
   NET_PLAGL1_FUS:
     name: Neuroepithelial tumor with PLAGL1 fusion
     who_volume: Central Nervous System Tumours
@@ -4867,6 +5316,15 @@ tumor_types:
     name: Neuromas
     who_volume: Soft Tissue and Bone Tumours
     site: Peripheral nervous system
+    lineage_broad: Neural
+    lineage_detail: null
+    families:
+    - Peripheral nerve sheath tumor
+
+  NEUROMA_SOL:
+    name: Solitary circumscribed neuroma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Skin
     lineage_broad: Neural
     lineage_detail: null
     families:
@@ -4903,12 +5361,13 @@ tumor_types:
 
   NFATC2:
     name: NFATC2-rearranged sarcoma
-    who_volume: null
-    site: null
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue / bone
     lineage_broad: Mesenchymal
     lineage_detail: null
     families:
-    - Myo-fibroblastic tumor
+    - Sarcoma
+    - Small round cell tumor
 
   NFATC2S:
     name: NATC2-altered sarcoma
@@ -4958,6 +5417,16 @@ tumor_types:
     parent: SNAD
     families:
     - Carcinoma
+
+  NNFT:
+    name: Nodular necrotizing fibroblastic tumour
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
 
   NOF:
     name: Non-Ossifying Fibroma
@@ -5072,6 +5541,16 @@ tumor_types:
     - Germ cell tumor
     - Testicular tumor
 
+  NTF:
+    name: Nuchal-type fibroma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue (neck)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
+
   NUP98NSD1:
     name: NUP98-NSD1
     who_volume: Haematolymphoid Tumours
@@ -5101,8 +5580,8 @@ tumor_types:
     - BCP-ALL
 
   NUTM1_SARC:
-    name: NUTM1-rearranged sarcoma
-    who_volume: null
+    name: NUT-rearranged sarcoma
+    who_volume: Soft Tissue and Bone Tumours
     site: Soft tissue / bone
     lineage_broad: Mesenchymal
     lineage_detail: null
@@ -5118,6 +5597,25 @@ tumor_types:
     families:
     - Bone tumor
     - Osteogenic tumor
+
+  OCCC:
+    name: Ovarian Clear Cell Carcinoma
+    who_volume: null
+    site: null
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Carcinoma
+
+  OCM:
+    name: Osteochondromyxoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Bone tumor
+    - Cartilaginous tumor
 
   ODCS:
     name: Odontogenic carcinosarcoma
@@ -5157,29 +5655,19 @@ tumor_types:
     families:
     - Odontogenic tumor
 
-  DYSPL_OR:
-    name: Oral epithelial dysplasia
-    who_volume: Head and Neck Tumours
-    site: Oral cavity
-    lineage_broad: Epithelial
+  OESTOCH:
+    name: Osteochondroma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
+    lineage_broad: Mesenchymal
     lineage_detail: null
     families:
-    - Precursor lesion
-
-  DYSPS_OR_HPV_POS:
-    name: HPV-associated oral epithelial dysplasia
-    who_volume: Head and Neck Tumours
-    site: Oral cavity
-    lineage_broad: Epithelial
-    lineage_detail: null
-    parent: OED
-    families:
-    - Precursor lesion
+    - Bone tumor
 
   OFD:
-    name: Osteofibrous Dysplasia
-    who_volume: null
-    site: null
+    name: Osteofibrous dysplasia
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
     lineage_broad: Mesenchymal
     lineage_detail: null
     families:
@@ -5212,6 +5700,15 @@ tumor_types:
     lineage_broad: Mesenchymal
     lineage_detail: null
     parent: OFMT
+    families:
+    - Soft tissue tumor
+
+  OGT_MES:
+    name: OGT-rearranged mesenchymal neoplasm
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
     families:
     - Soft tissue tumor
 
@@ -5274,6 +5771,28 @@ tumor_types:
     families:
     - Neuroepithelial tumor
 
+  ONB_A:
+    name: Olfactory neuroblastoma (esthesioneuroblastoma), subclass A
+    who_volume: Head and Neck Tumours
+    site: Nasal cavity
+    lineage_broad: Neuroectodermal
+    lineage_detail: null
+    parent: ONB
+    families:
+    - Sinonasal tumor
+    - Neuroendocrine tumor
+
+  ONB_B:
+    name: Olfactory neuroblastoma (esthesioneuroblastoma), subclass B
+    who_volume: Head and Neck Tumours
+    site: Nasal cavity
+    lineage_broad: Neuroectodermal
+    lineage_detail: null
+    parent: ONB
+    families:
+    - Sinonasal tumor
+    - Neuroendocrine tumor
+
   OPHP:
     name: Hamartomatous polyps (oropharynx)
     who_volume: Head and Neck Tumours
@@ -5291,25 +5810,6 @@ tumor_types:
     lineage_detail: null
     families:
     - Precursor lesion
-
-  SPAP:
-    name: Squamous papilloma
-    who_volume: Head and Neck Tumours
-    site: Oral cavity
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Papilloma
-
-  SCC_VERR:
-    name: Verrucous carcinoma of the oral cavity and mobile tongue
-    who_volume: Head and Neck Tumours
-    site: Oral cavity / tongue
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Carcinoma
-    - Squamous cell carcinoma
 
   OSET:
     name: Ossifying spindled and epithelioid tumor, SRSF7::NFATC3 fusion
@@ -5341,28 +5841,48 @@ tumor_types:
     - Bone tumor
     - Osteogenic tumor
 
-  OESTOCH:
-    name: Osteochondroma
-    who_volume: Soft Tissue
+  OSTEO:
+    name: Osteoma
+    who_volume: Soft Tissue and Bone Tumours
     site: Bone
     lineage_broad: Mesenchymal
     lineage_detail: null
     families:
     - Bone tumor
 
-  OSTEO:
-    name: Osteoma
-    who_volume: Soft Tissue
+  OSTEOID_OSTEOMA:
+    name: Osteoid osteoma
+    who_volume: Soft Tissue and Bone Tumours
     site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Bone tumor
+
+  OSTEO_EAR:
+    name: Exostosis (osteoma) of the ear
+    who_volume: Head and Neck Tumours
+    site: External auditory canal
     lineage_broad: Mesenchymal
     lineage_detail: null
     families:
     - Bone tumor
 
   OS_CONV:
-    name: Conventional osteosarcoma
+    name: Osteosarcoma
     who_volume: Soft Tissue and Bone Tumours
     site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Sarcoma
+    - Bone tumor
+    - Osteogenic tumor
+
+  OS_HG_SURF:
+    name: High-grade surface osteosarcoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone (surface)
     lineage_broad: Mesenchymal
     lineage_detail: null
     families:
@@ -5387,6 +5907,42 @@ tumor_types:
     site: Bone
     lineage_broad: Mesenchymal
     lineage_detail: null
+    families:
+    - Sarcoma
+    - Bone tumor
+    - Osteogenic tumor
+
+  OS_PAROST:
+    name: Parosteal osteosarcoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone (surface)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: OS_CONV
+    families:
+    - Sarcoma
+    - Bone tumor
+    - Osteogenic tumor
+
+  OS_PERIOST:
+    name: Periosteal osteosarcoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone (surface)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: OS_CONV
+    families:
+    - Sarcoma
+    - Bone tumor
+    - Osteogenic tumor
+
+  OS_SEC:
+    name: Secondary osteosarcoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: OS_CONV
     families:
     - Sarcoma
     - Bone tumor
@@ -5420,6 +5976,24 @@ tumor_types:
     families:
     - Gastrointestinal tumor
     - Carcinoma
+
+  PAP_INTRALYMPH:
+    name: Papillary intralymphatic angioendothelioma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Vascular
+    lineage_detail: null
+    families:
+    - Vascular tumor
+
+  PATZ1_SARC:
+    name: PATZ1-rearranged sarcoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue / bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Sarcoma
 
   PAX5ALT:
     name: PAX5-altered
@@ -5476,6 +6050,35 @@ tumor_types:
     families:
     - Perivascular tumor
 
+  PERINEUR:
+    name: Perineurioma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Peripheral nervous system
+    lineage_broad: Neural
+    lineage_detail: null
+    families:
+    - Peripheral nerve sheath tumor
+
+  PERIOST_CHOND:
+    name: Periosteal chondroma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone (surface)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Bone tumor
+    - Cartilaginous tumor
+
+  PFHT:
+    name: Plexiform fibrohistiocytic tumour
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibrohistiocytic tumor
+
   PGG:
     name: Paraganglioma
     who_volume: null
@@ -5514,6 +6117,15 @@ tumor_types:
     families:
     - CNS tumor
     - Glioneuronal tumor
+
+  PHAT:
+    name: Pleomorphic hyalinizing angiectatic tumour of soft parts
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
 
   PHYT_BEN:
     name: Benign phyllodes tumor
@@ -5843,6 +6455,25 @@ tumor_types:
     - Peripheral nerve sheath tumor
     - Borderline tumor
 
+  POT:
+    name: Primordial odontogenic tumour
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Odontogenic tumor
+
+  PPF:
+    name: Palmar fibromatosis and plantar fibromatosis
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue (hand/foot)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
+
   PRAD:
     name: Prostate Adenocarcinoma
     who_volume: null
@@ -5861,23 +6492,43 @@ tumor_types:
     families:
     - MPN
 
-  POT:
-    name: Primordial odontogenic tumour
-    who_volume: Head and Neck Tumours
-    site: Jaw
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    families:
-    - Odontogenic tumor
-
-  PRRX1_SARC:
-    name: PRRX1-fusion driven neoplasm
-    who_volume: null
+  PROLIF_FASC:
+    name: Proliferative fasciitis and proliferative myositis
+    who_volume: Soft Tissue and Bone Tumours
     site: Soft tissue
     lineage_broad: Mesenchymal
     lineage_detail: null
     families:
     - Soft tissue tumor
+    - Fibroblastic tumor
+
+  PRRX1_SARC:
+    name: PRRX1-rearranged fibroblastic tumour
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+
+  PSEUDOENDO:
+    name: Pseudoendocrine sarcoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Sarcoma
+
+  PSEUDOMYOG_HE:
+    name: Pseudomyogenic haemangioendothelioma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue / bone
+    lineage_broad: Vascular
+    lineage_detail: null
+    parent: EHE
+    families:
+    - Vascular tumor
 
   PTCL:
     name: Peripheral T-cell lymphoma
@@ -6072,6 +6723,16 @@ tumor_types:
     - Gastrointestinal tumor
     - Carcinoma
 
+  RETIFORM_HE:
+    name: Retiform haemangioendothelioma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Vascular
+    lineage_detail: null
+    parent: EHE
+    families:
+    - Vascular tumor
+
   RMM:
     name: Rhabdomyoma
     who_volume: Soft Tissue and Bone Tumours
@@ -6134,8 +6795,19 @@ tumor_types:
     - Sarcoma
     - Rhabdomyosarcoma
 
+  RMS_FUSION:
+    name: Fusion-associated spindle cell rhabdomyosarcomas
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue / bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: RMS
+    families:
+    - Sarcoma
+    - Rhabdomyosarcoma
+
   RMS_MYOD1:
-    name: Rhabdomyosarcoma, MYOD1-mutant
+    name: Rhabdomyosarcoma, MYOD1-mutant (spindle cell / sclerosing)
     who_volume: Soft Tissue and Bone Tumours
     site: Soft tissue
     lineage_broad: Mesenchymal
@@ -6145,9 +6817,9 @@ tumor_types:
     - Rhabdomyosarcoma
 
   RMS_PLEO:
-    name: Pleomorphic Rhabdomyosarcoma
-    who_volume: null
-    site: null
+    name: Pleomorphic rhabdomyosarcoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
     lineage_broad: Mesenchymal
     lineage_detail: null
     families:
@@ -6241,9 +6913,9 @@ tumor_types:
     - Rhabdomyosarcoma
 
   SBC:
-    name: Simple bone cyst (jaw)
+    name: Simple bone cyst
     who_volume: Head and Neck Tumours
-    site: Jaw
+    site: Bone
     lineage_broad: Mesenchymal
     lineage_detail: null
     families:
@@ -6277,16 +6949,6 @@ tumor_types:
     families:
     - Salivary gland tumor
 
-  SBRCT_BCOR:
-    name: Small blue round cell tumor with BCOR alteration
-    who_volume: Soft Tissue and Bone Tumours
-    site: Soft tissue
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    families:
-    - Sarcoma
-    - Small round cell tumor
-
   SBRCT_CIC:
     name: Small blue round cell tumor with CIC alteration
     who_volume: Soft Tissue and Bone Tumours
@@ -6315,15 +6977,6 @@ tumor_types:
     families:
     - Salivary gland tumor
 
-  SCCOHT:
-    name: Small Cell Carcinoma of the Ovary, Hypercalcemic Type
-    who_volume: null
-    site: null
-    lineage_broad: Unknown
-    lineage_detail: null
-    families:
-    - Sarcoma
-
   SCC:
     name: Squamous cell carcinoma, NOS
     who_volume: null
@@ -6334,6 +6987,15 @@ tumor_types:
     - Carcinoma
     - Squamous cell carcinoma
 
+  SCCOHT:
+    name: Small Cell Carcinoma of the Ovary, Hypercalcemic Type
+    who_volume: null
+    site: null
+    lineage_broad: Unknown
+    lineage_detail: null
+    families:
+    - Sarcoma
+
   SCC_CUT:
     name: Cutaneous squamous cell carcinoma
     who_volume: Skin Tumours
@@ -6342,6 +7004,92 @@ tumor_types:
     lineage_detail: null
     families:
     - Skin tumor
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  SCC_EAC:
+    name: Squamous cell carcinoma of the external auditory canal
+    who_volume: Head and Neck Tumours
+    site: External auditory canal
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: HNSCC
+    families:
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  SCC_EAR:
+    name: Middle ear squamous cell carcinoma
+    who_volume: Head and Neck Tumours
+    site: Middle ear
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  SCC_LAR:
+    name: Squamous cell carcinoma, NOS (larynx/hypopharynx)
+    who_volume: Head and Neck Tumours
+    site: Larynx / hypopharynx
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: HNSCC
+    families:
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  SCC_LAR_CONV:
+    name: Conventional squamous cell carcinoma (larynx/hypopharynx)
+    who_volume: Head and Neck Tumours
+    site: Larynx / hypopharynx
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: SCC_LAR
+    families:
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  SCC_PAP_LAR:
+    name: Papillary squamous cell carcinoma (larynx)
+    who_volume: Head and Neck Tumours
+    site: Larynx
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: SCC_LAR
+    families:
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  SCC_SC_LAR:
+    name: Spindle cell squamous cell carcinoma (larynx)
+    who_volume: Head and Neck Tumours
+    site: Larynx
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: SCC_LAR
+    families:
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  SCC_VERR:
+    name: Verrucous carcinoma of the oral cavity and mobile tongue
+    who_volume: Head and Neck Tumours
+    site: Oral cavity / tongue
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  SCC_VERR_LAR:
+    name: Verrucous carcinoma of the hypopharynx, larynx, trachea, and parapharyngeal space
+    who_volume: Head and Neck Tumours
+    site: Larynx / hypopharynx / trachea
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: SCC_LAR
+    families:
     - Carcinoma
     - Squamous cell carcinoma
 
@@ -6365,7 +7113,7 @@ tumor_types:
     - Peripheral nerve sheath tumor
 
   SCL:
-    name: Spindle cell lipoma
+    name: Spindle cell lipoma and pleomorphic lipoma
     who_volume: Soft Tissue and Bone Tumours
     site: Soft tissue
     lineage_broad: Mesenchymal
@@ -6477,13 +7225,14 @@ tumor_types:
     - mature_t_nk
 
   SFT:
-    name: Solitary Fibrous Tumor
-    who_volume: null
-    site: null
+    name: Solitary fibrous tumour
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
     lineage_broad: Mesenchymal
     lineage_detail: null
     families:
-    - Myo-fibroblastic tumor
+    - Soft tissue tumor
+    - Fibroblastic tumor
 
   SFT_MAL:
     name: Malignant solitary fibrous tumor
@@ -6703,6 +7452,16 @@ tumor_types:
     families:
     - Salivary gland tumor
 
+  SMAD3_FT:
+    name: SMAD3-rearranged fibroblastic tumour
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
+
   SMARCB1:
     name: Sinonasal SMARCB1-deficient carcinoma
     who_volume: Head and Neck Tumours
@@ -6878,6 +7637,24 @@ tumor_types:
     families:
     - Odontogenic tumor
 
+  SPAP:
+    name: Squamous papilloma
+    who_volume: Head and Neck Tumours
+    site: Oral cavity
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Papilloma
+
+  SPAP_LAR:
+    name: Squamous papilloma and papillomatosis (larynx/hypopharynx)
+    who_volume: Head and Neck Tumours
+    site: Larynx / hypopharynx
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Papilloma
+
   SPC_REACT:
     name: Spinal cord tissue with reactive changes
     who_volume: Central Nervous System Tumours
@@ -6887,6 +7664,27 @@ tumor_types:
     families:
     - Normal tissue
     - Reactive
+
+  SP_ACT:
+    name: Secondary peripheral atypical cartilaginous tumour / chondrosarcoma, grade 1
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone (surface, in osteochondroma)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: ACT_ENC
+    families:
+    - Sarcoma
+    - Chondrosarcoma
+
+  SRF_MYOID:
+    name: SRF-rearranged myoid neoplasm
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Perivascular tumor
 
   SS:
     name: Synovial sarcoma
@@ -6933,6 +7731,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Epithelial tumor
+
+  STC:
+    name: Soft tissue chondroma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Cartilaginous tumor
 
   STMAD:
     name: Somatic-Type Malignancy Adenocarcinoma
@@ -7003,6 +7811,33 @@ tumor_types:
     - CNS tumor
     - Ependymoma
 
+  SUBUNG_EXOST:
+    name: Subungual exostosis
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone (distal phalanx)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Bone tumor
+
+  SYNCHOND:
+    name: Synovial chondromatosis
+    who_volume: Soft Tissue and Bone Tumours
+    site: Synovium
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Cartilaginous tumor
+
+  SYN_VASC_ANOM:
+    name: Synovial vascular anomalies
+    who_volume: Soft Tissue and Bone Tumours
+    site: Synovium
+    lineage_broad: Vascular
+    lineage_detail: null
+    families:
+    - Vascular malformation
+
   TALLOTHER:
     name: Other T-ALL/LBL
     who_volume: Haematolymphoid Tumours
@@ -7066,6 +7901,15 @@ tumor_types:
     lineage_detail: null
     families:
     - Germ cell tumor
+
+  TERATOID_CYST:
+    name: Teratoid cyst
+    who_volume: Head and Neck Tumours
+    site: Neck
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Cyst
 
   TGDC:
     name: Thyroglossal duct cyst
@@ -7240,6 +8084,15 @@ tumor_types:
     families:
     - mature_t_nk
 
+  TRITON:
+    name: Benign triton tumour / neuromuscular choristoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Peripheral nervous system
+    lineage_broad: Neural
+    lineage_detail: null
+    families:
+    - Peripheral nerve sheath tumor
+
   TSGCT:
     name: Tenosynovial giant cell tumor
     who_volume: Soft Tissue and Bone Tumours
@@ -7249,6 +8102,15 @@ tumor_types:
     families:
     - Soft tissue tumor
     - Giant cell tumor
+
+  TUFTED_KHE:
+    name: Tufted angioma and kaposiform haemangioendothelioma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Vascular
+    lineage_detail: null
+    families:
+    - Vascular tumor
 
   T_ALL:
     name: T-cell Acute Lymphoblastic Leukemia
@@ -7365,6 +8227,16 @@ tumor_types:
     - Sarcoma
     - Soft tissue tumor
 
+  UPS_BONE:
+    name: Undifferentiated pleomorphic sarcoma of bone
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Sarcoma
+    - Bone tumor
+
   URCS:
     name: Undifferentiated round cell sarcoma, EWSR1::PATZ1 fusion
     who_volume: null
@@ -7413,6 +8285,15 @@ tumor_types:
     families:
     - mature_b_small_cell
 
+  VEN_MALF:
+    name: Venous malformations
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Vascular
+    lineage_detail: null
+    families:
+    - Vascular malformation
+
   WARTH:
     name: Warthin Tumor
     who_volume: null
@@ -7458,6 +8339,16 @@ tumor_types:
     families:
     - Soft tissue tumor
     - Histiocytic neoplasm
+
+  YAP1_TFE3_HE:
+    name: YAP1::TFE3 haemangioendothelioma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Vascular
+    lineage_detail: null
+    parent: EHE
+    families:
+    - Vascular tumor
 
   YKSA:
     name: YAP1::KMT2A fusion-driven sarcoma
