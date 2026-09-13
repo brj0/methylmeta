@@ -94,7 +94,7 @@ ACRONYM_TRANSLATOR = {
     "HCCC": "HCCC",
     "IDA": "IDA",
     "KC": "KC",
-    "LA": "LA",
+    "LYMPHAD": "LA",
     "MEC": "MEC",
     "MYO_PA": "MYO_PA",
     "PAD": "PAD",

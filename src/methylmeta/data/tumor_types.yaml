@@ -198,12 +198,81 @@ tumor_types:
 
   AMBL:
     name: Ameloblastoma
-    who_volume: null
-    site: null
-    lineage_broad: Unknown
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Epithelial
     lineage_detail: null
     families:
-    - Undefined
+    - Odontogenic tumor
+
+  AMBL_ADENO:
+    name: Adenoid ameloblastoma
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: AMBL
+    families:
+    - Odontogenic tumor
+
+  AMBL_CARC:
+    name: Ameloblastic carcinoma
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Odontogenic tumor
+    - Carcinoma
+
+  AMBL_CONV:
+    name: Ameloblastoma, conventional
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: AMBL
+    families:
+    - Odontogenic tumor
+
+  AMBL_META:
+    name: Metastasizing ameloblastoma
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: AMBL
+    families:
+    - Odontogenic tumor
+
+  AMBL_PERIPH:
+    name: Ameloblastoma, extraosseous / peripheral
+    who_volume: Head and Neck Tumours
+    site: Jaw (gingiva)
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: AMBL
+    families:
+    - Odontogenic tumor
+
+  AMBL_UNICYST:
+    name: Ameloblastoma, unicystic
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: AMBL
+    families:
+    - Odontogenic tumor
+
+  AMELOFIB:
+    name: Ameloblastic fibroma
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Odontogenic tumor
 
   AMH_UMB:
     name: Angio-mesenchymal hamartoma of the umbilical cord
@@ -270,6 +339,15 @@ tumor_types:
     lineage_detail: B-Cell
     families:
     - BCP-ALL
+
+  AOT:
+    name: Adenomatoid odontogenic tumour
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Odontogenic tumor
 
   APP_GOBCOID:
     name: Goblet cell carcinoid of the appendix
@@ -532,6 +610,15 @@ tumor_types:
     families:
     - mature_b_small_cell
 
+  BRANCHIOMA:
+    name: Branchioma
+    who_volume: Head and Neck Tumours
+    site: Neck
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Benign tumor
+
   BRCA:
     name: Breast carcinoma
     who_volume: Breast Tumours
@@ -541,6 +628,15 @@ tumor_types:
     families:
     - Breast tumor
     - Carcinoma
+
+  BRCLC:
+    name: Branchial cleft cyst
+    who_volume: Head and Neck Tumours
+    site: Neck
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Cyst
 
   BR_FAD:
     name: Fibroadenoma of the breast
@@ -564,7 +660,7 @@ tumor_types:
 
   BSNS:
     name: Biphenotypic sinonasal sarcoma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -599,6 +695,16 @@ tumor_types:
     families:
     - BCP-ALL
 
+  CANA:
+    name: Canalicular adenoma
+    who_volume: Head and Neck Tumours
+    site: Salivary gland
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Salivary gland tumor
+    - Adenoma
+
   CARCI_A_LUN:
     name: Atypical carcinoid of the lung
     who_volume: Thoracic Tumours
@@ -608,6 +714,17 @@ tumor_types:
     families:
     - Lung tumor
     - Neuroendocrine neoplasm
+
+  CARC_CUNIC:
+    name: Carcinoma cuniculatum
+    who_volume: Head and Neck Tumours
+    site: Oral cavity
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: OR_VC
+    families:
+    - Carcinoma
+    - Squamous cell carcinoma
 
   CARSARC_GYN:
     name: Carcinosarcoma (uterine / ovarian)
@@ -685,13 +802,23 @@ tumor_types:
     families:
     - Carcinoma
 
-  CCOC:
-    name: Clear Cell Ovarian Carcinoma
+  OCCC:
+    name: Ovarian Clear Cell Carcinoma
     who_volume: null
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
     families:
+    - Carcinoma
+
+  CCOC:
+    name: Clear cell odontogenic carcinoma
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Odontogenic tumor
     - Carcinoma
 
   CCS:
@@ -740,6 +867,42 @@ tumor_types:
     families:
     - AML
 
+  CEMBL:
+    name: Cementoblastoma
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Odontogenic tumor
+
+  CEOT:
+    name: Calcifying epithelial odontogenic tumour
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Odontogenic tumor
+
+  CERA:
+    name: Ceruminous adenoma
+    who_volume: Head and Neck Tumours
+    site: External auditory canal
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Adenoma
+
+  CERAC:
+    name: Ceruminous adenocarcinoma
+    who_volume: Head and Neck Tumours
+    site: External auditory canal
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Carcinoma
+
   CERAD_CA:
     name: Cervical adenocarcinoma
     who_volume: Female Genital Tumours
@@ -771,6 +934,25 @@ tumor_types:
     - Gynecologic tumor
     - Carcinoma
     - Squamous cell carcinoma
+
+  CGCE:
+    name: Congenital granular cell epulis
+    who_volume: Head and Neck Tumours
+    site: Oral cavity (gingiva)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+
+  CHERUB:
+    name: Cherubism
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Bone lesion
+    - Giant cell lesion
 
   CHGL:
     name: Chordoid glioma of the third ventricle
@@ -958,8 +1140,18 @@ tumor_types:
     - Neuroblastoma
     - Embryonal tumor
 
+  COD:
+    name: Cemento-osseous dysplasia
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: COD_COF
+    families:
+    - Fibro-osseous lesion
+
   COD_COF:
-    name: Cemento-osseous dysplasia / conventional ossifying fibroma
+    name: Cemento-osseous dysplasia / cemento-ossifying fibroma
     who_volume: Head and Neck Tumours
     site: Jaw
     lineage_broad: Mesenchymal
@@ -967,6 +1159,16 @@ tumor_types:
     families:
     - Fibro-osseous lesion
     - Bone lesion
+
+  COF:
+    name: Cemento-ossifying fibroma
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Odontogenic tumor
+    - Fibro-osseous lesion
 
   COL_AD:
     name: Colon adenoma
@@ -1380,16 +1582,6 @@ tumor_types:
   CONTR_SKM:
     name: Normal skeletal muscle
     who_volume: null
-    site: Muscle
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    families:
-    - Normal tissue
-    - Muscle
-
-  CONTR_SKM:
-    name: Normal skeletal muscle
-    who_volume: null
     site: Skeletal muscle
     lineage_broad: Muscle
     lineage_detail: null
@@ -1721,7 +1913,7 @@ tumor_types:
 
   CXPA:
     name: Carcinoma ex Pleomorphic Adenoma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -1775,6 +1967,16 @@ tumor_types:
     - Soft tissue tumor
     - Fibroblastic tumor
 
+  DFB:
+    name: Desmoplastic fibroma of bone
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Bone tumor
+    - Fibroblastic tumor
+
   DFSP:
     name: Dermatofibrosarcoma Protuberans
     who_volume: null
@@ -1783,6 +1985,15 @@ tumor_types:
     lineage_detail: null
     families:
     - Myo-fibroblastic tumor
+
+  DGCT:
+    name: Dentinogenic ghost cell tumour
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Odontogenic tumor
 
   DG_F3T3_O:
     name: Diffuse glioma, FGFR3-TACC3 fusion
@@ -1862,9 +2073,9 @@ tumor_types:
     lineage_broad: Hematolymphoid
     lineage_detail: B-Cell
     families:
-      - Lymphoma
-      - B-cell lymphoma
-      - DLBCL
+    - Lymphoma
+    - B-cell lymphoma
+    - DLBCL
 
   DLGNT:
     name: Diffuse leptomeningeal glioneuronal tumor
@@ -1935,6 +2146,34 @@ tumor_types:
     families:
     - AML
 
+  DERMOID_CYST:
+    name: Dermoid cyst
+    who_volume: Head and Neck Tumours
+    site: Neck
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Cyst
+
+  TERATOID_CYST:
+    name: Teratoid cyst
+    who_volume: Head and Neck Tumours
+    site: Neck
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Cyst
+
+  DUCTPAP:
+    name: Ductal papillomas (salivary gland)
+    who_volume: Head and Neck Tumours
+    site: Salivary gland
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Salivary gland tumor
+    - Papilloma
+
   DUO_CA:
     name: Duodenal adenocarcinoma
     who_volume: Digestive System Tumours
@@ -1953,6 +2192,17 @@ tumor_types:
     lineage_detail: B-Cell
     families:
     - BCP-ALL
+
+  SCC_EAC:
+    name: Squamous cell carcinoma of the external auditory canal
+    who_volume: Head and Neck Tumours
+    site: External auditory canal
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: HNSCC
+    families:
+    - Carcinoma
+    - Squamous cell carcinoma
 
   EATCL:
     name: Enteropathy-associated T-cell lymphoma
@@ -1981,6 +2231,16 @@ tumor_types:
     lineage_detail: B-Cell
     families:
     - mature_b_non_small_cell
+
+  EBVSMT:
+    name: EBV-associated smooth muscle tumour
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Smooth muscle tumor
 
   EBVTCL:
     name: EBV-associated T-cell lymphoma
@@ -2098,22 +2358,24 @@ tumor_types:
     families:
     - Undefined
 
-  ENB_A:
-    name: Esthesioneuroblastoma, subclass A
+  ONB_A:
+    name: Olfactory neuroblastoma (esthesioneuroblastoma), subclass A
     who_volume: Head and Neck Tumours
     site: Nasal cavity
     lineage_broad: Neuroectodermal
     lineage_detail: null
+    parent: ONB
     families:
     - Sinonasal tumor
     - Neuroendocrine tumor
 
-  ENB_B:
-    name: Esthesioneuroblastoma, subclass B
+  ONB_B:
+    name: Olfactory neuroblastoma (esthesioneuroblastoma), subclass B
     who_volume: Head and Neck Tumours
     site: Nasal cavity
     lineage_broad: Neuroectodermal
     lineage_detail: null
+    parent: ONB
     families:
     - Sinonasal tumor
     - Neuroendocrine tumor
@@ -2229,16 +2491,6 @@ tumor_types:
 
   ESO_ADC:
     name: Esophageal adenocarcinoma
-    who_volume: Digestive System Tumours
-    site: Esophagus
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Gastrointestinal tumor
-    - Carcinoma
-
-  ESO_CA:
-    name: Esophageal carcinoma
     who_volume: Digestive System Tumours
     site: Esophagus
     lineage_broad: Epithelial
@@ -2372,6 +2624,15 @@ tumor_types:
     - Sarcoma
     - Ewing sarcoma family
 
+  OSTEO_EAR:
+    name: Exostosis (osteoma) of the ear
+    who_volume: Head and Neck Tumours
+    site: External auditory canal
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Bone tumor
+
   FDCS:
     name: Follicular dendritic cell sarcoma
     who_volume: Haematolymphoid Tumours
@@ -2389,6 +2650,15 @@ tumor_types:
     lineage_detail: Myeloid
     families:
     - AML
+
+  FGC:
+    name: Familial gigantiform cementoma
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Fibro-osseous lesion
 
   FHI:
     name: Fibrous hamartoma of infancy
@@ -2577,6 +2847,16 @@ tumor_types:
     - Bone lesion
     - Giant cell lesion
 
+  GCOC:
+    name: Ghost cell odontogenic carcinoma
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Odontogenic tumor
+    - Carcinoma
+
   GCTB:
     name: Giant cell tumor of bone
     who_volume: Soft Tissue and Bone Tumours
@@ -2637,6 +2917,15 @@ tumor_types:
     - Mesenchymal tumor
     - SDH-deficient
 
+  GLI1_STT:
+    name: GLI1-altered soft tissue tumour
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+
   GLIMES:
     name: GLI-altered mesenchymal tumor
     who_volume: Central Nervous System Tumours
@@ -2678,7 +2967,7 @@ tumor_types:
 
   GPC:
     name: Sinonasal Glomangiopericytoma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Mesenchymal
     lineage_detail: null
@@ -2694,6 +2983,15 @@ tumor_types:
     families:
     - Soft tissue tumor
     - Neural tumor
+
+  HAIRP:
+    name: Hairy polyp
+    who_volume: Head and Neck Tumours
+    site: Nasopharynx
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Hamartoma
 
   HB:
     name: Hepatoblastoma
@@ -2726,7 +3024,7 @@ tumor_types:
 
   HCCC:
     name: Hyalinizing clear cell carcinoma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -2891,7 +3189,7 @@ tumor_types:
 
   HMSC:
     name: HPV-Related Multiphenotypic Sinonasal Carcinoma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -2907,12 +3205,22 @@ tumor_types:
     families:
     - Neuroendocrine tumor
 
+  HNPGL:
+    name: Head and neck paraganglioma
+    who_volume: Head and Neck Tumours
+    site: Head and neck
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    families:
+    - Paraganglioma
+
   HNSCC:
     name: Head and neck squamous cell carcinoma
     who_volume: Head and Neck Tumours
     site: Head and neck
     lineage_broad: Epithelial
     lineage_detail: null
+    parent: SCC
     families:
     - Head and neck tumor
     - Carcinoma
@@ -2953,6 +3261,15 @@ tumor_types:
     lineage_detail: null
     families:
     - Squamous lesion
+
+  NET_HN:
+    name: Neuroendocrine tumour (head and neck)
+    who_volume: Head and Neck Tumours
+    site: Head and neck
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    families:
+    - Neuroendocrine tumor
 
   HOCT:
     name: Hybrid Oncocytic Tumor
@@ -3020,6 +3337,15 @@ tumor_types:
     families:
     - mature_t_nk
 
+  HTAC:
+    name: Heterotopia-associated carcinoma
+    who_volume: Head and Neck Tumours
+    site: Neck
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Carcinoma
+
   HTLV1_ATL:
     name: HTLV-1 adult T-cell leukemia/lymphoma
     who_volume: Haematolymphoid Tumours
@@ -3050,7 +3376,7 @@ tumor_types:
 
   IDA:
     name: Intercalated Duct Adenoma and Hyperplasia
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -3158,7 +3484,7 @@ tumor_types:
 
   ITAC:
     name: Intestinal-type Sinonasal Adenocarcinoma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -3212,9 +3538,19 @@ tumor_types:
     - Fibro-osseous lesion
     - Bone lesion
 
+  JTOF:
+    name: Juvenile trabecular ossifying fibroma
+    who_volume: Head and Neck Tumours
+    site: Craniofacial bones
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: JPOF
+    families:
+    - Fibro-osseous lesion
+
   KC:
     name: Keratocystoma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -3296,21 +3632,107 @@ tumor_types:
 
   KS:
     name: Kaposi Sarcoma
-    who_volume: null
+    who_volume: Soft Tissue and Bone Tumours
     site: null
     lineage_broad: Mesenchymal
     lineage_detail: null
     families:
     - Vascular tumor
 
-  LA:
+  LYMPHAD:
     name: Lymphadenoma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
     families:
     - Salivary gland tumor
+
+  ADSC:
+    name: Adenosquamous carcinoma
+    who_volume: null
+    site: null
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: null
+    families:
+    - Carcinoma
+
+  ADSC_LAR:
+    name: Adenosquamous carcinoma (larynx)
+    who_volume: Head and Neck Tumours
+    site: Larynx
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: ADSC
+    families:
+    - Carcinoma
+
+  BSCC_LAR:
+    name: Basaloid squamous cell carcinoma (larynx)
+    who_volume: Head and Neck Tumours
+    site: Larynx
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: LAR_SCC
+    families:
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  SCC_PAP_LAR:
+    name: Papillary squamous cell carcinoma (larynx)
+    who_volume: Head and Neck Tumours
+    site: Larynx
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: LAR_SCC
+    families:
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  SCC_LAR:
+    name: Squamous cell carcinoma, NOS (larynx/hypopharynx)
+    who_volume: Head and Neck Tumours
+    site: Larynx / hypopharynx
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: HNSCC
+    families:
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  SCC_LAR_CONV:
+    name: Conventional squamous cell carcinoma (larynx/hypopharynx)
+    who_volume: Head and Neck Tumours
+    site: Larynx / hypopharynx
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: LAR_SCC
+    families:
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  SCC_SC_LAR:
+    name: Spindle cell squamous cell carcinoma (larynx)
+    who_volume: Head and Neck Tumours
+    site: Larynx
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: LAR_SCC
+    families:
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  SCC_VERR_LAR:
+    name: Verrucous carcinoma of the hypopharynx, larynx, trachea, and parapharyngeal space
+    who_volume: Head and Neck Tumours
+    site: Larynx / hypopharynx / trachea
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: LAR_SCC
+    families:
+    - Carcinoma
+    - Squamous cell carcinoma
 
   LB:
     name: Lipoblastoma
@@ -3342,7 +3764,7 @@ tumor_types:
 
   LEC:
     name: Lymphoepithelial carcinoma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: Multiple
     lineage_broad: Epithelial
     lineage_detail: null
@@ -3378,17 +3800,6 @@ tumor_types:
     families:
     - Glioma
     - Low-grade glioma
-
-  LGG_DIG_DIA:
-    name: Desmoplastic infantile astrocytoma / ganglioglioma
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Glioneuronal
-    lineage_detail: null
-    families:
-    - Glioma
-    - Low-grade glioma
-    - Glioneuronal tumor
 
   LGG_DIG_DIA:
     name: Desmoplastic infantile astrocytoma / ganglioglioma
@@ -3484,6 +3895,24 @@ tumor_types:
     - Glioma
     - Low-grade glioma
     - Astrocytoma
+
+  DYSPL_LAR:
+    name: Laryngeal and hypopharyngeal epithelial dysplasia
+    who_volume: Head and Neck Tumours
+    site: Larynx / hypopharynx
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Precursor lesion
+
+  SPAP_LAR:
+    name: Squamous papilloma and papillomatosis (larynx/hypopharynx)
+    who_volume: Head and Neck Tumours
+    site: Larynx / hypopharynx
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Papilloma
 
   LIPN:
     name: Cerebellar liponeurocytoma
@@ -3909,6 +4338,15 @@ tumor_types:
     families:
     - CNS tumor
 
+  MEN_SINO:
+    name: Meningioma of the sinonasal tract, ear, and temporal bone
+    who_volume: Head and Neck Tumours
+    site: Sinonasal tract / ear / temporal bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Meningioma
+
   MESOT:
     name: Mesothelioma
     who_volume: Thoracic Tumours
@@ -3983,6 +4421,25 @@ tumor_types:
     families:
     - Soft tissue tumor
     - Myoepithelial tumor
+
+  ADCA_EAR:
+    name: Middle ear adenocarcinoma
+    who_volume: Head and Neck Tumours
+    site: Middle ear
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Carcinoma
+
+  SCC_EAR:
+    name: Middle ear squamous cell carcinoma
+    who_volume: Head and Neck Tumours
+    site: Middle ear
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Carcinoma
+    - Squamous cell carcinoma
 
   MFEGFR:
     name: Myofibroblastic Lesions with EGFR Aberrations
@@ -4076,17 +4533,6 @@ tumor_types:
     - Meningioma
 
   MNG_BEN_1:
-    name: Meningioma, benign grade 1
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Meningothelial
-    lineage_detail: null
-    families:
-    - CNS tumor
-    - Meningioma
-    - Benign tumor
-
-  MNG_BEN_1:
     name: Meningioma, benign subtype 1
     who_volume: Central Nervous System Tumours
     site: Meninges
@@ -4096,17 +4542,6 @@ tumor_types:
     - Meningioma
 
   MNG_BEN_2:
-    name: Meningioma, benign group 2
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Meningothelial
-    lineage_detail: null
-    families:
-    - CNS tumor
-    - Meningioma
-    - Benign tumor
-
-  MNG_BEN_2:
     name: Meningioma, benign subtype 2
     who_volume: Central Nervous System Tumours
     site: Meninges
@@ -4114,17 +4549,6 @@ tumor_types:
     lineage_detail: Meningothelial
     families:
     - Meningioma
-
-  MNG_BEN_3:
-    name: Meningioma, benign group 3
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Meningothelial
-    lineage_detail: null
-    families:
-    - CNS tumor
-    - Meningioma
-    - Benign tumor
 
   MNG_BEN_3:
     name: Meningioma, benign subtype 3
@@ -4175,6 +4599,15 @@ tumor_types:
     - CNS tumor
     - Meningioma
     - Malignant tumor
+
+  MNTI:
+    name: Melanotic neuroectodermal tumour of infancy
+    who_volume: Head and Neck Tumours
+    site: Oral cavity (jaw)
+    lineage_broad: Neural
+    lineage_detail: null
+    families:
+    - Neuroectodermal tumor
 
   MO:
     name: Myositis ossificans
@@ -4316,7 +4749,7 @@ tumor_types:
 
   MYX:
     name: Myxoma
-    who_volume: null
+    who_volume: Soft Tissue and Bone Tumours
     site: null
     lineage_broad: Mesenchymal
     lineage_detail: null
@@ -4360,9 +4793,9 @@ tumor_types:
     site: Blood
     lineage_broad: Hematolymphoid
     lineage_detail: B-Cell
+    parent: CLL
     families:
     - mature_b_small_cell
-    parent: CLL
 
   NBL:
     name: Neuroblastoma
@@ -4382,6 +4815,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Neuroepithelial tumor
+
+  NCMH:
+    name: Nasal chondromesenchymal hamartoma
+    who_volume: Head and Neck Tumours
+    site: Sinonasal tract
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Sinonasal tumor
+    - Hamartoma
 
   NCRISTIC:
     name: Superficial neurocristic tumor (EWSR1/FUS::FLI1)
@@ -4420,6 +4863,15 @@ tumor_types:
     - CNS tumor
     - Neuroepithelial tumor
 
+  NEUROMA:
+    name: Neuromas
+    who_volume: Soft Tissue and Bone Tumours
+    site: Peripheral nervous system
+    lineage_broad: Neural
+    lineage_detail: null
+    families:
+    - Peripheral nerve sheath tumor
+
   NE_CA:
     name: Neuroendocrine carcinoma, NOS
     who_volume: Endocrine and Neuroendocrine Tumours
@@ -4432,7 +4884,7 @@ tumor_types:
 
   NF:
     name: Neurofibroma
-    who_volume: null
+    who_volume: Soft Tissue and Bone Tumours
     site: null
     lineage_broad: Neural
     lineage_detail: null
@@ -4469,7 +4921,7 @@ tumor_types:
 
   NFIB:
     name: Neurofibroma
-    who_volume: null
+    who_volume: Soft Tissue and Bone Tumours
     site: Peripheral nervous system
     lineage_broad: Neural
     lineage_detail: null
@@ -4499,7 +4951,7 @@ tumor_types:
 
   NITAC:
     name: Non-intestinal-type Sinonasal Adenocarcinoma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -4524,6 +4976,15 @@ tumor_types:
     lineage_detail: T-Cell
     families:
     - T-ALL
+
+  NPC:
+    name: Nasopharyngeal carcinoma
+    who_volume: Head and Neck Tumours
+    site: Nasopharynx
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Carcinoma
 
   NPM1:
     name: NPM1
@@ -4560,6 +5021,15 @@ tumor_types:
     lineage_detail: Myeloid
     families:
     - AML
+
+  NPPA_LG:
+    name: Low-grade nasopharyngeal papillary adenocarcinoma
+    who_volume: Head and Neck Tumours
+    site: Nasopharynx
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Carcinoma
 
   NSCLC:
     name: Non-small cell lung carcinoma
@@ -4612,7 +5082,7 @@ tumor_types:
     - AML
 
   NUT:
-    name: NUT midline carcinoma
+    name: NUT carcinoma
     who_volume: Head and Neck Tumours
     site: Head and neck / thorax
     lineage_broad: Epithelial
@@ -4648,6 +5118,63 @@ tumor_types:
     families:
     - Bone tumor
     - Osteogenic tumor
+
+  ODCS:
+    name: Odontogenic carcinosarcoma
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Odontogenic tumor
+    - Carcinosarcoma
+
+  ODFIB:
+    name: Odontogenic fibroma
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Odontogenic tumor
+
+  ODSARC:
+    name: Odontogenic sarcomas
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Odontogenic tumor
+    - Sarcoma
+
+  ODT:
+    name: Odontoma
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Odontogenic tumor
+
+  DYSPL_OR:
+    name: Oral epithelial dysplasia
+    who_volume: Head and Neck Tumours
+    site: Oral cavity
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Precursor lesion
+
+  DYSPS_OR_HPV_POS:
+    name: HPV-associated oral epithelial dysplasia
+    who_volume: Head and Neck Tumours
+    site: Oral cavity
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: OED
+    families:
+    - Precursor lesion
 
   OFD:
     name: Osteofibrous Dysplasia
@@ -4740,12 +5267,49 @@ tumor_types:
 
   ONB:
     name: Olfactory Neuroblastoma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Neuroepithelial
     lineage_detail: null
     families:
     - Neuroepithelial tumor
+
+  OPHP:
+    name: Hamartomatous polyps (oropharynx)
+    who_volume: Head and Neck Tumours
+    site: Oropharynx
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Hamartoma
+
+  OPMD:
+    name: Oral potentially malignant disorders
+    who_volume: Head and Neck Tumours
+    site: Oral cavity
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Precursor lesion
+
+  SPAP:
+    name: Squamous papilloma
+    who_volume: Head and Neck Tumours
+    site: Oral cavity
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Papilloma
+
+  SCC_VERR:
+    name: Verrucous carcinoma of the oral cavity and mobile tongue
+    who_volume: Head and Neck Tumours
+    site: Oral cavity / tongue
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Carcinoma
+    - Squamous cell carcinoma
 
   OSET:
     name: Ossifying spindled and epithelioid tumor, SRSF7::NFATC3 fusion
@@ -4757,6 +5321,15 @@ tumor_types:
     - Bone tumor
     - Soft tissue tumor
 
+  OSMF:
+    name: Oral submucous fibrosis
+    who_volume: Head and Neck Tumours
+    site: Oral cavity
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Precursor lesion
+
   OSOB:
     name: Osteoblastic osteosarcoma
     who_volume: Soft Tissue and Bone Tumours
@@ -4767,6 +5340,24 @@ tumor_types:
     - Sarcoma
     - Bone tumor
     - Osteogenic tumor
+
+  OESTOCH:
+    name: Osteochondroma
+    who_volume: Soft Tissue
+    site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Bone tumor
+
+  OSTEO:
+    name: Osteoma
+    who_volume: Soft Tissue
+    site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Bone tumor
 
   OS_CONV:
     name: Conventional osteosarcoma
@@ -4813,7 +5404,7 @@ tumor_types:
 
   PAD:
     name: Polymorphous Adenocarcinoma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -5015,6 +5606,16 @@ tumor_types:
     families:
     - CNS tumor
     - Pineal tumor
+
+  PIOC:
+    name: Primary intraosseous carcinoma NOS
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Odontogenic tumor
+    - Carcinoma
 
   PITAD:
     name: Pituitary adenoma, NOS
@@ -5260,6 +5861,15 @@ tumor_types:
     families:
     - MPN
 
+  POT:
+    name: Primordial odontogenic tumour
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Odontogenic tumor
+
   PRRX1_SARC:
     name: PRRX1-fusion driven neoplasm
     who_volume: null
@@ -5319,6 +5929,16 @@ tumor_types:
     - CNS tumor
     - Pineal tumor
 
+  PVL:
+    name: Proliferative verrucous leukoplakia
+    who_volume: Head and Neck Tumours
+    site: Oral cavity
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: OPMD
+    families:
+    - Precursor lesion
+
   PXA:
     name: Pleomorphic xanthoastrocytoma
     who_volume: Central Nervous System Tumours
@@ -5337,6 +5957,15 @@ tumor_types:
     lineage_detail: null
     families:
     - Perivascular tumor
+
+  RANULA:
+    name: Ranula
+    who_volume: Head and Neck Tumours
+    site: Floor of mouth
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Cyst
 
   RB:
     name: Retinoblastoma
@@ -5416,12 +6045,22 @@ tumor_types:
 
   RDD:
     name: Rosai-Dorfman-Disease
-    who_volume: null
+    who_volume: Haematolymphoid Tumours
     site: null
     lineage_broad: Histiocytic
     lineage_detail: null
     families:
     - Histiocytic neoplasm
+
+  REAH:
+    name: Respiratory epithelial adenomatoid hamartoma
+    who_volume: Head and Neck Tumours
+    site: Sinonasal tract
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Sinonasal tumor
+    - Hamartoma
 
   RECT_CA:
     name: Rectal adenocarcinoma
@@ -5443,6 +6082,16 @@ tumor_types:
     - Soft tissue tumor
     - Skeletal muscle tumor
 
+  RMS:
+    name: Rhabdomyosarcoma, NOS
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue / bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Sarcoma
+    - Rhabdomyosarcoma
+
   RMS_ALV:
     name: Alveolar rhabdomyosarcoma
     who_volume: Soft Tissue and Bone Tumours
@@ -5459,7 +6108,7 @@ tumor_types:
     site: Central nervous system
     lineage_broad: Mesenchymal
     lineage_detail: null
-    parent: RMS_EMB
+    parent: RMS
     families:
     - Sarcoma
     - Rhabdomyosarcoma
@@ -5470,7 +6119,7 @@ tumor_types:
     site: Uterus / cervix
     lineage_broad: Mesenchymal
     lineage_detail: null
-    parent: RMS_EMB
+    parent: RMS
     families:
     - Sarcoma
     - Rhabdomyosarcoma
@@ -5505,12 +6154,12 @@ tumor_types:
     - Rhabdomyosarcoma
 
   RMS_TFCP2:
-    name: Rhabdomyosarcoma, EWSR1/FUS::TFCP2 fusion
-    who_volume: null
+    name: Rhabdomyosarcoma with TFCP2 rearrangement (jaw)
+    who_volume: Head and Neck Tumours
     site: Bone / soft tissue
     lineage_broad: Mesenchymal
     lineage_detail: null
-    parent: RMS_EMB
+    parent: RMS
     families:
     - Sarcoma
     - Rhabdomyosarcoma
@@ -5521,7 +6170,7 @@ tumor_types:
     site: Soft tissue
     lineage_broad: Mesenchymal
     lineage_detail: null
-    parent: RMS_EMB
+    parent: RMS
     families:
     - Sarcoma
     - Rhabdomyosarcoma
@@ -5532,7 +6181,7 @@ tumor_types:
     site: Soft tissue
     lineage_broad: Mesenchymal
     lineage_detail: null
-    parent: RMS_EMB
+    parent: RMS
     families:
     - Sarcoma
     - Rhabdomyosarcoma
@@ -5591,6 +6240,15 @@ tumor_types:
     families:
     - Rhabdomyosarcoma
 
+  SBC:
+    name: Simple bone cyst (jaw)
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Bone lesion
+
   SBC_VASC:
     name: Simple bone cyst and vascular tumor with NFATC2 fusion
     who_volume: null
@@ -5603,7 +6261,7 @@ tumor_types:
 
   SBL:
     name: Sialoblastoma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -5666,6 +6324,16 @@ tumor_types:
     families:
     - Sarcoma
 
+  SCC:
+    name: Squamous cell carcinoma, NOS
+    who_volume: null
+    site: null
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Carcinoma
+    - Squamous cell carcinoma
+
   SCC_CUT:
     name: Cutaneous squamous cell carcinoma
     who_volume: Skin Tumours
@@ -5679,7 +6347,7 @@ tumor_types:
 
   SCHW:
     name: Schwannoma
-    who_volume: null
+    who_volume: Soft Tissue and Bone Tumours
     site: Peripheral nervous system
     lineage_broad: Neural
     lineage_detail: null
@@ -5745,7 +6413,7 @@ tumor_types:
 
   SDC:
     name: Salivary Duct Carcinoma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -5763,7 +6431,7 @@ tumor_types:
 
   SEA:
     name: Sebaceous Adenoma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -5772,7 +6440,7 @@ tumor_types:
 
   SEAD:
     name: Sebaceous Adenocarcinoma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -5809,19 +6477,6 @@ tumor_types:
     - mature_t_nk
 
   SFT:
-    name: Solitary fibrous tumor
-    who_volume:
-      - Central Nervous System Tumours
-      - Soft Tissue and Bone Tumours
-      - Thoracic Tumours
-    site: Soft tissue / central nervous system
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    families:
-    - Sarcoma
-    - Fibroblastic tumor
-
-  SFT:
     name: Solitary Fibrous Tumor
     who_volume: null
     site: null
@@ -5840,9 +6495,18 @@ tumor_types:
     - Sarcoma
     - Fibroblastic tumor
 
+  SGAT:
+    name: Salivary gland anlage tumour
+    who_volume: Head and Neck Tumours
+    site: Nasopharynx
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Hamartoma
+
   SGCA:
     name: Cystadenoma of the Salivary Glands
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -5996,7 +6660,7 @@ tumor_types:
 
   SL:
     name: Sialolipoma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -6023,7 +6687,7 @@ tumor_types:
 
   SMA:
     name: Sclerosing Microcystic Adenocarcinoma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -6032,7 +6696,7 @@ tumor_types:
 
   SMAD:
     name: Mucinous Adenocarcinoma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -6058,6 +6722,16 @@ tumor_types:
     lineage_detail: null
     families:
     - SMARCB1/SMARCA4-deficient tumor
+
+  SMH:
+    name: Seromucinous hamartoma
+    who_volume: Head and Neck Tumours
+    site: Sinonasal tract
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Sinonasal tumor
+    - Hamartoma
 
   SMIX:
     name: Salivary gland mixed group tumor
@@ -6097,7 +6771,7 @@ tumor_types:
 
   SNAF:
     name: Sinonasal Tract Angiofibroma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -6115,7 +6789,7 @@ tumor_types:
 
   SNEP:
     name: Sinonasal Papilloma, Exophytic
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -6124,7 +6798,7 @@ tumor_types:
 
   SNIP:
     name: Sinonasal Papilloma, Inverted
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -6142,7 +6816,7 @@ tumor_types:
 
   SNOP:
     name: Sinonasal Papilloma, Oncocytic
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -6160,12 +6834,31 @@ tumor_types:
 
   SNUC:
     name: Sinonasal Undifferentiated Carcinoma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
     families:
     - Sinonasal tumor
+
+  SOC:
+    name: Sclerosing odontogenic carcinoma
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Odontogenic tumor
+    - Carcinoma
+
+  SOD:
+    name: Segmental odontomaxillary dysplasia
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Fibro-osseous lesion
 
   SONCO:
     name: Salivary Gland Oncocytoma
@@ -6175,6 +6868,15 @@ tumor_types:
     lineage_detail: null
     families:
     - Undefined
+
+  SOT:
+    name: Squamous odontogenic tumour
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Odontogenic tumor
 
   SPC_REACT:
     name: Spinal cord tissue with reactive changes
@@ -6216,7 +6918,7 @@ tumor_types:
 
   SSP:
     name: Sialadenoma Papilliferum
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -6349,7 +7051,7 @@ tumor_types:
 
   TCS:
     name: Teratocarcinosarcoma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -6364,6 +7066,15 @@ tumor_types:
     lineage_detail: null
     families:
     - Germ cell tumor
+
+  TGDC:
+    name: Thyroglossal duct cyst
+    who_volume: Head and Neck Tumours
+    site: Neck
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Cyst
 
   THYMO:
     name: Thymoma
@@ -6564,8 +7275,8 @@ tumor_types:
     lineage_broad: Epithelial
     lineage_detail: null
     families:
-      - Urinary tract tumor
-      - Carcinoma
+    - Urinary tract tumor
+    - Carcinoma
 
   UCS:
     name: Uterine carcinosarcoma
@@ -6586,8 +7297,8 @@ tumor_types:
     lineage_detail: null
     parent: LM
     families:
-      - Uterine mesenchymal tumor
-      - Smooth muscle tumor
+    - Uterine mesenchymal tumor
+    - Smooth muscle tumor
 
   ULMS:
     name: Uterine leiomyosarcoma
@@ -6673,6 +7384,16 @@ tumor_types:
     families:
     - Sarcoma
 
+  USRCS_BST:
+    name: Undifferentiated small round cell sarcomas of bone and soft tissue
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone / soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Sarcoma
+    - Small round cell tumor
+
   UTROSCT:
     name: Uterine tumor resembling ovarian sex cord tumor (GREB1::NCOA1/2/3)
     who_volume: Female Genital Tumours
@@ -6688,9 +7409,9 @@ tumor_types:
     site: Blood
     lineage_broad: Hematolymphoid
     lineage_detail: B-Cell
+    parent: CLL
     families:
     - mature_b_small_cell
-    parent: CLL
 
   WARTH:
     name: Warthin Tumor

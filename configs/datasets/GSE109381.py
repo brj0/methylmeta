@@ -107,8 +107,8 @@ def methylation_class(row):
         "CHGL": "CHGL",
         "CHORDM": "CHORD",
         "PGG, nC": "PGG_NC",
-        "ENB, A": "ENB_A",
-        "ENB, B": "ENB_B",
+        "ENB, A": "ONB_A",
+        "ENB, B": "ONB_B",
         "LYMPHO": "CNS_LYMPHO",
         "PLASMA": "PLASMA",
         # Peripheral nerve sheath / mesenchymal / melanocytic tumors
