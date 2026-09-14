@@ -2,6 +2,16 @@ schema_version: "0.0"
 version: "2026.09"
 
 tumor_types:
+  AAH:
+    name: Atypical adenomatous hyperplasia of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Precursor lesion
+
   ABC:
     name: Aneurysmal bone cyst
     who_volume: Soft Tissue and Bone Tumours
@@ -68,6 +78,18 @@ tumor_types:
     lineage_detail: null
     families:
     - Salivary gland tumor
+    - Carcinoma
+
+  ADCC_LU:
+    name: Adenoid cystic carcinoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: ADCC
+    families:
+    - Lung tumor
+    - Salivary gland-like tumor
     - Carcinoma
 
   ADENOMATOID_TUM:
@@ -2124,6 +2146,16 @@ tumor_types:
     - Gestational trophoblastic disease
     - Molar pregnancy
 
+  CHONDROMA_LU:
+    name: Pulmonary chondroma
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Cartilaginous tumor
+
   CHORCA:
     name: Choriocarcinoma
     who_volume: Urinary and Male Genital Tumours
@@ -3294,6 +3326,17 @@ tumor_types:
     families:
     - Small round cell tumor
 
+  DIPNECH:
+    name: Diffuse idiopathic pulmonary neuroendocrine cell hyperplasia
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Precursor lesion
+    - Neuroendocrine tumor
+
   DLBCL:
     name: Diffuse large B-cell lymphoma
     who_volume: Haematolymphoid Tumours
@@ -3336,6 +3379,30 @@ tumor_types:
     - Lymphoma
     - B-cell lymphoma
     - DLBCL
+
+  DLBCL_IV_LU:
+    name: Intravascular large B-cell lymphoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    parent: DLBCL
+    families:
+    - Lung tumor
+    - Lymphoma
+    - B-cell lymphoma
+
+  DLBCL_LU:
+    name: Pulmonary diffuse large B-cell lymphoma
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    parent: DLBCL
+    families:
+    - Lung tumor
+    - Lymphoma
+    - B-cell lymphoma
 
   DLBCL_PC_LEG:
     name: Primary cutaneous diffuse large B-cell lymphoma, leg type
@@ -3570,6 +3637,17 @@ tumor_types:
     lineage_detail: null
     families:
     - histiocytic
+
+  ECD_LU:
+    name: Pulmonary Erdheim-Chester disease
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Histiocytic
+    lineage_detail: null
+    parent: ECD
+    families:
+    - Lung tumor
+    - Histiocytic neoplasm
 
   EFT_CIC:
     name: CNS Ewing sarcoma family tumor with CIC alteration
@@ -3823,6 +3901,18 @@ tumor_types:
     lineage_detail: null
     families:
     - Salivary gland tumor
+    - Carcinoma
+
+  EPMYOC_LU:
+    name: Epithelial-myoepithelial carcinoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: EPMYOC
+    families:
+    - Lung tumor
+    - Salivary gland-like tumor
     - Carcinoma
 
   EPN_MPE:
@@ -4704,6 +4794,16 @@ tumor_types:
     families:
     - Hamartoma
 
+  HAMARTOMA_LU:
+    name: Pulmonary hamartoma
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Hamartoma
+
   HB:
     name: Hepatoblastoma
     who_volume: null
@@ -4741,6 +4841,18 @@ tumor_types:
     lineage_detail: null
     families:
     - Salivary gland tumor
+
+  HCCC_LU:
+    name: Hyalinizing clear cell carcinoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: HCCC
+    families:
+    - Lung tumor
+    - Salivary gland-like tumor
+    - Carcinoma
 
   HCL:
     name: Hairy cell leukemia
@@ -5313,6 +5425,17 @@ tumor_types:
     - Sarcoma
     - Vascular tumor
 
+  INTIMAL_SARC_PULM_ART:
+    name: Pulmonary artery intimal sarcoma
+    who_volume: Thoracic Tumours
+    site: Pulmonary artery
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: INTIMAL_SARC
+    families:
+    - Sarcoma
+    - Vascular tumor
+
   INV_HM:
     name: Invasive and metastatic hydatidiform mole
     who_volume: Female Genital Tumours
@@ -5617,6 +5740,17 @@ tumor_types:
     families:
     - Vascular tumor
 
+  LAM:
+    name: Lymphangioleiomyomatosis of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - PEComa
+    - Perivascular tumor
+
   LB:
     name: Lipoblastoma
     who_volume: null
@@ -5654,6 +5788,28 @@ tumor_types:
     lineage_detail: null
     families:
     - Histiocytic neoplasm
+
+  LCH_LU:
+    name: Pulmonary Langerhans cell histiocytosis
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Histiocytic
+    lineage_detail: null
+    parent: LCH
+    families:
+    - Lung tumor
+    - Histiocytic neoplasm
+
+  LCNEC:
+    name: Large cell neuroendocrine carcinoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Neuroendocrine tumor
+    - Carcinoma
 
   LCTCL:
     name: Large-cell lymphoma of T-cell type
@@ -5980,6 +6136,263 @@ tumor_types:
     families:
     - Neuroendocrine tumor
 
+  LU_ADSC:
+    name: Adenosquamous carcinoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: ADSC
+    families:
+    - Lung tumor
+    - Carcinoma
+
+  LU_AIS:
+    name: Adenocarcinoma in situ of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Precursor lesion
+    - Carcinoma in situ
+
+  LU_ALV_ADENOMA:
+    name: Alveolar adenoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Adenoma
+
+  LU_BLASTOMA:
+    name: Pulmonary blastoma
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Embryonal tumor
+
+  LU_BRONCHIOLAR_ADENOMA:
+    name: Bronchiolar adenoma / ciliated muconodular papillary tumour
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Adenoma
+
+  LU_BRONCH_PAP:
+    name: Bronchial papillomas
+    who_volume: Thoracic Tumours
+    site: Lung (bronchus)
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Papilloma
+
+  LU_CARSARC:
+    name: Carcinosarcoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial / mesenchymal
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Carcinosarcoma
+
+  LU_COLLOID_ADCA:
+    name: Colloid adenocarcinoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Carcinoma
+
+  LU_CONGEN_PERICBRONCH_MF:
+    name: Congenital peribronchial myofibroblastic tumour
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Fibroblastic tumor
+
+  LU_ENTERIC_ADCA:
+    name: Enteric-type adenocarcinoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Carcinoma
+
+  LU_FETAL_ADCA:
+    name: Fetal adenocarcinoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Carcinoma
+
+  LU_INV_MUC_ADCA:
+    name: Invasive mucinous adenocarcinoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Carcinoma
+
+  LU_INV_NONMUC_ADCA:
+    name: Invasive non-mucinous adenocarcinoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Carcinoma
+
+  LU_LCC:
+    name: Large cell carcinoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Carcinoma
+
+  LU_LEC:
+    name: Lymphoepithelial carcinoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Carcinoma
+
+  LU_MIA:
+    name: Minimally invasive adenocarcinoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Carcinoma
+
+  LU_MUCOUS_GLAND_ADENOMA:
+    name: Mucous gland adenoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Adenoma
+
+  LU_MUC_CYSTADENOMA:
+    name: Mucinous cystadenoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Adenoma
+
+  LU_MYX_SARC_EWSR1:
+    name: Primary pulmonary myxoid sarcoma with EWSR1-CREB1 fusion
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Sarcoma
+
+  LU_PAP_ADENOMA:
+    name: Papillary adenoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Adenoma
+
+  LU_PLEO_CA:
+    name: Pleomorphic carcinoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Carcinoma
+    - Sarcomatoid carcinoma
+
+  LU_SCC:
+    name: Squamous cell carcinoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: NSCLC_SCC
+    families:
+    - Lung tumor
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  LU_SCLER_PNEUMO:
+    name: Sclerosing pneumocytoma
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Benign tumor
+
+  LU_SQ_DYSP_CIS:
+    name: Squamous dysplasia and carcinoma in situ of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Precursor lesion
+    - Squamous lesion
+
+  LYG_LU:
+    name: Lymphomatoid granulomatosis of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    families:
+    - Lung tumor
+    - Lymphoproliferative disorder
+    - EBV-associated
+
   LYMPHAD:
     name: Lymphadenoma
     who_volume: Head and Neck Tumours
@@ -5988,6 +6401,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Salivary gland tumor
+
+  LYMPHANGIOMATOSIS_LU:
+    name: Diffuse pulmonary lymphangiomatosis
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Vascular
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Vascular tumor
 
   LYMPHO:
     name: Lymphoma
@@ -6178,6 +6601,19 @@ tumor_types:
     - Male breast tumor
     - Carcinoma
 
+  MALT_LU:
+    name: MALT lymphoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    parent: LYM_B_MZL_MALT
+    families:
+    - Lung tumor
+    - Lymphoma
+    - B-cell lymphoma
+    - Marginal zone lymphoma
+
   MATTER_T:
     name: Testicular mature teratoma
     who_volume: Urinary and Male Genital Tumours
@@ -6326,6 +6762,18 @@ tumor_types:
     families:
     - Salivary gland tumor
 
+  MEC_LU:
+    name: Mucoepidermoid carcinoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: MEC
+    families:
+    - Lung tumor
+    - Salivary gland-like tumor
+    - Carcinoma
+
   MEF2D:
     name: MEF2D-rearranged
     who_volume: Haematolymphoid Tumours
@@ -6374,6 +6822,17 @@ tumor_types:
     families:
     - Melanocytic tumor
 
+  MEL_LU:
+    name: Melanoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Melanocytic
+    lineage_detail: null
+    parent: MEL
+    families:
+    - Lung tumor
+    - Melanocytic tumor
+
   MEL_MPNSTLIKE:
     name: Melanoma, H3K27me3-deficient (MPNST-like, usually dedifferentiated)
     who_volume: null
@@ -6400,6 +6859,17 @@ tumor_types:
     lineage_broad: Mesenchymal
     lineage_detail: null
     families:
+    - Meningioma
+
+  MEN_LU:
+    name: Meningioma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Meningothelial
+    lineage_detail: null
+    parent: MNG
+    families:
+    - Lung tumor
     - Meningioma
 
   MEN_SINO:
@@ -6847,6 +7317,17 @@ tumor_types:
     - Salivary gland tumor
     - Myoepithelial tumor
 
+  MYOEPI_LU:
+    name: Myoepithelioma and myoepithelial carcinoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial / myoepithelial
+    lineage_detail: null
+    parent: MYOEP_TUM
+    families:
+    - Lung tumor
+    - Salivary gland-like tumor
+
   MYOEP_TUM:
     name: Myoepithelial carcinoma / mixed tumour of soft tissue
     who_volume: Soft Tissue and Bone Tumours
@@ -7029,6 +7510,17 @@ tumor_types:
     lineage_broad: Neuroendocrine
     lineage_detail: null
     families:
+    - Neuroendocrine tumor
+
+  NET_LU:
+    name: Carcinoid/neuroendocrine tumour of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    parent: LULCNET
+    families:
+    - Lung tumor
     - Neuroendocrine tumor
 
   NET_PLAGL1_FUS:
@@ -8110,6 +8602,17 @@ tumor_types:
     families:
     - BCP-ALL
 
+  PA_LU:
+    name: Pleomorphic adenoma of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial / myoepithelial
+    lineage_detail: null
+    parent: MYO_PA
+    families:
+    - Lung tumor
+    - Salivary gland-like tumor
+
   PBL:
     name: Pancreatoblastoma
     who_volume: Digestive System Tumours
@@ -8155,6 +8658,17 @@ tumor_types:
     lineage_broad: Mesenchymal
     lineage_detail: null
     families:
+    - Perivascular tumor
+
+  PECOMA_LU:
+    name: PEComa of the lung
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: PEC
+    families:
+    - Lung tumor
     - Perivascular tumor
 
   PERINEUR:
@@ -8633,6 +9147,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Odontogenic tumor
+
+  PPB:
+    name: Pleuropulmonary blastoma
+    who_volume: Thoracic Tumours
+    site: Lung / pleura
+    lineage_broad: Embryonal
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Embryonal tumor
 
   PPF:
     name: Palmar fibromatosis and plantar fibromatosis
@@ -9413,6 +9937,17 @@ tumor_types:
     families:
     - Neuroendocrine tumor
 
+  SCLC:
+    name: Small cell lung carcinoma
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Neuroendocrine tumor
+    - Carcinoma
+
   SCS:
     name: Spindle Cell Sarcoma
     who_volume: null
@@ -9792,6 +10327,17 @@ tumor_types:
     families:
     - Soft tissue tumor
     - Fibroblastic tumor
+
+  SMARCA4_UNDIFF_LU:
+    name: Thoracic SMARCA4-deficient undifferentiated tumour
+    who_volume: Thoracic Tumours
+    site: Lung / thorax
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - SMARCB1/SMARCA4-deficient tumor
+    - Carcinoma
 
   SMARCB1:
     name: Sinonasal SMARCB1-deficient carcinoma
