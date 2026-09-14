@@ -70,6 +70,34 @@ tumor_types:
     - Salivary gland tumor
     - Carcinoma
 
+  ADENOMATOID_TUM:
+    name: Adenomatoid tumour
+    who_volume: Female Genital Tumours
+    site: Peritoneum / genital tract
+    lineage_broad: Mesothelial
+    lineage_detail: null
+    families:
+    - Mesothelial tumor
+
+  ADENOMYOMA_UT:
+    name: Adenomyoma (uterus)
+    who_volume: Female Genital Tumours
+    site: Uterus
+    lineage_broad: Mixed epithelial / mesenchymal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+
+  ADENOSARC_UT:
+    name: Adenosarcoma (uterus)
+    who_volume: Female Genital Tumours
+    site: Uterus
+    lineage_broad: Mixed epithelial / mesenchymal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Sarcoma
+
   ADREN_CA:
     name: Adrenocortical carcinoma
     who_volume: Endocrine and Neuroendocrine Tumours
@@ -457,6 +485,16 @@ tumor_types:
     families:
     - Odontogenic tumor
 
+  APA:
+    name: Atypical polypoid adenomyoma
+    who_volume: Female Genital Tumours
+    site: Endometrium
+    lineage_broad: Mixed epithelial / mesenchymal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Precursor lesion
+
   APP_ADCA:
     name: Appendiceal adenocarcinoma
     who_volume: Digestive System Tumours
@@ -651,6 +689,16 @@ tumor_types:
     - Gastrointestinal tumor
     - Precursor lesion
 
+  BARTH_CA:
+    name: Bartholin gland carcinoma
+    who_volume: Female Genital Tumours
+    site: Vulva (Bartholin gland)
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
   BCA:
     name: Basal cell adenoma
     who_volume: Head and Neck Tumours
@@ -678,6 +726,17 @@ tumor_types:
     lineage_detail: null
     families:
     - Skin adnexal tumor
+
+  BCC_VULVA:
+    name: Basal cell carcinoma (vulva)
+    who_volume: Female Genital Tumours
+    site: Vulva
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: BCC
+    families:
+    - Gynecologic tumor
+    - Carcinoma
 
   BCL11B:
     name: BCL11B-activated
@@ -800,6 +859,15 @@ tumor_types:
     families:
     - mature_b_non_small_cell
 
+  PAP_CYSTADEN_BLIG:
+    name: Papillary cystadenoma (broad ligament)
+    who_volume: Female Genital Tumours
+    site: Broad ligament
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+
   BMN:
     name: Benign Melanocytic Nevus
     who_volume: null
@@ -881,6 +949,37 @@ tumor_types:
     lineage_detail: null
     families:
     - Cyst
+
+  BRENNER:
+    name: Brenner tumour
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+
+  BRENNER_BOR:
+    name: Borderline Brenner tumour
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: BRENNER
+    families:
+    - Gynecologic tumor
+    - Borderline tumor
+
+  BRENNER_MAL:
+    name: Malignant Brenner tumour
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: BRENNER
+    families:
+    - Gynecologic tumor
+    - Carcinoma
 
   BROWN_TUMOR:
     name: Brown tumour of hyperparathyroidism
@@ -1200,7 +1299,62 @@ tumor_types:
     - Gynecologic tumor
     - Carcinoma
 
-  CERSQ_CA:
+  CERV_ADCA_CC:
+    name: Cervical adenocarcinoma, HPV-independent, clear cell type
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: CERAD_CA
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  CERV_ADCA_GAS:
+    name: Cervical adenocarcinoma, HPV-independent, gastric type
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: CERAD_CA
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  CERV_ADCA_HPV:
+    name: Cervical adenocarcinoma, HPV-associated
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: CERAD_CA
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  CERV_ADCA_MESO:
+    name: Cervical adenocarcinoma, HPV-independent, mesonephric type
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: CERAD_CA
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  CERV_ADCA_OTH:
+    name: Other cervical adenocarcinomas
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: CERAD_CA
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  CERV_SCC:
     name: Cervical squamous cell carcinoma
     who_volume: Female Genital Tumours
     site: Cervix
@@ -1211,7 +1365,7 @@ tumor_types:
     - Carcinoma
     - Squamous cell carcinoma
 
-  CERSQ_CA_HPV:
+  CERV_SCC_HPV:
     name: Cervical squamous cell carcinoma, HPV-positive
     who_volume: Female Genital Tumours
     site: Cervix
@@ -1221,6 +1375,146 @@ tumor_types:
     - Gynecologic tumor
     - Carcinoma
     - Squamous cell carcinoma
+
+  CERV_SCC_HPVI:
+    name: Cervical squamous cell carcinoma, HPV-independent
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: CERSQ_CA
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  CERV_SCC_NOS:
+    name: Cervical squamous cell carcinoma, HPV status undetermined
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: CERSQ_CA
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  CERV_ABC:
+    name: Adenoid basal carcinoma (cervix)
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  CERV_ADSC_HPV:
+    name: Adenosquamous carcinoma, HPV-associated (cervix)
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: ADSC
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  CERV_ADSC_HPVI:
+    name: Adenosquamous carcinoma, HPV-independent (cervix)
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: ADSC
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  CERV_AIS_HPV:
+    name: Adenocarcinoma in situ, HPV-associated (cervix)
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: CERV_AIS
+    families:
+    - Gynecologic tumor
+    - Precursor lesion
+
+  CERV_AIS:
+    name: Adenocarcinoma in situ
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Precursor lesion
+
+  CERV_AIS_HPVI:
+    name: Adenocarcinoma in situ, HPV-independent (cervix)
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: CERV_AIS
+    families:
+    - Gynecologic tumor
+    - Precursor lesion
+
+  CERV_CARSARC:
+    name: Carcinosarcoma (cervix)
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Mixed epithelial / mesenchymal
+    lineage_detail: null
+    parent: CARSARC_GYN
+    families:
+    - Gynecologic tumor
+    - Carcinosarcoma
+
+  CERV_CA:
+    name: Cervical carcinoma
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  CERV_CA_UNCL:
+    name: Carcinoma, unclassifiable (cervix)
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  CERV_NEC:
+    name: Neuroendocrine carcinoma (cervix)
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Neuroendocrine tumor
+    - Carcinoma
+
+  CERV_NET:
+    name: Neuroendocrine tumour (cervix)
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Neuroendocrine tumor
 
   CFT:
     name: Calcifying fibrous tumour
@@ -1281,6 +1575,17 @@ tumor_types:
     - Glioma
     - Glial tumor
 
+  CHM:
+    name: Complete hydatidiform mole
+    who_volume: Female Genital Tumours
+    site: Placenta / uterus
+    lineage_broad: Trophoblastic
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Gestational trophoblastic disease
+    - Molar pregnancy
+
   CHORCA:
     name: Choriocarcinoma
     who_volume: Urinary and Male Genital Tumours
@@ -1337,6 +1642,18 @@ tumor_types:
     lineage_broad: Epithelial
     lineage_detail: null
     families:
+    - Squamous lesion
+
+  CIN_HPVI:
+    name: Cervical intraepithelial neoplasia, HPV-independent
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: CIN
+    families:
+    - Gynecologic tumor
+    - Precursor lesion
     - Squamous lesion
 
   CLL:
@@ -2620,6 +2937,16 @@ tumor_types:
     families:
     - BCP-ALL
 
+  DYSGERM:
+    name: Dysgerminoma
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Germ cell
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Germ cell tumor
+
   DYSPL_LAR:
     name: Laryngeal and hypopharyngeal epithelial dysplasia
     who_volume: Head and Neck Tumours
@@ -2727,6 +3054,17 @@ tumor_types:
     - Sarcoma
     - Vascular tumor
 
+  EIN:
+    name: Endometrial atypical hyperplasia / endometrioid intraepithelial neoplasia
+    who_volume: Female Genital Tumours
+    site: Endometrium
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: EMH
+    families:
+    - Gynecologic tumor
+    - Precursor lesion
+
   ELASTOFIB:
     name: Elastofibroma
     who_volume: Soft Tissue and Bone Tumours
@@ -2794,6 +3132,17 @@ tumor_types:
     families:
     - Epithelial tumor
 
+  EMH_NOATY:
+    name: Endometrial hyperplasia without atypia
+    who_volume: Female Genital Tumours
+    site: Endometrium
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: EMH
+    families:
+    - Gynecologic tumor
+    - Precursor lesion
+
   EMSCAD:
     name: Endometrioid Serous Cystadenocarcinoma
     who_volume: null
@@ -2812,6 +3161,16 @@ tumor_types:
     families:
     - Undefined
 
+  ENDOCX_POLYP:
+    name: Endocervical polyp
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Polyp
+
   ENDOM_CA:
     name: Endometrial carcinoma
     who_volume: Female Genital Tumours
@@ -2821,6 +3180,93 @@ tumor_types:
     families:
     - Endometrial carcinoma
     - Carcinoma
+
+  ENDOM_CA_CC:
+    name: Clear cell carcinoma (uterus)
+    who_volume: Female Genital Tumours
+    site: Uterus
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: ENDOM_CA
+    families:
+    - Endometrial carcinoma
+    - Carcinoma
+
+  ENDOM_CA_DEDIFF:
+    name: Dedifferentiated and undifferentiated carcinomas (uterus)
+    who_volume: Female Genital Tumours
+    site: Uterus
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: ENDOM_CA
+    families:
+    - Endometrial carcinoma
+    - Carcinoma
+
+  ENDOM_CA_ENDOID:
+    name: Endometrioid carcinoma (uterus)
+    who_volume: Female Genital Tumours
+    site: Uterus
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: ENDOM_CA
+    families:
+    - Endometrial carcinoma
+    - Carcinoma
+
+  ENDOM_CA_MESO:
+    name: Mesonephric-like carcinoma (uterus)
+    who_volume: Female Genital Tumours
+    site: Uterus
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: ENDOM_CA
+    families:
+    - Endometrial carcinoma
+    - Carcinoma
+
+  ENDOM_CA_MIX:
+    name: Mixed carcinoma (uterus)
+    who_volume: Female Genital Tumours
+    site: Uterus
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: ENDOM_CA
+    families:
+    - Endometrial carcinoma
+    - Carcinoma
+
+  ENDOM_CA_OTH:
+    name: Other endometrial carcinomas
+    who_volume: Female Genital Tumours
+    site: Uterus
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: ENDOM_CA
+    families:
+    - Endometrial carcinoma
+    - Carcinoma
+
+  ENDOM_CA_SER:
+    name: Serous carcinoma (uterus)
+    who_volume: Female Genital Tumours
+    site: Uterus
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: ENDOM_CA
+    families:
+    - Endometrial carcinoma
+    - Carcinoma
+
+  ENDOM_POLYP:
+    name: Endometrial polyp
+    who_volume: Female Genital Tumours
+    site: Uterus
+    lineage_broad: Mixed epithelial / mesenchymal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Polyp
 
   ENKTL:
     name: Extranodal NK/T-cell lymphoma
@@ -2930,6 +3376,16 @@ tumor_types:
     families:
     - Sarcoma
     - Soft tissue tumor
+
+  ESN:
+    name: Endometrial stromal nodule
+    who_volume: Female Genital Tumours
+    site: Uterus
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Uterine mesenchymal tumor
 
   ESO_ADC:
     name: Esophageal adenocarcinoma
@@ -3066,6 +3522,17 @@ tumor_types:
     lineage_detail: T-Cell
     families:
     - T-ALL
+
+  ETT:
+    name: Epithelioid trophoblastic tumour
+    who_volume: Female Genital Tumours
+    site: Uterus / cervix
+    lineage_broad: Trophoblastic
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Gestational trophoblastic disease
+    - Trophoblastic tumor
 
   ETV6MNX1:
     name: ETV6MNX1-rearranged
@@ -3568,6 +4035,18 @@ tumor_types:
     - CNS tumor
     - Germ cell tumor
 
+  GEST_CHORCA:
+    name: Gestational choriocarcinoma
+    who_volume: Female Genital Tumours
+    site: Uterus
+    lineage_broad: Trophoblastic
+    lineage_detail: null
+    parent: CHORCA
+    families:
+    - Gynecologic tumor
+    - Gestational trophoblastic disease
+    - Trophoblastic tumor
+
   GIST:
     name: Gastrointestinal stromal tumor
     who_volume: Digestive System Tumours
@@ -3629,6 +4108,17 @@ tumor_types:
     families:
     - Neuroendocrine tumor
 
+  GONADOBLAST:
+    name: Gonadoblastoma
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Germ cell
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Germ cell tumor
+    - Sex cord-stromal tumor
+
   GPC:
     name: Sinonasal Glomangiopericytoma
     who_volume: Head and Neck Tumours
@@ -3647,6 +4137,25 @@ tumor_types:
     families:
     - Soft tissue tumor
     - Neural tumor
+
+  GYNANDROBLAST:
+    name: Gynandroblastoma
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Sex cord-stromal tumor
+
+  GYN_CNS_TYPE_TUM:
+    name: CNS-type tumours (female genital tract)
+    who_volume: Female Genital Tumours
+    site: Uterus / ovary
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
 
   HAIRP:
     name: Hairy polyp
@@ -3842,6 +4351,16 @@ tumor_types:
     families:
     - Soft tissue tumor
     - Adipocytic tumor
+
+  HIDPAP:
+    name: Papillary hidradenoma (hidradenoma papilliferum)
+    who_volume: Female Genital Tumours
+    site: Vulva
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Mammary-type gland tumor
 
   HISTSARC:
     name: Histiocytic sarcoma
@@ -4256,6 +4775,17 @@ tumor_types:
     - Sarcoma
     - Vascular tumor
 
+  INV_HM:
+    name: Invasive and metastatic hydatidiform mole
+    who_volume: Female Genital Tumours
+    site: Uterus (invasive) / distant sites (metastatic)
+    lineage_broad: Trophoblastic
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Gestational trophoblastic disease
+    - Molar pregnancy
+
   IOPN_BD:
     name: Intraductal oncocytic papillary neoplasm of the bile ducts
     who_volume: Digestive System Tumours
@@ -4339,6 +4869,18 @@ tumor_types:
     lineage_detail: null
     families:
     - Gastrointestinal tumor
+
+  IVL:
+    name: Intravenous leiomyomatosis
+    who_volume: Female Genital Tumours
+    site: Uterus
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: ULM
+    families:
+    - Gynecologic tumor
+    - Uterine mesenchymal tumor
+    - Smooth muscle tumor
 
   JEJIL_ADCA:
     name: Jejunoileal adenocarcinoma
@@ -4594,6 +5136,16 @@ tumor_types:
     families:
     - Carcinoma
 
+  LEYDIG_OVA:
+    name: Leydig cell tumour (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Sex cord-stromal tumor
+
   LFM:
     name: Lipofibromatosis
     who_volume: Soft Tissue and Bone Tumours
@@ -4848,6 +5400,17 @@ tumor_types:
     families:
     - Sarcoma
     - Bone tumor
+    - Smooth muscle tumor
+
+  LPD:
+    name: Leiomyomatosis peritonealis disseminata
+    who_volume: Female Genital Tumours
+    site: Peritoneum (uterine origin)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: ULM
+    families:
+    - Gynecologic tumor
     - Smooth muscle tumor
 
   LPL:
@@ -5288,6 +5851,18 @@ tumor_types:
     - Thoracic tumor
     - Mesothelial tumor
 
+  METAST_LM:
+    name: Metastasizing leiomyoma
+    who_volume: Female Genital Tumours
+    site: Uterus
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: ULM
+    families:
+    - Gynecologic tumor
+    - Uterine mesenchymal tumor
+    - Smooth muscle tumor
+
   METST:
     name: Myoepithelioma of soft tissue
     who_volume: Soft Tissue and Bone Tumours
@@ -5416,6 +5991,28 @@ tumor_types:
     lineage_detail: null
     families:
     - Myo-fibroblastic tumor
+
+  MIXED_GCSCT_OVA:
+    name: Mixed germ cell-sex cord stromal tumour, unclassified
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Germ cell
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Germ cell tumor
+    - Sex cord-stromal tumor
+
+  MIXED_TROPH_TUM_OVA:
+    name: Mixed trophoblastic tumour
+    who_volume: Female Genital Tumours
+    site: Uterus
+    lineage_broad: Trophoblastic
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Gestational trophoblastic disease
+    - Trophoblastic tumor
 
   MLS:
     name: Myxoid Liposarcoma
@@ -5640,6 +6237,16 @@ tumor_types:
     families:
     - Sarcoma
     - Embryonal tumor
+
+  MST_OVA:
+    name: Microcystic stromal tumour (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Sex cord-stromal tumor
 
   MTC:
     name: Medullary Thyroid Carcinoma
@@ -5988,6 +6595,18 @@ tumor_types:
     lineage_detail: null
     families:
     - Myo-fibroblastic tumor
+
+  NONGEST_CHORCA:
+    name: Non-gestational choriocarcinoma
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Germ cell
+    lineage_detail: null
+    parent: CHORCA
+    families:
+    - Gynecologic tumor
+    - Germ cell tumor
+    - Trophoblastic tumor
 
   NOTCH1_TLBL:
     name: NOTCH1-rearranged T-LBL
@@ -6510,6 +7129,292 @@ tumor_types:
     - Gynecologic tumor
     - Carcinoma
 
+  OVA_CARCINOID:
+    name: Ovarian carcinoid
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    parent: OVA_MAT_TERATOMA
+    families:
+    - Gynecologic tumor
+    - Germ cell tumor
+    - Monodermal teratoma
+    - Neuroendocrine tumor
+
+  OVA_CARSARC:
+    name: Carcinosarcoma (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Mixed epithelial / mesenchymal
+    lineage_detail: null
+    parent: CARSARC_GYN
+    families:
+    - Gynecologic tumor
+    - Carcinosarcoma
+
+  OVA_CC_ADENOFIB_BOT:
+    name: Clear cell adenofibroma / clear cell borderline tumour (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: BOT
+    families:
+    - Gynecologic tumor
+    - Borderline tumor
+
+  OVA_EMBCA:
+    name: Embryonal carcinoma (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Germ cell
+    lineage_detail: null
+    parent: EMBCA
+    families:
+    - Gynecologic tumor
+    - Germ cell tumor
+
+  OVA_ENDOID_ADENOFIB:
+    name: Endometrioid adenofibroma (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+
+  OVA_ENDOID_BOT:
+    name: Endometrioid borderline tumour (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: BOT
+    families:
+    - Gynecologic tumor
+    - Borderline tumor
+
+  OVA_ENDOID_CA:
+    name: Endometrioid carcinoma (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  OVA_FIBROMA:
+    name: Ovarian fibroma
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Sex cord-stromal tumor
+
+  OVA_IMM_TERATOMA:
+    name: Immature teratoma (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Germ cell
+    lineage_detail: null
+    parent: TE
+    families:
+    - Gynecologic tumor
+    - Germ cell tumor
+    - Teratoma
+
+  OVA_LGSC:
+    name: Low-grade serous carcinoma (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  OVA_MAT_TERATOMA:
+    name: Mature teratoma (ovary), including somatic neoplasms arising from teratoma
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Germ cell
+    lineage_detail: null
+    parent: TE
+    families:
+    - Gynecologic tumor
+    - Germ cell tumor
+    - Teratoma
+
+  OVA_MESO_CA:
+    name: Mesonephric-like carcinoma (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  OVA_MGCT:
+    name: Malignant mixed germ cell tumour (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Germ cell
+    lineage_detail: null
+    parent: MGCT
+    families:
+    - Gynecologic tumor
+    - Germ cell tumor
+
+  OVA_MIX_CA:
+    name: Mixed carcinoma (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  OVA_MONO_TERATOMA:
+    name: Other monodermal teratomas (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Germ cell
+    lineage_detail: null
+    parent: OVA_MAT_TERATOMA
+    families:
+    - Gynecologic tumor
+    - Germ cell tumor
+    - Monodermal teratoma
+
+  OVA_MUC_BOT:
+    name: Mucinous borderline tumour (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: BOT
+    families:
+    - Gynecologic tumor
+    - Borderline tumor
+
+  OVA_MUC_CA:
+    name: Mucinous carcinoma (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  OVA_MUC_CYSTADEN:
+    name: Mucinous cystadenoma and mucinous adenofibroma
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+
+  OVA_MYXOMA:
+    name: Ovarian myxoma
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: MYX
+    families:
+    - Gynecologic tumor
+    - Soft tissue tumor
+
+  OVA_SEROMUC_BOT:
+    name: Seromucinous borderline tumour (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: BOT
+    families:
+    - Gynecologic tumor
+    - Borderline tumor
+
+  OVA_SEROMUC_CYSTADEN:
+    name: Seromucinous cystadenoma and seromucinous adenofibroma
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+
+  OVA_SER_BOT:
+    name: Serous borderline tumour (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: BOT
+    families:
+    - Gynecologic tumor
+    - Borderline tumor
+
+  OVA_SER_CYSTADEN:
+    name: Serous cystadenoma, serous adenofibroma, and serous cystadenofibroma
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+
+  OVA_SPN:
+    name: Solid pseudopapillary neoplasm (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: SPN_PAN
+    families:
+    - Gynecologic tumor
+
+  OVA_UNDIFF_CA:
+    name: Dedifferentiated and undifferentiated carcinomas (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  OVA_WT:
+    name: Wilms tumour (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Embryonal
+    lineage_detail: null
+    parent: WT
+    families:
+    - Gynecologic tumor
+    - Renal tumor
+
+  OVA_YST:
+    name: Yolk sac tumour (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Germ cell
+    lineage_detail: null
+    parent: YST
+    families:
+    - Gynecologic tumor
+    - Germ cell tumor
+
   OXYNT_ADEN:
     name: Oxyntic gland adenoma
     who_volume: Digestive System Tumours
@@ -6538,6 +7443,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Salivary gland tumor
+
+  PAGET_VULVA:
+    name: Paget disease (vulva)
+    who_volume: Female Genital Tumours
+    site: Vulva
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Carcinoma
 
   PANIN:
     name: Pancreatic intraepithelial neoplasia
@@ -6682,6 +7597,16 @@ tumor_types:
     - Bone tumor
     - Cartilaginous tumor
 
+  PERIT_MESO:
+    name: Mesothelioma (peritoneum)
+    who_volume: Female Genital Tumours
+    site: Peritoneum
+    lineage_broad: Mesothelial
+    lineage_detail: null
+    parent: MESOT
+    families:
+    - Mesothelial tumor
+
   PFHT:
     name: Plexiform fibrohistiocytic tumour
     who_volume: Soft Tissue and Bone Tumours
@@ -6739,6 +7664,17 @@ tumor_types:
     lineage_detail: null
     families:
     - Soft tissue tumor
+
+  PHM:
+    name: Partial hydatidiform mole
+    who_volume: Female Genital Tumours
+    site: Placenta / uterus
+    lineage_broad: Trophoblastic
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Gestational trophoblastic disease
+    - Molar pregnancy
 
   PHYT_BEN:
     name: Benign phyllodes tumor
@@ -7138,6 +8074,16 @@ tumor_types:
     families:
     - Carcinoma
 
+  PREPUB_FIBROMA:
+    name: Prepubertal fibroma (vulva)
+    who_volume: Female Genital Tumours
+    site: Vulva
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Fibroblastic tumor
+
   PRE_PMF:
     name: Prefibrotic primary myelofibrosis
     who_volume: Haematolymphoid Tumours
@@ -7184,6 +8130,17 @@ tumor_types:
     parent: EHE
     families:
     - Vascular tumor
+
+  PSTT:
+    name: Placental site trophoblastic tumour
+    who_volume: Female Genital Tumours
+    site: Uterus
+    lineage_broad: Trophoblastic
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Gestational trophoblastic disease
+    - Trophoblastic tumor
 
   PTCL:
     name: Peripheral T-cell lymphoma
@@ -7377,6 +8334,15 @@ tumor_types:
     families:
     - Gastrointestinal tumor
     - Carcinoma
+
+  RETE_CYSTADEN:
+    name: Rete cystadenoma and rete adenoma
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
 
   RETIFORM_HE:
     name: Retiform haemangioendothelioma
@@ -7727,6 +8693,42 @@ tumor_types:
     - Carcinoma
     - Squamous cell carcinoma
 
+  SCC_VAG_HPV:
+    name: Squamous cell carcinoma, HPV-associated (vagina)
+    who_volume: Female Genital Tumours
+    site: Vagina
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: SCC
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  SCC_VAG_HPVI:
+    name: Squamous cell carcinoma, HPV-independent (vagina)
+    who_volume: Female Genital Tumours
+    site: Vagina
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: SCC
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  SCC_VAG:
+    name: Squamous cell carcinoma, HPV status undetermined (vagina)
+    who_volume: Female Genital Tumours
+    site: Vagina
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: SCC
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+    - Squamous cell carcinoma
+
   SCC_VERR:
     name: Verrucous carcinoma of the oral cavity and mobile tongue
     who_volume: Head and Neck Tumours
@@ -7745,6 +8747,42 @@ tumor_types:
     lineage_detail: null
     parent: SCC_LAR
     families:
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  SCC_VULVA_HPV:
+    name: Squamous cell carcinoma, HPV-associated (vulva)
+    who_volume: Female Genital Tumours
+    site: Vulva
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: SCC_VULVA
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  SCC_VULVA_HPVI:
+    name: Squamous cell carcinoma, HPV-independent (vulva)
+    who_volume: Female Genital Tumours
+    site: Vulva
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: SCC_VULVA
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  SCC_VULVA:
+    name: Squamous cell carcinoma, HPV status undetermined (vulva)
+    who_volume: Female Genital Tumours
+    site: Vulva
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: SCC
+    families:
+    - Gynecologic tumor
     - Carcinoma
     - Squamous cell carcinoma
 
@@ -7814,6 +8852,36 @@ tumor_types:
     families:
     - Salivary gland tumor
     - Carcinosarcoma
+
+  SCST_NOS:
+    name: Sex cord stromal tumour NOS
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Sex cord-stromal tumor
+
+  SCTAT_OVA:
+    name: Sex cord tumour with annular tubules
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Sex cord-stromal tumor
+
+  SCT_OVA:
+    name: Sertoli cell tumour (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Sex cord-stromal tumor
 
   SDA:
     name: Striated Duct Adenoma
@@ -7991,6 +9059,16 @@ tumor_types:
     families:
     - Control
 
+  SKENE_ADCA:
+    name: Adenocarcinoma of Skene gland origin
+    who_volume: Female Genital Tumours
+    site: Vagina / periurethral (Skene gland)
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
   SKM_ALS:
     name: Skeletal muscle, amyotrophic lateral sclerosis
     who_volume: null
@@ -8154,6 +9232,17 @@ tumor_types:
     lineage_broad: Multiple
     lineage_detail: null
     families:
+    - SMARCB1/SMARCA4-deficient tumor
+
+  SMARC_DEF_SARC_GYN:
+    name: SMARC-deficient sarcoma (female genital tract)
+    who_volume: Female Genital Tumours
+    site: Uterus / ovary
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Sarcoma
     - SMARCB1/SMARCA4-deficient tumor
 
   SMC_PAN:
@@ -8378,6 +9467,16 @@ tumor_types:
     - Soft tissue tumor
     - Perivascular tumor
 
+  SRST_OVA:
+    name: Signet-ring stromal tumour (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Sex cord-stromal tumor
+
   SS:
     name: Synovial sarcoma
     who_volume: Soft Tissue and Bone Tumours
@@ -8424,6 +9523,16 @@ tumor_types:
     families:
     - Epithelial tumor
 
+  SST_OVA:
+    name: Sclerosing stromal tumour (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Sex cord-stromal tumor
+
   STC:
     name: Soft tissue chondroma
     who_volume: Soft Tissue and Bone Tumours
@@ -8433,6 +9542,35 @@ tumor_types:
     families:
     - Soft tissue tumor
     - Cartilaginous tumor
+
+  STEROID_CELL_TUM:
+    name: Steroid cell tumour (ovary)
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Sex cord-stromal tumor
+
+  STIC:
+    name: Serous tubal intraepithelial carcinoma
+    who_volume: Female Genital Tumours
+    site: Fallopian tube
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Precursor lesion
+
+  STK11_ADNEXAL:
+    name: STK11 adnexal tumour
+    who_volume: Female Genital Tumours
+    site: Broad ligament / adnexa
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
 
   STMAD:
     name: Somatic-Type Malignancy Adenocarcinoma
@@ -8461,6 +9599,18 @@ tumor_types:
     families:
     - Gastrointestinal tumor
     - Carcinoma
+
+  STRUMA_OVARII:
+    name: Struma ovarii
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Germ cell
+    lineage_detail: null
+    parent: OVA_MAT_TERATOMA
+    families:
+    - Gynecologic tumor
+    - Germ cell tumor
+    - Monodermal teratoma
 
   STUMP:
     name: Smooth muscle tumor of uncertain malignant potential
@@ -8511,6 +9661,17 @@ tumor_types:
     lineage_detail: null
     families:
     - Bone tumor
+
+  SUP_ANGIOMYX:
+    name: Cutaneous myxoma (superficial angiomyxoma)
+    who_volume: Female Genital Tumours
+    site: Vulva / skin
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: MYX
+    families:
+    - Gynecologic tumor
+    - Soft tissue tumor
 
   SYNCHOND:
     name: Synovial chondromatosis
@@ -8611,6 +9772,27 @@ tumor_types:
     lineage_detail: null
     families:
     - Cyst
+
+  THECOMA:
+    name: Thecoma
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Sex cord-stromal tumor
+
+  THECOMA_LUT_SP:
+    name: Luteinized thecoma associated with sclerosing peritonitis
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: THECOMA
+    families:
+    - Gynecologic tumor
+    - Sex cord-stromal tumor
 
   THYMO:
     name: Thymoma
@@ -8795,6 +9977,35 @@ tumor_types:
     - Soft tissue tumor
     - Giant cell tumor
 
+  TUBE_ENDOID_CA:
+    name: Endometrioid carcinoma (fallopian tube)
+    who_volume: Female Genital Tumours
+    site: Fallopian tube
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  TUBE_HGSC:
+    name: High-grade serous carcinoma (fallopian tube)
+    who_volume: Female Genital Tumours
+    site: Fallopian tube
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  TUBE_SER_ADENOFIB:
+    name: Serous adenofibroma and serous papilloma (fallopian tube)
+    who_volume: Female Genital Tumours
+    site: Fallopian tube
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+
   TUFTED_KHE:
     name: Tufted angioma and kaposiform haemangioendothelioma
     who_volume: Soft Tissue and Bone Tumours
@@ -8967,6 +10178,16 @@ tumor_types:
     families:
     - Gynecologic tumor
 
+  UUS_NOS:
+    name: Undifferentiated uterine sarcoma, not classified further
+    who_volume: Female Genital Tumours
+    site: Uterus
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Sarcoma
+
   U_CLL:
     name: CLL (IGHV unmutated)
     who_volume: Haematolymphoid Tumours
@@ -8977,6 +10198,66 @@ tumor_types:
     families:
     - mature_b_small_cell
 
+  VAG_ADCA_INT:
+    name: Adenocarcinoma, intestinal type (vagina)
+    who_volume: Female Genital Tumours
+    site: Vagina
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  VAG_FEP:
+    name: Fibroepithelial stromal polyp (vagina)
+    who_volume: Female Genital Tumours
+    site: Vagina
+    lineage_broad: Epithelial / stromal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Polyp
+
+  VAG_MIXED:
+    name: Mixed tumour of the vagina
+    who_volume: Female Genital Tumours
+    site: Vagina
+    lineage_broad: Epithelial / stromal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+
+  VAG_MULL_PAP:
+    name: Mullerian papilloma (vagina)
+    who_volume: Female Genital Tumours
+    site: Vagina
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Papilloma
+
+  VAG_VILL_ADEN:
+    name: Villous adenoma and tubulovillous adenoma (vagina)
+    who_volume: Female Genital Tumours
+    site: Vagina
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Adenoma
+
+  VASIL:
+    name: Squamous intraepithelial lesion (vagina, LSIL/HSIL)
+    who_volume: Female Genital Tumours
+    site: Vagina
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Precursor lesion
+    - Squamous lesion
+
   VEN_MALF:
     name: Venous malformations
     who_volume: Soft Tissue and Bone Tumours
@@ -8985,6 +10266,82 @@ tumor_types:
     lineage_detail: null
     families:
     - Vascular malformation
+
+  VIN_HPVI:
+    name: Vulvar intraepithelial neoplasia, HPV-independent (differentiated VIN)
+    who_volume: Female Genital Tumours
+    site: Vulva
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Precursor lesion
+    - Squamous lesion
+
+  VSIL:
+    name: Squamous intraepithelial lesion (vulva, LSIL/HSIL)
+    who_volume: Female Genital Tumours
+    site: Vulva
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Precursor lesion
+    - Squamous lesion
+
+  VULVA_FAD:
+    name: Fibroadenoma (vulva, mammary-type)
+    who_volume: Female Genital Tumours
+    site: Vulva
+    lineage_broad: Epithelial / stromal
+    lineage_detail: null
+    parent: BR_FAD
+    families:
+    - Gynecologic tumor
+    - Mammary-type gland tumor
+
+  VULVA_MAMM_ADCA:
+    name: Adenocarcinoma of mammary gland type (vulva)
+    who_volume: Female Genital Tumours
+    site: Vulva
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Mammary-type gland tumor
+    - Carcinoma
+
+  VULVA_MIXED:
+    name: Mixed tumour (vulva, mammary-type)
+    who_volume: Female Genital Tumours
+    site: Vulva
+    lineage_broad: Epithelial / stromal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Mammary-type gland tumor
+
+  VULVA_PHYT:
+    name: Phyllodes tumour (vulva, mammary-type)
+    who_volume: Female Genital Tumours
+    site: Vulva
+    lineage_broad: Epithelial / stromal
+    lineage_detail: null
+    parent: PHYT_NOS
+    families:
+    - Gynecologic tumor
+    - Mammary-type gland tumor
+    - Fibroepithelial tumor
+
+  VULVA_SMARCB1_DEF:
+    name: SMARCB1-deficient vulvar neoplasms
+    who_volume: Female Genital Tumours
+    site: Vulva
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - SMARCB1-deficient tumor
 
   WARTH:
     name: Warthin Tumor
@@ -8995,6 +10352,15 @@ tumor_types:
     families:
     - Salivary gland tumor
 
+  WDPMT:
+    name: Well-differentiated papillary mesothelial tumour
+    who_volume: Female Genital Tumours
+    site: Peritoneum
+    lineage_broad: Mesothelial
+    lineage_detail: null
+    families:
+    - Mesothelial tumor
+
   WD_DDLS:
     name: Well Differentiated or Dedifferentiated Liposarcoma
     who_volume: null
@@ -9003,6 +10369,15 @@ tumor_types:
     lineage_detail: null
     families:
     - Adipocytic tumor
+
+  WOLFFIAN_TUM:
+    name: Wolffian tumour of the broad ligament and other uterine ligaments
+    who_volume: Female Genital Tumours
+    site: Broad ligament / uterine ligaments
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
 
   WT:
     name: Nephroblastoma (Wilms Tumor)
