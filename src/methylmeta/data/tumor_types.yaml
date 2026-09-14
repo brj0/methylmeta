@@ -351,13 +351,34 @@ tumor_types:
     - Myeloid neoplasm
 
   AMPAD:
-    name: Ampullary Adenocarcinoma
-    who_volume: null
-    site: null
+    name: Ampullary adenocarcinoma
+    who_volume: Digestive System Tumours
+    site: Ampulla of Vater
     lineage_broad: Epithelial
     lineage_detail: null
     families:
+    - Gastrointestinal tumor
     - Carcinoma
+
+  AMP_ADEN_HG:
+    name: Ampullary adenoma, high-grade
+    who_volume: Digestive System Tumours
+    site: Ampulla of Vater
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Adenoma
+
+  AMP_ADEN_LG:
+    name: Ampullary adenoma, low-grade
+    who_volume: Digestive System Tumours
+    site: Ampulla of Vater
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Adenoma
 
   ANALSCC:
     name: Anal Squamous Cell Carcinoma
@@ -367,6 +388,26 @@ tumor_types:
     lineage_detail: null
     families:
     - Squamous lesion
+
+  ANAL_ADCA:
+    name: Anal adenocarcinoma
+    who_volume: Digestive System Tumours
+    site: Anal canal
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Carcinoma
+
+  ANAL_SIN:
+    name: Anal squamous intraepithelial neoplasia
+    who_volume: Digestive System Tumours
+    site: Anal canal
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Precursor lesion
 
   ANASTOM_HEMANG:
     name: Anastomosing haemangioma
@@ -416,6 +457,36 @@ tumor_types:
     families:
     - Odontogenic tumor
 
+  APP_ADCA:
+    name: Appendiceal adenocarcinoma
+    who_volume: Digestive System Tumours
+    site: Appendix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Carcinoma
+
+  APP_ADEN:
+    name: Conventional appendiceal adenoma
+    who_volume: Digestive System Tumours
+    site: Appendix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Adenoma
+
+  APP_GCA:
+    name: Appendiceal goblet cell adenocarcinoma
+    who_volume: Digestive System Tumours
+    site: Appendix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Carcinoma
+
   APP_GOBCOID:
     name: Goblet cell carcinoid of the appendix
     who_volume: Digestive System Tumours
@@ -436,6 +507,25 @@ tumor_types:
     - Inflammatory
     - Appendix
 
+  APP_MUC_ADEN:
+    name: Appendiceal mucinous adenoma
+    who_volume: Digestive System Tumours
+    site: Appendix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Adenoma
+
+  APP_MUC_NEO:
+    name: Appendiceal mucinous neoplasms
+    who_volume: Digestive System Tumours
+    site: Appendix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+
   APP_NET:
     name: Neuroendocrine tumor of the appendix
     who_volume: Digestive System Tumours
@@ -445,6 +535,16 @@ tumor_types:
     families:
     - Appendiceal tumor
     - Neuroendocrine tumor
+
+  APP_SERR:
+    name: Appendiceal serrated lesions
+    who_volume: Digestive System Tumours
+    site: Appendix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Precursor lesion
 
   AS:
     name: Angiosarcoma
@@ -540,6 +640,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Vascular malformation
+
+  BARRETT:
+    name: Barrett dysplasia
+    who_volume: Digestive System Tumours
+    site: Esophagus
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Precursor lesion
 
   BCA:
     name: Basal cell adenoma
@@ -643,6 +753,16 @@ tumor_types:
     families:
     - Squamous lesion
 
+  BD_ADEN:
+    name: Bile duct adenoma
+    who_volume: Digestive System Tumours
+    site: Liver (bile duct)
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Hepatobiliary tumor
+    - Adenoma
+
   BE:
     name: Barrett's Esophagus
     who_volume: null
@@ -651,6 +771,25 @@ tumor_types:
     lineage_detail: null
     families:
     - Control
+
+  BILIN:
+    name: Biliary intraepithelial neoplasia
+    who_volume: Digestive System Tumours
+    site: Bile duct
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Hepatobiliary tumor
+    - Precursor lesion
+
+  BIL_ADENOFIB:
+    name: Biliary adenofibroma
+    who_volume: Digestive System Tumours
+    site: Liver (bile duct)
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Hepatobiliary tumor
 
   BL_EBV_NEG:
     name: Burkitt lymphoma (EBV-)
@@ -948,6 +1087,17 @@ tumor_types:
     families:
     - Carcinoma
 
+  CCA_EXT:
+    name: Extrahepatic cholangiocarcinoma
+    who_volume: Digestive System Tumours
+    site: Extrahepatic bile duct
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: CCA
+    families:
+    - Hepatobiliary tumor
+    - Carcinoma
+
   CCOC:
     name: Clear cell odontogenic carcinoma
     who_volume: Head and Neck Tumours
@@ -1090,6 +1240,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Soft tissue tumor
+
+  CHC_UPLC:
+    name: Combined hepatocellular-cholangiocarcinoma and undifferentiated primary liver carcinoma
+    who_volume: Digestive System Tumours
+    site: Liver
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Hepatobiliary tumor
+    - Carcinoma
 
   CHDLIPO:
     name: Chondroid lipoma
@@ -1364,6 +1524,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Melanocytic tumor
+
+  COMP_GNM_NET:
+    name: Composite gangliocytoma/neuroma and neuroendocrine tumour
+    who_volume: Digestive System Tumours
+    site: Gastrointestinal tract
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Neuroendocrine tumor
 
   COMP_HE:
     name: Composite haemangioendothelioma
@@ -1887,22 +2057,52 @@ tumor_types:
     - Craniopharyngioma
 
   CRA:
-    name: Colorectal Adenoma
-    who_volume: null
-    site: null
+    name: Colorectal adenoma
+    who_volume: Digestive System Tumours
+    site: Colon / rectum
     lineage_broad: Epithelial
     lineage_detail: null
     families:
     - Premalignant lesion
 
   CRNET:
-    name: Colorectal Neuroendocrine Tumor
-    who_volume: null
-    site: null
+    name: Colorectal neuroendocrine neoplasm
+    who_volume: Digestive System Tumours
+    site: Colon / rectum
     lineage_broad: Neuroendocrine
     lineage_detail: null
     families:
     - Neuroendocrine tumor
+
+  CR_CA:
+    name: Colorectal carcinoma
+    who_volume: Digestive System Tumours
+    site: Colon / rectum
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Carcinoma
+
+  CR_HYP_POLYP:
+    name: Colorectal hyperplastic polyps
+    who_volume: Digestive System Tumours
+    site: Colon / rectum
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Polyp
+
+  CR_TSA:
+    name: Colorectal traditional serrated adenoma
+    who_volume: Digestive System Tumours
+    site: Colon / rectum
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Precursor lesion
 
   CSA:
     name: Chondrosarcoma, NOS
@@ -2391,6 +2591,16 @@ tumor_types:
     - Salivary gland tumor
     - Papilloma
 
+  DUO_ADEN:
+    name: Non-ampullary duodenal adenoma
+    who_volume: Digestive System Tumours
+    site: Duodenum
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Adenoma
+
   DUO_CA:
     name: Duodenal adenocarcinoma
     who_volume: Digestive System Tumours
@@ -2731,6 +2941,16 @@ tumor_types:
     - Gastrointestinal tumor
     - Carcinoma
 
+  ESO_ADCA:
+    name: Adenocarcinoma of the esophagus and esophagogastric junction
+    who_volume: Digestive System Tumours
+    site: Esophagus / EGJ
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Carcinoma
+
   ESO_CA:
     name: Esophageal carcinoma, NOS
     who_volume: Digestive System Tumours
@@ -2740,6 +2960,15 @@ tumor_types:
     families:
     - Esophageal carcinoma
     - Carcinoma
+
+  ESO_EPID_MET:
+    name: Epidermoid metaplasia of the esophagus
+    who_volume: Digestive System Tumours
+    site: Esophagus
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
 
   ESO_SCC:
     name: Esophageal squamous cell carcinoma
@@ -2751,6 +2980,26 @@ tumor_types:
     - Gastrointestinal tumor
     - Carcinoma
     - Squamous cell carcinoma
+
+  ESO_SQ_DYSP:
+    name: Esophageal squamous dysplasia
+    who_volume: Digestive System Tumours
+    site: Esophagus
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Precursor lesion
+
+  ESO_UDCA:
+    name: Esophageal undifferentiated carcinoma
+    who_volume: Digestive System Tumours
+    site: Esophagus
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Carcinoma
 
   ESS_HG:
     name: High-grade endometrial stromal sarcoma
@@ -2960,6 +3209,15 @@ tumor_types:
     families:
     - Undefined
 
+  FNH:
+    name: Focal nodular hyperplasia of the liver
+    who_volume: Digestive System Tumours
+    site: Liver
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Hepatobiliary tumor
+
   FOPD:
     name: Fibro-osseous pseudotumour of digits
     who_volume: Soft Tissue and Bone Tumours
@@ -2989,6 +3247,97 @@ tumor_types:
     families:
     - Soft tissue tumor
     - Fibroblastic tumor
+
+  FUND_POLYP:
+    name: Fundic gland polyps
+    who_volume: Digestive System Tumours
+    site: Stomach
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Polyp
+
+  GANGNEU:
+    name: Ganglioneuroma and ganglioneuromatosis
+    who_volume: Digestive System Tumours
+    site: Gastrointestinal tract
+    lineage_broad: Neural
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Neural tumor
+
+  GAST_ADCA:
+    name: Gastric adenocarcinoma
+    who_volume: Digestive System Tumours
+    site: Stomach
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Carcinoma
+
+  GAST_ADSC:
+    name: Gastric adenosquamous carcinoma
+    who_volume: Digestive System Tumours
+    site: Stomach
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Carcinoma
+
+  GAST_DYSP:
+    name: Gastric dysplasia
+    who_volume: Digestive System Tumours
+    site: Stomach
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Precursor lesion
+
+  GAST_HYP_POLYP:
+    name: Gastric hyperplastic polyps
+    who_volume: Digestive System Tumours
+    site: Stomach
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Polyp
+
+  GAST_PYL_ADEN:
+    name: Gastric pyloric gland adenoma
+    who_volume: Digestive System Tumours
+    site: Stomach
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Adenoma
+
+  GAST_SCC:
+    name: Gastric squamous cell carcinoma
+    who_volume: Digestive System Tumours
+    site: Stomach
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  GAST_UDCA:
+    name: Gastric undifferentiated carcinoma
+    who_volume: Digestive System Tumours
+    site: Stomach
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Carcinoma
 
   GBM_G34:
     name: Glioblastoma, IDH-wildtype, H3.3 G34-mutant
@@ -3109,6 +3458,16 @@ tumor_types:
     - Glioma
     - Glioblastoma
     - High-grade glioma
+
+  GB_CA:
+    name: Carcinoma of the gallbladder
+    who_volume: Digestive System Tumours
+    site: Gallbladder
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Hepatobiliary tumor
+    - Carcinoma
 
   GCFB:
     name: Giant cell fibroblastoma
@@ -3262,9 +3621,9 @@ tumor_types:
     - Ganglioneuroma
 
   GNET:
-    name: Gastric Neuroendocrine Tumor
-    who_volume: null
-    site: null
+    name: Gastric neuroendocrine neoplasm
+    who_volume: Digestive System Tumours
+    site: Stomach
     lineage_broad: Neuroendocrine
     lineage_detail: null
     families:
@@ -3532,9 +3891,9 @@ tumor_types:
     - Sinonasal tumor
 
   HNET:
-    name: Hepatic Neuroendocrine Tumor
-    who_volume: null
-    site: null
+    name: Hepatic neuroendocrine neoplasm
+    who_volume: Digestive System Tumours
+    site: Liver
     lineage_broad: Neuroendocrine
     lineage_detail: null
     families:
@@ -3699,6 +4058,16 @@ tumor_types:
     families:
     - BCP-ALL
 
+  IBD_DYSP:
+    name: Inflammatory bowel disease-associated dysplasia of the colorectum
+    who_volume: Digestive System Tumours
+    site: Colon / rectum
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Precursor lesion
+
   IBF:
     name: Inclusion body fibromatosis
     who_volume: Soft Tissue and Bone Tumours
@@ -3709,6 +4078,28 @@ tumor_types:
     - Soft tissue tumor
     - Fibroblastic tumor
 
+  ICCA_LARGE:
+    name: Intrahepatic cholangiocarcinoma, large duct
+    who_volume: Digestive System Tumours
+    site: Liver
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: CCA
+    families:
+    - Hepatobiliary tumor
+    - Carcinoma
+
+  ICCA_SMALL:
+    name: Intrahepatic cholangiocarcinoma, small duct
+    who_volume: Digestive System Tumours
+    site: Liver
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: CCA
+    families:
+    - Hepatobiliary tumor
+    - Carcinoma
+
   ICMT:
     name: Intracranial mesenchymal tumor with FET/CREB fusion
     who_volume: Central Nervous System Tumours
@@ -3718,6 +4109,15 @@ tumor_types:
     families:
     - CNS tumor
     - Mesenchymal tumor
+
+  ICN_GB:
+    name: Mass-forming intracholecystic neoplasm
+    who_volume: Digestive System Tumours
+    site: Gallbladder
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Hepatobiliary tumor
 
   IDA:
     name: Intercalated Duct Adenoma and Hyperplasia
@@ -3736,6 +4136,16 @@ tumor_types:
     lineage_detail: Myeloid
     families:
     - AML
+
+  IFP:
+    name: Inflammatory fibroid polyp
+    who_volume: Digestive System Tumours
+    site: Gastrointestinal tract
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Polyp
 
   IFS:
     name: Infantile fibrosarcoma
@@ -3846,6 +4256,42 @@ tumor_types:
     - Sarcoma
     - Vascular tumor
 
+  IOPN_BD:
+    name: Intraductal oncocytic papillary neoplasm of the bile ducts
+    who_volume: Digestive System Tumours
+    site: Bile duct
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Hepatobiliary tumor
+
+  IOPN_PAN:
+    name: Intraductal oncocytic papillary neoplasm of the pancreas
+    who_volume: Digestive System Tumours
+    site: Pancreas
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+
+  IPMN:
+    name: Intraductal papillary mucinous neoplasm of the pancreas
+    who_volume: Digestive System Tumours
+    site: Pancreas
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+
+  IPN_BD:
+    name: Intraductal papillary neoplasm of the bile ducts
+    who_volume: Digestive System Tumours
+    site: Bile duct
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Hepatobiliary tumor
+
   IRT:
     name: Inflammatory rhabdomyoblastic tumour
     who_volume: Soft Tissue and Bone Tumours
@@ -3875,6 +4321,44 @@ tumor_types:
     parent: SNAD
     families:
     - Carcinoma
+
+  ITPN_BD:
+    name: Intraductal tubulopapillary neoplasm of the bile ducts
+    who_volume: Digestive System Tumours
+    site: Bile duct
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Hepatobiliary tumor
+
+  ITPN_PAN:
+    name: Intraductal tubulopapillary neoplasm of the pancreas
+    who_volume: Digestive System Tumours
+    site: Pancreas
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+
+  JEJIL_ADCA:
+    name: Jejunoileal adenocarcinoma
+    who_volume: Digestive System Tumours
+    site: Jejunum / ileum
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Carcinoma
+
+  JEJIL_ADEN:
+    name: Conventional jejunoileal adenoma
+    who_volume: Digestive System Tumours
+    site: Jejunum / ileum
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Adenoma
 
   JHF:
     name: Juvenile hyaline fibromatosis
@@ -3941,6 +4425,16 @@ tumor_types:
     parent: JPOF
     families:
     - Fibro-osseous lesion
+
+  JUV_POLYP:
+    name: Juvenile polyp
+    who_volume: Digestive System Tumours
+    site: Colon / rectum
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Hamartoma
 
   JUX_ART_MYX:
     name: Juxta-articular myxoma
@@ -4295,6 +4789,36 @@ tumor_types:
     - Sarcoma
     - Adipocytic tumor
 
+  LIV_CNSET:
+    name: Calcifying nested stromal-epithelial tumour of the liver
+    who_volume: Digestive System Tumours
+    site: Liver
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Hepatobiliary tumor
+
+  LIV_EMBRY:
+    name: Embryonal sarcoma of the liver
+    who_volume: Digestive System Tumours
+    site: Liver
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Hepatobiliary tumor
+    - Sarcoma
+    - Embryonal tumor
+
+  LIV_MH:
+    name: Mesenchymal hamartoma of the liver
+    who_volume: Digestive System Tumours
+    site: Liver
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Hepatobiliary tumor
+    - Hamartoma
+
   LM:
     name: Leiomyoma
     who_volume: Soft Tissue and Bone Tumours
@@ -4624,6 +5148,24 @@ tumor_types:
     families:
     - mature_b_small_cell
 
+  MCN:
+    name: Mucinous cystic neoplasm (hepatobiliary)
+    who_volume: Digestive System Tumours
+    site: Liver / bile duct
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Hepatobiliary tumor
+
+  MCN_PAN:
+    name: Mucinous cystic neoplasm of the pancreas
+    who_volume: Digestive System Tumours
+    site: Pancreas
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+
   MDS_HIGH:
     name: High-risk MDS / Secondary AML
     who_volume: Haematolymphoid Tumours
@@ -4855,6 +5397,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Germ cell tumor
+
+  MGINT:
+    name: Malignant gastrointestinal neuroectodermal tumour
+    who_volume: Digestive System Tumours
+    site: Gastrointestinal tract
+    lineage_broad: Neural
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Sarcoma
 
   MIFS:
     name: Myxoinflammatory Fibrosarcoma
@@ -5958,6 +6510,26 @@ tumor_types:
     - Gynecologic tumor
     - Carcinoma
 
+  OXYNT_ADEN:
+    name: Oxyntic gland adenoma
+    who_volume: Digestive System Tumours
+    site: Stomach
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Adenoma
+
+  PACC:
+    name: Pancreatic acinar cell carcinoma
+    who_volume: Digestive System Tumours
+    site: Pancreas
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Carcinoma
+
   PAD:
     name: Polymorphous Adenocarcinoma
     who_volume: Head and Neck Tumours
@@ -5966,6 +6538,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Salivary gland tumor
+
+  PANIN:
+    name: Pancreatic intraepithelial neoplasia
+    who_volume: Digestive System Tumours
+    site: Pancreas
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Precursor lesion
 
   PAN_CA:
     name: Pancreatic ductal adenocarcinoma
@@ -5976,6 +6558,27 @@ tumor_types:
     families:
     - Gastrointestinal tumor
     - Carcinoma
+
+  PAN_MINEN:
+    name: Pancreatic mixed neuroendocrine-non-neuroendocrine neoplasms
+    who_volume: Digestive System Tumours
+    site: Pancreas
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Neuroendocrine tumor
+    - Carcinoma
+
+  PAP_ESO:
+    name: Esophageal squamous papilloma
+    who_volume: Digestive System Tumours
+    site: Esophagus
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Papilloma
 
   PAP_INTRALYMPH:
     name: Papillary intralymphatic angioendothelioma
@@ -6012,6 +6615,16 @@ tumor_types:
     lineage_detail: B-Cell
     families:
     - BCP-ALL
+
+  PBL:
+    name: Pancreatoblastoma
+    who_volume: Digestive System Tumours
+    site: Pancreas
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Embryonal tumor
 
   PCC:
     name: Pheochromocytoma
@@ -6083,7 +6696,7 @@ tumor_types:
     name: Paraganglioma
     who_volume: null
     site: null
-    lineage_broad: Neuroepithelial
+    lineage_broad: Neuroendocrine
     lineage_detail: null
     families:
     - Neuroepithelial tumor
@@ -6329,6 +6942,16 @@ tumor_types:
     - Neuroendocrine tumor
     - Carcinoma
 
+  PJ_POLYP:
+    name: Peutz-Jeghers polyp
+    who_volume: Digestive System Tumours
+    site: Small intestine
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Hamartoma
+
   PLAG1:
     name: Cutaneous PLAG1-rearranged mixed Tumor
     who_volume: null
@@ -6366,6 +6989,16 @@ tumor_types:
     families:
     - CNS tumor
     - Choroid plexus tumor
+
+  PLEX_FMX:
+    name: Plexiform fibromyxoma
+    who_volume: Digestive System Tumours
+    site: Stomach
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Soft tissue tumor
 
   PLEX_PED_A:
     name: Choroid plexus tumor, pediatric A
@@ -6444,6 +7077,28 @@ tumor_types:
     lineage_detail: null
     families:
     - Neuroendocrine tumor
+
+  PNET:
+    name: Pancreatic neuroendocrine tumour, NOS
+    who_volume: Digestive System Tumours
+    site: Pancreas
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Neuroendocrine tumor
+
+  PNET_ACTH:
+    name: ACTH-producing neuroendocrine tumour (pancreas)
+    who_volume: Digestive System Tumours
+    site: Pancreas
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    parent: PNET
+    families:
+    - Gastrointestinal tumor
+    - Neuroendocrine tumor
+    - Functioning NET
 
   PNST_NF_BO:
     name: Borderline peripheral nerve sheath tumor
@@ -7103,6 +7758,16 @@ tumor_types:
     - Peripheral nerve sheath tumor
     - Benign tumor
 
+  SCHW_HAM:
+    name: Schwann cell hamartoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Gastrointestinal tract
+    lineage_broad: Neural
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Hamartoma
+
   SCHW_MEL:
     name: Melanotic schwannoma
     who_volume: null
@@ -7214,6 +7879,15 @@ tumor_types:
     families:
     - Germ cell tumor
     - Testicular tumor
+
+  SEROUS_PAN:
+    name: Serous neoplasms of the pancreas
+    who_volume: Digestive System Tumours
+    site: Pancreas
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
 
   SEZARY:
     name: Sézary syndrome
@@ -7482,6 +8156,15 @@ tumor_types:
     families:
     - SMARCB1/SMARCA4-deficient tumor
 
+  SMC_PAN:
+    name: Simple mucinous cyst of the pancreas
+    who_volume: Digestive System Tumours
+    site: Pancreas
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+
   SMH:
     name: Seromucinous hamartoma
     who_volume: Head and Neck Tumours
@@ -7665,6 +8348,15 @@ tumor_types:
     - Normal tissue
     - Reactive
 
+  SPN_PAN:
+    name: Solid pseudopapillary neoplasm of the pancreas
+    who_volume: Digestive System Tumours
+    site: Pancreas
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+
   SP_ACT:
     name: Secondary peripheral atypical cartilaginous tumour / chondrosarcoma, grade 1
     who_volume: Soft Tissue and Bone Tumours
@@ -7706,9 +8398,9 @@ tumor_types:
     - Salivary gland tumor
 
   SSL:
-    name: Sessile Serrated Lesion
-    who_volume: null
-    site: null
+    name: Colorectal sessile serrated lesion
+    who_volume: Digestive System Tumours
+    site: Colon / rectum
     lineage_broad: Epithelial
     lineage_detail: null
     families:
@@ -8249,7 +8941,7 @@ tumor_types:
 
   USARC:
     name: Undifferentiated Sarcoma
-    who_volume: null
+    who_volume: Digestive System Tumours
     site: null
     lineage_broad: Unknown
     lineage_detail: null
