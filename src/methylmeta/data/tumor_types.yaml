@@ -70,6 +70,17 @@ tumor_types:
     families:
     - Carcinoma
 
+  ADCA_RETE:
+    name: Adenocarcinoma of the collecting ducts and rete testis
+    who_volume: Urinary and Male Genital Tumours
+    site: Rete testis
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: ADEN_RETE
+    families:
+    - Genital tumor
+    - Carcinoma
+
   ADCC:
     name: Adenoid cystic carcinoma
     who_volume: Head and Neck Tumours
@@ -130,6 +141,15 @@ tumor_types:
     families:
     - Gynecologic tumor
     - Sarcoma
+
+  ADEN_RETE:
+    name: Adenoma of the collecting ducts and rete testis
+    who_volume: Urinary and Male Genital Tumours
+    site: Rete testis
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
 
   ADREN_CA:
     name: Adrenocortical carcinoma
@@ -854,6 +874,17 @@ tumor_types:
     families:
     - Skin adnexal tumor
 
+  BCC_SCROTUM:
+    name: Basal cell carcinoma of the scrotum
+    who_volume: Urinary and Male Genital Tumours
+    site: Scrotum
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: BCC
+    families:
+    - Genital tumor
+    - Carcinoma
+
   BCC_VULVA:
     name: Basal cell carcinoma (vulva)
     who_volume: Female Genital Tumours
@@ -988,6 +1019,17 @@ tumor_types:
     families:
     - Hepatobiliary tumor
 
+  BLAD_VC:
+    name: Verrucous carcinoma of the bladder
+    who_volume: Urinary and Male Genital Tumours
+    site: Bladder
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Urinary tract tumor
+    - Carcinoma
+    - Squamous cell carcinoma
+
   BL_EBV_NEG:
     name: Burkitt lymphoma (EBV-)
     who_volume: Haematolymphoid Tumours
@@ -1109,6 +1151,15 @@ tumor_types:
     families:
     - Gynecologic tumor
     - Carcinoma
+
+  BRENNER_TEST:
+    name: Brenner tumour (testicular adnexa)
+    who_volume: Urinary and Male Genital Tumours
+    site: Testicular adnexa
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
 
   BROWN_TUMOR:
     name: Brown tumour of hyperparathyroidism
@@ -1883,6 +1934,16 @@ tumor_types:
     - Hepatobiliary tumor
     - Carcinoma
 
+  CCA_TEST:
+    name: Clear cell adenocarcinoma (testicular adnexa)
+    who_volume: Urinary and Male Genital Tumours
+    site: Testicular adnexa
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Carcinoma
+
   CCOC:
     name: Clear cell odontogenic carcinoma
     who_volume: Head and Neck Tumours
@@ -2363,6 +2424,17 @@ tumor_types:
     - Precursor lesion
     - Squamous lesion
 
+  CIS_URO:
+    name: Urothelial carcinoma in situ
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: UC
+    families:
+    - Urinary tract tumor
+    - Precursor lesion
+
   CLL:
     name: Chronic lymphocytic leukemia
     who_volume: Haematolymphoid Tumours
@@ -2429,6 +2501,16 @@ tumor_types:
     lineage_detail: Myeloid
     families:
     - MDS_MPN
+
+  CMN:
+    name: Congenital mesoblastic nephroma
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Renal tumor
+    - Embryonal tumor
 
   CN:
     name: Central neurocytoma
@@ -2579,6 +2661,16 @@ tumor_types:
     parent: EHE
     families:
     - Vascular tumor
+
+  CONDYLOMA:
+    name: Condyloma acuminatum
+    who_volume: Urinary and Male Genital Tumours
+    site: Penis / scrotum
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Papilloma
 
   CONTR_ADENOPIT:
     name: Normal anterior pituitary
@@ -3049,6 +3141,17 @@ tumor_types:
     - Normal tissue
     - Brain
 
+  COWPER_ADCA:
+    name: Cowper gland adenocarcinoma of the urethra
+    who_volume: Urinary and Male Genital Tumours
+    site: Urethra
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: URETH_ACC
+    families:
+    - Urinary tract tumor
+    - Carcinoma
+
   CPC_PED:
     name: Choroid plexus carcinoma, pediatric
     who_volume: Central Nervous System Tumours
@@ -3058,6 +3161,17 @@ tumor_types:
     families:
     - CNS tumor
     - Choroid plexus tumor
+
+  CPDN:
+    name: Cystic partially differentiated nephroblastoma
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Embryonal
+    lineage_detail: null
+    parent: WT
+    families:
+    - Renal tumor
+    - Embryonal tumor
 
   CPH:
     name: Craniopharyngioma
@@ -3353,6 +3467,16 @@ tumor_types:
     families:
     - Salivary gland tumor
 
+  CYST_TROPHO_TUM:
+    name: Cystic trophoblastic tumour
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Germ cell
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Germ cell tumor
+
   C_ALCL:
     name: Primary Cutaneous Anaplastic Large Cell Lymphoma
     who_volume: null
@@ -3484,6 +3608,16 @@ tumor_types:
     - Lung tumor
     - Precursor lesion
     - Neuroendocrine tumor
+
+  DIVERT_CA:
+    name: Diverticular carcinoma (urinary tract)
+    who_volume: Urinary and Male Genital Tumours
+    site: Bladder (diverticulum)
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Urinary tract tumor
+    - Carcinoma
 
   DLBCL:
     name: Diffuse large B-cell lymphoma
@@ -3935,6 +4069,15 @@ tumor_types:
     - Gynecologic tumor
     - Polyp
 
+  ENDOID_TUM_TEST:
+    name: Endometrioid tumours (testicular adnexa)
+    who_volume: Urinary and Male Genital Tumours
+    site: Testicular adnexa
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
+
   ENDOM_CA:
     name: Endometrial carcinoma
     who_volume: Female Genital Tumours
@@ -4040,6 +4183,67 @@ tumor_types:
     lineage_detail: T/NK
     families:
     - mature_t_nk
+
+  EPID_ADCA:
+    name: Adenocarcinoma of the epididymis
+    who_volume: Urinary and Male Genital Tumours
+    site: Epididymis
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Carcinoma
+
+  EPID_CYSTADEN:
+    name: Cystadenoma of the epididymis
+    who_volume: Urinary and Male Genital Tumours
+    site: Epididymis
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
+
+  EPID_MNTI:
+    name: Melanotic neuroectodermal tumour of the epididymis
+    who_volume: Urinary and Male Genital Tumours
+    site: Epididymis
+    lineage_broad: Neural
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Neuroectodermal tumor
+
+  EPID_PAP_CYSTADEN:
+    name: Papillary cystadenoma of the epididymis
+    who_volume: Urinary and Male Genital Tumours
+    site: Epididymis
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: EPID_CYSTADEN
+    families:
+    - Genital tumor
+
+  EPID_SCC:
+    name: Squamous cell carcinoma of the epididymis
+    who_volume: Urinary and Male Genital Tumours
+    site: Epididymis
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  EPI_AML_PEC_REN:
+    name: Epithelioid angiomyolipoma / epithelioid PEComa of the kidney
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: AML_PEC_REN
+    families:
+    - Renal tumor
+    - Perivascular tumor
 
   EPMYOC:
     name: Epithelial-myoepithelial carcinoma
@@ -4414,6 +4618,16 @@ tumor_types:
     - Soft tissue tumor
     - Fibroblastic tumor
 
+  FIBROTHECOMA_TESTIS:
+    name: Tumours in the fibroma-thecoma group (testis)
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Sex cord-stromal
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Sex cord-stromal tumor
+
   FIB_COLLI:
     name: Fibromatosis colli
     who_volume: Soft Tissue and Bone Tumours
@@ -4754,6 +4968,16 @@ tumor_types:
     - Bone lesion
     - Giant cell lesion
 
+  GCNIS:
+    name: Germ cell neoplasia in situ
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Germ cell
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Precursor lesion
+
   GCOC:
     name: Ghost cell odontogenic carcinoma
     who_volume: Head and Neck Tumours
@@ -4793,6 +5017,17 @@ tumor_types:
     families:
     - Germ cell tumor
 
+  GCT_AD_TESTIS:
+    name: Adult granulosa cell tumour (testis)
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Sex cord-stromal
+    lineage_detail: null
+    parent: GCT_AD
+    families:
+    - Genital tumor
+    - Sex cord-stromal tumor
+
   GCT_JUV:
     name: Juvenile Granulosa Cell Tumor
     who_volume: null
@@ -4800,6 +5035,37 @@ tumor_types:
     lineage_broad: Germ cell
     lineage_detail: null
     families:
+    - Germ cell tumor
+
+  GCT_JUV_TESTIS:
+    name: Juvenile granulosa cell tumour (testis)
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Sex cord-stromal
+    lineage_detail: null
+    parent: GCT_JUV
+    families:
+    - Genital tumor
+    - Sex cord-stromal tumor
+
+  GCT_REG:
+    name: Regressed germ cell tumours
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Germ cell
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Germ cell tumor
+
+  GCT_REN:
+    name: Germ cell tumours of the kidney
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Germ cell
+    lineage_detail: null
+    families:
+    - Renal tumor
     - Germ cell tumor
 
   GDF:
@@ -5077,6 +5343,16 @@ tumor_types:
     families:
     - mature_b_small_cell
 
+  HEMANGIOMA:
+    name: Haemangioma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Vascular
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Vascular tumor
+
   HEMANG_BONE:
     name: Haemangioma of bone
     who_volume: Soft Tissue and Bone Tumours
@@ -5253,6 +5529,16 @@ tumor_types:
     lineage_detail: null
     families:
     - CNS tumor
+    - Vascular tumor
+
+  HMB_REN:
+    name: Renal haemangioblastoma
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Vascular
+    lineage_detail: null
+    families:
+    - Renal tumor
     - Vascular tumor
 
   HMSC:
@@ -5501,6 +5787,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Salivary gland tumor
+
+  IDC_P:
+    name: Intraductal carcinoma of the prostate
+    who_volume: Urinary and Male Genital Tumours
+    site: Prostate
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Prostatic tumor
+    - Carcinoma
 
   IDH:
     name: IDH1/2
@@ -5767,6 +6063,15 @@ tumor_types:
     families:
     - Gastrointestinal tumor
     - Adenoma
+
+  JGCT:
+    name: Juxtaglomerular cell tumour
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Renal tumor
 
   JHF:
     name: Juvenile hyaline fibromatosis
@@ -6045,6 +6350,16 @@ tumor_types:
     - Gynecologic tumor
     - Sex cord-stromal tumor
 
+  LEYDIG_TESTIS:
+    name: Leydig cell tumour (testis)
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Sex cord-stromal
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Sex cord-stromal tumor
+
   LFM:
     name: Lipofibromatosis
     who_volume: Soft Tissue and Bone Tumours
@@ -6250,6 +6565,17 @@ tumor_types:
     families:
     - Sarcoma
     - Adipocytic tumor
+
+  LITTRE_ADCA:
+    name: Littre gland adenocarcinoma of the urethra
+    who_volume: Urinary and Male Genital Tumours
+    site: Urethra
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: URETH_ACC
+    families:
+    - Urinary tract tumor
+    - Carcinoma
 
   LIV_CNSET:
     name: Calcifying nested stromal-epithelial tumour of the liver
@@ -7164,6 +7490,15 @@ tumor_types:
     - Thoracic tumor
     - Mesothelial tumor
 
+  MEST_REN:
+    name: Mixed epithelial and stromal tumour of the kidney
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Mixed
+    lineage_detail: null
+    families:
+    - Renal tumor
+
   METAST_LM:
     name: Metastasizing leiomyoma
     who_volume: Female Genital Tumours
@@ -7286,6 +7621,16 @@ tumor_types:
     families:
     - Germ cell tumor
 
+  MGCT_TESTIS:
+    name: Mixed germ cell tumours (testis)
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Germ cell
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Germ cell tumor
+
   MGINT:
     name: Malignant gastrointestinal neuroectodermal tumour
     who_volume: Digestive System Tumours
@@ -7326,6 +7671,26 @@ tumor_types:
     - Gynecologic tumor
     - Germ cell tumor
     - Sex cord-stromal tumor
+
+  MIXED_SCST_TESTIS:
+    name: Mixed sex cord stromal tumour (testis)
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Sex cord-stromal
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Sex cord-stromal tumor
+
+  MIXED_TER_YST_PREPP:
+    name: Mixed teratoma and yolk sac tumour, prepubertal-type
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Germ cell
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Germ cell tumor
 
   MIXED_TROPH_TUM_OVA:
     name: Mixed trophoblastic tumour
@@ -7462,6 +7827,25 @@ tumor_types:
     families:
     - Neuroectodermal tumor
 
+  MN_ADFIB:
+    name: Metanephric adenofibroma
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: MNA
+    families:
+    - Renal tumor
+
+  MN_STROM:
+    name: Metanephric stromal tumour
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Renal tumor
+
   MO:
     name: Myositis ossificans
     who_volume: Soft Tissue and Bone Tumours
@@ -7593,6 +7977,35 @@ tumor_types:
     families:
     - Neuroendocrine tumor
 
+  MUC_BOT_TESTIS:
+    name: Mucinous borderline tumour (testicular adnexa)
+    who_volume: Urinary and Male Genital Tumours
+    site: Testicular adnexa
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Borderline tumor
+
+  MUC_CYSTADENOCA_TESTIS:
+    name: Mucinous cystadenocarcinoma (testicular adnexa)
+    who_volume: Urinary and Male Genital Tumours
+    site: Testicular adnexa
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Carcinoma
+
+  MUC_CYSTADEN_TESTIS:
+    name: Mucinous cystadenoma (testicular adnexa)
+    who_volume: Urinary and Male Genital Tumours
+    site: Testicular adnexa
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
+
   MYFS:
     name: Myxofibrosarcoma
     who_volume: Soft Tissue and Bone Tumours
@@ -7643,6 +8056,26 @@ tumor_types:
     families:
     - Soft tissue tumor
     - Fibroblastic tumor
+
+  MYOID_GST:
+    name: Myoid gonadal stromal tumour
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Sex cord-stromal
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Sex cord-stromal tumor
+
+  MYOINTIMOMA:
+    name: Myointimoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Genital tract
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Perivascular tumor
 
   MYOLIPO:
     name: Myolipoma of soft tissue
@@ -7861,6 +8294,26 @@ tumor_types:
     - CNS tumor
     - Neuroepithelial tumor
 
+  NET_TESTIS_PREPP:
+    name: Testicular neuroendocrine tumour, prepubertal-type
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Neuroendocrine tumor
+
+  NET_URO:
+    name: Well-differentiated neuroendocrine tumour (urinary / male genital)
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract / prostate / testis
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Neuroendocrine tumor
+
   NEUROMA:
     name: Neuromas
     who_volume: Soft Tissue and Bone Tumours
@@ -7968,6 +8421,26 @@ tumor_types:
     - Thyroid tumor
     - Low-risk neoplasm
 
+  NIPUC_HG:
+    name: Non-invasive papillary urothelial carcinoma, high-grade
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Urinary tract tumor
+    - Carcinoma
+
+  NIPUC_LG:
+    name: Non-invasive papillary urothelial carcinoma, low-grade
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Urinary tract tumor
+    - Carcinoma
+
   NITAC:
     name: Non-intestinal-type Sinonasal Adenocarcinoma
     who_volume: Head and Neck Tumours
@@ -8071,6 +8544,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Carcinoma
+
+  NRESTS:
+    name: Nephrogenic rests
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Embryonal
+    lineage_detail: null
+    families:
+    - Renal tumor
+    - Precursor lesion
 
   NSCLC:
     name: Non-small cell lung carcinoma
@@ -8382,6 +8865,15 @@ tumor_types:
     lineage_detail: null
     families:
     - Precursor lesion
+
+  ORTI:
+    name: Ossifying renal tumour of infancy
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Renal tumor
 
   OSET:
     name: Ossifying spindled and epithelioid tumor, SRSF7::NFATC3 fusion
@@ -8845,6 +9337,16 @@ tumor_types:
     families:
     - Salivary gland tumor
 
+  PADGET_EXTRAMAM:
+    name: Extramammary Paget disease
+    who_volume: Urinary and Male Genital Tumours
+    site: Penis / scrotum / vulva
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Paget disease
+
   PAGET_VULVA:
     name: Paget disease (vulva)
     who_volume: Female Genital Tumours
@@ -9193,6 +9695,89 @@ tumor_types:
     - Lung tumor
     - Perivascular tumor
 
+  PEC_EXTRAREN:
+    name: Extrarenal PEComa
+    who_volume: Soft Tissue and Bone Tumours
+    site: Genital tract / retroperitoneum
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: PEC
+    families:
+    - Genital tumor
+    - Perivascular tumor
+
+  PED_CYSTNEPH:
+    name: Paediatric cystic nephroma
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Mixed
+    lineage_detail: null
+    families:
+    - Renal tumor
+
+  PEIN_HPVA:
+    name: Penile intraepithelial neoplasia, HPV-associated
+    who_volume: Urinary and Male Genital Tumours
+    site: Penis
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Precursor lesion
+
+  PEIN_HPVI:
+    name: Differentiated penile intraepithelial neoplasia, HPV-independent
+    who_volume: Urinary and Male Genital Tumours
+    site: Penis
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Precursor lesion
+
+  PEN_ADSC_MEC:
+    name: Penile adenosquamous and mucoepidermoid carcinomas
+    who_volume: Urinary and Male Genital Tumours
+    site: Penis
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Carcinoma
+
+  PEN_SCC_HPVA:
+    name: HPV-associated squamous cell carcinoma (penis/scrotum)
+    who_volume: Urinary and Male Genital Tumours
+    site: Penis / scrotum
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  PEN_SCC_HPVI:
+    name: HPV-independent squamous cell carcinoma (penis/scrotum)
+    who_volume: Urinary and Male Genital Tumours
+    site: Penis / scrotum
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  PEN_SCC_NOS:
+    name: Squamous cell carcinoma NOS (penis/scrotum)
+    who_volume: Urinary and Male Genital Tumours
+    site: Penis / scrotum
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Carcinoma
+    - Squamous cell carcinoma
+
   PERINEUR:
     name: Perineurioma
     who_volume: Soft Tissue and Bone Tumours
@@ -9394,6 +9979,16 @@ tumor_types:
     families:
     - CNS tumor
     - Pineal tumor
+
+  PIN_HG:
+    name: High-grade prostatic intraepithelial neoplasia
+    who_volume: Urinary and Male Genital Tumours
+    site: Prostate
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Prostatic tumor
+    - Precursor lesion
 
   PIN_T_PB_A:
     name: Pineoblastoma group A / intracranial retinoblastoma
@@ -9792,6 +10387,96 @@ tumor_types:
     - Soft tissue tumor
     - Fibroblastic tumor
 
+  PROST_ACIN:
+    name: Prostatic acinar adenocarcinoma
+    who_volume: Urinary and Male Genital Tumours
+    site: Prostate
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Prostatic tumor
+    - Carcinoma
+
+  PROST_ADCC:
+    name: Adenoid cystic (basal cell) carcinoma of the prostate
+    who_volume: Urinary and Male Genital Tumours
+    site: Prostate
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Prostatic tumor
+    - Carcinoma
+
+  PROST_ADSC:
+    name: Adenosquamous carcinoma of the prostate
+    who_volume: Urinary and Male Genital Tumours
+    site: Prostate
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Prostatic tumor
+    - Carcinoma
+
+  PROST_CYSTADEN:
+    name: Prostatic cystadenoma
+    who_volume: Urinary and Male Genital Tumours
+    site: Prostate
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Prostatic tumor
+
+  PROST_DUCT:
+    name: Prostatic ductal adenocarcinoma
+    who_volume: Urinary and Male Genital Tumours
+    site: Prostate
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Prostatic tumor
+    - Carcinoma
+
+  PROST_NEC_TX:
+    name: Treatment-related neuroendocrine prostatic carcinoma
+    who_volume: Urinary and Male Genital Tumours
+    site: Prostate
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    families:
+    - Prostatic tumor
+    - Neuroendocrine tumor
+
+  PROST_SARC:
+    name: Prostatic stromal sarcoma
+    who_volume: Urinary and Male Genital Tumours
+    site: Prostate
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Prostatic tumor
+    - Sarcoma
+
+  PROST_SCC:
+    name: Squamous cell carcinoma of the prostate
+    who_volume: Urinary and Male Genital Tumours
+    site: Prostate
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Prostatic tumor
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  PROST_STUMP:
+    name: Prostatic stromal tumour of uncertain malignant potential
+    who_volume: Urinary and Male Genital Tumours
+    site: Prostate
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Prostatic tumor
+    - Borderline tumor
+
   PRRX1_SARC:
     name: PRRX1-rearranged fibroblastic tumour
     who_volume: Soft Tissue and Bone Tumours
@@ -9881,6 +10566,15 @@ tumor_types:
     - CNS tumor
     - Pineal tumor
 
+  PUNLMP:
+    name: Papillary urothelial neoplasm of low malignant potential
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Urinary tract tumor
+
   PVL:
     name: Proliferative verrucous leukoplakia
     who_volume: Head and Neck Tumours
@@ -9938,8 +10632,47 @@ tumor_types:
     families:
     - Neuroepithelial tumor
 
+  RCC_ACD:
+    name: Acquired cystic disease-associated renal cell carcinoma
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Renal tumor
+    - Carcinoma
+
+  RCC_ALK:
+    name: ALK-rearranged renal cell carcinomas
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Renal tumor
+    - Carcinoma
+
   RCC_CC:
     name: Clear cell renal cell carcinoma
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Renal tumor
+    - Carcinoma
+
+  RCC_CCP:
+    name: Clear cell papillary renal cell tumour
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Renal tumor
+
+  RCC_CD:
+    name: Collecting duct carcinoma
     who_volume: Urinary and Male Genital Tumours
     site: Kidney
     lineage_broad: Epithelial
@@ -9958,6 +10691,26 @@ tumor_types:
     - Renal tumor
     - Carcinoma
 
+  RCC_ELOC:
+    name: ELOC (formerly TCEB1)-mutated renal cell carcinoma
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Renal tumor
+    - Carcinoma
+
+  RCC_ESC:
+    name: Eosinophilic solid and cystic renal cell carcinoma
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Renal tumor
+    - Carcinoma
+
   RCC_FH:
     name: Fumarate Hydratase-deficient Renal Cell Carcinoma
     who_volume: null
@@ -9966,6 +10719,55 @@ tumor_types:
     lineage_detail: null
     families:
     - Carcinoma
+
+  RCC_MCN:
+    name: Multilocular cystic renal neoplasm of low malignant potential
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: RCC_CC
+    families:
+    - Renal tumor
+
+  RCC_MTSC:
+    name: Mucinous tubular and spindle cell carcinoma
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Renal tumor
+    - Carcinoma
+
+  RCC_NOS:
+    name: Renal cell carcinoma NOS
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Renal tumor
+    - Carcinoma
+
+  RCC_ONC:
+    name: Oncocytoma of the kidney
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Renal tumor
+
+  RCC_ONC_OTHER:
+    name: Other oncocytic tumours of the kidney
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: RCC_ONC
+    families:
+    - Renal tumor
 
   RCC_PAP:
     name: Papillary renal cell carcinoma
@@ -9984,6 +10786,46 @@ tumor_types:
     lineage_broad: Epithelial
     lineage_detail: null
     families:
+    - Carcinoma
+
+  RCC_SDH:
+    name: Succinate dehydrogenase-deficient renal cell carcinoma
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Renal tumor
+    - Carcinoma
+
+  RCC_SMARCB1:
+    name: SMARCB1-deficient renal medullary carcinoma
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Renal tumor
+    - Carcinoma
+
+  RCC_TFE3:
+    name: TFE3-rearranged renal cell carcinomas
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Renal tumor
+    - Carcinoma
+
+  RCC_TFEB:
+    name: TFEB-altered renal cell carcinomas
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Renal tumor
     - Carcinoma
 
   RCC_TR:
@@ -10024,6 +10866,16 @@ tumor_types:
     - Gastrointestinal tumor
     - Carcinoma
 
+  REN_ANGIOMYOLIPO:
+    name: Classic angiomyolipoma / PEComa of the kidney
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Renal tumor
+    - Perivascular tumor
+
   RETE_CYSTADEN:
     name: Rete cystadenoma and rete adenoma
     who_volume: Female Genital Tumours
@@ -10042,6 +10894,15 @@ tumor_types:
     parent: EHE
     families:
     - Vascular tumor
+
+  RMICT:
+    name: Renomedullary interstitial cell tumour
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Renal tumor
 
   RMM:
     name: Rhabdomyoma
@@ -10179,6 +11040,16 @@ tumor_types:
     families:
     - Sarcoma
     - Rhabdomyosarcoma
+
+  RTK:
+    name: Rhabdoid tumour of the kidney
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Renal tumor
+    - Embryonal tumor
 
   RUNX1RUNX1T1:
     name: RUNX1-RUNX1T1
@@ -10598,6 +11469,16 @@ tumor_types:
     - Gynecologic tumor
     - Sex cord-stromal tumor
 
+  SCST_NOS_TESTIS:
+    name: Sex cord stromal tumour NOS (testis)
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Sex cord-stromal
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Sex cord-stromal tumor
+
   SCTAT_OVA:
     name: Sex cord tumour with annular tubules
     who_volume: Female Genital Tumours
@@ -10608,6 +11489,17 @@ tumor_types:
     - Gynecologic tumor
     - Sex cord-stromal tumor
 
+  SCT_LCC_TESTIS:
+    name: Large cell calcifying Sertoli cell tumour
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Sex cord-stromal
+    lineage_detail: null
+    parent: SCT_TESTIS
+    families:
+    - Genital tumor
+    - Sex cord-stromal tumor
+
   SCT_OVA:
     name: Sertoli cell tumour (ovary)
     who_volume: Female Genital Tumours
@@ -10616,6 +11508,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Gynecologic tumor
+    - Sex cord-stromal tumor
+
+  SCT_TESTIS:
+    name: Sertoli cell tumour (testis)
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Sex cord-stromal
+    lineage_detail: null
+    families:
+    - Genital tumor
     - Sex cord-stromal tumor
 
   SDA:
@@ -10712,6 +11614,35 @@ tumor_types:
     lineage_detail: null
     families:
     - Gastrointestinal tumor
+
+  SER_BOT_TA:
+    name: Serous tumour of borderline malignancy (testicular adnexa)
+    who_volume: Urinary and Male Genital Tumours
+    site: Testicular adnexa
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Borderline tumor
+
+  SER_CYSTADENOCA_TESTIS:
+    name: Serous cystadenocarcinoma (testicular adnexa)
+    who_volume: Urinary and Male Genital Tumours
+    site: Testicular adnexa
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Carcinoma
+
+  SER_CYSTADEN_TESTIS:
+    name: Serous cystadenoma (testicular adnexa)
+    who_volume: Urinary and Male Genital Tumours
+    site: Testicular adnexa
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
 
   SETTLE:
     name: Spindle epithelial tumour with thymus-like elements
@@ -10844,6 +11775,17 @@ tumor_types:
     lineage_detail: null
     families:
     - Gynecologic tumor
+    - Carcinoma
+
+  SKENE_URETH_ADCA:
+    name: Skene gland adenocarcinoma of the urethra
+    who_volume: Urinary and Male Genital Tumours
+    site: Urethra
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: URETH_ACC
+    families:
+    - Urinary tract tumor
     - Carcinoma
 
   SKM_ALS:
@@ -11225,6 +12167,16 @@ tumor_types:
     - Normal tissue
     - Reactive
 
+  SPERMATOCYTIC_TUM:
+    name: Spermatocytic tumour
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Germ cell
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Germ cell tumor
+
   SPN_PAN:
     name: Solid pseudopapillary neoplasm of the pancreas
     who_volume: Digestive System Tumours
@@ -11263,6 +12215,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Gynecologic tumor
+    - Sex cord-stromal tumor
+
+  SRST_TESTIS:
+    name: Signet ring stromal tumour (testis)
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Sex cord-stromal
+    lineage_detail: null
+    families:
+    - Genital tumor
     - Sex cord-stromal tumor
 
   SS:
@@ -11473,6 +12435,45 @@ tumor_types:
     - Gynecologic tumor
     - Soft tissue tumor
 
+  SV_ADCA:
+    name: Adenocarcinoma of the seminal vesicle
+    who_volume: Urinary and Male Genital Tumours
+    site: Seminal vesicle
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Carcinoma
+
+  SV_CYSTADEN:
+    name: Cystadenoma of the seminal vesicle
+    who_volume: Urinary and Male Genital Tumours
+    site: Seminal vesicle
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
+
+  SV_MEST:
+    name: Mixed epithelial and stromal tumour of the seminal vesicle
+    who_volume: Urinary and Male Genital Tumours
+    site: Seminal vesicle
+    lineage_broad: Mixed
+    lineage_detail: null
+    families:
+    - Genital tumor
+
+  SV_SCC:
+    name: Squamous cell carcinoma of the seminal vesicle
+    who_volume: Urinary and Male Genital Tumours
+    site: Seminal vesicle
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Carcinoma
+    - Squamous cell carcinoma
+
   SYNCHOND:
     name: Synovial chondromatosis
     who_volume: Soft Tissue and Bone Tumours
@@ -11555,6 +12556,16 @@ tumor_types:
     families:
     - Germ cell tumor
 
+  TER:
+    name: Teratoma, NOS
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Germ cell
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Germ cell tumor
+
   TERATOID_CYST:
     name: Teratoid cyst
     who_volume: Head and Neck Tumours
@@ -11563,6 +12574,39 @@ tumor_types:
     lineage_detail: null
     families:
     - Cyst
+
+  TER_PP:
+    name: Teratoma, postpubertal-type
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Germ cell
+    lineage_detail: null
+    parent: TER
+    families:
+    - Genital tumor
+    - Germ cell tumor
+
+  TER_PREPP:
+    name: Teratoma, prepubertal-type
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Germ cell
+    lineage_detail: null
+    parent: TER
+    families:
+    - Genital tumor
+    - Germ cell tumor
+
+  TER_SOMMAL:
+    name: Teratoma with somatic-type malignancy
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Germ cell
+    lineage_detail: null
+    parent: TER
+    families:
+    - Genital tumor
+    - Germ cell tumor
 
   TGDC:
     name: Thyroglossal duct cyst
@@ -12127,6 +13171,16 @@ tumor_types:
     - Melanocytic tumor
     - Melanoma
 
+  UMG_LCNEC:
+    name: Large cell neuroendocrine carcinoma (urinary / male genital)
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract / prostate / testis
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Neuroendocrine tumor
+
   UPS:
     name: Undifferentiated pleomorphic sarcoma
     who_volume: Soft Tissue and Bone Tumours
@@ -12147,6 +13201,16 @@ tumor_types:
     - Sarcoma
     - Bone tumor
 
+  URACH_CA:
+    name: Urachal carcinoma
+    who_volume: Urinary and Male Genital Tumours
+    site: Urachus
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Urinary tract tumor
+    - Carcinoma
+
   URCS:
     name: Undifferentiated round cell sarcoma, EWSR1::PATZ1 fusion
     who_volume: null
@@ -12156,6 +13220,117 @@ tumor_types:
     families:
     - Sarcoma
     - Small round cell tumor
+
+  URETH_ACC:
+    name: Urethral accessory gland carcinomas
+    who_volume: Urinary and Male Genital Tumours
+    site: Urethra
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Urinary tract tumor
+    - Carcinoma
+
+  URO_ADCA:
+    name: Adenocarcinoma NOS (urinary tract)
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Urinary tract tumor
+    - Carcinoma
+
+  URO_CCA:
+    name: Clear cell adenocarcinoma of the urinary tract
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract (urethra)
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Urinary tract tumor
+    - Carcinoma
+
+  URO_ENDOID:
+    name: Endometrioid carcinoma of the urinary tract
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract (urethra)
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Urinary tract tumor
+    - Carcinoma
+
+  URO_MINEN:
+    name: Mixed neuroendocrine neoplasms (urinary / male genital)
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract / prostate / testis
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Neuroendocrine tumor
+
+  URO_PAP:
+    name: Urothelial papilloma
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Urinary tract tumor
+    - Papilloma
+
+  URO_PAP_INV:
+    name: Inverted urothelial papilloma
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Urinary tract tumor
+    - Papilloma
+
+  URO_SCC:
+    name: Pure squamous carcinoma of the urothelial tract
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Urinary tract tumor
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  URO_SCNEC:
+    name: Small cell neuroendocrine carcinoma (urinary / male genital)
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract / prostate / testis
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    families:
+    - Genital tumor
+    - Neuroendocrine tumor
+
+  URO_SP:
+    name: Squamous papilloma of the urothelial tract
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Urinary tract tumor
+    - Papilloma
+
+  URO_VA:
+    name: Villous adenoma of the urinary tract
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Urinary tract tumor
+    - Adenoma
 
   USARC:
     name: Undifferentiated Sarcoma
@@ -12443,6 +13618,28 @@ tumor_types:
     families:
     - Germ cell tumor
     - Testicular tumor
+
+  YST_PP:
+    name: Yolk sac tumour, postpubertal-type
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Germ cell
+    lineage_detail: null
+    parent: YST
+    families:
+    - Genital tumor
+    - Germ cell tumor
+
+  YST_PREPP:
+    name: Yolk sac tumour, prepubertal-type
+    who_volume: Urinary and Male Genital Tumours
+    site: Testis
+    lineage_broad: Germ cell
+    lineage_detail: null
+    parent: YST
+    families:
+    - Genital tumor
+    - Germ cell tumor
 
   ZNF384:
     name: ZNF384-rearranged
