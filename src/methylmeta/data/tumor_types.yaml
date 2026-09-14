@@ -92,6 +92,17 @@ tumor_types:
     - Salivary gland-like tumor
     - Carcinoma
 
+  ADENOMATOID_ADREN:
+    name: Adenomatoid tumour of the adrenal gland
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Adrenal gland
+    lineage_broad: Mesothelial
+    lineage_detail: null
+    parent: ADENOMATOID_TUM
+    families:
+    - Adrenal tumor
+    - Mesothelial tumor
+
   ADENOMATOID_TUM:
     name: Adenomatoid tumour
     who_volume: Female Genital Tumours
@@ -129,6 +140,88 @@ tumor_types:
     families:
     - Adrenal tumor
     - Carcinoma
+
+  ADREN_CONGEN_HYPERPLASIA:
+    name: Congenital adrenal hyperplasia
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Adrenal gland
+    lineage_broad: Endocrine
+    lineage_detail: null
+    families:
+    - Adrenal tumor
+    - Hyperplasia
+
+  ADREN_CORT_ADENOMA:
+    name: Adrenal cortical adenoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Adrenal gland
+    lineage_broad: Endocrine
+    lineage_detail: null
+    families:
+    - Adrenal tumor
+    - Adenoma
+
+  ADREN_CORT_CA:
+    name: Adrenal cortical carcinoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Adrenal gland
+    lineage_broad: Endocrine
+    lineage_detail: null
+    parent: ADREN_CA
+    families:
+    - Adrenal tumor
+    - Carcinoma
+
+  ADREN_CYST:
+    name: Adrenal cysts
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Adrenal gland
+    lineage_broad: Endocrine
+    lineage_detail: null
+    families:
+    - Adrenal tumor
+    - Cyst
+
+  ADREN_MYELOLIPOMA:
+    name: Adrenal myelolipoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Adrenal gland
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Adrenal tumor
+    - Benign tumor
+    - Adipocytic tumor
+
+  ADREN_NODULAR_DIS:
+    name: Adrenocortical nodular disease
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Adrenal gland
+    lineage_broad: Endocrine
+    lineage_detail: null
+    families:
+    - Adrenal tumor
+    - Hyperplasia
+
+  ADREN_RESTS:
+    name: Adrenal rests
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Adrenal gland
+    lineage_broad: Endocrine
+    lineage_detail: null
+    families:
+    - Adrenal tumor
+    - Benign lesion
+
+  ADREN_SEX_CORD_STROMAL:
+    name: Adrenal sex cord stromal tumour
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Adrenal gland
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Adrenal tumor
+    - Sex cord-stromal tumor
 
   ADSC:
     name: Adenosquamous carcinoma
@@ -659,6 +752,18 @@ tumor_types:
     - IDH-mutant glioma
     - High-grade glioma
 
+  AS_ENDO:
+    name: Angiosarcoma of endocrine organs
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Endocrine organs
+    lineage_broad: Vascular
+    lineage_detail: null
+    parent: AS
+    families:
+    - Endocrine tumor
+    - Sarcoma
+    - Vascular tumor
+
   ATRT_MYC:
     name: Atypical teratoid/rhabdoid tumor, MYC subclass
     who_volume: Central Nervous System Tumours
@@ -852,6 +957,17 @@ tumor_types:
     lineage_detail: null
     families:
     - Control
+
+  BENIGN_VASC_ENDO:
+    name: Benign vascular tumours of endocrine organs
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Endocrine organs
+    lineage_broad: Vascular
+    lineage_detail: null
+    parent: HEMANG_BONE
+    families:
+    - Endocrine tumor
+    - Vascular tumor
 
   BILIN:
     name: Biliary intraepithelial neoplasia
@@ -1379,7 +1495,7 @@ tumor_types:
     site: Breast
     lineage_broad: Neuroendocrine
     lineage_detail: null
-    parent: NE_CA
+    parent: NEC
     families:
     - Breast tumor
     - Neuroendocrine tumor
@@ -1688,6 +1804,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Lymphoproliferative disorder
+
+  CAUDA_EQ_NET:
+    name: Cauda equina neuroendocrine tumour
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Cauda equina
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    families:
+    - Neuroendocrine tumor
+    - CNS tumor
 
   CAVER:
     name: Cavernous hemangioma / cavernoma
@@ -2196,6 +2322,17 @@ tumor_types:
     - Bone tumor
     - Chordoma
 
+  CHORD_SELLAR:
+    name: Chordoma of the sellar region
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Sellar region
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: CHORD
+    families:
+    - Pituitary tumor
+    - Chordoma
+
   CHRPL:
     name: Chronic Pleuritis
     who_volume: null
@@ -2421,6 +2558,17 @@ tumor_types:
     families:
     - Gastrointestinal tumor
     - Neuroendocrine tumor
+
+  COMP_GNM_NET_NONENDOCRINE:
+    name: Composite gangliocytoma/neuroma and neuroendocrine tumour
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Multiple
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    parent: COMP_GNM_NET
+    families:
+    - Neuroendocrine tumor
+    - Neural tumor
 
   COMP_HE:
     name: Composite haemangioendothelioma
@@ -4353,6 +4501,17 @@ tumor_types:
     - Gastrointestinal tumor
     - Polyp
 
+  GANGLIONEUR_ADREN:
+    name: Ganglioneuroma of the adrenal medulla
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Adrenal medulla / paraganglia
+    lineage_broad: Neural
+    lineage_detail: null
+    parent: GN
+    families:
+    - Adrenal tumor
+    - Neural tumor
+
   GANGNEU:
     name: Ganglioneuroma and ganglioneuromatosis
     who_volume: Digestive System Tumours
@@ -4717,6 +4876,17 @@ tumor_types:
     - Soft tissue tumor
     - Perivascular tumor
 
+  GLOMUS_ENDO:
+    name: Glomangioma and glomus tumour of endocrine organs
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Endocrine organs
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: GLOAN
+    families:
+    - Endocrine tumor
+    - Perivascular tumor
+
   GN:
     name: Ganglioneuroma
     who_volume: null
@@ -4726,6 +4896,30 @@ tumor_types:
     families:
     - Neural tumor
     - Ganglioneuroma
+
+  GNBL_INTERMIXED:
+    name: Ganglioneuroblastoma, intermixed
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Adrenal medulla / paraganglia
+    lineage_broad: Neural
+    lineage_detail: null
+    parent: NBL_GNBL
+    families:
+    - Adrenal tumor
+    - Neuroblastoma
+    - Embryonal tumor
+
+  GNBL_NODULAR:
+    name: Ganglioneuroblastoma, nodular
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Adrenal medulla / paraganglia
+    lineage_broad: Neural
+    lineage_detail: null
+    parent: NBL_GNBL
+    families:
+    - Adrenal tumor
+    - Neuroblastoma
+    - Embryonal tumor
 
   GNET:
     name: Gastric neuroendocrine neoplasm
@@ -4764,6 +4958,17 @@ tumor_types:
     lineage_detail: null
     families:
     - Soft tissue tumor
+    - Neural tumor
+
+  GRCT_ENDO:
+    name: Granular cell tumour of endocrine organs
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Endocrine organs
+    lineage_broad: Neural / Schwannian
+    lineage_detail: null
+    parent: GRCT
+    families:
+    - Endocrine tumor
     - Neural tumor
 
   GYNANDROBLAST:
@@ -6015,6 +6220,17 @@ tumor_types:
     - Bone tumor
     - Adipocytic tumor
 
+  LIPO_ENDO:
+    name: Lipoma of endocrine organs
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Endocrine organs
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: LIPO
+    families:
+    - Endocrine tumor
+    - Adipocytic tumor
+
   LIPO_NERVE:
     name: Lipomatosis of nerve
     who_volume: Soft Tissue and Bone Tumours
@@ -6094,6 +6310,29 @@ tumor_types:
     families:
     - Sarcoma
     - Bone tumor
+    - Smooth muscle tumor
+
+  LMS_ENDO:
+    name: Leiomyosarcoma of endocrine organs
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Endocrine organs
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: LMS
+    families:
+    - Endocrine tumor
+    - Sarcoma
+    - Smooth muscle tumor
+
+  LM_ENDO:
+    name: Leiomyoma of endocrine organs
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Endocrine organs
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: LM
+    families:
+    - Endocrine tumor
     - Smooth muscle tumor
 
   LPD:
@@ -6774,6 +7013,18 @@ tumor_types:
     - Salivary gland-like tumor
     - Carcinoma
 
+  MEC_THY:
+    name: Mucoepidermoid carcinoma of the thyroid
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: MEC
+    families:
+    - Thyroid tumor
+    - Salivary gland-like tumor
+    - Carcinoma
+
   MEF2D:
     name: MEF2D-rearranged
     who_volume: Haematolymphoid Tumours
@@ -6810,6 +7061,17 @@ tumor_types:
     lineage_detail: null
     families:
     - CNS tumor
+    - Melanocytic tumor
+
+  MEL_ADREN:
+    name: Adrenal melanoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Adrenal gland
+    lineage_broad: Melanocytic
+    lineage_detail: null
+    parent: MEL
+    families:
+    - Adrenal tumor
     - Melanocytic tumor
 
   MEL_DESMO:
@@ -6870,6 +7132,17 @@ tumor_types:
     parent: MNG
     families:
     - Lung tumor
+    - Meningioma
+
+  MEN_SELLAR:
+    name: Meningioma of the sellar region
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Sellar region
+    lineage_broad: Meningothelial
+    lineage_detail: null
+    parent: MNG
+    families:
+    - Pituitary tumor
     - Meningioma
 
   MEN_SINO:
@@ -7031,6 +7304,17 @@ tumor_types:
     lineage_detail: null
     families:
     - Myo-fibroblastic tumor
+
+  MINEN:
+    name: Mixed neuroendocrine-non-neuroendocrine neoplasms
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Multiple
+    lineage_broad: Mixed
+    lineage_detail: null
+    parent: PAN_MINEN
+    families:
+    - Neuroendocrine tumor
+    - Carcinoma
 
   MIXED_GCSCT_OVA:
     name: Mixed germ cell-sex cord stromal tumour, unclassified
@@ -7214,6 +7498,18 @@ tumor_types:
     lineage_broad: Neural
     lineage_detail: null
     families:
+    - Sarcoma
+    - Peripheral nerve sheath tumor
+
+  MPNST_ENDO:
+    name: Malignant peripheral nerve sheath tumour of endocrine organs
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Endocrine organs
+    lineage_broad: Neural
+    lineage_detail: null
+    parent: MPNST
+    families:
+    - Endocrine tumor
     - Sarcoma
     - Peripheral nerve sheath tumor
 
@@ -7457,6 +7753,18 @@ tumor_types:
     - Neuroblastoma
     - Embryonal tumor
 
+  NBL_ADREN:
+    name: Neuroblastoma of the adrenal medulla
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Adrenal medulla
+    lineage_broad: Neural
+    lineage_detail: null
+    parent: NBL
+    families:
+    - Adrenal tumor
+    - Neuroblastoma
+    - Embryonal tumor
+
   NBL_GNBL:
     name: Neuroblastoma / Ganglioneuroblastoma
     who_volume: null
@@ -7484,6 +7792,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Soft tissue tumor
+
+  NEC:
+    name: Neuroendocrine carcinoma, NOS
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Multiple
+    lineage_broad: Neuroendocrine
+    lineage_detail: Neuroendocrine
+    families:
+    - Neuroendocrine carcinoma
+    - Carcinoma
 
   NECIDH2:
     name: Sinonasal Neuroendocrine Carcinoma with IDH2 mutations
@@ -7523,6 +7841,16 @@ tumor_types:
     - Lung tumor
     - Neuroendocrine tumor
 
+  NET_NONENDOCRINE:
+    name: Neuroendocrine tumours in non-endocrine organs
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Multiple
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    parent: NET_HN
+    families:
+    - Neuroendocrine tumor
+
   NET_PLAGL1_FUS:
     name: Neuroepithelial tumor with PLAGL1 fusion
     who_volume: Central Nervous System Tumours
@@ -7550,16 +7878,6 @@ tumor_types:
     lineage_detail: null
     families:
     - Peripheral nerve sheath tumor
-
-  NE_CA:
-    name: Neuroendocrine carcinoma, NOS
-    who_volume: Endocrine and Neuroendocrine Tumours
-    site: Multiple
-    lineage_broad: Neuroendocrine
-    lineage_detail: Neuroendocrine
-    families:
-    - Neuroendocrine carcinoma
-    - Carcinoma
 
   NF:
     name: Neurofibroma
@@ -7628,6 +7946,27 @@ tumor_types:
     parent: NFIB
     families:
     - Peripheral nerve sheath tumor
+
+  NF_ENDO:
+    name: Neurofibroma of endocrine organs
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Endocrine organs
+    lineage_broad: Neural
+    lineage_detail: null
+    parent: NFIB
+    families:
+    - Endocrine tumor
+    - Peripheral nerve sheath tumor
+
+  NIFTP:
+    name: Non-invasive follicular thyroid neoplasm with papillary-like nuclear features
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Thyroid tumor
+    - Low-risk neoplasm
 
   NITAC:
     name: Non-intestinal-type Sinonasal Adenocarcinoma
@@ -8547,6 +8886,137 @@ tumor_types:
     - Neuroendocrine tumor
     - Carcinoma
 
+  PAN_MIX_ACINAR_NEN:
+    name: Mixed acinar-neuroendocrine carcinoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Pancreas
+    lineage_broad: Mixed
+    lineage_detail: null
+    parent: PAN_MINEN
+    families:
+    - Pancreatic tumor
+    - Neuroendocrine tumor
+    - Carcinoma
+
+  PAN_MIX_DUCTAL_NEN:
+    name: Mixed ductal adenocarcinoma-neuroendocrine neoplasms
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Pancreas
+    lineage_broad: Mixed
+    lineage_detail: null
+    parent: PAN_MINEN
+    families:
+    - Pancreatic tumor
+    - Neuroendocrine tumor
+    - Carcinoma
+
+  PAN_NEC:
+    name: Pancreatic neuroendocrine carcinoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Pancreas
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    parent: PNEC
+    families:
+    - Pancreatic tumor
+    - Neuroendocrine tumor
+    - Carcinoma
+
+  PAN_NET_ECTOPIC:
+    name: Other pancreatic neuroendocrine tumours with ectopic hormone production
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Pancreas
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    parent: PNET
+    families:
+    - Pancreatic tumor
+    - Neuroendocrine tumor
+    - Functioning NET
+
+  PAN_NET_GASTRINOMA:
+    name: Gastrinoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Pancreas
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    parent: PNET
+    families:
+    - Pancreatic tumor
+    - Neuroendocrine tumor
+    - Functioning NET
+
+  PAN_NET_GLUCAGONOMA:
+    name: Glucagonoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Pancreas
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    parent: PNET
+    families:
+    - Pancreatic tumor
+    - Neuroendocrine tumor
+    - Functioning NET
+
+  PAN_NET_INSULINOMA:
+    name: Insulinoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Pancreas
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    parent: PNET
+    families:
+    - Pancreatic tumor
+    - Neuroendocrine tumor
+    - Functioning NET
+
+  PAN_NET_NF:
+    name: Non-functioning (non-syndromic) pancreatic neuroendocrine tumours
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Pancreas
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    parent: PNET
+    families:
+    - Pancreatic tumor
+    - Neuroendocrine tumor
+
+  PAN_NET_SEROTONIN:
+    name: Serotonin-producing tumours with and without carcinoid syndrome
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Pancreas
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    parent: PNET
+    families:
+    - Pancreatic tumor
+    - Neuroendocrine tumor
+    - Functioning NET
+
+  PAN_NET_SOMATOSTATINOMA:
+    name: Somatostatinoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Pancreas
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    parent: PNET
+    families:
+    - Pancreatic tumor
+    - Neuroendocrine tumor
+    - Functioning NET
+
+  PAN_NET_VIPOMA:
+    name: VIPoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Pancreas
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    parent: PNET
+    families:
+    - Pancreatic tumor
+    - Neuroendocrine tumor
+    - Functioning NET
+
   PAP_CYSTADEN_BLIG:
     name: Papillary cystadenoma (broad ligament)
     who_volume: Female Genital Tumours
@@ -8574,6 +9044,57 @@ tumor_types:
     lineage_detail: null
     families:
     - Vascular tumor
+
+  PARA_AD:
+    name: Parathyroid adenoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Parathyroid
+    lineage_broad: Endocrine
+    lineage_detail: null
+    families:
+    - Parathyroid tumor
+    - Adenoma
+
+  PARA_ATYP:
+    name: Atypical parathyroid tumour
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Parathyroid
+    lineage_broad: Endocrine
+    lineage_detail: null
+    families:
+    - Parathyroid tumor
+    - Borderline tumor
+
+  PARA_CA:
+    name: Parathyroid carcinoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Parathyroid
+    lineage_broad: Endocrine
+    lineage_detail: null
+    families:
+    - Parathyroid tumor
+    - Carcinoma
+
+  PARA_HYPERPLASIA:
+    name: Parathyroid hyperplasia
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Parathyroid
+    lineage_broad: Endocrine
+    lineage_detail: null
+    families:
+    - Parathyroid tumor
+    - Hyperplasia
+
+  PARA_LIPOAD:
+    name: Parathyroid lipoadenoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Parathyroid
+    lineage_broad: Endocrine
+    lineage_detail: null
+    parent: PARA_ADENOMA
+    families:
+    - Parathyroid tumor
+    - Adenoma
 
   PATZ1_SARC:
     name: PATZ1-rearranged sarcoma
@@ -8623,16 +9144,6 @@ tumor_types:
     - Gastrointestinal tumor
     - Embryonal tumor
 
-  PCC:
-    name: Pheochromocytoma
-    who_volume: Endocrine and Neuroendocrine Tumours
-    site: Adrenal gland
-    lineage_broad: Neuroendocrine
-    lineage_detail: null
-    families:
-    - Adrenal tumor
-    - Neuroendocrine tumor
-
   PCFCL:
     name: Primary Cutaneous Follicle Center Lymphoma
     who_volume: null
@@ -8658,6 +9169,17 @@ tumor_types:
     lineage_broad: Mesenchymal
     lineage_detail: null
     families:
+    - Perivascular tumor
+
+  PECOMA_ENDO:
+    name: PEComa of endocrine organs
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Endocrine organs
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: PEC
+    families:
+    - Endocrine tumor
     - Perivascular tumor
 
   PECOMA_LU:
@@ -8719,6 +9241,17 @@ tumor_types:
     families:
     - Neuroepithelial tumor
 
+  PGG_COMPOSITE:
+    name: Composite phaeochromocytomas and paragangliomas
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Adrenal medulla / paraganglia
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    parent: PGG
+    families:
+    - Paraganglioma
+    - Neuroendocrine tumor
+
   PGG_EXAD:
     name: Extra-adrenal paraganglioma
     who_volume: null
@@ -8735,6 +9268,28 @@ tumor_types:
     site: Spinal cord
     lineage_broad: Neuroendocrine
     lineage_detail: null
+    families:
+    - Paraganglioma
+    - Neuroendocrine tumor
+
+  PGG_PARASYM:
+    name: Parasympathetic paraganglioma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Extra-adrenal paraganglia
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    parent: PGG
+    families:
+    - Paraganglioma
+    - Neuroendocrine tumor
+
+  PGG_SYMP:
+    name: Sympathetic paraganglioma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Extra-adrenal paraganglia
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    parent: PGG
     families:
     - Paraganglioma
     - Neuroendocrine tumor
@@ -8757,6 +9312,17 @@ tumor_types:
     lineage_detail: null
     families:
     - Soft tissue tumor
+
+  PHEO:
+    name: Phaeochromocytoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Adrenal medulla
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    families:
+    - Adrenal tumor
+    - Paraganglioma
+    - Neuroendocrine tumor
 
   PHM:
     name: Partial hydatidiform mole
@@ -8951,6 +9517,16 @@ tumor_types:
     - Pituitary tumor
     - Neuroendocrine tumor
 
+  PITUICYTOMA:
+    name: Pituicytomas
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Posterior pituitary
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    parent: PITUI_SCO_GCT
+    families:
+    - Pituitary tumor
+
   PITUI_SCO_GCT:
     name: Pituicytoma / granular cell tumor / spindle cell oncocytoma
     who_volume: Central Nervous System Tumours
@@ -8959,6 +9535,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Pituitary tumor
+
+  PIT_BLASTOMA:
+    name: Pituitary blastoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Pituitary gland
+    lineage_broad: Embryonal
+    lineage_detail: null
+    families:
+    - Pituitary tumor
+    - Embryonal tumor
 
   PIT_CARC:
     name: Pituitary carcinoma
@@ -9519,6 +10105,18 @@ tumor_types:
     - Sarcoma
     - Rhabdomyosarcoma
 
+  RMS_ENDO:
+    name: Rhabdomyosarcoma of endocrine organs
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Endocrine organs
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: RMS
+    families:
+    - Endocrine tumor
+    - Sarcoma
+    - Rhabdomyosarcoma
+
   RMS_FUSION:
     name: Fusion-associated spindle cell rhabdomyosarcomas
     who_volume: Soft Tissue and Bone Tumours
@@ -9899,6 +10497,17 @@ tumor_types:
     - Peripheral nerve sheath tumor
     - Benign tumor
 
+  SCHW_ENDO:
+    name: Schwannoma of endocrine organs
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Endocrine organs
+    lineage_broad: Neural
+    lineage_detail: null
+    parent: SCHW
+    families:
+    - Endocrine tumor
+    - Peripheral nerve sheath tumor
+
   SCHW_HAM:
     name: Schwann cell hamartoma
     who_volume: Soft Tissue and Bone Tumours
@@ -9934,6 +10543,7 @@ tumor_types:
     site: null
     lineage_broad: Neuroendocrine
     lineage_detail: null
+    parent: SCNEC
     families:
     - Neuroendocrine tumor
 
@@ -9945,6 +10555,17 @@ tumor_types:
     lineage_detail: null
     families:
     - Lung tumor
+    - Neuroendocrine tumor
+    - Carcinoma
+
+  SCNEC:
+    name: Small cell neuroendocrine carcinoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Multiple
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    parent: NEC
+    families:
     - Neuroendocrine tumor
     - Carcinoma
 
@@ -10052,6 +10673,27 @@ tumor_types:
     - Sarcoma
     - Fibroblastic tumor
 
+  SELLAR_GANGLIOCYTOMA:
+    name: Gangliocytoma and mixed gangliocytoma-PitNET/adenoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Sellar region
+    lineage_broad: Neuronal
+    lineage_detail: null
+    families:
+    - Pituitary tumor
+    - Neuronal tumor
+
+  SELLAR_NEUROCYTOMA:
+    name: Sellar neurocytoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Sellar region
+    lineage_broad: Neuronal
+    lineage_detail: null
+    parent: CN
+    families:
+    - Pituitary tumor
+    - Neurocytic tumor
+
   SEMIN:
     name: Seminoma
     who_volume: Urinary and Male Genital Tumours
@@ -10071,6 +10713,16 @@ tumor_types:
     families:
     - Gastrointestinal tumor
 
+  SETTLE:
+    name: Spindle epithelial tumour with thymus-like elements
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Thyroid tumor
+    - Thymic-like tumor
+
   SEZARY:
     name: Sézary syndrome
     who_volume: Haematolymphoid Tumours
@@ -10088,6 +10740,17 @@ tumor_types:
     lineage_detail: null
     families:
     - Soft tissue tumor
+    - Fibroblastic tumor
+
+  SFT_ENDO:
+    name: Solitary fibrous tumour of endocrine organs
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Endocrine organs
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: SFT
+    families:
+    - Endocrine tumor
     - Fibroblastic tumor
 
   SFT_MAL:
@@ -10621,6 +11284,18 @@ tumor_types:
     families:
     - Salivary gland tumor
 
+  SSC_THY:
+    name: Secretory carcinoma of the thyroid
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: SSC
+    families:
+    - Thyroid tumor
+    - Salivary gland-like tumor
+    - Carcinoma
+
   SSL:
     name: Colorectal sessile serrated lesion
     who_volume: Digestive System Tumours
@@ -10998,6 +11673,18 @@ tumor_types:
     - Thymic tumor
     - Neuroendocrine tumor
 
+  THYMO_THY:
+    name: Thymoma within the thyroid gland
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: THYMO
+    families:
+    - Thyroid tumor
+    - Thymic tumor
+    - Thymoma
+
   THYRA:
     name: Thyroid Adenoma
     who_volume: null
@@ -11015,6 +11702,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Carcinoma
+
+  THYROBL:
+    name: Thyroblastoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Embryonal
+    lineage_detail: null
+    families:
+    - Thyroid tumor
+    - Embryonal tumor
 
   THYR_CA:
     name: Thyroid carcinoma, NOS
@@ -11056,6 +11753,126 @@ tumor_types:
     - Thyroid tumor
     - Carcinoma
 
+  THY_ANA_CA:
+    name: Anaplastic thyroid carcinoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: THYRAC
+    families:
+    - Thyroid tumor
+    - Carcinoma
+
+  THY_CMTC:
+    name: Cribriform morular thyroid carcinoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Thyroid tumor
+    - Carcinoma
+
+  THY_FND:
+    name: Thyroid follicular nodular disease
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: MG
+    families:
+    - Thyroid tumor
+    - Benign lesion
+
+  THY_FOL_AD:
+    name: Follicular thyroid adenoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: THYRA
+    families:
+    - Thyroid tumor
+    - Adenoma
+
+  THY_FOL_AD_PAP:
+    name: Follicular thyroid adenoma with papillary architecture
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: THY_FOL_ADENOMA
+    families:
+    - Thyroid tumor
+    - Adenoma
+
+  THY_FOL_CA:
+    name: Follicular thyroid carcinoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: THYR_CA_FOL
+    families:
+    - Thyroid tumor
+    - Carcinoma
+
+  THY_HG_FOL_DER_CA:
+    name: High-grade follicular cell-derived non-anaplastic thyroid carcinoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: THYR_CA
+    families:
+    - Thyroid tumor
+    - Carcinoma
+    - High-grade carcinoma
+
+  THY_HYALIN_TRAB:
+    name: Hyalinizing trabecular tumour
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Thyroid tumor
+    - Low-risk neoplasm
+
+  THY_INTRATHYMIC_CA:
+    name: Intrathyroidal thymic carcinoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: THYMO_C
+    families:
+    - Thyroid tumor
+    - Thymic tumor
+    - Carcinoma
+
+  THY_INV_ENCAP_FV_PTC:
+    name: Invasive encapsulated follicular variant of papillary thyroid carcinoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: THYR_CA_PAP
+    families:
+    - Thyroid tumor
+    - Carcinoma
+
+  THY_MIXED_MED_FOL_CA:
+    name: Mixed medullary and follicular cell-derived thyroid carcinoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Mixed
+    lineage_detail: null
+    families:
+    - Thyroid tumor
+    - Carcinoma
+
   THY_MN:
     name: Micronodular Thymoma
     who_volume: null
@@ -11064,6 +11881,71 @@ tumor_types:
     lineage_detail: null
     families:
     - Thymic tumor
+
+  THY_MTC:
+    name: Medullary thyroid carcinoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Neuroendocrine
+    lineage_detail: C-cell
+    parent: MTC
+    families:
+    - Thyroid tumor
+    - Neuroendocrine tumor
+    - Carcinoma
+
+  THY_ONCO_AD:
+    name: Oncocytic adenoma of the thyroid gland
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: THYRA
+    families:
+    - Thyroid tumor
+    - Adenoma
+
+  THY_ONCO_CA:
+    name: Oncocytic carcinoma of the thyroid gland
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: THYR_CA
+    families:
+    - Thyroid tumor
+    - Carcinoma
+
+  THY_PTC:
+    name: Papillary thyroid carcinoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: THYR_CA_PAP
+    families:
+    - Thyroid tumor
+    - Carcinoma
+
+  THY_SMECE:
+    name: Sclerosing mucoepidermoid carcinoma with eosinophilia
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Thyroid tumor
+    - Carcinoma
+
+  THY_UTMP:
+    name: Thyroid tumours of uncertain malignant potential
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Thyroid tumor
+    - Borderline tumor
 
   TLGLL:
     name: T-cell large granular lymphocytic leukemia
