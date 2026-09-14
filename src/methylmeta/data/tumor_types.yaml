@@ -859,15 +859,6 @@ tumor_types:
     families:
     - mature_b_non_small_cell
 
-  PAP_CYSTADEN_BLIG:
-    name: Papillary cystadenoma (broad ligament)
-    who_volume: Female Genital Tumours
-    site: Broad ligament
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Gynecologic tumor
-
   BMN:
     name: Benign Melanocytic Nevus
     who_volume: null
@@ -1299,6 +1290,16 @@ tumor_types:
     - Gynecologic tumor
     - Carcinoma
 
+  CERV_ABC:
+    name: Adenoid basal carcinoma (cervix)
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
   CERV_ADCA_CC:
     name: Cervical adenocarcinoma, HPV-independent, clear cell type
     who_volume: Female Genital Tumours
@@ -1354,6 +1355,112 @@ tumor_types:
     - Gynecologic tumor
     - Carcinoma
 
+  CERV_ADSC_HPV:
+    name: Adenosquamous carcinoma, HPV-associated (cervix)
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: ADSC
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  CERV_ADSC_HPVI:
+    name: Adenosquamous carcinoma, HPV-independent (cervix)
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: ADSC
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  CERV_AIS:
+    name: Adenocarcinoma in situ
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Precursor lesion
+
+  CERV_AIS_HPV:
+    name: Adenocarcinoma in situ, HPV-associated (cervix)
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: CERV_AIS
+    families:
+    - Gynecologic tumor
+    - Precursor lesion
+
+  CERV_AIS_HPVI:
+    name: Adenocarcinoma in situ, HPV-independent (cervix)
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: CERV_AIS
+    families:
+    - Gynecologic tumor
+    - Precursor lesion
+
+  CERV_CA:
+    name: Cervical carcinoma
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  CERV_CARSARC:
+    name: Carcinosarcoma (cervix)
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Mixed epithelial / mesenchymal
+    lineage_detail: null
+    parent: CARSARC_GYN
+    families:
+    - Gynecologic tumor
+    - Carcinosarcoma
+
+  CERV_CA_UNCL:
+    name: Carcinoma, unclassifiable (cervix)
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+
+  CERV_NEC:
+    name: Neuroendocrine carcinoma (cervix)
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Neuroendocrine tumor
+    - Carcinoma
+
+  CERV_NET:
+    name: Neuroendocrine tumour (cervix)
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+    - Neuroendocrine tumor
+
   CERV_SCC:
     name: Cervical squamous cell carcinoma
     who_volume: Female Genital Tumours
@@ -1399,122 +1506,6 @@ tumor_types:
     - Gynecologic tumor
     - Carcinoma
     - Squamous cell carcinoma
-
-  CERV_ABC:
-    name: Adenoid basal carcinoma (cervix)
-    who_volume: Female Genital Tumours
-    site: Cervix
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Gynecologic tumor
-    - Carcinoma
-
-  CERV_ADSC_HPV:
-    name: Adenosquamous carcinoma, HPV-associated (cervix)
-    who_volume: Female Genital Tumours
-    site: Cervix
-    lineage_broad: Epithelial
-    lineage_detail: null
-    parent: ADSC
-    families:
-    - Gynecologic tumor
-    - Carcinoma
-
-  CERV_ADSC_HPVI:
-    name: Adenosquamous carcinoma, HPV-independent (cervix)
-    who_volume: Female Genital Tumours
-    site: Cervix
-    lineage_broad: Epithelial
-    lineage_detail: null
-    parent: ADSC
-    families:
-    - Gynecologic tumor
-    - Carcinoma
-
-  CERV_AIS_HPV:
-    name: Adenocarcinoma in situ, HPV-associated (cervix)
-    who_volume: Female Genital Tumours
-    site: Cervix
-    lineage_broad: Epithelial
-    lineage_detail: null
-    parent: CERV_AIS
-    families:
-    - Gynecologic tumor
-    - Precursor lesion
-
-  CERV_AIS:
-    name: Adenocarcinoma in situ
-    who_volume: Female Genital Tumours
-    site: Cervix
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Gynecologic tumor
-    - Precursor lesion
-
-  CERV_AIS_HPVI:
-    name: Adenocarcinoma in situ, HPV-independent (cervix)
-    who_volume: Female Genital Tumours
-    site: Cervix
-    lineage_broad: Epithelial
-    lineage_detail: null
-    parent: CERV_AIS
-    families:
-    - Gynecologic tumor
-    - Precursor lesion
-
-  CERV_CARSARC:
-    name: Carcinosarcoma (cervix)
-    who_volume: Female Genital Tumours
-    site: Cervix
-    lineage_broad: Mixed epithelial / mesenchymal
-    lineage_detail: null
-    parent: CARSARC_GYN
-    families:
-    - Gynecologic tumor
-    - Carcinosarcoma
-
-  CERV_CA:
-    name: Cervical carcinoma
-    who_volume: Female Genital Tumours
-    site: Cervix
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Gynecologic tumor
-    - Carcinoma
-
-  CERV_CA_UNCL:
-    name: Carcinoma, unclassifiable (cervix)
-    who_volume: Female Genital Tumours
-    site: Cervix
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Gynecologic tumor
-    - Carcinoma
-
-  CERV_NEC:
-    name: Neuroendocrine carcinoma (cervix)
-    who_volume: Female Genital Tumours
-    site: Cervix
-    lineage_broad: Neuroendocrine
-    lineage_detail: null
-    families:
-    - Gynecologic tumor
-    - Neuroendocrine tumor
-    - Carcinoma
-
-  CERV_NET:
-    name: Neuroendocrine tumour (cervix)
-    who_volume: Female Genital Tumours
-    site: Cervix
-    lineage_broad: Neuroendocrine
-    lineage_detail: null
-    families:
-    - Gynecologic tumor
-    - Neuroendocrine tumor
 
   CFT:
     name: Calcifying fibrous tumour
@@ -7485,6 +7476,15 @@ tumor_types:
     - Neuroendocrine tumor
     - Carcinoma
 
+  PAP_CYSTADEN_BLIG:
+    name: Papillary cystadenoma (broad ligament)
+    who_volume: Female Genital Tumours
+    site: Broad ligament
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gynecologic tumor
+
   PAP_ESO:
     name: Esophageal squamous papilloma
     who_volume: Digestive System Tumours
@@ -8693,6 +8693,18 @@ tumor_types:
     - Carcinoma
     - Squamous cell carcinoma
 
+  SCC_VAG:
+    name: Squamous cell carcinoma, HPV status undetermined (vagina)
+    who_volume: Female Genital Tumours
+    site: Vagina
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: SCC
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+    - Squamous cell carcinoma
+
   SCC_VAG_HPV:
     name: Squamous cell carcinoma, HPV-associated (vagina)
     who_volume: Female Genital Tumours
@@ -8707,18 +8719,6 @@ tumor_types:
 
   SCC_VAG_HPVI:
     name: Squamous cell carcinoma, HPV-independent (vagina)
-    who_volume: Female Genital Tumours
-    site: Vagina
-    lineage_broad: Epithelial
-    lineage_detail: null
-    parent: SCC
-    families:
-    - Gynecologic tumor
-    - Carcinoma
-    - Squamous cell carcinoma
-
-  SCC_VAG:
-    name: Squamous cell carcinoma, HPV status undetermined (vagina)
     who_volume: Female Genital Tumours
     site: Vagina
     lineage_broad: Epithelial
@@ -8750,6 +8750,18 @@ tumor_types:
     - Carcinoma
     - Squamous cell carcinoma
 
+  SCC_VULVA:
+    name: Squamous cell carcinoma, HPV status undetermined (vulva)
+    who_volume: Female Genital Tumours
+    site: Vulva
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: SCC
+    families:
+    - Gynecologic tumor
+    - Carcinoma
+    - Squamous cell carcinoma
+
   SCC_VULVA_HPV:
     name: Squamous cell carcinoma, HPV-associated (vulva)
     who_volume: Female Genital Tumours
@@ -8769,18 +8781,6 @@ tumor_types:
     lineage_broad: Epithelial
     lineage_detail: null
     parent: SCC_VULVA
-    families:
-    - Gynecologic tumor
-    - Carcinoma
-    - Squamous cell carcinoma
-
-  SCC_VULVA:
-    name: Squamous cell carcinoma, HPV status undetermined (vulva)
-    who_volume: Female Genital Tumours
-    site: Vulva
-    lineage_broad: Epithelial
-    lineage_detail: null
-    parent: SCC
     families:
     - Gynecologic tumor
     - Carcinoma
