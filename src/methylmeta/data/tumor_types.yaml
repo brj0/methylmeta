@@ -6942,8 +6942,8 @@ tumor_types:
 
   SBMC5P5Q:
     name: Salivary Gland Biphasic Myoepithelial Carcinoma with 5p/5q Loss
-    who_volume: null
-    site: null
+    who_volume: Head and Neck Tumours
+    site: Salivary gland
     lineage_broad: Epithelial
     lineage_detail: null
     families:
@@ -6961,7 +6961,7 @@ tumor_types:
 
   SCA:
     name: Salivary Gland Canalicular Adenoma
-    who_volume: null
+    who_volume: Head and Neck Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -6970,8 +6970,8 @@ tumor_types:
 
   SCADC:
     name: Cribriform Adenocarcinoma
-    who_volume: null
-    site: null
+    who_volume: Head and Neck Tumours
+    site: Salivay gland
     lineage_broad: Epithelial
     lineage_detail: null
     families:
