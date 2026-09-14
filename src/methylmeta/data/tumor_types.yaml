@@ -982,6 +982,168 @@ tumor_types:
     - Bone lesion
     - Giant cell lesion
 
+  BR_ACINIC_CA:
+    name: Acinic cell-like carcinoma of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: SACC
+    families:
+    - Breast tumor
+    - Salivary gland-like tumor
+    - Carcinoma
+
+  BR_ADCC:
+    name: Adenoid cystic carcinoma of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: ADCC
+    families:
+    - Breast tumor
+    - Salivary gland-like tumor
+    - Carcinoma
+
+  BR_ADENOMYOEPI:
+    name: Classic adenomyoepithelioma
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial / myoepithelial
+    lineage_detail: null
+    families:
+    - Breast tumor
+    - Epithelial-myoepithelial tumor
+
+  BR_ADENOMYOEPI_MAL:
+    name: Malignant adenomyoepithelioma
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial / myoepithelial
+    lineage_detail: null
+    parent: BR_ADENOMYOEPI
+    families:
+    - Breast tumor
+    - Epithelial-myoepithelial tumor
+    - Carcinoma
+
+  BR_ADH:
+    name: Atypical ductal hyperplasia
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Breast tumor
+    - Precursor lesion
+
+  BR_ALCL:
+    name: Breast implant-associated anaplastic large cell lymphoma
+    who_volume: Breast Tumours
+    site: Breast (implant capsule)
+    lineage_broad: Hematolymphoid
+    lineage_detail: T-Cell
+    parent: ALCL
+    families:
+    - Breast tumor
+    - Lymphoma
+    - T-cell lymphoma
+
+  BR_ALH:
+    name: Atypical lobular hyperplasia
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Breast tumor
+    - Precursor lesion
+
+  BR_ANGIOMATOSIS:
+    name: Angiomatosis of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Vascular
+    lineage_detail: null
+    families:
+    - Breast tumor
+    - Vascular tumor
+
+  BR_APOCRINE_ADENOSIS:
+    name: Apocrine adenosis and apocrine adenoma
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Breast tumor
+    - Benign epithelial proliferation
+
+  BR_APOCRINE_CA:
+    name: Invasive apocrine carcinoma
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: BRCA
+    families:
+    - Breast tumor
+    - Carcinoma
+
+  BR_ATYP_VASC:
+    name: Atypical vascular lesions of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Vascular
+    lineage_detail: null
+    families:
+    - Breast tumor
+    - Vascular tumor
+
+  BR_CRIB_CA:
+    name: Invasive cribriform carcinoma
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: BRCA
+    families:
+    - Breast tumor
+    - Carcinoma
+
+  BR_DESMOID:
+    name: Desmoid fibromatosis of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: DF
+    families:
+    - Breast tumor
+    - Fibroblastic tumor
+
+  BR_DUCT_ADENOMA:
+    name: Ductal adenoma
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Breast tumor
+    - Adenoma
+
+  BR_ENCAP_PAP_CA:
+    name: Encapsulated papillary carcinoma
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Breast tumor
+    - Papillary neoplasm
+    - Carcinoma
+
   BR_FAD:
     name: Fibroadenoma of the breast
     who_volume: Breast Tumours
@@ -992,6 +1154,16 @@ tumor_types:
     - Breast tumor
     - Benign tumor
 
+  BR_FEA:
+    name: Flat epithelial atypia
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Breast tumor
+    - Precursor lesion
+
   BR_FEPNOS:
     name: Fibroepithelial lesion of the breast, NOS
     who_volume: Breast Tumours
@@ -1001,6 +1173,381 @@ tumor_types:
     families:
     - Breast tumor
     - Fibroepithelial tumor
+
+  BR_GRAN_CELL:
+    name: Granular cell tumour of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Neural / Schwannian
+    lineage_detail: null
+    parent: GRCT
+    families:
+    - Breast tumor
+    - Neural tumor
+
+  BR_HAMARTOMA:
+    name: Hamartoma of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial / stromal
+    lineage_detail: null
+    parent: HAIRP
+    families:
+    - Breast tumor
+    - Hamartoma
+
+  BR_HEMANG:
+    name: Haemangioma of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Vascular
+    lineage_detail: null
+    parent: HEMANG_BONE
+    families:
+    - Breast tumor
+    - Vascular tumor
+
+  BR_IBC_NST:
+    name: Invasive breast carcinoma of no special type
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: BRCA
+    families:
+    - Breast tumor
+    - Carcinoma
+
+  BR_INTRADUCT_PAP:
+    name: Intraductal papilloma
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Breast tumor
+    - Papillary neoplasm
+
+  BR_INV_PAP_CA:
+    name: Invasive papillary carcinoma
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Breast tumor
+    - Papillary neoplasm
+    - Carcinoma
+
+  BR_LACT_ADENOMA:
+    name: Lactating adenoma
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Breast tumor
+    - Adenoma
+
+  BR_LCIS:
+    name: Lobular carcinoma in situ
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Breast tumor
+    - Carcinoma in situ
+    - Lobular neoplasm
+
+  BR_LOB_CA:
+    name: Invasive lobular carcinoma
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: BRCA
+    families:
+    - Breast tumor
+    - Carcinoma
+    - Lobular neoplasm
+
+  BR_MEC:
+    name: Mucoepidermoid carcinoma of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: MEC
+    families:
+    - Breast tumor
+    - Salivary gland-like tumor
+    - Carcinoma
+
+  BR_META_CA:
+    name: Metaplastic carcinoma of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial / mesenchymal
+    lineage_detail: null
+    parent: BRCA
+    families:
+    - Breast tumor
+    - Carcinoma
+    - Metaplastic carcinoma
+
+  BR_MICROINV_CA:
+    name: Microinvasive carcinoma
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: BRCA
+    families:
+    - Breast tumor
+    - Carcinoma
+
+  BR_MICROPAP_CA:
+    name: Invasive micropapillary carcinoma
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: BRCA
+    families:
+    - Breast tumor
+    - Carcinoma
+
+  BR_MUC_CA:
+    name: Mucinous carcinoma of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: BRCA
+    families:
+    - Breast tumor
+    - Carcinoma
+
+  BR_MUC_CYSTADEN_CA:
+    name: Mucinous cystadenocarcinoma of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: BRCA
+    families:
+    - Breast tumor
+    - Carcinoma
+
+  BR_MYOFIBRO:
+    name: Myofibroblastoma of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: MYOFIBRO
+    families:
+    - Breast tumor
+    - Fibroblastic tumor
+
+  BR_NEC:
+    name: Neuroendocrine carcinoma of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    parent: NE_CA
+    families:
+    - Breast tumor
+    - Neuroendocrine tumor
+    - Carcinoma
+
+  BR_NET:
+    name: Neuroendocrine tumour of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    parent: NET_HN
+    families:
+    - Breast tumor
+    - Neuroendocrine tumor
+
+  BR_NIPPLE_ADENOMA:
+    name: Nipple adenoma
+    who_volume: Breast Tumours
+    site: Nipple
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Breast tumor
+    - Nipple tumor
+    - Adenoma
+
+  BR_PA:
+    name: Pleomorphic adenoma of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial / myoepithelial
+    lineage_detail: null
+    parent: MYO_PA
+    families:
+    - Breast tumor
+    - Salivary gland-like tumor
+
+  BR_PAGET:
+    name: Mammary Paget disease
+    who_volume: Breast Tumours
+    site: Nipple / breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: PAGET_VULVA
+    families:
+    - Breast tumor
+    - Nipple tumor
+    - Carcinoma
+
+  BR_PAP_DCIS:
+    name: Papillary ductal carcinoma in situ
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: DCIS
+    families:
+    - Breast tumor
+    - Papillary neoplasm
+    - Carcinoma in situ
+
+  BR_PASH:
+    name: Pseudoangiomatous stromal hyperplasia
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Breast tumor
+    - Stromal lesion
+
+  BR_POSTRAD_AS:
+    name: Postradiation angiosarcoma of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Vascular
+    lineage_detail: null
+    parent: AS
+    families:
+    - Breast tumor
+    - Vascular tumor
+    - Sarcoma
+
+  BR_PRIMARY_AS:
+    name: Primary angiosarcoma of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Vascular
+    lineage_detail: null
+    parent: AS
+    families:
+    - Breast tumor
+    - Vascular tumor
+    - Sarcoma
+
+  BR_RADIAL_SCAR:
+    name: Radial scar / complex sclerosing lesion
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial / stromal
+    lineage_detail: null
+    families:
+    - Breast tumor
+    - Benign epithelial proliferation
+
+  BR_SCLER_ADENOSIS:
+    name: Sclerosing adenosis
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Breast tumor
+    - Benign epithelial proliferation
+
+  BR_SECR_CA:
+    name: Secretory carcinoma of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: SSC
+    families:
+    - Breast tumor
+    - Salivary gland-like tumor
+    - Carcinoma
+
+  BR_SOLID_PAP_CA:
+    name: Solid papillary carcinoma (in situ and invasive)
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Breast tumor
+    - Papillary neoplasm
+    - Carcinoma
+
+  BR_SYRING_NIPPLE:
+    name: Syringomatous tumour of the nipple
+    who_volume: Breast Tumours
+    site: Nipple
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Breast tumor
+    - Nipple tumor
+
+  BR_TALL_CELL:
+    name: Tall cell carcinoma with reversed polarity
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: BRCA
+    families:
+    - Breast tumor
+    - Carcinoma
+
+  BR_TUB_ADENOMA:
+    name: Tubular adenoma of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Breast tumor
+    - Adenoma
+
+  BR_TUB_CA:
+    name: Tubular carcinoma of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: BRCA
+    families:
+    - Breast tumor
+    - Carcinoma
+
+  BR_UDH:
+    name: Usual ductal hyperplasia
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Breast tumor
+    - Benign epithelial proliferation
 
   BSCC_LAR:
     name: Basaloid squamous cell carcinoma (larynx)
@@ -5598,6 +6145,38 @@ tumor_types:
     - Lymphoma
     - B-cell lymphoma
     - Mantle cell lymphoma
+
+  MALE_BR_DCIS:
+    name: Carcinoma in situ of the male breast
+    who_volume: Breast Tumours
+    site: Male breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: DCIS
+    families:
+    - Male breast tumor
+    - Carcinoma in situ
+
+  MALE_BR_GYNECOMASTIA:
+    name: Gynaecomastia
+    who_volume: Breast Tumours
+    site: Male breast
+    lineage_broad: Epithelial / stromal
+    lineage_detail: null
+    families:
+    - Male breast tumor
+    - Benign lesion
+
+  MALE_BR_INV_CA:
+    name: Invasive carcinoma of the male breast
+    who_volume: Breast Tumours
+    site: Male breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: BRCA
+    families:
+    - Male breast tumor
+    - Carcinoma
 
   MATTER_T:
     name: Testicular mature teratoma
