@@ -1107,6 +1107,16 @@ tumor_types:
     - Sarcoma
     - Soft tissue tumor
 
+  ASTROB_MN1:
+    name: Astroblastoma, MN1-altered
+    who_volume: Paediatric Tumours
+    site: Central nervous system
+    lineage_broad: Glial
+    lineage_detail: null
+    families:
+    - CNS tumor
+    - Glial tumor
+
   ASTRO_IDH:
     name: Astrocytoma, IDH-mutant
     who_volume: Central Nervous System Tumours
@@ -2393,6 +2403,15 @@ tumor_types:
     - Salivary gland tumor
     - Adenoma
 
+  CAP_MALF:
+    name: Capillary malformations
+    who_volume: Paediatric Tumours
+    site: Soft tissue / skin
+    lineage_broad: Vascular
+    lineage_detail: null
+    families:
+    - Vascular malformation
+
   CARCI_A_LUN:
     name: Atypical carcinoid of the lung
     who_volume: Thoracic Tumours
@@ -3014,6 +3033,16 @@ tumor_types:
     - Pituitary tumor
     - Chordoma
 
+  CHOROIDAL_NF_GN:
+    name: Diffuse choroidal neurofibroma and ganglioneuroma
+    who_volume: Paediatric Tumours
+    site: Eye
+    lineage_broad: Neural
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Neural tumor
+
   CHRPL:
     name: Chronic Pleuritis
     who_volume: null
@@ -3022,6 +3051,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Undefined
+
+  CIC_SARC:
+    name: Small blue round cell tumor with CIC alteration
+    who_volume: Soft Tissue and Bone Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Sarcoma
+    - Small round cell tumor
 
   CIN:
     name: Cervical Intraepithelial Neoplasia
@@ -3175,6 +3214,16 @@ tumor_types:
     - CNS tumor
     - Neurocytic tumor
 
+  CNET:
+    name: Cribriform neuroepithelial tumour
+    who_volume: Paediatric Tumours
+    site: Central nervous system
+    lineage_broad: Embryonal
+    lineage_detail: null
+    families:
+    - CNS tumor
+    - Embryonal tumor
+
   CNFT:
     name: Cutaneous neurocristic EWSR1::FLI1 fusion tumor
     who_volume: Skin Tumours
@@ -3202,6 +3251,26 @@ tumor_types:
     lineage_detail: null
     families:
     - Hematolymphoid neoplasm
+
+  CNS_BCOR_ITD:
+    name: CNS tumour with BCOR internal tandem duplication
+    who_volume: Paediatric Tumours
+    site: Central nervous system
+    lineage_broad: Embryonal
+    lineage_detail: null
+    families:
+    - CNS tumor
+    - High-grade neuroepithelial tumor
+
+  CNS_EMBRYONAL_NEC:
+    name: CNS embryonal tumour NEC/NOS
+    who_volume: Paediatric Tumours
+    site: Central nervous system
+    lineage_broad: Embryonal
+    lineage_detail: null
+    families:
+    - CNS tumor
+    - Embryonal tumor
 
   CNS_EPCYST:
     name: Epidermoid cyst
@@ -3343,6 +3412,39 @@ tumor_types:
     families:
     - Genital tumor
     - Papilloma
+
+  CONGEN_HEM:
+    name: Congenital haemangioma
+    who_volume: Paediatric Tumours
+    site: Skin
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Skin tumor
+    - Soft tissue tumor
+    - Vascular tumor
+
+  CONJ_NEV_JCS:
+    name: Conjunctival junctional, compound, and subepithelial naevi
+    who_volume: Paediatric Tumours
+    site: Conjunctiva
+    lineage_broad: Melanocytic
+    lineage_detail: null
+    parent: NEV_CONJ
+    families:
+    - Melanocytic tumor
+    - Naevus
+
+  CONJ_NEV_JUV:
+    name: Inflamed juvenile conjunctival naevus
+    who_volume: Paediatric Tumours
+    site: Conjunctiva
+    lineage_broad: Melanocytic
+    lineage_detail: null
+    parent: NEV_CONJ
+    families:
+    - Melanocytic tumor
+    - Naevus
 
   CONTR_ADENOPIT:
     name: Normal anterior pituitary
@@ -4309,17 +4411,6 @@ tumor_types:
     families:
     - Myo-fibroblastic tumor
 
-  DF_SKIN:
-    name: Dermatofibroma (fibrous histiocytoma)
-    who_volume: Skin Tumours
-    site: Skin
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    families:
-    - Skin tumor
-    - Soft tissue tumor
-    - Fibroblastic tumor
-
   DGCT:
     name: Dentinogenic ghost cell tumour
     who_volume: Head and Neck Tumours
@@ -4328,6 +4419,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Odontogenic tumor
+
+  DGONC:
+    name: Diffuse glioneuronal tumour with oligodendroglioma-like features and nuclear clusters
+    who_volume: Paediatric Tumours
+    site: Central nervous system
+    lineage_broad: Glioneuronal
+    lineage_detail: null
+    families:
+    - CNS tumor
+    - Glioneuronal tumor
 
   DG_F3T3_O:
     name: Diffuse glioma, FGFR3-TACC3 fusion
@@ -4349,6 +4450,16 @@ tumor_types:
     - Skin tumor
     - Soft tissue tumor
     - Peripheral nerve sheath tumor
+
+  DHG_G34:
+    name: Diffuse hemispheric glioma, H3 G34-mutant
+    who_volume: Paediatric Tumours
+    site: Central nervous system
+    lineage_broad: Glial
+    lineage_detail: null
+    families:
+    - Glioma
+    - High-grade glioma
 
   DICER1_HG:
     name: High-Grade DICER1-associated Tumor
@@ -4765,6 +4876,15 @@ tumor_types:
     - Lung tumor
     - Histiocytic neoplasm
 
+  ECTOMES:
+    name: Ectomesenchymoma
+    who_volume: Paediatric Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Sarcoma
+
   EFH:
     name: Epithelioid fibrous histiocytoma
     who_volume: Skin Tumours
@@ -5051,6 +5171,27 @@ tumor_types:
     - B-cell lymphoma
     - Marginal zone lymphoma
 
+  EPIBULBAR_CHORISTOMA:
+    name: Epibulbar choristoma
+    who_volume: Paediatric Tumours
+    site: Eye
+    lineage_broad: Hamartomatous
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Hamartoma
+
+  EPIBULBAR_OSSEOUS_CHORISTOMA:
+    name: Epibulbar osseous choristoma
+    who_volume: Paediatric Tumours
+    site: Eye
+    lineage_broad: Hamartomatous
+    lineage_detail: null
+    parent: EPIBULBAR_CHORISTOMA
+    families:
+    - Ocular tumor
+    - Hamartoma
+
   EPID_ADCA:
     name: Adenocarcinoma of the epididymis
     who_volume: Urinary and Male Genital Tumours
@@ -5175,16 +5316,6 @@ tumor_types:
     - Ependymoma
     - Glioma
 
-  EPN_RELA:
-    name: Ependymoma, ZFTA/RELA fusion-positive
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Glial
-    lineage_detail: null
-    families:
-    - Ependymoma
-    - Glioma
-
   EPN_SPINE:
     name: Spinal ependymoma
     who_volume: Central Nervous System Tumours
@@ -5205,9 +5336,19 @@ tumor_types:
     - Ependymoma
     - Glioma
 
-  EPN_YAP:
-    name: Ependymoma, YAP1 fusion-positive
-    who_volume: Central Nervous System Tumours
+  EPN_ST_YAP1:
+    name: Supratentorial ependymoma, YAP1 fusion-positive
+    who_volume: Paediatric Tumours
+    site: Central nervous system
+    lineage_broad: Glial
+    lineage_detail: null
+    families:
+    - Ependymoma
+    - Glioma
+
+  EPN_ST_ZFTA:
+    name: Supratentorial ependymoma, ZFTA fusion-positive
+    who_volume: Paediatric Tumours
     site: Central nervous system
     lineage_broad: Glial
     lineage_detail: null
@@ -5440,6 +5581,16 @@ tumor_types:
     - Sarcoma
     - Ewing sarcoma family
 
+  EWSR1_NONETS:
+    name: Round cell sarcoma with EWSR1::non-ETS fusions
+    who_volume: Paediatric Tumours
+    site: Bone / soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Sarcoma
+    - Small round cell tumor
+
   EXOS:
     name: Extraskeletal osteosarcoma
     who_volume: Soft Tissue and Bone Tumours
@@ -5556,6 +5707,17 @@ tumor_types:
     - Soft tissue tumor
     - Fibroblastic tumor
 
+  FHIST:
+    name: Dermatofibroma (fibrous histiocytoma)
+    who_volume: Skin Tumours
+    site: Skin
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Skin tumor
+    - Soft tissue tumor
+    - Fibroblastic tumor
+
   FIBROTHECOMA_TESTIS:
     name: Tumours in the fibroma-thecoma group (testis)
     who_volume: Urinary and Male Genital Tumours
@@ -5623,6 +5785,17 @@ tumor_types:
     lineage_detail: null
     families:
     - Hepatobiliary tumor
+
+  FOP:
+    name: Fibrodysplasia ossificans progressiva
+    who_volume: Paediatric Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+    - Fibroblastic tumor
+    - Genetic syndrome
 
   FOPD:
     name: Fibro-osseous pseudotumour of digits
@@ -5777,17 +5950,6 @@ tumor_types:
     families:
     - Gastrointestinal tumor
     - Carcinoma
-
-  GBM_G34:
-    name: Glioblastoma, IDH-wildtype, H3.3 G34-mutant
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Glial
-    lineage_detail: null
-    families:
-    - Glioma
-    - Glioblastoma
-    - High-grade glioma
 
   GBM_LOW:
     name: Glioblastoma, IDH-wildtype, low tumor cell content
@@ -6439,6 +6601,17 @@ tumor_types:
     - Glioma
     - High-grade glioma
 
+  HGG_PED_H3WT_IDHWT:
+    name: Diffuse paediatric-type high-grade glioma, H3-wildtype and IDH-wildtype
+    who_volume: Paediatric Tumours
+    site: Central nervous system
+    lineage_broad: Glial
+    lineage_detail: null
+    families:
+    - Glioma
+    - High-grade glioma
+    - Pediatric high-grade glioma
+
   HGG_PED_RTK1A:
     name: Pediatric-type high-grade glioma, RTK 1A
     who_volume: Central Nervous System Tumours
@@ -6458,16 +6631,6 @@ tumor_types:
     families:
     - Glioma
     - Pediatric high-grade glioma
-
-  HGNET_BCOR:
-    name: CNS high-grade neuroepithelial tumor with BCOR alteration
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Neuroepithelial
-    lineage_detail: null
-    families:
-    - CNS tumor
-    - High-grade neuroepithelial tumor
 
   HGNET_MN1:
     name: CNS high-grade neuroepithelial tumor with MN1 alteration
@@ -6568,6 +6731,15 @@ tumor_types:
     families:
     - Sarcoma
     - Histiocytic neoplasm
+
+  HIV_LPD:
+    name: HIV-associated lymphoproliferative disorders
+    who_volume: Paediatric Tumours
+    site: Lymphoid tissue
+    lineage_broad: Hematolymphoid
+    lineage_detail: null
+    families:
+    - Lymphoproliferative disorder
 
   HL_NOS:
     name: Hematolymphoid Tumor, Not otherwise specified
@@ -7594,6 +7766,16 @@ tumor_types:
     - Lung tumor
     - Histiocytic neoplasm
 
+  LCH_PED:
+    name: Langerhans cell histiocytosis and related disorders (paediatric)
+    who_volume: Paediatric Tumours
+    site: Multiple
+    lineage_broad: Histiocytic
+    lineage_detail: null
+    parent: LCH
+    families:
+    - Histiocytic neoplasm
+
   LCH_PYOGENIC:
     name: Lobular capillary haemangioma
     who_volume: Skin Tumours
@@ -7746,6 +7928,16 @@ tumor_types:
     - Low-grade glioma
     - Glioneuronal tumor
 
+  LGG_MAPK:
+    name: Diffuse low-grade glioma, MAPK pathway-altered
+    who_volume: Paediatric Tumours
+    site: Central nervous system
+    lineage_broad: Glial
+    lineage_detail: null
+    families:
+    - Glioma
+    - Low-grade glioma
+
   LGG_MYB:
     name: Low-grade glioma, MYB/MYBL1-altered
     who_volume: Central Nervous System Tumours
@@ -7809,6 +8001,16 @@ tumor_types:
     - Glioma
     - Low-grade glioma
     - Astrocytoma
+
+  LGMS:
+    name: Low-grade myofibroblastic sarcoma
+    who_volume: Paediatric Tumours
+    site: Soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Sarcoma
+    - Fibroblastic tumor
 
   LIPN:
     name: Cerebellar liponeurocytoma
@@ -7880,6 +8082,16 @@ tumor_types:
     families:
     - Sarcoma
     - Adipocytic tumor
+
+  LISCH_NODULE:
+    name: Lisch nodule (iris hamartoma)
+    who_volume: Paediatric Tumours
+    site: Eye
+    lineage_broad: Hamartomatous
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Hamartoma
 
   LITTRE_ADCA:
     name: Littre gland adenocarcinoma of the urethra
@@ -8842,6 +9054,16 @@ tumor_types:
     families:
     - MDS_MPN
 
+  MDS_PED_EB:
+    name: Childhood myelodysplastic neoplasm with increased blasts
+    who_volume: Paediatric Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: MDS_HIGH
+    families:
+    - MDS
+
   MDS_PED_IB:
     name: Childhood myelodysplastic neoplasm with increased blasts
     who_volume: Haematolymphoid Tumours
@@ -8855,6 +9077,16 @@ tumor_types:
   MDS_PED_LB:
     name: Childhood myelodysplastic neoplasm with low blasts
     who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: MDS_LOW
+    families:
+    - MDS
+
+  MDS_PED_LB:
+    name: Refractory cytopenia of childhood
+    who_volume: Paediatric Tumours
     site: Bone Marrow
     lineage_broad: Hematolymphoid
     lineage_detail: Myeloid
@@ -8904,6 +9136,16 @@ tumor_types:
     - Thyroid tumor
     - Salivary gland-like tumor
     - Carcinoma
+
+  MEDULLOEPITHELIOMA:
+    name: Medulloepithelioma
+    who_volume: Paediatric Tumours
+    site: Eye
+    lineage_broad: Embryonal
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Embryonal tumor
 
   MEF2D:
     name: MEF2D-rearranged
@@ -9155,6 +9397,16 @@ tumor_types:
     families:
     - Lung tumor
     - Meningioma
+
+  MEN_MELANOCYTOSIS:
+    name: Diffuse meningeal melanocytic neoplasms (melanocytosis and melanomatosis)
+    who_volume: Paediatric Tumours
+    site: Meninges
+    lineage_broad: Melanocytic
+    lineage_detail: null
+    families:
+    - CNS tumor
+    - Melanocytic tumor
 
   MEN_SELLAR:
     name: Meningioma of the sellar region
@@ -9979,6 +10231,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Genital tumor
+
+  MVNT:
+    name: Multinodular and vacuolating neuronal tumour
+    who_volume: Paediatric Tumours
+    site: Central nervous system
+    lineage_broad: Neuronal
+    lineage_detail: null
+    families:
+    - CNS tumor
+    - Neuronal tumor
 
   MYELOID_SARC:
     name: Myeloid sarcoma
@@ -11063,6 +11325,18 @@ tumor_types:
     families:
     - Precursor lesion
 
+  OPTIC_GLIOMA:
+    name: Pilocytic astrocytoma and other gliomas of the optic nerve
+    who_volume: Paediatric Tumours
+    site: Optic nerve
+    lineage_broad: Glial
+    lineage_detail: null
+    parent: LGG_PA_PF
+    families:
+    - Glioma
+    - Low-grade glioma
+    - Pilocytic astrocytoma
+
   ORTI:
     name: Ossifying renal tumour of infancy
     who_volume: Urinary and Male Genital Tumours
@@ -11938,6 +12212,18 @@ tumor_types:
     - Lymphoma
     - T-cell lymphoma
 
+  PC_CD30_TLPD_PED:
+    name: Primary cutaneous CD30-positive T-cell lymphoproliferative disorders (paediatric)
+    who_volume: Paediatric Tumours
+    site: Skin
+    lineage_broad: Hematolymphoid
+    lineage_detail: T-Cell
+    parent: PC_ALCL
+    families:
+    - Skin tumor
+    - Lymphoma
+    - T-cell lymphoma
+
   PC_CD4_SMTCLD:
     name: Primary cutaneous CD4-positive small or medium T-cell lymphoproliferative disorder
     who_volume: Skin Tumours
@@ -12238,6 +12524,16 @@ tumor_types:
     - CNS tumor
     - Glioneuronal tumor
 
+  PHAKOMATOUS_CHORISTOMA:
+    name: Phakomatous choristoma
+    who_volume: Paediatric Tumours
+    site: Eye
+    lineage_broad: Hamartomatous
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Hamartoma
+
   PHAT:
     name: Pleomorphic hyalinizing angiectatic tumour of soft parts
     who_volume: Soft Tissue and Bone Tumours
@@ -12309,6 +12605,16 @@ tumor_types:
     families:
     - Breast tumor
     - Fibroepithelial tumor
+
+  PID_LPD:
+    name: Primary immunodeficiency-associated lymphoproliferative disorders
+    who_volume: Paediatric Tumours
+    site: Lymphoid tissue
+    lineage_broad: Hematolymphoid
+    lineage_detail: null
+    parent: IEI_LPD
+    families:
+    - Lymphoproliferative disorder
 
   PILAR_SHEATH_ACAN:
     name: Pilar sheath acanthoma
@@ -12542,6 +12848,15 @@ tumor_types:
     - Gastrointestinal tumor
     - Hamartoma
 
+  PLACENTA_HEM:
+    name: Haemangioma of placenta
+    who_volume: Paediatric Tumours
+    site: Placenta
+    lineage_broad: Vascular
+    lineage_detail: null
+    families:
+    - Vascular tumor
+
   PLAG1:
     name: Cutaneous PLAG1-rearranged mixed Tumor
     who_volume: null
@@ -12602,6 +12917,27 @@ tumor_types:
     - CNS tumor
     - Choroid plexus tumor
 
+  PLEX_ATYP:
+    name: Atypical choroid plexus papilloma
+    who_volume: Paediatric Tumours
+    site: Central nervous system
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: CPP
+    families:
+    - CNS tumor
+    - Choroid plexus tumor
+
+  PLEX_CA_PED:
+    name: Choroid plexus carcinoma (paediatric)
+    who_volume: Paediatric Tumours
+    site: Central nervous system
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - CNS tumor
+    - Choroid plexus tumor
+
   PLEX_FMX:
     name: Plexiform fibromyxoma
     who_volume: Digestive System Tumours
@@ -12641,6 +12977,16 @@ tumor_types:
     families:
     - Soft tissue tumor
     - Adipocytic tumor
+
+  PLNTY:
+    name: Polymorphous low-grade neuroepithelial tumour of the young
+    who_volume: Paediatric Tumours
+    site: Central nervous system
+    lineage_broad: Glial
+    lineage_detail: null
+    families:
+    - Glioma
+    - Low-grade glioma
 
   PLS:
     name: Pleomorphic liposarcoma
@@ -13017,6 +13363,29 @@ tumor_types:
     - Lymphoma
     - T-cell lymphoma
 
+  PTCL_PED:
+    name: Peripheral T-cell lymphoma NOS (paediatric)
+    who_volume: Paediatric Tumours
+    site: Lymphoid tissue
+    lineage_broad: Hematolymphoid
+    lineage_detail: T-Cell
+    parent: PTCL
+    families:
+    - Lymphoma
+    - T-cell lymphoma
+
+  PTCL_PED_SKIN:
+    name: Subcutaneous panniculitis-like T-cell lymphoma (paediatric)
+    who_volume: Paediatric Tumours
+    site: Skin
+    lineage_broad: Hematolymphoid
+    lineage_detail: T-Cell
+    parent: SPTCL
+    families:
+    - Skin tumor
+    - Lymphoma
+    - T-cell lymphoma
+
   PTFL:
     name: Pediatric-type follicular lymphoma
     who_volume: Haematolymphoid Tumours
@@ -13025,6 +13394,16 @@ tumor_types:
     lineage_detail: B-Cell
     families:
     - mature_b_non_small_cell
+
+  PTLD:
+    name: Posttransplant lymphoproliferative disorders
+    who_volume: Paediatric Tumours
+    site: Lymphoid tissue
+    lineage_broad: Hematolymphoid
+    lineage_detail: null
+    families:
+    - Lymphoproliferative disorder
+    - EBV-associated
 
   PTLD_DLBCL_EBV:
     name: Monomorphic PTLD, DLBCL type, EBV-associated
@@ -13735,16 +14114,6 @@ tumor_types:
     lineage_detail: null
     families:
     - Salivary gland tumor
-
-  SBRCT_CIC:
-    name: Small blue round cell tumor with CIC alteration
-    who_volume: Soft Tissue and Bone Tumours
-    site: Soft tissue
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    families:
-    - Sarcoma
-    - Small round cell tumor
 
   SCA:
     name: Salivary Gland Canalicular Adenoma

@@ -24,7 +24,7 @@ def methylation_class(row):
         "GBM, MES": "GBM_MES",
         "GBM, MID": "GBM_MID",
         "GBM, MYCN": "GBM_MYCN",
-        "GBM, G34": "GBM_G34",
+        "GBM, G34": "DHG_G34",
         "GBM, PNC": "GBM_PNC",
         "GBM, LOW": "GBM_LOW",
         # Diffuse midline glioma
@@ -51,8 +51,8 @@ def methylation_class(row):
         # Ependymal tumors
         "EPN, PF A": "EPN_PF_A",
         "EPN, PF B": "EPN_PF_B",
-        "EPN, RELA": "EPN_RELA",
-        "EPN, YAP": "EPN_YAP",
+        "EPN, RELA": "EPN_ST_ZFTA",
+        "EPN, YAP": "EPN_ST_YAP1",
         "EPN, SPINE": "EPN_SPINE",
         "EPN, MPE": "EPN_MPE",
         "SUBEPN, PF": "SUBEPN_PF",
@@ -72,7 +72,7 @@ def methylation_class(row):
         "CNS NB, FOXR2": "CNS_NB_FOXR2",
         "EFT, CIC": "EFT_CIC",
         "EWS": "EWS",
-        "HGNET, BCOR": "HGNET_BCOR",
+        "HGNET, BCOR": "CNS_BCOR_ITD",
         "HGNET, MN1": "HGNET_MN1",
         "IHG": "IHG",
         "RETB": "RB",
