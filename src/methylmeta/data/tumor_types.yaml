@@ -22,6 +22,16 @@ tumor_types:
     - Bone tumor
     - Fibro-osseous tumor
 
+  ABL:
+    name: Acute basophilic leukemia
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
   ACQ_ELASTOTIC_HEM:
     name: Acquired elastotic haemangioma
     who_volume: Skin Tumours
@@ -295,6 +305,16 @@ tumor_types:
     families:
     - Carcinoma
 
+  AEL:
+    name: Acute erythroid leukemia
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
   AFCMT:
     name: Acral fibrochondromyxoid tumor
     who_volume: null
@@ -394,6 +414,15 @@ tumor_types:
     families:
     - Squamous lesion
 
+  ALAL_NOS:
+    name: Acute leukemia of ambiguous lineage NOS
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: null
+    families:
+    - Acute leukemia of ambiguous lineage
+
   ALCL:
     name: ALCL
     who_volume: Haematolymphoid Tumours
@@ -483,6 +512,16 @@ tumor_types:
     - Skin tumor
     - Soft tissue tumor
     - Perivascular tumor
+
+  ALPS:
+    name: Autoimmune lymphoproliferative syndrome
+    who_volume: Haematolymphoid Tumours
+    site: Lymphoid tissue
+    lineage_broad: Immune
+    lineage_detail: null
+    families:
+    - Reactive
+    - Lymphoid
 
   ALT_SKIN:
     name: Atypical lipomatous tumour
@@ -613,6 +652,16 @@ tumor_types:
     families:
     - Hamartoma
 
+  AMKL:
+    name: Acute megakaryoblastic leukemia
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
   AMKL_MIXED:
     name: AMKL (mixed)
     who_volume: Haematolymphoid Tumours
@@ -631,6 +680,146 @@ tumor_types:
     families:
     - Leukemia
     - Myeloid neoplasm
+
+  AML_CEBPA:
+    name: Acute myeloid leukemia with CEBPA mutation
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
+  AML_KMT2A:
+    name: Acute myeloid leukemia with KMT2A rearrangement
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
+  AML_MDS_REL:
+    name: Acute myeloid leukemia, myelodysplasia-related
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
+  AML_MECOM:
+    name: Acute myeloid leukemia with MECOM rearrangement
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
+  AML_MIN_DIFF:
+    name: Acute myeloid leukemia with minimal differentiation
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
+  AML_MRC:
+    name: Acute myeloid leukemia, myelodysplasia-related
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
+  AML_NO_MAT:
+    name: Acute myeloid leukemia without maturation
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
+  AML_NPM1:
+    name: Acute myeloid leukemia with NPM1 mutation
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
+  AML_NUP98:
+    name: Acute myeloid leukemia with NUP98 rearrangement
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
+  AML_OTHER_GEN:
+    name: Acute myeloid leukemia with other defined genetic alterations
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
+  AML_RBM15_MRTFA:
+    name: Acute myeloid leukemia with RBM15::MRTFA fusion
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
+  AML_WITH_MAT:
+    name: Acute myeloid leukemia with maturation
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
+  AMML:
+    name: Acute myelomonocytic leukemia
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
+  AMOL:
+    name: Acute monocytic leukemia
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
 
   AMPAD:
     name: Ampullary adenocarcinoma
@@ -661,6 +850,15 @@ tumor_types:
     families:
     - Gastrointestinal tumor
     - Adenoma
+
+  AMYLOID_AL:
+    name: Immunoglobulin-related amyloidosis (AL amyloidosis)
+    who_volume: Haematolymphoid Tumours
+    site: Multiple
+    lineage_broad: Hematolymphoid
+    lineage_detail: Plasma Cell
+    families:
+    - plasma_cell
 
   ANALSCC:
     name: Anal Squamous Cell Carcinoma
@@ -740,6 +938,15 @@ tumor_types:
     families:
     - Soft tissue tumor
     - Adipocytic tumor
+
+  ANKL:
+    name: Aggressive NK-cell leukemia
+    who_volume: Haematolymphoid Tumours
+    site: Blood
+    lineage_broad: Hematolymphoid
+    lineage_detail: T/NK
+    families:
+    - mature_t_nk
 
   AOT:
     name: Adenomatoid odontogenic tumour
@@ -979,6 +1186,15 @@ tumor_types:
     - CNS tumor
     - Embryonal tumor
     - Atypical teratoid/rhabdoid tumor
+
+  AUL:
+    name: Acute undifferentiated leukemia
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: null
+    families:
+    - Acute leukemia of ambiguous lineage
 
   AVM:
     name: Arteriovenous malformation
@@ -2089,6 +2305,64 @@ tumor_types:
     families:
     - BCP-ALL
 
+  B_ALL_ETV6RUNX1:
+    name: B-lymphoblastic leukemia/lymphoma with ETV6::RUNX1-like features
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    parent: B_ALL
+    families:
+    - BCP-ALL
+
+  B_ALL_HYPERDIP:
+    name: B-lymphoblastic leukemia/lymphoma with high hyperdiploidy
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    parent: B_ALL
+    families:
+    - BCP-ALL
+
+  B_ALL_IGH_IL3:
+    name: B-lymphoblastic leukemia/lymphoma with IGH::IL3 fusion
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    parent: B_ALL
+    families:
+    - BCP-ALL
+
+  B_ALL_KMT2AB:
+    name: KMT2A-rearranged B-ALL
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    families:
+    - BCP-ALL
+
+  B_ALL_NOS:
+    name: B-lymphoblastic leukemia/lymphoma NOS
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    parent: B_ALL
+    families:
+    - BCP-ALL
+
+  CAD:
+    name: Cold agglutinin disease
+    who_volume: Haematolymphoid Tumours
+    site: Blood
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    families:
+    - B-cell neoplasm
+
   CAF:
     name: Calcifying aponeurotic fibroma
     who_volume: Soft Tissue and Bone Tumours
@@ -2326,14 +2600,14 @@ tumor_types:
     - Soft tissue tumor
     - Vascular tumor
 
-  CEBPA:
-    name: CEBPA
+  CEL:
+    name: Chronic eosinophilic leukemia
     who_volume: Haematolymphoid Tumours
     site: Bone Marrow
     lineage_broad: Hematolymphoid
     lineage_detail: Myeloid
     families:
-    - AML
+    - MPN
 
   CEMBL:
     name: Cementoblastoma
@@ -2782,11 +3056,12 @@ tumor_types:
     - Precursor lesion
 
   CLL:
-    name: Chronic lymphocytic leukemia
+    name: Chronic lymphocytic leukemia / small lymphocytic lymphoma
     who_volume: Haematolymphoid Tumours
-    site: Blood
+    site: Blood / lymphoid tissue
     lineage_broad: Hematolymphoid
     lineage_detail: B-Cell
+    parent: CLL
     families:
     - Leukemia
     - B-cell neoplasm
@@ -2880,6 +3155,16 @@ tumor_types:
     - Renal tumor
     - Embryonal tumor
 
+  CMN_DOWN:
+    name: Myeloid proliferations associated with Down syndrome
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: DS_GATA1
+    families:
+    - AML
+
   CN:
     name: Central neurocytoma
     who_volume: Central Nervous System Tumours
@@ -2899,6 +3184,15 @@ tumor_types:
     families:
     - Skin tumor
     - Ewing-like tumor
+
+  CNL:
+    name: Chronic neutrophilic leukemia
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    families:
+    - MPN
 
   CNSL:
     name: Primary Central Nervous System Lymphoma
@@ -3857,6 +4151,17 @@ tumor_types:
     - Lymphoma
     - Skin tumor
 
+  CUT_MASTO:
+    name: Cutaneous mastocytosis
+    who_volume: Haematolymphoid Tumours
+    site: Skin
+    lineage_broad: Hematolymphoid
+    lineage_detail: null
+    parent: MASTO_SKIN
+    families:
+    - Skin tumor
+    - Mast cell neoplasm
+
   CXPA:
     name: Carcinoma ex Pleomorphic Adenoma
     who_volume: Head and Neck Tumours
@@ -3982,6 +4287,18 @@ tumor_types:
     families:
     - Bone tumor
     - Fibroblastic tumor
+
+  DFL:
+    name: Duodenal-type follicular lymphoma
+    who_volume: Haematolymphoid Tumours
+    site: Duodenum
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    parent: FL
+    families:
+    - Lymphoma
+    - B-cell lymphoma
+    - Follicular lymphoma
 
   DFSP:
     name: Dermatofibrosarcoma Protuberans
@@ -4115,6 +4432,16 @@ tumor_types:
     - B-cell lymphoma
     - DLBCL
 
+  DLBCL_IRF4:
+    name: Large B-cell lymphoma with IRF4 rearrangement
+    who_volume: Haematolymphoid Tumours
+    site: Lymphoid tissue
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    families:
+    - Lymphoma
+    - B-cell lymphoma
+
   DLBCL_IV_LU:
     name: Intravascular large B-cell lymphoma of the lung
     who_volume: Thoracic Tumours
@@ -4136,6 +4463,17 @@ tumor_types:
     parent: DLBCL
     families:
     - Lung tumor
+    - Lymphoma
+    - B-cell lymphoma
+
+  DLBCL_MYC_BCL2:
+    name: Diffuse large B-cell lymphoma / high-grade B-cell lymphoma with MYC and BCL2 rearrangements
+    who_volume: Haematolymphoid Tumours
+    site: Lymphoid tissue
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    parent: DLBCL
+    families:
     - Lymphoma
     - B-cell lymphoma
 
@@ -4395,6 +4733,17 @@ tumor_types:
     families:
     - Skin tumor
     - Lymphoproliferative disorder
+
+  EBV_NK_TCL:
+    name: EBV-positive nodal T- and NK-cell lymphoma
+    who_volume: Haematolymphoid Tumours
+    site: Lymph node
+    lineage_broad: Hematolymphoid
+    lineage_detail: T/NK
+    families:
+    - Lymphoma
+    - T-cell lymphoma
+    - EBV-associated
 
   ECD:
     name: Erdheim-Chester disease
@@ -4689,6 +5038,18 @@ tumor_types:
     lineage_detail: T/NK
     families:
     - mature_t_nk
+
+  ENMZL_MALT:
+    name: Extranodal marginal zone lymphoma of mucosa-associated lymphoid tissue
+    who_volume: Haematolymphoid Tumours
+    site: Extranodal
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    parent: MZL
+    families:
+    - Lymphoma
+    - B-cell lymphoma
+    - Marginal zone lymphoma
 
   EPID_ADCA:
     name: Adenocarcinoma of the epididymis
@@ -5020,6 +5381,16 @@ tumor_types:
     families:
     - T-ALL
 
+  ETP_ALL:
+    name: Early T-precursor lymphoblastic leukemia/lymphoma
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: T-Cell
+    parent: T_ALL
+    families:
+    - T-ALL
+
   ETT:
     name: Epithelioid trophoblastic tumour
     who_volume: Female Genital Tumours
@@ -5079,6 +5450,15 @@ tumor_types:
     - Sarcoma
     - Osteogenic tumor
 
+  FANCONI:
+    name: Fanconi anemia
+    who_volume: Haematolymphoid Tumours
+    site: null
+    lineage_broad: Genetic syndrome
+    lineage_detail: null
+    families:
+    - Genetic tumor syndrome
+
   FCM:
     name: Fibrocartilaginous mesenchymoma
     who_volume: Soft Tissue and Bone Tumours
@@ -5104,6 +5484,25 @@ tumor_types:
     name: Follicular dendritic cell sarcoma
     who_volume: Haematolymphoid Tumours
     site: Lymphoid
+    lineage_broad: Hematolymphoid
+    lineage_detail: Dendritic/Stromal
+    families:
+    - dendritic_stromal
+
+  FDCS_EBV:
+    name: EBV-positive inflammatory follicular dendritic cell sarcoma
+    who_volume: Haematolymphoid Tumours
+    site: Lymphoid tissue
+    lineage_broad: Hematolymphoid
+    lineage_detail: Dendritic/Stromal
+    parent: FDCS
+    families:
+    - dendritic_stromal
+
+  FDRC:
+    name: Fibroblastic reticular cell tumour
+    who_volume: Haematolymphoid Tumours
+    site: Lymphoid tissue
     lineage_broad: Hematolymphoid
     lineage_detail: Dendritic/Stromal
     families:
@@ -5244,6 +5643,28 @@ tumor_types:
     lineage_detail: T-Cell
     families:
     - mature_t_nk
+
+  FTHCL_FOLL:
+    name: Nodal T follicular helper cell lymphoma, follicular type
+    who_volume: Haematolymphoid Tumours
+    site: Lymphoid tissue
+    lineage_broad: Hematolymphoid
+    lineage_detail: T-Cell
+    parent: FTHCL
+    families:
+    - Lymphoma
+    - T-cell lymphoma
+
+  FTHCL_NOS:
+    name: Nodal T follicular helper cell lymphoma NOS
+    who_volume: Haematolymphoid Tumours
+    site: Lymphoid tissue
+    lineage_broad: Hematolymphoid
+    lineage_detail: T-Cell
+    parent: FTHCL
+    families:
+    - Lymphoma
+    - T-cell lymphoma
 
   FTS:
     name: Fibroma of tendon sheath
@@ -5988,6 +6409,16 @@ tumor_types:
     - Lymphoma
     - B-cell lymphoma
 
+  HGBCL_11Q:
+    name: High-grade B-cell lymphoma with 11q aberration
+    who_volume: Haematolymphoid Tumours
+    site: Lymphoid tissue
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    families:
+    - Lymphoma
+    - B-cell lymphoma
+
   HGG_B:
     name: Adult-type diffuse high-grade glioma, IDH-wildtype, subtype B
     who_volume: Central Nervous System Tumours
@@ -6138,15 +6569,6 @@ tumor_types:
     - Sarcoma
     - Histiocytic neoplasm
 
-  HL:
-    name: Hodgkin lymphoma
-    who_volume: Haematolymphoid Tumours
-    site: Lymphoid
-    lineage_broad: Hematolymphoid
-    lineage_detail: B-Cell
-    families:
-    - Hodgkin_lymphoma
-
   HL_NOS:
     name: Hematolymphoid Tumor, Not otherwise specified
     who_volume: null
@@ -6282,12 +6704,22 @@ tumor_types:
     families:
     - Undefined
 
+  HODG:
+    name: Hodgkin lymphoma
+    who_volume: Haematolymphoid Tumours
+    site: Lymphoid
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    families:
+    - Hodgkin_lymphoma
+
   HODG_CL:
     name: Classical Hodgkin lymphoma
     who_volume: Haematolymphoid Tumours
     site: Lymphoid tissue
     lineage_broad: Hematolymphoid
     lineage_detail: B-Cell
+    parent: HODG
     families:
     - Lymphoma
     - Hodgkin lymphoma
@@ -6298,6 +6730,7 @@ tumor_types:
     site: Lymphoid tissue
     lineage_broad: Hematolymphoid
     lineage_detail: B-Cell
+    parent: HODG
     families:
     - Lymphoma
     - Hodgkin lymphoma
@@ -6456,6 +6889,15 @@ tumor_types:
     families:
     - Salivary gland tumor
 
+  IDCS:
+    name: Interdigitating dendritic cell sarcoma
+    who_volume: Haematolymphoid Tumours
+    site: Lymphoid tissue
+    lineage_broad: Hematolymphoid
+    lineage_detail: Dendritic/Stromal
+    families:
+    - dendritic_stromal
+
   IDCT:
     name: Indeterminate dendritic cell tumour
     who_volume: Skin Tumours
@@ -6515,6 +6957,16 @@ tumor_types:
     families:
     - Sarcoma
     - Fibroblastic tumor
+
+  IgG4_RD:
+    name: IgG4-related disease
+    who_volume: Haematolymphoid Tumours
+    site: Multiple
+    lineage_broad: Immune
+    lineage_detail: null
+    families:
+    - Reactive
+    - Lymphoid
 
   IGHMYC:
     name: IGH-MYC B-ALL
@@ -6616,6 +7068,16 @@ tumor_types:
     - Reactive
     - Inflammatory
 
+  INKLP_GI:
+    name: Indolent NK-cell lymphoproliferative disorder of the gastrointestinal tract
+    who_volume: Haematolymphoid Tumours
+    site: Gastrointestinal tract
+    lineage_broad: Hematolymphoid
+    lineage_detail: T/NK
+    families:
+    - Gastrointestinal tumor
+    - Lymphoproliferative disorder
+
   INTIMAL_SARC:
     name: Intimal sarcoma
     who_volume: Soft Tissue and Bone Tumours
@@ -6666,6 +7128,15 @@ tumor_types:
     families:
     - Gastrointestinal tumor
 
+  IPM:
+    name: Intranodal palisaded myofibroblastoma
+    who_volume: Haematolymphoid Tumours
+    site: Lymph node
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Myofibroblastic tumor
+
   IPMN:
     name: Intraductal papillary mucinous neoplasm of the pancreas
     who_volume: Digestive System Tumours
@@ -6704,6 +7175,26 @@ tumor_types:
     - Soft tissue tumor
     - Fibroblastic tumor
 
+  ISFN:
+    name: In situ follicular B-cell neoplasm
+    who_volume: Haematolymphoid Tumours
+    site: Lymphoid tissue
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    families:
+    - Lymphoma
+    - B-cell lymphoma
+
+  ISMCN:
+    name: In situ mantle cell neoplasm
+    who_volume: Haematolymphoid Tumours
+    site: Lymphoid tissue
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    families:
+    - Lymphoma
+    - B-cell lymphoma
+
   ITAC:
     name: Intestinal-type Sinonasal Adenocarcinoma
     who_volume: Head and Neck Tumours
@@ -6713,6 +7204,37 @@ tumor_types:
     parent: SNAD
     families:
     - Carcinoma
+
+  ITCL_GI:
+    name: Indolent T-cell lymphoma of the gastrointestinal tract
+    who_volume: Haematolymphoid Tumours
+    site: Gastrointestinal tract
+    lineage_broad: Hematolymphoid
+    lineage_detail: T-Cell
+    families:
+    - Gastrointestinal tumor
+    - Lymphoma
+    - T-cell lymphoma
+
+  ITCL_NOS:
+    name: Intestinal T-cell lymphoma NOS
+    who_volume: Haematolymphoid Tumours
+    site: Small intestine
+    lineage_broad: Hematolymphoid
+    lineage_detail: T-Cell
+    families:
+    - Lymphoma
+    - T-cell lymphoma
+
+  ITLP:
+    name: Indolent T-lymphoblastic proliferation
+    who_volume: Haematolymphoid Tumours
+    site: Lymphoid tissue
+    lineage_broad: Hematolymphoid
+    lineage_detail: T-Cell
+    families:
+    - T-cell neoplasm
+    - Reactive
 
   ITO_OTA:
     name: Naevus of Ito and naevus of Ota
@@ -6929,6 +7451,16 @@ tumor_types:
     families:
     - Sarcoma
 
+  KFD:
+    name: Kikuchi-Fujimoto disease
+    who_volume: Haematolymphoid Tumours
+    site: Lymph node
+    lineage_broad: Immune
+    lineage_detail: null
+    families:
+    - Reactive
+    - Lymphoid
+
   KINASE_SARC:
     name: Kinase-altered spindle cell neoplasm (incl. NTRK1/2/3 fusion)
     who_volume: Soft Tissue and Bone Tumours
@@ -6974,15 +7506,6 @@ tumor_types:
     lineage_detail: Myeloid
     families:
     - AML
-
-  KMT2ABALL:
-    name: KMT2A-rearranged B-ALL
-    who_volume: Haematolymphoid Tumours
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: B-Cell
-    families:
-    - BCP-ALL
 
   KPGCT:
     name: Cytokeratin-positive giant cell tumor
@@ -7042,6 +7565,15 @@ tumor_types:
     - Soft tissue tumor
     - Adipocytic tumor
 
+  LCA:
+    name: Littoral cell angioma
+    who_volume: Haematolymphoid Tumours
+    site: Spleen
+    lineage_broad: Vascular
+    lineage_detail: null
+    families:
+    - Vascular tumor
+
   LCH:
     name: Langerhans cell histiocytosis
     who_volume: Haematolymphoid Tumours
@@ -7072,6 +7604,16 @@ tumor_types:
     - Skin tumor
     - Soft tissue tumor
     - Vascular tumor
+
+  LCH_SARC:
+    name: Langerhans cell sarcoma
+    who_volume: Haematolymphoid Tumours
+    site: Multiple
+    lineage_broad: Histiocytic
+    lineage_detail: null
+    parent: LCH
+    families:
+    - Histiocytic neoplasm
 
   LCNEC:
     name: Large cell neuroendocrine carcinoma of the lung
@@ -7444,6 +7986,18 @@ tumor_types:
     - Skin tumor
     - Soft tissue tumor
     - Smooth muscle tumor
+
+  LNNMCL:
+    name: Leukemic non-nodal mantle cell lymphoma
+    who_volume: Haematolymphoid Tumours
+    site: Blood
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    parent: LYM_MAN
+    families:
+    - Lymphoma
+    - B-cell lymphoma
+    - Mantle cell lymphoma
 
   LPD:
     name: Leiomyomatosis peritonealis disseminata
@@ -7950,6 +8504,17 @@ tumor_types:
     - B-cell lymphoma
     - Mantle cell lymphoma
 
+  LYP:
+    name: Lymphomatoid papulosis
+    who_volume: Haematolymphoid Tumours
+    site: Skin
+    lineage_broad: Hematolymphoid
+    lineage_detail: T-Cell
+    families:
+    - Skin tumor
+    - Lymphoma
+    - T-cell lymphoma
+
   MAC:
     name: Microcystic adnexal carcinoma
     who_volume: Skin Tumours
@@ -8025,6 +8590,16 @@ tumor_types:
     families:
     - Teratoma
     - Germ cell tumor
+
+  MBL:
+    name: Monoclonal B-cell lymphocytosis
+    who_volume: Haematolymphoid Tumours
+    site: Blood
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    families:
+    - B-cell neoplasm
+    - Precursor lesion
 
   MB_G3:
     name: Medulloblastoma, group 3
@@ -8178,12 +8753,122 @@ tumor_types:
     families:
     - MDS
 
+  MDS_HYPO:
+    name: Myelodysplastic neoplasm, hypoplastic
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: MDS_LOW
+    families:
+    - MDS
+
+  MDS_IB:
+    name: Myelodysplastic neoplasm with increased blasts
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: MDS_HIGH
+    families:
+    - MDS
+
+  MDS_LB:
+    name: Myelodysplastic neoplasm with low blasts
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: MDS_LOW
+    families:
+    - MDS
+
+  MDS_LB_5Q:
+    name: Myelodysplastic neoplasm with low blasts and 5q deletion
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: MDS_LOW
+    families:
+    - MDS
+
+  MDS_LB_SF3B1:
+    name: Myelodysplastic neoplasm with low blasts and SF3B1 mutation
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: MDS_LOW
+    families:
+    - MDS
+
   MDS_LOW:
     name: Low-risk MDS
     who_volume: Haematolymphoid Tumours
     site: Bone Marrow
     lineage_broad: Hematolymphoid
     lineage_detail: Myeloid
+    families:
+    - MDS
+
+  MDS_MPN_NEUTRO:
+    name: Myelodysplastic/myeloproliferative neoplasm with neutrophilia
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: CMML
+    families:
+    - MDS_MPN
+
+  MDS_MPN_NOS:
+    name: Myelodysplastic/myeloproliferative neoplasm NOS (unclassifiable)
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: CMML
+    families:
+    - MDS_MPN
+
+  MDS_MPN_SF3B1:
+    name: Myelodysplastic/myeloproliferative neoplasm with SF3B1 mutation and thrombocytosis
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: CMML
+    families:
+    - MDS_MPN
+
+  MDS_PED_IB:
+    name: Childhood myelodysplastic neoplasm with increased blasts
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: MDS_HIGH
+    families:
+    - MDS
+
+  MDS_PED_LB:
+    name: Childhood myelodysplastic neoplasm with low blasts
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: MDS_LOW
+    families:
+    - MDS
+
+  MDS_TP53:
+    name: Myelodysplastic neoplasm with biallelic TP53 inactivation
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: MDS_HIGH
     families:
     - MDS
 
@@ -8674,6 +9359,33 @@ tumor_types:
     - Gastrointestinal tumor
     - Sarcoma
 
+  MGRS:
+    name: Monoclonal gammopathy of renal significance
+    who_volume: Haematolymphoid Tumours
+    site: Kidney
+    lineage_broad: Hematolymphoid
+    lineage_detail: Plasma Cell
+    families:
+    - plasma_cell
+
+  MGUS_IGM:
+    name: IgM monoclonal gammopathy of undetermined significance
+    who_volume: Haematolymphoid Tumours
+    site: Blood
+    lineage_broad: Hematolymphoid
+    lineage_detail: Plasma Cell
+    families:
+    - plasma_cell
+
+  MGUS_NONIGM:
+    name: Non-IgM monoclonal gammopathy of undetermined significance
+    who_volume: Haematolymphoid Tumours
+    site: Blood
+    lineage_broad: Hematolymphoid
+    lineage_detail: Plasma Cell
+    families:
+    - plasma_cell
+
   MICROVEN_HEM:
     name: Microvenular haemangioma
     who_volume: Skin Tumours
@@ -8684,6 +9396,15 @@ tumor_types:
     - Skin tumor
     - Soft tissue tumor
     - Vascular tumor
+
+  MIDD:
+    name: Monoclonal immunoglobulin deposition disease
+    who_volume: Haematolymphoid Tumours
+    site: Multiple
+    lineage_broad: Hematolymphoid
+    lineage_detail: Plasma Cell
+    families:
+    - plasma_cell
 
   MIFS:
     name: Myxoinflammatory Fibrosarcoma
@@ -8779,6 +9500,69 @@ tumor_types:
     - Skin tumor
     - Skin adnexal tumor
 
+  MLN_ETV6_ABL1:
+    name: Myeloid/lymphoid neoplasm with ETV6::ABL1 fusion
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    families:
+    - MPN
+
+  MLN_FGFR1:
+    name: Myeloid/lymphoid neoplasm with FGFR1 rearrangement
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    families:
+    - MPN
+
+  MLN_FLT3:
+    name: Myeloid/lymphoid neoplasm with FLT3 rearrangement
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    families:
+    - MPN
+
+  MLN_JAK2:
+    name: Myeloid/lymphoid neoplasm with JAK2 rearrangement
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    families:
+    - MPN
+
+  MLN_OTHER_TK:
+    name: Myeloid/lymphoid neoplasms with other tyrosine kinase gene fusions
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    families:
+    - MPN
+
+  MLN_PDGFRA:
+    name: Myeloid/lymphoid neoplasm with PDGFRA rearrangement
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    families:
+    - MPN
+
+  MLN_PDGFRB:
+    name: Myeloid/lymphoid neoplasm with PDGFRB rearrangement
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    families:
+    - MPN
+
   MLS:
     name: Myxoid Liposarcoma
     who_volume: null
@@ -8787,6 +9571,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Adipocytic tumor
+
+  MM:
+    name: Plasma cell myeloma / multiple myeloma
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Plasma Cell
+    parent: PLASMA_CELL
+    families:
+    - plasma_cell
 
   MMEL:
     name: Mucosal Melanoma
@@ -8913,6 +9707,15 @@ tumor_types:
     families:
     - Renal tumor
 
+  MN_GERMLINE:
+    name: Myeloid neoplasms associated with germline predisposition
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    families:
+    - MDS_MPN
+
   MN_STROM:
     name: Metanephric stromal tumour
     who_volume: Urinary and Male Genital Tumours
@@ -8940,6 +9743,51 @@ tumor_types:
     lineage_detail: null
     families:
     - Myo-fibroblastic tumor
+
+  MPAL_BCRABL1:
+    name: Mixed-phenotype acute leukemia with BCR::ABL1 fusion
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: null
+    families:
+    - Acute leukemia of ambiguous lineage
+
+  MPAL_B_MYELO:
+    name: Mixed-phenotype acute leukemia, B/myeloid
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: null
+    families:
+    - Acute leukemia of ambiguous lineage
+
+  MPAL_KMT2A:
+    name: Mixed-phenotype acute leukemia with KMT2A rearrangement
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: null
+    families:
+    - Acute leukemia of ambiguous lineage
+
+  MPAL_RARE:
+    name: Mixed-phenotype acute leukemia, rare types
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: null
+    families:
+    - Acute leukemia of ambiguous lineage
+
+  MPAL_T_MYELO:
+    name: Mixed-phenotype acute leukemia, T/myeloid
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: null
+    families:
+    - Acute leukemia of ambiguous lineage
 
   MPDCP:
     name: Mature plasmacytoid dendritic cell proliferation associated with myeloid neoplasm
@@ -9035,6 +9883,25 @@ tumor_types:
     families:
     - MPN
 
+  MPN_NOS:
+    name: Myeloproliferative neoplasm NOS (unclassifiable)
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: MPN_NONPH
+    families:
+    - MPN
+
+  MPN_POST_CT:
+    name: Myeloid neoplasm post cytotoxic therapy
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    families:
+    - MDS_MPN
+
   MRT:
     name: Malignant rhabdoid tumor
     who_volume: null
@@ -9112,6 +9979,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Genital tumor
+
+  MYELOID_SARC:
+    name: Myeloid sarcoma
+    who_volume: Haematolymphoid Tumours
+    site: Extramedullary
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
 
   MYELOID_SARC_SKIN:
     name: "Cutaneous involvement in myeloid neoplasms, including myeloid sarcoma"
@@ -9294,7 +10171,7 @@ tumor_types:
     families:
     - Soft tissue tumor
 
-  MZBL:
+  MZL:
     name: Marginal zone B-cell lymphoma
     who_volume: Haematolymphoid Tumours
     site: Lymphoid
@@ -9305,15 +10182,6 @@ tumor_types:
     - Lymphoma
     - B-cell lymphoma
     - Marginal zone lymphoma
-
-  MZL:
-    name: Nodal Marginal Zone Lymphoma
-    who_volume: null
-    site: null
-    lineage_broad: Hematolymphoid
-    lineage_detail: null
-    families:
-    - Hematolymphoid neoplasm
 
   M_CLL:
     name: CLL (IGHV mutated)
@@ -9688,6 +10556,25 @@ tumor_types:
     families:
     - Carcinoma
 
+  NK_LGL:
+    name: NK-large granular lymphocytic leukemia
+    who_volume: Haematolymphoid Tumours
+    site: Blood
+    lineage_broad: Hematolymphoid
+    lineage_detail: T/NK
+    families:
+    - mature_t_nk
+
+  NLPHL:
+    name: Nodular lymphocyte-predominant Hodgkin lymphoma
+    who_volume: Haematolymphoid Tumours
+    site: Lymphoid tissue
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    parent: HODG
+    families:
+    - Hodgkin lymphoma
+
   NLS:
     name: Naevus lipomatosus superficialis
     who_volume: Skin Tumours
@@ -9698,6 +10585,18 @@ tumor_types:
     - Skin tumor
     - Soft tissue tumor
     - Adipocytic tumor
+
+  NMZL:
+    name: Nodal marginal zone lymphoma
+    who_volume: Haematolymphoid Tumours
+    site: Lymph node
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    parent: MZL
+    families:
+    - Lymphoma
+    - B-cell lymphoma
+    - Marginal zone lymphoma
 
   NNFT:
     name: Nodular necrotizing fibroblastic tumour
@@ -10955,6 +11854,16 @@ tumor_types:
     - Gastrointestinal tumor
     - Embryonal tumor
 
+  PBL:
+    name: Plasmablastic lymphoma
+    who_volume: Haematolymphoid Tumours
+    site: Lymphoid tissue / extranodal
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    families:
+    - Lymphoma
+    - B-cell lymphoma
+
   PCFCL:
     name: Primary Cutaneous Follicle Center Lymphoma
     who_volume: null
@@ -10963,6 +11872,17 @@ tumor_types:
     lineage_detail: null
     families:
     - Hematolymphoid neoplasm
+
+  PCFCL_SKIN:
+    name: Primary cutaneous follicle centre lymphoma
+    who_volume: Skin Tumours
+    site: Skin
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    families:
+    - Skin tumor
+    - Lymphoma
+    - B-cell lymphoma
 
   PCGD:
     name: Primary Cutaneous Gamma Delta T-cell Lymphoma
@@ -10979,6 +11899,18 @@ tumor_types:
     site: Skin
     lineage_broad: Hematolymphoid
     lineage_detail: null
+    families:
+    - Skin tumor
+    - Lymphoma
+    - B-cell lymphoma
+
+  PCMZL_SKIN:
+    name: Primary cutaneous marginal zone lymphoma
+    who_volume: Skin Tumours
+    site: Skin
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    parent: MZL
     families:
     - Skin tumor
     - Lymphoma
@@ -11130,6 +12062,16 @@ tumor_types:
     families:
     - Genital tumor
     - Precursor lesion
+
+  PEL:
+    name: Primary effusion lymphoma
+    who_volume: Haematolymphoid Tumours
+    site: Body cavities
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    families:
+    - Lymphoma
+    - B-cell lymphoma
 
   PEM:
     name: Pigmented epithelioid melanocytoma
@@ -11782,6 +12724,18 @@ tumor_types:
     - Neuroendocrine tumor
     - Functioning NET
 
+  PNMZL:
+    name: Paediatric nodal marginal zone lymphoma
+    who_volume: Haematolymphoid Tumours
+    site: Lymph node
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    parent: MZL
+    families:
+    - Lymphoma
+    - B-cell lymphoma
+    - Marginal zone lymphoma
+
   PNST_NF_BO:
     name: Borderline peripheral nerve sheath tumor
     who_volume: null
@@ -12132,6 +13086,15 @@ tumor_types:
     families:
     - Skin tumor
     - Precursor lesion
+
+  PV:
+    name: Polycythemia vera
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    families:
+    - MPN
 
   PVL:
     name: Proliferative verrucous leukoplakia
@@ -12681,6 +13644,15 @@ tumor_types:
     families:
     - Salivary gland tumor
 
+  SANT:
+    name: Sclerosing angiomatoid nodular transformation of spleen
+    who_volume: Haematolymphoid Tumours
+    site: Spleen
+    lineage_broad: Vascular
+    lineage_detail: null
+    families:
+    - Vascular tumor
+
   SARC_DICER1:
     name: Sarcoma with DICER1 mutation
     who_volume: Soft Tissue and Bone Tumours
@@ -12745,6 +13717,16 @@ tumor_types:
     families:
     - Salivary gland tumor
 
+  SBLPN:
+    name: Splenic B-cell lymphoma/leukemia with prominent nucleoli
+    who_volume: Haematolymphoid Tumours
+    site: Spleen
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    families:
+    - Lymphoma
+    - B-cell lymphoma
+
   SBMC5P5Q:
     name: Salivary Gland Biphasic Myoepithelial Carcinoma with 5p/5q Loss
     who_volume: Head and Neck Tumours
@@ -12772,6 +13754,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Salivary gland tumor
+
+  SCABV:
+    name: Systemic chronic active EBV disease
+    who_volume: Haematolymphoid Tumours
+    site: Multiple
+    lineage_broad: Hematolymphoid
+    lineage_detail: T/NK
+    families:
+    - Lymphoproliferative disorder
+    - EBV-associated
 
   SCACP:
     name: Syringocystadenocarcinoma papilliferum
@@ -13284,6 +14276,16 @@ tumor_types:
     families:
     - Salivary gland tumor
 
+  SDRPL:
+    name: Splenic diffuse red pulp small B-cell lymphoma
+    who_volume: Haematolymphoid Tumours
+    site: Spleen
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    families:
+    - Lymphoma
+    - B-cell lymphoma
+
   SEA:
     name: Sebaceous Adenoma
     who_volume: Head and Neck Tumours
@@ -13311,6 +14313,17 @@ tumor_types:
     families:
     - Skin tumor
     - Skin adnexal tumor
+
+  SEBV_TCL:
+    name: Systemic EBV-positive T-cell lymphoma of childhood
+    who_volume: Haematolymphoid Tumours
+    site: Multiple
+    lineage_broad: Hematolymphoid
+    lineage_detail: T-Cell
+    families:
+    - Lymphoma
+    - T-cell lymphoma
+    - EBV-associated
 
   SEB_CA:
     name: Sebaceous carcinoma
@@ -13812,6 +14825,17 @@ tumor_types:
     families:
     - Salivary gland tumor
 
+  SMZL:
+    name: Splenic marginal zone lymphoma
+    who_volume: Haematolymphoid Tumours
+    site: Spleen
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    families:
+    - Lymphoma
+    - B-cell lymphoma
+    - Marginal zone lymphoma
+
   SM_HAMARTOMA:
     name: Smooth muscle hamartoma
     who_volume: Skin Tumours
@@ -14020,6 +15044,15 @@ tumor_types:
     - Skin tumor
     - Melanocytic tumor
     - Spitz tumor
+
+  SPLENIC_HAM:
+    name: Splenic hamartoma
+    who_volume: Haematolymphoid Tumours
+    site: Spleen
+    lineage_broad: Vascular
+    lineage_detail: null
+    families:
+    - Hamartoma
 
   SPN_PAN:
     name: Solid pseudopapillary neoplasm of the pancreas
@@ -14400,12 +15433,32 @@ tumor_types:
     - Skin tumor
     - Skin adnexal tumor
 
+  SYS_MASTO:
+    name: Systemic mastocytosis
+    who_volume: Haematolymphoid Tumours
+    site: Multiple
+    lineage_broad: Hematolymphoid
+    lineage_detail: null
+    parent: MASTO_SKIN
+    families:
+    - Mast cell neoplasm
+
   TALLOTHER:
     name: Other T-ALL/LBL
     who_volume: Haematolymphoid Tumours
     site: Bone Marrow
     lineage_broad: Hematolymphoid
     lineage_detail: T-Cell
+    families:
+    - T-ALL
+
+  TALL_NOS:
+    name: T-lymphoblastic leukemia/lymphoma NOS
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: T-Cell
+    parent: T_ALL
     families:
     - T-ALL
 
