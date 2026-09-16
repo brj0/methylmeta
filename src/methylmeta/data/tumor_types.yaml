@@ -1456,6 +1456,17 @@ tumor_types:
     families:
     - Squamous lesion
 
+  BDUMP:
+    name: Bilateral diffuse uveal melanocytic proliferation
+    who_volume: Eye and Orbit Tumours
+    site: Uvea
+    lineage_broad: Melanocytic
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Melanocytic tumor
+    - Paraneoplastic
+
   BD_ADEN:
     name: Bile duct adenoma
     who_volume: Digestive System Tumours
@@ -3043,6 +3054,29 @@ tumor_types:
     - Ocular tumor
     - Neural tumor
 
+  CHOROID_MEL:
+    name: Choroidal and ciliary body melanomas
+    who_volume: Eye and Orbit Tumours
+    site: Choroid / ciliary body
+    lineage_broad: Melanocytic
+    lineage_detail: null
+    parent: UMEL
+    families:
+    - Ocular tumor
+    - Melanocytic tumor
+    - Melanoma
+
+  CHOROID_NEV:
+    name: Choroidal and ciliary body naevi
+    who_volume: Eye and Orbit Tumours
+    site: Choroid / ciliary body
+    lineage_broad: Melanocytic
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Melanocytic tumor
+    - Naevus
+
   CHRPL:
     name: Chronic Pleuritis
     who_volume: null
@@ -3061,6 +3095,46 @@ tumor_types:
     families:
     - Sarcoma
     - Small round cell tumor
+
+  CILIARY_ADENOMA:
+    name: Adenoma and adenocarcinoma of the ciliary body
+    who_volume: Eye and Orbit Tumours
+    site: Ciliary body
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Adenoma
+
+  CILIARY_GN_HAM:
+    name: Glioneuronal hamartoma of the ciliary body
+    who_volume: Eye and Orbit Tumours
+    site: Ciliary body
+    lineage_broad: Glioneuronal
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Hamartoma
+
+  CILIARY_NOD_HYP:
+    name: Nodular hyperplasia of the ciliary epithelium
+    who_volume: Eye and Orbit Tumours
+    site: Ciliary body
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Reactive
+
+  CILIARY_REACT_HYP:
+    name: Reactive epithelial hyperplasia of the ciliary epithelium
+    who_volume: Eye and Orbit Tumours
+    site: Ciliary body
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Reactive
 
   CIN:
     name: Cervical Intraepithelial Neoplasia
@@ -3424,6 +3498,72 @@ tumor_types:
     - Soft tissue tumor
     - Vascular tumor
 
+  CONJ_ADSC:
+    name: Adenosquamous carcinoma (conjunctiva)
+    who_volume: Eye and Orbit Tumours
+    site: Conjunctiva
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: ADSC
+    families:
+    - Ocular tumor
+    - Carcinoma
+
+  CONJ_BEN_MELANOSIS:
+    name: Benign epithelial melanosis of the conjunctiva
+    who_volume: Eye and Orbit Tumours
+    site: Conjunctiva
+    lineage_broad: Melanocytic
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Melanocytic tumor
+
+  CONJ_DPN:
+    name: WNT-activated deep penetrating / plexiform melanocytoma (naevus) of the conjunctiva
+    who_volume: Eye and Orbit Tumours
+    site: Conjunctiva
+    lineage_broad: Melanocytic
+    lineage_detail: null
+    parent: DPN
+    families:
+    - Ocular tumor
+    - Melanocytic tumor
+    - Melanocytoma
+
+  CONJ_INCL_CYST:
+    name: Epithelial conjunctival inclusion cyst
+    who_volume: Eye and Orbit Tumours
+    site: Conjunctiva
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Cyst
+
+  CONJ_ITIS:
+    name: Papillary and follicular conjunctivitis
+    who_volume: Eye and Orbit Tumours
+    site: Conjunctiva
+    lineage_broad: Inflammatory
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Reactive
+    - Inflammatory
+
+  CONJ_MEL:
+    name: Conjunctival melanoma
+    who_volume: Eye and Orbit Tumours
+    site: Conjunctiva
+    lineage_broad: Melanocytic
+    lineage_detail: null
+    parent: MEL
+    families:
+    - Ocular tumor
+    - Melanocytic tumor
+    - Melanoma
+
   CONJ_NEV_JCS:
     name: Conjunctival junctional, compound, and subepithelial naevi
     who_volume: Paediatric Tumours
@@ -3445,6 +3585,59 @@ tumor_types:
     families:
     - Melanocytic tumor
     - Naevus
+
+  CONJ_ONCOCYTOMA:
+    name: Conjunctival oncocytoma
+    who_volume: Eye and Orbit Tumours
+    site: Conjunctiva
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Benign tumor
+
+  CONJ_REACT_HYP:
+    name: Reactive epithelial hyperplasia of the conjunctiva
+    who_volume: Eye and Orbit Tumours
+    site: Conjunctiva
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Reactive
+
+  CONJ_SCC:
+    name: Conjunctival squamous cell carcinoma
+    who_volume: Eye and Orbit Tumours
+    site: Conjunctiva
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: HNSCC
+    families:
+    - Ocular tumor
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  CONJ_SIN:
+    name: Conjunctival squamous intraepithelial neoplasia
+    who_volume: Eye and Orbit Tumours
+    site: Conjunctiva
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Precursor lesion
+    - Squamous lesion
+
+  CONJ_SQ_PAP:
+    name: Conjunctival squamous papilloma
+    who_volume: Eye and Orbit Tumours
+    site: Conjunctiva
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Papilloma
 
   CONTR_ADENOPIT:
     name: Normal anterior pituitary
@@ -4301,6 +4494,16 @@ tumor_types:
     lineage_detail: null
     families:
     - Hematolymphoid neoplasm
+
+  DACRYOPS:
+    name: Dacryops cyst
+    who_volume: Eye and Orbit Tumours
+    site: Lacrimal gland
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Cyst
 
   DAM:
     name: Deep (aggressive) angiomyxoma
@@ -5601,6 +5804,36 @@ tumor_types:
     - Sarcoma
     - Osteogenic tumor
 
+  EYELID_EPID_CYST:
+    name: Epidermal inclusion cyst (eyelid)
+    who_volume: Eye and Orbit Tumours
+    site: Eyelid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Cyst
+
+  EYELID_INTATARS_CYST:
+    name: Intratarsal cyst
+    who_volume: Eye and Orbit Tumours
+    site: Eyelid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Cyst
+
+  EYELID_SQ_PAP:
+    name: Squamous papilloma of the eyelid
+    who_volume: Eye and Orbit Tumours
+    site: Eyelid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Papilloma
+
   FANCONI:
     name: Fanconi anemia
     who_volume: Haematolymphoid Tumours
@@ -6461,6 +6694,16 @@ tumor_types:
     families:
     - Hepatobiliary tumor
 
+  HBID:
+    name: Hereditary benign intraepithelial dyskeratosis
+    who_volume: Eye and Orbit Tumours
+    site: Conjunctiva
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Genetic syndrome
+
   HCA:
     name: Hepatocellular adenoma
     who_volume: Digestive System Tumours
@@ -7110,6 +7353,15 @@ tumor_types:
     - Skin tumor
     - Lymphoproliferative disorder
 
+  IFK:
+    name: Inverted follicular keratosis
+    who_volume: Skin
+    site: Skin tumours
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Benign tumor
+
   IFP:
     name: Inflammatory fibroid polyp
     who_volume: Digestive System Tumours
@@ -7326,6 +7578,59 @@ tumor_types:
     lineage_detail: null
     families:
     - Hepatobiliary tumor
+
+  IRIS_ECT_CTX:
+    name: Ectopic tissue of the iris
+    who_volume: Eye and Orbit Tumours
+    site: Iris
+    lineage_broad: Hamartomatous
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Hamartoma
+
+  IRIS_IMPL_CYST:
+    name: Implantation cyst of the iris
+    who_volume: Eye and Orbit Tumours
+    site: Iris
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Cyst
+
+  IRIS_MEL:
+    name: Iris melanoma
+    who_volume: Eye and Orbit Tumours
+    site: Iris
+    lineage_broad: Melanocytic
+    lineage_detail: null
+    parent: UMEL
+    families:
+    - Ocular tumor
+    - Melanocytic tumor
+    - Melanoma
+
+  IRIS_NEV:
+    name: Iris naevus
+    who_volume: Eye and Orbit Tumours
+    site: Iris
+    lineage_broad: Melanocytic
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Melanocytic tumor
+    - Naevus
+
+  IRIS_PIGM_CYST:
+    name: Pigmented epithelial cyst of the iris
+    who_volume: Eye and Orbit Tumours
+    site: Iris
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Cyst
 
   IRT:
     name: Inflammatory rhabdomyoblastic tumour
@@ -7696,6 +8001,49 @@ tumor_types:
     lineage_detail: null
     families:
     - Vascular tumor
+
+  LAC_ADCA_NOS:
+    name: Adenocarcinoma NOS of the lacrimal drainage system
+    who_volume: Eye and Orbit Tumours
+    site: Lacrimal drainage system
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Carcinoma
+
+  LAC_PAP:
+    name: Papillomas of the lacrimal drainage system (squamous and inverted)
+    who_volume: Eye and Orbit Tumours
+    site: Lacrimal drainage system
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Papilloma
+
+  LAC_SCC:
+    name: Squamous cell carcinoma of the lacrimal drainage system
+    who_volume: Eye and Orbit Tumours
+    site: Lacrimal drainage system
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: HNSCC
+    families:
+    - Ocular tumor
+    - Carcinoma
+    - Squamous cell carcinoma
+
+  LAC_SG_CA:
+    name: Other salivary gland-type carcinomas of the lacrimal drainage system
+    who_volume: Eye and Orbit Tumours
+    site: Lacrimal drainage system
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Salivary gland-like tumor
+    - Carcinoma
 
   LAM:
     name: Lymphangioleiomyomatosis of the lung
@@ -9987,6 +10335,16 @@ tumor_types:
     - Reactive lesion
     - Soft tissue
 
+  MOLLUSCUM:
+    name: Molluscum contagiosum
+    who_volume: Eye and Orbit Tumours
+    site: Eyelid
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Viral lesion
+
   MP:
     name: Myositis Proliferans
     who_volume: null
@@ -11101,6 +11459,13 @@ tumor_types:
     - Bone tumor
     - Cartilaginous tumor
 
+  OCULAR_CLL_SLL:
+    name: Chronic lymphocytic leukaemia / small lymphocytic lymphoma (ocular adnexa)
+    who_volume: Eye and Orbit Tumours
+    site: Ocular adnexa
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+
   ODCS:
     name: Odontogenic carcinosarcoma
     who_volume: Head and Neck Tumours
@@ -11325,6 +11690,16 @@ tumor_types:
     families:
     - Precursor lesion
 
+  OPTIC_CHORISTOMA:
+    name: Optic nerve choristoma
+    who_volume: Eye and Orbit Tumours
+    site: Optic nerve
+    lineage_broad: Hamartomatous
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Hamartoma
+
   OPTIC_GLIOMA:
     name: Pilocytic astrocytoma and other gliomas of the optic nerve
     who_volume: Paediatric Tumours
@@ -11336,6 +11711,36 @@ tumor_types:
     - Glioma
     - Low-grade glioma
     - Pilocytic astrocytoma
+
+  ORBIT_DERMOID_CYST:
+    name: Orbital dermoid cyst and other orbital cysts
+    who_volume: Eye and Orbit Tumours
+    site: Orbit
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Cyst
+
+  ORBIT_GLIAL_HETEROTOPIA:
+    name: Orbital glial heterotopia
+    who_volume: Eye and Orbit Tumours
+    site: Orbit
+    lineage_broad: Glial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Hamartoma
+
+  ORBIT_MES_HAM:
+    name: Mesenchymal hamartoma of the orbit
+    who_volume: Eye and Orbit Tumours
+    site: Orbit
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Hamartoma
 
   ORTI:
     name: Ossifying renal tumour of infancy
@@ -12166,6 +12571,17 @@ tumor_types:
     lineage_detail: null
     families:
     - Hematolymphoid neoplasm
+
+  PCLL:
+    name: Primary choroidal lymphoma
+    who_volume: Eye and Orbit Tumours
+    site: Choroid
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    families:
+    - Ocular tumor
+    - Lymphoma
+    - B-cell lymphoma
 
   PCMZL:
     name: Primary cutaneous marginal zone lymphoma
@@ -13386,6 +13802,16 @@ tumor_types:
     - Lymphoma
     - T-cell lymphoma
 
+  PTERYGIUM:
+    name: Pterygium and pinguecula
+    who_volume: Eye and Orbit Tumours
+    site: Conjunctiva
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Reactive
+
   PTFL:
     name: Pediatric-type follicular lymphoma
     who_volume: Haematolymphoid Tumours
@@ -13484,6 +13910,17 @@ tumor_types:
     parent: OPMD
     families:
     - Precursor lesion
+
+  PVRLBCL:
+    name: Primary vitreoretinal large B-cell lymphoma
+    who_volume: Eye and Orbit Tumours
+    site: Vitreoretinal
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-Cell
+    families:
+    - Ocular tumor
+    - Lymphoma
+    - B-cell lymphoma
 
   PXA:
     name: Pleomorphic xanthoastrocytoma
@@ -13838,6 +14275,26 @@ tumor_types:
     families:
     - Vascular tumor
 
+  RETINA_ASTRO:
+    name: Astrocytic tumours of the retina
+    who_volume: Eye and Orbit Tumours
+    site: Retina
+    lineage_broad: Glial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Glial tumor
+
+  RETINA_GLIOSIS:
+    name: Nodular and massive retinal gliosis
+    who_volume: Eye and Orbit Tumours
+    site: Retina
+    lineage_broad: Glial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Reactive
+
   RICH_NICH:
     name: "Congenital non-progressive haemangiomas: Rapidly involuting congenital haemangioma and non-involuting congenital haemangioma"
     who_volume: Skin Tumours
@@ -13994,6 +14451,46 @@ tumor_types:
     families:
     - Sarcoma
     - Rhabdomyosarcoma
+
+  RPE_ADENOMA:
+    name: Adenoma and adenocarcinoma of the retinal pigment epithelium
+    who_volume: Eye and Orbit Tumours
+    site: Retinal pigment epithelium
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Adenoma
+
+  RPE_CH:
+    name: Congenital hypertrophy of the retinal pigment epithelium
+    who_volume: Eye and Orbit Tumours
+    site: Retinal pigment epithelium
+    lineage_broad: Hamartomatous
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Hamartoma
+
+  RPE_HAM:
+    name: Hamartoma of the retinal pigment epithelium
+    who_volume: Eye and Orbit Tumours
+    site: Retinal pigment epithelium
+    lineage_broad: Hamartomatous
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Hamartoma
+
+  RPE_REACT_HYP:
+    name: Reactive hyperplasia of the retinal pigment epithelium
+    who_volume: Eye and Orbit Tumours
+    site: Retinal pigment epithelium
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Reactive
 
   RTK:
     name: Rhabdoid tumour of the kidney
@@ -16823,6 +17320,16 @@ tumor_types:
     families:
     - Gynecologic tumor
     - Sarcoma
+
+  UVEA_MELANOCYTOSIS:
+    name: Ocular melanocytosis
+    who_volume: Eye and Orbit Tumours
+    site: Uvea
+    lineage_broad: Melanocytic
+    lineage_detail: null
+    families:
+    - Ocular tumor
+    - Melanocytic tumor
 
   UVEA_MELCYT:
     name: Uveal melanocytoma
