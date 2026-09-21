@@ -20,7 +20,7 @@ def methylation_class(row):
         # controls
         "methylation class control (blood)": "CTRL_BLOOD",
         "methylation class control (muscle tissue)": "CTRL_SKM",
-        "methylation class control (reactive tissue)": "CTRL_REA",
+        "methylation class control (reactive tissue)": "CTRL_REACT",
         # bone tumours
         "methylation class chondroblastoma": "CHONDBL",
         "methylation class chondrosarcoma (clear cell)": "CSA_CC",

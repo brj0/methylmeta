@@ -21,7 +21,7 @@ def methylation_class(row):
     )
     p16 = row["p16 immunohistochemistry"]
     if "lung" in title:
-        return "NSCLC_SCC"
+        return "LU_SCC"
     elif p16 == "Positive" or "HPV" in hpv_geno:
         return "HNSCC_HPVA"
     else:

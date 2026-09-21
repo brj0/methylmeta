@@ -22,7 +22,7 @@ tumor_types:
     - Bone tumor
     - Fibro-osseous tumor
 
-  ABL:
+  AML_BASO:
     name: Acute basophilic leukemia
     who_volume: Haematolymphoid Tumours
     site: Bone Marrow
@@ -43,7 +43,7 @@ tumor_types:
     - Soft tissue tumor
     - Vascular tumor
 
-  ACRAL_NEV:
+  NEV_ACRAL:
     name: Acral naevus
     who_volume: Skin Tumours
     site: Skin
@@ -135,7 +135,7 @@ tumor_types:
     - Adrenal tumor
     - Mesothelial tumor
 
-  ADENOMYOMA_UT:
+  UT_ADENOMYOMA:
     name: Adenomyoma (uterus)
     who_volume: Female Genital Tumours
     site: Uterus
@@ -144,7 +144,7 @@ tumor_types:
     families:
     - Gynecologic tumor
 
-  ADENOSARC_UT:
+  UT_ADENOSARC:
     name: Adenosarcoma (uterus)
     who_volume: Female Genital Tumours
     site: Uterus
@@ -905,7 +905,7 @@ tumor_types:
     families:
     - AML
 
-  AML_PEC_REN:
+  REN_PEC:
     name: Classic angiomyolipoma / PEComa of the kidney
     who_volume: Urinary and Male Genital Tumours
     site: Kidney
@@ -1396,7 +1396,7 @@ tumor_types:
     - Gastrointestinal tumor
     - Precursor lesion
 
-  BARTH_CA:
+  VULVA_BARTH_CA:
     name: Bartholin gland carcinoma
     who_volume: Female Genital Tumours
     site: Vulva (Bartholin gland)
@@ -1637,7 +1637,7 @@ tumor_types:
     - Lymphoma
     - B-cell lymphoma
 
-  BLUE_NEV:
+  NEV_BLUE:
     name: Blue naevus
     who_volume: Skin Tumours
     site: Skin
@@ -1657,7 +1657,7 @@ tumor_types:
     families:
     - mature_b_non_small_cell
 
-  BMN:
+  NEV_BNG:
     name: Benign Melanocytic Nevus
     who_volume: null
     site: null
@@ -2270,7 +2270,7 @@ tumor_types:
     families:
     - Sinonasal tumor
 
-  BT:
+  BROWN:
     name: Hyperparathyroidism-associated Brown Tumor
     who_volume: null
     site: null
@@ -2506,7 +2506,7 @@ tumor_types:
     families:
     - BCP-ALL
 
-  CAD:
+  COLD_AGGLUT:
     name: Cold agglutinin disease
     who_volume: Haematolymphoid Tumours
     site: Blood
@@ -2672,7 +2672,7 @@ tumor_types:
     families:
     - Myo-fibroblastic tumor
 
-  CDFOLLICLE:
+  CTRL_DENT_FOL:
     name: Control - Dental Follicle
     who_volume: null
     site: null
@@ -3363,16 +3363,6 @@ tumor_types:
     families:
     - CNS tumor
     - Embryonal tumor
-
-  CNS_EPCYST:
-    name: Epidermoid cyst
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - CNS lesion
-    - Cyst
 
   CNS_LYMPHO:
     name: CNS lymphoma
@@ -4255,16 +4245,6 @@ tumor_types:
     - Normal tissue
     - Genitourinary
 
-  CTRL_REA:
-    name: Normal reactive tissue
-    who_volume: null
-    site: Multiple
-    lineage_broad: Mixed
-    lineage_detail: null
-    families:
-    - Normal tissue
-    - Reactive
-
   CTRL_REACT:
     name: Reactive tumor microenvironment
     who_volume: null
@@ -4275,7 +4255,7 @@ tumor_types:
     - Control
     - Reactive
 
-  CTRL_SALIV:
+  CTRL_SG:
     name: Control - Salivary Gland
     who_volume: null
     site: null
@@ -4392,7 +4372,7 @@ tumor_types:
     - Normal tissue
     - Brain
 
-  CUPS:
+  CUP:
     name: Cancer of Unknown Primary
     who_volume: null
     site: null
@@ -4765,7 +4745,7 @@ tumor_types:
     - Desmoplastic myxoid tumor
     - SMARCB1-deficient tumor
 
-  DNADEG:
+  CTR_DNA_DEG:
     name: Degraded DNA
     who_volume: null
     site: Multiple
@@ -4924,7 +4904,7 @@ tumor_types:
     - Carcinoma
     - Squamous cell carcinoma
 
-  EAML_PEC_REN:
+  REN_EAML:
     name: Epithelioid angiomyolipoma / epithelioid PEComa of the kidney
     who_volume: Urinary and Male Genital Tumours
     site: Kidney
@@ -5589,7 +5569,7 @@ tumor_types:
     - Gynecologic tumor
     - Sarcoma
 
-  ET:
+  MPN_ET:
     name: Essential thrombocythemia
     who_volume: Haematolymphoid Tumours
     site: Bone Marrow
@@ -6121,7 +6101,7 @@ tumor_types:
     - Glioma
     - Glioblastoma
 
-  GBM_NT:
+  CTRL_BRAIN_GBM:
     name: Normal brain tissue associated with glioblastoma dataset
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -6257,7 +6237,7 @@ tumor_types:
     - Soft tissue tumor
     - Giant cell tumor
 
-  GCT_AD:
+  GCT_ADULT:
     name: Adult Granulosa Cell Tumor
     who_volume: Female Genital Tumours
     site: Ovary
@@ -6266,13 +6246,13 @@ tumor_types:
     families:
     - Germ cell tumor
 
-  GCT_AD_TES:
+  TES_GCT_ADULT:
     name: Adult granulosa cell tumour (testis)
     who_volume: Urinary and Male Genital Tumours
     site: Testis
     lineage_broad: Sex cord-stromal
     lineage_detail: null
-    parent: GCT_AD
+    parent: GCT_ADULT
     families:
     - Genital tumor
     - Sex cord-stromal tumor
@@ -6286,7 +6266,7 @@ tumor_types:
     families:
     - Germ cell tumor
 
-  GCT_JUV_TES:
+  TES_GCT_JUV:
     name: Juvenile granulosa cell tumour (testis)
     who_volume: Urinary and Male Genital Tumours
     site: Testis
@@ -6327,7 +6307,7 @@ tumor_types:
     - Soft tissue tumor
     - Fibroblastic tumor
 
-  GENITAL_NEV:
+  NEV_GENITAL:
     name: Genital naevus
     who_volume: Skin Tumours
     site: Skin
@@ -6489,7 +6469,7 @@ tumor_types:
     - Germ cell tumor
     - Sex cord-stromal tumor
 
-  GPC:
+  SINO_GPC:
     name: Sinonasal Glomangiopericytoma
     who_volume: Head and Neck Tumours
     site: null
@@ -6557,7 +6537,7 @@ tumor_types:
     families:
     - Hamartoma
 
-  HALO_NEV:
+  NEV_HALO:
     name: Halo naevus
     who_volume: Skin Tumours
     site: Skin
@@ -7497,7 +7477,7 @@ tumor_types:
     - Fibroblastic tumor
     - Inflammatory tumor
 
-  IMTER_T:
+  TES_IMM_TER:
     name: Testicular immature teratoma
     who_volume: Urinary and Male Genital Tumours
     site: Testis
@@ -8135,23 +8115,13 @@ tumor_types:
     families:
     - Papilloma
 
-  LB:
+  LIPOBL:
     name: Lipoblastoma
     who_volume: null
     site: null
     lineage_broad: Mesenchymal
     lineage_detail: null
     families:
-    - Adipocytic tumor
-
-  LBL:
-    name: Lipoblastoma and lipoblastomatosis
-    who_volume: Soft Tissue and Bone Tumours
-    site: Soft tissue
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    families:
-    - Soft tissue tumor
     - Adipocytic tumor
 
   LBLLT:
@@ -8898,7 +8868,7 @@ tumor_types:
     site: Lung
     lineage_broad: Epithelial
     lineage_detail: null
-    parent: NSCLC_SCC
+    parent: LU_SCC
     families:
     - Lung tumor
     - Carcinoma
@@ -8925,7 +8895,7 @@ tumor_types:
     - Precursor lesion
     - Squamous lesion
 
-  LYG_LU:
+  LU_LYG:
     name: Lymphomatoid granulomatosis of the lung
     who_volume: Thoracic Tumours
     site: Lung
@@ -9007,7 +8977,7 @@ tumor_types:
     - Skin adnexal tumor
     - Carcinoma
 
-  MALE_BR_DCIS:
+  BR_MALE_DCIS:
     name: Carcinoma in situ of the male breast
     who_volume: Breast Tumours
     site: Male breast
@@ -9018,7 +8988,7 @@ tumor_types:
     - Male breast tumor
     - Carcinoma in situ
 
-  MALE_BR_INV_CA:
+  BR_MALE_INV_CA:
     name: Invasive carcinoma of the male breast
     who_volume: Breast Tumours
     site: Male breast
@@ -9039,7 +9009,7 @@ tumor_types:
     - Skin tumor
     - Mast cell neoplasm
 
-  MATTER_T:
+  TES_MAT_TER:
     name: Testicular mature teratoma
     who_volume: Urinary and Male Genital Tumours
     site: Testis
@@ -9460,7 +9430,7 @@ tumor_types:
     - Melanocytic tumor
     - Melanoma
 
-  MEL_BLUE_NEV:
+  MEL_NEV_BLUE:
     name: Melanoma arising in blue naevus
     who_volume: Skin Tumours
     site: Skin
@@ -9752,7 +9722,7 @@ tumor_types:
     - Soft tissue tumor
     - Myoepithelial tumor
 
-  MEYERSON_NEV:
+  NEV_MEYERSON:
     name: Meyerson naevus
     who_volume: Skin Tumours
     site: Skin
@@ -10144,7 +10114,7 @@ tumor_types:
     - Ocular tumor
     - Viral lesion
 
-  MP:
+  MYOS_PROL:
     name: Myositis Proliferans
     who_volume: null
     site: null
@@ -10646,7 +10616,7 @@ tumor_types:
     families:
     - Soft tissue tumor
 
-  NEAV_CONG_SKIN:
+  NEV_CONG:
     name: Congenital melanocytic naevus
     who_volume: Skin Tumours
     site: Skin
@@ -11030,7 +11000,7 @@ tumor_types:
     - Lung tumor
     - Carcinoma
 
-  NSCLC_AD:
+  LU_ADCA:
     name: Lung adenocarcinoma
     who_volume: Thoracic Tumours
     site: Lung
@@ -11040,7 +11010,7 @@ tumor_types:
     - Lung tumor
     - Carcinoma
 
-  NSCLC_SCC:
+  LU_SCC:
     name: Lung squamous cell carcinoma
     who_volume: Thoracic Tumours
     site: Lung
@@ -11924,7 +11894,7 @@ tumor_types:
     - Gastrointestinal tumor
     - Carcinoma
 
-  PAD:
+  PMA:
     name: Polymorphous Adenocarcinoma
     who_volume: Head and Neck Tumours
     site: null
@@ -12004,7 +11974,7 @@ tumor_types:
     site: Pancreas
     lineage_broad: Neuroendocrine
     lineage_detail: null
-    parent: PNEC
+    parent: PAN_NEC
     families:
     - Pancreatic tumor
     - Neuroendocrine tumor
@@ -12713,7 +12683,7 @@ tumor_types:
     - Skin adnexal tumor
     - Carcinoma
 
-  PIN:
+  PROST_PIN:
     name: Prostatic intraepithelial Neoplasia
     who_volume: null
     site: null
@@ -12722,7 +12692,7 @@ tumor_types:
     families:
     - Undefined
 
-  PIN_CYT:
+  PINEAL_CYT:
     name: Pineocytoma
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -12732,7 +12702,7 @@ tumor_types:
     - CNS tumor
     - Pineal tumor
 
-  PIN_HG:
+  PROST_PIN_HG:
     name: High-grade prostatic intraepithelial neoplasia
     who_volume: Urinary and Male Genital Tumours
     site: Prostate
@@ -12742,7 +12712,7 @@ tumor_types:
     - Prostatic tumor
     - Precursor lesion
 
-  PIN_T_PB_A:
+  PINEAL_PB_A:
     name: Pineoblastoma group A / intracranial retinoblastoma
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -12753,7 +12723,7 @@ tumor_types:
     - Pineal tumor
     - Embryonal tumor
 
-  PIN_T_PB_B:
+  PINEAL_PB_B:
     name: Pineoblastoma group B
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -12764,7 +12734,7 @@ tumor_types:
     - Pineal tumor
     - Embryonal tumor
 
-  PIN_T_PPT:
+  PINEAL_PPT:
     name: Pineal parenchymal tumor
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -12914,7 +12884,7 @@ tumor_types:
     - Gastrointestinal tumor
     - Hamartoma
 
-  PLAG1:
+  SKIN_PLAG1:
     name: Cutaneous PLAG1-rearranged mixed Tumor
     who_volume: null
     site: null
@@ -12983,7 +12953,7 @@ tumor_types:
     - Soft tissue tumor
     - Fibroblastic tumor
 
-  PLEX_AD:
+  PLEX_ADULT:
     name: Choroid plexus tumor, adult
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -13117,7 +13087,7 @@ tumor_types:
     - Mesenchymal tumor
     - Soft tissue tumor
 
-  PNEC:
+  PAN_NEC:
     name: Pancreatic Neuroendocrine Carcinoma
     who_volume: null
     site: null
@@ -13240,7 +13210,7 @@ tumor_types:
     - Gynecologic tumor
     - Fibroblastic tumor
 
-  PRE_PMF:
+  MPN_PRE_PMF:
     name: Prefibrotic primary myelofibrosis
     who_volume: Haematolymphoid Tumours
     site: Bone Marrow
@@ -13359,7 +13329,7 @@ tumor_types:
     - Soft tissue tumor
     - Vascular tumor
 
-  PSCN:
+  NEV_PSC:
     name: Pigmented spindle cell naevus (Reed naevus)
     who_volume: Skin Tumours
     site: Skin
@@ -13522,7 +13492,7 @@ tumor_types:
     - Skin tumor
     - Precursor lesion
 
-  PV:
+  MPN_PV:
     name: Polycythemia vera
     who_volume: Haematolymphoid Tumours
     site: Bone Marrow
@@ -13846,7 +13816,7 @@ tumor_types:
     - Gastrointestinal tumor
     - Carcinoma
 
-  REC_NEV:
+  NEV_RECUR:
     name: Recurrent naevus
     who_volume: Skin Tumours
     site: Skin
@@ -14108,7 +14078,7 @@ tumor_types:
     families:
     - Salivary gland tumor
 
-  SALIV_MYO:
+  SG_MYO:
     name: Salivary Gland Myoepithelioma
     who_volume: null
     site: null
@@ -14118,7 +14088,7 @@ tumor_types:
     families:
     - Salivary gland tumor
 
-  SALIV_SCC:
+  SG_SCC:
     name: Salivary Gland Squamous Cell Carcinoma
     who_volume: null
     site: null
@@ -14951,10 +14921,10 @@ tumor_types:
     families:
     - Salivary gland tumor
 
-  SMAD:
+  SAL_MUC_ADCA:
     name: Mucinous Adenocarcinoma
     who_volume: Head and Neck Tumours
-    site: null
+    site: Salivary glands
     lineage_broad: Epithelial
     lineage_detail: null
     families:
@@ -15190,7 +15160,7 @@ tumor_types:
     - Skin tumor
     - Benign tumor
 
-  SONCO:
+  SG_ONCO:
     name: Salivary Gland Oncocytoma
     who_volume: null
     site: null
@@ -15217,7 +15187,7 @@ tumor_types:
     families:
     - Papilloma
 
-  SPC_REACT:
+  CTRL_SPINAL:
     name: Spinal cord tissue with reactive changes
     who_volume: Central Nervous System Tumours
     site: Spinal cord
@@ -15676,19 +15646,10 @@ tumor_types:
     families:
     - Salivary gland tumor
 
-  TE:
-    name: Teratoma
-    who_volume: null
-    site: null
-    lineage_broad: Germ cell
-    lineage_detail: null
-    families:
-    - Germ cell tumor
-
   TER:
-    name: Teratoma, NOS
-    who_volume: Urinary and Male Genital Tumours
-    site: Testis
+    name: Teratoma
+    who_volume: Female Genital Tumours
+    site: null
     lineage_broad: Germ cell
     lineage_detail: null
     families:
@@ -15785,7 +15746,7 @@ tumor_types:
     - Genital tumor
     - Borderline tumor
 
-  TESA_MUC_CYSTAD:
+  TESA_SER_CYSTAD:
     name: Serous cystadenoma (testicular adnexa)
     who_volume: Urinary and Male Genital Tumours
     site: Testicular adnexa
@@ -15814,7 +15775,7 @@ tumor_types:
     - Genital tumor
     - Borderline tumor
 
-  TESA_SER_CYSTAD:
+  TESA_MUC_CYSTAD:
     name: Mucinous cystadenoma (testicular adnexa)
     who_volume: Urinary and Male Genital Tumours
     site: Testicular adnexa
@@ -16471,7 +16432,7 @@ tumor_types:
     - Skin tumor
     - Nail tumor
 
-  ULMS:
+  UT_LMS:
     name: Uterine leiomyosarcoma
     who_volume: Female Genital Tumours
     site: Uterus
@@ -16990,7 +16951,7 @@ tumor_types:
     families:
     - Salivary gland tumor
 
-  WD:
+  WART_DYSKER:
     name: Warty dyskeratoma
     who_volume: Skin Tumours
     site: Skin

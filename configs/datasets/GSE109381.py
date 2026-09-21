@@ -89,15 +89,15 @@ def methylation_class(row):
         "PITUI": "PITUI_SCO_GCT",
         "CONTR, ADENOPIT": "CTRL_ADENOPIT",
         # Pineal region tumors
-        "PIN T,  PB A": "PIN_T_PB_A",
-        "PIN T,  PB B": "PIN_T_PB_B",
-        "PIN T, PB B": "PIN_T_PB_B",
-        "PIN T, PPT": "PIN_T_PPT",
-        "PIN_CYT": "PIN_CYT",
+        "PIN T,  PB A": "PINEAL_PB_A",
+        "PIN T,  PB B": "PINEAL_PB_B",
+        "PIN T, PB B": "PINEAL_PB_B",
+        "PIN T, PPT": "PINEAL_PPT",
+        "PIN_CYT": "PINEAL_CYT",
         "PTPR, A": "PTPR_A",
         "PTPR, B": "PTPR_B",
         # Choroid plexus tumors
-        "PLEX, AD": "PLEX_AD",
+        "PLEX, AD": "PLEX_ADULT",
         "PLEX, PED A": "PLEX_PED_A",
         "PLEX, PED B": "PLEX_PED_B",
         # Other CNS tumors

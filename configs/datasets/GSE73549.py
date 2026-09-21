@@ -27,7 +27,7 @@ def methylation_class(row):
     if tissue == "Prostate" and disease == "Tumor":
         return "PRAD"
     if tissue == "Prostate" and disease == "PIN":
-        return "PIN"
+        return "PROST_PIN"
     return None
 
 

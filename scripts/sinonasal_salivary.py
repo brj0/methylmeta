@@ -83,7 +83,7 @@ ACRONYM_TRANSLATOR = {
     "CHORD_DD": "CHD_D",
     # Controls
     "CTRL_HN": "CHEADNECK",
-    "CTRL_SALIV": "CSALIVARY",
+    "CTRL_SG": "CSALIVARY",
     "CTRL_LYMPH": "CLYMPH",
     "CTRL_SINO": "CSINONASAL",
     "CTRL_THYM": "CTHYMUS",
@@ -98,7 +98,7 @@ ACRONYM_TRANSLATOR = {
     "MEC": "MEC",
     "PLEO_AD_MYO": "MYO_PA",
     "PLEO_AD": "MYO_PA",
-    "PAD": "PAD",
+    "PMA": "PAD",
     "SACC": "SACC",
     "BCAC": "SBCAD",
     "SBL": "SBL",
@@ -111,14 +111,14 @@ ACRONYM_TRANSLATOR = {
     "SEA": "SEA",
     "SEAD": "SEAD",
     "SGCA": "SGCA",
-    "SALIV_SCC": "SGSCC",
+    "SG_SCC": "SGSCC",
     "SIDC": "SIDC",
     "SIALOLIPO": "SL",
     "SMA": "SMA",
-    "SMAD": "SMAD",
+    "SAL_MUC_ADCA": "SMAD",
     "SMSAD": "SMSAD",
     "SMYOC": "SMYOC",
-    "SONCO": "SONCO",
+    "SG_ONCO": "SONCO",
     "SSC": "SSC",
     "SSP": "SSP",
     "SSPA": "SSPA",
@@ -126,7 +126,7 @@ ACRONYM_TRANSLATOR = {
     "WARTH": "WARTH",
     # Sinonasal
     "BSNS": "BSNS",
-    "GPC": "GPC",
+    "SINO_GPC": "GPC",
     "HMSC": "HMSC",
     "NECIDH2": "NECIDH2",
     "SNAD": "SNAD",
@@ -141,7 +141,7 @@ ACRONYM_TRANSLATOR = {
     "BURK": "BL",
     "HISTSARC": "HS",
     "CPH_ADM": "ACPH",
-    "NSCLC_SCC": "LSCC",
+    "LU_SCC": "LSCC",
 }
 
 DATASET_DIR = Path("~/methylmeta/data").expanduser()

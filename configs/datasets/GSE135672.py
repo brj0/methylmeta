@@ -23,7 +23,7 @@ def methylation_class(row):
     value = row["Source"]
     mapping = {
         "ameloblastoma": "AMBL",
-        "Dental follicle": "CDFOLLICLE",
+        "Dental follicle": "CTRL_DENT_FOL",
     }
     return mapping[value]
 

@@ -44,24 +44,31 @@ def methylation_class(row):
         "ADC": "SNAD",
         "ALV RMS": "RMS_ALV",
         "BP SSARC": "BSNS",
+        "CPH": "SINO_GPC",
         "CTRL": "CTRL_SINO",
         "EMB RMS": "RMS_EMB",
+        "EWS": "EWS",
+        "GPC": "SINO_GPC",
         "LECA": "LEC",
+        "MCC": "MCC",
         "MELA": "MEL_MUC",
+        "NEC-like IDH2": "NECIDH2",
+        "NEC-like SMARCA4 ARID1A": "SNNEC_SMARCA4",
+        "NUT": "NUT",
+        "ONB": "ONB",
         "PIT AD": "PITAD",
         "RHB MEN": "MNG",
         "SCC": "SN_SCC",
         "SMARCB1": "SMARCB1",
-        "NEC-like IDH2": "NECIDH2",
-        "NEC-like SMARCA4 ARID1A": "SNNEC_SMARCA4",
-        None: None,
+        "SNUC": "SNUC",
         "Unknown": None,
+        None: None,
     }
 
-    base = row["methylation class"]
+    value = row["methylation class"]
 
     # For test samples, there is no methylation diagnosis.
     if "Test_set" in row["Title"] and row["predicted class"] is not None:
-        base = row["predicted class"]
+        value = row["predicted class"]
 
-    return mapping.get(base, base)
+    return mapping[value]

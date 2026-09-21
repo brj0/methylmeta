@@ -78,7 +78,13 @@ may be incorrect, inconsistent, malformed, or otherwise invalid. Do not filter,
 skip, or drop rows because of invalid metadata; harmonize every row as far as
 possible. Rows may be removed later by downstream validation or quality-control
 steps. Do not add row filtering. Do not use regex. Do not create new WHO
-acronyms. Do not change methylmeta source code or tumor_types.yaml.
+acronyms. Do not change methylmeta source code or tumor_types.yaml. Try to
+avoid mapping.get(value, value) and use mapping[value] instead, to avoid
+silently passing through unexpected values. Every mapping must therefore define
+an explicit fallback for unknown values, such as "Unknown", null, or another
+schema-valid value. If an unexpected raw value is encountered, preserve the row
+and map it to the explicit fallback rather than raising an error or silently
+returning the original value.
 
 When returning Python code, follow PEP 8 formatting and keep lines to a maximum
 of 79 characters.
