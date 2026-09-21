@@ -19,7 +19,7 @@ def methylation_class(row):
     mapping = {
         "Blood, chemotherapy-related AML": "AML",
         "Blood, de novo AML": "AML",
-        "Blood, healthy control": "CONTR_BLOOD",
+        "Blood, healthy control": "CTRL_BLOOD",
         "Blood, radiotherapy-related AML": "AML",
         "Blood, therapy-related AML": "AML",
     }

@@ -21,7 +21,7 @@ def methylation_class(row):
         "Cutaneous melanoma": "MEL_SKIN",
         "Mucosal melanoma": "MEL_MUC",
         "Mucosal": "MEL_MUC",
-        "Normal melanocytes": "CONTR_MELCYT",
+        "Normal melanocytes": "CTRL_MELCYT",
         "Uveal melanoma": "MEL_UVE",
     }
     return mapping.get(value, value)

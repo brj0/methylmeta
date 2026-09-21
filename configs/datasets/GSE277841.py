@@ -18,7 +18,7 @@ def methylation_class(row):
     value = row["Title"]
 
     if "Healthy control" in value:
-        return "CONTR_BLOOD"
+        return "CTRL_BLOOD"
     if "ET" in value:
         return "ET"
     if "PMF" in value:

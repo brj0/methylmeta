@@ -19,7 +19,7 @@ def methylation_class(row):
     mapping = {
         "1_Tumor": "HNSCC",
         "2_OPL": "OML",
-        "3_Normal": "CONTR_HN",
+        "3_Normal": "CTRL_HN",
     }
     return mapping[value]
 

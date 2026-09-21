@@ -44,7 +44,7 @@ def methylation_class(row):
         "ADC": "SNAD",
         "ALV RMS": "RMS_ALV",
         "BP SSARC": "BSNS",
-        "CTRL": "CONTR_SINO",
+        "CTRL": "CTRL_SINO",
         "EMB RMS": "RMS_EMB",
         "LECA": "LEC",
         "MELA": "MEL_MUC",

@@ -26,9 +26,9 @@ def methylation_class(row):
     disease_status = str(row["disease status"]).lower()
     if "remission" in disease_status or "relapse" in disease_status:
         if "blood" in tissue:
-            return "CONTR_BLOOD"
+            return "CTRL_BLOOD"
         if "bone marrow" in tissue:
-            return "CONTR_MARROW"
+            return "CTRL_MARROW"
     if "diagnosis" in disease_status:
         return "AML"
     return None

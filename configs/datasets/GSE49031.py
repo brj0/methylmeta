@@ -25,15 +25,15 @@ def methylation_class(row):
     value = row["disease state"]
 
     if "normal CD3+ cells" in value:
-        return "CONTR_BLOOD"
+        return "CTRL_BLOOD"
     if "normal CD19+ cells" in value:
-        return "CONTR_BLOOD"
+        return "CTRL_BLOOD"
     if "pooled normal CD34+ cells" in value:
-        return "CONTR_BLOOD"
+        return "CTRL_BLOOD"
     if value == "normal peripheral blood":
-        return "CONTR_BLOOD"
+        return "CTRL_BLOOD"
     if value == "normal bone marrow":
-        return "CONTR_MARROW"
+        return "CTRL_MARROW"
     return None
 
 

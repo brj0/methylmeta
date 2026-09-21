@@ -18,7 +18,7 @@ def methylation_class(row):
     value = row["disease state"]
     mapping = {
         "essential thrombocythemia": "ET",
-        "healthy control": "CONTR_BLOOD",
+        "healthy control": "CTRL_BLOOD",
     }
     return mapping[value]
 

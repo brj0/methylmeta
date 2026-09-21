@@ -31,7 +31,7 @@ def methylation_class(row):
         "MSADC": "SMSAD",
         "MYOCA": "SMYOC",
         "MYO_PA": "PLEO_AD_MYO",
-        "NOR": "CONTR_SALIV",
+        "NOR": "CTRL_SALIV",
         "ONCO": "SONCO",
         "P_ADC": "PAD",
         "SCA": "SSC",

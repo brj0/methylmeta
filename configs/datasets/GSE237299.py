@@ -89,11 +89,11 @@ def methylation_class(row):
         "dendritic": "FDCS",  # after lymphoblastic keys (avoids FDCS clash)
         "unicentric castleman": "CAST",
         # Reactive / non-neoplastic lymph node changes -> control tissue.
-        "reactive lymphoid hyperplasia": "CONTR_LYMPH",
-        "reactive follicular": "CONTR_LYMPH",
-        "follicular hyperplasia": "CONTR_LYMPH",
-        "paracortical hyperplasia": "CONTR_LYMPH",
-        "fh": "CONTR_LYMPH",
+        "reactive lymphoid hyperplasia": "CTRL_LYMPH",
+        "reactive follicular": "CTRL_LYMPH",
+        "follicular hyperplasia": "CTRL_LYMPH",
+        "paracortical hyperplasia": "CTRL_LYMPH",
+        "fh": "CTRL_LYMPH",
     }
     for text, acronym in mapping.items():
         if text in value:

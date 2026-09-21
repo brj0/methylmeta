@@ -20,7 +20,7 @@ def diagnosis(row):
 def methylation_class(row):
     value = row["disease state"]
     mapping = {
-        "Breast cancer brain metastasis": "BRCA",
+        "Breast cancer brain metastasis": "BR_CA",
         "Lung cancer brain metastasis": "NSCLC",
         "Melanoma brain metastasis": "MEL",
         "Uncertain primary tumor brain metastasis": "CUPS",

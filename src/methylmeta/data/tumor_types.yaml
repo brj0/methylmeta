@@ -165,7 +165,7 @@ tumor_types:
     - Skin adnexal tumor
     - Carcinoma
 
-  ADREN_CA:
+  ADREN_CORT_CA:
     name: Adrenocortical carcinoma
     who_volume: Endocrine and Neuroendocrine Tumours
     site: Adrenal gland
@@ -338,24 +338,15 @@ tumor_types:
     - Smooth muscle tumor
 
   AITL:
-    name: Angioimmunoblastic T-cell Lymphoma
-    who_volume: null
-    site: null
-    lineage_broad: Hematolymphoid
-    lineage_detail: null
-    families:
-    - Hematolymphoid neoplasm
-
-  AITL_SKIN:
     name: Nodal T follicular helper cell lymphoma, angioimmunoblastic type
-    who_volume: Skin Tumours
-    site: Skin
+    who_volume: Haematolymphoid Tumours
+    site: Lymph node
     lineage_broad: Hematolymphoid
-    lineage_detail: null
+    lineage_detail: T-Cell
     families:
-    - Skin tumor
     - Lymphoma
     - T-cell lymphoma
+    - TFH lymphoma
 
   AK:
     name: Actinic Keratosis
@@ -974,15 +965,6 @@ tumor_types:
     - Astrocytoma
     - Pilocytic astrocytoma
 
-  ANEUPLOIDY:
-    name: Aneuploidy
-    who_volume: Haematolymphoid Tumours
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: B-Cell
-    families:
-    - BCP-ALL
-
   ANGIOKERATOMA:
     name: Angiokeratoma
     who_volume: Skin Tumours
@@ -1011,18 +993,6 @@ tumor_types:
     lineage_broad: Mesenchymal
     lineage_detail: null
     families:
-    - Sarcoma
-    - Vascular tumor
-
-  ANGSARC_ENDO:
-    name: Angiosarcoma of endocrine organs
-    who_volume: Endocrine and Neuroendocrine Tumours
-    site: Endocrine organs
-    lineage_broad: Vascular
-    lineage_detail: null
-    parent: ANGSARC
-    families:
-    - Endocrine tumor
     - Sarcoma
     - Vascular tumor
 
@@ -1475,7 +1445,7 @@ tumor_types:
     - Sarcoma
     - Small round cell tumor
 
-  BC_HER2:
+  BR_CA_HER2:
     name: Breast Carcinoma - HER2+
     who_volume: null
     site: null
@@ -1484,7 +1454,7 @@ tumor_types:
     families:
     - Carcinoma
 
-  BC_HRP:
+  BR_CA_HRP:
     name: Breast Carcinoma - Hormone Receptor Positive
     who_volume: null
     site: null
@@ -1493,7 +1463,7 @@ tumor_types:
     families:
     - Carcinoma
 
-  BC_TN:
+  BR_CA_TN:
     name: Breast Carcinoma - Triple Negative
     who_volume: null
     site: null
@@ -1623,7 +1593,7 @@ tumor_types:
     families:
     - Bone tumor
 
-  BOT:
+  OVA_BOT:
     name: Borderline Ovarian Tumor
     who_volume: null
     site: null
@@ -1688,7 +1658,7 @@ tumor_types:
     families:
     - Benign tumor
 
-  BRCA:
+  BR_CA:
     name: Breast carcinoma
     who_volume: Breast Tumours
     site: Breast
@@ -1842,7 +1812,7 @@ tumor_types:
     site: Breast
     lineage_broad: Epithelial
     lineage_detail: null
-    parent: BRCA
+    parent: BR_CA
     families:
     - Breast tumor
     - Carcinoma
@@ -1873,7 +1843,7 @@ tumor_types:
     site: Breast
     lineage_broad: Epithelial
     lineage_detail: null
-    parent: BRCA
+    parent: BR_CA
     families:
     - Breast tumor
     - Carcinoma
@@ -1884,7 +1854,7 @@ tumor_types:
     site: Breast
     lineage_broad: Epithelial
     lineage_detail: null
-    parent: BRCA
+    parent: BR_CA
     families:
     - Breast tumor
     - Carcinoma
@@ -1957,7 +1927,7 @@ tumor_types:
     site: Breast
     lineage_broad: Epithelial
     lineage_detail: null
-    parent: BRCA
+    parent: BR_CA
     families:
     - Breast tumor
     - Carcinoma
@@ -2010,7 +1980,7 @@ tumor_types:
     site: Breast
     lineage_broad: Epithelial
     lineage_detail: null
-    parent: BRCA
+    parent: BR_CA
     families:
     - Breast tumor
     - Carcinoma
@@ -2022,7 +1992,7 @@ tumor_types:
     site: Breast
     lineage_broad: Epithelial / mesenchymal
     lineage_detail: null
-    parent: BRCA
+    parent: BR_CA
     families:
     - Breast tumor
     - Carcinoma
@@ -2034,7 +2004,7 @@ tumor_types:
     site: Breast
     lineage_broad: Epithelial
     lineage_detail: null
-    parent: BRCA
+    parent: BR_CA
     families:
     - Breast tumor
     - Carcinoma
@@ -2045,7 +2015,7 @@ tumor_types:
     site: Breast
     lineage_broad: Epithelial
     lineage_detail: null
-    parent: BRCA
+    parent: BR_CA
     families:
     - Breast tumor
     - Carcinoma
@@ -2056,7 +2026,7 @@ tumor_types:
     site: Breast
     lineage_broad: Epithelial
     lineage_detail: null
-    parent: BRCA
+    parent: BR_CA
     families:
     - Breast tumor
     - Carcinoma
@@ -2155,7 +2125,7 @@ tumor_types:
     site: Breast
     lineage_broad: Epithelial
     lineage_detail: null
-    parent: BRCA
+    parent: BR_CA
     families:
     - Breast tumor
     - Carcinoma
@@ -2176,7 +2146,7 @@ tumor_types:
     site: Breast
     lineage_broad: Epithelial
     lineage_detail: null
-    parent: BRCA
+    parent: BR_CA
     families:
     - Breast tumor
     - Carcinoma
@@ -3524,7 +3494,7 @@ tumor_types:
     - Ocular tumor
     - Papilloma
 
-  CONTR_ADENOPIT:
+  CTRL_ADENOPIT:
     name: Normal anterior pituitary
     who_volume: Central Nervous System Tumours
     site: Pituitary gland
@@ -3535,7 +3505,7 @@ tumor_types:
     - CNS
     - Pituitary
 
-  CONTR_ADIPOSE:
+  CTRL_ADIPOSE:
     name: Control - Adipose
     who_volume: null
     site: null
@@ -3544,7 +3514,7 @@ tumor_types:
     families:
     - Control
 
-  CONTR_ADREN:
+  CTRL_ADREN:
     name: Normal adrenal gland
     who_volume: Endocrine and Neuroendocrine Tumours
     site: Adrenal gland
@@ -3554,7 +3524,7 @@ tumor_types:
     - Normal tissue
     - Adrenal
 
-  CONTR_ANAL:
+  CTRL_ANAL:
     name: Control - Anal
     who_volume: null
     site: null
@@ -3563,7 +3533,7 @@ tumor_types:
     families:
     - Control
 
-  CONTR_APP:
+  CTRL_APP:
     name: Normal appendix
     who_volume: Digestive System Tumours
     site: Appendix
@@ -3573,7 +3543,7 @@ tumor_types:
     - Normal tissue
     - Gastrointestinal
 
-  CONTR_BLA:
+  CTRL_BLA:
     name: Normal bladder
     who_volume: Urinary and Male Genital Tumours
     site: Bladder
@@ -3583,7 +3553,7 @@ tumor_types:
     - Normal tissue
     - Urinary tract
 
-  CONTR_BLOOD:
+  CTRL_BLOOD:
     name: Blood / leukocyte signature
     who_volume: Haematolymphoid Tumours
     site: Blood
@@ -3594,7 +3564,7 @@ tumor_types:
     - Blood
     - Control
 
-  CONTR_BONE:
+  CTRL_BONE:
     name: Control - Bone
     who_volume: null
     site: null
@@ -3603,7 +3573,7 @@ tumor_types:
     families:
     - Control
 
-  CONTR_BR:
+  CTRL_BR:
     name: Normal breast tissue
     who_volume: Breast Tumours
     site: Breast
@@ -3613,7 +3583,7 @@ tumor_types:
     - Normal tissue
     - Breast
 
-  CONTR_CEBM:
+  CTRL_CEBM:
     name: Normal cerebellar hemisphere
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -3623,7 +3593,7 @@ tumor_types:
     - Normal tissue
     - Brain
 
-  CONTR_CERV:
+  CTRL_CERV:
     name: Normal uterine cervix
     who_volume: Female Genital Tumours
     site: Cervix
@@ -3633,7 +3603,7 @@ tumor_types:
     - Normal tissue
     - Gynecologic
 
-  CONTR_CHOL:
+  CTRL_CHOL:
     name: Normal bile duct
     who_volume: Digestive System Tumours
     site: Bile duct
@@ -3643,7 +3613,7 @@ tumor_types:
     - Normal tissue
     - Hepatobiliary
 
-  CONTR_COL:
+  CTRL_COL:
     name: Normal colon
     who_volume: Digestive System Tumours
     site: Colon
@@ -3653,7 +3623,7 @@ tumor_types:
     - Normal tissue
     - Gastrointestinal
 
-  CONTR_ENDOM:
+  CTRL_ENDOM:
     name: Normal endometrium
     who_volume: Female Genital Tumours
     site: Endometrium
@@ -3663,7 +3633,7 @@ tumor_types:
     - Normal tissue
     - Gynecologic
 
-  CONTR_ESO:
+  CTRL_ESO:
     name: Normal esophagus
     who_volume: Digestive System Tumours
     site: Esophagus
@@ -3673,7 +3643,7 @@ tumor_types:
     - Normal tissue
     - Gastrointestinal
 
-  CONTR_EYE:
+  CTRL_EYE:
     name: Control - Eye
     who_volume: null
     site: null
@@ -3682,7 +3652,7 @@ tumor_types:
     families:
     - Control
 
-  CONTR_GASTRIC:
+  CTRL_GASTRIC:
     name: Control - Gastric
     who_volume: null
     site: null
@@ -3691,7 +3661,7 @@ tumor_types:
     families:
     - Control
 
-  CONTR_GREY:
+  CTRL_GREY:
     name: Control - Grey
     who_volume: null
     site: null
@@ -3700,7 +3670,7 @@ tumor_types:
     families:
     - Control
 
-  CONTR_HEMI:
+  CTRL_HEMI:
     name: Normal cerebral cortex
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -3710,7 +3680,7 @@ tumor_types:
     - Normal tissue
     - Brain
 
-  CONTR_HN:
+  CTRL_HN:
     name: Normal head and neck mucosa
     who_volume: Head and Neck Tumours
     site: Head and neck
@@ -3720,7 +3690,7 @@ tumor_types:
     - Normal tissue
     - Head and neck
 
-  CONTR_HYPTHAL:
+  CTRL_HYPTHAL:
     name: Normal hypothalamus
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -3730,7 +3700,7 @@ tumor_types:
     - Normal tissue
     - Brain
 
-  CONTR_INFLAM:
+  CTRL_INFLAM:
     name: Inflammatory tumor microenvironment
     who_volume: null
     site: Multiple
@@ -3740,7 +3710,7 @@ tumor_types:
     - Control
     - Inflammatory
 
-  CONTR_KIDNEY:
+  CTRL_KIDNEY:
     name: Normal kidney
     who_volume: Urinary and Male Genital Tumours
     site: Kidney
@@ -3750,7 +3720,7 @@ tumor_types:
     - Normal tissue
     - Renal
 
-  CONTR_LIVER:
+  CTRL_LIVER:
     name: Normal liver
     who_volume: Digestive System Tumours
     site: Liver
@@ -3760,7 +3730,7 @@ tumor_types:
     - Normal tissue
     - Hepatobiliary
 
-  CONTR_LUNG:
+  CTRL_LUNG:
     name: Normal lung
     who_volume: Thoracic Tumours
     site: Lung
@@ -3770,7 +3740,7 @@ tumor_types:
     - Normal tissue
     - Thoracic
 
-  CONTR_LYMPH:
+  CTRL_LYMPH:
     name: Control lymph node
     who_volume: Haematolymphoid Tumours
     site: Lymph Node
@@ -3779,7 +3749,7 @@ tumor_types:
     families:
     - control
 
-  CONTR_MARROW:
+  CTRL_MARROW:
     name: Control marrow
     who_volume: Haematolymphoid Tumours
     site: Bone Marrow
@@ -3788,7 +3758,7 @@ tumor_types:
     families:
     - control
 
-  CONTR_MELCYT:
+  CTRL_MELCYT:
     name: Control - Cultured melanocytes
     who_volume: Skin Tumours
     site: Skin
@@ -3797,7 +3767,7 @@ tumor_types:
     families:
     - Control tissue
 
-  CONTR_MYOMETR:
+  CTRL_MYOMETR:
     name: Normal myometrium
     who_volume: null
     site: Uterus
@@ -3806,7 +3776,7 @@ tumor_types:
     families:
     - Normal tissue
 
-  CONTR_OVA:
+  CTRL_OVA:
     name: Normal ovary
     who_volume: Female Genital Tumours
     site: Ovary
@@ -3816,7 +3786,7 @@ tumor_types:
     - Normal tissue
     - Gynecologic
 
-  CONTR_PAN:
+  CTRL_PAN:
     name: Normal pancreas
     who_volume: Digestive System Tumours
     site: Pancreas
@@ -3826,7 +3796,7 @@ tumor_types:
     - Normal tissue
     - Gastrointestinal
 
-  CONTR_PINEAL:
+  CTRL_PINEAL:
     name: Normal pineal gland
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -3836,7 +3806,7 @@ tumor_types:
     - Normal tissue
     - Brain
 
-  CONTR_PLEURA:
+  CTRL_PLEURA:
     name: Control - Pleura
     who_volume: null
     site: null
@@ -3845,7 +3815,7 @@ tumor_types:
     families:
     - Control
 
-  CONTR_PONS:
+  CTRL_PONS:
     name: Normal pons
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -3855,7 +3825,7 @@ tumor_types:
     - Normal tissue
     - Brain
 
-  CONTR_PROSTATE:
+  CTRL_PROSTATE:
     name: Normal prostate
     who_volume: Urinary and Male Genital Tumours
     site: Prostate
@@ -3865,7 +3835,7 @@ tumor_types:
     - Normal tissue
     - Genitourinary
 
-  CONTR_REA:
+  CTRL_REA:
     name: Normal reactive tissue
     who_volume: null
     site: Multiple
@@ -3875,7 +3845,7 @@ tumor_types:
     - Normal tissue
     - Reactive
 
-  CONTR_REACT:
+  CTRL_REACT:
     name: Reactive tumor microenvironment
     who_volume: null
     site: Multiple
@@ -3885,7 +3855,7 @@ tumor_types:
     - Control
     - Reactive
 
-  CONTR_SALIV:
+  CTRL_SALIV:
     name: Control - Salivary Gland
     who_volume: null
     site: null
@@ -3894,7 +3864,7 @@ tumor_types:
     families:
     - Control
 
-  CONTR_SINO:
+  CTRL_SINO:
     name: Control - Sinonasal
     who_volume: null
     site: null
@@ -3903,7 +3873,7 @@ tumor_types:
     families:
     - Control
 
-  CONTR_SKIN:
+  CTRL_SKIN:
     name: Normal skin
     who_volume: Skin Tumours
     site: Skin
@@ -3913,7 +3883,7 @@ tumor_types:
     - Normal tissue
     - Skin
 
-  CONTR_SKM:
+  CTRL_SKM:
     name: Normal skeletal muscle
     who_volume: null
     site: Skeletal muscle
@@ -3923,7 +3893,7 @@ tumor_types:
     - Normal tissue
     - Muscle
 
-  CONTR_SMALLINT:
+  CTRL_SMALLINT:
     name: Control - Small Intestine
     who_volume: null
     site: null
@@ -3932,7 +3902,7 @@ tumor_types:
     families:
     - Control
 
-  CONTR_SOFT:
+  CTRL_SOFT:
     name: Normal soft tissue
     who_volume: Soft Tissue and Bone Tumours
     site: Soft tissue
@@ -3942,7 +3912,7 @@ tumor_types:
     - Normal tissue
     - Soft tissue
 
-  CONTR_STOM:
+  CTRL_STOM:
     name: Normal stomach
     who_volume: Digestive System Tumours
     site: Stomach
@@ -3952,7 +3922,7 @@ tumor_types:
     - Normal tissue
     - Gastrointestinal
 
-  CONTR_TES:
+  CTRL_TES:
     name: Normal testis
     who_volume: Urinary and Male Genital Tumours
     site: Testis
@@ -3962,7 +3932,7 @@ tumor_types:
     - Normal tissue
     - Testis
 
-  CONTR_THYM:
+  CTRL_THYM:
     name: Normal thymus
     who_volume: Thoracic Tumours
     site: Thymus
@@ -3972,7 +3942,7 @@ tumor_types:
     - Normal tissue
     - Lymphoid
 
-  CONTR_THYR:
+  CTRL_THYR:
     name: Normal thyroid gland
     who_volume: Endocrine and Neuroendocrine Tumours
     site: Thyroid
@@ -3982,7 +3952,7 @@ tumor_types:
     - Normal tissue
     - Endocrine
 
-  CONTR_TUB:
+  CTRL_TUB:
     name: Normal fallopian tube
     who_volume: Female Genital Tumours
     site: Fallopian tube
@@ -3992,7 +3962,7 @@ tumor_types:
     - Normal tissue
     - Gynecologic
 
-  CONTR_WM:
+  CTRL_WM:
     name: Normal white matter
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -5034,7 +5004,7 @@ tumor_types:
     - CNS tumor
     - Ear tumor
 
-  EMAD:
+  ENDOM_ADCA:
     name: Endometrioid Adenocarcinoma
     who_volume: null
     site: null
@@ -5103,7 +5073,7 @@ tumor_types:
     - Skin adnexal tumor
     - Carcinoma
 
-  EMSCAD:
+  ENDO_SER_CYSTADCA:
     name: Endometrioid Serous Cystadenocarcinoma
     who_volume: null
     site: null
@@ -5236,18 +5206,6 @@ tumor_types:
     lineage_detail: T/NK
     families:
     - mature_t_nk
-
-  ENMZL_MALT:
-    name: Extranodal marginal zone lymphoma of mucosa-associated lymphoid tissue
-    who_volume: Haematolymphoid Tumours
-    site: Extranodal
-    lineage_broad: Hematolymphoid
-    lineage_detail: B-Cell
-    parent: MZL
-    families:
-    - Lymphoma
-    - B-cell lymphoma
-    - Marginal zone lymphoma
 
   ENMZL_MALT:
     name: Extranodal marginal zone lymphoma of mucosa-associated lymphoid tissue
@@ -5568,8 +5526,8 @@ tumor_types:
     - CNS tumor
     - Embryonal tumor
 
-  ETP:
-    name: ETP-enriched
+  T_ALL_ETP:
+    name: T-lymphoblastic leukemia/lymphoma with ETP enrichement
     who_volume: Haematolymphoid Tumours
     site: Bone Marrow
     lineage_broad: Hematolymphoid
@@ -5745,15 +5703,6 @@ tumor_types:
     lineage_detail: null
     families:
     - Soft tissue tumor
-
-  FETETS:
-    name: FET-ETS family fusion
-    who_volume: Haematolymphoid Tumours
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    families:
-    - AML
 
   FGC:
     name: Familial gigantiform cementoma
@@ -6219,9 +6168,9 @@ tumor_types:
 
   GCT_AD:
     name: Adult Granulosa Cell Tumor
-    who_volume: null
-    site: null
-    lineage_broad: Germ cell
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Sex cord-stromal
     lineage_detail: null
     families:
     - Germ cell tumor
@@ -6239,9 +6188,9 @@ tumor_types:
 
   GCT_JUV:
     name: Juvenile Granulosa Cell Tumor
-    who_volume: null
-    site: null
-    lineage_broad: Germ cell
+    who_volume: Female Genital Tumours
+    site: Ovary
+    lineage_broad: Sex cord-stromal
     lineage_detail: null
     families:
     - Germ cell tumor
@@ -6828,20 +6777,9 @@ tumor_types:
     - Vascular tumor
 
   HEM_TUFTED:
-    name: Tufted haemangioma
-    who_volume: Skin Tumours
-    site: Skin
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    families:
-    - Skin tumor
-    - Soft tissue tumor
-    - Vascular tumor
-
-  HEM_TUFTED:
     name: Tufted angioma
     who_volume: Soft Tissue and Bone Tumours
-    site: Soft tissue
+    site: Soft tissue, Skin
     lineage_broad: Vascular
     lineage_detail: null
     families:
@@ -6897,7 +6835,7 @@ tumor_types:
     - Lymphoma
     - B-cell lymphoma
 
-  HGG_B:
+  HGG_TYPE_B:
     name: Adult-type diffuse high-grade glioma, IDH-wildtype, subtype B
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -6907,7 +6845,7 @@ tumor_types:
     - Glioma
     - High-grade glioma
 
-  HGG_F:
+  HGG_TYPE_F:
     name: High-grade glioma, methylation class F
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -6917,28 +6855,19 @@ tumor_types:
     - Glioma
     - High-grade glioma
 
-  HGG_PED_RTK1A:
-    name: Pediatric-type high-grade glioma, RTK 1A
-    who_volume: Central Nervous System Tumours
+  HGG_PED_WT_RTK1A:
+    name: Diffuse paediatric-type high-grade glioma, H3-wildtype and IDH-wildtype, RTK1A
+    who_volume: Paediatric Tumours
     site: Central nervous system
     lineage_broad: Glial
-    lineage_detail: Astrocytic
+    lineage_detail: null
     families:
     - Glioma
+    - High-grade glioma
     - Pediatric high-grade glioma
 
-  HGG_PED_RTK1B:
-    name: Pediatric-type high-grade glioma, RTK 1B
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Glial
-    lineage_detail: Astrocytic
-    families:
-    - Glioma
-    - Pediatric high-grade glioma
-
-  HGG_PED_WT:
-    name: Diffuse paediatric-type high-grade glioma, H3-wildtype and IDH-wildtype
+  HGG_PED_WT_RTK1B:
+    name: Diffuse paediatric-type high-grade glioma, H3-wildtype and IDH-wildtype, RTK1B
     who_volume: Paediatric Tumours
     site: Central nervous system
     lineage_broad: Glial
@@ -6968,7 +6897,7 @@ tumor_types:
     - CNS tumor
     - High-grade neuroepithelial tumor
 
-  HGSOC:
+  OVA_HGSC:
     name: High Grade Serous Ovarian Carcinoma
     who_volume: null
     site: null
@@ -7395,15 +7324,6 @@ tumor_types:
     families:
     - Prostatic tumor
     - Carcinoma
-
-  IDH:
-    name: IDH1/2
-    who_volume: Haematolymphoid Tumours
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    families:
-    - AML
 
   IEI_LPD:
     name: Inborn error of immunity-associated lymphoproliferative disorders
@@ -7975,42 +7895,6 @@ tumor_types:
     families:
     - Soft tissue tumor
     - Fibroblastic tumor
-
-  KMT2AAML_FOXC1:
-    name: KMT2A-AML (FOXC1)
-    who_volume: Haematolymphoid Tumours
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    families:
-    - AML
-
-  KMT2AAML_HMX3:
-    name: KMT2A-AML (HMX3)
-    who_volume: Haematolymphoid Tumours
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    families:
-    - AML
-
-  KMT2AAML_HOXAB:
-    name: KMT2A-AML (HOXA/B)
-    who_volume: Haematolymphoid Tumours
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    families:
-    - AML
-
-  KMT2AAML_MECOM:
-    name: KMT2A-AML (MECOM)
-    who_volume: Haematolymphoid Tumours
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    families:
-    - AML
 
   KPGCT:
     name: Cytokeratin-positive giant cell tumor
@@ -8625,13 +8509,13 @@ tumor_types:
     site: Blood
     lineage_broad: Hematolymphoid
     lineage_detail: B-Cell
-    parent: LYM_MAN
+    parent: MCL
     families:
     - Lymphoma
     - B-cell lymphoma
     - Mantle cell lymphoma
 
-  LPD:
+  LEIO_PERIT:
     name: Leiomyomatosis peritonealis disseminata
     who_volume: Female Genital Tumours
     site: Peritoneum (uterine origin)
@@ -8641,17 +8525,6 @@ tumor_types:
     families:
     - Gynecologic tumor
     - Smooth muscle tumor
-
-  LPL:
-    name: Lymphoplasmacytic lymphoma
-    who_volume: Haematolymphoid Tumours
-    site: Lymphoid
-    lineage_broad: Hematolymphoid
-    lineage_detail: B-Cell
-    families:
-    - mature_b_small_cell
-    - Lymphoma
-    - B-cell lymphoma
 
   LPL:
     name: Lymphoplasmacytic lymphoma
@@ -9069,7 +8942,7 @@ tumor_types:
     site: Male breast
     lineage_broad: Epithelial
     lineage_detail: null
-    parent: BRCA
+    parent: BR_CA
     families:
     - Male breast tumor
     - Carcinoma
@@ -9190,15 +9063,6 @@ tumor_types:
     families:
     - Lymphoma
     - B-cell lymphoma
-
-  MCL:
-    name: Mantle Cell Lymphoma
-    who_volume: null
-    site: null
-    lineage_broad: Hematolymphoid
-    lineage_detail: null
-    families:
-    - Hematolymphoid neoplasm
 
   MCL_BLAST:
     name: Blastoid mantle cell lymphoma
@@ -9751,23 +9615,13 @@ tumor_types:
     families:
     - Renal tumor
 
-  METST:
-    name: Myoepithelioma of soft tissue
-    who_volume: Soft Tissue and Bone Tumours
-    site: Soft tissue
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    families:
-    - Soft tissue tumor
-    - Myoepithelial tumor
-
   METST_CDX:
     name: Myoepithelial tumor of soft tissue, IRF2BP2::CDX1 fusion
     who_volume: null
     site: Soft tissue
     lineage_broad: Mesenchymal
     lineage_detail: null
-    parent: METST
+    parent: MYOEP
     families:
     - Soft tissue tumor
     - Myoepithelial tumor
@@ -9778,7 +9632,7 @@ tumor_types:
     site: Soft tissue
     lineage_broad: Mesenchymal
     lineage_detail: null
-    parent: METST
+    parent: MYOEP
     families:
     - Soft tissue tumor
     - Myoepithelial tumor
@@ -9789,7 +9643,7 @@ tumor_types:
     site: Soft tissue
     lineage_broad: Mesenchymal
     lineage_detail: null
-    parent: METST
+    parent: MYOEP
     families:
     - Soft tissue tumor
     - Myoepithelial tumor
@@ -9800,7 +9654,7 @@ tumor_types:
     site: Bone
     lineage_broad: Mesenchymal
     lineage_detail: null
-    parent: METST
+    parent: MYOEP
     families:
     - Bone tumor
     - Myoepithelial tumor
@@ -9811,7 +9665,7 @@ tumor_types:
     site: Soft tissue
     lineage_broad: Mesenchymal
     lineage_detail: null
-    parent: METST
+    parent: MYOEP
     families:
     - Soft tissue tumor
     - Myoepithelial tumor
@@ -10473,8 +10327,8 @@ tumor_types:
     - Sarcoma
     - Fibroblastic tumor
 
-  MYO:
-    name: Myoepithelioma
+  SAL_MYOEP:
+    name: Salivary gland myoepithelioma
     who_volume: Head and Neck Tumours
     site: Salivary gland
     lineage_broad: Epithelial / myoepithelial
@@ -10638,17 +10492,6 @@ tumor_types:
     - Soft tissue tumor
 
   MZL:
-    name: Marginal zone lymphoma
-    who_volume: Haematolymphoid Tumours
-    site: Lymphoid tissue
-    lineage_broad: Hematolymphoid
-    lineage_detail: B-Cell
-    families:
-    - Lymphoma
-    - B-cell lymphoma
-    - Marginal zone lymphoma
-
-  MZL:
     name: Marginal zone B-cell lymphoma
     who_volume: Haematolymphoid Tumours
     site: Lymphoid
@@ -10700,18 +10543,6 @@ tumor_types:
     lineage_broad: Neural
     lineage_detail: null
     families:
-    - Neuroblastoma
-    - Embryonal tumor
-
-  NBL_ADREN:
-    name: Neuroblastoma of the adrenal medulla
-    who_volume: Endocrine and Neuroendocrine Tumours
-    site: Adrenal medulla
-    lineage_broad: Neural
-    lineage_detail: null
-    parent: NBL
-    families:
-    - Adrenal tumor
     - Neuroblastoma
     - Embryonal tumor
 
@@ -11048,18 +10879,6 @@ tumor_types:
     - B-cell lymphoma
     - Marginal zone lymphoma
 
-  NMZL:
-    name: Nodal marginal zone lymphoma
-    who_volume: Haematolymphoid Tumours
-    site: Lymph node
-    lineage_broad: Hematolymphoid
-    lineage_detail: B-Cell
-    parent: MZL
-    families:
-    - Lymphoma
-    - B-cell lymphoma
-    - Marginal zone lymphoma
-
   NNFT:
     name: Nodular necrotizing fibroblastic tumour
     who_volume: Soft Tissue and Bone Tumours
@@ -11109,42 +10928,6 @@ tumor_types:
     lineage_detail: null
     families:
     - Carcinoma
-
-  NPM1:
-    name: NPM1
-    who_volume: Haematolymphoid Tumours
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    families:
-    - AML
-
-  NPM1_DNMT3A:
-    name: NPM1 + DNMT3A
-    who_volume: Haematolymphoid Tumours
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    families:
-    - AML
-
-  NPM1_IDH:
-    name: NPM1 + IDH
-    who_volume: Haematolymphoid Tumours
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    families:
-    - AML
-
-  NPM1_TET2:
-    name: NPM1 + TET2
-    who_volume: Haematolymphoid Tumours
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    families:
-    - AML
 
   NPPA_LG:
     name: Low-grade nasopharyngeal papillary adenocarcinoma
@@ -11226,15 +11009,6 @@ tumor_types:
     - Skin tumor
     - Soft tissue tumor
 
-  NUP98NSD1:
-    name: NUP98-NSD1
-    who_volume: Haematolymphoid Tumours
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    families:
-    - AML
-
   NUT:
     name: NUT carcinoma
     who_volume: Head and Neck Tumours
@@ -11254,7 +11028,7 @@ tumor_types:
     families:
     - Sarcoma
 
-  OCCC:
+  OVA_CCC:
     name: Ovarian Clear Cell Carcinoma
     who_volume: null
     site: null
@@ -11752,7 +11526,7 @@ tumor_types:
     site: Ovary
     lineage_broad: Epithelial
     lineage_detail: null
-    parent: BOT
+    parent: OVA_BOT
     families:
     - Gynecologic tumor
     - Borderline tumor
@@ -11783,7 +11557,7 @@ tumor_types:
     site: Ovary
     lineage_broad: Epithelial
     lineage_detail: null
-    parent: BOT
+    parent: OVA_BOT
     families:
     - Gynecologic tumor
     - Borderline tumor
@@ -11913,7 +11687,7 @@ tumor_types:
     site: Ovary
     lineage_broad: Epithelial
     lineage_detail: null
-    parent: BOT
+    parent: OVA_BOT
     families:
     - Gynecologic tumor
     - Borderline tumor
@@ -11954,7 +11728,7 @@ tumor_types:
     site: Ovary
     lineage_broad: Epithelial
     lineage_detail: null
-    parent: BOT
+    parent: OVA_BOT
     families:
     - Gynecologic tumor
     - Borderline tumor
@@ -11974,7 +11748,7 @@ tumor_types:
     site: Ovary
     lineage_broad: Epithelial
     lineage_detail: null
-    parent: BOT
+    parent: OVA_BOT
     families:
     - Gynecologic tumor
     - Borderline tumor
@@ -13273,18 +13047,6 @@ tumor_types:
     - Gastrointestinal tumor
     - Neuroendocrine tumor
     - Functioning NET
-
-  PNMZL:
-    name: Paediatric nodal marginal zone lymphoma
-    who_volume: Haematolymphoid Tumours
-    site: Lymph node
-    lineage_broad: Hematolymphoid
-    lineage_detail: B-Cell
-    parent: NMZL
-    families:
-    - Lymphoma
-    - B-cell lymphoma
-    - Marginal zone lymphoma
 
   PNMZL:
     name: Paediatric nodal marginal zone lymphoma
@@ -16569,15 +16331,6 @@ tumor_types:
     families:
     - T-ALL
 
-  UBTF_ITD:
-    name: UBTF-ITD
-    who_volume: Haematolymphoid Tumours
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    families:
-    - AML
-
   UC:
     name: Urothelial carcinoma
     who_volume: Urinary and Male Genital Tumours
@@ -17253,3 +17006,130 @@ tumor_types:
     families:
     - Genital tumor
     - Germ cell tumor
+
+
+
+
+
+
+
+
+  AML_IDH:
+    name: Acute myeloid leukemia with IDH1/2 mutation
+    who_volume: null
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    families:
+    - AML
+
+  AML_NPM1_DNMT3A:
+    name: Acute myeloid leukemia with NPM1 mutation and DNMT3A mutation
+    who_volume: null
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
+  AML_NPM1_IDH:
+    name: Acute myeloid leukemia with NPM1 mutation and IDH1/2 mutation
+    who_volume: null
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
+  AML_NPM1_TET2:
+    name: Acute myeloid leukemia with NPM1 mutation and TET2 mutation
+    who_volume: null
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
+  AML_KMT2A_MECOM:
+    name: KMT2A-rearranged acute myeloid leukemia, MECOM-activated
+    who_volume: null
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML_KMT2A
+    families:
+    - AML
+
+  AML_KMT2A_HMX3:
+    name: KMT2A-rearranged acute myeloid leukemia, HMX3-activated
+    who_volume: null
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML_KMT2A
+    families:
+    - AML
+
+
+
+
+
+
+  AML_KMT2A_FOXC1:
+    name: KMT2A-rearranged acute myeloid leukemia, FOXC1-activated
+    who_volume: null
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML_KMT2A
+    families:
+    - AML
+
+
+
+  AML_KMT2A_HOXAB:
+    name: KMT2A-rearranged acute myeloid leukemia, HOXA/B-activated
+    who_volume: null
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML_KMT2A
+    families:
+    - AML
+
+
+  AML_FET_ETS:
+    name: Acute myeloid leukemia with FET::ETS family fusion
+    who_volume: null
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
+
+
+  AML_UBTF_ITD:
+    name: Acute myeloid leukemia with UBTF internal tandem duplication
+    who_volume: null
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
+  AML_UBTF_ITD:
+    name: Acute myeloid leukemia with UBTF tandem duplication
+    who_volume: null
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+

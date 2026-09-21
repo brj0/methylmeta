@@ -22,7 +22,7 @@ def diagnosis(row):
 def methylation_class(row):
     value = row["tissue"]
     mapping = {
-        "adjacent non-tumor": "CONTR_HN",
+        "adjacent non-tumor": "CTRL_HN",
         "tumor": "HNSCC",
     }
     return mapping[value]

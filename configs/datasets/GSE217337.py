@@ -15,7 +15,7 @@ def diagnosis(row):
 
 
 def methylation_class(row):
-    return "CONTR_SINO"
+    return "CTRL_SINO"
 
 
 def sample_site(row):

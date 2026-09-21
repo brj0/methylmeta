@@ -22,7 +22,7 @@ def diagnosis(row):
 def methylation_class(row):
     value = row["tissue"]
     mapping = {
-        "normal tonsil": "CONTR_LYMPH",
+        "normal tonsil": "CTRL_LYMPH",
         "tumor": "HNSCC",
     }
     return mapping[value]

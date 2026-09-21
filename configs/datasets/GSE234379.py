@@ -20,7 +20,7 @@ def methylation_class(row):
     elif row["hpv status"] == "Positive" and "carcinoma" in row["Source"]:
         return "HNSCC_HPVA"
     else:
-        return "CONTR_HN"
+        return "CTRL_HN"
 
 
 def sample_site(row):

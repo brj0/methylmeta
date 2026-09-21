@@ -28,7 +28,7 @@ def methylation_class(row):
     mapping = {
         "AML": "AML",
         "Astrocytoma": "ASTRO_IDH",
-        "Breast Cancer": "BRCA",
+        "Breast Cancer": "BR_CA",
         "Cholangiocarcinoma": "CCA",
         "Oligodendroglioma": "OLIGO_IDH",
         "SNUC": "NECIDH2",

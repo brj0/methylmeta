@@ -18,9 +18,9 @@ def methylation_class(row):
     value = row["Methylation Class Name"]
     mapping = {
         # controls
-        "methylation class control (blood)": "CONTR_BLOOD",
-        "methylation class control (muscle tissue)": "CONTR_SKM",
-        "methylation class control (reactive tissue)": "CONTR_REA",
+        "methylation class control (blood)": "CTRL_BLOOD",
+        "methylation class control (muscle tissue)": "CTRL_SKM",
+        "methylation class control (reactive tissue)": "CTRL_REA",
         # bone tumours
         "methylation class chondroblastoma": "CHONDBL",
         "methylation class chondrosarcoma (clear cell)": "CSA_CC",

@@ -17,7 +17,7 @@ def diagnosis(row):
 def methylation_class(row):
     diagnosis = str(row["Description"]).split("\n", 1)[0].strip()
     if "Control" in diagnosis:
-        return "CONTR_LYMPH"
+        return "CTRL_LYMPH"
     if "EBV+ DLBCL" in diagnosis:
         return "DLBCL_EBV_POS"
     if "DLBCL" in diagnosis:

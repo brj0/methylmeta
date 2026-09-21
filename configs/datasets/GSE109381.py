@@ -87,7 +87,7 @@ def methylation_class(row):
         "PITAD, STH DNS A": "PITAD_STH_DGA",
         "PITAD, STH DNS B": "PITAD_STH_DGB",
         "PITUI": "PITUI_SCO_GCT",
-        "CONTR, ADENOPIT": "CONTR_ADENOPIT",
+        "CONTR, ADENOPIT": "CTRL_ADENOPIT",
         # Pineal region tumors
         "PIN T,  PB A": "PIN_T_PB_A",
         "PIN T,  PB B": "PIN_T_PB_B",
@@ -118,14 +118,14 @@ def methylation_class(row):
         "MELAN": "MEL",
         "MELCYT": "MELCYT",
         # Non-tumoral / control classes
-        "CONTR, CEBM": "CONTR_CEBM",
-        "CONTR, HEMI": "CONTR_HEMI",
-        "CONTR, WM": "CONTR_WM",
-        "CONTR, PONS": "CONTR_PONS",
-        "CONTR, HYPTHAL": "CONTR_HYPTHAL",
-        "CONTR, PINEAL": "CONTR_PINEAL",
-        "CONTR, INFLAM": "CONTR_INFLAM",
-        "CONTR, REACT": "CONTR_REACT",
+        "CONTR, CEBM": "CTRL_CEBM",
+        "CONTR, HEMI": "CTRL_HEMI",
+        "CONTR, WM": "CTRL_WM",
+        "CONTR, PONS": "CTRL_PONS",
+        "CONTR, HYPTHAL": "CTRL_HYPTHAL",
+        "CONTR, PINEAL": "CTRL_PINEAL",
+        "CONTR, INFLAM": "CTRL_INFLAM",
+        "CONTR, REACT": "CTRL_REACT",
     }
     return mapping[row["methylation class"]]
 

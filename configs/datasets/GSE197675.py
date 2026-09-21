@@ -11,7 +11,7 @@ def sample_id(row):
 
 
 def methylation_class(row):
-    return "CONTR_BLOOD"
+    return "CTRL_BLOOD"
 
 
 def sample_site(row):

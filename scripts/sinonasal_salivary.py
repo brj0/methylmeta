@@ -82,11 +82,11 @@ ACRONYM_TRANSLATOR = {
     "CHORD": "CHD",
     "CHORD_DD": "CHD_D",
     # Controls
-    "CONTR_HN": "CHEADNECK",
-    "CONTR_SALIV": "CSALIVARY",
-    "CONTR_LYMPH": "CLYMPH",
-    "CONTR_SINO": "CSINONASAL",
-    "CONTR_THYM": "CTHYMUS",
+    "CTRL_HN": "CHEADNECK",
+    "CTRL_SALIV": "CSALIVARY",
+    "CTRL_LYMPH": "CLYMPH",
+    "CTRL_SINO": "CSINONASAL",
+    "CTRL_THYM": "CTHYMUS",
     # Salivary gland
     "ADCC": "ADCCA",
     "EPMYOC": "EMC",
@@ -137,7 +137,7 @@ ACRONYM_TRANSLATOR = {
     "SNNEC_SMARCA4": "SNNEC_SMARCA4",
     "SNOP": "SNOP",
     # Varia"
-    "BRCA": "BC",
+    "BR_CA": "BC",
     "BURK": "BL",
     "HISTSARC": "HS",
     "CPH_ADM": "ACPH",
