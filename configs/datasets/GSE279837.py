@@ -15,7 +15,7 @@ def diagnosis(row):
 
 
 def methylation_class(row):
-    return "SAL_MYOEP"
+    return "SG_MYO"
 
 
 def sample_site(row):

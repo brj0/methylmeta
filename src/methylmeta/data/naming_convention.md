@@ -1,6 +1,6 @@
 # Naming Convention for `tumor_types.yaml`
 
-**Audience note:** this document is an operating procedure for an AI
+**Audience note:** This document is an operating procedure for an AI
 agent applying it across the file, with changes reviewed via git diff
 afterward — not a human re-checking every entry live. So: don't stall on
 ambiguity. Make the best call the available evidence supports, and where
@@ -18,9 +18,9 @@ the WHO diagnostic entity. The two are related but not 1:1 — one
 methylation class can span several WHO diagnoses, and one WHO diagnosis
 can split into several methylation classes. Concretely:
 
-- The **code** (YAML key) identifies a methylation class.
-- `name`, `who_volume`, `site` describe the WHO/anatomic identity.
-- `parent` links a code to the broader entity it belongs under.
+* The **code** (YAML key) identifies a methylation class.
+* `name`, `who_volume`, `site` describe the WHO/anatomic identity.
+* `parent` links a code to the broader entity it belongs under.
 
 The acronym's only jobs are recognizability and uniqueness. Anatomy and
 taxonomy are `site:` and `parent:`'s job, not the acronym's.
@@ -34,15 +34,15 @@ correctly guesses the entity behind. This matters as much as uniqueness,
 and it's the tiebreaker whenever a naming choice has more than one
 technically-valid option:
 
-- Prefer letter groups that echo how the word is actually said or
+* Prefer letter groups that echo how the word is actually said or
   abbreviated in practice (`ADCA` reads as "adenocarcinoma"; `SCC` reads
-  as "squamous cell carcinoma") over arbitrary truncations that are
-  unique but don't evoke the word (a mechanical first-N-letters grab
-  that happens not to collide with anything).
-- This is explicitly *not* "make it longer to be safer" — a longer code
+  as "squamous cell carcinoma") over arbitrary truncations that are unique
+  but don't evoke the word (a mechanical first-N-letters grab that
+  happens not to collide with anything).
+* This is explicitly *not* "make it longer to be safer" — a longer code
   that's still opaque doesn't help, and length has its own cost
   (Rule 8). The goal is a better-chosen short string, not a longer one.
-- When two equally short candidates describe the same entity, pick the
+* When two equally short candidates describe the same entity, pick the
   one closer to how it's actually pronounced or written shorthand in a
   pathology report, not the one that's alphabetically first or easiest
   to derive mechanically.
@@ -51,21 +51,19 @@ technically-valid option:
 
 ## 2. Decision procedure
 
-```
+```text
 STEP 1 — Literature-atomic check (Rule 1)
   Is this a token pathologists already say out loud as a single word,
-  independent of any organ/behavior grammar — e.g. "GIST", "DFSP" — not
-  just a code that happens to look fused?
+  independent of any organ/behavior grammar — e.g. "GIST", "DFSP" —
+  not just a code that happens to look fused?
     YES → use it verbatim, unmodified. STOP.
     NO  → continue.
 
 STEP 2 — Choose CORE_ENTITY axis (Rule 3)
-  Is the organ already baked into an existing canonical short name
-  (RCC, HCC, NSCLC)? → use that bare name, don't decompose further,
-  skip to STEP 5.
-  Is this histotype in the entity-first exception list (Rule 3)?
-    YES → CORE_ENTITY = histotype stem (e.g. MEL, ADCC).
-    NO  → CORE_ENTITY = organ/site stem (default).
+  Is the entity already represented by a canonical acronym/name that
+  does not contain an organ/site qualifier (RCC, HCC, NSCLC, MEL, SFT)?
+    YES → use that bare entity name.
+    NO  → CORE_ENTITY = organ/site stem.
 
 STEP 3 — Append BEHAVIOR suffix (Rule 5)
   Use the closed vocabulary. If nothing fits well, extend the table
@@ -114,54 +112,71 @@ not a protected atomic acronym (see Rule 7 on numerals).
 
 ## 4. Rule 2 — Grammar for constructed codes
 
-```
+```text
 CORE_ENTITY [ _BEHAVIOR ] [ _SITE ] [ _SUBTYPE ]
 ```
 
-Examples: `LU_ADCA`, `ESO_SCC`, `RCC_CC`, `CSA_IDH_MUT`, `RCC_TFE3`.
-Qualifiers get more specific left → right.
+Examples: `LU_ADCA`, `ESO_SCC`, `RCC_CC`, `CSA_IDH_MUT`,
+`RCC_TFE3`. Qualifiers get more specific left → right.
+
+The CORE_ENTITY is either:
+
+1. a recognized entity name/acronym that naturally stands alone, with
+   no organ qualifier; or
+2. an organ/site stem when no such established bare entity name exists.
 
 ---
 
 ## 5. Rule 3 — CORE_ENTITY choice
 
-**Default: organ is the CORE_ENTITY.** For most entity families,
-methylation clustering tracks cell-of-origin / tissue of origin more
-strongly than any lineage program, so organ-first applies whenever the
-behavior suffix describes a growth pattern many organs can
-independently produce (`_ADCA`, `_SCC`, `_CA`). Examples: `LU_ADCA`,
-`GAST_ADCA`, `ESO_SCC`, `LAR_SCC`, `CERV_SCC_HPVA`.
+Use the following order:
 
-**Some families cluster by lineage instead.** For a smaller set of
-histotypes, the lineage-intrinsic methylation program dominates the
-site signal, and members of that family cluster together across organs
-rather than by where they arose. For those families, the CORE_ENTITY is
-the histotype stem, not the organ — e.g. `MEL_SS` / `MEL_ACR` /
-`MEL_DESMO`, not `SKIN_MEL` / `ACRAL_MEL` / `SKIN_DESMO_MEL`.
+### 1. Use a canonical bare entity name when one exists
 
-**How to tell which applies.** The question is empirical, not
-stylistic: *does the data put this family's members in one cross-organ
-class, or does it split them by site?* If a documented clustering
-result (or a published reference) shows a single lineage-anchored class
-across organs, use the histotype stem. If it splits by site — or the
-evidence is unclear — stay organ-first. The bar for switching to
-histotype-first is a real basis (a citation, a release note, a
-documented clustering result), not "it feels like melanoma."
+If the entity has an established acronym or short name that does not
+need an organ qualifier, use it directly:
 
-**Not a closed list.** The families currently known to be
-lineage-anchored include melanocytic, salivary-gland-type, vascular,
-peripheral nerve sheath, skeletal muscle, Ewing-family, chondrogenic,
-osteogenic, adipocytic, and smooth-muscle tumours — but this is a
-snapshot, not a whitelist. When a new family is shown to be
-lineage-anchored, add it; when a family turns out to split by site,
-move it back to organ-first. Because the axis choice lives in the
-acronym and the hierarchy lives in `parent:`, a re-clustering that
-flips a family's axis is a rename, not a redesign — the comment
-convention (Rule 0) is what keeps that call reviewable.
+* `RCC`, not `KIDNEY_CA`
+* `HCC`, not `LIV_CA`
+* `NSCLC`, not `LU_CA`
+* `GIST`, not `GI_STROMAL`
+* `SFT`, not `SITE_SFT`
+* `MEL`, where melanoma is the established family-level entity
+* `RMS`, where rhabdomyosarcoma is the established family-level entity
 
-**Always exempt.** Organ-baked-into-canonical-name entities (`RCC`,
-`HCC`, `NSCLC` — not decomposed into `KIDNEY_CA`) and Rule 1 acronyms
-(`GIST`, `IMT`, `DFSP`, `HNSCC`, …) are unaffected by this rule.
+Do not add an organ merely to make the grammar look consistent.
+
+### 2. Otherwise use the organ/site first
+
+For constructed codes, the default is **organ/site-first**:
+
+* `LU_ADCA`
+* `GAST_ADCA`
+* `ESO_SCC`
+* `LAR_SCC`
+* `EAR_ADCA`
+* `CERV_SCC`
+
+The organ/site comes first whenever the behavior suffix describes a
+tumour type that can independently occur in multiple organs.
+
+### 3. Do not infer the axis from methylation clustering
+
+Methylation clustering does **not** determine whether the acronym should
+be organ-first or entity-first.
+
+If an entity has an established organ-independent acronym, use that
+acronym. Otherwise, use organ/site-first construction.
+
+The acronym convention should remain predictable from the terminology,
+rather than requiring the agent to decide whether a particular family
+is "lineage-anchored" from published methylation results.
+
+### Always exempt
+
+Rule 1 acronyms (`GIST`, `IMT`, `DFSP`, `HNSCC`, etc.) and canonical
+organ-baked names (`RCC`, `HCC`, `NSCLC`, etc.) are unaffected by the
+constructed-code grammar.
 
 ---
 
@@ -170,7 +185,8 @@ convention (Rule 0) is what keeps that call reviewable.
 Where the file distinguishes a variant of a broader entity, the variant
 code is the base code plus a qualifier, per the Rule 2 grammar, with
 `parent:` pointing back at the base (Rule 9) — e.g. `RMS_ALV` under
-`RMS`, `CERV_SCC_HPVA` under `CERV_SCC`.
+`RMS`, `CSA_IDH_HR` under `CSA_IDH_MUT`, `CERV_SCC_HPVA` under
+`CERV_SCC`.
 
 Where one code covers several WHO diagnoses or several anatomic
 contexts, the code stays as it is and `site:` names the lineage the code
@@ -192,6 +208,8 @@ inventing an inconsistent one-off elsewhere.
 | `_ADCA`       | adenocarcinoma                                  |
 | `_SCC`        | squamous cell carcinoma                         |
 | `_ASC`        | adenosquamous carcinoma                         |
+| `_ADSARC`     | adenosarcoma                                    |
+| `_CSARC`      | carcinosarcoma                                  |
 | `_SARC`       | sarcoma                                         |
 | `_BL`         | blastoma                                        |
 | `_ADSARC`     | adenosarcoma                                    |
@@ -204,12 +222,12 @@ inventing an inconsistent one-off elsewhere.
 
 Notes on three of these:
 
-- `_ADCA` only where distinguishing adenocarcinoma from plain carcinoma
+* `_ADCA` only where distinguishing adenocarcinoma from plain carcinoma
   matters; otherwise it folds into `_CA`.
-- `_SCC` is used organ-first, e.g. `LAR_SCC`.
-- `_HG` / `_LG` only where grade is the actual discriminator.
+* `_SCC` is used organ-first, e.g. `LAR_SCC`.
+* `_HG` / `_LG` only where grade is the actual discriminator.
 
-A suffix carries enough letters to be parsed on sight.  It also stays
+A suffix carries enough letters to be parsed on sight. It also stays
 short enough to keep composite codes within the length target:
 `OVA_CYSTADCA` (12 chars) rather than `OVA_CYSTADENOCA` (15) — both
 read the same to a pathologist.
@@ -221,10 +239,18 @@ read the same to a pathologist.
 
 ## 8. Rule 6 — Direction consistency within a family
 
-Every member of an entity family sits on the same CORE_ENTITY axis
-(Rule 3). Mixing directions within one family defeats the point of
-choosing an axis at all: alongside `ESO_ADCA` and `GAST_ADCA`, the ear
-entry is `EAR_ADCA`, not `ADCA_EAR`.
+Every member of an entity family uses the same construction principle.
+
+Established bare acronyms remain bare. Constructed codes are
+organ/site-first.
+
+Do not mix arbitrary constructed directions within one family:
+alongside `ESO_ADCA` and `GAST_ADCA`, the ear entry is `EAR_ADCA`, not
+`ADCA_EAR`.
+
+A bare canonical entity name is not considered a direction violation:
+`MEL`, `RMS`, `SFT`, etc. are established entity names rather than
+constructed entity-first codes.
 
 ---
 
@@ -246,15 +272,15 @@ spelled out rather than numbered: `HCL_VAR` is "hairy cell leukemia,
 
 ## 10. Rule 8 — Length and character set
 
-- Constructed codes: **3–14 characters**, target ≤ 12. The floor exists
-  because very short codes (`MM`, `SS`, `MF`) are frequently ambiguous
+* Constructed codes: approximately **3–15 characters**, target ≤ 12. The floor
+  exists because very short codes (`MM`, `SS`, `MF`) are frequently ambiguous
   even to a specialist without context; the cap is for legibility in
   confusion-matrix plot labels at normal font size.
-- Rule 1 acronyms are exempt from both bounds.
-- Character set: `[A-Z0-9_]` only, first character must be `A-Z` (not a
+* Rule 1 acronyms are exempt from both bounds.
+* Character set: `[A-Z0-9_]` only, first character must be `A-Z` (not a
   digit or underscore). Regex: `^[A-Z][A-Z0-9_]{2,13}$` for constructed
   codes.
-- Quote any `name:` value containing `:` or other YAML-special
+* Quote any `name:` value containing `:` or other YAML-special
   characters (has caused real parse failures).
 
 ---
@@ -274,10 +300,10 @@ the code itself stays as it is.
 
 ## 12. Rule 10 — Required fields
 
-- `who_volume`, `site`, `lineage_broad`, `lineage_detail` (where
+* `who_volume`, `site`, `lineage_broad`, `lineage_detail` (where
   determinable), `families` — populate, don't leave `null`, wherever the
   source is known.
-- `parent`, wherever the entry sits under a broader code.
+* `parent`, wherever the entry sits under a broader code.
 
 ---
 
@@ -315,8 +341,8 @@ These are mechanical, not judgment calls — run them, don't eyeball them:
    keys; the default permissive loader silently lets a later key win.
 2. **Code pattern check** — every code matches
    `^[A-Z][A-Z0-9_]{2,13}$`, unless it's a Rule 1 exemption.
-3. **Direction check** — no family has both an organ-first and
-   entity-first member (Rule 6).
+3. **Direction check** — constructed codes are organ/site-first; do not
+   introduce entity-first constructed codes.
 4. **Orphan-parent check** — every `parent:` value resolves to an
    existing code.
 
@@ -324,13 +350,11 @@ These are mechanical, not judgment calls — run them, don't eyeball them:
 
 ## Quick reference
 
-1. Atomic literature acronym? → verbatim, stop. *(Rule 1)*
-2. CORE_ENTITY: organ by default; histotype only per the exception
-   table; bare canonical name if organ's already baked in. *(Rules 2-3)*
-3. Closed-vocabulary behavior suffix, extend the table if genuinely
-   needed. *(Rule 5)*
-4. Site/subtype qualifier appended per the grammar, with `parent:`
-   pointing one level up. *(Rules 4, 9)*
+1. Established bare acronym/name? → use it verbatim. *(Rule 1/3)*
+2. Otherwise → **organ/site first**. *(Rules 2-3)*
+3. Append behavior suffix from the closed vocabulary. *(Rule 5)*
+4. Append site/subtype qualifiers left → right, with `parent:` pointing
+   one level up. *(Rules 4, 9)*
 5. Arabic numerals for methylation subtypes — `GBM_RTK1`. *(Rule 7)*
 6. Validate length/charset/direction/uniqueness. *(Rules 6, 8, 13)*
 7. Fill `name` (verbatim WHO wording/spelling), best-suited

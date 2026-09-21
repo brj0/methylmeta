@@ -35,9 +35,7 @@ def cli() -> None:
     "--dataset_dir",
     type=Path,
     required=True,
-    help=(
-        "Directory where the raw metadata and idat files are saved."
-    ),
+    help=("Directory where the raw metadata and idat files are saved."),
 )
 @metadata_dir_option
 @click.option("--output", type=Path, default=None)

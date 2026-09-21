@@ -30,7 +30,7 @@ def methylation_class(row):
         "PA": "PLEO_AD",
         "adenoid cystic carcinoma ex PA": "ADCC",
         "epithelial/myoepithelial carcinoma ex PA": "EMC",
-        "myoepithelial carcinoma ex PA": "SMYOC",
+        "myoepithelial carcinoma ex PA": "SG_MYOEP_CA",
         "salivary duct carcinoma ex PA": "SDC",
     }
     return mapping[value]

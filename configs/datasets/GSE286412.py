@@ -17,9 +17,9 @@ def diagnosis(row):
 def methylation_class(row):
     value = row["tissue"]
     mapping = {
-        "Melanoma": "MEL_SKIN",
+        "Melanoma": "SKIN_MEL",
         "Lymph node - healthy": "CTRL_LYMPH",
-        "Lymph node - melanoma": "MEL_SKIN",
+        "Lymph node - melanoma": "SKIN_MEL",
     }
     return mapping[value]
 

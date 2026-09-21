@@ -20,7 +20,7 @@ def methylation_class(row):
     if "dlbcl" in value:
         return "DLBCL"
     if "gastritis" in value:
-        return "CTRL_GASTRIC"
+        return "CTRL_GAST"
     if "control" in value:
         return "CTRL_LYMPH"
     if "mzl" in value:

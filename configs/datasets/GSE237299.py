@@ -38,8 +38,8 @@ def methylation_class(row):
         # Specific entities first - riskiest overlaps up top.
         "marginal zone b-cell lymphoma, splenic type": "SMZL",
         "castleman disease, hyaline vascular variant": "CAST",
-        "primary cutaneous anaplastic large cell lymphoma": "C_ALCL",
-        "cutaneous alcl": "C_ALCL",
+        "primary cutaneous anaplastic large cell lymphoma": "PC_ALCL",
+        "cutaneous alcl": "PC_ALCL",
         "infant b-cell precursor acute lymphoblastic": "B_ALL",
         "b-lymphoblastic": "B_ALL",
         "b-all": "B_ALL",
@@ -83,9 +83,9 @@ def methylation_class(row):
         "bl, ebv": "BURK",
         "burkitt": "BURK",
         "sezary": "SEZARY",  # fixed: WHO acronym is SZ, not SEZARY
-        "plasma cell neoplasm": "PLASMA_CELL",
-        "plasmazytoma": "PLASMA",
-        "plasmacytoma": "PLASMA",
+        "plasma cell neoplasm": "PLASMACYT_CELL",
+        "plasmazytoma": "PLASMACYT",
+        "plasmacytoma": "PLASMACYT",
         "dendritic": "FDCS",  # after lymphoblastic keys (avoids FDCS clash)
         "unicentric castleman": "CAST",
         # Reactive / non-neoplastic lymph node changes -> control tissue.

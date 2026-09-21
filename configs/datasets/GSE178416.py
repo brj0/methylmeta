@@ -17,12 +17,12 @@ def diagnosis(row):
 def methylation_class(row):
     value = row["type"]
     mapping = {
-        "Conjunctival melanoma": "MEL_CONJ",
-        "Cutaneous melanoma": "MEL_SKIN",
-        "Mucosal melanoma": "MEL_MUC",
-        "Mucosal": "MEL_MUC",
+        "Conjunctival melanoma": "CONJ_MEL",
+        "Cutaneous melanoma": "SKIN_MEL",
+        "Mucosal melanoma": "MUC_MEL",
+        "Mucosal": "MUC_MEL",
         "Normal melanocytes": "CTRL_MELCYT",
-        "Uveal melanoma": "MEL_UVE",
+        "Uveal melanoma": "UVE_MEL",
     }
     return mapping.get(value, value)
 

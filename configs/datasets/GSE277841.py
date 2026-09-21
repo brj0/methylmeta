@@ -20,7 +20,7 @@ def methylation_class(row):
     if "Healthy control" in value:
         return "CTRL_BLOOD"
     if "ET" in value:
-        return "ET"
+        return "MPN_ET"
     if "PMF" in value:
         return "PMF"
     return None

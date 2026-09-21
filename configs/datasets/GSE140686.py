@@ -80,12 +80,12 @@ def methylation_class(row):
         "methylation class endometrial stromal sarcoma (low grade)": "ESS_LG",
         "methylation class gastrointestinal stromal tumour": "GIST",
         "methylation class Langerhans cell histiocytosis": "LCH",
-        "methylation class melanoma (cutaneous)": "MEL_SKIN",
+        "methylation class melanoma (cutaneous)": "SKIN_MEL",
         "methylation class neurofibroma": "NFIB",
         "methylation class neurofibroma (plexiform)": "NFIB_PLEX",
         "methylation class schwannoma": "SCHW",
         "methylation class solitary fibrous tumour": "SFT",
-        "methylation class squamous cell carcinoma (cutaneous)": "SCC_CUT",
+        "methylation class squamous cell carcinoma (cutaneous)": "SKIN_SCC",
     }
     return mapping[value]
 

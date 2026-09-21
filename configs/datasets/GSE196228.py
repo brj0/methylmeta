@@ -51,7 +51,7 @@ def methylation_class(row):
         "GPC": "SINO_GPC",
         "LECA": "LEC",
         "MCC": "MCC",
-        "MELA": "MEL_MUC",
+        "MELA": "MUC_MEL",
         "NEC-like IDH2": "NECIDH2",
         "NEC-like SMARCA4 ARID1A": "SNNEC_SMARCA4",
         "NUT": "NUT",

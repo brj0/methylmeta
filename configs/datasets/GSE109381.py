@@ -110,7 +110,7 @@ def methylation_class(row):
         "ENB, A": "ONB_A",
         "ENB, B": "ONB_B",
         "LYMPHO": "CNS_LYMPHO",
-        "PLASMA": "PLASMA",
+        "PLASMA": "PLASMACYT",
         # Peripheral nerve sheath / mesenchymal / melanocytic tumors
         "SCHW": "SCHW",
         "SCHW, MEL": "SCHW_MEL",

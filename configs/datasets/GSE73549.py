@@ -23,7 +23,7 @@ def methylation_class(row):
     if tissue == "Lymph node" and disease == "Normal":
         return "CTRL_LYMPH"
     if tissue == "Prostate" and disease == "Normal":
-        return "CTRL_PROSTATE"
+        return "CTRL_PROST"
     if tissue == "Prostate" and disease == "Tumor":
         return "PRAD"
     if tissue == "Prostate" and disease == "PIN":
