@@ -34,7 +34,7 @@ def methylation_class(row):
         "Microsecretory adenocarcinoma": "SMSAD",
         "Mucoepidermoid carcinoma": "MEC",
         "Myoepithelial carcinoma": "SMYOC",
-        "Myoepithelioma/Pleomorphic adenoma": "MYO_PA",
+        "Myoepithelioma/Pleomorphic adenoma": "PLEO_AD_MYO",
         "NEC-like IDH2": "NECIDH2",
         "NEC-like SMARCA4 ARID1A": "SNNEC_SMARCA4",
         "NUT-midline carcinoma": "NUT",
@@ -44,7 +44,7 @@ def methylation_class(row):
         "SMARCB1-deficient sinonasal carcinoma": "SMARCB1",
         "Salivary duct carcinoma": "SDC",
         "Secretory carcinoma": "SSC",
-        "Squamous cell carcinoma": "SNSCC",
+        "Squamous cell carcinoma": "SN_SCC",
     }
     return mapping[value]
 

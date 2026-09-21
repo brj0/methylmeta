@@ -39,4 +39,4 @@ def primary_site(row):
 
 
 def methylation_class(row):
-    return "HNSCC_HPV_NEG"
+    return "HNSCC_HPVI"

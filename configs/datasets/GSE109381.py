@@ -18,9 +18,9 @@ def diagnosis(row):
 def methylation_class(row):
     mapping = {
         # Glioblastoma, IDH-wildtype
-        "GBM, RTK I": "GBM_RTK_I",
-        "GBM, RTK II": "GBM_RTK_II",
-        "GBM, RTK III": "GBM_RTK_III",
+        "GBM, RTK I": "GBM_RTK1",
+        "GBM, RTK II": "GBM_RTK2",
+        "GBM, RTK III": "GBM_RTK3",
         "GBM, MES": "GBM_MES",
         "GBM, MID": "GBM_MID",
         "GBM, MYCN": "GBM_MYCN",
@@ -47,7 +47,7 @@ def methylation_class(row):
         "ANA PA": "ANA_PA",
         "DLGNT": "DLGNT",
         "LIPN": "LIPN",
-        "CN": "CN",
+        "CN": "CNEUROCYT",
         # Ependymal tumors
         "EPN, PF A": "EPN_PF_A",
         "EPN, PF B": "EPN_PF_B",
@@ -84,8 +84,8 @@ def methylation_class(row):
         "PITAD, PRL": "PITAD_PRL",
         "PITAD, TSH": "PITAD_TSH",
         "PITAD, STH SPA": "PITAD_STH_SPA",
-        "PITAD, STH DNS A": "PITAD_STH_DNS_A",
-        "PITAD, STH DNS B": "PITAD_STH_DNS_B",
+        "PITAD, STH DNS A": "PITAD_STH_DGA",
+        "PITAD, STH DNS B": "PITAD_STH_DGB",
         "PITUI": "PITUI_SCO_GCT",
         "CONTR, ADENOPIT": "CONTR_ADENOPIT",
         # Pineal region tumors

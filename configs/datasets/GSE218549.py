@@ -18,7 +18,7 @@ def methylation_class(row):
     value = row["Source"]
     mapping = {
         "atypical type A thymoma": None,
-        "micronodular thymoma": "THY_MN",
+        "micronodular thymoma": "THYMO_MN",
         "normal thymus": "CONTR_THYM",
         "type A thymoma": "THYMO_A",
         "type AB thymoma": "THYMO_AB",

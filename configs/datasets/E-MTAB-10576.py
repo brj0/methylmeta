@@ -3,7 +3,7 @@ def dataset_id(row):
 
 
 def description(row):
-    return "HNSCC_HPV_NEG"
+    return "HNSCC_HPVI"
 
 
 def sample_id(row):
@@ -15,7 +15,7 @@ def diagnosis(row):
 
 
 def methylation_class(row):
-    return "HNSCC_HPV_NEG"
+    return "HNSCC_HPVI"
 
 
 def sample_site(row):

@@ -27,7 +27,7 @@ def methylation_class(row):
     value = row["Description"]
     mapping = {
         "Carcinoma NOS ex PA": "CXPA",
-        "PA": "MYO_PA",
+        "PA": "PLEO_AD",
         "adenoid cystic carcinoma ex PA": "ADCC",
         "epithelial/myoepithelial carcinoma ex PA": "EMC",
         "myoepithelial carcinoma ex PA": "SMYOC",

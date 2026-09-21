@@ -1512,7 +1512,7 @@ requires-dist = [
     { name = "platformdirs" },
     { name = "polars" },
     { name = "pydantic" },
-    { name = "pydantic-ai", specifier = ">=2.36.0" },
+    { name = "pydantic-ai", specifier = ">=2.43.0" },
     { name = "pytest", marker = "extra == 'dev'" },
     { name = "pytest-cov", marker = "extra == 'dev'" },
     { name = "pyyaml" },

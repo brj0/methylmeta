@@ -22,8 +22,8 @@ def diagnosis(row):
 def methylation_class(row):
     value = row["Source"]
     mapping = {
-        "SNSCC tumor": "SNSCC",
-        "Nasal mucosa": "CONTR_SINONASAL",
+        "SNSCC tumor": "SN_SCC",
+        "Nasal mucosa": "CONTR_SINO",
     }
     return mapping[value]
 

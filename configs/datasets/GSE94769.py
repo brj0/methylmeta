@@ -17,7 +17,7 @@ def methylation_class(row):
         "B3 thymoma, DNA methylation": "THYMO_B3",
         "NET, DNA methylation": "THYMO_NET",
         "Normal, DNA methylation": "CONTR_THYM",
-        "TC, DNA methylation": "THYMO_C",
+        "TC, DNA methylation": "THYM_CA",
     }
     return mapping[value]
 

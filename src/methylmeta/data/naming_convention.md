@@ -130,7 +130,7 @@ methylation clustering tracks cell-of-origin / tissue of origin more
 strongly than any lineage program, so organ-first applies whenever the
 behavior suffix describes a growth pattern many organs can
 independently produce (`_ADCA`, `_SCC`, `_CA`). Examples: `LU_ADCA`,
-`GAST_ADCA`, `ESO_SCC`, `LAR_SCC`, `CERV_SCC_HPV`.
+`GAST_ADCA`, `ESO_SCC`, `LAR_SCC`, `CERV_SCC_HPVA`.
 
 **Some families cluster by lineage instead.** For a smaller set of
 histotypes, the lineage-intrinsic methylation program dominates the
@@ -170,7 +170,7 @@ convention (Rule 0) is what keeps that call reviewable.
 Where the file distinguishes a variant of a broader entity, the variant
 code is the base code plus a qualifier, per the Rule 2 grammar, with
 `parent:` pointing back at the base (Rule 9) — e.g. `RMS_ALV` under
-`RMS`, `CERV_SCC_HPV` under `CERV_SCC`.
+`RMS`, `CERV_SCC_HPVA` under `CERV_SCC`.
 
 Where one code covers several WHO diagnoses or several anatomic
 contexts, the code stays as it is and `site:` names the lineage the code
@@ -262,7 +262,7 @@ spelled out rather than numbered: `HCL_VAR` is "hairy cell leukemia,
 ## 11. Rule 9 — `parent:` links a code to the one above it
 
 `parent:` points at the base code, or the next level up: `RMS_ALV` →
-`RMS`; `CSA_IDH_HR` → `CSA_IDH_MUT` → `CSA`; `CERV_SCC_HPV` →
+`RMS`; `CSA_IDH_HR` → `CSA_IDH_MUT` → `CSA`; `CERV_SCC_HPVA` →
 `CERV_SCC` → `SCC`. This is what lets tooling reconstruct the hierarchy
 even though the code stays short.
 

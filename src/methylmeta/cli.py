@@ -31,7 +31,14 @@ def cli() -> None:
 @click.option(
     "--config_dir", type=Path, default=CONFIGS_DIR, show_default=True
 )
-@click.option("--dataset_dir", type=Path, required=True)
+@click.option(
+    "--dataset_dir",
+    type=Path,
+    required=True,
+    help=(
+        "Directory where the raw metadata and idat files are saved."
+    ),
+)
 @metadata_dir_option
 @click.option("--output", type=Path, default=None)
 @click.option("--strict/--no_strict", default=True)
