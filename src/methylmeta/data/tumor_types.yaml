@@ -165,16 +165,6 @@ tumor_types:
     - Skin adnexal tumor
     - Carcinoma
 
-  ADREN_CORT_CA:
-    name: Adrenocortical carcinoma
-    who_volume: Endocrine and Neuroendocrine Tumours
-    site: Adrenal gland
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Adrenal tumor
-    - Carcinoma
-
   ADREN_CAH:
     name: Congenital adrenal hyperplasia
     who_volume: Endocrine and Neuroendocrine Tumours
@@ -194,6 +184,16 @@ tumor_types:
     families:
     - Adrenal tumor
     - Adenoma
+
+  ADREN_CORT_CA:
+    name: Adrenocortical carcinoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Adrenal gland
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Adrenal tumor
+    - Carcinoma
 
   ADREN_CORT_CA:
     name: Adrenal cortical carcinoma
@@ -696,6 +696,16 @@ tumor_types:
     families:
     - AML
 
+  AML_FET_ETS:
+    name: Acute myeloid leukemia with FET::ETS family fusion
+    who_volume: null
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
   AML_FUS_ERG:
     name: Acute myeloid leukemia with FUS::ERG fusion
     who_volume: Haematolymphoid Tumours
@@ -703,6 +713,15 @@ tumor_types:
     lineage_broad: Hematolymphoid
     lineage_detail: Myeloid
     parent: AML
+    families:
+    - AML
+
+  AML_IDH:
+    name: Acute myeloid leukemia with IDH1/2 mutation
+    who_volume: null
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
     families:
     - AML
 
@@ -723,6 +742,46 @@ tumor_types:
     lineage_broad: Hematolymphoid
     lineage_detail: Myeloid
     parent: AML
+    families:
+    - AML
+
+  AML_KMT2A_FOXC1:
+    name: KMT2A-rearranged acute myeloid leukemia, FOXC1-activated
+    who_volume: null
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML_KMT2A
+    families:
+    - AML
+
+  AML_KMT2A_HMX3:
+    name: KMT2A-rearranged acute myeloid leukemia, HMX3-activated
+    who_volume: null
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML_KMT2A
+    families:
+    - AML
+
+  AML_KMT2A_HOXAB:
+    name: KMT2A-rearranged acute myeloid leukemia, HOXA/B-activated
+    who_volume: null
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML_KMT2A
+    families:
+    - AML
+
+  AML_KMT2A_MECOM:
+    name: KMT2A-rearranged acute myeloid leukemia, MECOM-activated
+    who_volume: null
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML_KMT2A
     families:
     - AML
 
@@ -786,9 +845,39 @@ tumor_types:
     families:
     - AML
 
+  AML_NPM1_DNMT3A:
+    name: Acute myeloid leukemia with NPM1 mutation and DNMT3A mutation
+    who_volume: null
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
+  AML_NPM1_IDH:
+    name: Acute myeloid leukemia with NPM1 mutation and IDH1/2 mutation
+    who_volume: null
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
   AML_NPM1_MLF1:
     name: Acute myeloid leukemia with NPM1::MLF1 fusion
     who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
+  AML_NPM1_TET2:
+    name: Acute myeloid leukemia with NPM1 mutation and TET2 mutation
+    who_volume: null
     site: Bone Marrow
     lineage_broad: Hematolymphoid
     lineage_detail: Myeloid
@@ -849,6 +938,26 @@ tumor_types:
   AML_RUNX1_RUNX1T1:
     name: Acute myeloid leukemia with RUNX1::RUNX1T1 fusion
     who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
+  AML_UBTF_ITD:
+    name: Acute myeloid leukemia with UBTF internal tandem duplication
+    who_volume: null
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: AML
+    families:
+    - AML
+
+  AML_UBTF_ITD:
+    name: Acute myeloid leukemia with UBTF tandem duplication
+    who_volume: null
     site: Bone Marrow
     lineage_broad: Hematolymphoid
     lineage_detail: Myeloid
@@ -1445,33 +1554,6 @@ tumor_types:
     - Sarcoma
     - Small round cell tumor
 
-  BR_CA_HER2:
-    name: Breast Carcinoma - HER2+
-    who_volume: null
-    site: null
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Carcinoma
-
-  BR_CA_HRP:
-    name: Breast Carcinoma - Hormone Receptor Positive
-    who_volume: null
-    site: null
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Carcinoma
-
-  BR_CA_TN:
-    name: Breast Carcinoma - Triple Negative
-    who_volume: null
-    site: null
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Carcinoma
-
   BDUMP:
     name: Bilateral diffuse uveal melanocytic proliferation
     who_volume: Eye and Orbit Tumours
@@ -1593,15 +1675,6 @@ tumor_types:
     families:
     - Bone tumor
 
-  OVA_BOT:
-    name: Borderline Ovarian Tumor
-    who_volume: null
-    site: null
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Premalignant lesion
-
   BOWEN:
     name: Bowen's Disease of the Skin
     who_volume: null
@@ -1657,16 +1730,6 @@ tumor_types:
     lineage_detail: null
     families:
     - Benign tumor
-
-  BR_CA:
-    name: Breast carcinoma
-    who_volume: Breast Tumours
-    site: Breast
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Breast tumor
-    - Carcinoma
 
   BRCLC:
     name: Branchial cleft cyst
@@ -1836,6 +1899,43 @@ tumor_types:
     families:
     - Breast tumor
     - Vascular tumor
+
+  BR_CA:
+    name: Breast carcinoma
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Breast tumor
+    - Carcinoma
+
+  BR_CA_HER2:
+    name: Breast Carcinoma - HER2+
+    who_volume: null
+    site: null
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Carcinoma
+
+  BR_CA_HRP:
+    name: Breast Carcinoma - Hormone Receptor Positive
+    who_volume: null
+    site: null
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Carcinoma
+
+  BR_CA_TN:
+    name: Breast Carcinoma - Triple Negative
+    who_volume: null
+    site: null
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Carcinoma
 
   BR_CRIB_CA:
     name: Invasive cribriform carcinoma
@@ -3494,6 +3594,326 @@ tumor_types:
     - Ocular tumor
     - Papilloma
 
+  COWPER_ADCA:
+    name: Cowper gland adenocarcinoma of the urethra
+    who_volume: Urinary and Male Genital Tumours
+    site: Urethra
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: URETH_ACC
+    families:
+    - Urinary tract tumor
+    - Carcinoma
+
+  CPC_PED:
+    name: Choroid plexus carcinoma, pediatric
+    who_volume: Central Nervous System Tumours
+    site: Central nervous system
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - CNS tumor
+    - Choroid plexus tumor
+
+  CPDN:
+    name: Cystic partially differentiated nephroblastoma
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Embryonal
+    lineage_detail: null
+    parent: WT
+    families:
+    - Renal tumor
+    - Embryonal tumor
+
+  CPH:
+    name: Craniopharyngioma
+    who_volume: Central Nervous System Tumours
+    site: Central nervous system
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - CNS tumor
+    - Craniopharyngioma
+
+  CPH_ADM:
+    name: Adamantinomatous craniopharyngioma
+    who_volume: Central Nervous System Tumours
+    site: Central nervous system
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: CPH
+    families:
+    - CNS tumor
+    - Craniopharyngioma
+
+  CPH_PAP:
+    name: Papillary craniopharyngioma
+    who_volume: Central Nervous System Tumours
+    site: Central nervous system
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: CPH
+    families:
+    - CNS tumor
+    - Craniopharyngioma
+
+  CPMT:
+    name: Congenital peribronchial myofibroblastic tumour
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Lung tumor
+    - Fibroblastic tumor
+
+  CRA:
+    name: Colorectal adenoma
+    who_volume: Digestive System Tumours
+    site: Colon / rectum
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Premalignant lesion
+
+  CRIB_TUM_SKIN:
+    name: Cribriform tumour (previously carcinoma)
+    who_volume: Skin Tumours
+    site: Skin
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Skin tumor
+    - Skin adnexal tumor
+    - Carcinoma
+
+  CRNET:
+    name: Colorectal neuroendocrine neoplasm
+    who_volume: Digestive System Tumours
+    site: Colon / rectum
+    lineage_broad: Neuroendocrine
+    lineage_detail: null
+    families:
+    - Neuroendocrine tumor
+
+  CRTC1_TRIM11:
+    name: "CRTC1::TRIM11 cutaneous tumour"
+    who_volume: Skin Tumours
+    site: Skin
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Skin tumor
+    - Soft tissue tumor
+
+  CR_CA:
+    name: Colorectal carcinoma
+    who_volume: Digestive System Tumours
+    site: Colon / rectum
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Carcinoma
+
+  CR_HYP_POLYP:
+    name: Colorectal hyperplastic polyps
+    who_volume: Digestive System Tumours
+    site: Colon / rectum
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Polyp
+
+  CR_TSA:
+    name: Colorectal traditional serrated adenoma
+    who_volume: Digestive System Tumours
+    site: Colon / rectum
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Gastrointestinal tumor
+    - Precursor lesion
+
+  CSA:
+    name: Chondrosarcoma, NOS
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone / soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Sarcoma
+    - Chondrosarcoma
+
+  CSA_CC:
+    name: Clear cell chondrosarcoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone / soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Sarcoma
+    - Chondrosarcoma
+
+  CSA_DD:
+    name: Dedifferentiated chondrosarcoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone / soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: CSA
+    families:
+    - Sarcoma
+    - Chondrosarcoma
+
+  CSA_IDH_HR:
+    name: Chondrosarcoma, IDH-mutant, high-risk group
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone / soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: CSA_IDH_MUT
+    families:
+    - Sarcoma
+    - Chondrosarcoma
+    - IDH-mutant
+
+  CSA_IDH_LR:
+    name: Chondrosarcoma, IDH-mutant, low-risk group
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone / soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: CSA_IDH_MUT
+    families:
+    - Sarcoma
+    - Chondrosarcoma
+    - IDH-mutant
+
+  CSA_IDH_MUT:
+    name: Chondrosarcoma, IDH-mutant methylation class
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone / soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: CSA
+    families:
+    - Sarcoma
+    - Chondrosarcoma
+    - IDH-mutant
+
+  CSA_IDH_SB:
+    name: Chondrosarcoma, IDH-mutant, skull-base-restricted group
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone / soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: CSA_IDH_MUT
+    families:
+    - Sarcoma
+    - Chondrosarcoma
+    - IDH-mutant
+
+  CSA_IDH_WT:
+    name: Chondrosarcoma, IDH-wildtype group
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone / soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: CSA
+    families:
+    - Sarcoma
+    - Chondrosarcoma
+    - IDH-wildtype
+
+  CSA_MES:
+    name: Mesenchymal chondrosarcoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone / soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Sarcoma
+    - Chondrosarcoma
+
+  CSA_NOS:
+    name: Chondrosarcoma, NOS
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: Chondrogenic
+    families:
+    - Chondrosarcoma
+    - Sarcoma
+
+  CSA_PERIOST:
+    name: Periosteal chondrosarcoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone (surface)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: CSA
+    families:
+    - Sarcoma
+    - Chondrosarcoma
+
+  CSA_PERIPH:
+    name: Secondary peripheral chondrosarcoma, grades 2 and 3
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone (surface, in osteochondroma)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: CSA
+    families:
+    - Sarcoma
+    - Chondrosarcoma
+
+  CSA_SB:
+    name: Chondrosarcoma, scull base group
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone / soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: CSA
+    families:
+    - Sarcoma
+    - Chondrosarcoma
+
+  CSA_WT_HR:
+    name: Chondrosarcoma, IDH-wildtype, high-risk group
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone / soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: CSA_IDH_WT
+    families:
+    - Sarcoma
+    - Chondrosarcoma
+    - IDH-wildtype
+
+  CSA_WT_LR:
+    name: Chondrosarcoma, IDH-wildtype, low-risk group
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone / soft tissue
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: CSA_IDH_WT
+    families:
+    - Sarcoma
+    - Chondrosarcoma
+    - IDH-wildtype
+
+  CSN_TEK:
+    name: Chondroid synoviocytic neoplasm
+    who_volume: Soft Tissue and Bone Tumours
+    site: Temporomandibular joint
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    families:
+    - Soft tissue tumor
+
   CTRL_ADENOPIT:
     name: Normal anterior pituitary
     who_volume: Central Nervous System Tumours
@@ -3971,326 +4391,6 @@ tumor_types:
     families:
     - Normal tissue
     - Brain
-
-  COWPER_ADCA:
-    name: Cowper gland adenocarcinoma of the urethra
-    who_volume: Urinary and Male Genital Tumours
-    site: Urethra
-    lineage_broad: Epithelial
-    lineage_detail: null
-    parent: URETH_ACC
-    families:
-    - Urinary tract tumor
-    - Carcinoma
-
-  CPC_PED:
-    name: Choroid plexus carcinoma, pediatric
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - CNS tumor
-    - Choroid plexus tumor
-
-  CPDN:
-    name: Cystic partially differentiated nephroblastoma
-    who_volume: Urinary and Male Genital Tumours
-    site: Kidney
-    lineage_broad: Embryonal
-    lineage_detail: null
-    parent: WT
-    families:
-    - Renal tumor
-    - Embryonal tumor
-
-  CPH:
-    name: Craniopharyngioma
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - CNS tumor
-    - Craniopharyngioma
-
-  CPH_ADM:
-    name: Adamantinomatous craniopharyngioma
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Epithelial
-    lineage_detail: null
-    parent: CPH
-    families:
-    - CNS tumor
-    - Craniopharyngioma
-
-  CPH_PAP:
-    name: Papillary craniopharyngioma
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Epithelial
-    lineage_detail: null
-    parent: CPH
-    families:
-    - CNS tumor
-    - Craniopharyngioma
-
-  CPMT:
-    name: Congenital peribronchial myofibroblastic tumour
-    who_volume: Thoracic Tumours
-    site: Lung
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    families:
-    - Lung tumor
-    - Fibroblastic tumor
-
-  CRA:
-    name: Colorectal adenoma
-    who_volume: Digestive System Tumours
-    site: Colon / rectum
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Premalignant lesion
-
-  CRIB_TUM_SKIN:
-    name: Cribriform tumour (previously carcinoma)
-    who_volume: Skin Tumours
-    site: Skin
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Skin tumor
-    - Skin adnexal tumor
-    - Carcinoma
-
-  CRNET:
-    name: Colorectal neuroendocrine neoplasm
-    who_volume: Digestive System Tumours
-    site: Colon / rectum
-    lineage_broad: Neuroendocrine
-    lineage_detail: null
-    families:
-    - Neuroendocrine tumor
-
-  CRTC1_TRIM11:
-    name: "CRTC1::TRIM11 cutaneous tumour"
-    who_volume: Skin Tumours
-    site: Skin
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    families:
-    - Skin tumor
-    - Soft tissue tumor
-
-  CR_CA:
-    name: Colorectal carcinoma
-    who_volume: Digestive System Tumours
-    site: Colon / rectum
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Gastrointestinal tumor
-    - Carcinoma
-
-  CR_HYP_POLYP:
-    name: Colorectal hyperplastic polyps
-    who_volume: Digestive System Tumours
-    site: Colon / rectum
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Gastrointestinal tumor
-    - Polyp
-
-  CR_TSA:
-    name: Colorectal traditional serrated adenoma
-    who_volume: Digestive System Tumours
-    site: Colon / rectum
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Gastrointestinal tumor
-    - Precursor lesion
-
-  CSA:
-    name: Chondrosarcoma, NOS
-    who_volume: Soft Tissue and Bone Tumours
-    site: Bone / soft tissue
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    families:
-    - Sarcoma
-    - Chondrosarcoma
-
-  CSA_CC:
-    name: Clear cell chondrosarcoma
-    who_volume: Soft Tissue and Bone Tumours
-    site: Bone / soft tissue
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    families:
-    - Sarcoma
-    - Chondrosarcoma
-
-  CSA_DD:
-    name: Dedifferentiated chondrosarcoma
-    who_volume: Soft Tissue and Bone Tumours
-    site: Bone / soft tissue
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    parent: CSA
-    families:
-    - Sarcoma
-    - Chondrosarcoma
-
-  CSA_IDH_HR:
-    name: Chondrosarcoma, IDH-mutant, high-risk group
-    who_volume: Soft Tissue and Bone Tumours
-    site: Bone / soft tissue
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    parent: CSA_IDH_MUT
-    families:
-    - Sarcoma
-    - Chondrosarcoma
-    - IDH-mutant
-
-  CSA_IDH_LR:
-    name: Chondrosarcoma, IDH-mutant, low-risk group
-    who_volume: Soft Tissue and Bone Tumours
-    site: Bone / soft tissue
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    parent: CSA_IDH_MUT
-    families:
-    - Sarcoma
-    - Chondrosarcoma
-    - IDH-mutant
-
-  CSA_IDH_MUT:
-    name: Chondrosarcoma, IDH-mutant methylation class
-    who_volume: Soft Tissue and Bone Tumours
-    site: Bone / soft tissue
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    parent: CSA
-    families:
-    - Sarcoma
-    - Chondrosarcoma
-    - IDH-mutant
-
-  CSA_IDH_SB:
-    name: Chondrosarcoma, IDH-mutant, skull-base-restricted group
-    who_volume: Soft Tissue and Bone Tumours
-    site: Bone / soft tissue
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    parent: CSA_IDH_MUT
-    families:
-    - Sarcoma
-    - Chondrosarcoma
-    - IDH-mutant
-
-  CSA_IDH_WT:
-    name: Chondrosarcoma, IDH-wildtype group
-    who_volume: Soft Tissue and Bone Tumours
-    site: Bone / soft tissue
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    parent: CSA
-    families:
-    - Sarcoma
-    - Chondrosarcoma
-    - IDH-wildtype
-
-  CSA_MES:
-    name: Mesenchymal chondrosarcoma
-    who_volume: Soft Tissue and Bone Tumours
-    site: Bone / soft tissue
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    families:
-    - Sarcoma
-    - Chondrosarcoma
-
-  CSA_NOS:
-    name: Chondrosarcoma, NOS
-    who_volume: Soft Tissue and Bone Tumours
-    site: Bone
-    lineage_broad: Mesenchymal
-    lineage_detail: Chondrogenic
-    families:
-    - Chondrosarcoma
-    - Sarcoma
-
-  CSA_PERIOST:
-    name: Periosteal chondrosarcoma
-    who_volume: Soft Tissue and Bone Tumours
-    site: Bone (surface)
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    parent: CSA
-    families:
-    - Sarcoma
-    - Chondrosarcoma
-
-  CSA_PERIPH:
-    name: Secondary peripheral chondrosarcoma, grades 2 and 3
-    who_volume: Soft Tissue and Bone Tumours
-    site: Bone (surface, in osteochondroma)
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    parent: CSA
-    families:
-    - Sarcoma
-    - Chondrosarcoma
-
-  CSA_SB:
-    name: Chondrosarcoma, scull base group
-    who_volume: Soft Tissue and Bone Tumours
-    site: Bone / soft tissue
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    parent: CSA
-    families:
-    - Sarcoma
-    - Chondrosarcoma
-
-  CSA_WT_HR:
-    name: Chondrosarcoma, IDH-wildtype, high-risk group
-    who_volume: Soft Tissue and Bone Tumours
-    site: Bone / soft tissue
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    parent: CSA_IDH_WT
-    families:
-    - Sarcoma
-    - Chondrosarcoma
-    - IDH-wildtype
-
-  CSA_WT_LR:
-    name: Chondrosarcoma, IDH-wildtype, low-risk group
-    who_volume: Soft Tissue and Bone Tumours
-    site: Bone / soft tissue
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    parent: CSA_IDH_WT
-    families:
-    - Sarcoma
-    - Chondrosarcoma
-    - IDH-wildtype
-
-  CSN_TEK:
-    name: Chondroid synoviocytic neoplasm
-    who_volume: Soft Tissue and Bone Tumours
-    site: Temporomandibular joint
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    families:
-    - Soft tissue tumor
 
   CUPS:
     name: Cancer of Unknown Primary
@@ -5004,15 +5104,6 @@ tumor_types:
     - CNS tumor
     - Ear tumor
 
-  ENDOM_ADCA:
-    name: Endometrioid Adenocarcinoma
-    who_volume: null
-    site: null
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Carcinoma
-
   EMBCA:
     name: Testicular embryonal carcinoma
     who_volume: Urinary and Male Genital Tumours
@@ -5073,15 +5164,6 @@ tumor_types:
     - Skin adnexal tumor
     - Carcinoma
 
-  ENDO_SER_CYSTADCA:
-    name: Endometrioid Serous Cystadenocarcinoma
-    who_volume: null
-    site: null
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Carcinoma
-
   EMUND:
     name: Endometrioid - Undefined
     who_volume: null
@@ -5100,6 +5182,15 @@ tumor_types:
     families:
     - Gynecologic tumor
     - Polyp
+
+  ENDOM_ADCA:
+    name: Endometrioid Adenocarcinoma
+    who_volume: null
+    site: null
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Carcinoma
 
   ENDOM_CA:
     name: Endometrial carcinoma
@@ -5197,6 +5288,15 @@ tumor_types:
     families:
     - Gynecologic tumor
     - Polyp
+
+  ENDO_SER_CYSTADCA:
+    name: Endometrioid Serous Cystadenocarcinoma
+    who_volume: null
+    site: null
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Carcinoma
 
   ENKTL:
     name: Extranodal NK/T-cell lymphoma
@@ -5525,15 +5625,6 @@ tumor_types:
     families:
     - CNS tumor
     - Embryonal tumor
-
-  T_ALL_ETP:
-    name: T-lymphoblastic leukemia/lymphoma with ETP enrichement
-    who_volume: Haematolymphoid Tumours
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: T-Cell
-    families:
-    - T-ALL
 
   ETP_ALL:
     name: Early T-precursor lymphoblastic leukemia/lymphoma
@@ -6835,26 +6926,6 @@ tumor_types:
     - Lymphoma
     - B-cell lymphoma
 
-  HGG_TYPE_B:
-    name: Adult-type diffuse high-grade glioma, IDH-wildtype, subtype B
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Glial
-    lineage_detail: null
-    families:
-    - Glioma
-    - High-grade glioma
-
-  HGG_TYPE_F:
-    name: High-grade glioma, methylation class F
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Glial
-    lineage_detail: null
-    families:
-    - Glioma
-    - High-grade glioma
-
   HGG_PED_WT_RTK1A:
     name: Diffuse paediatric-type high-grade glioma, H3-wildtype and IDH-wildtype, RTK1A
     who_volume: Paediatric Tumours
@@ -6877,6 +6948,26 @@ tumor_types:
     - High-grade glioma
     - Pediatric high-grade glioma
 
+  HGG_TYPE_B:
+    name: Adult-type diffuse high-grade glioma, IDH-wildtype, subtype B
+    who_volume: Central Nervous System Tumours
+    site: Central nervous system
+    lineage_broad: Glial
+    lineage_detail: null
+    families:
+    - Glioma
+    - High-grade glioma
+
+  HGG_TYPE_F:
+    name: High-grade glioma, methylation class F
+    who_volume: Central Nervous System Tumours
+    site: Central nervous system
+    lineage_broad: Glial
+    lineage_detail: null
+    families:
+    - Glioma
+    - High-grade glioma
+
   HGNET_MN1:
     name: CNS high-grade neuroepithelial tumor with MN1 alteration
     who_volume: Central Nervous System Tumours
@@ -6896,15 +6987,6 @@ tumor_types:
     families:
     - CNS tumor
     - High-grade neuroepithelial tumor
-
-  OVA_HGSC:
-    name: High Grade Serous Ovarian Carcinoma
-    who_volume: null
-    site: null
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Carcinoma
 
   HIB:
     name: Hibernoma
@@ -8172,6 +8254,17 @@ tumor_types:
     - Uterine mesenchymal tumor
     - Smooth muscle tumor
 
+  LEIO_PERIT:
+    name: Leiomyomatosis peritonealis disseminata
+    who_volume: Female Genital Tumours
+    site: Peritoneum (uterine origin)
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: LEIO_UTER
+    families:
+    - Gynecologic tumor
+    - Smooth muscle tumor
+
   LEIO_SKIN:
     name: Cutaneous leiomyomas
     who_volume: Skin Tumours
@@ -8514,17 +8607,6 @@ tumor_types:
     - Lymphoma
     - B-cell lymphoma
     - Mantle cell lymphoma
-
-  LEIO_PERIT:
-    name: Leiomyomatosis peritonealis disseminata
-    who_volume: Female Genital Tumours
-    site: Peritoneum (uterine origin)
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    parent: LEIO_UTER
-    families:
-    - Gynecologic tumor
-    - Smooth muscle tumor
 
   LPL:
     name: Lymphoplasmacytic lymphoma
@@ -10327,16 +10409,6 @@ tumor_types:
     - Sarcoma
     - Fibroblastic tumor
 
-  SAL_MYOEP:
-    name: Salivary gland myoepithelioma
-    who_volume: Head and Neck Tumours
-    site: Salivary gland
-    lineage_broad: Epithelial / myoepithelial
-    lineage_detail: null
-    families:
-    - Salivary gland tumor
-    - Myoepithelial tumor
-
   MYOEP:
     name: Myoepithelioma
     who_volume: Soft Tissue and Bone Tumours
@@ -11028,15 +11100,6 @@ tumor_types:
     families:
     - Sarcoma
 
-  OVA_CCC:
-    name: Ovarian Clear Cell Carcinoma
-    who_volume: null
-    site: null
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - Carcinoma
-
   OCM:
     name: Osteochondromyxoma
     who_volume: Soft Tissue and Bone Tumours
@@ -11486,6 +11549,15 @@ tumor_types:
     - Bone tumor
     - Osteogenic tumor
 
+  OVA_BOT:
+    name: Borderline Ovarian Tumor
+    who_volume: null
+    site: null
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Premalignant lesion
+
   OVA_CA:
     name: Ovarian carcinoma
     who_volume: Female Genital Tumours
@@ -11530,6 +11602,15 @@ tumor_types:
     families:
     - Gynecologic tumor
     - Borderline tumor
+
+  OVA_CCC:
+    name: Ovarian Clear Cell Carcinoma
+    who_volume: null
+    site: null
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Carcinoma
 
   OVA_EMBCA:
     name: Embryonal carcinoma (ovary)
@@ -11581,6 +11662,15 @@ tumor_types:
     families:
     - Gynecologic tumor
     - Sex cord-stromal tumor
+
+  OVA_HGSC:
+    name: High Grade Serous Ovarian Carcinoma
+    who_volume: null
+    site: null
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - Carcinoma
 
   OVA_IMM_TER:
     name: Immature teratoma (ovary)
@@ -14037,6 +14127,16 @@ tumor_types:
     families:
     - Squamous lesion
 
+  SAL_MYOEP:
+    name: Salivary gland myoepithelioma
+    who_volume: Head and Neck Tumours
+    site: Salivary gland
+    lineage_broad: Epithelial / myoepithelial
+    lineage_detail: null
+    families:
+    - Salivary gland tumor
+    - Myoepithelial tumor
+
   SANT:
     name: Sclerosing angiomatoid nodular transformation of spleen
     who_volume: Haematolymphoid Tumours
@@ -16293,6 +16393,15 @@ tumor_types:
     families:
     - Hematolymphoid neoplasm
 
+  T_ALL_ETP:
+    name: T-lymphoblastic leukemia/lymphoma with ETP enrichement
+    who_volume: Haematolymphoid Tumours
+    site: Bone Marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: T-Cell
+    families:
+    - T-ALL
+
   T_ALL_NOS:
     name: T-lymphoblastic leukemia/lymphoma NOS
     who_volume: Haematolymphoid Tumours
@@ -17006,130 +17115,3 @@ tumor_types:
     families:
     - Genital tumor
     - Germ cell tumor
-
-
-
-
-
-
-
-
-  AML_IDH:
-    name: Acute myeloid leukemia with IDH1/2 mutation
-    who_volume: null
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    families:
-    - AML
-
-  AML_NPM1_DNMT3A:
-    name: Acute myeloid leukemia with NPM1 mutation and DNMT3A mutation
-    who_volume: null
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    parent: AML
-    families:
-    - AML
-
-  AML_NPM1_IDH:
-    name: Acute myeloid leukemia with NPM1 mutation and IDH1/2 mutation
-    who_volume: null
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    parent: AML
-    families:
-    - AML
-
-  AML_NPM1_TET2:
-    name: Acute myeloid leukemia with NPM1 mutation and TET2 mutation
-    who_volume: null
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    parent: AML
-    families:
-    - AML
-
-  AML_KMT2A_MECOM:
-    name: KMT2A-rearranged acute myeloid leukemia, MECOM-activated
-    who_volume: null
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    parent: AML_KMT2A
-    families:
-    - AML
-
-  AML_KMT2A_HMX3:
-    name: KMT2A-rearranged acute myeloid leukemia, HMX3-activated
-    who_volume: null
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    parent: AML_KMT2A
-    families:
-    - AML
-
-
-
-
-
-
-  AML_KMT2A_FOXC1:
-    name: KMT2A-rearranged acute myeloid leukemia, FOXC1-activated
-    who_volume: null
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    parent: AML_KMT2A
-    families:
-    - AML
-
-
-
-  AML_KMT2A_HOXAB:
-    name: KMT2A-rearranged acute myeloid leukemia, HOXA/B-activated
-    who_volume: null
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    parent: AML_KMT2A
-    families:
-    - AML
-
-
-  AML_FET_ETS:
-    name: Acute myeloid leukemia with FET::ETS family fusion
-    who_volume: null
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    parent: AML
-    families:
-    - AML
-
-
-
-  AML_UBTF_ITD:
-    name: Acute myeloid leukemia with UBTF internal tandem duplication
-    who_volume: null
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    parent: AML
-    families:
-    - AML
-
-  AML_UBTF_ITD:
-    name: Acute myeloid leukemia with UBTF tandem duplication
-    who_volume: null
-    site: Bone Marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    parent: AML
-    families:
-    - AML
-
