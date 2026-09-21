@@ -33,7 +33,7 @@ def methylation_class(row):
     if value == "normal peripheral blood":
         return "CONTR_BLOOD"
     if value == "normal bone marrow":
-        return "CMARROW"
+        return "CONTR_MARROW"
     return None
 
 

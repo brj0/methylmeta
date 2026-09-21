@@ -36,7 +36,7 @@ def methylation_class(row):
 
     mapping = {
         # Specific entities first - riskiest overlaps up top.
-        "marginal zone b-cell lymphoma, splenic type": "LYM_B_MZL_SP",
+        "marginal zone b-cell lymphoma, splenic type": "SMZL",
         "castleman disease, hyaline vascular variant": "CAST",
         "primary cutaneous anaplastic large cell lymphoma": "C_ALCL",
         "cutaneous alcl": "C_ALCL",

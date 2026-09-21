@@ -18,7 +18,7 @@ def methylation_class(row):
     value = row["Source"]
     mapping = {
         "Bone Marrow, GATA2 mutant": "MDS_LOW",
-        "Bone Marrow, wild type genotype": "CMARROW",
+        "Bone Marrow, wild type genotype": "CONTR_MARROW",
         "Peripheral Blood, GATA2 mutant": "MDS_LOW",
         "Peripheral Blood, wild type genotype": "CONTR_BLOOD",
     }

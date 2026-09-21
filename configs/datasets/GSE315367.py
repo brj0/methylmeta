@@ -28,7 +28,7 @@ def methylation_class(row):
         if "blood" in tissue:
             return "CONTR_BLOOD"
         if "bone marrow" in tissue:
-            return "CMARROW"
+            return "CONTR_MARROW"
     if "diagnosis" in disease_status:
         return "AML"
     return None
