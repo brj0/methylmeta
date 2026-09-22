@@ -55,6 +55,17 @@ tumor_types:
     - melanocytic_tumor
     - melanoma
 
+  ACT:
+    name: Atypical cartilaginous tumour / chondrosarcoma, grade 1
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: ACT_ENC
+    families:
+    - bone_tumor
+    - cartilaginous_tumor
+
   ACT_ENC:
     name: Atypical cartilaginous tumour / enchondroma
     who_volume: Soft Tissue and Bone Tumours
@@ -4979,6 +4990,17 @@ tumor_types:
     - skin_tumor
     - skin_adnexal_tumor
     - carcinoma
+
+  ENC:
+    name: Enchondroma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: null
+    parent: ACT_ENC
+    families:
+    - bone_tumor
+    - cartilaginous_tumor
 
   ENDOCX_POLYP:
     name: Endocervical polyp
