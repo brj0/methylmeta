@@ -225,6 +225,7 @@ stem).
 |                        | Duodenum                           | `DUO`   |                                                                               |
 |                        | Small intestine (general)          | `SI`    |                                                                               |
 |                        | Ampulla of Vater                   | `AMP`   |                                                                               |
+|                        | Umbilical cord                     | `UMB`   |                                                                               |
 |                        | Colon                              | `COL`   |                                                                               |
 |                        | Colon/rectum (combined entity)     | `CR`    | used only when the entity itself spans both                                   |
 |                        | Rectum                             | `RECT`  |                                                                               |
@@ -237,12 +238,16 @@ stem).
 |                        | Urinary tract (general/multi-site) | `URO`   |                                                                               |
 |                        | Urethra                            | `URETH` |                                                                               |
 |                        | Prostate                           | `PROS`  |                                                                               |
+|                        | Rete testis                        | `RETE`  |                                                                               |
 |                        | Testis                             | `TES`   |                                                                               |
 |                        | Testicular adnexa                  | `TESA`  | compartment split from testis                                                 |
 |                        | Epididymis                         | `EPID`  |                                                                               |
 |                        | Seminal vesicle                    | `SV`    |                                                                               |
+|                        | Urachus                            | `URACH` |                                                                               |
 |                        | Penis / scrotum                    | `PEN`   |                                                                               |
 | Gyn                    | Cervix                             | `CERV`  |                                                                               |
+|                        | Gynecologic tumor                  | `GYN`   | compartment split — see above                                                 |
+|                        | Fallopian tube                     | `TUBE`  |                                                                               |
 |                        | Uterus — myometrium                | `UT`    | compartment split — see above                                                 |
 |                        | Uterus — endometrium               | `ENDOM` | compartment split — see above                                                 |
 |                        | Ovary                              | `OVA`   |                                                                               |
@@ -252,6 +257,8 @@ stem).
 |                        | Parathyroid                        | `PARA`  |                                                                               |
 |                        | Adrenal gland                      | `ADREN` |                                                                               |
 |                        | Pituitary gland                    | `PIT`   |                                                                               |
+|                        | Pineal gland                       | `PINE`  |                                                                               |
+|                        | Sellar region                      | `SEL`   |                                                                               |
 |                        | Thymus                             | `THYM`  | distinct from `THYMO` = thymoma, a bare Rule-3 entity name, not this stem     |
 | Skin / soft tissue     | Skin                               | `SKIN`  |                                                                               |
 |                        | Bone                               | `BONE`  |                                                                               |
@@ -267,7 +274,9 @@ stem).
 |                        | Retinal pigment epithelium         | `RPE`   |                                                                               |
 |                        | Lacrimal drainage system           | `LAC`   |                                                                               |
 | CNS / peripheral nerve | Meninges                           | `MEN`   | distinct from `MNG` (meningioma, a bare entity)                               |
+|                        | Choroid plexus                     | `PLEX`  |                                                                               |
 | Other                  | Anal canal                         | `ANAL`  |                                                                               |
+|                        | Spleen                             | `SPL`   |                                                                               |
 
 Jaw and most CNS entities have no organ-first family at all — they use established bare entity names instead (Rule 3), e.g. `ADAM`/`AMBL` for jaw, `GBM`/`LGG`/`EPN` for CNS. Don't add a stem for them.
 
@@ -301,22 +310,27 @@ inventing an inconsistent one-off elsewhere.
 
 | Suffix        | Meaning                                         |
 | ------------- | ----------------------------------------------- |
-| `_AD`         | adenoma                                         |
-| `_CA`         | carcinoma                                       |
 | `_ADCA`       | adenocarcinoma                                  |
-| `_SCC`        | squamous cell carcinoma                         |
+| `_ADSARC`     | adenosarcoma                                    |
+| `_ADSARC`     | adenosarcoma                                    |
+| `_AD`         | adenoma                                         |
 | `_ASC`        | adenosquamous carcinoma                         |
-| `_ADSARC`     | adenosarcoma                                    |
-| `_CSARC`      | carcinosarcoma                                  |
-| `_SARC`       | sarcoma                                         |
 | `_BL`         | blastoma                                        |
-| `_ADSARC`     | adenosarcoma                                    |
-| `_NET`        | neuroendocrine tumor, well-differentiated       |
-| `_NEC`        | neuroendocrine carcinoma, poorly differentiated |
-| `_CYSTAD`     | cystadenoma                                     |
+| `_CA`         | carcinoma                                       |
+| `_CSARC`      | carcinosarcoma                                  |
 | `_CYSTADCA`   | cystadenocarcinoma                              |
-| `_PAP`        | papilloma / papillary                           |
+| `_CYSTAD`     | cystadenoma                                     |
+| `_HART`       | hamartoma                                       |
+| `_HEM`        | haemangioma                                     |
 | `_HG` / `_LG` | high-grade / low-grade                          |
+| `_HYP`        | hyperplasia                                     |
+| `_LPD`        | lymphoproliferative disorder                    |
+| `_NEC`        | neuroendocrine carcinoma, poorly differentiated |
+| `_NET`        | neuroendocrine tumor, well-differentiated       |
+| `_PAP`        | papilloma / papillary                           |
+| `_SARC`       | sarcoma                                         |
+| `_SCC`        | squamous cell carcinoma                         |
+
 
 Notes on three of these:
 

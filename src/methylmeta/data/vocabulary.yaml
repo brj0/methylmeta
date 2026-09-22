@@ -1,50 +1,68 @@
 lineages:
+
   Epithelial:
-    - Squamous
-    - Glandular
-    - Urothelial
     - Basal
-    - Neuroendocrine
-    - Myoepithelial
+    - C-cell
+    - Endocrine
     - Epithelial / myoepithelial
+    - Glandular
+    - Hepatocellular
+    - Mesothelial
+    - Myoepithelial
+    - Neuroendocrine
+    - Odontogenic
+    - Squamous
+    - Urothelial
 
   Mesenchymal:
     - Adipocytic
+    - Cartilaginous
+    - Chondrogenic
+    - Chordoid
+    - Embryonal
     - Fibroblastic
     - Fibrohistiocytic
+    - Gonadal stromal
     - Myofibroblastic
-    - Smooth muscle
-    - Skeletal muscle
-    - Vascular
-    - Cartilaginous
+    - Notochordal
+    - Odontogenic
     - Osteogenic
     - Perivascular
-    - Mesothelial
-    - Gonadal stromal
+    - Skeletal muscle
+    - Smooth muscle
+    - Vascular
 
   Hematolymphoid:
     - B-cell
     - T-cell
     - NK-cell
+    - T/NK
     - Plasma cell
     - Myeloid
     - Dendritic
+    - Dendritic/Stromal
     - Histiocytic
     - Mast cell
     - Ambiguous lineage
+    - Lymphoid
+    - Hematopoietic
+    - Plasmacytoid Dendritic Cell
 
   Neural:
     - Astrocytic
-    - Oligodendroglial
+    - Embryonal
     - Ependymal
-    - Neuronal
+    - Glial
     - Glioneuronal
-    - Neuroblastic
-    - Schwannian
     - Meningothelial
-    - Pineal / neuronal
-    - Neuroectodermal
     - Neural crest
+    - Neuroblastic
+    - Neuroectodermal
+    - Neuroepithelial
+    - Neuronal
+    - Oligodendroglial
+    - Pineal
+    - Schwannian
 
   Melanocytic:
     - Melanocytic
@@ -61,12 +79,6 @@ lineages:
     - Neuroendocrine
     - C-cell
 
-  Hepatic:
-    - Hepatocellular
-
-  Odontogenic:
-    - Odontogenic
-
   Mixed:
     - Epithelial / mesenchymal
     - Epithelial / stromal
@@ -74,15 +86,7 @@ lineages:
     - Neural / glial
     - Neural / Schwannian
     - Vascular / lymphatic
-
-  Inflammatory:
-    - Inflammatory
-
-  Reactive:
-    - Reactive
-
-  Unknown:
-    - Unspecified
+    - Epithelial / mesenchymal / embryonal
 
 who_volumes:
   - Breast Tumours
@@ -99,34 +103,51 @@ who_volumes:
   - Soft Tissue and Bone Tumours
   - Thoracic Tumours
   - Urinary and Male Genital Tumours
-  - Unspecified
 
 sites:
+  - Acral skin
   - Adnexa
   - Adrenal gland
   - Adrenal medulla
   - Adrenal medulla / paraganglia
   - Ampulla of Vater
   - Anal canal
+  - Anogenital skin
   - Appendix
   - Bile duct
   - Bladder
+  - Bladder (diverticulum)
   - Blood
+  - Blood / lymphoid tissue
   - Blood vessels (great vessels)
+  - Body cavities
   - Bone
+  - Bone (axial skeleton)
+  - Bone (distal phalanx)
+  - Bone (surface)
+  - Bone (surface, in osteochondroma)
+  - Bone / blood
+  - Bone / soft tissue
   - Bone marrow
+  - Brain
+  - Breast
+  - Breast (implant capsule)
   - Broad ligament
+  - Broad ligament / adnexa
+  - Broad ligament / uterine ligaments
   - Cauda equina
   - Central nervous system
   - Cerebellum
   - Cervix
   - Chest wall (rib)
+  - Choroid
   - Choroid / ciliary body
   - Ciliary body
   - Colon
   - Colon / rectum
   - Conjunctiva
   - Cornea
+  - Craniofacial bones
   - Digits
   - Duodenum
   - Endocrine organs
@@ -137,12 +158,18 @@ sites:
   - Extra-adrenal paraganglia
   - Extrahepatic bile duct
   - External auditory canal
+  - Extramedullary
   - Extranodal
   - Eye
   - Eyelid
   - Fallopian tube
+  - Floor of mouth
   - Gallbladder
+  - Gastrointestinal tract
+  - Genital tract
+  - Genital tract / retroperitoneum
   - Head and neck
+  - Head and neck / thorax
   - Iris
   - Jaw
   - Jaw (gingiva)
@@ -152,25 +179,37 @@ sites:
   - Lacrimal gland
   - Larynx
   - Larynx / hypopharynx
+  - Larynx / hypopharynx / trachea
   - Liver
   - Liver (bile duct)
+  - Liver / bile duct
   - Lung
+  - Lung (bronchus)
+  - Lung / pleura
+  - Lung / thorax
   - Lymph node
+  - Lymphoid
   - Lymphoid tissue
+  - Lymphoid tissue / extranodal
+  - Lymphoid tissue / soft tissue
+  - Male breast
   - Mediastinum
   - Meninges
   - Middle ear
   - Multiple
+  - Multisystem
   - Nail unit
   - Nasal cavity
   - Nasopharynx
   - Neck
+  - Nipple
   - Nipple / breast
   - Ocular adnexa
   - Optic nerve
   - Oral cavity
   - Oral cavity (gingiva)
   - Oral cavity (jaw)
+  - Oral cavity / tongue
   - Orbit
   - Oropharynx
   - Ovary
@@ -178,12 +217,15 @@ sites:
   - Parathyroid
   - Penis
   - Penis / scrotum
+  - Penis / scrotum / vulva
   - Peritoneum
+  - Peritoneum (uterine origin)
   - Peritoneum / genital tract
   - Peripheral nervous system
   - Pituitary gland
   - Placenta
   - Placenta / uterus
+  - Pleura / peritoneum
   - Posterior fossa
   - Posterior pituitary
   - Prostate
@@ -195,12 +237,31 @@ sites:
   - Scrotum
   - Sellar region
   - Seminal vesicle
+  - Sinonasal
   - Sinonasal tract
   - Skin
+  - Skin / multiple
+  - Skin / soft tissue
+  - Skeletal muscle
   - Skull base
   - Small intestine
   - Soft tissue
+  - Soft tissue (acral)
+  - Soft tissue (digits)
+  - Soft tissue (hand/foot)
+  - Soft tissue (muscle)
+  - Soft tissue (near joint)
+  - Soft tissue (neck)
+  - Soft tissue (pelvic/perineal)
+  - Soft tissue (vulvovaginal)
+  - Soft tissue / bone
+  - Soft tissue / central nervous system
+  - Soft tissue / heart
+  - Soft tissue / kidney
+  - Soft tissue / skin
+  - Soft tissue, skin
   - Spinal cord
+  - Spine / soft tissue
   - Spleen
   - Stomach
   - Synovium
@@ -208,6 +269,7 @@ sites:
   - Temporomandibular joint
   - Testicular adnexa
   - Testis
+  - Testis / placenta
   - Thymus
   - Thyroid
   - Tongue
@@ -216,19 +278,33 @@ sites:
   - Urachus
   - Urethra
   - Urinary tract
+  - Urinary tract (urethra)
+  - Urinary tract / prostate / testis
   - Uterus
+  - Uterus (invasive) / distant sites (metastatic)
+  - Uterus / cervix
+  - Uterus / ovary
   - Uvea
   - Vagina
   - Vitreoretinal
   - Vulva
-  - Unspecified
+  - Vulva (Bartholin gland)
+  - Vulva / skin
 
 families:
+  - acute_leukemia_of_ambiguous_lineage
   - adenoma
+  - adipocytic_tumor
   - adrenal_tumor
+  - aml
   - appendiceal_tumor
+  - astrocytoma
   - atypical_teratoid_rhabdoid_tumor
   - b_cell_lymphoma
+  - b_cell_neoplasm
+  - bcp_all
+  - benign_epithelial_proliferation
+  - benign_lesion
   - benign_tumor
   - bone_lesion
   - bone_tumor
@@ -238,26 +314,54 @@ families:
   - carcinoma_in_situ
   - carcinoma_neuroendocrine
   - carcinoma_salivary_gland_like
+  - carcinosarcoma
+  - cartilaginous_tumor
+  - chondrosarcoma
+  - chordoma
+  - choroid_plexus_tumor
   - cns_tumor
   - colorectal_tumor
-  - control
+  - craniopharyngioma
   - cyst
   - dendritic_cell_neoplasm
+  - dendritic_stromal
+  - desmoplastic_myxoid_tumor
+  - diffuse_midline_glioma
+  - dlbcl
+  - ear_tumor
+  - ebv_associated
+  - ebv_associated_lymphoma
   - embryonal_tumor
-  - endometrial_carcinoma
   - endocrine_tumor
+  - endometrial_carcinoma
   - ependymoma
   - epithelial_mesenchymal_tumor
   - epithelial_myoepithelial_tumor
+  - epithelial_tumor
+  - esophageal_carcinoma
+  - ewing_like_tumor
   - ewing_sarcoma
+  - ewing_sarcoma_family
+  - fibro_osseous_lesion
+  - fibro_osseous_tumor
+  - fibroblastic_tumor
   - fibroepithelial_tumor
+  - fibrohistiocytic_tumor
   - fibrous_dysplasia
+  - follicular_lymphoma
+  - functional_net
+  - functioning_net
+  - ganglioneuroma
   - gastrointestinal_tumor
+  - genetic_syndrome
+  - genetic_tumor_syndrome
   - genital_tumor
   - germ_cell_tumor
   - gestational_trophoblastic_disease
   - giant_cell_lesion
   - giant_cell_tumor
+  - glial_tumor
+  - glioblastoma
   - glioma
   - glioneuronal_tumor
   - gynecologic_tumor
@@ -287,76 +391,140 @@ families:
   - hematolymphoid_mds
   - hematolymphoid_mds_mpn
   - hematolymphoid_mpn
+  - hematolymphoid_neoplasm
   - hematolymphoid_plasma_cell
   - hepatobiliary_tumor
+  - high_grade_carcinoma
+  - high_grade_glioma
+  - high_grade_neuroepithelial_tumor
+  - histiocytic
   - histiocytic_neoplasm
   - hodgkin_lymphoma
+  - hyperplasia
+  - idh_mutant
+  - idh_mutant_glioma
+  - idh_wildtype
   - inflammatory
+  - inflammatory_tumor
+  - jmml
   - leukemia
+  - lobular_neoplasm
+  - low_grade_glioma
+  - low_risk_neoplasm
+  - low_tumor_content
   - lung_tumor
+  - lymphoid
+  - lymphoid_neoplasm
   - lymphoma
+  - lymphoproliferative_disorder
   - male_breast_tumor
+  - malignant_tumor
   - mammary_type_gland_tumor
+  - mantle_cell_lymphoma
+  - marginal_zone_lymphoma
   - mast_cell_neoplasm
   - mature_b_non_small_cell
   - mature_b_small_cell
   - mature_t_nk
+  - mds
+  - mds_mpn
   - medulloblastoma
   - melanocytic_tumor
+  - melanocytoma
   - melanoma
   - meningioma
   - mesenchymal_tumor
   - mesothelial_tumor
+  - metaplastic_carcinoma
+  - midline_carcinoma
+  - molar_pregnancy
   - monodermal_teratoma
   - mpn
   - muscle_disease
   - myelodysplastic_syndrome
+  - myelofibrosis
+  - myeloid_neoplasm
   - myeloproliferative_neoplasm
   - myoepithelial_tumor
   - myofibroblastic_tumor
   - naevus
   - nail_tumor
+  - neural_tumor
   - neuroblastoma
   - neurocytic_tumor
   - neuroectodermal_tumor
   - neuroendocrine_carcinoma
+  - neuroendocrine_neoplasm
   - neuroendocrine_tumor
   - neuroepithelial_tumor
   - neuromuscular_disease
   - neuronal_tumor
   - nipple_tumor
   - normal_tissue
-  - odontogenic_tumor
   - ocular_tumor
+  - odontogenic_tumor
+  - oligodendroglioma
+  - osteogenic_tumor
   - ovarian_tumor
   - paget_disease
   - pancreatic_tumor
+  - papillary_neoplasm
   - papilloma
   - paraganglioma
+  - paraneoplastic
   - parathyroid_tumor
-  - perivascular_tumor
+  - pecoma
+  - pediatric_glioma
+  - pediatric_high_grade_glioma
   - peripheral_nerve_sheath_tumor
+  - perivascular_tumor
+  - pilocytic_astrocytoma
+  - pineal_tumor
   - pituitary_tumor
   - plasma_cell
+  - plasma_cell_neoplasm
   - polyp
+  - poor_quality_sample
   - precursor_lesion
+  - premalignant_lesion
   - prostatic_tumor
   - reactive
+  - reactive_lesion
   - renal_tumor
   - rhabdomyosarcoma
+  - salivary_gland_like_tumor
   - salivary_gland_tumor
   - sarcoma
+  - sarcomatoid_carcinoma
   - sex_cord_stromal_tumor
+  - sinonasal_tumor
+  - skeletal_muscle_tumor
   - skin_adnexal_tumor
   - skin_tumor
+  - small_round_cell_tumor
+  - smarcb1_deficient_tumor
+  - smarcb1_smarca4_deficient_tumor
   - smooth_muscle_tumor
   - soft_tissue_tumor
+  - spitz_tumor
+  - squamous_cell_carcinoma
   - squamous_lesion
+  - stromal_lesion
+  - t_all
+  - t_cell_lymphoma
+  - t_cell_neoplasm
+  - technical
   - teratoma
   - testicular_tumor
+  - tfh_lymphoma
+  - thoracic_tumor
+  - thymic_like_tumor
   - thymic_tumor
+  - thymoma
   - thyroid_tumor
   - trophoblastic_tumor
+  - unclear
+  - undefined
   - undifferentiated
   - urinary_tract_tumor
   - uterine_mesenchymal_tumor

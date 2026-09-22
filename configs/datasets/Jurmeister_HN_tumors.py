@@ -41,7 +41,7 @@ def methylation_class(row):
         "Olfactory Neuroblastoma": "ONB",
         "Oncocytoma": "SG_ONC",
         "Polymorphous adenocarcinoma": "PMA",
-        "SMARCB1-deficient sinonasal carcinoma": "SMARCB1",
+        "SMARCB1-deficient sinonasal carcinoma": "SN_SMARCB1",
         "Salivary duct carcinoma": "SDC",
         "Secretory carcinoma": "SG_SECR_CA",
         "Squamous cell carcinoma": "SN_SCC",
