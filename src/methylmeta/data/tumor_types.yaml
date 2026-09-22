@@ -22,6 +22,16 @@ tumor_types:
     - bone_tumor
     - fibro_osseous_tumor
 
+  ACG:
+    name: Angiocentric glioma
+    who_volume: Central Nervous System Tumours
+    site: Central nervous system
+    lineage_broad: Neural
+    lineage_detail: Glial
+    families:
+    - glioma
+    - low_grade_glioma
+
   ACQ_ELAST_HEM:
     name: Acquired elastotic haemangioma
     who_volume: Skin Tumours
@@ -933,6 +943,16 @@ tumor_types:
     - gastrointestinal_tumor
     - carcinoma
 
+  ANAL_NET:
+    name: Anal neuroendocrine tumour
+    who_volume: Digestive System Tumours
+    site: Anal canal
+    lineage_broad: Endocrine
+    lineage_detail: null
+    families:
+    - gastrointestinal_tumor
+    - neuroendocrine_tumor
+
   ANAL_SCC:
     name: Anal squamous cell carcinoma
     who_volume: Digestive System Tumours
@@ -1427,6 +1447,17 @@ tumor_types:
     lineage_detail: null
     families:
     - hepatobiliary_tumor
+
+  BD_NET:
+    name: Neuroendocrine neoplasm of the extrahepatic bile ducts
+    who_volume: Digestive System Tumours
+    site: Bile duct
+    lineage_broad: Endocrine
+    lineage_detail: null
+    parent: HNET
+    families:
+    - hepatobiliary_tumor
+    - neuroendocrine_tumor
 
   BEN_KER_OTH:
     name: Other benign keratoses
@@ -4291,6 +4322,16 @@ tumor_types:
     families:
     - soft_tissue_tumor
 
+  DCG:
+    name: Dysplastic cerebellar gangliocytoma
+    who_volume: Central Nervous System Tumours
+    site: Cerebellum
+    lineage_broad: Neural
+    lineage_detail: Glioneuronal
+    families:
+    - cns_tumor
+    - glioneuronal_tumor
+
   DCIS:
     name: Ductal Carcinoma in Situ
     who_volume: null
@@ -5687,7 +5728,7 @@ tumor_types:
 
   GANGLIO:
     name: Gangliocytoma
-    who_volume: Endocrine and Neuroendocrine Tumours
+    who_volume: Central Nervous System Tumours
     site: Pituitary gland
     lineage_broad: Neural
     lineage_detail: Neuronal
@@ -5902,6 +5943,17 @@ tumor_types:
     lineage_detail: null
     families:
     - hepatobiliary_tumor
+
+  GB_NET:
+    name: Neuroendocrine neoplasm of the gallbladder
+    who_volume: Digestive System Tumours
+    site: Gallbladder
+    lineage_broad: Endocrine
+    lineage_detail: null
+    parent: HNET
+    families:
+    - hepatobiliary_tumor
+    - neuroendocrine_tumor
 
   GCFB:
     name: Giant cell fibroblastoma
@@ -7537,6 +7589,15 @@ tumor_types:
     families:
     - giant_cell_tumor
 
+  KSHV_GLPD:
+    name: KSHV/HHV8-positive germinotropic lymphoproliferative disorder
+    who_volume: Haematolymphoid Tumours
+    site: Lymphoid tissue
+    lineage_broad: Hematolymphoid
+    lineage_detail: null
+    families:
+    - lymphoproliferative_disorder
+
   LAC_ADCA_NOS:
     name: Adenocarcinoma NOS of the lacrimal drainage system
     who_volume: Eye and Orbit Tumours
@@ -9138,6 +9199,17 @@ tumor_types:
     lineage_detail: Plasma cell
     families:
     - plasma_cell
+
+  MGZL:
+    name: Mediastinal grey zone lymphoma
+    who_volume: Haematolymphoid Tumours
+    site: Mediastinum
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-cell
+    parent: DLBCL
+    families:
+    - lymphoma
+    - b_cell_lymphoma
 
   MIDD:
     name: Monoclonal immunoglobulin deposition disease
@@ -12986,6 +13058,17 @@ tumor_types:
     families:
     - carcinoma
 
+  RCC_TUBULOCYST:
+    name: Tubulocystic renal cell carcinoma
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Epithelial
+    lineage_detail: null
+    parent: RCC_NOS
+    families:
+    - renal_tumor
+    - carcinoma
+
   RDD:
     name: Rosai-Dorfman-Disease
     who_volume: Haematolymphoid Tumours
@@ -15374,6 +15457,17 @@ tumor_types:
     families:
     - gynecologic_tumor
     - sex_cord_stromal_tumor
+
+  THRLBCL:
+    name: T-cell/histiocyte-rich large B-cell lymphoma
+    who_volume: Haematolymphoid Tumours
+    site: Lymphoid tissue
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-cell
+    parent: DLBCL
+    families:
+    - lymphoma
+    - b_cell_lymphoma
 
   THYMO:
     name: Thymoma
