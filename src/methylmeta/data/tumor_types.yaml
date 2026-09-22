@@ -230,7 +230,7 @@ tumor_types:
 
   AFCMT:
     name: Acral fibrochondromyxoid tumor
-    who_volume: null
+    who_volume: Soft Tissue and Bone Tumours
     site: Soft tissue (acral)
     lineage_broad: Mesenchymal
     lineage_detail: null
@@ -934,8 +934,8 @@ tumor_types:
     - carcinoma
 
   ANAL_SCC:
-    name: Anal Squamous Cell Carcinoma
-    who_volume: null
+    name: Anal squamous cell carcinoma
+    who_volume: Digestive System Tumours
     site: null
     lineage_broad: Epithelial
     lineage_detail: null
@@ -1053,18 +1053,8 @@ tumor_types:
     - gastrointestinal_tumor
     - carcinoma
 
-  APP_GCA:
+  APP_GC_ADCA:
     name: Appendiceal goblet cell adenocarcinoma
-    who_volume: Digestive System Tumours
-    site: Appendix
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - gastrointestinal_tumor
-    - carcinoma
-
-  APP_GOBCOID:
-    name: Goblet cell carcinoid of the appendix
     who_volume: Digestive System Tumours
     site: Appendix
     lineage_broad: Endocrine
@@ -1459,6 +1449,15 @@ tumor_types:
     - endocrine_tumor
     - vascular_tumor
 
+  BG_AFIB:
+    name: Biliary adenofibroma
+    who_volume: Digestive System Tumours
+    site: Liver (bile duct)
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
+    - hepatobiliary_tumor
+
   BILIN:
     name: Biliary intraepithelial neoplasia
     who_volume: Digestive System Tumours
@@ -1468,15 +1467,6 @@ tumor_types:
     families:
     - hepatobiliary_tumor
     - precursor_lesion
-
-  BIL_AFIB:
-    name: Biliary adenofibroma
-    who_volume: Digestive System Tumours
-    site: Liver (bile duct)
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - hepatobiliary_tumor
 
   BLAD_VC:
     name: Verrucous carcinoma of the bladder
@@ -3228,16 +3218,6 @@ tumor_types:
     - cns_tumor
     - germ_cell_tumor
 
-  CNS_LYMPHO:
-    name: CNS lymphoma
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Hematolymphoid
-    lineage_detail: B-cell
-    families:
-    - lymphoma
-    - cns_tumor
-
   CNS_NB_FOXR2:
     name: CNS neuroblastoma with FOXR2 activation
     who_volume: Central Nervous System Tumours
@@ -4263,17 +4243,6 @@ tumor_types:
     - lymphoma
     - skin_tumor
 
-  CUT_MAST:
-    name: Cutaneous mastocytosis
-    who_volume: Haematolymphoid Tumours
-    site: Skin
-    lineage_broad: Hematolymphoid
-    lineage_detail: null
-    parent: SKIN_MAST
-    families:
-    - skin_tumor
-    - mast_cell_neoplasm
-
   CXPA:
     name: Carcinoma ex Pleomorphic Adenoma
     who_volume: Head and Neck Tumours
@@ -4738,6 +4707,16 @@ tumor_types:
     families:
     - precursor_lesion
 
+  EAC_OSTEO:
+    name: Exostosis (osteoma) of the ear
+    who_volume: Head and Neck Tumours
+    site: External auditory canal
+    lineage_broad: Mesenchymal
+    parent: OSTEO
+    lineage_detail: null
+    families:
+    - bone_tumor
+
   EAC_SCC:
     name: Squamous cell carcinoma of the external auditory canal
     who_volume: Head and Neck Tumours
@@ -4757,16 +4736,6 @@ tumor_types:
     lineage_detail: null
     families:
     - carcinoma
-
-  EAR_OSTEO:
-    name: Exostosis (osteoma) of the ear
-    who_volume: Head and Neck Tumours
-    site: External auditory canal
-    lineage_broad: Mesenchymal
-    parent: OSTEO
-    lineage_detail: null
-    families:
-    - bone_tumor
 
   EAR_SCC:
     name: Middle ear squamous cell carcinoma
@@ -5075,15 +5044,6 @@ tumor_types:
     parent: ENDOM_CA
     families:
     - endometrial_carcinoma
-    - carcinoma
-
-  ENDO_SER_CYSTADCA:
-    name: Endometrioid Serous Cystadenocarcinoma
-    who_volume: null
-    site: null
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
     - carcinoma
 
   ENKTL:
@@ -9089,7 +9049,6 @@ tumor_types:
     site: Meninges
     lineage_broad: Melanocytic
     lineage_detail: null
-    parent: MEN_MELCYTIC
     families:
     - cns_tumor
     - melanocytic_tumor
@@ -9100,7 +9059,6 @@ tumor_types:
     site: Meninges
     lineage_broad: Melanocytic
     lineage_detail: null
-    parent: MEN_MELCYTIC
     families:
     - cns_tumor
     - melanocytic_tumor
@@ -9623,13 +9581,16 @@ tumor_types:
     - salivary_gland_tumor
 
   MTC:
-    name: Medullary Thyroid Carcinoma
-    who_volume: null
-    site: null
+    name: Medullary thyroid carcinoma
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Thyroid
     lineage_broad: Endocrine
-    lineage_detail: null
+    lineage_detail: C-cell
+    parent: MTC
     families:
+    - thyroid_tumor
     - neuroendocrine_tumor
+    - carcinoma
 
   MUC_MEL:
     name: Mucosal Melanoma
@@ -9977,6 +9938,15 @@ tumor_types:
     lineage_detail: Neuroendocrine
     families:
     - neuroendocrine_carcinoma
+    - carcinoma
+
+  NEC_LIKE_SMARCA4:
+    name: NEC-like SMARCA4/ARID1A-enriched tumor
+    who_volume: null
+    site: Multiple
+    lineage_broad: Epithelial
+    lineage_detail: null
+    families:
     - carcinoma
 
   NEUROMA:
@@ -13109,7 +13079,7 @@ tumor_types:
     site: Kidney
     lineage_broad: Epithelial
     lineage_detail: null
-    parent: RCC_ONC
+    parent: REN_ONC
     families:
     - renal_tumor
 
@@ -13431,15 +13401,6 @@ tumor_types:
   SARC_PATZ1:
     name: PATZ1-rearranged sarcoma
     who_volume: Soft Tissue and Bone Tumours
-    site: Soft tissue / bone
-    lineage_broad: Mesenchymal
-    lineage_detail: null
-    families:
-    - sarcoma
-
-  SARC_PATZ1:
-    name: PATZ1-rearranged sarcoma
-    who_volume: null
     site: Soft tissue / bone
     lineage_broad: Mesenchymal
     lineage_detail: null
@@ -13980,15 +13941,6 @@ tumor_types:
     - salivary_gland_tumor
 
   SI_CA:
-    name: Small Intestine Adenocarcinoma
-    who_volume: null
-    site: null
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - carcinoma
-
-  SI_CA:
     name: Small-intestinal adenocarcinoma
     who_volume: Digestive System Tumours
     site: Small intestine
@@ -14159,6 +14111,16 @@ tumor_types:
     - skin_tumor
     - lymphoma
     - b_cell_lymphoma
+
+  SKIN_MAST:
+    name: Cutaneous mastocytosis
+    who_volume: Haematolymphoid Tumours
+    site: Skin
+    lineage_broad: Hematolymphoid
+    lineage_detail: null
+    families:
+    - skin_tumor
+    - mast_cell_neoplasm
 
   SKIN_MASTO:
     name: Mastocytosis
@@ -14514,15 +14476,6 @@ tumor_types:
     families:
     - soft_tissue_tumor
     - fibroblastic_tumor
-
-  SMARCA4_ARID1A_NEC:
-    name: NEC-like SMARCA4/ARID1A-enriched tumor
-    who_volume: null
-    site: Multiple
-    lineage_broad: Epithelial
-    lineage_detail: null
-    families:
-    - carcinoma
 
   SMARCDEF:
     name: SMARCB1/SMARCA4-deficient tumor, NOS
@@ -15071,16 +15024,6 @@ tumor_types:
     families:
     - skin_tumor
     - skin_adnexal_tumor
-
-  SYS_MAST:
-    name: Systemic mastocytosis
-    who_volume: Haematolymphoid Tumours
-    site: Multiple
-    lineage_broad: Hematolymphoid
-    lineage_detail: null
-    parent: SKIN_MAST
-    families:
-    - mast_cell_neoplasm
 
   TCL_NOS:
     name: T-cell lymphoma, NOS
@@ -15677,18 +15620,6 @@ tumor_types:
     lineage_detail: null
     families:
     - thyroid_tumor
-    - carcinoma
-
-  THYR_MTC:
-    name: Medullary thyroid carcinoma
-    who_volume: Endocrine and Neuroendocrine Tumours
-    site: Thyroid
-    lineage_broad: Endocrine
-    lineage_detail: C-cell
-    parent: MTC
-    families:
-    - thyroid_tumor
-    - neuroendocrine_tumor
     - carcinoma
 
   THYR_ONC_AD:
