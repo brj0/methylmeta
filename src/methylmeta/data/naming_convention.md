@@ -180,6 +180,104 @@ constructed-code grammar.
 
 ---
 
+## 5b. Rule 3b — Canonical organ/site stem table
+
+When Rule 3 sends you to organ/site-first construction, use the stem
+from this table rather than inventing one. This is what keeps the file
+predictable as new WHO entities get added — the agent looks up the
+organ, it doesn't re-derive a stem from scratch each time and risk
+drifting from what's already in use elsewhere in the file.
+
+**Target: shortest stem that stays unambiguous — 2–5 characters, most
+land at 3–4.** A short stem is free as long as (a) it's unique against
+every other stem in this table and (b) the resulting full code is never
+just the stem alone with no suffix. `SV_LEIO` (seminal vesicle) is a
+perfectly good 2-letter stem — the floor in Rule 8 is on the *whole
+code*, not on the organ segment by itself.
+
+**One organ can have more than one stem** when it has an anatomically
+or histologically distinct compartment that generates its own tumor
+family — this is not a violation of "one organ, one stem," it's the
+opposite: forcing a single stem across compartments would hide a real
+distinction the free-text `site:` field is too coarse to carry. Current
+examples of legitimate compartment splits:
+
+* **Uterus** → `UT_*` (myometrium/smooth muscle: leiomyoma, adenosarcoma)
+  vs. `ENDOM_*` (endometrium/mucosa: endometrioid carcinoma, polyp).
+  Both are `site: Uterus`; they are not the same lineage.
+* **Ear** → `EAR_*` (middle ear) vs. `EAC_*` (external auditory canal).
+* **Liver** → `LIV_*` (hepatocellular lineage) vs. `BD_*` (bile duct,
+  when not captured by an established bare acronym like `ICCA`).
+
+When adding a new organ stem, check this rule before checking whether
+the stem "sounds right" — if the entity's compartment isn't already
+listed below, decide whether it's really a new compartment (add a new
+stem, document why in a comment) or the same one (reuse the existing
+stem).
+
+| System                 | Organ / site                       | Stem    | Notes                                                                         |
+| ---------------------- | ---------------------------------- | ------- | ----------------------------------------------------------------------------- |
+| Thoracic               | Lung                               | `LU`    |                                                                               |
+|                        | Larynx                             | `LAR`   | also covers larynx/hypopharynx                                                |
+| Breast                 | Breast                             | `BR`    | male breast folds in here too                                                 |
+| GI                     | Esophagus                          | `ESO`   |                                                                               |
+|                        | Stomach                            | `GAST`  |                                                                               |
+|                        | Duodenum                           | `DUO`   |                                                                               |
+|                        | Small intestine (general)          | `SI`    |                                                                               |
+|                        | Ampulla of Vater                   | `AMP`   |                                                                               |
+|                        | Colon                              | `COL`   |                                                                               |
+|                        | Colon/rectum (combined entity)     | `CR`    | used only when the entity itself spans both                                   |
+|                        | Rectum                             | `RECT`  |                                                                               |
+|                        | Appendix                           | `APP`   |                                                                               |
+|                        | Gallbladder                        | `GB`    |                                                                               |
+|                        | Bile duct                          | `BD`    | compartment split from liver — see above                                      |
+|                        | Liver (hepatocellular)             | `LIV`   |                                                                               |
+| GU                     | Kidney (non-RCC entities)          | `REN`   | `RCC` itself stays bare (Rule 3)                                              |
+|                        | Bladder                            | `BLAD`  |                                                                               |
+|                        | Urinary tract (general/multi-site) | `URO`   |                                                                               |
+|                        | Urethra                            | `URETH` |                                                                               |
+|                        | Prostate                           | `PROS`  |                                                                               |
+|                        | Testis                             | `TES`   |                                                                               |
+|                        | Testicular adnexa                  | `TESA`  | compartment split from testis                                                 |
+|                        | Epididymis                         | `EPID`  |                                                                               |
+|                        | Seminal vesicle                    | `SV`    |                                                                               |
+|                        | Penis / scrotum                    | `PEN`   |                                                                               |
+| Gyn                    | Cervix                             | `CERV`  |                                                                               |
+|                        | Uterus — myometrium                | `UT`    | compartment split — see above                                                 |
+|                        | Uterus — endometrium               | `ENDOM` | compartment split — see above                                                 |
+|                        | Ovary                              | `OVA`   |                                                                               |
+|                        | Vagina                             | `VAG`   |                                                                               |
+|                        | Vulva                              | `VULV`  |                                                                               |
+| Endocrine              | Thyroid                            | `THYR`  |                                                                               |
+|                        | Parathyroid                        | `PARA`  |                                                                               |
+|                        | Adrenal gland                      | `ADREN` |                                                                               |
+|                        | Pituitary gland                    | `PIT`   |                                                                               |
+|                        | Thymus                             | `THYM`  | distinct from `THYMO` = thymoma, a bare Rule-3 entity name, not this stem     |
+| Skin / soft tissue     | Skin                               | `SKIN`  |                                                                               |
+|                        | Bone                               | `BONE`  |                                                                               |
+|                        | Skeletal muscle                    | `SKM`   |                                                                               |
+| Head & neck            | Salivary gland                     | `SG`    |                                                                               |
+|                        | Sinonasal tract                    | `SN`    | most use established bare names instead (Rule 3) — `SINO` only if none exists |
+|                        | Head and neck (general/multi-site) | `HN`    |                                                                               |
+| Ear                    | Middle ear                         | `EAR`   | compartment split — see above                                                 |
+|                        | External auditory canal            | `EAC`   | compartment split — see above                                                 |
+| Eye / ocular adnexa    | Conjunctiva                        | `CONJ`  |                                                                               |
+|                        | Ciliary body                       | `CIL`   |                                                                               |
+|                        | Iris                               | `IRIS`  |                                                                               |
+|                        | Retinal pigment epithelium         | `RPE`   |                                                                               |
+|                        | Lacrimal drainage system           | `LAC`   |                                                                               |
+| CNS / peripheral nerve | Meninges                           | `MEN`   | distinct from `MNG` (meningioma, a bare entity)                               |
+| Other                  | Anal canal                         | `ANAL`  |                                                                               |
+
+Jaw and most CNS entities have no organ-first family at all — they use established bare entity names instead (Rule 3), e.g. `ADAM`/`AMBL` for jaw, `GBM`/`LGG`/`EPN` for CNS. Don't add a stem for them.
+
+If you need a stem that isn't in this table, add the row here in the
+same PR as the new entity — don't leave the stem undocumented. That
+keeps the table the single source of truth instead of something that
+has to be reverse-engineered from precedent later.
+
+---
+
 ## 6. Rule 4 — Naming a subtype or site variant
 
 Where the file distinguishes a variant of a broader entity, the variant

@@ -31,7 +31,7 @@ def methylation_class(row):
         "Breast Cancer": "BR_CA",
         "Cholangiocarcinoma": "CCA",
         "Oligodendroglioma": "OLIGO_IDH",
-        "SNUC": "NECIDH2",
+        "SNUC": "SN_NEC_IDH2",
     }
     return mapping[value]
 

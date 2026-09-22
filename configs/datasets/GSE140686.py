@@ -60,7 +60,7 @@ def methylation_class(row):
         "methylation class malignant rhabdoid tumour": "MRT",
         "methylation class myositis ossificans": "MYOS_OS",
         "methylation class myositis proliferans": "MYPROL",
-        "methylation class myxoid liposarcoma": "MLS",
+        "methylation class myxoid liposarcoma": "LPS_MYX",
         "methylation class nodular fasciitis": "NFA",
         "methylation class ossifying fibromyxoid tumour": "OFMT",
         "methylation class rhabdomyosarcoma (alveolar)": "RMS_ALV",
@@ -73,7 +73,7 @@ def methylation_class(row):
         "methylation class small blue round cell tumour with CIC alteration": "CIC_SARC",
         "methylation class synovial sarcoma": "SYNSARC",
         "methylation class undifferentiated sarcoma": "USARC",
-        "methylation class well- / dedifferentiated liposarcoma": "WD_DDLS",
+        "methylation class well- / dedifferentiated liposarcoma": "LPS_WD_DD",
         # other entities
         "methylation class clear cell sarcoma of the kidney": "CCS_KIDN",
         "methylation class endometrial stromal sarcoma (high grade)": "ESS_HG",

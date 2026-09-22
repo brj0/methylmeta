@@ -19,15 +19,15 @@ def methylation_class(row):
     disease = row["disease state"]
 
     if tissue == "Lymph node" and disease == "Metastasis":
-        return "PRAD"
+        return "PROS_ADCA"
     if tissue == "Lymph node" and disease == "Normal":
         return "CTRL_LYMPH"
     if tissue == "Prostate" and disease == "Normal":
         return "CTRL_PROST"
     if tissue == "Prostate" and disease == "Tumor":
-        return "PRAD"
+        return "PROS_ADCA"
     if tissue == "Prostate" and disease == "PIN":
-        return "PROST_PIN"
+        return "PROS_PIN"
     return None
 
 

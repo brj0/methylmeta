@@ -32,7 +32,7 @@ def methylation_class(row):
         "MYOCA": "SG_MYOEP_CA",
         "MYO_PA": "PLEO_AD_MYO",
         "NOR": "CTRL_SG",
-        "ONCO": "SG_ONCO",
+        "ONCO": "SG_ONC",
         "P_ADC": "PMA",
         "SCA": "SG_SECR_CA",
         "SDCA": "SDC",

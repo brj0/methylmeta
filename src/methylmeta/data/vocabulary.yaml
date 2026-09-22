@@ -1,51 +1,365 @@
 lineages:
-  - Embryonal
-  - Endocrine
-  - Epithelial
-  - Epithelial / myoepithelial
-  - Epithelial / stromal
-  - Germ cell
-  - Glial
-  - Glioneuronal
-  - Hematolymphoid
-  - Histiocytic
-  - Immune
-  - Immune / stromal
-  - Inflammatory
-  - Melanocytic
-  - Meningothelial
-  - Mesenchymal
-  - Mesothelial
-  - Mixed
-  - Mixed epithelial / mesenchymal
-  - Multiple
-  - Muscle
-  - Neural
-  - Neural / Schwannian
-  - Neural / glial
-  - Neural crest
-  - Neuroectodermal
-  - Neuroendocrine
-  - Neuroepithelial
-  - Neuronal
-  - Pineal / neuronal
-  - Stromal / vascular
-  - Trophoblastic
-  - Unknown
-  - Vascular
+  Epithelial:
+    - Squamous
+    - Glandular
+    - Urothelial
+    - Basal
+    - Neuroendocrine
+    - Myoepithelial
+    - Epithelial / myoepithelial
 
-who_volume:
-  - Central Nervous System Tumours
-  - Soft Tissue and Bone Tumours
-  - Haematolymphoid Tumours
+  Mesenchymal:
+    - Adipocytic
+    - Fibroblastic
+    - Fibrohistiocytic
+    - Myofibroblastic
+    - Smooth muscle
+    - Skeletal muscle
+    - Vascular
+    - Cartilaginous
+    - Osteogenic
+    - Perivascular
+    - Mesothelial
+    - Gonadal stromal
+
+  Hematolymphoid:
+    - B-cell
+    - T-cell
+    - NK-cell
+    - Plasma cell
+    - Myeloid
+    - Dendritic
+    - Histiocytic
+    - Mast cell
+    - Ambiguous lineage
+
+  Neural:
+    - Astrocytic
+    - Oligodendroglial
+    - Ependymal
+    - Neuronal
+    - Glioneuronal
+    - Neuroblastic
+    - Schwannian
+    - Meningothelial
+    - Pineal / neuronal
+    - Neuroectodermal
+    - Neural crest
+
+  Melanocytic:
+    - Melanocytic
+
+  Germ cell:
+    - Germ cell
+    - Embryonal
+
+  Trophoblastic:
+    - Trophoblastic
+
+  Endocrine:
+    - Endocrine
+    - Neuroendocrine
+    - C-cell
+
+  Hepatic:
+    - Hepatocellular
+
+  Odontogenic:
+    - Odontogenic
+
+  Mixed:
+    - Epithelial / mesenchymal
+    - Epithelial / stromal
+    - Immune / stromal
+    - Neural / glial
+    - Neural / Schwannian
+    - Vascular / lymphatic
+
+  Inflammatory:
+    - Inflammatory
+
+  Reactive:
+    - Reactive
+
+  Unknown:
+    - Unspecified
+
+who_volumes:
   - Breast Tumours
+  - Central Nervous System Tumours
   - Digestive System Tumours
   - Endocrine and Neuroendocrine Tumours
+  - Eye and Orbit Tumours
   - Female Genital Tumours
-  - Urinary and Male Genital Tumours
+  - Haematolymphoid Tumours
   - Head and Neck Tumours
-  - Skin Tumours
-  - Thoracic Tumours
-  - Paediatric Tumours
-  - Eye Tumours
   - Odontogenic and Maxillofacial Bone Tumours
+  - Paediatric Tumours
+  - Skin Tumours
+  - Soft Tissue and Bone Tumours
+  - Thoracic Tumours
+  - Urinary and Male Genital Tumours
+  - Unspecified
+
+sites:
+  - Adnexa
+  - Adrenal gland
+  - Adrenal medulla
+  - Adrenal medulla / paraganglia
+  - Ampulla of Vater
+  - Anal canal
+  - Appendix
+  - Bile duct
+  - Bladder
+  - Blood
+  - Blood vessels (great vessels)
+  - Bone
+  - Bone marrow
+  - Broad ligament
+  - Cauda equina
+  - Central nervous system
+  - Cerebellum
+  - Cervix
+  - Chest wall (rib)
+  - Choroid / ciliary body
+  - Ciliary body
+  - Colon
+  - Colon / rectum
+  - Conjunctiva
+  - Cornea
+  - Digits
+  - Duodenum
+  - Endocrine organs
+  - Endometrium
+  - Epididymis
+  - Esophagus
+  - Esophagus / EGJ
+  - Extra-adrenal paraganglia
+  - Extrahepatic bile duct
+  - External auditory canal
+  - Extranodal
+  - Eye
+  - Eyelid
+  - Fallopian tube
+  - Gallbladder
+  - Head and neck
+  - Iris
+  - Jaw
+  - Jaw (gingiva)
+  - Jejunum / ileum
+  - Kidney
+  - Lacrimal drainage system
+  - Lacrimal gland
+  - Larynx
+  - Larynx / hypopharynx
+  - Liver
+  - Liver (bile duct)
+  - Lung
+  - Lymph node
+  - Lymphoid tissue
+  - Mediastinum
+  - Meninges
+  - Middle ear
+  - Multiple
+  - Nail unit
+  - Nasal cavity
+  - Nasopharynx
+  - Neck
+  - Nipple / breast
+  - Ocular adnexa
+  - Optic nerve
+  - Oral cavity
+  - Oral cavity (gingiva)
+  - Oral cavity (jaw)
+  - Orbit
+  - Oropharynx
+  - Ovary
+  - Pancreas
+  - Parathyroid
+  - Penis
+  - Penis / scrotum
+  - Peritoneum
+  - Peritoneum / genital tract
+  - Peripheral nervous system
+  - Pituitary gland
+  - Placenta
+  - Placenta / uterus
+  - Posterior fossa
+  - Posterior pituitary
+  - Prostate
+  - Rectum
+  - Rete testis
+  - Retina
+  - Retinal pigment epithelium
+  - Salivary gland
+  - Scrotum
+  - Sellar region
+  - Seminal vesicle
+  - Sinonasal tract
+  - Skin
+  - Skull base
+  - Small intestine
+  - Soft tissue
+  - Spinal cord
+  - Spleen
+  - Stomach
+  - Synovium
+  - Temporal bone
+  - Temporomandibular joint
+  - Testicular adnexa
+  - Testis
+  - Thymus
+  - Thyroid
+  - Tongue
+  - Trachea
+  - Umbilical cord
+  - Urachus
+  - Urethra
+  - Urinary tract
+  - Uterus
+  - Uvea
+  - Vagina
+  - Vitreoretinal
+  - Vulva
+  - Unspecified
+
+families:
+  - adenoma
+  - adrenal_tumor
+  - appendiceal_tumor
+  - atypical_teratoid_rhabdoid_tumor
+  - b_cell_lymphoma
+  - benign_tumor
+  - bone_lesion
+  - bone_tumor
+  - borderline_tumor
+  - breast_tumor
+  - carcinoma
+  - carcinoma_in_situ
+  - carcinoma_neuroendocrine
+  - carcinoma_salivary_gland_like
+  - cns_tumor
+  - colorectal_tumor
+  - control
+  - cyst
+  - dendritic_cell_neoplasm
+  - embryonal_tumor
+  - endometrial_carcinoma
+  - endocrine_tumor
+  - ependymoma
+  - epithelial_mesenchymal_tumor
+  - epithelial_myoepithelial_tumor
+  - ewing_sarcoma
+  - fibroepithelial_tumor
+  - fibrous_dysplasia
+  - gastrointestinal_tumor
+  - genital_tumor
+  - germ_cell_tumor
+  - gestational_trophoblastic_disease
+  - giant_cell_lesion
+  - giant_cell_tumor
+  - glioma
+  - glioneuronal_tumor
+  - gynecologic_tumor
+  - hamartoma
+  - head_neck_tumor
+  - hematolymphoid
+  - hematolymphoid_leukemia
+  - hematolymphoid_leukemia_all
+  - hematolymphoid_leukemia_ambiguous_lineage
+  - hematolymphoid_leukemia_aml
+  - hematolymphoid_leukemia_b_all
+  - hematolymphoid_leukemia_chronic
+  - hematolymphoid_leukemia_t_all
+  - hematolymphoid_lymphoma
+  - hematolymphoid_lymphoma_b_cell
+  - hematolymphoid_lymphoma_b_cell_follicular
+  - hematolymphoid_lymphoma_b_cell_hodgkin
+  - hematolymphoid_lymphoma_b_cell_large_cell
+  - hematolymphoid_lymphoma_b_cell_mantle
+  - hematolymphoid_lymphoma_b_cell_marginal_zone
+  - hematolymphoid_lymphoma_b_cell_small_cell
+  - hematolymphoid_lymphoma_nk_cell
+  - hematolymphoid_lymphoma_t_cell
+  - hematolymphoid_lymphoma_t_cell_cutaneous
+  - hematolymphoid_lymphoma_t_cell_tfh
+  - hematolymphoid_mast_cell
+  - hematolymphoid_mds
+  - hematolymphoid_mds_mpn
+  - hematolymphoid_mpn
+  - hematolymphoid_plasma_cell
+  - hepatobiliary_tumor
+  - histiocytic_neoplasm
+  - hodgkin_lymphoma
+  - inflammatory
+  - leukemia
+  - lung_tumor
+  - lymphoma
+  - male_breast_tumor
+  - mammary_type_gland_tumor
+  - mast_cell_neoplasm
+  - mature_b_non_small_cell
+  - mature_b_small_cell
+  - mature_t_nk
+  - medulloblastoma
+  - melanocytic_tumor
+  - melanoma
+  - meningioma
+  - mesenchymal_tumor
+  - mesothelial_tumor
+  - monodermal_teratoma
+  - mpn
+  - muscle_disease
+  - myelodysplastic_syndrome
+  - myeloproliferative_neoplasm
+  - myoepithelial_tumor
+  - myofibroblastic_tumor
+  - naevus
+  - nail_tumor
+  - neuroblastoma
+  - neurocytic_tumor
+  - neuroectodermal_tumor
+  - neuroendocrine_carcinoma
+  - neuroendocrine_tumor
+  - neuroepithelial_tumor
+  - neuromuscular_disease
+  - neuronal_tumor
+  - nipple_tumor
+  - normal_tissue
+  - odontogenic_tumor
+  - ocular_tumor
+  - ovarian_tumor
+  - paget_disease
+  - pancreatic_tumor
+  - papilloma
+  - paraganglioma
+  - parathyroid_tumor
+  - perivascular_tumor
+  - peripheral_nerve_sheath_tumor
+  - pituitary_tumor
+  - plasma_cell
+  - polyp
+  - precursor_lesion
+  - prostatic_tumor
+  - reactive
+  - renal_tumor
+  - rhabdomyosarcoma
+  - salivary_gland_tumor
+  - sarcoma
+  - sex_cord_stromal_tumor
+  - skin_adnexal_tumor
+  - skin_tumor
+  - smooth_muscle_tumor
+  - soft_tissue_tumor
+  - squamous_lesion
+  - teratoma
+  - testicular_tumor
+  - thymic_tumor
+  - thyroid_tumor
+  - trophoblastic_tumor
+  - undifferentiated
+  - urinary_tract_tumor
+  - uterine_mesenchymal_tumor
+  - vascular_malformation
+  - vascular_tumor
+  - viral_lesion

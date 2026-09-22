@@ -86,7 +86,7 @@ def methylation_class(row):
         "PITAD, STH SPA": "PITAD_STH_SPA",
         "PITAD, STH DNS A": "PITAD_STH_DGA",
         "PITAD, STH DNS B": "PITAD_STH_DGB",
-        "PITUI": "PITUI_SCO_GCT",
+        "PITUI": "PIT_SCO_GCT",
         "CONTR, ADENOPIT": "CTRL_ADENOPIT",
         # Pineal region tumors
         "PIN T,  PB A": "PINEAL_PB_A",

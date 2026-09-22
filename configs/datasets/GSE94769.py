@@ -15,7 +15,7 @@ def methylation_class(row):
     mapping = {
         "A thymoma, DNA methylation": "THYMO_A",
         "B3 thymoma, DNA methylation": "THYMO_B3",
-        "NET, DNA methylation": "THYMO_NET",
+        "NET, DNA methylation": "THYM_NET",
         "Normal, DNA methylation": "CTRL_THYM",
         "TC, DNA methylation": "THYM_CA",
     }
