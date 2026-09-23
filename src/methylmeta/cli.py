@@ -230,7 +230,7 @@ def fetch(
 @click.option(
     "--request_limit",
     type=int,
-    default=40,
+    default=80,
     show_default=True,
     help=(
         "Max LLM requests before the agent gives up (raise for messy/large "
@@ -240,7 +240,7 @@ def fetch(
 @click.option(
     "--tool_calls_limit",
     type=int,
-    default=100,
+    default=200,
     show_default=True,
     help=(
         "Max tool calls before the agent gives up (raise for messy/large "
