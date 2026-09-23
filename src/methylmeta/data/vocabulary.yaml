@@ -170,6 +170,8 @@ sites:
   - Genital tract / retroperitoneum
   - Head and neck
   - Head and neck / thorax
+  - Heart
+  - Heart / vascular
   - Iris
   - Jaw
   - Jaw (gingiva)
@@ -312,8 +314,6 @@ families:
   - breast_tumor
   - carcinoma
   - carcinoma_in_situ
-  - carcinoma_neuroendocrine
-  - carcinoma_salivary_gland_like
   - carcinosarcoma
   - cartilaginous_tumor
   - chondrosarcoma
@@ -367,6 +367,7 @@ families:
   - gynecologic_tumor
   - hamartoma
   - head_neck_tumor
+  - heart_tumor
   - hematolymphoid
   - hematolymphoid_leukemia
   - hematolymphoid_leukemia_all

@@ -233,6 +233,7 @@ stem).
 |                        | Gallbladder                        | `GB`    |                                                                               |
 |                        | Bile duct                          | `BD`    | compartment split from liver — see above                                      |
 |                        | Liver (hepatocellular)             | `LIV`   |                                                                               |
+|                        | Pancreas                           | `PAN`   |                                                                               |
 | GU                     | Kidney (non-RCC entities)          | `REN`   | `RCC` itself stays bare (Rule 3)                                              |
 |                        | Bladder                            | `BLAD`  |                                                                               |
 |                        | Urinary tract (general/multi-site) | `URO`   |                                                                               |
@@ -312,7 +313,6 @@ inventing an inconsistent one-off elsewhere.
 | ------------- | ----------------------------------------------- |
 | `_ADCA`       | adenocarcinoma                                  |
 | `_ADSARC`     | adenosarcoma                                    |
-| `_ADSARC`     | adenosarcoma                                    |
 | `_AD`         | adenoma                                         |
 | `_ASC`        | adenosquamous carcinoma                         |
 | `_BL`         | blastoma                                        |
@@ -387,10 +387,11 @@ spelled out rather than numbered: `HCL_VAR` is "hairy cell leukemia,
 * Constructed codes: approximately **3–15 characters**, target ≤ 12. The floor
   exists because very short codes (`MM`, `SS`, `MF`) are frequently ambiguous
   even to a specialist without context; the cap is for legibility in
-  confusion-matrix plot labels at normal font size.
+  confusion-matrix plot labels at normal font size. For fusion specific
+  entities the acronyms may have more than 15 characters.
 * Rule 1 acronyms are exempt from both bounds.
 * Character set: `[A-Z0-9_]` only, first character must be `A-Z` (not a
-  digit or underscore). Regex: `^[A-Z][A-Z0-9_]{2,13}$` for constructed
+  digit or underscore). Regex: `^[A-Z][A-Z0-9_]{3,15}$` for constructed
   codes.
 * Quote any `name:` value containing `:` or other YAML-special
   characters (has caused real parse failures).
