@@ -135,3 +135,9 @@ Workflow for writing/fixing a config:
 CONFIG_SPEC = _TEMPLATE.format(
     fields="\n".join(f"    {line}" for line in describe_fields().splitlines())
 )
+AGENT_CONFIG_SPEC = (
+    CONFIG_SPEC.partition("\nWorkflow for writing/fixing a config:")[
+        0
+    ].rstrip()
+    + "\n"
+)

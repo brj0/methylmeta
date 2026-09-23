@@ -33,6 +33,7 @@ PACKAGE_DIR = get_resource_path(APP_NAME)
 DATA_DIR = PACKAGE_DIR / "data"
 CONFIGS_DIR = PACKAGE_DIR.parent.parent / "configs" / "datasets"
 TUMOR_TYPES_PATH = DATA_DIR / "tumor_types.yaml"
+PROJECT_ROOT = PACKAGE_DIR.parent.parent
 
 # Hand-curated metadata spreadsheets, keyed by dataset_id (e.g.
 # "GSE140686.tsv"). Some datasets' GEO/ArrayExpress sample sheets are

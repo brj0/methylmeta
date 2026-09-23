@@ -1,7 +1,9 @@
 from __future__ import annotations
 
-from enum import StrEnum
+import typing
+from enum import Enum, StrEnum
 from functools import lru_cache
+from typing import Any
 
 import yaml
 from pydantic import BaseModel, Field, field_validator
@@ -116,8 +118,8 @@ class SampleMetadata(BaseModel):
     sample_type: SampleType | None = Field(
         default=None,
         description=(
-            "Type or origin of the tumor sample "
-            "(primary vs metastatic vs recurrent lesion)"
+            "Type or origin of the tumor sample: one of control, primary, "
+            "metastasis, recurrence"
         ),
     )
 
@@ -167,6 +169,29 @@ class SampleMetadata(BaseModel):
         return value
 
 
+def _unwrap_field_type(annotation: object) -> Any:
+    """Strip an `X | None` annotation down to the bare underlying type."""
+    args = [a for a in typing.get_args(annotation) if a is not type(None)]
+    return args[0] if len(args) == 1 else annotation
+
+
+@lru_cache(maxsize=1)
+def enum_valued_fields() -> dict[str, type[Enum]]:
+    """Return {field_name: EnumClass} for every enum-typed SampleMetadata.
+
+    field. This is the single source of truth for "which canonical fields
+    are constrained to a fixed vocabulary, and what that vocabulary is" -
+    used both to describe the fields to the config-writing agent and to
+    statically validate generated configs before they touch real data.
+    """
+    fields: dict[str, type[Enum]] = {}
+    for name, info in SampleMetadata.model_fields.items():
+        display_type = _unwrap_field_type(info.annotation)
+        if isinstance(display_type, type) and issubclass(display_type, Enum):
+            fields[name] = display_type
+    return fields
+
+
 def describe_fields() -> str:
     """Render every canonical field's name, type, and description.
 
@@ -174,14 +199,16 @@ def describe_fields() -> str:
     elsewhere (e.g. in the config-writing spec), so it can't drift out of
     sync when a field is added, renamed, or redescribed.
     """
-    import typing
-
     lines = []
     for name, info in SampleMetadata.model_fields.items():
         annotation = info.annotation
         args = [a for a in typing.get_args(annotation) if a is not type(None)]
         display_type = args[0] if len(args) == 1 else annotation
         type_name = getattr(display_type, "__name__", str(display_type))
+
+        if isinstance(display_type, type) and issubclass(display_type, Enum):
+            choices = ", ".join(repr(m.value) for m in display_type)
+            type_name = f"{type_name} ({choices})"
 
         required = " (required)" if info.is_required() else ""
         lines.append(

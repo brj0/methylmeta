@@ -3,6 +3,7 @@ from __future__ import annotations
 import ast
 import re
 import shutil
+import subprocess
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -13,8 +14,9 @@ from pydantic_ai.usage import RunUsage
 
 from methylmeta.loader import load_dataset_module
 from methylmeta.merger import MetadataMerger
-from methylmeta.schema import describe_fields
-from methylmeta.spec import CONFIG_SPEC
+from methylmeta.paths import PROJECT_ROOT
+from methylmeta.schema import enum_valued_fields
+from methylmeta.spec import AGENT_CONFIG_SPEC
 from methylmeta.study_info import fetch_study_description
 from methylmeta.vocab import search_tumor_types
 
@@ -94,17 +96,19 @@ silently passing through unexpected values. Every mapping must therefore define
 an explicit fallback for unknown values, such as "Unknown", null, or another
 schema-valid value. If an unexpected raw value is encountered, preserve the row
 and map it to the explicit fallback rather than raising an error or silently
-returning the original value.
+returning the original value. For any field with a listed enum, the returned
+value must match one of the listed literals exactly — do not paraphrase,
+abbreviate, or use a synonym.
 
 When returning Python code, follow PEP 8 formatting and keep lines to a maximum
-of 79 characters.
+of 79 characters. The generated config must pass `ruff check` - this is
+checked automatically after every write, and any violation is reported back
+to you with the exact rule, so you don't need to recall Ruff's rules ahead
+of time.
 
 The config contract is:
 
 {config_spec}
-
-Canonical fields:
-{fields}
 """
 
 
@@ -128,6 +132,7 @@ class AgentDeps:
     dataset_dir: Path
     allow_write: bool
     force: bool
+    wrote_this_run: bool = False
 
 
 def _config_path(deps: AgentDeps) -> Path:
@@ -141,7 +146,147 @@ def _clean_code(source: str) -> str:
     return match.group(1).strip() if match else source
 
 
-def _validate_config_source(source: str) -> str:
+def _literal_string_values(func: ast.FunctionDef) -> set[str]:
+    """Collect string literals a function might *return*, statically.
+
+    Covers the two idioms the config spec teaches: a bare `return "..."`
+    and a `mapping = {...}` dict whose *values* are returned via
+    `mapping[value]` or `mapping.get(value, default)`. This is a
+    heuristic, not a full data-flow analysis: it can't see through values
+    built from other functions or computed at runtime. It deliberately
+    excludes anything that is clearly raw *input* rather than canonical
+    *output*, so it doesn't flag the config's own column names as bad
+    enum values:
+      - the docstring (first statement, if a bare string constant)
+      - dict-literal keys (`{"raw value": ...}` - the raw side)
+      - subscript indices (`row["Column Name"]`, `mapping["key"]`)
+      - the first positional arg of a `.get(...)` call (the lookup key
+        in both `row.get("Column")` and `mapping.get(value, default)`)
+    """
+    excluded_ids = set()
+
+    for node in ast.walk(func):
+        if isinstance(node, ast.Dict):
+            for key in node.keys:
+                if isinstance(key, ast.Constant) and isinstance(
+                    key.value, str
+                ):
+                    excluded_ids.add(id(key))
+        elif isinstance(node, ast.Subscript):
+            index = node.slice
+            if isinstance(index, ast.Constant) and isinstance(
+                index.value, str
+            ):
+                excluded_ids.add(id(index))
+        elif (
+            isinstance(node, ast.Call)  # noqa: PLR0916
+            and isinstance(node.func, ast.Attribute)
+            and node.func.attr == "get"
+            and node.args
+            and isinstance(node.args[0], ast.Constant)
+            and isinstance(node.args[0].value, str)
+        ):
+            excluded_ids.add(id(node.args[0]))
+
+    docstring_id = None
+    if (
+        func.body
+        and isinstance(func.body[0], ast.Expr)
+        and isinstance(func.body[0].value, ast.Constant)
+        and isinstance(func.body[0].value.value, str)
+    ):
+        docstring_id = id(func.body[0].value)
+
+    values = set()
+    for node in ast.walk(func):
+        if not (
+            isinstance(node, ast.Constant) and isinstance(node.value, str)
+        ):
+            continue
+        if id(node) in excluded_ids or id(node) is docstring_id:
+            continue
+        values.add(node.value)
+    return values
+
+
+def _validate_enum_literals(tree: ast.Module) -> list[str]:
+    """Catch invalid enum values before real data is touched.
+
+    For example, detect a config that returns "recurrent" for `sample_type`
+    (the real enum member is "recurrence") or "fresh frozen" for `preservation`
+    (the real enum member is "FROZEN"). Runs statically on the generated
+    source, so it's instant and free compared to a full `test_config` cycle
+    over the actual metadata file.
+    """
+    enum_fields = enum_valued_fields()
+    errors = []
+    for node in tree.body:
+        if not isinstance(node, ast.FunctionDef):
+            continue
+        enum_cls = enum_fields.get(node.name)
+        if enum_cls is None:
+            continue
+
+        valid = {member.value for member in enum_cls}
+        bad = sorted(_literal_string_values(node) - valid)
+        if bad:
+            bad_repr = ", ".join(repr(v) for v in bad)
+            valid_repr = ", ".join(repr(v) for v in sorted(valid))
+            errors.append(
+                f"{node.name}() returns {bad_repr}, which "
+                f"{'are' if len(bad) > 1 else 'is'} not valid "
+                f"{enum_cls.__name__} value(s). Valid values are: "
+                f"{valid_repr}."
+            )
+    return errors
+
+
+def _run_ruff_check(source: str, dataset_id: str) -> list[str]:
+    """Run `ruff check` on generated config source, statically and fast.
+
+    Runs against a virtual path (`configs/datasets/<dataset_id>.py`, fed
+    via stdin - nothing touches disk) so ruff's own per-file-ignores for
+    that glob (see pyproject.toml: ANN/D/E501 relaxed for dataset
+    configs) apply exactly as they would for the real file. This replaces
+    asking the agent to recall style rules from prose - it either passes
+    the project's actual linter or it doesn't.
+
+    Returns a list of one-line violation strings (empty if clean, or if
+    ruff itself isn't available/times out - a missing linter shouldn't
+    block config writing, only a config that violates it should).
+    """
+    virtual_path = f"configs/datasets/{dataset_id}.py"
+    try:
+        result = subprocess.run(
+            [
+                "ruff",
+                "check",
+                "--stdin-filename",
+                virtual_path,
+                "--output-format",
+                "concise",
+                "--no-fix",
+                "-",
+            ],
+            input=source,
+            capture_output=True,
+            text=True,
+            timeout=10,
+            cwd=PROJECT_ROOT,
+            check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        return []
+
+    # returncode 0 = clean, 1 = violations found, anything else means ruff
+    # itself failed (bad invocation, crashed, etc.) - don't surface that
+    # as if it were a config problem.
+    if result.returncode != 1:
+        return []
+    return [line for line in result.stdout.strip().splitlines() if line]
+
+
+def _validate_config_source(source: str, dataset_id: str) -> str:
     """Validate generated config source before it touches the filesystem."""
     source = _clean_code(source)
     if not source:
@@ -168,7 +313,16 @@ def _validate_config_source(source: str) -> str:
     if "dataset_id" not in function_names:
         raise ValueError("Config must define dataset_id(row).")
 
-    return source + "\n"
+    enum_errors = _validate_enum_literals(tree)
+    if enum_errors:
+        raise ValueError(" ".join(enum_errors))
+
+    source = source + "\n"
+    ruff_errors = _run_ruff_check(source, dataset_id)
+    if ruff_errors:
+        raise ValueError("ruff check failed:\n" + "\n".join(ruff_errors))
+
+    return source
 
 
 def create_agent(
@@ -180,10 +334,7 @@ def create_agent(
         deps_type=AgentDeps,
         output_type=AgentResult,
         retries=2,
-        instructions=_AGENT_WORKFLOW.format(
-            config_spec=CONFIG_SPEC,
-            fields=describe_fields(),
-        ),
+        instructions=_AGENT_WORKFLOW.format(config_spec=AGENT_CONFIG_SPEC),
     )
 
     @agent.tool
@@ -300,7 +451,11 @@ def create_agent(
             )
 
         path = _config_path(ctx.deps)
-        if path.exists() and not ctx.deps.force:
+        if (
+            path.exists()
+            and not ctx.deps.force
+            and not ctx.deps.wrote_this_run
+        ):
             return (
                 f"WRITE REFUSED: {path} already exists and --force was "
                 "not given. "
@@ -308,7 +463,7 @@ def create_agent(
             )
 
         try:
-            source = _validate_config_source(source)
+            source = _validate_config_source(source, ctx.deps.dataset_id)
         except ValueError as exc:
             return f"WRITE REFUSED: {exc}"
 
@@ -318,6 +473,7 @@ def create_agent(
             shutil.copy2(path, backup)
 
         path.write_text(source, encoding="utf-8")
+        ctx.deps.wrote_this_run = True
 
         try:
             module = load_dataset_module(path)
