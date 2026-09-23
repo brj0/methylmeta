@@ -24,6 +24,7 @@ dev = [
     "mypy",
     "pytest",
     "pytest-cov",
+    "ruamel.yaml",
     "ruff",
 ]
 

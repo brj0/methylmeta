@@ -93,7 +93,7 @@ def sort_tumor_types(text: str) -> str:
     blocks = [raw.strip("\n") for _, raw in pinned + sorted_entries]
     body = "\n\n".join(blocks) + "\n"
 
-    return f"{header}tumor_types:\n{body}"
+    return f"{header}tumor_types:\n\n{body}"
 
 
 def main() -> None:

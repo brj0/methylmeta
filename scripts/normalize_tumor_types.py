@@ -13,24 +13,35 @@ Design rules:
 * ``families`` is never silently emptied. Unmappable values are kept and
   reported.
 * Case-insensitive matching is used for who_volume, site, lineage_detail.
+* Duplicate YAML keys are a hard error (see naming_convention.md Rule 13.1).
+* ``parent:`` values must resolve and must not form a cycle (Rule 13.4).
+* Acronym keys must match ``^[A-Z][A-Z0-9_]*$`` (Rule 13.2 charset).
+  Length is a documented guideline (Rule 8), not enforced here.
 
 Usage:
     python scripts/normalize_tumor_types.py
+    python scripts/normalize_tumor_types.py --check
     python scripts/normalize_tumor_types.py --fix
 """
 
 from __future__ import annotations
 
 import argparse
+import re
 import sys
 from pathlib import Path
 from typing import Any
 
 from ruamel.yaml import YAML
+from ruamel.yaml.constructor import DuplicateKeyError
+from ruamel.yaml.error import YAMLError
 
 ROOT = Path(__file__).resolve().parents[1]
 VOCAB_PATH = ROOT / "src/methylmeta/data/vocabulary.yaml"
 TUMOR_PATH = ROOT / "src/methylmeta/data/tumor_types.yaml"
+
+# Rule 13.2 — acronym key charset: [A-Z0-9_], first char A-Z.
+CODE_RE = re.compile(r"^[A-Z][A-Z0-9_]*$")
 
 
 # ---------------------------------------------------------------------------
@@ -50,7 +61,6 @@ LINEAGE_BROAD_ALIASES: dict[str, str] = {
     "Stromal / vascular": "Mixed",
     "Immune / stromal": "Mixed",
     "Pineal / neuronal": "Neural",
-    "Multiple": "Unknown",
 }
 
 LINEAGE_DETAIL_ALIASES: dict[str, str] = {
@@ -75,6 +85,18 @@ SITE_ALIASES: dict[str, str] = {
 FAMILY_ALIASES: dict[str, str] = {
     "Myo-fibroblastic tumor": "myofibroblastic_tumor",
 }
+
+ENTRY_RE = re.compile(r"^  [A-Za-z0-9_]+:[ \t]*$")
+
+
+def _space_entries(text: str) -> str:
+    """Ensure exactly one blank line between top-level entries."""
+    out: list[str] = []
+    for line in text.splitlines():
+        if ENTRY_RE.match(line) and out and out[-1].strip():
+            out.append("")
+        out.append(line)
+    return "\n".join(out) + "\n"
 
 
 def slugify(value: str) -> str:
@@ -217,20 +239,89 @@ def check_entry(
     return entry
 
 
-def normalize(mode: str) -> int:
-    yaml = YAML()
-    yaml.allow_duplicate_keys = True
-    yaml.preserve_quotes = True
-    yaml.width = 120
-    yaml.representer.add_representer(
-        type(None),
-        lambda r, _: r.represent_scalar("tag:yaml.org,2002:null", "null"),
-    )
+def check_code(acronym: str, report: Report) -> None:
+    """Rule 13.2 — acronym key must match the charset pattern."""
+    if not CODE_RE.match(acronym):
+        report.add(
+            acronym,
+            "(key)",
+            acronym,
+            "violates code pattern ^[A-Z][A-Z0-9_]*$",
+        )
 
-    with VOCAB_PATH.open() as fh:
-        vocab = yaml.load(fh)
-    with TUMOR_PATH.open() as fh:
-        data = yaml.load(fh)
+
+def check_parents(data: dict[str, Any], report: Report) -> None:
+    """Rule 13.4 — every parent: resolves, and no parent cycles."""
+    types = data["tumor_types"]
+    codes = set(types.keys())
+    for acronym, entry in types.items():
+        parent = entry.get("parent")
+        if parent is None:
+            continue
+        if parent not in codes:
+            report.add(
+                acronym,
+                "parent",
+                parent,
+                "does not resolve to an existing code",
+            )
+            continue
+        # Walk the parent chain looking for a cycle.
+        seen = {acronym}
+        walker: str | None = parent
+        while walker is not None:
+            if walker in seen:
+                report.add(
+                    acronym,
+                    "parent",
+                    parent,
+                    "cyclic parent chain",
+                )
+                break
+            seen.add(walker)
+            walker = types.get(walker, {}).get("parent")
+
+
+def _make_yaml() -> YAML:
+    """One YAML instance, configured for full round-trip preservation.
+
+    Load and dump must use the same instance for blank lines, comments,
+    and quote style to survive the round-trip.
+    """
+    yaml = YAML()  # typ="rt" by default — round-trip.
+    yaml.allow_duplicate_keys = False
+    yaml.preserve_quotes = True
+    # Effectively disable line folding; long name: values stay on one line.
+    yaml.width = 4096
+    # Canonical 2-space indentation with block sequences at the same level
+    # as their key (matches the file's existing style).
+    yaml.indent(mapping=2, sequence=2, offset=0)
+    yaml.default_flow_style = False
+    return yaml
+
+
+def _load_yaml(yaml: YAML, path: Path) -> Any | None:
+    """Load a YAML file, returning None and printing on failure."""
+    try:
+        with path.open(encoding="utf-8") as fh:
+            return yaml.load(fh)
+    except DuplicateKeyError as exc:
+        print(f"DUPLICATE KEY in {path}: {exc}", file=sys.stderr)
+        return None
+    except YAMLError as exc:
+        print(f"YAML parse error in {path}: {exc}", file=sys.stderr)
+        return None
+
+
+def normalize(mode: str) -> int:
+    yaml = _make_yaml()
+
+    vocab = _load_yaml(yaml, VOCAB_PATH)
+    if vocab is None:
+        return 1
+    data = _load_yaml(yaml, TUMOR_PATH)
+    if data is None:
+        return 1
 
     lineages = vocab["lineages"]
     broad_set = set(lineages.keys())
@@ -251,16 +342,37 @@ def normalize(mode: str) -> int:
     report = Report()
 
     for acronym, entry in data["tumor_types"].items():
+        check_code(acronym, report)
         check_entry(acronym, entry, lookups, report)
+
+    check_parents(data, report)
 
     report.emit()
 
     if mode == "fix":
         with TUMOR_PATH.open("w") as fh:
             yaml.dump(data, fh)
-        return 1 if report else 0
+        TUMOR_PATH.write_text(
+            _space_entries(TUMOR_PATH.read_text(encoding="utf-8")),
+            encoding="utf-8",
+        )
+        if report:
+            print(
+                f"Wrote {TUMOR_PATH} with auto-fixes applied; "
+                f"{len(report.errors)} unresolved violation(s) remain.",
+                file=sys.stderr,
+            )
+            return 1
+        print(
+            f"Wrote {TUMOR_PATH}; all violations resolved.",
+            file=sys.stderr,
+        )
+        return 0
 
-    return 1 if report else 0
+    if report:
+        return 1
+    print("OK — no violations.", file=sys.stderr)
+    return 0
 
 
 def main() -> None:
@@ -269,7 +381,6 @@ def main() -> None:
     group.add_argument(
         "--check",
         action="store_true",
-        default=True,
         help="Validate only (default).",
     )
     group.add_argument(
