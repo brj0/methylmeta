@@ -145,11 +145,19 @@ def profile(
 )
 @click.option("--dataset_dir", type=Path, required=True)
 @metadata_dir_option
+@click.option(
+    "--max_mapping_rows",
+    type=int,
+    default=100,
+    show_default=True,
+    help="Max rows of the diagnosis -> methylation_class table (0 = all).",
+)
 @click.argument("dataset_id")
 def test(
     config_dir: Path,
     dataset_dir: Path,
     metadata_dir: Path,
+    max_mapping_rows: int,
     dataset_id: str,
 ) -> None:
     """Dry-run one dataset's config against its real metadata.
@@ -163,7 +171,11 @@ def test(
         metadata_overrides_dir=metadata_dir,
     )
     report = merger.test(dataset_id)
-    click.echo(report.summary())
+    click.echo(
+        report.summary(
+            max_mapping_rows=max_mapping_rows or None,
+        )
+    )
     raise SystemExit(0 if report.success else 1)
 
 

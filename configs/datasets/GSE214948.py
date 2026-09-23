@@ -24,8 +24,10 @@ def methylation_class(row):
     return "MCC"
 
 
-def material(row):
+def material_type(row):
     value = row["cell line"]
+    if value is None:
+        return None
     if "tissue" in value:
         return "tissue"
     return "cell_line"

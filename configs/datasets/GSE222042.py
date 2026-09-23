@@ -30,8 +30,10 @@ def sample_type(row):
     return "primary"
 
 
-def material(row):
+def material_type(row):
     value = row["treatment"]
+    if value is None:
+        return None
     if "cell_culture" in value:
         return "cell_line"
     return None

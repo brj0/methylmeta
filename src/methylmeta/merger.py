@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import difflib
+import inspect
 import logging
 from collections.abc import Iterable
 from dataclasses import dataclass, field
@@ -168,10 +170,11 @@ class HarmonizeReport:
     ok_rows: int
     errors: list[RowError] = field(default_factory=list)
     preview: pl.DataFrame = field(default_factory=pl.DataFrame)
+    config_errors: list[str] = field(default_factory=list)
 
     @property
     def success(self) -> bool:
-        return not self.errors
+        return not self.errors and not self.config_errors
 
     def grouped_errors(self) -> dict[str, list[RowError]]:
         """Group failures by identical error message.
@@ -185,10 +188,18 @@ class HarmonizeReport:
             groups.setdefault(err.error, []).append(err)
         return groups
 
-    def summary(self, max_examples: int = 2) -> str:
+    def summary(
+        self,
+        max_examples: int = 2,
+        max_mapping_rows: int | None = 100,
+    ) -> str:
         lines = [
             f"{self.dataset_id}: {self.ok_rows}/{self.total_rows} rows OK",
         ]
+
+        if self.config_errors:
+            lines.append(f"{len(self.config_errors)} config problem(s):")
+            lines.extend(f"  {msg}" for msg in self.config_errors)
 
         if self.errors:
             lines.append(f"{len(self.errors)} row(s) failed:")
@@ -202,7 +213,105 @@ class HarmonizeReport:
         else:
             lines.append("All rows harmonized successfully.")
 
+        coverage = self.field_coverage()
+        if coverage:
+            lines.append("")
+            lines.append(coverage)
+
+        mapping = self.mapping_table(max_rows=max_mapping_rows)
+        if mapping:
+            lines.append("")
+            lines.append(mapping)
+
         return "\n".join(lines)
+
+    def field_coverage(self) -> str:
+        """Per-field fill rate over the rows that harmonized.
+
+        A field at 0 non-null values is either not defined in the config or
+        always returns None - both are worth a second look, since `test()`
+        passes either way.
+        """
+        n_rows = self.preview.height
+        if n_rows == 0:
+            return ""
+
+        lines = [f"FIELD COVERAGE (non-null, of {n_rows} OK rows):"]
+        for name in SampleMetadata.model_fields:
+            if name in self.preview.columns:
+                n_filled = n_rows - self.preview[name].null_count()
+            else:
+                n_filled = 0
+            pct = 100 * n_filled / n_rows
+            lines.append(f"  {name}: {n_filled} ({pct:.0f}%)")
+        return "\n".join(lines)
+
+    def mapping_table(self, max_rows: int | None = None) -> str:
+        """Unique (diagnosis -> methylation_class) pairs with row counts.
+
+        This is the review artifact: a compact table showing what the config
+        actually produced, which is far quicker to check by eye than the
+        config code. If the config defines no diagnosis, only the class
+        counts are shown.
+        """
+        preview = self.preview
+        if preview.is_empty() or "methylation_class" not in preview.columns:
+            return ""
+
+        keys = ["methylation_class"]
+        if (
+            "diagnosis" in preview.columns
+            and preview["diagnosis"].null_count() < preview.height
+        ):
+            keys = ["diagnosis", "methylation_class"]
+
+        counts = preview.group_by(keys).len().sort(keys)
+        rows = list(counts.iter_rows())
+        shown = rows if max_rows is None else rows[:max_rows]
+
+        def fmt(value: object) -> str:
+            return "<None>" if value is None else str(value)
+
+        lines = [
+            "MAPPING ("
+            + " -> ".join(keys)
+            + f"; {len(rows)} unique, count first):"
+        ]
+        for *values, count in shown:
+            lines.append(
+                f"  {count:>5}  " + " -> ".join(fmt(v) for v in values)
+            )
+        if len(shown) < len(rows):
+            lines.append(f"  ... {len(rows) - len(shown)} more")
+        return "\n".join(lines)
+
+
+def unknown_config_functions(dataset: ModuleType) -> list[str]:
+    """Describe public functions in a config that are not schema fields.
+
+    The harmonizer only ever looks up functions by canonical field name, so
+    a function like `material()` (meant to be `material_type()`) is silently
+    ignored and its field stays empty - and every test still passes. Helpers
+    are fine as long as their name starts with an underscore; functions
+    imported from elsewhere are ignored.
+    """
+    fields = list(SampleMetadata.model_fields)
+    problems = []
+    for name, function in inspect.getmembers(dataset, inspect.isfunction):
+        if (
+            function.__module__ != dataset.__name__
+            or name.startswith("_")
+            or name in fields
+        ):
+            continue
+        close = difflib.get_close_matches(name, fields, n=1, cutoff=0.6)
+        hint = f" (did you mean {close[0]!r}?)" if close else ""
+        problems.append(
+            f"function {name}(){hint} is not a canonical field, so it would "
+            "be silently ignored. Rename it, remove it, or prefix it with "
+            "'_' if it is a helper."
+        )
+    return problems
 
 
 class MetadataHarmonizer:
@@ -213,9 +322,16 @@ class MetadataHarmonizer:
         dataset: ModuleType,
     ) -> None:
         self.dataset = dataset
+        self.config_errors = unknown_config_functions(dataset)
 
     def harmonize(self, raw: pl.DataFrame) -> pl.DataFrame:
         """Harmonize a raw metadata table."""
+        if self.config_errors:
+            raise ValueError(
+                f"Invalid config {self.dataset.__name__}: "
+                + "; ".join(self.config_errors)
+            )
+
         rows = [self._harmonize_row(row) for row in raw.iter_rows(named=True)]
 
         if not rows:
@@ -263,6 +379,7 @@ class MetadataHarmonizer:
             ok_rows=len(ok_rows),
             errors=errors,
             preview=preview,
+            config_errors=list(self.config_errors),
         )
 
     def _harmonize_row(
@@ -414,8 +531,6 @@ class MetadataMerger:
             metadata_overrides_dir = METADATA_OVERRIDES_DIR
         self.metadata_overrides_dir = Path(metadata_overrides_dir)
 
-        self._id_to_config: dict[str, Path] | None = None
-
     def _resolve_metadata_file(self, dataset_id: str) -> Path:
         """Pick the metadata spreadsheet to use for `dataset_id`.
 
@@ -441,43 +556,54 @@ class MetadataMerger:
 
         return find_metadata_file(self.dataset_dir / dataset_id)
 
-    def _index_configs(self) -> dict[str, Path]:
-        """Build (once) the dataset_id -> config .py path index.
+    def config_path(self, dataset_id: str) -> Path:
+        """Path of the config for `dataset_id`.
 
-        A dataset's identity is whatever `dataset_id(row)` returns, not its
-        filename, so every config has to be loaded once to build this index.
+        A config's filename *is* its dataset_id (`<dataset_id>.py`); this is
+        enforced by `load_config`. That lets each dataset be loaded on its
+        own, so one broken or half-written config can't affect the others.
         """
-        if self._id_to_config is not None:
-            return self._id_to_config
+        return self.config_dir / f"{dataset_id}.py"
 
-        config_paths = sorted(self.config_dir.glob("*.py"))
+    def _has_configs(self) -> bool:
+        return any(self.config_dir.glob("*.py"))
 
-        if not config_paths:
+    def load_config(self, dataset_id: str) -> ModuleType:
+        """Load `<config_dir>/<dataset_id>.py` and check its dataset_id."""
+        path = self.config_path(dataset_id)
+
+        if not path.is_file():
+            hint = ""
+            if not self._has_configs():
+                hint = (
+                    f" No .py files at all in {self.config_dir}: config_dir "
+                    "should point at your harmonizer configs (e.g. "
+                    "'configs/datasets'), not at a raw-data/download "
+                    "directory - double check you haven't swapped "
+                    "config_dir and dataset_dir."
+                )
             raise ValueError(
-                f"No dataset config .py files found in {self.config_dir}. "
-                "config_dir should point at your harmonizer configs (e.g. "
-                "'configs/datasets'), not at a raw-data/download directory - "
-                "double check you haven't swapped config_dir and dataset_dir."
+                f"No config found for {dataset_id!r}: expected {path} "
+                f"(see missing_configs()).{hint}"
             )
 
-        index: dict[str, Path] = {}
-        for config_path in config_paths:
-            dataset = load_dataset_module(config_path)
-            dataset_id = dataset.dataset_id(None)
-
-            if dataset_id in index:
-                raise ValueError(
-                    f"Duplicate dataset_id {dataset_id!r}: "
-                    f"{index[dataset_id]} and {config_path}"
-                )
-            index[dataset_id] = config_path
-
-        self._id_to_config = index
-        return index
+        module = load_dataset_module(path)
+        actual_id = module.dataset_id(None)
+        if actual_id != dataset_id:
+            raise ValueError(
+                f"{path.name}: dataset_id(None) returned {actual_id!r} but "
+                f"the filename requires {dataset_id!r}. Rename the file or "
+                "fix dataset_id()."
+            )
+        return module
 
     def available_datasets(self) -> list[str]:
         """Dataset IDs that already have a config .py file."""
-        return sorted(self._index_configs())
+        return sorted(
+            p.stem
+            for p in self.config_dir.glob("*.py")
+            if p.name != "__init__.py"
+        )
 
     def missing_configs(self, dataset_ids: Iterable[str]) -> list[str]:
         """Which of `dataset_ids` have no config .py file yet.
@@ -485,8 +611,15 @@ class MetadataMerger:
         This is the hand-off point for a future agent: whatever comes back
         here is what it needs to write configs/datasets/<id>.py for.
         """
-        index = self._index_configs()
-        return [d for d in dataset_ids if d not in index]
+        if not self._has_configs():
+            raise ValueError(
+                f"No dataset config .py files found in {self.config_dir}. "
+                "config_dir should point at your harmonizer configs (e.g. "
+                "'configs/datasets'), not at a raw-data/download "
+                "directory - double check you haven't swapped config_dir "
+                "and dataset_dir."
+            )
+        return [d for d in dataset_ids if not self.config_path(d).is_file()]
 
     def merge(
         self,
@@ -500,18 +633,16 @@ class MetadataMerger:
         currently has both a config and a data directory (skipping/erroring
         on the rest per `strict`).
         """
-        index = self._index_configs()
-
         if dataset_ids is not None:
             dataset_ids = list(dataset_ids)
-            missing = [d for d in dataset_ids if d not in index]
+            missing = self.missing_configs(dataset_ids)
             if missing:
                 raise ValueError(
                     f"No config found for: {missing}. Generate these "
                     "configs first (see missing_configs())."
                 )
         else:
-            dataset_ids = sorted(index)
+            dataset_ids = self.available_datasets()
 
         if not dataset_ids:
             raise ValueError("No dataset IDs to merge.")
@@ -519,7 +650,6 @@ class MetadataMerger:
         merged: list[pl.DataFrame] = []
 
         for dataset_id in dataset_ids:
-            config_path = index[dataset_id]
             dataset_path = self.dataset_dir / dataset_id
 
             if not dataset_path.is_dir():
@@ -534,7 +664,7 @@ class MetadataMerger:
 
             logger.info("Processing %s", dataset_id)
 
-            dataset = load_dataset_module(config_path)
+            dataset = self.load_config(dataset_id)
             raw = read_metadata(metadata_file)
 
             harmonizer = MetadataHarmonizer(dataset=dataset)
@@ -656,15 +786,8 @@ class MetadataMerger:
         it at one dataset, see exactly which rows fail and why, fix the
         config, rerun - without having to run the full multi-dataset merge.
         """
-        index = self._index_configs()
-        if dataset_id not in index:
-            raise ValueError(
-                f"No config found for {dataset_id!r} (see missing_configs())."
-            )
-
+        dataset = self.load_config(dataset_id)
         metadata_file = self._resolve_metadata_file(dataset_id)
-
-        dataset = load_dataset_module(index[dataset_id])
         raw = read_metadata(metadata_file)
 
         harmonizer = MetadataHarmonizer(dataset=dataset)

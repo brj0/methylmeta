@@ -19,6 +19,7 @@ from methylmeta.study_info import fetch_study_description
 from methylmeta.vocab import search_tumor_types
 
 _MAX_IDAT_BASENAMES_SHOWN = 15
+_MAX_MAPPING_ROWS_SHOWN = 40
 
 _AGENT_WORKFLOW = """\
 You are a metadata harmonizer agent for Illumina methylation microarray
@@ -69,9 +70,18 @@ WORKFLOW (follow this order):
    methylation_class. Never invent a WHO acronym.
 7. Write the smallest clear config possible. Prefer direct passthrough, exact
    mappings, constants, and simple if/elif logic.
-8. Call test_config after every write. Fix all failures you can.
+8. Call test_config after every write. Fix all failures you can. Also read
+   the FIELD COVERAGE and MAPPING sections of its output: passing does not
+   mean correct. A field at 0% is either missing or always None, and every
+   raw diagnosis must map to a sensible methylation_class.
 9. Stop only when test_config reports success, or when a remaining problem
    genuinely requires human judgement.
+
+Only define functions named exactly like canonical fields (plus
+dataset_id and description). Any other public function name is reported by
+test_config as a failure because the harmonizer would silently ignore it
+(e.g. `material` instead of `material_type`). Helper functions must start
+with an underscore.
 
 IMPORTANT: Every raw metadata row must be harmonized. Some raw metadata values
 may be incorrect, inconsistent, malformed, or otherwise invalid. Do not filter,
@@ -274,7 +284,11 @@ def create_agent(
             report = ctx.deps.merger.test(ctx.deps.dataset_id)
         except Exception as exc:  # noqa: BLE001
             return f"CONFIG TEST COULD NOT RUN: {type(exc).__name__}: {exc}"
-        return report.summary(max_examples=3)
+
+        return report.summary(
+            max_examples=3,
+            max_mapping_rows=_MAX_MAPPING_ROWS_SHOWN,
+        )
 
     @agent.tool
     def write_config(ctx: RunContext[AgentDeps], source: str) -> str:
@@ -321,8 +335,6 @@ def create_agent(
                 f"{actual_id!r}, expected {ctx.deps.dataset_id!r}."
             )
 
-        # The merger caches its config index, so invalidate it after a write.
-        ctx.deps.merger._id_to_config = None
         return f"WROTE {path}. Now call test_config."
 
     return agent

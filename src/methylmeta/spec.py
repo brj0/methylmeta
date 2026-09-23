@@ -18,6 +18,12 @@ the signature:
 called once per row; there is no shared state and no shared imports needed
 beyond the file itself. If needed an import can be put inside the function.
 
+Function names must be exactly a canonical field name (below). Any other
+public function is reported by test() as a config error, because the harmonizer
+would silently ignore it (e.g. `material` instead of `material_type`). Helper
+functions are allowed if their name starts with an underscore. The filename
+must equal the dataset_id: configs/datasets/<dataset_id>.py.
+
 Required function:
     dataset_id(row) -> str
         Constant identifier for this dataset (e.g. a GEO/ArrayExpress
