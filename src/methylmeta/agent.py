@@ -119,7 +119,7 @@ far as possible. Rows may be removed later by downstream validation or
 quality-control steps. Do not add row filtering. Do not use regex. Do not
 create new WHO acronyms. Do not change methylmeta source code or
 `tumor_types.yaml`.
-Use strict mappings for controlled vocabularies. For methylation_class, always
+Use strict mappings for controlled vocabularies. For methylation_class, ALWAYS
 use mapping[value] rather than mapping.get(...). The mapping must explicitly
 cover the expected raw values and include an explicit fallback for unknown or
 unexpected values, such as "Unknown", null, or another schema-valid value.
@@ -132,7 +132,7 @@ explicitly and cannot silently pass through unchanged.
 For less strictly controlled or open-ended fields, such as diagnosis, use the
 cleanest appropriate mapping approach. mapping.get(value, fallback) is
 generally appropriate when the field does not have a finite controlled
-vocabulary.
+vocabulary, but prefer mapping[value] if possible.
 In all cases, preserve the row and map unexpected values to an explicit,
 schema-valid fallback rather than raising an error or silently returning the
 original value.
@@ -145,6 +145,7 @@ returning Python code, follow PEP 8 formatting and keep lines to a maximum of
 79 characters. The generated config must pass `ruff check` - this is checked
 automatically after every write, and any violation is reported back to you with
 the exact rule, so you don't need to recall Ruff's rules ahead of time.
+Avoid unnesessary / obvious comments.
 
 The config contract is:
 
