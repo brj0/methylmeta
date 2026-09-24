@@ -35,6 +35,7 @@ Optional function:
         One-line human-readable label for the dataset/cohort. If a public
         GEO/ArrayExpress study description is available (the agent exposes this
         as get_study_description), the study title is a good source for this.
+        Don't include the dataset_id in the description.
 
 Canonical fields (define a function for any that apply; omit entirely if a
 dataset has no data for that field):

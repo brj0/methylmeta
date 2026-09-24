@@ -23,6 +23,7 @@ lineages:
     - Fibroblastic
     - Fibrohistiocytic
     - Gonadal stromal
+    - Muscle
     - Myofibroblastic
     - Notochordal
     - Odontogenic
@@ -62,6 +63,7 @@ lineages:
     - Neuronal
     - Oligodendroglial
     - Pineal
+    - Peripheral nerve
     - Schwannian
 
   Melanocytic:
@@ -227,6 +229,7 @@ sites:
   - Pituitary gland
   - Placenta
   - Placenta / uterus
+  - Pleura
   - Pleura / peritoneum
   - Posterior fossa
   - Posterior pituitary

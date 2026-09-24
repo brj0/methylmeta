@@ -70,7 +70,7 @@ def methylation_class(row):
         "ATRT, TYR": "ATRT_TYR",
         "ETMR": "ETMR",
         "CNS NB, FOXR2": "CNS_NB_FOXR2",
-        "EFT, CIC": "EFT_CIC",
+        "EFT, CIC": "SARC_CIC",
         "EWS": "EWS",
         "HGNET, BCOR": "CNS_BCOR_ITD",
         "HGNET, MN1": "HGNET_MN1",

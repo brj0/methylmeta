@@ -80,7 +80,16 @@ WORKFLOW (follow this order):
 5. If a config already exists for this dataset, call read_config (with no
    dataset_id, to read your own) and test_config before changing anything.
 6. Use search_tumor_vocabulary for diagnosis text when choosing a
-   methylation_class. Never invent a WHO acronym.
+   methylation_class. Never invent a WHO acronym. Choose the most specific
+   methylation class supported by the available diagnosis, molecular,
+   immunohistochemical, and study context. If the available evidence supports a
+   specific subclass, always use that subclass. If the evidence is ambiguous or
+   insufficient to distinguish a subclass, use the broader class. Do not infer
+   a subclass from a feature when the available context does not support that
+   For normal or control tissue, use the most specific organ-specific control
+   methylation class available in the vocabulary when the organ is known.
+   Control classes use the CTRL_<organ> naming convention, where <organ> is the
+   vocabulary's established organ abbreviation.
 7. Write the smallest clear config possible. Prefer direct passthrough, exact
    mappings, constants, and simple if/elif logic.
 8. Call test_config after every write. Fix all failures you can. Also read

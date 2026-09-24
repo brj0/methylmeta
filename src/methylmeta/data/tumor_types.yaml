@@ -3813,7 +3813,7 @@ tumor_types:
 
   CTRL_ADREN:
     name: Normal adrenal gland
-    who_volume: Endocrine and Neuroendocrine Tumours
+    who_volume:
     site: Adrenal gland
     lineage_broad: Endocrine
     lineage_detail:
@@ -3831,7 +3831,7 @@ tumor_types:
 
   CTRL_APP:
     name: Normal appendix
-    who_volume: Digestive System Tumours
+    who_volume:
     site: Appendix
     lineage_broad: Epithelial
     lineage_detail:
@@ -3840,7 +3840,7 @@ tumor_types:
 
   CTRL_BD:
     name: Normal bile duct
-    who_volume: Digestive System Tumours
+    who_volume:
     site: Bile duct
     lineage_broad: Epithelial
     lineage_detail:
@@ -3849,7 +3849,7 @@ tumor_types:
 
   CTRL_BLA:
     name: Normal bladder
-    who_volume: Urinary and Male Genital Tumours
+    who_volume:
     site: Bladder
     lineage_broad: Epithelial
     lineage_detail:
@@ -3858,7 +3858,7 @@ tumor_types:
 
   CTRL_BLOOD:
     name: Blood / leukocyte signature
-    who_volume: Haematolymphoid Tumours
+    who_volume:
     site: Blood
     lineage_broad: Hematolymphoid
     lineage_detail:
@@ -3876,7 +3876,7 @@ tumor_types:
 
   CTRL_BR:
     name: Normal breast tissue
-    who_volume: Breast Tumours
+    who_volume:
     site: Breast
     lineage_broad: Mixed
     lineage_detail:
@@ -3885,7 +3885,7 @@ tumor_types:
 
   CTRL_BRAIN_GBM:
     name: Normal brain tissue associated with glioblastoma dataset
-    who_volume: Central Nervous System Tumours
+    who_volume:
     site: Central nervous system
     lineage_broad: Neural
     lineage_detail:
@@ -3894,7 +3894,7 @@ tumor_types:
 
   CTRL_CEBM:
     name: Normal cerebellar hemisphere
-    who_volume: Central Nervous System Tumours
+    who_volume:
     site: Central nervous system
     lineage_broad: Neural
     lineage_detail:
@@ -3903,7 +3903,7 @@ tumor_types:
 
   CTRL_CERV:
     name: Normal uterine cervix
-    who_volume: Female Genital Tumours
+    who_volume:
     site: Cervix
     lineage_broad: Epithelial
     lineage_detail:
@@ -3912,7 +3912,7 @@ tumor_types:
 
   CTRL_COL:
     name: Normal colon
-    who_volume: Digestive System Tumours
+    who_volume:
     site: Colon
     lineage_broad: Epithelial
     lineage_detail:
@@ -3930,7 +3930,7 @@ tumor_types:
 
   CTRL_ENDOM:
     name: Normal endometrium
-    who_volume: Female Genital Tumours
+    who_volume:
     site: Endometrium
     lineage_broad: Epithelial
     lineage_detail:
@@ -3939,7 +3939,7 @@ tumor_types:
 
   CTRL_ESO:
     name: Normal esophagus
-    who_volume: Digestive System Tumours
+    who_volume:
     site: Esophagus
     lineage_broad: Epithelial
     lineage_detail:
@@ -3975,7 +3975,7 @@ tumor_types:
 
   CTRL_HEMI:
     name: Normal cerebral cortex
-    who_volume: Central Nervous System Tumours
+    who_volume:
     site: Central nervous system
     lineage_broad: Neural
     lineage_detail:
@@ -3984,7 +3984,7 @@ tumor_types:
 
   CTRL_HN:
     name: Normal head and neck mucosa
-    who_volume: Head and Neck Tumours
+    who_volume:
     site: Head and neck
     lineage_broad: Epithelial
     lineage_detail:
@@ -3993,7 +3993,7 @@ tumor_types:
 
   CTRL_HYPTHAL:
     name: Normal hypothalamus
-    who_volume: Central Nervous System Tumours
+    who_volume:
     site: Central nervous system
     lineage_broad: Neural
     lineage_detail:
@@ -4011,7 +4011,7 @@ tumor_types:
 
   CTRL_LIV:
     name: Normal liver
-    who_volume: Digestive System Tumours
+    who_volume:
     site: Liver
     lineage_broad: Epithelial
     lineage_detail:
@@ -4020,7 +4020,7 @@ tumor_types:
 
   CTRL_LU:
     name: Normal lung
-    who_volume: Thoracic Tumours
+    who_volume:
     site: Lung
     lineage_broad: Epithelial
     lineage_detail:
@@ -4029,7 +4029,7 @@ tumor_types:
 
   CTRL_LYMPH:
     name: Control lymph node
-    who_volume: Haematolymphoid Tumours
+    who_volume:
     site: Lymph node
     lineage_broad: Hematolymphoid
     lineage_detail: Lymphoid
@@ -4038,7 +4038,7 @@ tumor_types:
 
   CTRL_MARROW:
     name: Control marrow
-    who_volume: Haematolymphoid Tumours
+    who_volume:
     site: Bone marrow
     lineage_broad: Hematolymphoid
     lineage_detail: Hematopoietic
@@ -4047,10 +4047,19 @@ tumor_types:
 
   CTRL_MELCYT:
     name: Control - Cultured melanocytes
-    who_volume: Skin Tumours
+    who_volume:
     site: Skin
     lineage_broad: Melanocytic
     lineage_detail:
+    families:
+    - normal_tissue
+
+  CTRL_MUSCLE:
+    name: Control skeletal muscle
+    who_volume:
+    site: Skeletal muscle
+    lineage_broad: Mesenchymal
+    lineage_detail: Muscle
     families:
     - normal_tissue
 
@@ -4063,9 +4072,27 @@ tumor_types:
     families:
     - normal_tissue
 
+  CTRL_NERVE:
+    name: Control peripheral nerve
+    who_volume:
+    site: Peripheral nervous system
+    lineage_broad: Neural
+    lineage_detail:
+    families:
+    - normal_tissue
+
+  CTRL_NOS:
+    name: Control tissue NOS
+    who_volume:
+    site:
+    lineage_broad:
+    lineage_detail:
+    families:
+    - normal_tissue
+
   CTRL_OVA:
     name: Normal ovary
-    who_volume: Female Genital Tumours
+    who_volume:
     site: Ovary
     lineage_broad: Mixed
     lineage_detail:
@@ -4074,7 +4101,7 @@ tumor_types:
 
   CTRL_PAN:
     name: Normal pancreas
-    who_volume: Digestive System Tumours
+    who_volume:
     site: Pancreas
     lineage_broad: Epithelial
     lineage_detail:
@@ -4083,7 +4110,7 @@ tumor_types:
 
   CTRL_PINE:
     name: Normal pineal gland
-    who_volume: Central Nervous System Tumours
+    who_volume:
     site: Central nervous system
     lineage_broad: Endocrine
     lineage_detail:
@@ -4093,7 +4120,7 @@ tumor_types:
   CTRL_PLEURA:
     name: Control - Pleura
     who_volume:
-    site:
+    site: Pleura
     lineage_broad: Mixed
     lineage_detail: Epithelial / mesenchymal
     families:
@@ -4101,7 +4128,7 @@ tumor_types:
 
   CTRL_PONS:
     name: Normal pons
-    who_volume: Central Nervous System Tumours
+    who_volume:
     site: Central nervous system
     lineage_broad: Neural
     lineage_detail:
@@ -4110,7 +4137,7 @@ tumor_types:
 
   CTRL_PROST:
     name: Normal prostate
-    who_volume: Urinary and Male Genital Tumours
+    who_volume:
     site: Prostate
     lineage_broad: Epithelial
     lineage_detail:
@@ -4128,7 +4155,7 @@ tumor_types:
 
   CTRL_REN:
     name: Normal kidney
-    who_volume: Urinary and Male Genital Tumours
+    who_volume:
     site: Kidney
     lineage_broad: Epithelial
     lineage_detail:
@@ -4138,7 +4165,7 @@ tumor_types:
   CTRL_SG:
     name: Control - Salivary Gland
     who_volume:
-    site:
+    site: Salivary gland
     lineage_broad: Mixed
     lineage_detail: Epithelial / mesenchymal
     families:
@@ -4146,7 +4173,7 @@ tumor_types:
 
   CTRL_SKIN:
     name: Normal skin
-    who_volume: Skin Tumours
+    who_volume:
     site: Skin
     lineage_broad: Epithelial
     lineage_detail:
@@ -4165,7 +4192,7 @@ tumor_types:
   CTRL_SMALLINT:
     name: Control - Small Intestine
     who_volume:
-    site:
+    site: Small intestine
     lineage_broad: Epithelial
     lineage_detail:
     families:
@@ -4174,7 +4201,7 @@ tumor_types:
   CTRL_SN:
     name: Control - Sinonasal
     who_volume:
-    site:
+    site: Sinonasal
     lineage_broad:
     lineage_detail:
     families:
@@ -4182,7 +4209,7 @@ tumor_types:
 
   CTRL_SOFT:
     name: Normal soft tissue
-    who_volume: Soft Tissue and Bone Tumours
+    who_volume:
     site: Soft tissue
     lineage_broad: Mesenchymal
     lineage_detail:
@@ -4191,7 +4218,7 @@ tumor_types:
 
   CTRL_SPINAL:
     name: Spinal cord tissue with reactive changes
-    who_volume: Central Nervous System Tumours
+    who_volume:
     site: Spinal cord
     lineage_broad: Neural
     lineage_detail:
@@ -4201,7 +4228,7 @@ tumor_types:
 
   CTRL_TES:
     name: Normal testis
-    who_volume: Urinary and Male Genital Tumours
+    who_volume:
     site: Testis
     lineage_broad: Germ cell
     lineage_detail:
@@ -4210,7 +4237,7 @@ tumor_types:
 
   CTRL_THYM:
     name: Normal thymus
-    who_volume: Thoracic Tumours
+    who_volume:
     site: Thymus
     lineage_broad: Hematolymphoid
     lineage_detail: Lymphoid
@@ -4220,7 +4247,7 @@ tumor_types:
 
   CTRL_THYR:
     name: Normal thyroid gland
-    who_volume: Endocrine and Neuroendocrine Tumours
+    who_volume:
     site: Thyroid
     lineage_broad: Endocrine
     lineage_detail:
@@ -4229,16 +4256,25 @@ tumor_types:
 
   CTRL_TUB:
     name: Normal fallopian tube
-    who_volume: Female Genital Tumours
+    who_volume:
     site: Fallopian tube
     lineage_broad: Epithelial
     lineage_detail:
     families:
     - normal_tissue
 
+  CTRL_URO:
+    name: Control urothelium
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract
+    lineage_broad: Epithelial
+    lineage_detail: Urothelial
+    families:
+    - normal_tissue
+
   CTRL_WM:
     name: Normal white matter
-    who_volume: Central Nervous System Tumours
+    who_volume:
     site: Central nervous system
     lineage_broad: Mixed
     lineage_detail:
@@ -4868,17 +4904,6 @@ tumor_types:
     families:
     - skin_tumor
     - soft_tissue_tumor
-
-  EFT_CIC:
-    name: CNS Ewing sarcoma family tumor with CIC alteration
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Mesenchymal
-    lineage_detail:
-    families:
-    - cns_tumor
-    - sarcoma
-    - ewing_like_tumor
 
   EHE:
     name: Epithelioid hemangioendothelioma
@@ -13631,7 +13656,7 @@ tumor_types:
     - small_round_cell_tumor
 
   SARC_CIC:
-    name: Small blue round cell tumor with CIC alteration
+    name: CIC-rearranged sarcoma
     who_volume: Soft Tissue and Bone Tumours
     site: Soft tissue
     lineage_broad: Mesenchymal
