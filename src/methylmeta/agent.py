@@ -41,13 +41,18 @@ datasets. Your sole task is to create or repair exactly one
 correctly harmonize the real dataset and pass `methylmeta.test()`.
 
 WORKFLOW (follow this order):
-1. Call get_profile first. Never guess raw column names or values.
-   get_profile only samples high-cardinality columns, so per-value logic
-   written from it - dict mapping, if/elif, or substring checks - will
-   miss values. Before branching on any column, call
-   column_values(column="...") and read the full frequency-ranked list.
-   Critical for if/elif: a missed value doesn't raise, it silently hits
-   the else branch and test_config still passes.
+1. Call get_profile first. Never guess column names or values. get_profile
+   shows some columns in full: "(all N)" lists every value, "(constant)" shows
+   the single value. For any other column, call column_values(column="...") to
+   see every value. Do this for any "(K of N)" column whose values you map or
+   branch on - most importantly those feeding methylation_class. Whether to
+   read a column in full is a judgement call: weigh the number of distinct
+   values against how much that column matters. For columns with very many
+   values that you only pass through or lightly transform (free text, ids,
+   numerics), the sample is usually enough - skip those. Never call
+   column_values more than once for the same column. Avoid unnecessary calls;
+   they waste tokens. Critical for if/elif: a missed value doesn't raise, it
+   silently hits the else branch and test_config still passes.
 2. Call list_idat_basenames. sample_id and methylation_class are by far the
    most important fields to get right - methylation_class is the primary
    classification target, and sample_id is the basename of the IDAT file pair:
@@ -456,15 +461,16 @@ def create_agent(
     def column_values(
         ctx: RunContext[AgentDeps],
         column: str,
-        max_values: int = 500,
+        max_values: int = 300,
     ) -> str:
         """Return every unique value of one raw column, with counts.
 
-        Use this after get_profile whenever you are about to write a
-        value_mapping dict. get_profile samples high-cardinality columns
-        to stay compact; this returns the complete list, frequency-ordered,
-        so the mapping can be written in one pass instead of discovering
-        missing keys one test_config round-trip at a time.
+        For a "(K of N)" column in get_profile whose values you map or
+        branch on - most importantly whatever feeds methylation_class.
+        Refuses low-cardinality columns (get_profile already showed every
+        value) and columns with too many values to list safely - see
+        merger.column_values for why. Never call this more than once for
+        the same column.
         """
         try:
             return ctx.deps.merger.column_values(
