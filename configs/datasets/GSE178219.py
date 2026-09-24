@@ -49,5 +49,6 @@ def preservation(row):
     value = row["sample type"]
     mapping = {
         "snap-frozen": "FROZEN",
+        "FFPE": "FFPE",
     }
-    return mapping.get(value, value)
+    return mapping[value]

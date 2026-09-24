@@ -101,8 +101,9 @@ def sample_type(row):
         "Primary": "primary",
         "Metastasis": "metastasis",
         "Recurrence": "recurrence",
+        None: None,
     }
-    return mapping.get(value)
+    return mapping[value]
 
 
 def material_type(row):

@@ -24,7 +24,7 @@ def methylation_class(row):
         "Normal melanocytes": "CTRL_MELCYT",
         "Uveal melanoma": "UVE_MEL",
     }
-    return mapping.get(value, value)
+    return mapping[value]
 
 
 def material_type(row):
@@ -35,29 +35,11 @@ def material_type(row):
 
 
 def sample_site(row):
-    value = row["exact anatomic site"]
-    mapping = {
-        "Melanocytes": "Cultured Melanocytes",
-        "Mouth": "Oral Cavity",
-        "Nasal": "Nasal Cavity",
-        "Sinus": "Sinonasal",
-        "Skin": "Skin",
-        "Uvea": "Uvea",
-    }
-    return mapping.get(value, value)
+    return row["exact anatomic site"]
 
 
 def primary_site(row):
-    value = row["exact anatomic site"]
-    mapping = {
-        "Melanocytes": "Cultured Melanocytes",
-        "Mouth": "Oral Cavity",
-        "Nasal": "Nasal Cavity",
-        "Sinus": "Sinonasal",
-        "Skin": "Skin",
-        "Uvea": "Uvea",
-    }
-    return mapping.get(value, value)
+    return row["exact anatomic site"]
 
 
 def preservation(row):
