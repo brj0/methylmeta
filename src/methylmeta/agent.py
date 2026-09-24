@@ -5,11 +5,22 @@ import re
 import shutil
 import subprocess
 from dataclasses import dataclass
+from datetime import UTC, datetime
 from pathlib import Path
 
 from mepylome.dtypes.beads import idat_basepaths
 from pydantic import BaseModel
-from pydantic_ai import Agent, RunContext, UsageLimits
+from pydantic_ai import Agent, RunContext, UsageLimits, capture_run_messages
+from pydantic_ai.messages import (
+    ModelMessage,
+    ModelMessagesTypeAdapter,
+    ModelRequest,
+    ModelResponse,
+    TextPart,
+    ThinkingPart,
+    ToolCallPart,
+    ToolReturnPart,
+)
 from pydantic_ai.usage import RunUsage
 
 from methylmeta.loader import load_dataset_module
@@ -85,31 +96,112 @@ test_config as a failure because the harmonizer would silently ignore it
 (e.g. `material` instead of `material_type`). Helper functions must start
 with an underscore.
 
-IMPORTANT: Every raw metadata row must be harmonized. Some raw metadata values
-may be incorrect, inconsistent, malformed, or otherwise invalid. Do not filter,
-skip, or drop rows because of invalid metadata; harmonize every row as far as
-possible. Rows may be removed later by downstream validation or quality-control
-steps. Do not add row filtering. Do not use regex. Do not create new WHO
-acronyms. Do not change methylmeta source code or tumor_types.yaml. Try to
-avoid mapping.get(value, value) and use mapping[value] instead, to avoid
-silently passing through unexpected values. Every mapping must therefore define
-an explicit fallback for unknown values, such as "Unknown", null, or another
-schema-valid value. If an unexpected raw value is encountered, preserve the row
-and map it to the explicit fallback rather than raising an error or silently
-returning the original value. For any field with a listed enum, the returned
-value must match one of the listed literals exactly — do not paraphrase,
-abbreviate, or use a synonym.
-
-When returning Python code, follow PEP 8 formatting and keep lines to a maximum
-of 79 characters. The generated config must pass `ruff check` - this is
-checked automatically after every write, and any violation is reported back
-to you with the exact rule, so you don't need to recall Ruff's rules ahead
-of time.
+**IMPORTANT:** Every raw metadata row must be harmonized. Some raw metadata
+values may be incorrect, inconsistent, malformed, or otherwise invalid. Do not
+filter, skip, or drop rows because of invalid metadata; harmonize every row as
+far as possible. Rows may be removed later by downstream validation or
+quality-control steps. Do not add row filtering. Do not use regex. Do not
+create new WHO acronyms. Do not change methylmeta source code or
+`tumor_types.yaml`.
+Use strict mappings for controlled vocabularies. For methylation_class, always
+use mapping[value] rather than mapping.get(...). The mapping must explicitly
+cover the expected raw values and include an explicit fallback for unknown or
+unexpected values, such as "Unknown", null, or another schema-valid value.
+Never silently pass an unexpected value through unchanged.
+For other fields with a finite controlled vocabulary, mapping[value] is
+preferred because it makes the allowed mappings explicit. However,
+mapping.get(value, fallback) is acceptable when it results in substantially
+cleaner or clearer code, provided that unexpected values are still handled
+explicitly and cannot silently pass through unchanged.
+For less strictly controlled or open-ended fields, such as diagnosis, use the
+cleanest appropriate mapping approach. mapping.get(value, fallback) is
+generally appropriate when the field does not have a finite controlled
+vocabulary.
+In all cases, preserve the row and map unexpected values to an explicit,
+schema-valid fallback rather than raising an error or silently returning the
+original value.
+If an unexpected raw value is encountered, preserve the row and harmonize it as
+far as possible using an explicit, schema-valid fallback rather than raising an
+error or silently returning the original value.
+For any field with a listed enum, the returned value must match one of the
+listed literals exactly — do not paraphrase, abbreviate, or use a synonym. When
+returning Python code, follow PEP 8 formatting and keep lines to a maximum of
+79 characters. The generated config must pass `ruff check` - this is checked
+automatically after every write, and any violation is reported back to you with
+the exact rule, so you don't need to recall Ruff's rules ahead of time.
 
 The config contract is:
 
 {config_spec}
 """
+
+
+def _format_trace(messages: list[ModelMessage]) -> str:
+    """Render a run's messages as a human-readable reasoning trace.
+
+    Walks every request/response pair in order and prints, for each
+    step: the model's own text/thinking output (its reasoning before
+    acting), each tool call it made with its arguments, and each tool's
+    return value. This is the same information the agent itself saw -
+    it's what to read to understand *why* it wrote what it wrote, or
+    where it went off track.
+    """
+    lines: list[str] = []
+    for message in messages:
+        if isinstance(message, ModelRequest):
+            for part in message.parts:
+                if isinstance(part, ToolReturnPart):
+                    lines.append(f"[tool result] {part.tool_name}:")
+                    lines.append(str(part.content))
+                    lines.append("")
+        elif isinstance(message, ModelResponse):
+            for part in message.parts:
+                if isinstance(part, ThinkingPart):
+                    lines.append("[thinking]")
+                    lines.append(part.content)
+                    lines.append("")
+                elif isinstance(part, TextPart):
+                    lines.append("[model]")
+                    lines.append(part.content)
+                    lines.append("")
+                elif isinstance(part, ToolCallPart):
+                    lines.append(f"[tool call] {part.tool_name}({part.args})")
+                    lines.append("")
+    return "\n".join(lines)
+
+
+def _write_trace_log(
+    log_dir: Path, dataset_id: str, messages: list[ModelMessage]
+) -> None:
+    """Persist a run's full message trace for later review.
+
+    Writes two files per run, timestamped so repeated runs on the same
+    dataset don't overwrite each other's traces:
+      - `<dataset_id>_<timestamp>.log`: a readable trace (see
+        _format_trace) - what to skim to see the agent's reasoning,
+        tool calls, and tool results in order.
+      - `<dataset_id>_<timestamp>.json`: the same run as pydantic-ai's
+        own message format, losslessly. Reload it with
+        `ModelMessagesTypeAdapter.validate_json(...)` to feed back into
+        `agent.run(..., message_history=...)` for debugging or to
+        build a regression/eval set from real runs.
+    Never raises: a logging failure should not take down a run that
+    otherwise succeeded, so any error here is written to stderr instead.
+    """
+    try:
+        log_dir.mkdir(parents=True, exist_ok=True)
+        stamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
+        stem = log_dir / f"{dataset_id}_{stamp}"
+        stem.with_suffix(".log").write_text(
+            _format_trace(messages), encoding="utf-8"
+        )
+        stem.with_suffix(".json").write_bytes(
+            ModelMessagesTypeAdapter.dump_json(messages, indent=2)
+        )
+    except Exception as exc:  # noqa: BLE001
+        import sys
+
+        print(f"WARNING: could not write trace log: {exc}", file=sys.stderr)
 
 
 class AgentResult(BaseModel):
@@ -317,7 +409,7 @@ def _validate_config_source(source: str, dataset_id: str) -> str:
     if enum_errors:
         raise ValueError(" ".join(enum_errors))
 
-    source = source + "\n"
+    source += "\n"
     ruff_errors = _run_ruff_check(source, dataset_id)
     if ruff_errors:
         raise ValueError("ruff check failed:\n" + "\n".join(ruff_errors))
@@ -508,8 +600,15 @@ def run_agent(
     force: bool = False,
     request_limit: int = 80,
     tool_calls_limit: int = 200,
+    log_dir: str | Path | None = None,
 ) -> AgentResult:
-    """Run the metadata agent for one dataset."""
+    """Run the metadata agent for one dataset.
+
+    If `log_dir` is given, the full run trace (model reasoning, tool
+    calls, and tool results, in order) is written there as a readable
+    `.log` file plus a lossless `.json` file, whether or not the run
+    ultimately succeeds - see `_write_trace_log`.
+    """
     config_dir = Path(config_dir).expanduser().resolve()
     dataset_dir = Path(dataset_dir).expanduser().resolve()
     dataset_path = dataset_dir / dataset_id
@@ -555,14 +654,19 @@ def run_agent(
         "Use the available tools and finish with a passing test if possible."
     )
 
-    result = agent.run_sync(
-        user_prompt,
-        deps=deps,
-        usage_limits=UsageLimits(
-            request_limit=request_limit,
-            tool_calls_limit=tool_calls_limit,
-        ),
-    )
+    with capture_run_messages() as messages:
+        try:
+            result = agent.run_sync(
+                user_prompt,
+                deps=deps,
+                usage_limits=UsageLimits(
+                    request_limit=request_limit,
+                    tool_calls_limit=tool_calls_limit,
+                ),
+            )
+        finally:
+            if log_dir is not None:
+                _write_trace_log(Path(log_dir), dataset_id, messages)
 
     usage = result.usage
 

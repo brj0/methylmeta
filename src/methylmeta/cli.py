@@ -259,6 +259,15 @@ def fetch(
         "datasets)."
     ),
 )
+@click.option(
+    "--log_dir",
+    type=Path,
+    default=None,
+    help=(
+        "Write the full run trace (reasoning, tool calls, tool results) "
+        "here as .log/.json files, for reviewing or improving the agent."
+    ),
+)
 def agent(
     dataset_id: str,
     config_dir: Path,
@@ -270,6 +279,7 @@ def agent(
     write: bool,
     request_limit: int,
     tool_calls_limit: int,
+    log_dir: Path | None,
 ) -> None:
     """Create or repair a dataset config with an AI agent."""
     from methylmeta.agent import run_agent
@@ -285,7 +295,10 @@ def agent(
         force=force,
         request_limit=request_limit,
         tool_calls_limit=tool_calls_limit,
+        log_dir=log_dir,
     )
+    if log_dir is not None:
+        click.echo(f"Trace log: {log_dir}")
     click.echo(result.summary)
     if result.config_path:
         click.echo(f"Config: {result.config_path}")

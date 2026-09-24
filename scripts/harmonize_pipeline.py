@@ -15,6 +15,7 @@ Usage:
     python scripts/harmonize_pipeline.py \\
         --dataset_list ~/methylmeta/datasets.txt \\
         --dataset_dir ~/methylmeta/data \\
+        --log_dir ~/methylmeta/logs \\
         --output ~/methylmeta/merged.tsv
 
 datasets.txt is one dataset ID per line; blank lines and lines starting
@@ -96,6 +97,7 @@ def harmonize_one(
     force: bool,
     request_limit: int,
     tool_calls_limit: int,
+    log_dir: Path | None = None,
 ) -> DatasetResult:
     """Run fetch + agent + test for one dataset, never raising."""
     result = DatasetResult(dataset_id=dataset_id)
@@ -119,6 +121,7 @@ def harmonize_one(
                 force=force,
                 request_limit=request_limit,
                 tool_calls_limit=tool_calls_limit,
+                log_dir=log_dir,
             )
             result.agent_ran = True
             if not agent_result.success:
@@ -168,6 +171,13 @@ def harmonize_one(
 @click.option("--request_limit", type=int, default=80, show_default=True)
 @click.option("--tool_calls_limit", type=int, default=200, show_default=True)
 @click.option(
+    "--log_dir",
+    type=Path,
+    default=None,
+    help="Write each dataset's agent run trace (reasoning, tool calls, "
+    "tool results) here, one timestamped .log/.json pair per dataset.",
+)
+@click.option(
     "--merge/--no_merge",
     default=True,
     help="Merge every successfully-harmonized dataset at the end.",
@@ -195,6 +205,7 @@ def main(
     force: bool,
     request_limit: int,
     tool_calls_limit: int,
+    log_dir: Path | None,
     merge: bool,
     array_types: bool,
     output: Path | None,
@@ -229,6 +240,7 @@ def main(
             force=force,
             request_limit=request_limit,
             tool_calls_limit=tool_calls_limit,
+            log_dir=log_dir,
         )
         results.append(result)
         logger.info(result.line())
@@ -242,6 +254,9 @@ def main(
     )
     report_text = "\n".join(report_lines)
     click.echo(report_text)
+
+    if log_dir is not None:
+        click.echo(f"Trace logs -> {log_dir}")
 
     if report is None and output is not None:
         report = output.with_suffix(".report.txt")
