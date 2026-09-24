@@ -1265,7 +1265,7 @@ tumor_types:
     families:
     - normal_tissue
 
-  BARRETT_DYSPL:
+  BARRETT_DYS:
     name: Barrett dysplasia
     who_volume: Digestive System Tumours
     site: Esophagus
@@ -4766,7 +4766,7 @@ tumor_types:
     - gynecologic_tumor
     - germ_cell_tumor
 
-  DYSPL_OR:
+  OR_DYS:
     name: Oral epithelial dysplasia
     who_volume: Head and Neck Tumours
     site: Oral cavity
@@ -4775,13 +4775,13 @@ tumor_types:
     families:
     - precursor_lesion
 
-  DYSPS_OR_HPVA:
+  OR_DYS_HPVA:
     name: HPV-associated oral epithelial dysplasia
     who_volume: Head and Neck Tumours
     site: Oral cavity
     lineage_broad: Epithelial
     lineage_detail:
-    parent: DYSPL_OR
+    parent: OR_DYS
     families:
     - precursor_lesion
 
@@ -5385,7 +5385,7 @@ tumor_types:
     - carcinoma
     - squamous_cell_carcinoma
 
-  ESO_SQ_DYSP:
+  ESO_SQ_DYS:
     name: Esophageal squamous dysplasia
     who_volume: Digestive System Tumours
     site: Esophagus
@@ -5824,7 +5824,7 @@ tumor_types:
     - gastrointestinal_tumor
     - carcinoma
 
-  GAST_DYSP:
+  GAST_DYS:
     name: Gastric dysplasia
     who_volume: Digestive System Tumours
     site: Stomach
@@ -7227,7 +7227,7 @@ tumor_types:
     families:
     - peripheral_nerve_sheath_tumor
 
-  IBD_DYSP:
+  IBD_DYS:
     name: Inflammatory bowel disease-associated dysplasia of the colorectum
     who_volume: Digestive System Tumours
     site: Colon / rectum
@@ -7911,7 +7911,7 @@ tumor_types:
     families:
     - carcinoma
 
-  LAR_DYSPL:
+  LAR_DYS:
     name: Laryngeal and hypopharyngeal epithelial dysplasia
     who_volume: Head and Neck Tumours
     site: Larynx / hypopharynx
@@ -8795,7 +8795,7 @@ tumor_types:
     - smarcb1_smarca4_deficient_tumor
     - carcinoma
 
-  LU_SQ_DYSP_CIS:
+  LU_SQ_DYS_CIS:
     name: Squamous dysplasia and carcinoma in situ of the lung
     who_volume: Thoracic Tumours
     site: Lung
@@ -10326,7 +10326,7 @@ tumor_types:
     - melanocytic_tumor
     - naevus
 
-  NEV_DYSPL:
+  NEV_DYS:
     name: Dysplastic naevus
     who_volume: Skin Tumours
     site: Skin
@@ -15101,6 +15101,15 @@ tumor_types:
 
   SSL:
     name: Colorectal sessile serrated lesion
+    who_volume: Digestive System Tumours
+    site: Colon / rectum
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - premalignant_lesion
+
+  SSL_DYS:
+    name: Colorectal sessile serrated lesion with dysplasia
     who_volume: Digestive System Tumours
     site: Colon / rectum
     lineage_broad: Epithelial

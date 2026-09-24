@@ -42,6 +42,12 @@ correctly harmonize the real dataset and pass `methylmeta.test()`.
 
 WORKFLOW (follow this order):
 1. Call get_profile first. Never guess raw column names or values.
+   get_profile only samples high-cardinality columns, so per-value logic
+   written from it - dict mapping, if/elif, or substring checks - will
+   miss values. Before branching on any column, call
+   column_values(column="...") and read the full frequency-ranked list.
+   Critical for if/elif: a missed value doesn't raise, it silently hits
+   the else branch and test_config still passes.
 2. Call list_idat_basenames. sample_id and methylation_class are by far the
    most important fields to get right - methylation_class is the primary
    classification target, and sample_id is the basename of the IDAT file pair:
@@ -80,16 +86,17 @@ WORKFLOW (follow this order):
 5. If a config already exists for this dataset, call read_config (with no
    dataset_id, to read your own) and test_config before changing anything.
 6. Use search_tumor_vocabulary for diagnosis text when choosing a
-   methylation_class. Never invent a WHO acronym. Choose the most specific
-   methylation class supported by the available diagnosis, molecular,
-   immunohistochemical, and study context. If the available evidence supports a
-   specific subclass, always use that subclass. If the evidence is ambiguous or
-   insufficient to distinguish a subclass, use the broader class. Do not infer
-   a subclass from a feature when the available context does not support that
-   For normal or control tissue, use the most specific organ-specific control
-   methylation class available in the vocabulary when the organ is known.
-   Control classes use the CTRL_<organ> naming convention, where <organ> is the
-   vocabulary's established organ abbreviation.
+   methylation_class. You can batch related diagnosis terms into one call.
+   Never invent a WHO acronym. Choose the most specific methylation class
+   supported by the available diagnosis, molecular, immunohistochemical, and
+   study context. If the available evidence supports a specific subclass,
+   always use that subclass. If the evidence is ambiguous or insufficient to
+   distinguish a subclass, use the broader class. Do not infer a subclass from
+   a feature when the available context does not support that For normal or
+   control tissue, use the most specific organ-specific control methylation
+   class available in the vocabulary when the organ is known. Control classes
+   use the CTRL_<organ> naming convention, where <organ> is the vocabulary's
+   established organ abbreviation.
 7. Write the smallest clear config possible. Prefer direct passthrough, exact
    mappings, constants, and simple if/elif logic.
 8. Call test_config after every write. Fix all failures you can. Also read
@@ -445,6 +452,27 @@ def create_agent(
         return profile.summary()
 
     @agent.tool
+    def column_values(
+        ctx: RunContext[AgentDeps],
+        column: str,
+        max_values: int = 500,
+    ) -> str:
+        """Return every unique value of one raw column, with counts.
+
+        Use this after get_profile whenever you are about to write a
+        value_mapping dict. get_profile samples high-cardinality columns
+        to stay compact; this returns the complete list, frequency-ordered,
+        so the mapping can be written in one pass instead of discovering
+        missing keys one test_config round-trip at a time.
+        """
+        try:
+            return ctx.deps.merger.column_values(
+                ctx.deps.dataset_id, column, max_values=max_values
+            )
+        except Exception as exc:  # noqa: BLE001
+            return f"{type(exc).__name__}: {exc}"
+
+    @agent.tool
     def list_idat_basenames(ctx: RunContext[AgentDeps]) -> str:
         """List IDAT basenames found in this dataset's own directory.
 
@@ -522,12 +550,20 @@ def create_agent(
         return path.read_text(encoding="utf-8")
 
     @agent.tool_plain
-    def search_tumor_vocabulary(query: str) -> str:
-        """Search WHO tumor vocabulary for methylation class candidates."""
-        results = search_tumor_types(query, limit=10)
-        if not results:
-            return "No WHO vocabulary matches found."
-        return "\n".join(str(result) for result in results)
+    def search_tumor_vocabulary(queries: list[str]) -> str:
+        """Search WHO tumor vocabulary for methylation class candidates.
+
+        Pass multiple diagnosis synonyms/candidates at once (e.g.
+        ["chondrosarcoma", "chondroblastoma"]) instead of calling repeatedly.
+        """
+        parts = []
+        for q in queries:
+            results = search_tumor_types(q, limit=10)
+            parts.append(
+                f"query: {q!r}\n"
+                + ("\n".join(str(r) for r in results) or "No matches.")
+            )
+        return "\n\n".join(parts)
 
     @agent.tool
     def test_config(ctx: RunContext[AgentDeps]) -> str:

@@ -103,14 +103,25 @@ class ColumnProfile:
     sample_values: list[str]
 
     def __str__(self) -> str:
+        # Save tokens for constant values
+        if self.is_constant:
+            value = self.sample_values[0] if self.sample_values else "null"
+            return f"{self.name} (constant): {value!r}"
+        if self.is_low_cardinality:
+            values_line = (
+                f"sample_values (all {self.n_unique}): {self.sample_values}"
+            )
+        else:
+            values_line = (
+                f"sample_values ({len(self.sample_values)} of "
+                f"{self.n_unique}): {self.sample_values}"
+            )
+
         lines = [
             f"name: {self.name}",
             f"dtype: {self.dtype}",
             f"n_null: {self.n_null}",
-            f"n_unique: {self.n_unique}",
-            f"is_constant: {self.is_constant}",
-            f"is_low_cardinality: {self.is_low_cardinality}",
-            f"sample_values: {self.sample_values}",
+            values_line,
         ]
         return "\n".join(lines)
 
@@ -739,12 +750,21 @@ class MetadataMerger:
         self,
         dataset_id: str,
         max_unique: int = 15,
+        sample_size: int = 5,
     ) -> DatasetProfile:
         """Summarize a raw metadata column and value distributions.
 
         Deliberately doesn't require a config to exist - this is the step
         that comes *before* writing one, so you (or an agent) can see real
         column names and values instead of guessing at a value_mapping dict.
+
+        `max_unique` is the low-cardinality threshold: columns at or under
+        it are enumerable categories, so every value is kept - a config's
+        mapping needs to cover all of them, not a sample. `sample_size`
+        caps how many example values are kept for columns *above* that
+        threshold (IDs, URLs, free text), where only enough values to see
+        the pattern are useful; collecting and formatting all `max_unique`
+        of them just to show `sample_size` was redundant.
         """
         metadata_file = self._resolve_metadata_file(dataset_id)
 
@@ -756,7 +776,8 @@ class MetadataMerger:
             uniques = column.drop_nulls().unique().to_list()
             n_unique = len(uniques)
             is_low_cardinality = n_unique <= max_unique
-            sample_values = sorted(str(v) for v in uniques[:max_unique])
+            cap = max_unique if is_low_cardinality else sample_size
+            sample_values = sorted(str(v) for v in uniques[:cap])
             columns.append(
                 ColumnProfile(
                     name=name,
@@ -792,6 +813,38 @@ class MetadataMerger:
 
         harmonizer = MetadataHarmonizer(dataset=dataset)
         return harmonizer.test(raw, dataset_id=dataset_id)
+
+    def column_values(
+        self,
+        dataset_id: str,
+        column: str,
+        max_values: int = 500,
+    ) -> str:
+        """Full unique-value list (with counts) for one raw column."""
+        raw = read_metadata(self._resolve_metadata_file(dataset_id))
+        if column not in raw.columns:
+            close = difflib.get_close_matches(column, raw.columns, n=3)
+            hint = f" Did you mean: {close}?" if close else ""
+            raise ValueError(f"No column {column!r}.{hint}")
+
+        vc = (
+            raw[column]
+            .drop_nulls()
+            .value_counts(sort=True)
+            .head(max_values)
+        )
+        total_unique = raw[column].drop_nulls().n_unique()
+        lines = [
+            f"{column}: {total_unique} unique non-null value(s)"
+            + (
+                f" (showing top {max_values} by frequency)"
+                if total_unique > max_values
+                else ""
+            )
+        ]
+        for value, count in vc.iter_rows():
+            lines.append(f"  {count:>6}  {value!r}")
+        return "\n".join(lines)
 
     @staticmethod
     def _validate_unique_sample_ids(

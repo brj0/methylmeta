@@ -122,12 +122,14 @@ def merge(
 @click.option("--dataset_dir", type=Path, required=True)
 @metadata_dir_option
 @click.option("--max_unique", type=int, default=15, show_default=True)
+@click.option("--sample_size", type=int, default=5, show_default=True)
 @click.argument("dataset_id")
 def profile(
     config_dir: Path,
     dataset_dir: Path,
     metadata_dir: Path,
     max_unique: int,
+    sample_size: int,
     dataset_id: str,
 ) -> None:
     """Summarize metadata columns before writing a config."""
@@ -136,7 +138,11 @@ def profile(
         dataset_dir=dataset_dir,
         metadata_overrides_dir=metadata_dir,
     )
-    click.echo(merger.profile(dataset_id, max_unique=max_unique).summary())
+    click.echo(
+        merger.profile(
+            dataset_id, max_unique=max_unique, sample_size=sample_size
+        ).summary()
+    )
 
 
 @cli.command()
