@@ -86,7 +86,7 @@ def preservation(row):
 
 def age(row):
     value = row["demographic.age_at_index"]
-    if value is None or value != value:
+    if value is None:
         return None
     try:
         return float(value)

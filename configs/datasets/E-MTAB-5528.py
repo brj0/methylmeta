@@ -22,7 +22,7 @@ def methylation_class(row):
     # paediatric high-grade glioma methylation classes, so it takes
     # precedence over the histological diagnosis.
     mutation = row["Characteristics[histone mutation]"]
-    if mutation in ("H3.1_K27M", "H3.3_K27M"):
+    if mutation in {"H3.1_K27M", "H3.3_K27M"}:
         return "DMG_K27"
     if mutation == "H3.3_G34R":
         return "DHG_G34"
@@ -37,7 +37,7 @@ def methylation_class(row):
         "anaplastic pilomyxoid astrocytoma": "ANA_PA",
         "pleomorphic anaplastic xanthoastrocytoma": "PXA",
     }
-    return mapping.get(row["Characteristics[disease]"], None)
+    return mapping[row["Characteristics[disease]"]]
 
 
 def _location(row):
@@ -46,7 +46,7 @@ def _location(row):
         "hemispheric": "Cerebral hemisphere",
         "midline": "Midline",
     }
-    return mapping.get(row["Characteristics[location]"], None)
+    return mapping[row["Characteristics[location]"]]
 
 
 def sample_site(row):
@@ -67,12 +67,12 @@ def material_type(row):
 
 def sex(row):
     value = row["Characteristics[sex]"].strip().lower()
-    mapping = {"male": "male", "female": "female"}
-    return mapping.get(value, None)
+    mapping = {"male": "male", "female": "female", "": None}
+    return mapping[value]
 
 
 def age(row):
     value = row["Characteristics[age]"].strip()
-    if value == "":
+    if not value:
         return None
     return float(value)
