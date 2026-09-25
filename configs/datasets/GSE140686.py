@@ -75,7 +75,7 @@ def methylation_class(row):
         "methylation class undifferentiated sarcoma": "USARC",
         "methylation class well- / dedifferentiated liposarcoma": "LPS_WD_DD",
         # other entities
-        "methylation class clear cell sarcoma of the kidney": "CCS_KIDN",
+        "methylation class clear cell sarcoma of the kidney": "REN_CCS",
         "methylation class endometrial stromal sarcoma (high grade)": "ESS_HG",
         "methylation class endometrial stromal sarcoma (low grade)": "ESS_LG",
         "methylation class gastrointestinal stromal tumour": "GIST",

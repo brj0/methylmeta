@@ -2545,16 +2545,6 @@ tumor_types:
     families:
     - small_round_cell_tumor
 
-  CCS_KIDN:
-    name: Clear cell sarcoma of the kidney
-    who_volume: Urinary and Male Genital Tumours
-    site: Kidney
-    lineage_broad: Mesenchymal
-    lineage_detail:
-    families:
-    - sarcoma
-    - renal_tumor
-
   CC_ACAN:
     name: Clear cell acanthoma
     who_volume: Skin Tumours
@@ -3591,6 +3581,30 @@ tumor_types:
     site: Colon
     lineage_broad: Epithelial
     lineage_detail:
+    families:
+    - gastrointestinal_tumor
+    - adenoma
+    - premalignant_lesion
+
+  CR_AD_HG:
+    name: Colorectal adenoma, high-grade
+    who_volume: Digestive System Tumours
+    site: Colon
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: CR_AD
+    families:
+    - gastrointestinal_tumor
+    - adenoma
+    - premalignant_lesion
+
+  CR_AD_LG:
+    name: Colorectal adenoma, low-grade
+    who_volume: Digestive System Tumours
+    site: Colon
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: CR_AD
     families:
     - gastrointestinal_tumor
     - adenoma
@@ -4666,15 +4680,6 @@ tumor_types:
     families:
     - peripheral_nerve_sheath_tumor
 
-  DOU_NET:
-    name: Duodenal Neuroendocrine Tumor
-    who_volume:
-    site:
-    lineage_broad: Endocrine
-    lineage_detail:
-    families:
-    - neuroendocrine_tumor
-
   DPA:
     name: Digital papillary adenocarcinoma
     who_volume: Skin Tumours
@@ -4756,6 +4761,15 @@ tumor_types:
     - gastrointestinal_tumor
     - carcinoma
 
+  DUO_NET:
+    name: Duodenal Neuroendocrine Tumor
+    who_volume:
+    site:
+    lineage_broad: Endocrine
+    lineage_detail:
+    families:
+    - neuroendocrine_tumor
+
   DYSGERM:
     name: Dysgerminoma
     who_volume: Female Genital Tumours
@@ -4765,25 +4779,6 @@ tumor_types:
     families:
     - gynecologic_tumor
     - germ_cell_tumor
-
-  OR_DYS:
-    name: Oral epithelial dysplasia
-    who_volume: Head and Neck Tumours
-    site: Oral cavity
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - precursor_lesion
-
-  OR_DYS_HPVA:
-    name: HPV-associated oral epithelial dysplasia
-    who_volume: Head and Neck Tumours
-    site: Oral cavity
-    lineage_broad: Epithelial
-    lineage_detail:
-    parent: OR_DYS
-    families:
-    - precursor_lesion
 
   EAC_OSTEO:
     name: Exostosis (osteoma) of the ear
@@ -5844,6 +5839,15 @@ tumor_types:
     - gastrointestinal_tumor
     - polyp
 
+  GAST_NET:
+    name: Gastric neuroendocrine neoplasm
+    who_volume: Digestive System Tumours
+    site: Stomach
+    lineage_broad: Endocrine
+    lineage_detail:
+    families:
+    - neuroendocrine_tumor
+
   GAST_PYL_AD:
     name: Gastric pyloric gland adenoma
     who_volume: Digestive System Tumours
@@ -6148,13 +6152,24 @@ tumor_types:
     - soft_tissue_tumor
     - perivascular_tumor
 
+  GNBL:
+    name: Ganglioneuroblastoma, NOS
+    who_volume: Endocrine and Neuroendocrine Tumours
+    site: Adrenal medulla / paraganglia
+    lineage_broad: Neural
+    lineage_detail:
+    families:
+    - adrenal_tumor
+    - neuroblastoma
+    - embryonal_tumor
+
   GNBL_INTERMIX:
     name: Ganglioneuroblastoma, intermixed
     who_volume: Endocrine and Neuroendocrine Tumours
     site: Adrenal medulla / paraganglia
     lineage_broad: Neural
     lineage_detail:
-    parent: NBL_GNBL
+    parent: GNBL
     families:
     - adrenal_tumor
     - neuroblastoma
@@ -6166,20 +6181,11 @@ tumor_types:
     site: Adrenal medulla / paraganglia
     lineage_broad: Neural
     lineage_detail:
-    parent: NBL_GNBL
+    parent: GNBL
     families:
     - adrenal_tumor
     - neuroblastoma
     - embryonal_tumor
-
-  GNET:
-    name: Gastric neuroendocrine neoplasm
-    who_volume: Digestive System Tumours
-    site: Stomach
-    lineage_broad: Endocrine
-    lineage_detail:
-    families:
-    - neuroendocrine_tumor
 
   GNEU:
     name: Ganglioneuroma
@@ -10980,6 +10986,25 @@ tumor_types:
     families:
     - renal_tumor
 
+  OR_DYS:
+    name: Oral epithelial dysplasia
+    who_volume: Head and Neck Tumours
+    site: Oral cavity
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - precursor_lesion
+
+  OR_DYS_HPVA:
+    name: HPV-associated oral epithelial dysplasia
+    who_volume: Head and Neck Tumours
+    site: Oral cavity
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: OR_DYS
+    families:
+    - precursor_lesion
+
   OSET:
     name: Ossifying spindled and epithelioid tumor, SRSF7::NFATC3 fusion
     who_volume:
@@ -13337,6 +13362,16 @@ tumor_types:
     - gastrointestinal_tumor
     - carcinoma
 
+  REN_CCS:
+    name: Clear cell sarcoma of the kidney
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Mesenchymal
+    lineage_detail:
+    families:
+    - sarcoma
+    - renal_tumor
+
   REN_EAML:
     name: Epithelioid angiomyolipoma / epithelioid PEComa of the kidney
     who_volume: Urinary and Male Genital Tumours
@@ -14278,6 +14313,17 @@ tumor_types:
   SI_NEC:
     name: Small Intestinal Neuroendocrine Carcinoma
     who_volume: Digestive System Tumours
+    site: Small intestine
+    lineage_broad: Endocrine
+    lineage_detail:
+    families:
+    - gastrointestinal_tumor
+    - neuroendocrine_tumor
+    - carcinoma
+
+  SI_NET:
+    name: Small Intestinal Neuroendocrine Tumour
+    who_volume:
     site: Small intestine
     lineage_broad: Endocrine
     lineage_detail:
@@ -16350,8 +16396,8 @@ tumor_types:
     - urinary_tract_tumor
     - carcinoma
 
-  URO_ADCA:
-    name: Adenocarcinoma NOS (urinary tract)
+  URO_CA:
+    name: Urothelial carcinoma
     who_volume: Urinary and Male Genital Tumours
     site: Urinary tract
     lineage_broad: Epithelial
@@ -16360,12 +16406,55 @@ tumor_types:
     - urinary_tract_tumor
     - carcinoma
 
-  URO_CA:
-    name: Urothelial carcinoma
+  URO_CA_HG:
+    name: Urothelial carcinoma, high-grade
     who_volume: Urinary and Male Genital Tumours
     site: Urinary tract
     lineage_broad: Epithelial
     lineage_detail:
+    families:
+    - urinary_tract_tumor
+    - carcinoma
+
+  URO_CA_LG:
+    name: Urothelial carcinoma, low-grade
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - urinary_tract_tumor
+    - carcinoma
+
+  URO_CA_NI_PAP:
+    name: Non-invasive papillary urothelial carcinoma
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: URO_CA
+    families:
+    - urinary_tract_tumor
+    - carcinoma
+
+  URO_CA_NI_PAP_HG:
+    name: Non-invasive papillary urothelial carcinoma, high-grade
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: URO_CA_NI_PAP
+    families:
+    - urinary_tract_tumor
+    - carcinoma
+
+  URO_CA_NI_PAP_LG:
+    name: Non-invasive papillary urothelial carcinoma, low-grade
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: URO_CA_NI_PAP
     families:
     - urinary_tract_tumor
     - carcinoma

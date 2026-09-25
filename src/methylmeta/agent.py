@@ -111,11 +111,12 @@ WORKFLOW (follow this order):
 9. Stop only when test_config reports success, or when a remaining problem
    genuinely requires human judgement.
 
-Only define functions named exactly like canonical fields (plus
-dataset_id and description). Any other public function name is reported by
-test_config as a failure because the harmonizer would silently ignore it
-(e.g. `material` instead of `material_type`). Helper functions must start
-with an underscore.
+Only define functions named exactly like canonical fields (plus dataset_id and
+description). Any other public function name is reported by test_config as a
+failure because the harmonizer would silently ignore it (e.g. `material`
+instead of `material_type`). Avoid helper functions. Prefer small, redundant
+mappings directly inside the relevant field functions. If a helper is genuinely
+necessary or leads to much better readable code, its name must start with _.
 
 **IMPORTANT:** Every raw metadata row must be harmonized. Some raw metadata
 values may be incorrect, inconsistent, malformed, or otherwise invalid. Do not
