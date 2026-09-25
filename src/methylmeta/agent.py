@@ -124,23 +124,19 @@ far as possible. Rows may be removed later by downstream validation or
 quality-control steps. Do not add row filtering. Do not use regex. Do not
 create new WHO acronyms. Do not change methylmeta source code or
 `tumor_types.yaml`.
-Use strict mappings for controlled vocabularies. For methylation_class, ALWAYS
-use mapping[value] rather than mapping.get(...). The mapping must explicitly
-cover the expected raw values and include an explicit fallback for unknown or
-unexpected values, such as "Unknown", null, or another schema-valid value.
-Never silently pass an unexpected value through unchanged.
-For other fields with a finite controlled vocabulary, mapping[value] is
-preferred because it makes the allowed mappings explicit. However,
-mapping.get(value, fallback) is acceptable when it results in substantially
-cleaner or clearer code, provided that unexpected values are still handled
-explicitly and cannot silently pass through unchanged.
-For less strictly controlled or open-ended fields, such as diagnosis, use the
-cleanest appropriate mapping approach. mapping.get(value, fallback) is
-generally appropriate when the field does not have a finite controlled
-vocabulary, but prefer mapping[value] if possible.
-In all cases, preserve the row and map unexpected values to an explicit,
-schema-valid fallback rather than raising an error or silently returning the
-original value.
+Use explicit handling for controlled vocabularies. If a mapping is used,
+**never use `mapping.get(...)` when `mapping[value]` provides the same behavior
+with the same amount of code**. Prefer direct indexing whenever possible. For
+`methylation_class`, if you use a mapping, use `mapping[value]` when all
+expected values are covered. `mapping.get(value, literal_fallback)` is
+acceptable when an explicit fallback is needed. **Never use `mapping.get(value,
+value)` for methylation_class**. For other finite controlled vocabularies,
+follow the same rule: prefer `mapping[value]`; `.get(value, literal_fallback)`
+is acceptable when it provides necessary fallback handling. For open-ended
+fields such as `diagnosis`, use the cleanest approach. `mapping.get(value,
+value)` is acceptable when preserving the raw value is intentional. In all
+cases, preserve the row and map unexpected values to an explicit, schema-valid
+fallback rather than raising an error or silently returning the original value.
 If an unexpected raw value is encountered, preserve the row and harmonize it as
 far as possible using an explicit, schema-valid fallback rather than raising an
 error or silently returning the original value.
