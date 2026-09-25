@@ -86,11 +86,19 @@ Five idioms cover almost every case - pick the simplest one that fits:
     def sample_site(row):
         return "Cerebellopontine angle"
 
-5. Full-text diagnosis - preserve the complete raw diagnosis (often the
-   histological diagnosis) without converting it to a WHO acronym. Prefer the
-   raw diagnosis column that contains the most specific and complete diagnostic
-   text. This value may later be used to determine methylation_class or as a
-   control column.
+5. Full-text diagnosis** - preserve the complete raw diagnosis of the
+   **sampled tissue** (often the histological diagnosis) without converting it
+   to a WHO acronym. Prefer the raw diagnosis column that contains the most
+   specific and complete diagnosis of what was actually sampled.
+
+   **For control/normal/non-tumor samples, the diagnosis must describe the
+   sampled control tissue, not the patient's associated cancer or primary tumor
+   diagnosis.** For example, a normal tissue sample from a patient with cancer
+   should have the diagnosis of the normal tissue, not the patient's cancer
+   diagnosis.
+
+   This value may later be used to determine `methylation_class` or identify
+   controls.
 
     def diagnosis(row):
         return row["histological diagnosis"]

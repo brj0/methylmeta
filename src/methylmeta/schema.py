@@ -50,6 +50,16 @@ class TumorGrade(StrEnum):
     G4 = "G4"
     low_grade = "low-grade"
     high_grade = "high-grade"
+    gleason_6 = "Gleason 6"
+    gleason_7 = "Gleason 7"
+    gleason_8 = "Gleason 8"
+    gleason_9 = "Gleason 9"
+    gleason_10 = "Gleason 10"
+    isup_1 = "ISUP 1"
+    isup_2 = "ISUP 2"
+    isup_3 = "ISUP 3"
+    isup_4 = "ISUP 4"
+    isup_5 = "ISUP 5"
 
 
 class Sex(StrEnum):

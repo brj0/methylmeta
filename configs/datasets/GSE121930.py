@@ -3,7 +3,9 @@ def dataset_id(row):
 
 
 def description(row):
-    return "DNA methylation analysis of esophageal squamous cell carcinoma (ESCC)"
+    return (
+        "DNA methylation analysis of esophageal squamous cell carcinoma (ESCC)"
+    )
 
 
 def sample_id(row):

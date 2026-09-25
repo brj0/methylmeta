@@ -827,12 +827,7 @@ class MetadataMerger:
             hint = f" Did you mean: {close}?" if close else ""
             raise ValueError(f"No column {column!r}.{hint}")
 
-        vc = (
-            raw[column]
-            .drop_nulls()
-            .value_counts(sort=True)
-            .head(max_values)
-        )
+        vc = raw[column].drop_nulls().value_counts(sort=True).head(max_values)
         total_unique = raw[column].drop_nulls().n_unique()
         lines = [
             f"{column}: {total_unique} unique non-null value(s)"
