@@ -11,7 +11,7 @@ def sample_id(row):
 
 
 def diagnosis(row):
-    return row["Characteristics[smpling site]"]
+    return row["Characteristics[sampling site]"]
 
 
 def methylation_class(row):
