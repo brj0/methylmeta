@@ -174,7 +174,7 @@ def _format_trace(messages: list[ModelMessage]) -> str:
                     lines.append(str(part.content))
                     lines.append("")
         elif isinstance(message, ModelResponse):
-            for part in message.parts:
+            for part in message.parts:  # type: ignore[assignment]
                 if isinstance(part, ThinkingPart):
                     lines.append("[thinking]")
                     lines.append(part.content)

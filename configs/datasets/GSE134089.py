@@ -3,7 +3,9 @@ def dataset_id(row):
 
 
 def description(row):
-    return "Epigenome analysis of hereditary and sporadic neuroendocrine tumors"
+    return (
+        "Epigenome analysis of hereditary and sporadic neuroendocrine tumors"
+    )
 
 
 def sample_id(row):

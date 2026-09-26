@@ -3,7 +3,9 @@ def dataset_id(row):
 
 
 def description(row):
-    return "Global DNA methylation patterns in primary anaplastic thyroid cancer"
+    return (
+        "Global DNA methylation patterns in primary anaplastic thyroid cancer"
+    )
 
 
 def sample_id(row):

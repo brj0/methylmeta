@@ -1751,17 +1751,6 @@ tumor_types:
     - vascular_tumor
     - sarcoma
 
-  BR_APOCRINE_CA:
-    name: Invasive apocrine carcinoma
-    who_volume: Breast Tumours
-    site: Breast
-    lineage_broad: Epithelial
-    lineage_detail:
-    parent: BR_CA
-    families:
-    - breast_tumor
-    - carcinoma
-
   BR_APOC_AD:
     name: Apocrine adenosis and apocrine adenoma
     who_volume: Breast Tumours
@@ -1792,6 +1781,28 @@ tumor_types:
     - breast_tumor
     - carcinoma
 
+  BR_CA_APOCRINE:
+    name: Invasive apocrine carcinoma
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: BR_CA
+    families:
+    - breast_tumor
+    - carcinoma
+
+  BR_CA_CRIB:
+    name: Invasive cribriform carcinoma
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: BR_CA
+    families:
+    - breast_tumor
+    - carcinoma
+
   BR_CA_HER2:
     name: Breast Carcinoma - HER2+
     who_volume: Breast Tumours
@@ -1811,6 +1822,107 @@ tumor_types:
     families:
     - carcinoma
 
+  BR_CA_INV_PAP:
+    name: Invasive papillary carcinoma
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - breast_tumor
+    - papillary_neoplasm
+    - carcinoma
+
+  BR_CA_LOB:
+    name: Invasive lobular carcinoma
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: BR_CA
+    families:
+    - breast_tumor
+    - carcinoma
+    - lobular_neoplasm
+
+  BR_CA_MALE:
+    name: Invasive carcinoma of the male breast
+    who_volume: Breast Tumours
+    site: Male breast
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: BR_CA
+    families:
+    - male_breast_tumor
+    - carcinoma
+
+  BR_CA_META:
+    name: Metaplastic carcinoma of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Mixed
+    lineage_detail:
+    parent: BR_CA
+    families:
+    - breast_tumor
+    - carcinoma
+    - metaplastic_carcinoma
+
+  BR_CA_MICROINV:
+    name: Microinvasive carcinoma
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: BR_CA
+    families:
+    - breast_tumor
+    - carcinoma
+
+  BR_CA_MICROPAP:
+    name: Invasive micropapillary carcinoma
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: BR_CA
+    families:
+    - breast_tumor
+    - carcinoma
+
+  BR_CA_MUC:
+    name: Mucinous carcinoma of the breast
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: BR_CA
+    families:
+    - breast_tumor
+    - carcinoma
+
+  BR_CA_NST:
+    name: Invasive breast carcinoma of no special type
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: BR_CA
+    families:
+    - breast_tumor
+    - carcinoma
+
+  BR_CA_TALL:
+    name: Tall cell carcinoma with reversed polarity
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: BR_CA
+    families:
+    - breast_tumor
+    - carcinoma
+
   BR_CA_TN:
     name: Breast Carcinoma - Triple Negative
     who_volume: Breast Tumours
@@ -1821,8 +1933,8 @@ tumor_types:
     - carcinoma
     - breast_tumor
 
-  BR_CRIB_CA:
-    name: Invasive cribriform carcinoma
+  BR_CA_TUB:
+    name: Tubular carcinoma of the breast
     who_volume: Breast Tumours
     site: Breast
     lineage_broad: Epithelial
@@ -1842,6 +1954,17 @@ tumor_types:
     families:
     - breast_tumor
     - carcinoma
+
+  BR_DCIS_MALE:
+    name: Carcinoma in situ of the male breast
+    who_volume: Breast Tumours
+    site: Male breast
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: DCIS
+    families:
+    - male_breast_tumor
+    - carcinoma_in_situ
 
   BR_DUCT_AD:
     name: Ductal adenoma
@@ -1905,17 +2028,6 @@ tumor_types:
     - breast_tumor
     - hamartoma
 
-  BR_IBC_NST:
-    name: Invasive breast carcinoma of no special type
-    who_volume: Breast Tumours
-    site: Breast
-    lineage_broad: Epithelial
-    lineage_detail:
-    parent: BR_CA
-    families:
-    - breast_tumor
-    - carcinoma
-
   BR_IDUCT_PAP:
     name: Intraductal papilloma
     who_volume: Breast Tumours
@@ -1925,17 +2037,6 @@ tumor_types:
     families:
     - breast_tumor
     - papillary_neoplasm
-
-  BR_INV_PAP_CA:
-    name: Invasive papillary carcinoma
-    who_volume: Breast Tumours
-    site: Breast
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - breast_tumor
-    - papillary_neoplasm
-    - carcinoma
 
   BR_LACT_AD:
     name: Lactating adenoma
@@ -1947,51 +2048,6 @@ tumor_types:
     - breast_tumor
     - adenoma
 
-  BR_LCIS:
-    name: Lobular carcinoma in situ
-    who_volume: Breast Tumours
-    site: Breast
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - breast_tumor
-    - carcinoma_in_situ
-    - lobular_neoplasm
-
-  BR_LOB_CA:
-    name: Invasive lobular carcinoma
-    who_volume: Breast Tumours
-    site: Breast
-    lineage_broad: Epithelial
-    lineage_detail:
-    parent: BR_CA
-    families:
-    - breast_tumor
-    - carcinoma
-    - lobular_neoplasm
-
-  BR_MALE_DCIS:
-    name: Carcinoma in situ of the male breast
-    who_volume: Breast Tumours
-    site: Male breast
-    lineage_broad: Epithelial
-    lineage_detail:
-    parent: DCIS
-    families:
-    - male_breast_tumor
-    - carcinoma_in_situ
-
-  BR_MALE_INV_CA:
-    name: Invasive carcinoma of the male breast
-    who_volume: Breast Tumours
-    site: Male breast
-    lineage_broad: Epithelial
-    lineage_detail:
-    parent: BR_CA
-    families:
-    - male_breast_tumor
-    - carcinoma
-
   BR_MEC:
     name: Mucoepidermoid carcinoma of the breast
     who_volume: Breast Tumours
@@ -2002,51 +2058,6 @@ tumor_types:
     families:
     - breast_tumor
     - salivary_gland_like_tumor
-    - carcinoma
-
-  BR_META_CA:
-    name: Metaplastic carcinoma of the breast
-    who_volume: Breast Tumours
-    site: Breast
-    lineage_broad: Mixed
-    lineage_detail:
-    parent: BR_CA
-    families:
-    - breast_tumor
-    - carcinoma
-    - metaplastic_carcinoma
-
-  BR_MICROINV_CA:
-    name: Microinvasive carcinoma
-    who_volume: Breast Tumours
-    site: Breast
-    lineage_broad: Epithelial
-    lineage_detail:
-    parent: BR_CA
-    families:
-    - breast_tumor
-    - carcinoma
-
-  BR_MICROPAP_CA:
-    name: Invasive micropapillary carcinoma
-    who_volume: Breast Tumours
-    site: Breast
-    lineage_broad: Epithelial
-    lineage_detail:
-    parent: BR_CA
-    families:
-    - breast_tumor
-    - carcinoma
-
-  BR_MUC_CA:
-    name: Mucinous carcinoma of the breast
-    who_volume: Breast Tumours
-    site: Breast
-    lineage_broad: Epithelial
-    lineage_detail:
-    parent: BR_CA
-    families:
-    - breast_tumor
     - carcinoma
 
   BR_NEC:
@@ -2148,17 +2159,6 @@ tumor_types:
     - papillary_neoplasm
     - carcinoma
 
-  BR_TALL_CELL:
-    name: Tall cell carcinoma with reversed polarity
-    who_volume: Breast Tumours
-    site: Breast
-    lineage_broad: Epithelial
-    lineage_detail:
-    parent: BR_CA
-    families:
-    - breast_tumor
-    - carcinoma
-
   BR_TUB_AD:
     name: Tubular adenoma of the breast
     who_volume: Breast Tumours
@@ -2168,17 +2168,6 @@ tumor_types:
     families:
     - breast_tumor
     - adenoma
-
-  BR_TUB_CA:
-    name: Tubular carcinoma of the breast
-    who_volume: Breast Tumours
-    site: Breast
-    lineage_broad: Epithelial
-    lineage_detail:
-    parent: BR_CA
-    families:
-    - breast_tumor
-    - carcinoma
 
   BR_UDH:
     name: Usual ductal hyperplasia
@@ -8039,6 +8028,17 @@ tumor_types:
     families:
     - histiocytic_neoplasm
 
+  LCIS:
+    name: Lobular carcinoma in situ
+    who_volume: Breast Tumours
+    site: Breast
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - breast_tumor
+    - carcinoma_in_situ
+    - lobular_neoplasm
+
   LCNEC:
     name: Large cell neuroendocrine carcinoma of the lung
     who_volume: Thoracic Tumours
@@ -9036,6 +9036,15 @@ tumor_types:
     - skin_tumor
     - melanocytic_tumor
     - melanocytoma
+
+  MDS:
+    name: Myelodysplastic syndrome, NOS
+    who_volume: Haematolymphoid Tumours
+    site: Bone marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    families:
+    - mds
 
   MDS_HIGH:
     name: High-risk MDS / Secondary AML
@@ -16455,16 +16464,6 @@ tumor_types:
     lineage_broad: Epithelial
     lineage_detail:
     parent: URO_CA_NI_PAP
-    families:
-    - urinary_tract_tumor
-    - carcinoma
-
-  URO_CC_ADCA:
-    name: Clear cell adenocarcinoma of the urinary tract
-    who_volume: Urinary and Male Genital Tumours
-    site: Urinary tract (urethra)
-    lineage_broad: Epithelial
-    lineage_detail:
     families:
     - urinary_tract_tumor
     - carcinoma
