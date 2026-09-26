@@ -20,7 +20,7 @@ def methylation_class(row):
     value = row["diagnoses.primary_diagnosis"]
     mapping = {
         "Adrenal cortical carcinoma": "ADREN_CORT_CA",
-        "Osteosarcoma, NOS": "OS_CONV",
+        "Osteosarcoma, NOS": "OS",
         "Not Reported": None,
     }
     return mapping[value]

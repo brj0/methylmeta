@@ -59,7 +59,7 @@ def methylation_class(row):
         "Osteoblastoma": "OSTEOBL",
         "Osteoclast-rich sarcoma": None,
         "Osteofibrous Dysplasia": "OFD",
-        "Osteosarcoma": "OS_CONV",
+        "Osteosarcoma": "OS",
         "PEComa": "PEC",
         "Phosphaturic mesenchymal tumor (PMT)": "PMT",
         "Pigmented villonodular synovitis/Tenosynovial giant cell "

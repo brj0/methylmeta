@@ -17,10 +17,10 @@ def diagnosis(row):
 def methylation_class(row):
     value = row["Characteristics[histology]"]
     mapping = {
-        "epithelioid mesothelioma": "MESOT",
-        "biphasic mesothelioma": "MESOT",
-        "sarcomatoid mesothelioma": "MESOT",
-        "desmoplastic mesothelioma": "MESOT",
+        "epithelioid mesothelioma": "MESOT_EPITH",
+        "biphasic mesothelioma": "MESOT_BIPHASIC",
+        "sarcomatoid mesothelioma": "MESOT_SARC",
+        "desmoplastic mesothelioma": "MESOT_SARC",
         "lymphohistiocytoide mesothelioma": "MESOT",
         "normal": "CTRL_PLEURA",
     }

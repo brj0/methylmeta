@@ -15,7 +15,7 @@ def diagnosis(row):
 
 
 def methylation_class(row):
-    return "OS_CONV"
+    return "OS"
 
 
 def sample_site(row):

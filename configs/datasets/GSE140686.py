@@ -34,7 +34,7 @@ def methylation_class(row):
         "methylation class fibrous dysplasia": "FIDYS",
         "methylation class giant cell tumour of bone": "GCTB",
         "methylation class osteoblastoma": "OSTEOBL",
-        "methylation class osteosarcoma (high grade)": "OS_CONV",
+        "methylation class osteosarcoma (high grade)": "OS",
         # soft tissue tumours
         "methylation class alveolar soft part sarcoma": "ASPS",
         "methylation class angiomatoid fibrous histiocytoma": "AFH",

@@ -1205,6 +1205,17 @@ tumor_types:
     - idh_mutant_glioma
     - high_grade_glioma
 
+  ATRT:
+    name: Atypical teratoid/rhabdoid tumor, NOS
+    who_volume: Central Nervous System Tumours
+    site: Central nervous system
+    lineage_broad: Neural
+    lineage_detail: Embryonal
+    families:
+    - cns_tumor
+    - embryonal_tumor
+    - atypical_teratoid_rhabdoid_tumor
+
   ATRT_MYC:
     name: Atypical teratoid/rhabdoid tumor, MYC subclass
     who_volume: Central Nervous System Tumours
@@ -2508,6 +2519,17 @@ tumor_types:
     name: Extrahepatic cholangiocarcinoma
     who_volume: Digestive System Tumours
     site: Extrahepatic bile duct
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: CCA
+    families:
+    - hepatobiliary_tumor
+    - carcinoma
+
+  CCA_INT:
+    name: Intrahepatic cholangiocarcinoma
+    who_volume: Digestive System Tumours
+    site: Liver
     lineage_broad: Epithelial
     lineage_detail:
     parent: CCA
@@ -3931,6 +3953,16 @@ tumor_types:
     families:
     - normal_tissue
 
+  CTRL_DNA_DEG:
+    name: Degraded DNA
+    who_volume:
+    site: Multiple
+    lineage_broad:
+    lineage_detail:
+    families:
+    - technical
+    - poor_quality_sample
+
   CTRL_ENDOM:
     name: Normal endometrium
     who_volume:
@@ -4283,16 +4315,6 @@ tumor_types:
     lineage_detail:
     families:
     - normal_tissue
-
-  CTR_DNA_DEG:
-    name: Degraded DNA
-    who_volume:
-    site: Multiple
-    lineage_broad:
-    lineage_detail:
-    families:
-    - technical
-    - poor_quality_sample
 
   CUP:
     name: Cancer of Unknown Primary
@@ -9393,6 +9415,42 @@ tumor_types:
     - thoracic_tumor
     - mesothelial_tumor
 
+  MESOT_BIPHASIC:
+    name: Biphasic mesothelioma
+    who_volume: Thoracic Tumours
+    site: Pleura / peritoneum
+    lineage_broad: Mixed
+    lineage_detail: Epithelial / mesenchymal
+    parent: MESOT
+    families:
+    - thoracic_tumor
+    - mesothelial_tumor
+    - carcinoma
+    - sarcoma
+
+  MESOT_EPITH:
+    name: Epithelioid mesothelioma
+    who_volume: Thoracic Tumours
+    site: Pleura / peritoneum
+    lineage_broad: Epithelial
+    lineage_detail: Mesothelial
+    parent: MESOT
+    families:
+    - thoracic_tumor
+    - mesothelial_tumor
+
+  MESOT_SARC:
+    name: Sarcomatoid mesothelioma
+    who_volume: Thoracic Tumours
+    site: Pleura
+    lineage_broad: Epithelial
+    lineage_detail: Mesothelial
+    parent: MESOT
+    families:
+    - thoracic_tumor
+    - mesothelial_tumor
+    - sarcoma
+
   MFS:
     name: Myxofibrosarcoma
     who_volume: Soft Tissue and Bone Tumours
@@ -11014,6 +11072,17 @@ tumor_types:
     families:
     - precursor_lesion
 
+  OS:
+    name: Osteosarcoma, NOS
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: Osteogenic
+    families:
+    - sarcoma
+    - bone_tumor
+    - osteogenic_tumor
+
   OSET:
     name: Ossifying spindled and epithelioid tumor, SRSF7::NFATC3 fusion
     who_volume:
@@ -11078,6 +11147,7 @@ tumor_types:
     site: Bone
     lineage_broad: Mesenchymal
     lineage_detail:
+    parent: OS
     families:
     - sarcoma
     - bone_tumor
@@ -11122,7 +11192,7 @@ tumor_types:
     site: Bone (surface)
     lineage_broad: Mesenchymal
     lineage_detail:
-    parent: OS_CONV
+    parent: OS
     families:
     - sarcoma
     - bone_tumor
@@ -11134,7 +11204,7 @@ tumor_types:
     site: Bone (surface)
     lineage_broad: Mesenchymal
     lineage_detail:
-    parent: OS_CONV
+    parent: OS
     families:
     - sarcoma
     - bone_tumor
@@ -11146,7 +11216,32 @@ tumor_types:
     site: Bone
     lineage_broad: Mesenchymal
     lineage_detail:
-    parent: OS_CONV
+    parent: OS
+    families:
+    - sarcoma
+    - bone_tumor
+    - osteogenic_tumor
+
+  OS_SMALL:
+    name: Small cell osteosarcoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: Osteogenic
+    parent: OS
+    families:
+    - sarcoma
+    - bone_tumor
+    - osteogenic_tumor
+    - small_round_cell_tumor
+
+  OS_TELEANG:
+    name: Telangiectatic osteosarcoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail: Osteogenic
+    parent: OS
     families:
     - sarcoma
     - bone_tumor
