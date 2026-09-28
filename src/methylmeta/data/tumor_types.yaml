@@ -4125,6 +4125,15 @@ tumor_types:
     families:
     - normal_tissue
 
+  CTRL_OMENT:
+    name: Control - Omentum
+    who_volume:
+    site: Omentum
+    lineage_broad: Mesenchymal
+    lineage_detail: Adipocytic
+    families:
+    - normal_tissue
+
   CTRL_OVA:
     name: Normal ovary
     who_volume:
@@ -4140,6 +4149,15 @@ tumor_types:
     site: Pancreas
     lineage_broad: Epithelial
     lineage_detail:
+    families:
+    - normal_tissue
+
+  CTRL_PERIT:
+    name: Control - Peritoneum
+    who_volume:
+    site: Peritoneum
+    lineage_broad: Epithelial
+    lineage_detail: Mesothelial
     families:
     - normal_tissue
 
