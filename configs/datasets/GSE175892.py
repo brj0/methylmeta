@@ -27,7 +27,7 @@ def methylation_class(row):
     value = row["sample type"]
     mapping = {
         "ATRT": "ATRT",
-        "ECRT": "ERRT",
+        "ECRT": "ERT",
         "SCCOHT": "SCCOHT",
     }
     return mapping[value]

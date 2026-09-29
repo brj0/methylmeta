@@ -33,7 +33,7 @@ def methylation_class(row):
     value = row["subject status"]
     mapping = {
         "Atypical teratoid/rhabdoid tumors (ATRTs)": "ATRT",
-        "extracranial malignant rhabdoid tumors (eMRTs)": "ERRT",
+        "extracranial malignant rhabdoid tumors (eMRTs)": "ERT",
         "small cell carcinoma of the ovary hypercalcemic type (SCCOHT)": (
             "SCCOHT"
         ),

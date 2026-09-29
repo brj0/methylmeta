@@ -30,14 +30,14 @@ def methylation_class(row):
 
 def sample_site(row):
     value = row["diagnoses.site_of_resection_or_biopsy"]
-    if value in (None, "Not Reported"):
+    if value in {None, "Not Reported"}:
         return None
     return value.replace(", NOS", "")
 
 
 def primary_site(row):
     value = row["diagnoses.tissue_or_organ_of_origin"]
-    if value in (None, "Not Reported"):
+    if value in {None, "Not Reported"}:
         return None
     return value.replace(", NOS", "")
 

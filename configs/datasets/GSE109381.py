@@ -89,9 +89,9 @@ def methylation_class(row):
         "PITUI": "PIT_SCO_GCT",
         "CONTR, ADENOPIT": "CTRL_ADENOPIT",
         # Pineal region tumors
-        "PIN T,  PB A": "PINE_PB_A",
-        "PIN T,  PB B": "PINE_PB_B",
-        "PIN T, PB B": "PINE_PB_B",
+        "PIN T,  PB A": "PINE_BL_A",
+        "PIN T,  PB B": "PINE_BL_B",
+        "PIN T, PB B": "PINE_BL_B",
         "PIN T, PPT": "PINE_PPT",
         "PIN_CYT": "PINE_CYT",
         "PTPR, A": "PTPR_A",

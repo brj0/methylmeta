@@ -267,6 +267,7 @@ stem).
 | Head & neck            | Salivary gland                     | `SG`    |                                                                               |
 |                        | Sinonasal tract                    | `SN`    | most use established bare names instead (Rule 3) — `SINO` only if none exists |
 |                        | Head and neck (general/multi-site) | `HN`    |                                                                               |
+|                        | Nasopharyn                         | `NP`    |                                                                               |
 | Ear                    | Middle ear                         | `EAR`   | compartment split — see above                                                 |
 |                        | External auditory canal            | `EAC`   | compartment split — see above                                                 |
 | Eye / ocular adnexa    | Conjunctiva                        | `CONJ`  |                                                                               |

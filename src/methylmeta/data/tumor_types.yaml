@@ -1172,7 +1172,7 @@ tumor_types:
     - sarcoma
     - soft_tissue_tumor
 
-  ASTROB_MN1:
+  ASTRO_BL_MN1:
     name: Astroblastoma, MN1-altered
     who_volume: Paediatric Tumours
     site: Central nervous system
@@ -1470,7 +1470,7 @@ tumor_types:
     site: Bile duct
     lineage_broad: Endocrine
     lineage_detail:
-    parent: HNET
+    parent: LIV_NET
     families:
     - hepatobiliary_tumor
     - neuroendocrine_tumor
@@ -3282,6 +3282,15 @@ tumor_types:
     - sarcoma
     - rhabdomyosarcoma
 
+  CNS_SARC_DICER1:
+    name: Primary intracranial sarcoma, DICER1-mutant
+    who_volume: Central Nervous System Tumours
+    site: Central nervous system
+    lineage_broad: Mesenchymal
+    lineage_detail:
+    families:
+    - sarcoma
+
   CNT:
     name: Cellular neurothekeoma
     who_volume: Skin Tumours
@@ -3567,15 +3576,6 @@ tumor_types:
     - lung_tumor
     - fibroblastic_tumor
 
-  CRNET:
-    name: Colorectal neuroendocrine neoplasm
-    who_volume: Digestive System Tumours
-    site: Colon / rectum
-    lineage_broad: Endocrine
-    lineage_detail:
-    families:
-    - neuroendocrine_tumor
-
   CRTC1_TRIM11:
     name: "CRTC1::TRIM11 cutaneous tumour"
     who_volume: Skin Tumours
@@ -3640,6 +3640,15 @@ tumor_types:
     families:
     - gastrointestinal_tumor
     - polyp
+
+  CR_NET:
+    name: Colorectal neuroendocrine neoplasm
+    who_volume: Digestive System Tumours
+    site: Colon / rectum
+    lineage_broad: Endocrine
+    lineage_detail:
+    families:
+    - neuroendocrine_tumor
 
   CR_TSA:
     name: Colorectal traditional serrated adenoma
@@ -3908,12 +3917,22 @@ tumor_types:
     families:
     - normal_tissue
 
+  CTRL_BRAIN:
+    name: Normal brain tissue
+    who_volume:
+    site: Central nervous system
+    lineage_broad: Neural
+    lineage_detail:
+    families:
+    - normal_tissue
+
   CTRL_BRAIN_GBM:
     name: Normal brain tissue associated with glioblastoma dataset
     who_volume:
     site: Central nervous system
     lineage_broad: Neural
     lineage_detail:
+    parent: CTRL_BRAIN
     families:
     - normal_tissue
 
@@ -4224,6 +4243,15 @@ tumor_types:
     families:
     - normal_tissue
 
+  CTRL_SI:
+    name: Control - Small Intestine
+    who_volume:
+    site: Small intestine
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - normal_tissue
+
   CTRL_SKIN:
     name: Normal skin
     who_volume:
@@ -4239,15 +4267,6 @@ tumor_types:
     site: Skeletal muscle
     lineage_broad: Mesenchymal
     lineage_detail: Skeletal muscle
-    families:
-    - normal_tissue
-
-  CTRL_SMALLINT:
-    name: Control - Small Intestine
-    who_volume:
-    site: Small intestine
-    lineage_broad: Epithelial
-    lineage_detail:
     families:
     - normal_tissue
 
@@ -5339,12 +5358,13 @@ tumor_types:
     - sarcoma
     - soft_tissue_tumor
 
-  ERRT:
+  ERT:
     name: Extrarenal rhabdoid tumour
     who_volume: Soft Tissue and Bone Tumours
     site: Soft tissue
     lineage_broad: Mesenchymal
     lineage_detail:
+    parent: MRT
     families:
     - sarcoma
     - embryonal_tumor
@@ -6031,7 +6051,7 @@ tumor_types:
     site: Gallbladder
     lineage_broad: Endocrine
     lineage_detail:
-    parent: HNET
+    parent: LIV_NET
     families:
     - hepatobiliary_tumor
     - neuroendocrine_tumor
@@ -6882,15 +6902,6 @@ tumor_types:
     lineage_detail:
     families:
     - sinonasal_tumor
-
-  HNET:
-    name: Hepatic neuroendocrine neoplasm
-    who_volume: Digestive System Tumours
-    site: Liver
-    lineage_broad: Endocrine
-    lineage_detail:
-    families:
-    - neuroendocrine_tumor
 
   HNPGL:
     name: Head and neck paraganglioma
@@ -8085,6 +8096,7 @@ tumor_types:
     site: Lung
     lineage_broad: Endocrine
     lineage_detail:
+    parent: LU_NEC
     families:
     - lung_tumor
     - neuroendocrine_tumor
@@ -8396,6 +8408,15 @@ tumor_types:
     families:
     - hepatobiliary_tumor
     - hamartoma
+
+  LIV_NET:
+    name: Hepatic neuroendocrine neoplasm
+    who_volume: Digestive System Tumours
+    site: Liver
+    lineage_broad: Endocrine
+    lineage_detail:
+    families:
+    - neuroendocrine_tumor
 
   LMS:
     name: Leiomyosarcoma
@@ -8736,6 +8757,17 @@ tumor_types:
     - lung_tumor
     - adenoma
 
+  LU_NEC:
+    name: Lung neuroendocrine carcinoma NOS
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Endocrine
+    lineage_detail:
+    families:
+    - lung_tumor
+    - neuroendocrine_tumor
+    - carcinoma
+
   LU_NET:
     name: Carcinoid/neuroendocrine tumour of the lung
     who_volume: Thoracic Tumours
@@ -8774,6 +8806,7 @@ tumor_types:
     site: Lung
     lineage_broad: Epithelial
     lineage_detail:
+    parent: LU_ADCA
     families:
     - lung_tumor
     - carcinoma
@@ -10679,8 +10712,8 @@ tumor_types:
     - bone_tumor
     - benign_tumor
 
-  NPC:
-    name: Nasopharyngeal carcinoma
+  NPPA_LG:
+    name: Low-grade nasopharyngeal papillary adenocarcinoma
     who_volume: Head and Neck Tumours
     site: Nasopharynx
     lineage_broad: Epithelial
@@ -10688,8 +10721,8 @@ tumor_types:
     families:
     - carcinoma
 
-  NPPA_LG:
-    name: Low-grade nasopharyngeal papillary adenocarcinoma
+  NP_CA:
+    name: Nasopharyngeal carcinoma
     who_volume: Head and Neck Tumours
     site: Nasopharynx
     lineage_broad: Epithelial
@@ -12465,17 +12498,18 @@ tumor_types:
     - skin_adnexal_tumor
     - carcinoma
 
-  PINE_CYT:
-    name: Pineocytoma
+  PINE_BL:
+    name: Pineoblastoma group, NOS
     who_volume: Central Nervous System Tumours
     site: Central nervous system
     lineage_broad: Neural
-    lineage_detail:
+    lineage_detail: Embryonal
     families:
     - cns_tumor
     - pineal_tumor
+    - embryonal_tumor
 
-  PINE_PB_A:
+  PINE_BL_A:
     name: Pineoblastoma group A / intracranial retinoblastoma
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -12486,7 +12520,7 @@ tumor_types:
     - pineal_tumor
     - embryonal_tumor
 
-  PINE_PB_B:
+  PINE_BL_B:
     name: Pineoblastoma group B
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -12496,6 +12530,16 @@ tumor_types:
     - cns_tumor
     - pineal_tumor
     - embryonal_tumor
+
+  PINE_CYT:
+    name: Pineocytoma
+    who_volume: Central Nervous System Tumours
+    site: Central nervous system
+    lineage_broad: Neural
+    lineage_detail:
+    families:
+    - cns_tumor
+    - pineal_tumor
 
   PINE_PPT:
     name: Pineal parenchymal tumor
@@ -12945,6 +12989,7 @@ tumor_types:
     who_volume: Urinary and Male Genital Tumours
     site: Prostate
     lineage_broad: Epithelial
+    parent: PROS_ADCA
     lineage_detail:
     families:
     - prostatic_tumor
@@ -13484,6 +13529,16 @@ tumor_types:
     - gastrointestinal_tumor
     - carcinoma
 
+  REN_ANASARC:
+    name: Anaplastic sarcoma of the kidney
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Mesenchymal
+    lineage_detail:
+    families:
+    - sarcoma
+    - renal_tumor
+
   REN_CCS:
     name: Clear cell sarcoma of the kidney
     who_volume: Urinary and Male Genital Tumours
@@ -13542,6 +13597,17 @@ tumor_types:
     lineage_detail:
     families:
     - epithelial_tumor
+
+  REN_MRT:
+    name: Rhabdoid tumour of the kidney
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
+    lineage_broad: Mesenchymal
+    lineage_detail:
+    parent: MRT
+    families:
+    - renal_tumor
+    - embryonal_tumor
 
   REN_ONC:
     name: Oncocytoma of the kidney
@@ -13783,16 +13849,6 @@ tumor_types:
     - ocular_tumor
     - reactive
 
-  RTK:
-    name: Rhabdoid tumour of the kidney
-    who_volume: Urinary and Male Genital Tumours
-    site: Kidney
-    lineage_broad: Mesenchymal
-    lineage_detail:
-    families:
-    - renal_tumor
-    - embryonal_tumor
-
   SANT:
     name: Sclerosing angiomatoid nodular transformation of spleen
     who_volume: Haematolymphoid Tumours
@@ -13821,15 +13877,6 @@ tumor_types:
     families:
     - sarcoma
     - small_round_cell_tumor
-
-  SARC_DICER1:
-    name: Sarcoma with DICER1 mutation
-    who_volume: Soft Tissue and Bone Tumours
-    site: Soft tissue
-    lineage_broad: Mesenchymal
-    lineage_detail:
-    families:
-    - sarcoma
 
   SARC_KDM2B:
     name: Sarcoma with KDM2B gene fusion
@@ -14059,7 +14106,7 @@ tumor_types:
     site: Lung
     lineage_broad: Endocrine
     lineage_detail:
-    parent: SCNEC
+    parent: LU_NEC
     families:
     - lung_tumor
     - neuroendocrine_tumor
