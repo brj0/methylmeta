@@ -3182,16 +3182,6 @@ tumor_types:
     families:
     - aml
 
-  CNET:
-    name: Cribriform neuroepithelial tumour
-    who_volume: Paediatric Tumours
-    site: Central nervous system
-    lineage_broad: Neural
-    lineage_detail: Embryonal
-    families:
-    - cns_tumor
-    - embryonal_tumor
-
   CNEUROCYT:
     name: Central neurocytoma
     who_volume: Central Nervous System Tumours
@@ -3575,6 +3565,16 @@ tumor_types:
     families:
     - lung_tumor
     - fibroblastic_tumor
+
+  CRIB_NET:
+    name: Cribriform neuroepithelial tumour
+    who_volume: Paediatric Tumours
+    site: Central nervous system
+    lineage_broad: Neural
+    lineage_detail: Embryonal
+    families:
+    - cns_tumor
+    - embryonal_tumor
 
   CRTC1_TRIM11:
     name: "CRTC1::TRIM11 cutaneous tumour"
@@ -5282,6 +5282,16 @@ tumor_types:
     name: Myxopapillary ependymoma
     who_volume: Central Nervous System Tumours
     site: Spinal cord
+    lineage_broad: Neural
+    lineage_detail: Glial
+    families:
+    - ependymoma
+    - glioma
+
+  EPN_PF:
+    name: Ependymoma, posterior fossa
+    who_volume: Central Nervous System Tumours
+    site: Posterior fossa
     lineage_broad: Neural
     lineage_detail: Glial
     families:
@@ -8614,6 +8624,16 @@ tumor_types:
     - lung_tumor
     - papilloma
 
+  LU_CA:
+    name: Lung carcinoma, NOS
+    who_volume: Thoracic Tumours
+    site: Lung
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - lung_tumor
+    - carcinoma
+
   LU_CHONDROMA:
     name: Pulmonary chondroma
     who_volume: Thoracic Tumours
@@ -8953,6 +8973,17 @@ tumor_types:
     lineage_detail:
     families:
     - mast_cell_neoplasm
+
+  MB:
+    name: Medulloblastoma, NOS
+    who_volume: Central Nervous System Tumours
+    site: Cerebellum
+    lineage_broad: Neural
+    lineage_detail: Embryonal
+    families:
+    - cns_tumor
+    - medulloblastoma
+    - embryonal_tumor
 
   MBL:
     name: Monoclonal B-cell lymphocytosis
@@ -13194,6 +13225,16 @@ tumor_types:
     - b_cell_lymphoma
     - dlbcl
 
+  PTPR:
+    name: Papillary tumor of the pineal region, NOS
+    who_volume: Central Nervous System Tumours
+    site: Central nervous system
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - cns_tumor
+    - pineal_tumor
+
   PTPR_A:
     name: Papillary tumor of the pineal region, group A
     who_volume: Central Nervous System Tumours
@@ -13518,16 +13559,6 @@ tumor_types:
     families:
     - sinonasal_tumor
     - hamartoma
-
-  RECT_CA:
-    name: Rectal adenocarcinoma
-    who_volume: Digestive System Tumours
-    site: Rectum
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - gastrointestinal_tumor
-    - carcinoma
 
   REN_ANASARC:
     name: Anaplastic sarcoma of the kidney
