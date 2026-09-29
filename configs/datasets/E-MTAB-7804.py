@@ -91,6 +91,6 @@ def sex(row):
 
 def age(row):
     value = row["Characteristics[age]"]
-    if value is None or value.strip() == "":
+    if value is None or not value.strip():
         return None
     return float(value)
