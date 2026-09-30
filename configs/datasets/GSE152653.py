@@ -3,8 +3,10 @@ def dataset_id(row):
 
 
 def description(row):
-    return ("Epigenome analysis of low-grade neuroepithelial tumors "
-            "with FGFR1 alterations")
+    return (
+        "Epigenome analysis of low-grade neuroepithelial tumors "
+        "with FGFR1 alterations"
+    )
 
 
 def sample_id(row):

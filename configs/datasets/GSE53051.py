@@ -42,9 +42,7 @@ def diagnosis(row):
         "Thyroid_ADN": "Adenomatoid thyroid nodule",
         "Thyroid_FA": "Follicular adenoma of the thyroid",
         "Thyroid_FC": "Follicular thyroid carcinoma",
-        "Thyroid_FVPTC": (
-            "Follicular variant of papillary thyroid carcinoma"
-        ),
+        "Thyroid_FVPTC": ("Follicular variant of papillary thyroid carcinoma"),
         "Thyroid_HA": "Hurthle cell adenoma of the thyroid",
         "Thyroid_HC": "Hurthle cell carcinoma of the thyroid",
         "Thyroid_PTC": "Papillary thyroid carcinoma",

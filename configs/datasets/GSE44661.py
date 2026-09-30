@@ -3,7 +3,9 @@ def dataset_id(row):
 
 
 def description(row):
-    return "DNA methylation analysis of melanoma progression to brain metastasis"
+    return (
+        "DNA methylation analysis of melanoma progression to brain metastasis"
+    )
 
 
 def sample_id(row):

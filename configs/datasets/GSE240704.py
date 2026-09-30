@@ -3,8 +3,10 @@ def dataset_id(row):
 
 
 def description(row):
-    return ("Epigenetic neural signature study of high-grade glioma "
-            "(glioblastoma cohort)")
+    return (
+        "Epigenetic neural signature study of high-grade glioma "
+        "(glioblastoma cohort)"
+    )
 
 
 def sample_id(row):
@@ -26,8 +28,7 @@ def sample_site(row):
         "temporal tumor location (0=no, 1=yes)": "Temporal lobe",
         "occipital tumor location (0=no, 1=yes)": "Occipital lobe",
     }
-    sites = [name for column, name in lobes.items()
-             if str(row[column]) == "1"]
+    sites = [name for column, name in lobes.items() if str(row[column]) == "1"]
     if not sites:
         return "Brain"
     return ", ".join(sites)

@@ -3154,7 +3154,7 @@ tumor_types:
     - mpn
 
   CMML:
-    name: CMML
+    name: Chronic myelomonocytic leukemia
     who_volume: Haematolymphoid Tumours
     site: Bone marrow
     lineage_broad: Hematolymphoid

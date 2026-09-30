@@ -3,7 +3,9 @@ def dataset_id(row):
 
 
 def description(row):
-    return "TCGA Rectum Adenocarcinoma (READ), Cancer Genome Atlas Network 2012"
+    return (
+        "TCGA Rectum Adenocarcinoma (READ), Cancer Genome Atlas Network 2012"
+    )
 
 
 def sample_id(row):
@@ -26,8 +28,7 @@ def methylation_class(row):
         "Colon, NOS": "colon",
         "Rectosigmoid junction": "rectum",
         "Rectum, NOS": "rectum",
-        "Connective, subcutaneous and other soft tissues of abdomen":
-            "colorectal",
+        "Connective, subcutaneous and other soft tissues of abdomen": "colorectal",
         "Prostate gland": "prostate",
         "Not Reported": "colorectal",
         "Unknown primary site": "colorectal",

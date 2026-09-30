@@ -4,8 +4,7 @@ def dataset_id(row):
 
 def description(row):
     return (
-        "TCGA Uterine Corpus Endometrial Carcinoma (UCEC), Kandoth et al. "
-        "2013"
+        "TCGA Uterine Corpus Endometrial Carcinoma (UCEC), Kandoth et al. 2013"
     )
 
 

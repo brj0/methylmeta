@@ -166,7 +166,9 @@ description). Any other public function name is reported by test_config as a
 failure because the harmonizer would silently ignore it (e.g. `material`
 instead of `material_type`). Module-level dicts with a _ prefix are allowed
 and preferred for lookup tables. Otherwise avoid helper functions; if a helper
-is genuinely necessary, its name must start with _.
+is genuinely necessary, its name must start with _. Do not use a helper
+function for logic that only one field function uses — move the code inside
+that function instead.
 
 **IMPORTANT:** Every raw metadata row must be harmonized. Some raw metadata
 values may be incorrect, inconsistent, malformed, or otherwise invalid. Do not
