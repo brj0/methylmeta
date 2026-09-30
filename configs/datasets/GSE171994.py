@@ -3,7 +3,7 @@ def dataset_id(row):
 
 
 def description(row):
-    return "HNSCC"
+    return "HNSCC lymph-node metastases"
 
 
 def sample_id(row):

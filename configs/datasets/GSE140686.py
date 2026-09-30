@@ -24,7 +24,7 @@ def methylation_class(row):
         # bone tumours
         "methylation class chondroblastoma": "CHONDBL",
         "methylation class chondrosarcoma (clear cell)": "CSA_CC",
-        "methylation class chondrosarcoma (IDH group A)": "CSA_IDH_MUT",
+        "methylation class chondrosarcoma (IDH group A)": "CSA_SB",
         "methylation class chondrosarcoma (IDH group B)": "CSA_IDH_MUT",
         "methylation class chondrosarcoma (group A)": "CSA",
         "methylation class chondrosarcoma (group B)": "CSA",

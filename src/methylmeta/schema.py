@@ -104,7 +104,7 @@ class SampleMetadata(BaseModel):
         default=None,
         description=(
             "Methylation-based classification result "
-            '(e.g. "PCC", "GBM_RTK2", "HNSCC")'
+            '(e.g. "PCC", "GBM_RTK_2", "HNSCC")'
         ),
     )
 

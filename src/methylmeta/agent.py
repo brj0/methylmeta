@@ -170,7 +170,8 @@ is genuinely necessary, its name must start with _. Do not use a helper
 function for logic that only one field function uses — move the code inside
 that function instead.
 
-**IMPORTANT:** Every raw metadata row must be harmonized. Some raw metadata
+**IMPORTANT**
+Every raw metadata row must be harmonized. Some raw metadata
 values may be incorrect, inconsistent, malformed, or otherwise invalid. Do not
 filter, skip, or drop rows because of invalid metadata; harmonize every row as
 far as possible. Rows may be removed later by downstream validation or
@@ -178,24 +179,34 @@ quality-control steps. Do not add row filtering. Do not use regex (take sample
 type codes, ICD-10 prefixes and similar with plain slicing or split). Do not
 create new WHO acronyms. Do not change methylmeta source code or
 `tumor_types.yaml`.
-Use explicit handling for controlled vocabularies. If a mapping is used,
-**never use `mapping.get(...)` when `mapping[value]` provides the same behavior
-with the same amount of code**. Prefer direct indexing whenever possible. For
-`methylation_class`, if you use a mapping, use `mapping[value]` when all
-expected values are covered. `mapping.get(value, literal_fallback)` is
-acceptable when an explicit fallback is needed (see CLASS EVIDENCE RULES 3 and
-5 for which fallbacks are allowed). **Never use `mapping.get(value, value)` for
-methylation_class**. For other finite controlled vocabularies, follow the same
-rule: prefer `mapping[value]`; `.get(value, literal_fallback)` is acceptable
-when it provides necessary fallback handling. For open-ended fields such as
-`diagnosis`, use the cleanest approach. `mapping.get(value, value)` is
-acceptable when preserving the raw value is intentional. In all cases, preserve
-the row and map unexpected values to an explicit, schema-valid fallback rather
-than raising an error or silently returning the original value. For any field
-with a listed enum, the returned value must match one of the listed literals
-exactly — do not paraphrase, abbreviate, or use a synonym. When returning
-Python code, follow PEP 8 formatting and keep lines to a maximum of 79
-characters. The generated config must pass `ruff check` - this is checked
+Acronyms must appear literally in the function body of `methylation_class`.
+Never derive, generate, or resolve them at runtime: never concatenate parts,
+interpolate variables, or read them from another structure. An acronym-finding
+parser relies on the literal token being present. Never return row[...] for
+methylation_class, even when the acronyms already match the vocabulary, and
+never let the raw value reach the output unvalidated. Use an explicit id
+dictionary, e.g. {{x: x, y: y, ...}}, indexed directly. Controlled vocabularies
+use explicit handling:
+- Prefer mapping[value]. Never use mapping.get(value, default) when
+  mapping[value] behaves the same with the same amount of code.
+- methylation_class: use mapping[value] when all expected values are covered.
+  mapping.get(value, literal_fallback) is allowed only when an explicit
+  fallback is required (CLASS EVIDENCE RULES 3 and 5 define the allowed
+  fallbacks). NEVER use mapping.get(value, value) for methylation_class: it
+  silently passes out-of-vocabulary values through and defeats the
+  acronym-finding parser.
+- Other finite controlled vocabularies: same rule; mapping.get(value,
+  literal_fallback) is allowed when a fallback is needed.
+- Open-ended fields such as diagnosis: use the cleanest approach;
+  mapping.get(value, value) is allowed when preserving the raw value is
+  intentional.
+In all cases, preserve the row and map unexpected values to an explicit,
+schema-valid fallback rather than raising an error or silently returning the
+original value. For any field with a listed enum, the returned value must match
+one of the listed literals exactly — do not paraphrase, abbreviate, or use a
+synonym.
+When returning Python code, follow PEP 8 formatting and keep lines to a maximum
+of 79 characters. The generated config must pass `ruff check` - this is checked
 automatically after every write, and any violation is reported back to you with
 the exact rule, so you don't need to recall Ruff's rules ahead of time. Avoid
 unnecessary / obvious comments.

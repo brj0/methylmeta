@@ -72,7 +72,7 @@ def methylation_class(row):
     mapping = {
         # --- Medulloblastoma ---
         "Medulloblastoma, non-WNT/SHH": "MB",
-        "Medulloblastoma, SHH": "MB",
+        "Medulloblastoma, SHH": "MB_SHH",
         "Medulloblastoma, WNT": "MB_WNT",
         "Medulloblastoma, NOS": "MB",
         # --- Glial / Glioma ---

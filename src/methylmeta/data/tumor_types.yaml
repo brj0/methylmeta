@@ -3982,6 +3982,15 @@ tumor_types:
     - technical
     - poor_quality_sample
 
+  CTRL_DURA:
+    name: Normal dura mater
+    who_volume:
+    site: Meninges
+    lineage_broad: Mesenchymal
+    lineage_detail:
+    families:
+    - normal_tissue
+
   CTRL_ENDOM:
     name: Normal endometrium
     who_volume:
@@ -4566,7 +4575,7 @@ tumor_types:
 
   DHG_G34:
     name: Diffuse hemispheric glioma, H3 G34-mutant
-    who_volume: Paediatric Tumours
+    who_volume: Central Nervous System Tumours
     site: Central nervous system
     lineage_broad: Neural
     lineage_detail: Glial
@@ -4697,6 +4706,17 @@ tumor_types:
     families:
     - glioma
     - glioneuronal_tumor
+
+  DMG_EGFR:
+    name: Diffuse midline glioma, EGFR-altered
+    who_volume: Central Nervous System Tumours
+    site: Central nervous system
+    lineage_broad: Neural
+    lineage_detail: Glial
+    families:
+    - glioma
+    - high_grade_glioma
+    - diffuse_midline_glioma
 
   DMG_K27:
     name: Diffuse midline glioma, H3 K27-altered
@@ -5418,6 +5438,28 @@ tumor_types:
     families:
     - gastrointestinal_tumor
 
+  ESO_NEC:
+    name: Esophageal neuroendocrine carcinoma
+    who_volume: Digestive System Tumours
+    site: Esophagus
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - esophageal_carcinoma
+    - carcinoma
+    - neuroendocrine_tumor
+
+  ESO_NET:
+    name: Esophageal neuroendocrine tumour
+    who_volume: Digestive System Tumours
+    site: Esophagus
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - esophageal_carcinoma
+    - carcinoma
+    - neuroendocrine_tumor
+
   ESO_PAP:
     name: Esophageal squamous papilloma
     who_volume: Digestive System Tumours
@@ -5898,6 +5940,16 @@ tumor_types:
     - gastrointestinal_tumor
     - polyp
 
+  GAST_IM:
+    name: Gastric intestinal metaplasia
+    who_volume: Digestive System Tumours
+    site: Stomach
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - gastrointestinal_tumor
+    - precursor_lesion
+
   GAST_NET:
     name: Gastric neuroendocrine neoplasm
     who_volume: Digestive System Tumours
@@ -6003,7 +6055,7 @@ tumor_types:
     - glioblastoma
     - high_grade_glioma
 
-  GBM_RTK1:
+  GBM_RTK_1:
     name: Glioblastoma, IDH-wildtype, RTK I
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -6014,7 +6066,7 @@ tumor_types:
     - glioblastoma
     - high_grade_glioma
 
-  GBM_RTK2:
+  GBM_RTK_2:
     name: Glioblastoma, IDH-wildtype, RTK II
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -6025,7 +6077,7 @@ tumor_types:
     - glioblastoma
     - high_grade_glioma
 
-  GBM_RTK3:
+  GBM_RTK_3:
     name: Glioblastoma, IDH-wildtype, RTK III
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -6743,6 +6795,47 @@ tumor_types:
     - lymphoma
     - b_cell_lymphoma
 
+  HGG:
+    name: High-grade glioma, NOS
+    who_volume: Central Nervous System Tumours
+    site: Central nervous system
+    lineage_broad: Neural
+    lineage_detail: Glial
+    families:
+    - glioma
+
+  HGG_E:
+    name: Adult-type high-grade glioma, methylation class E
+    who_volume: Central Nervous System Tumours
+    site: Central nervous system
+    lineage_broad: Neural
+    lineage_detail: Glial
+    families:
+    - glioma
+    - high_grade_glioma
+
+  HGG_PED_A:
+    name: Paediatric high-grade glioma, methylation class A
+    who_volume: Paediatric Tumours
+    site: Central nervous system
+    lineage_broad: Neural
+    lineage_detail: Glial
+    families:
+    - glioma
+    - high_grade_glioma
+    - pediatric_high_grade_glioma
+
+  HGG_PED_MYCN:
+    name: Diffuse paediatric-type high-grade glioma, H3-wildtype and IDH-wildtype, MYCN
+    who_volume: Paediatric Tumours
+    site: Central nervous system
+    lineage_broad: Neural
+    lineage_detail: Glial
+    families:
+    - glioma
+    - high_grade_glioma
+    - pediatric_high_grade_glioma
+
   HGG_PED_RTK1A:
     name: Diffuse paediatric-type high-grade glioma, H3-wildtype and IDH-wildtype, RTK1A
     who_volume: Paediatric Tumours
@@ -6756,6 +6849,39 @@ tumor_types:
 
   HGG_PED_RTK1B:
     name: Diffuse paediatric-type high-grade glioma, H3-wildtype and IDH-wildtype, RTK1B
+    who_volume: Paediatric Tumours
+    site: Central nervous system
+    lineage_broad: Neural
+    lineage_detail: Glial
+    families:
+    - glioma
+    - high_grade_glioma
+    - pediatric_high_grade_glioma
+
+  HGG_PED_RTK1C:
+    name: Diffuse paediatric-type high-grade glioma, H3-wildtype and IDH-wildtype, RTK1C
+    who_volume: Paediatric Tumours
+    site: Central nervous system
+    lineage_broad: Neural
+    lineage_detail: Glial
+    families:
+    - glioma
+    - high_grade_glioma
+    - pediatric_high_grade_glioma
+
+  HGG_PED_RTK2A:
+    name: Diffuse paediatric-type high-grade glioma, H3-wildtype and IDH-wildtype, RTK2A
+    who_volume: Paediatric Tumours
+    site: Central nervous system
+    lineage_broad: Neural
+    lineage_detail: Glial
+    families:
+    - glioma
+    - high_grade_glioma
+    - pediatric_high_grade_glioma
+
+  HGG_PED_RTK2B:
+    name: Diffuse paediatric-type high-grade glioma, H3-wildtype and IDH-wildtype, RTK2B
     who_volume: Paediatric Tumours
     site: Central nervous system
     lineage_broad: Neural
@@ -6913,15 +7039,6 @@ tumor_types:
     families:
     - sinonasal_tumor
 
-  HNPGL:
-    name: Head and neck paraganglioma
-    who_volume: Head and Neck Tumours
-    site: Head and neck
-    lineage_broad: Endocrine
-    lineage_detail:
-    families:
-    - paraganglioma
-
   HNSCC:
     name: Head and neck squamous cell carcinoma
     who_volume: Head and Neck Tumours
@@ -6985,6 +7102,16 @@ tumor_types:
     lineage_detail:
     families:
     - neuroendocrine_tumor
+
+  HN_PGG:
+    name: Head and neck paraganglioma
+    who_volume: Head and Neck Tumours
+    site: Head and neck
+    lineage_broad: Endocrine
+    parent: PGG
+    lineage_detail:
+    families:
+    - paraganglioma
 
   HOBNAIL_HEMEND:
     name: Hobnail haemangioendotheliomas
@@ -8205,7 +8332,7 @@ tumor_types:
     - fibroblastic_tumor
 
   LGG:
-    name: Lower-grade glioma, NOS
+    name: Low-grade glioma, NOS
     who_volume: Central Nervous System Tumours
     site: Central nervous system
     lineage_broad: Neural
@@ -9017,8 +9144,8 @@ tumor_types:
     - medulloblastoma
     - embryonal_tumor
 
-  MB_SHH_CHL_AD:
-    name: Medulloblastoma, SHH A
+  MB_SHH:
+    name: Medulloblastoma, SHH
     who_volume: Central Nervous System Tumours
     site: Cerebellum
     lineage_broad: Neural
@@ -9028,7 +9155,18 @@ tumor_types:
     - medulloblastoma
     - embryonal_tumor
 
-  MB_SHH_INF:
+  MB_SHH_A:
+    name: Medulloblastoma, SHH A, infant and adult
+    who_volume: Central Nervous System Tumours
+    site: Cerebellum
+    lineage_broad: Neural
+    lineage_detail: Embryonal
+    families:
+    - cns_tumor
+    - medulloblastoma
+    - embryonal_tumor
+
+  MB_SHH_B:
     name: Medulloblastoma, SHH B, infant
     who_volume: Central Nervous System Tumours
     site: Cerebellum
@@ -12821,6 +12959,16 @@ tumor_types:
     families:
     - gastrointestinal_tumor
     - soft_tissue_tumor
+
+  PLEX_PED:
+    name: Choroid plexus tumor, pediatric
+    who_volume: Central Nervous System Tumours
+    site: Central nervous system
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - cns_tumor
+    - choroid_plexus_tumor
 
   PLEX_PED_A:
     name: Choroid plexus tumor, pediatric A

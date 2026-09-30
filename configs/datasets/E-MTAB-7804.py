@@ -36,7 +36,7 @@ def methylation_class(row):
         "GBM_MES": "GBM_MES",
         "GBM_MID": "GBM_MID",
         "GBM_MYCN": "GBM_MYCN",
-        "GBM_RTK_III": "GBM_RTK3",
+        "GBM_RTK_III": "GBM_RTK_3",
         "HGNET_MN1": "HGNET_MN1",
         "HMB": "HMB",
         "IHG": "IHG",

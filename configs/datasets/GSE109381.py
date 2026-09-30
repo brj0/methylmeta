@@ -18,9 +18,9 @@ def diagnosis(row):
 def methylation_class(row):
     mapping = {
         # Glioblastoma, IDH-wildtype
-        "GBM, RTK I": "GBM_RTK1",
-        "GBM, RTK II": "GBM_RTK2",
-        "GBM, RTK III": "GBM_RTK3",
+        "GBM, RTK I": "GBM_RTK_1",
+        "GBM, RTK II": "GBM_RTK_2",
+        "GBM, RTK III": "GBM_RTK_3",
         "GBM, MES": "GBM_MES",
         "GBM, MID": "GBM_MID",
         "GBM, MYCN": "GBM_MYCN",
@@ -60,8 +60,8 @@ def methylation_class(row):
         "SUBEPN, ST": "SUBEPN_ST",
         # Medulloblastoma
         "MB, WNT": "MB_WNT",
-        "MB, SHH INF": "MB_SHH_INF",
-        "MB, SHH CHL AD": "MB_SHH_CHL_AD",
+        "MB, SHH INF": "MB_SHH_B",
+        "MB, SHH CHL AD": "MB_SHH_A",
         "MB, G3": "MB_G3",
         "MB, G4": "MB_G4",
         # Embryonal / high-grade embryonal tumors

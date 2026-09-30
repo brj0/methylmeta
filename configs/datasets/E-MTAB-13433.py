@@ -29,7 +29,7 @@ def methylation_class(row):
     mapping = {
         "pheochromocytoma": "PHEO",
         "extra-adrenal paraganglioma": "PGG_EXAD",
-        "head and neck paraganglioma": "HNPGL",
+        "head and neck paraganglioma": "HN_PGG",
         "normal": "CTRL_ADREN",
     }
     return mapping[value]
