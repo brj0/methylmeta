@@ -3,6 +3,7 @@ from pathlib import Path
 
 import click
 
+from methylmeta.catalog import OUTPUT_FORMATS, query_datasets, render
 from methylmeta.merger import MetadataMerger
 from methylmeta.paths import CONFIGS_DIR, METADATA_OVERRIDES_DIR
 
@@ -186,7 +187,7 @@ def test(
 
 
 @cli.command()
-@click.argument("dataset_id")
+@click.argument("dataset_ids", nargs=-1, required=True)
 @click.option("--dataset_dir", type=Path, required=True)
 @click.option(
     "--idat/--no_idat",
@@ -194,33 +195,43 @@ def test(
     help="Also download IDAT files (large - opt in explicitly).",
 )
 def fetch(
-    dataset_id: str,
+    dataset_ids: tuple[str, ...],
     dataset_dir: Path,
     idat: bool,
 ) -> None:
-    """Download metadata (and optionally IDATs) for one dataset.
+    r"""Download metadata (and optionally IDATs) for dataset(s).
 
     Skips anything already present on disk - only the missing piece(s)
     are downloaded, matching the layout MetadataMerger expects
-    (dataset_dir/<dataset_id>/).
+    (dataset_dir/<dataset_id>/). Combine with `find`:
+
+    \b
+        methylmeta find --classes GBM_RTK2 --format ids > ids.txt
+        methylmeta fetch $(cat ids.txt) --dataset_dir DIR
     """
     from methylmeta.fetch import check_datasets, download_missing
 
     dataset_dir = Path(dataset_dir).expanduser()
     dataset_dir.mkdir(parents=True, exist_ok=True)
+    ids = list(dict.fromkeys(dataset_ids))
 
-    before = check_datasets([dataset_id], dataset_dir, check_idat=idat)[0]
-    click.echo(f"before: {before}")
+    before = check_datasets(ids, dataset_dir, check_idat=idat)
+    for status in before:
+        click.echo(f"before: {status}")
 
-    if before.is_complete:
-        click.echo(f"{dataset_id}: already complete, nothing to fetch.")
+    incomplete = [s for s in before if not s.is_complete]
+    if not incomplete:
+        click.echo("All datasets already complete, nothing to fetch.")
         return
 
-    download_missing([before], dataset_dir)
+    download_missing(incomplete, dataset_dir)
 
-    after = check_datasets([dataset_id], dataset_dir, check_idat=idat)[0]
-    click.echo(f"after:  {after}")
-    if not after.is_complete:
+    after = check_datasets(
+        [s.dataset_id for s in incomplete], dataset_dir, check_idat=idat
+    )
+    for status in after:
+        click.echo(f"after:  {status}")
+    if not all(s.is_complete for s in after):
         raise SystemExit(1)
 
 
@@ -310,6 +321,115 @@ def agent(
         click.echo(f"Config: {result.config_path}")
     if not result.success:
         raise SystemExit(1)
+
+
+@cli.command()
+@click.option(
+    "--classes",
+    multiple=True,
+    help=(
+        "WHO acronym(s) from tumor_types.yaml, comma-separated and/or "
+        "repeated (see `search_vocab`)."
+    ),
+)
+@click.option(
+    "--family",
+    "families",
+    multiple=True,
+    help="Tumor family tag(s), e.g. 'glioma' (comma-separated/repeated).",
+)
+@click.option(
+    "--site",
+    "sites",
+    multiple=True,
+    help="Substring of the tumor type's site, e.g. 'kidney' (repeatable).",
+)
+@click.option(
+    "--descendants/--no_descendants",
+    default=True,
+    show_default=True,
+    help="Also select sub-entities (via `parent`) of every selected class.",
+)
+@click.option(
+    "--config_dir", type=Path, default=CONFIGS_DIR, show_default=True
+)
+@click.option(
+    "--dataset_dir",
+    type=Path,
+    default=None,
+    help="If given, report which datasets are already downloaded there.",
+)
+@click.option(
+    "--idat/--no_idat",
+    default=False,
+    help="With --dataset_dir, only count a dataset as downloaded with IDATs.",
+)
+@click.option(
+    "--missing",
+    is_flag=True,
+    help="With --dataset_dir, only list datasets that are not yet complete.",
+)
+@click.option(
+    "--format",
+    "output_format",
+    type=click.Choice(OUTPUT_FORMATS),
+    default="table",
+    show_default=True,
+    help=(
+        "'ids': one dataset_id per line (for `methylmeta fetch`). "
+        "'tsv': one row per dataset/class pair, for polars/pandas."
+    ),
+)
+@click.option(
+    "--max_classes",
+    type=int,
+    default=8,
+    show_default=True,
+    help="Max classes shown per dataset in the table (0 = all).",
+)
+def find(
+    classes: tuple[str, ...],
+    families: tuple[str, ...],
+    sites: tuple[str, ...],
+    descendants: bool,
+    config_dir: Path,
+    dataset_dir: Path | None,
+    idat: bool,
+    missing: bool,
+    output_format: str,
+    max_classes: int,
+) -> None:
+    """Find the datasets that contain given tumor types.
+
+    Reads the dataset configs statically - no raw data needed, so use this
+    before downloading. A dataset matches if its config can produce any of
+    the selected classes (no case counts; a dataset with one rare case
+    matches too). Several selectors are OR-ed. Without any selector, all
+    datasets are listed with all their classes.
+
+    Results go to stdout, warnings to stderr, so `--format ids` is safe to
+    pipe.
+    """
+    try:
+        result = query_datasets(
+            config_dir,
+            classes=classes,
+            families=families,
+            sites=sites,
+            descendants=descendants,
+            dataset_dir=dataset_dir,
+            idat=idat,
+            missing=missing,
+        )
+    except (ValueError, FileNotFoundError) as exc:
+        raise click.UsageError(str(exc)) from exc
+
+    for label in result.uncovered:
+        click.echo(f"warning: no dataset covers {label}", err=True)
+    text = render(result, output_format, max_classes)
+    if text:
+        click.echo(text)
+    click.echo(f"{len(result.matches)} dataset(s)", err=True)
 
 
 @cli.command("search_vocab")
