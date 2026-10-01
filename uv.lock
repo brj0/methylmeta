@@ -1458,7 +1458,7 @@ wheels = [
 [[package]]
 name = "mepylome"
 version = "0.13.1"
-source = { git = "https://github.com/brj0/mepylome.git?rev=dev#fb173b85257651c671d6181d48df4ca486b0020f" }
+source = { git = "https://github.com/brj0/mepylome.git?rev=dev#3fdad34ce8b62e40e2e966283fcf4d3c7ad7c829" }
 dependencies = [
     { name = "dash" },
     { name = "dash-bootstrap-components" },
