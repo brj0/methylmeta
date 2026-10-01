@@ -34,6 +34,7 @@ class MaterialType(StrEnum):
     tissue = "tissue"
     cell_line = "cell_line"
     blood = "blood"
+    csf = "csf"
 
 
 class Preservation(StrEnum):
@@ -104,7 +105,7 @@ class SampleMetadata(BaseModel):
         default=None,
         description=(
             "Methylation-based classification result "
-            '(e.g. "PCC", "GBM_RTK_2", "HNSCC")'
+            '(e.g. "PCC", "GBM_RTK2", "HNSCC")'
         ),
     )
 

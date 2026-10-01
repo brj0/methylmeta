@@ -35,8 +35,8 @@ def methylation_class(row):
         "GBM_G34": "DHG_G34",
         "GBM_MID": "GBM_MID",
         "GBM_MYCN": "GBM_MYCN",
-        "GBM_RTK_II": "GBM_RTK_2",
-        "GBM_RTK_III": "GBM_RTK_3",
+        "GBM_RTK_II": "GBM_RTK2",
+        "GBM_RTK_III": "GBM_RTK3",
         "No Match": None,
         "PXA": "PXA",
     }

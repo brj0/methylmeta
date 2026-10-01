@@ -23,7 +23,7 @@ def methylation_class(row):
         "Breast cancer brain metastasis": "BR_CA",
         "Lung cancer brain metastasis": "NSCLC",
         "Melanoma brain metastasis": "MEL",
-        "Uncertain primary tumor brain metastasis": "CUP",
+        "Uncertain primary tumor brain metastasis": None,
     }
     return mapping[value]
 

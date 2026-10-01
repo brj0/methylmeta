@@ -34,8 +34,8 @@ def methylation_class(row):
         "G34": "DHG_G34",
         "MYCN": "GBM_MYCN",
         "PXA": "PXA",
-        "pedGBM_RTK1": "GBM_RTK_1",
-        "pedGBM_RTK2": "GBM_RTK_2",
+        "pedGBM_RTK1": "GBM_RTK1",
+        "pedGBM_RTK2": "GBM_RTK2",
     }
     return mapping[row["methylation class"]]
 

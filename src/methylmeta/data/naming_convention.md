@@ -370,8 +370,8 @@ constructed entity-first codes.
 
 ## 9. Rule 7 — Numerals: Arabic
 
-Prefer Arabic numerals for methylation subtype discriminators — `RTK_1`,
-`RTK_2`, `RTK_3`, giving `GBM_RTK_1` / `GBM_RTK_2` / `GBM_RTK_3` — including
+Prefer Arabic numerals for methylation subtype discriminators — `RTK1`,
+`RTK2`, `RTK3`, giving `GBM_RTK1` / `GBM_RTK2` / `GBM_RTK3` — including
 where the underlying subtype concept comes from a classifier that writes
 Roman numerals (DKFZ's `GBM_RTK_I/II/III`). Arabic numerals are shorter,
 sort and grep correctly, and avoid `I`/`l`/`1` confusion in small plot
@@ -470,7 +470,7 @@ These are mechanical, not judgment calls — run them, don't eyeball them:
 3. Append behavior suffix from the closed vocabulary. *(Rule 5)*
 4. Append site/subtype qualifiers left → right, with `parent:` pointing
    one level up. *(Rules 4, 9)*
-5. Arabic numerals for methylation subtypes — `GBM_RTK_1`. *(Rule 7)*
+5. Arabic numerals for methylation subtypes — `GBM_RTK1`. *(Rule 7)*
 6. Validate length/charset/direction/uniqueness. *(Rules 6, 8, 13)*
 7. Fill `name` (verbatim WHO wording/spelling), best-suited
    `who_volume`, `site`, lineage fields, `families`, `parent`.

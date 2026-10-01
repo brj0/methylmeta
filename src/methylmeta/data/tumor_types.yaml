@@ -3936,6 +3936,15 @@ tumor_types:
     families:
     - normal_tissue
 
+  CTRL_CART:
+    name: Control - Cartilage
+    who_volume:
+    site:
+    lineage_broad: Mesenchymal
+    lineage_detail: Chondrogenic
+    families:
+    - normal_tissue
+
   CTRL_CEBM:
     name: Normal cerebellar hemisphere
     who_volume:
@@ -4019,6 +4028,15 @@ tumor_types:
     - normal_tissue
 
   CTRL_GAST:
+    name: Control - Gastric
+    who_volume:
+    site:
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - normal_tissue
+
+  CTRL_GB:
     name: Control - Gastric
     who_volume:
     site:
@@ -4353,6 +4371,15 @@ tumor_types:
     families:
     - normal_tissue
 
+  CTRL_VESSEL:
+    name: Normal blood vessel
+    who_volume:
+    site: Blood vessel
+    lineage_broad: Mesenchymal
+    lineage_detail:
+    families:
+    - normal_tissue
+
   CTRL_WM:
     name: Normal white matter
     who_volume:
@@ -4361,15 +4388,6 @@ tumor_types:
     lineage_detail:
     families:
     - normal_tissue
-
-  CUP:
-    name: Cancer of Unknown Primary
-    who_volume:
-    site:
-    lineage_broad:
-    lineage_detail:
-    families:
-    - unclear
 
   CUT_LYM:
     name: Cutaneous lymphoma
@@ -5009,6 +5027,16 @@ tumor_types:
     - cns_tumor
     - ear_tumor
 
+  EMBCA:
+    name: Embryonal carcinoma
+    who_volume: Female Genital Tumours
+    site:
+    lineage_broad: Germ cell
+    lineage_detail:
+    families:
+    - gynecologic_tumor
+    - germ_cell_tumor
+
   EMC:
     name: Extraskeletal myxoid chondrosarcoma
     who_volume: Soft Tissue and Bone Tumours
@@ -5298,6 +5326,16 @@ tumor_types:
     - salivary_gland_tumor
     - carcinoma
 
+  EPN:
+    name: Ependymoma
+    who_volume: Central Nervous System Tumours
+    site: Spinal cord
+    lineage_broad: Neural
+    lineage_detail: Glial
+    families:
+    - ependymoma
+    - glioma
+
   EPN_MPE:
     name: Myxopapillary ependymoma
     who_volume: Central Nervous System Tumours
@@ -5352,6 +5390,16 @@ tumor_types:
     name: Spinal ependymoma, MYCN-amplified
     who_volume: Central Nervous System Tumours
     site: Spinal cord
+    lineage_broad: Neural
+    lineage_detail: Glial
+    families:
+    - ependymoma
+    - glioma
+
+  EPN_ST:
+    name: Supratentorial ependymoma
+    who_volume: Paediatric Tumours
+    site: Central nervous system
     lineage_broad: Neural
     lineage_detail: Glial
     families:
@@ -6055,7 +6103,7 @@ tumor_types:
     - glioblastoma
     - high_grade_glioma
 
-  GBM_RTK_1:
+  GBM_RTK1:
     name: Glioblastoma, IDH-wildtype, RTK I
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -6066,7 +6114,7 @@ tumor_types:
     - glioblastoma
     - high_grade_glioma
 
-  GBM_RTK_2:
+  GBM_RTK2:
     name: Glioblastoma, IDH-wildtype, RTK II
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -6077,7 +6125,7 @@ tumor_types:
     - glioblastoma
     - high_grade_glioma
 
-  GBM_RTK_3:
+  GBM_RTK3:
     name: Glioblastoma, IDH-wildtype, RTK III
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -6168,6 +6216,15 @@ tumor_types:
     families:
     - odontogenic_tumor
     - carcinoma
+
+  GCT:
+    name: Germ-Cell Tumor, NOS
+    who_volume:
+    site:
+    lineage_broad: Germ cell
+    lineage_detail:
+    families:
+    - germ_cell_tumor
 
   GCTB:
     name: Giant cell tumor of bone
@@ -6836,6 +6893,17 @@ tumor_types:
     - high_grade_glioma
     - pediatric_high_grade_glioma
 
+  HGG_PED_RTK1:
+    name: Diffuse paediatric-type high-grade glioma, H3-wildtype and IDH-wildtype, RTK1
+    who_volume: Paediatric Tumours
+    site: Central nervous system
+    lineage_broad: Neural
+    lineage_detail: Glial
+    families:
+    - glioma
+    - high_grade_glioma
+    - pediatric_high_grade_glioma
+
   HGG_PED_RTK1A:
     name: Diffuse paediatric-type high-grade glioma, H3-wildtype and IDH-wildtype, RTK1A
     who_volume: Paediatric Tumours
@@ -6860,6 +6928,17 @@ tumor_types:
 
   HGG_PED_RTK1C:
     name: Diffuse paediatric-type high-grade glioma, H3-wildtype and IDH-wildtype, RTK1C
+    who_volume: Paediatric Tumours
+    site: Central nervous system
+    lineage_broad: Neural
+    lineage_detail: Glial
+    families:
+    - glioma
+    - high_grade_glioma
+    - pediatric_high_grade_glioma
+
+  HGG_PED_RTK2:
+    name: Diffuse paediatric-type high-grade glioma, H3-wildtype and IDH-wildtype, RTK2
     who_volume: Paediatric Tumours
     site: Central nervous system
     lineage_broad: Neural
@@ -6931,7 +7010,7 @@ tumor_types:
     - cns_tumor
     - high_grade_neuroepithelial_tumor
 
-  HGNET_NOS6:
+  HGNET_NOS:
     name: CNS high-grade neuroepithelial tumor, NOS
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -7061,7 +7140,7 @@ tumor_types:
     - squamous_cell_carcinoma
     - head_neck_tumor
 
-  HNSCC_EBV_POS:
+  HNSCC_EBVP:
     name: EBV-Associated Head and Neck Squamous Cell Carcinoma
     who_volume: Head and Neck Tumours
     site: Head and neck
@@ -9155,8 +9234,8 @@ tumor_types:
     - medulloblastoma
     - embryonal_tumor
 
-  MB_SHH_A:
-    name: Medulloblastoma, SHH A, infant and adult
+  MB_SHH_CHL_AD:
+    name: Medulloblastoma, SHH A, child / adult
     who_volume: Central Nervous System Tumours
     site: Cerebellum
     lineage_broad: Neural
@@ -9166,7 +9245,7 @@ tumor_types:
     - medulloblastoma
     - embryonal_tumor
 
-  MB_SHH_B:
+  MB_SHH_INF:
     name: Medulloblastoma, SHH B, infant
     who_volume: Central Nervous System Tumours
     site: Cerebellum
@@ -9882,7 +9961,7 @@ tumor_types:
     - cns_tumor
     - meningioma
 
-  MNG_BEN1:
+  MNG_BEN_1:
     name: Meningioma, benign subtype 1
     who_volume: Central Nervous System Tumours
     site: Meninges
@@ -9891,7 +9970,7 @@ tumor_types:
     families:
     - meningioma
 
-  MNG_BEN2:
+  MNG_BEN_2:
     name: Meningioma, benign subtype 2
     who_volume: Central Nervous System Tumours
     site: Meninges
@@ -9900,7 +9979,7 @@ tumor_types:
     families:
     - meningioma
 
-  MNG_BEN3:
+  MNG_BEN_3:
     name: Meningioma, benign subtype 3
     who_volume: Central Nervous System Tumours
     site: Meninges
@@ -12199,6 +12278,17 @@ tumor_types:
     - parathyroid_tumor
     - adenoma
 
+  PA_NF1:
+    name: Pilocytic astrocytoma, arising in the setting of NF1
+    who_volume: Central Nervous System Tumours
+    site: Central nervous system
+    lineage_broad: Neural
+    lineage_detail: Glial
+    families:
+    - cns_tumor
+    - glioma
+    - pilocytic_astrocytoma
+
   PBL:
     name: Plasmablastic lymphoma
     who_volume: Haematolymphoid Tumours
@@ -13152,6 +13242,16 @@ tumor_types:
     families:
     - gynecologic_tumor
     - fibroblastic_tumor
+
+  PRIMMRD:
+    name: Primary mismatch repair deficient glioma
+    who_volume:
+    site: Central nervous system
+    lineage_broad: Neural
+    lineage_detail: Glial
+    families:
+    - cns_tumor
+    - glioma
 
   PROLIF_FASC:
     name: Proliferative fasciitis and proliferative myositis
@@ -15796,7 +15896,7 @@ tumor_types:
     families:
     - cyst
 
-  TER_PP:
+  TER_POST:
     name: Teratoma, postpubertal-type
     who_volume: Urinary and Male Genital Tumours
     site: Testis
@@ -15807,7 +15907,7 @@ tumor_types:
     - genital_tumor
     - germ_cell_tumor
 
-  TER_PREPP:
+  TER_PRE:
     name: Teratoma, prepubertal-type
     who_volume: Urinary and Male Genital Tumours
     site: Testis
@@ -17396,9 +17496,9 @@ tumor_types:
     - histiocytic_neoplasm
 
   YST:
-    name: Testicular yolk sac tumor
+    name: Yolk sac tumor
     who_volume: Urinary and Male Genital Tumours
-    site: Testis
+    site:
     lineage_broad: Germ cell
     lineage_detail:
     families:

@@ -25,7 +25,7 @@ def methylation_class(row):
         "Embryonal carcinoma, NOS": "TES_EMB_CA",
         "Yolk sac tumor": "YST",
         "Teratoma, benign": "TES_MAT_TER",
-        "Teratoma, malignant, NOS": "TER_PP",
+        "Teratoma, malignant, NOS": "TER_POST",
         # teratocarcinoma (embryonal carcinoma + teratoma) is a mixed
         # germ cell tumour in the current WHO classification
         "Teratocarcinoma": "TES_MGCT",

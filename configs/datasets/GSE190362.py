@@ -14,7 +14,7 @@ def sample_id(row):
 
 
 def diagnosis(row):
-    return mappings[row["Source"]]
+    return row["Source"]
 
 
 def methylation_class(row):
@@ -25,8 +25,8 @@ def methylation_class(row):
         "Astrocytoma, IDH-mutant, supratentorial, high": "ASTRO_IDH_HG",
         "Astrocytoma, IDH-mutant, supratentorial, low": "ASTRO_IDH",
         "GBM MES": "GBM_MES",
-        "GBM RTKI": "GBM_RTK_1",
-        "GBM RTKII": "GBM_RTK_2",
+        "GBM RTKI": "GBM_RTK1",
+        "GBM RTKII": "GBM_RTK2",
         "Oligodendroglioma, IDH-mutant and 1p/19q codeleted": "OLIGO_IDH",
         "Primary tumor of oligosarcoma": "OLIGO_IDH",
         # no methylation class in the vocabulary for these tumour entities yet

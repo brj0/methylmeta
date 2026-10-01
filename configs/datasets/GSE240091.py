@@ -16,7 +16,7 @@ def diagnosis(row):
 
 
 def methylation_class(row):
-    return "TER_PP"
+    return "TER_POST"
 
 
 def primary_site(row):

@@ -206,7 +206,7 @@ def fetch(
     (dataset_dir/<dataset_id>/). Combine with `find`:
 
     \b
-        methylmeta find --classes GBM_RTK_2 --format ids > ids.txt
+        methylmeta find --classes GBM_RTK2 --format ids > ids.txt
         methylmeta fetch $(cat ids.txt) --dataset_dir DIR
     """
     from methylmeta.fetch import check_datasets, download_missing

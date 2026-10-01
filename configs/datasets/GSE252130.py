@@ -41,7 +41,7 @@ def methylation_class(row):
         "BRCA": "BR_CA",
         "PRAD": "PROS_ADCA",
         "PMOC": "OVA_MUC_CA",
-        "UNKNOWN": "CUP",
+        "UNKNOWN": None,
     }
     return mapping[_tumor_code(row["Title"])]
 

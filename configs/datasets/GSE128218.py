@@ -25,8 +25,8 @@ def methylation_class(row):
         "G3 GM Organoids": "MB_G3",
         "G3 OM Organoids": "MB_G3",
         "G4": "MB_G4",
-        "SHHA": "MB_SHH_A",
-        "SHHB": "MB_SHH_B",
+        "SHHA": "MB_SHH_CHL_AD",
+        "SHHB": "MB_SHH_INF",
         "WNT": "MB_WNT",
     }
     return mapping[row["molecular subgroup"]]

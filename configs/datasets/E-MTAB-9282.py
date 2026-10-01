@@ -23,8 +23,8 @@ def methylation_class(row):
         "DMG_K27": "DMG_K27",
         "GBM_G34": "DHG_G34",
         "GBM_MYCN": "GBM_MYCN",
-        "GBM_RTK_I": "GBM_RTK_1",
-        "GBM_RTK_III": "GBM_RTK_3",
+        "GBM_RTK_I": "GBM_RTK1",
+        "GBM_RTK_III": "GBM_RTK3",
         "PLEX_PED_B": "PLEX_PED_B",
     }
     return mapping[row["Characteristics[methylation group]"]]
