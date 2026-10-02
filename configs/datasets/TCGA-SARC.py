@@ -33,7 +33,7 @@ def methylation_class(row):
         ("Prostate gland", "Adenocarcinoma, NOS"): "PROS_ADCA",
         ("Uterus, NOS", "Adenocarcinoma, NOS"): "ENDOM_CA",
         ("Cervix uteri", "Squamous cell carcinoma, NOS"): "CERV_SCC",
-        ("Kidney, NOS", "Carcinoma, NOS"): "RCC_NOS",
+        ("Kidney, NOS", "Carcinoma, NOS"): "RCC",
     }
     if (organ, value) in organ_class:
         return organ_class[(organ, value)]

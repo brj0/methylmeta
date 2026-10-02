@@ -35,7 +35,7 @@ def methylation_class(row):
         "Not Reported": None,
         "Peripheral T-cell lymphoma, NOS": "PTCL",
         "Prolymphocytic leukemia, T-cell type": "TPLL",
-        "Renal cell carcinoma, NOS": "RCC_NOS",
+        "Renal cell carcinoma, NOS": "RCC",
         "T-cell large granular lymphocytic leukemia": "TLGLL",
     }
     return mapping[value]

@@ -7,6 +7,7 @@ Usage:
 from __future__ import annotations
 
 import logging
+from collections import Counter
 from pathlib import Path
 
 import polars as pl
@@ -115,23 +116,20 @@ TUMOR_TYPES = {
     "COD",
     "COD_COF",
     "COF",
-    "DFB",
     "DGCT",
     "EMCMT",
     "FGC",
     "GCOC",
-    "GCG",
     "JPOF",
     "JTOF",
     "MNTI",
-    "ODCS",
     "ODFIB",
     "ODSARC",
     "ODT",
     "OMY",
     "OPHP",
     "OPMD",
-    "ORAL_SCC_VERR",
+    # "ORAL_SCC_VERR",
     "OR_DYS",
     "OR_DYS_HPVA",
     "PIOC",
@@ -150,7 +148,6 @@ TUMOR_TYPES = {
     "HNSCC_HPVA",
     "HNSCC_HPVI",
     "HN_NET",
-    "LEC",
     "NUT",
     "HN_PGG",
     "PGG",
@@ -210,13 +207,10 @@ TUMOR_TYPES = {
     # ------------------------------------------------------------------
     "CHORD",
     "CHORD_DD",
-    "CPH_ADM",
-    "DFSP",
     "EWS",
     "GRAN_CELL",
     "KAPOSI_SARC",
     "LPS",
-    "MCC",
     "MPNST",
     "NFIB",
     "RMM",
@@ -232,7 +226,7 @@ TUMOR_TYPES = {
     "SCHW",
     "SFT",
     "SYNSARC",
-    "UPS",
+    # "UPS",
     # ------------------------------------------------------------------
     # Controls / normal / reactive / technical
     # Relevant to FNA of mouth, nose, sinonasal, salivary gland
@@ -256,24 +250,85 @@ TUMOR_TYPES = {
     # ------------------------------------------------------------------
     # Metastasis
     # ------------------------------------------------------------------
+    # Skin
     "SKIN_SCC",
     "SKIN_MEL",
+    "MEL_DESMO",
+    "MEL",
+    "ACR_MEL",
+    "MCC",
+    # Thyr
     "THYR_PTC",
     "THYR_FTC",
+    # Lung
+    "LU_ADCA",
+    "LU_SCC",
+    "NSCLC",
+    "SCLC",
+    # Ren
+    "RCC",
+    "RCC_ACD",
+    "RCC_ALK",
+    "RCC_CC",
+    "RCC_CCP",
+    "RCC_CD",
+    "RCC_CP",
+    "RCC_ELOC",
+    "RCC_ESC",
+    "RCC_FH",
+    "RCC_MCN",
+    "RCC_MTSC",
+    "RCC_PAP",
+    "RCC_RP",
+    "RCC_SDH",
+    "RCC_SMARCB1",
+    "RCC_TFE3",
+    "RCC_TFEB",
+    "RCC_TR",
+    "RCC_TUBULOCYST",
+    # Breast
+    "BR_CA",
+    "BR_CA_APOCRINE",
+    "BR_CA_CRIB",
+    "BR_CA_HER2",
+    "BR_CA_HRP",
+    "BR_CA_INV_PAP",
+    "BR_CA_LOB",
+    "BR_CA_MALE",
+    "BR_CA_META",
+    "BR_CA_MICROINV",
+    "BR_CA_MICROPAP",
+    "BR_CA_MUC",
+    "BR_CA_NST",
+    "BR_CA_TALL",
+    "BR_CA_TN",
+    "BR_CA_TUB",
+    "BR_CYSTADCA",
+    "BR_ENC_PAP_CA",
+    "BR_SOL_PAP_CA",
+    # Col
+    "CR_CA",
+    # Other
+    "PROST_ADCA",
+    "URO_CA",
+    "PAN_CA",
+    "CCA",
+    "GAST_CA",
 }
 
 MERGE_MAP = {
-    # --- haematolymphoid ---
-    "LYMPHOMA_B": [
-        "BURK",
-        "BURK_EBVN",
-        "BURK_EBVP",
-        "CLL",
+    "DLBCL": [
         "DLBCL",
         "DLBCL_ABC",
         "DLBCL_EBV_POS",
         "DLBCL_GCB",
         "DLBCL_MYC_BCL2",
+    ],
+    "LYMPHOMA_B_OTH": [
+        "BURK",
+        "BURK_EBVN",
+        "BURK_EBVP",
+        "CLL",
         "ENMZL_MALT",
         "FL",
         "FL_HG",
@@ -299,29 +354,29 @@ MERGE_MAP = {
         "FTHCL",
         "FTHCL_FOLL",
         "FTHCL_NOS",
-        "ENKTL",
         "EBV_NK_TCL",
         "SEBV_TCL",
         "T_ALL",
     ],
+    "SN_ADCA": [
+        "SN_ADCA",
+        "ITAC",
+        "NITAC",
+    ],
     "PLASMA_CELL": ["PLASMACYT", "PLASMACYT_CELL", "MYELOMA"],
     "HISTIOCYTIC": ["LCH", "FDCS", "HISTSARC"],
-    "CONTROL": [
+    "CTRL_OTH": [
         "CTRL_ADIPOSE",
-        "CTRL_BLOOD",
         "CTRL_BONE",
         "CTRL_DENT_FOL",
         "CTRL_DNA_DEG",
         "CTRL_HN",
         "CTRL_INFLAM",
-        "CTRL_LYMPH",
         "CTRL_MARROW",
         "CTRL_MUSCLE",
         "CTRL_NOS",
         "CTRL_REACT",
-        "CTRL_SG",
         "CTRL_SKM",
-        "CTRL_SN",
         "CTRL_SOFT",
     ],
     "AMBL": [
@@ -343,12 +398,72 @@ MERGE_MAP = {
         "RMS_VGLL3",
         "RMS_ZFP64",
     ],
-    "OR_DYS": ["OR_DYSOR_DYS_HPVA"],
-    "PLEO_AD": ["PLEO_AD_MYOPLEO_AD"],
-    # --- only if they don't separate in your data ---
-    "HNSCC_HPVI": ["SKIN_SCC", "SG_SCC", "ORAL_SCC_VERR"],
-    "MEL": ["MUC_MEL", "SKIN_MEL"],
+    "OR_DYS": ["OR_DYS", "OR_DYS_HPVA"],
+    "PLEO_AD_MYO": ["PLEO_AD", "PLEO_AD_MYO"],
     "THYR_CA": ["THYR_PTC", "THYR_FTC"],
+    "NSCLC": [
+        "LU_ADCA",
+        "LU_SCC",
+        "NSCLC",
+    ],
+    "MEL_MET": [
+        "ACR_MEL",
+        "MEL",
+        "MEL_DESMO",
+        "SKIN_MEL",
+    ],
+    "RCC": [
+        "RCC",
+        "RCC_ACD",
+        "RCC_ALK",
+        "RCC_CC",
+        "RCC_CCP",
+        "RCC_CD",
+        "RCC_CP",
+        "RCC_ELOC",
+        "RCC_ESC",
+        "RCC_FH",
+        "RCC_MCN",
+        "RCC_MTSC",
+        "RCC_PAP",
+        "RCC_RP",
+        "RCC_SDH",
+        "RCC_SMARCB1",
+        "RCC_TFE3",
+        "RCC_TFEB",
+        "RCC_TR",
+        "RCC_TUBULOCYST",
+    ],
+    "PGG": [
+        "HN_PGG",
+        "PGG",
+    ],
+    "BR_CA": [
+        "BR_CA",
+        "BR_CA_APOCRINE",
+        "BR_CA_CRIB",
+        "BR_CA_HER2",
+        "BR_CA_HRP",
+        "BR_CA_INV_PAP",
+        "BR_CA_LOB",
+        "BR_CA_MALE",
+        "BR_CA_META",
+        "BR_CA_MICROINV",
+        "BR_CA_MICROPAP",
+        "BR_CA_MUC",
+        "BR_CA_NST",
+        "BR_CA_TALL",
+        "BR_CA_TN",
+        "BR_CA_TUB",
+        "BR_CYSTADCA",
+        "BR_ENC_PAP_CA",
+        "BR_SOL_PAP_CA",
+    ],
+    "ONB": [
+        "ONB",
+        "ONB_A",
+        "ONB_B",
+    ],
 }
 
 
@@ -399,6 +514,20 @@ def main() -> None:
 
     # 3. Harmonize and merge.
     df = merger.merge(dataset_ids=ALL_DATASETS)
+    df = df.filter(pl.col("methylation_class").is_in(TUMOR_TYPES))
+    merge_lookup = {
+        tumor_type: group
+        for group, tumor_types in MERGE_MAP.items()
+        for tumor_type in tumor_types
+    }
+    df = df.with_columns(
+        pl.col("methylation_class")
+        .replace(merge_lookup)
+        .alias("methylation_class")
+    )
+    for key, count in Counter(df["methylation_class"]).most_common():
+        print(f"{key}: {count}")
+
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     df.write_csv(OUTPUT, separator="\t")
     logger.info("Wrote %d samples -> %s", len(df), OUTPUT)

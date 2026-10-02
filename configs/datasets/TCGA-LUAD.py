@@ -113,7 +113,7 @@ def methylation_class(row):
         # basal cell carcinoma is a skin entity of the head/face region
         ("head_neck", "Basal cell carcinoma, NOS"): "BCC",
         ("head_neck", "Squamous cell carcinoma, NOS"): "HNSCC",
-        ("kidney", "Adenocarcinoma, NOS"): "RCC_NOS",
+        ("kidney", "Adenocarcinoma, NOS"): "RCC",
         ("kidney", "Clear cell adenocarcinoma, NOS"): "RCC_CC",
         ("kidney", "Clear cell carcinoma"): "RCC_CC",
         ("ovary", "Adenocarcinoma, NOS"): "OVA_CA",

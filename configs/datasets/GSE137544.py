@@ -32,8 +32,8 @@ def methylation_class(row):
         "Wilms organoid": "WILMS",
         "MRT tumor": "REN_MRT",
         "MRT organoid": "REN_MRT",
-        "RCC tumor": "RCC_NOS",
-        "RCC organoid": "RCC_NOS",
+        "RCC tumor": "RCC",
+        "RCC organoid": "RCC",
     }
     return mapping[row["Source"]]
 

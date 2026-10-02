@@ -20,8 +20,8 @@ def methylation_class(row):
     value = row["diagnoses.primary_diagnosis"]
     mapping = {
         "Renal cell carcinoma, chromophobe type": "RCC_CP",
-        "Adenocarcinoma, NOS": "RCC_NOS",
-        "Carcinoma, NOS": "RCC_NOS",
+        "Adenocarcinoma, NOS": "RCC",
+        "Carcinoma, NOS": "RCC",
         "Melanoma, NOS": "MEL",
         "Not Reported": None,
     }

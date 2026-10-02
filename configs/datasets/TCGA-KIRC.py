@@ -35,8 +35,8 @@ def methylation_class(row):
     mapping = {
         "Clear cell adenocarcinoma, NOS": "RCC_CC",
         "Clear cell carcinoma": "RCC_CC",
-        "Renal cell carcinoma, NOS": "RCC_NOS",
-        "Adenocarcinoma, NOS": "RCC_NOS",
+        "Renal cell carcinoma, NOS": "RCC",
+        "Adenocarcinoma, NOS": "RCC",
         "Transitional cell carcinoma": "URO_CA",
         "Transitional cell carcinoma in situ": "URO_CIS",
         "Squamous cell carcinoma, NOS": None,

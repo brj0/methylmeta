@@ -122,7 +122,7 @@ def methylation_class(row):
         ("kidney", "Clear cell adenocarcinoma, NOS"): "RCC_CC",
         ("kidney", "Medullary carcinoma, NOS"): "RCC_SMARCB1",
         ("kidney", "Nephroblastoma, NOS"): "WILMS",
-        ("kidney", "Renal cell carcinoma, NOS"): "RCC_NOS",
+        ("kidney", "Renal cell carcinoma, NOS"): "RCC",
         ("kidney", "Renal cell carcinoma, chromophobe type"): "RCC_CP",
         ("liver", "Hepatocellular carcinoma, NOS"): "HCC",
         ("lung", "Acinar cell carcinoma"): "LU_ADCA",

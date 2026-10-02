@@ -394,7 +394,7 @@ def methylation_class(row):
         "Pleuropulmonary blastoma": "PPB",
         "Plexiform fibrohistiocytic tumor": "PFHT",
         "Plasmacytoma, extramedullary": "PLASMACYT",
-        "Renal cell carcinoma, NOS": "RCC_NOS",
+        "Renal cell carcinoma, NOS": "RCC",
         "Retinoblastoma, NOS": "RB",
         "Retinoblastoma, diffuse": "RB",
         "Rhabdoid tumor, NOS": "MRT",

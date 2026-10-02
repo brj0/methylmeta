@@ -20,7 +20,7 @@ def diagnosis(row):
 def methylation_class(row):
     mapping = {
         "ccRCC": "RCC_CC",
-        "RCC_unclassifiable": "RCC_NOS",
+        "RCC_unclassifiable": "RCC",
         "Oncocytoma": "REN_ONC",
         "HLRCC": "RCC_FH",
         "ChRCC": "RCC_CP",

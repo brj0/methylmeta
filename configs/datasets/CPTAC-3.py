@@ -102,7 +102,7 @@ def methylation_class(row):
         ): "RCC_FH",
         ("kidney", "Oncocytoma"): "REN_ONC",
         ("kidney", "Papillary renal cell carcinoma"): "RCC_PAP",
-        ("kidney", "Renal cell carcinoma, NOS"): "RCC_NOS",
+        ("kidney", "Renal cell carcinoma, NOS"): "RCC",
         ("kidney", "Renal cell carcinoma, chromophobe type"): "RCC_CP",
         ("kidney", "Unknown"): None,
         ("kidney", "Urothelial carcinoma, NOS"): "URO_CA",
