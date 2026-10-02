@@ -2705,6 +2705,17 @@ tumor_types:
     - gynecologic_tumor
     - precursor_lesion
 
+  CERV_ASC:
+    name: Adenosquamous carcinoma, HPV unknown
+    who_volume: Female Genital Tumours
+    site: Cervix
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: ASC
+    families:
+    - gynecologic_tumor
+    - carcinoma
+
   CERV_CA:
     name: Cervical carcinoma
     who_volume: Female Genital Tumours
@@ -8379,6 +8390,16 @@ tumor_types:
     families:
     - gynecologic_tumor
     - smooth_muscle_tumor
+
+  LEYDIG:
+    name: Leydig cell tumour
+    who_volume:
+    site: Testis
+    lineage_broad: Mesenchymal
+    lineage_detail: Gonadal stromal
+    families:
+    - genital_tumor
+    - sex_cord_stromal_tumor
 
   LFM:
     name: Lipofibromatosis
@@ -14430,6 +14451,16 @@ tumor_types:
     lineage_detail:
     families:
     - gynecologic_tumor
+    - sex_cord_stromal_tumor
+
+  SCT:
+    name: Sertoli cell tumour
+    who_volume:
+    site:
+    lineage_broad: Mesenchymal
+    lineage_detail: Gonadal stromal
+    families:
+    - genital_tumor
     - sex_cord_stromal_tumor
 
   SDA:
