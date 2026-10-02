@@ -33,11 +33,11 @@ def methylation_class(row):
         return "CTRL_HN"
     value = row["diagnoses.primary_diagnosis"]
     mapping = {
-        "Squamous cell carcinoma, NOS": "HNSCC",
-        "Squamous cell carcinoma, keratinizing, NOS": "HNSCC",
-        "Squamous cell carcinoma, large cell, nonkeratinizing, NOS": "HNSCC",
-        "Squamous cell carcinoma, spindle cell": "HNSCC",
-        "Basaloid squamous cell carcinoma": "HNSCC",
+        "Squamous cell carcinoma, NOS": "HN_SCC",
+        "Squamous cell carcinoma, keratinizing, NOS": "HN_SCC",
+        "Squamous cell carcinoma, large cell, nonkeratinizing, NOS": "HN_SCC",
+        "Squamous cell carcinoma, spindle cell": "HN_SCC",
+        "Basaloid squamous cell carcinoma": "HN_SCC",
         "Basal cell carcinoma, NOS": "BCC",
         "Follicular lymphoma, NOS": "FL",
         "Clear cell carcinoma": "RCC_CC",

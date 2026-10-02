@@ -17,10 +17,10 @@ def diagnosis(row):
 def methylation_class(row):
     value = row["p16_status"]
     mapping = {
-        "neg": "HNSCC_HPVI",
-        "pos": "HNSCC_HPVA",
-        "NA": "HNSCC",
-        None: "HNSCC",
+        "neg": "HN_SCC_HPVI",
+        "pos": "HN_SCC_HPVA",
+        "NA": "HN_SCC",
+        None: "HN_SCC",
     }
     return mapping[value]
 

@@ -52,7 +52,7 @@ def methylation_class(row):
         ("breast", "Infiltrating duct carcinoma, NOS"): "BR_CA_NST",
         ("breast", "Intraductal carcinoma, noninfiltrating, NOS"): "DCIS",
         ("breast", "Not Reported"): None,
-        ("head_neck", "Basaloid squamous cell carcinoma"): "HNSCC",
+        ("head_neck", "Basaloid squamous cell carcinoma"): "HN_SCC",
         ("pituitary", "Adenoma, NOS"): "PIT_AD",
         ("prostate", "Neoplasm, malignant"): None,
         ("skin", "Basal cell carcinoma, NOS"): "BCC",

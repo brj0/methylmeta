@@ -303,7 +303,7 @@ def methylation_class(row):
         "Ependymoma, NOS": "EPN",
         "Ependymoma, anaplastic": "EPN",
         "Epithelial tumor, benign": None,
-        "Epithelial-myoepithelial carcinoma": "EPMYOC",
+        "Epithelial-myoepithelial carcinoma": "SG_EPMYO_CA",
         "Epithelioid sarcoma": "EPSARC",
         "Ewing sarcoma": "EWS",
         "Fibrillary astrocytoma": "LGG",

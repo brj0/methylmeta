@@ -18,8 +18,8 @@ def diagnosis(row):
 def methylation_class(row):
     value = row["Factor Value[clinical information]"]
     mapping = {
-        "HPV related HNSCC": "HNSCC_HPVA",
-        "non HPV related HNSCC": "HNSCC_HPVI",
+        "HPV related HNSCC": "HN_SCC_HPVA",
+        "non HPV related HNSCC": "HN_SCC_HPVI",
     }
     return mapping[value]
 

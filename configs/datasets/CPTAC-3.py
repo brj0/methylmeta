@@ -93,7 +93,7 @@ def methylation_class(row):
         ("brain", "Unknown"): None,
         ("breast", "Intraductal carcinoma, NOS"): "DCIS",
         ("colon", "Carcinoma, NOS"): "CR_CA",
-        ("head and neck", "Squamous cell carcinoma, NOS"): "HNSCC",
+        ("head and neck", "Squamous cell carcinoma, NOS"): "HN_SCC",
         ("kidney", "Angiomyolipoma"): "REN_PEC",
         ("kidney", "Benign cystic nephroma"): "PED_CYSTNEPH",
         (

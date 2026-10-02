@@ -57,7 +57,7 @@ def methylation_class(row):
         ("lung", "Papillary carcinoma, follicular variant"): "THYR_PTC",
         ("lymph_node", "Papillary adenocarcinoma, NOS"): "THYR_PTC",
         ("lymph_node", "Papillary carcinoma, columnar cell"): "THYR_PTC",
-        ("mandible", "Squamous cell carcinoma, NOS"): "HNSCC",
+        ("mandible", "Squamous cell carcinoma, NOS"): "HN_SCC",
         ("not_reported", "Not Reported"): None,
         ("not_reported", "Papillary adenocarcinoma, NOS"): None,
         ("prostate", "Adenocarcinoma, NOS"): "PROS_ACIN",

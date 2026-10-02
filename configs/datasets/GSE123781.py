@@ -28,7 +28,7 @@ def methylation_class(row):
     # a premalignant condition with its own class; controls are normal
     # head and neck mucosa.
     mapping = {
-        "OSCC": "HNSCC",
+        "OSCC": "HN_SCC",
         "OLP": "OLP",
         "control": "CTRL_HN",
     }

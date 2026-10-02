@@ -24,8 +24,8 @@ def diagnosis(row):
 
 def methylation_class(row):
     mapping = {
-        "Normal": "CTRL_PROST",
-        "Benign": "CTRL_PROST",
+        "Normal": "CTRL_PROS",
+        "Benign": "CTRL_PROS",
         "Tumor&Normal": "PROS_ADCA",
         "Tumor": "PROS_ADCA",
     }

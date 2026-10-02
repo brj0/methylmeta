@@ -18,7 +18,7 @@ def diagnosis(row):
 
 
 def methylation_class(row):
-    return "HNSCC"
+    return "HN_SCC"
 
 
 def sample_site(row):

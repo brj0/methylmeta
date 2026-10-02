@@ -23,9 +23,9 @@ def methylation_class(row):
     if "lung" in title:
         return "LU_SCC"
     elif p16 == "Positive" or "HPV" in hpv_geno:
-        return "HNSCC_HPVA"
+        return "HN_SCC_HPVA"
     else:
-        return "HNSCC_HPVI"
+        return "HN_SCC_HPVI"
 
 
 def sample_site(row):

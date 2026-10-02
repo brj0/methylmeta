@@ -113,12 +113,15 @@ def methylation_class(row):
             "gallbladder",
             "Noninfiltrating intraductal papillary adenocarcinoma",
         ): None,
-        ("head and neck", "Squamous cell carcinoma, NOS"): "HNSCC",
+        ("head and neck", "Squamous cell carcinoma, NOS"): "HN_SCC",
         (
             "head and neck",
             "Squamous cell carcinoma, keratinizing, NOS",
-        ): "HNSCC",
-        ("head and neck", "Squamous cell carcinoma, metastatic, NOS"): "HNSCC",
+        ): "HN_SCC",
+        (
+            "head and neck",
+            "Squamous cell carcinoma, metastatic, NOS",
+        ): "HN_SCC",
         ("kidney", "Clear cell adenocarcinoma, NOS"): "RCC_CC",
         ("kidney", "Medullary carcinoma, NOS"): "RCC_SMARCB1",
         ("kidney", "Nephroblastoma, NOS"): "WILMS",

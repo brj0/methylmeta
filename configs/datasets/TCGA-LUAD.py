@@ -112,7 +112,7 @@ def methylation_class(row):
         ("female_genital", "Granulosa cell tumor, malignant"): "GRAN_ADULT",
         # basal cell carcinoma is a skin entity of the head/face region
         ("head_neck", "Basal cell carcinoma, NOS"): "BCC",
-        ("head_neck", "Squamous cell carcinoma, NOS"): "HNSCC",
+        ("head_neck", "Squamous cell carcinoma, NOS"): "HN_SCC",
         ("kidney", "Adenocarcinoma, NOS"): "RCC",
         ("kidney", "Clear cell adenocarcinoma, NOS"): "RCC_CC",
         ("kidney", "Clear cell carcinoma"): "RCC_CC",

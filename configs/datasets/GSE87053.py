@@ -23,8 +23,8 @@ def methylation_class(row):
     if row["tissue type"] == "Adjacent Normal":
         return "CTRL_HN"
     mapping = {
-        "HPV_Positive": "HNSCC_HPVA",
-        "HPV_Negative": "HNSCC_HPVI",
+        "HPV_Positive": "HN_SCC_HPVA",
+        "HPV_Negative": "HN_SCC_HPVI",
     }
     return mapping[row["hpv status"]]
 

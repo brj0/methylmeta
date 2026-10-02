@@ -29,8 +29,8 @@ def diagnosis(row):
 def methylation_class(row):
     value = row["tissue"]
     mapping = {
-        "HPV+ HNSCC tumor": "HNSCC_HPVA",
-        "HPV- HNSCC tumor": "HNSCC_HPVI",
+        "HPV+ HNSCC tumor": "HN_SCC_HPVA",
+        "HPV- HNSCC tumor": "HN_SCC_HPVI",
     }
     return mapping[value]
 

@@ -21,7 +21,7 @@ def diagnosis(row):
 
 def methylation_class(row):
     mapping = {
-        "Non-tumour prostate tissue": "CTRL_PROST",
+        "Non-tumour prostate tissue": "CTRL_PROS",
         "Prostate tumour": "PROS_ADCA",
         "Presumably prostate tumour": "PROS_ADCA",
         "Unknown": None,

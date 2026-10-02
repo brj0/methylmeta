@@ -18,7 +18,7 @@ def methylation_class(row):
     value = row["Characteristics[sampling site]"]
     mapping = {
         "neoplasm": "PROS_ADCA",
-        "normal tissue adjacent to tumour": "CTRL_PROST",
+        "normal tissue adjacent to tumour": "CTRL_PROS",
     }
     return mapping[value]
 

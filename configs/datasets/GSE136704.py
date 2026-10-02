@@ -23,7 +23,7 @@ def methylation_class(row):
     value = row["disease state"]
     mapping = {
         "Normal": "CTRL_HN",
-        "Cancer": "HNSCC",
+        "Cancer": "HN_SCC",
     }
     return mapping[value]
 

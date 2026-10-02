@@ -26,7 +26,7 @@ def diagnosis(row):
 
 def methylation_class(row):
     if _is_normal(row):
-        return "CTRL_PROST"
+        return "CTRL_PROS"
     organ_map = {
         "Prostate gland": "prostate",
         "Bone, NOS": "bone",
@@ -54,7 +54,7 @@ def methylation_class(row):
         ("prostate", "Infiltrating duct carcinoma, NOS"): "PROS_DUCT",
         # prior, subsequent or synchronous primaries of the same patient
         ("head_neck", "Basal cell carcinoma, NOS"): "BCC",
-        ("head_neck", "Squamous cell carcinoma, NOS"): "HNSCC",
+        ("head_neck", "Squamous cell carcinoma, NOS"): "HN_SCC",
         ("skin", "Basal cell carcinoma, NOS"): "BCC",
         ("skin", "Basaloid squamous cell carcinoma"): "SKIN_SCC",
         ("skin", "Squamous cell carcinoma, NOS"): "SKIN_SCC",

@@ -58,7 +58,7 @@ def methylation_class(row):
         ("Liver", "Liver"): "CTRL_LIV",
         ("Lung", "SCLC"): "SCLC",
         ("Prostate", "PC"): "PROS_ADCA",
-        ("Prostate", "Prostate"): "CTRL_PROST",
+        ("Prostate", "Prostate"): "CTRL_PROS",
     }
     organ = organ_mapping[row["Source"]]
     return class_mapping[(organ, _prefix(row))]

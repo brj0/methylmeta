@@ -22,9 +22,9 @@ def methylation_class(row):
     mapping = {
         "Splenomegaly, FFPE": "CTRL_NOS",
         "immunodeficiency-associated Burkitt lymphoma, "
-        "FFPE, EBV-negative": "BURK_EBVN",
+        "FFPE, EBV-negative": "BURK_EBV_NEG",
         "immunodeficiency-associated Burkitt lymphoma, "
-        "FFPE, EBV-positive": "BURK_EBVP",
+        "FFPE, EBV-positive": "BURK_EBV_POS",
     }
     return mapping[value]
 

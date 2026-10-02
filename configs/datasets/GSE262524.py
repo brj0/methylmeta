@@ -26,7 +26,7 @@ def diagnosis(row):
 def methylation_class(row):
     mapping = {
         "Tumor": "PROS_ADCA",
-        "Adjacent Tumor": "CTRL_PROST",
+        "Adjacent Tumor": "CTRL_PROS",
     }
     return mapping[row["Source"]]
 

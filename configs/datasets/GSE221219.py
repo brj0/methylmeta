@@ -19,7 +19,7 @@ def diagnosis(row):
 
 def methylation_class(row):
     mapping = {
-        "Benign adjacent prostate": "CTRL_PROST",
+        "Benign adjacent prostate": "CTRL_PROS",
         "Primary prostate tumor": "PROS_ADCA",
     }
     return mapping[row["tissue"]]

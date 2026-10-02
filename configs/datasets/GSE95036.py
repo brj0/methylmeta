@@ -22,8 +22,8 @@ def diagnosis(row):
 def methylation_class(row):
     value = row["hpv status"]
     mapping = {
-        "Positive": "HNSCC_HPVA",
-        "Negative": "HNSCC_HPVI",
+        "Positive": "HN_SCC_HPVA",
+        "Negative": "HN_SCC_HPVI",
     }
     return mapping[value]
 

@@ -17,7 +17,7 @@ def diagnosis(row):
 def methylation_class(row):
     value = row["sample_group"]
     mapping = {
-        "1_Tumor": "HNSCC",
+        "1_Tumor": "HN_SCC",
         "2_OPL": "OML",
         "3_Normal": "CTRL_HN",
     }

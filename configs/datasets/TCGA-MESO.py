@@ -44,7 +44,7 @@ def methylation_class(row):
     }
     # diagnoses that name no lineage, classified by their organ of origin
     class_map = {
-        ("head_neck", "Squamous cell carcinoma, NOS"): "HNSCC",
+        ("head_neck", "Squamous cell carcinoma, NOS"): "HN_SCC",
         ("prostate", "Adenocarcinoma, NOS"): "PROS_ADCA",
     }
     organ = organ_map[row["diagnoses.tissue_or_organ_of_origin"]]

@@ -25,9 +25,9 @@ def diagnosis(row):
 def methylation_class(row):
     title = row["Title"]
     if "_HPV_Positive" in title:
-        return "HNSCC_HPVA"
+        return "HN_SCC_HPVA"
     if "_HPV_Negative" in title:
-        return "HNSCC_HPVI"
+        return "HN_SCC_HPVI"
     return None
 
 

@@ -15,7 +15,7 @@ def diagnosis(row):
 
 
 def methylation_class(row):
-    return "HNSCC_HPVI"
+    return "HN_SCC_HPVI"
 
 
 def sample_site(row):

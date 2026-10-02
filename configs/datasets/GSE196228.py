@@ -43,7 +43,7 @@ def methylation_class(row):
         "ACC": "ADCC",
         "ADC": "SN_ADCA",
         "ALV RMS": "RMS_ALV",
-        "BP SSARC": "BSNS",
+        "BP SSARC": "SN_BIPHEN_SARC",
         "CPH": "SN_GPC",
         "CTRL": "CTRL_SN",
         "EMB RMS": "RMS_EMB",

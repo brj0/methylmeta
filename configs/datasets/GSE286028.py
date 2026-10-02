@@ -21,13 +21,13 @@ def methylation_class(row):
     value = row["Description"]
     mapping = {
         "Lymphoblastoid cell lines (LCL)": "CTRL_LYMPH",
-        "endemic Burkitt lymphoma, cryo-preserved, EBV-negative": "BURK_EBVN",
-        "endemic Burkitt lymphoma, cryo-preserved, EBV-positive": "BURK_EBVP",
+        "endemic Burkitt lymphoma, cryo-preserved, EBV-negative": "BURK_EBV_NEG",
+        "endemic Burkitt lymphoma, cryo-preserved, EBV-positive": "BURK_EBV_POS",
         "endemic Burkitt lymphoma-derived cell line": "BURK",
-        "sporadic Burkitt lymphoma, FFPE, EBV-negative": "BURK_EBVN",
-        "sporadic Burkitt lymphoma, FFPE, EBV-positive": "BURK_EBVP",
-        "sporadic Burkitt lymphoma, cryo-preserved, EBV-negative": "BURK_EBVN",
-        "sporadic Burkitt lymphoma, cryo-preserved, EBV-positive": "BURK_EBVP",
+        "sporadic Burkitt lymphoma, FFPE, EBV-negative": "BURK_EBV_NEG",
+        "sporadic Burkitt lymphoma, FFPE, EBV-positive": "BURK_EBV_POS",
+        "sporadic Burkitt lymphoma, cryo-preserved, EBV-negative": "BURK_EBV_NEG",
+        "sporadic Burkitt lymphoma, cryo-preserved, EBV-positive": "BURK_EBV_POS",
         "sporadic Burkitt lymphoma, cryo-preserved, EBV-unknown": "BURK",
         "sporadic Burkitt lymphoma-derived cell line": "BURK",
     }

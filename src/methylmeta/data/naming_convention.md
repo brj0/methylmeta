@@ -93,7 +93,7 @@ STEP 7 — Populate fields (Rules 10-12)
 
 If an entity already has an acronym pathologists say out loud as one
 word — `IMT`, `GIST`, `DFSP`, `MPNST`, `SFT`, `EWS`, `RMS`, `ALCL`,
-`DLBCL`, `HNSCC`, `NSCLC`, `PEC` (PEComa) — it is used as-is. **Never**
+`DLBCL`, `NSCLC`, `PEC` (PEComa) — it is used as-is. **Never**
 decompose or "systematize" a code that is already canonical, even if it
 breaks the grammar or direction rules below. This rule outranks
 everything else in this document — it's the one true hard override.
@@ -174,7 +174,7 @@ is "lineage-anchored" from published methylation results.
 
 ### Always exempt
 
-Rule 1 acronyms (`GIST`, `IMT`, `DFSP`, `HNSCC`, etc.) and canonical
+Rule 1 acronyms (`GIST`, `IMT`, `DFSP`, etc.) and canonical
 organ-baked names (`RCC`, `HCC`, `NSCLC`, etc.) are unaffected by the
 constructed-code grammar.
 

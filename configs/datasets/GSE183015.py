@@ -26,7 +26,7 @@ def methylation_class(row):
     mapping = {
         ("buffy coat", "normal"): "CTRL_BLOOD",
         ("prostate tissue", "cancer"): "PROS_ADCA",
-        ("prostate tissue", "normal"): "CTRL_PROST",
+        ("prostate tissue", "normal"): "CTRL_PROS",
     }
     return mapping[(row["tissue"], row["sample type"])]
 

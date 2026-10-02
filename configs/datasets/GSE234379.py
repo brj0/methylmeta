@@ -16,9 +16,9 @@ def diagnosis(row):
 
 def methylation_class(row):
     if row["hpv status"] == "Negative" and "carcinoma" in row["Source"]:
-        return "HNSCC_HPVI"
+        return "HN_SCC_HPVI"
     elif row["hpv status"] == "Positive" and "carcinoma" in row["Source"]:
-        return "HNSCC_HPVA"
+        return "HN_SCC_HPVA"
     else:
         return "CTRL_HN"
 

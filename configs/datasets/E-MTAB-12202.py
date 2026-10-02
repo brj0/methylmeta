@@ -34,7 +34,7 @@ def methylation_class(row):
             return "PVL"
         return "OML"
     if disease == "oral squamous cell carcinoma":
-        return "HNSCC"
+        return "HN_SCC"
     return None
 
 
