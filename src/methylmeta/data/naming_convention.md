@@ -322,7 +322,7 @@ inventing an inconsistent one-off elsewhere.
 | `_CSARC`      | carcinosarcoma                                  |
 | `_CYSTADCA`   | cystadenocarcinoma                              |
 | `_CYSTAD`     | cystadenoma                                     |
-| `_HART`       | hamartoma                                       |
+| `_HAM`        | hamartoma                                       |
 | `_HEM`        | haemangioma                                     |
 | `_HG` / `_LG` | high-grade / low-grade                          |
 | `_HYP`        | hyperplasia                                     |

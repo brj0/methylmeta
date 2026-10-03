@@ -67,7 +67,7 @@ def methylation_class(row):
         "Breast_DCIS": "DCIS",
         "Pancreas_Normal": "CTRL_PAN",
         "PancreasN": "CTRL_PAN",
-        "Pancreas_Cancer": "PAN_CA",
+        "Pancreas_Cancer": "PDAC",
         "Pancreas_IPMN": "IPMN",
         "Pancreas_LCC": None,
         "PancreasNET": "PAN_NET",

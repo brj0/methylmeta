@@ -33,6 +33,15 @@ tumor_types:
     - glioma
     - low_grade_glioma
 
+  ACICC:
+    name: Salivary Gland Acinic Cell Carcinoma
+    who_volume:
+    site:
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - salivary_gland_tumor
+
   ACQ_ELAST_HEM:
     name: Acquired elastotic haemangioma
     who_volume: Skin Tumours
@@ -1648,7 +1657,7 @@ tumor_types:
     site: Breast
     lineage_broad: Epithelial
     lineage_detail:
-    parent: SG_ACIN_CA
+    parent: ACICC
     families:
     - breast_tumor
     - salivary_gland_like_tumor
@@ -2013,7 +2022,7 @@ tumor_types:
     - breast_tumor
     - fibroepithelial_tumor
 
-  BR_HART:
+  BR_HAM:
     name: Hamartoma of the breast
     who_volume: Breast Tumours
     site: Breast
@@ -2119,7 +2128,7 @@ tumor_types:
     site: Breast
     lineage_broad: Epithelial
     lineage_detail:
-    parent: PLEO_AD_MYO
+    parent: PLEO_MYO
     families:
     - breast_tumor
     - salivary_gland_like_tumor
@@ -2175,7 +2184,7 @@ tumor_types:
     - breast_tumor
     - benign_epithelial_proliferation
 
-  SN_BIPHEN_SARC:
+  BSNS:
     name: Biphenotypic sinonasal sarcoma
     who_volume: Head and Neck Tumours
     site:
@@ -2459,17 +2468,6 @@ tumor_types:
     lineage_detail: Vascular
     families:
     - vascular_malformation
-
-  CARC_CUNIC:
-    name: Carcinoma cuniculatum
-    who_volume: Head and Neck Tumours
-    site: Oral cavity
-    lineage_broad: Epithelial
-    lineage_detail:
-    parent: ORAL_SCC_VERR
-    families:
-    - carcinoma
-    - squamous_cell_carcinoma
 
   CAST:
     name: Castleman disease
@@ -3026,7 +3024,7 @@ tumor_types:
     - ocular_tumor
     - adenoma
 
-  CIL_GN_HART:
+  CIL_GN_HAM:
     name: Glioneuronal hamartoma of the ciliary body
     who_volume: Eye and Orbit Tumours
     site: Ciliary body
@@ -4385,6 +4383,17 @@ tumor_types:
     families:
     - normal_tissue
 
+  CUNIC_CA:
+    name: Carcinoma cuniculatum
+    who_volume: Head and Neck Tumours
+    site: Oral cavity
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: OR_SCC_VERR
+    families:
+    - carcinoma
+    - squamous_cell_carcinoma
+
   CUT_LYM:
     name: Cutaneous lymphoma
     who_volume: Skin Tumours
@@ -5219,18 +5228,6 @@ tumor_types:
     lineage_detail: T/NK
     families:
     - mature_t_nk
-
-  ENMZL_MALT:
-    name: Extranodal marginal zone lymphoma of mucosa-associated lymphoid tissue
-    who_volume: Haematolymphoid Tumours
-    site: Extranodal
-    lineage_broad: Hematolymphoid
-    lineage_detail: B-cell
-    parent: MZL
-    families:
-    - lymphoma
-    - b_cell_lymphoma
-    - marginal_zone_lymphoma
 
   EPIB_CHOR:
     name: Epibulbar choristoma
@@ -7086,15 +7083,6 @@ tumor_types:
     - cns_tumor
     - vascular_tumor
 
-  SN_HMSC:
-    name: HPV-Related Multiphenotypic Sinonasal Carcinoma
-    who_volume: Head and Neck Tumours
-    site:
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - sinonasal_tumor
-
   HN_NET:
     name: Neuroendocrine tumour (head and neck)
     who_volume: Head and Neck Tumours
@@ -7104,12 +7092,12 @@ tumor_types:
     families:
     - neuroendocrine_tumor
 
-  HN_PGG:
+  HN_PGL:
     name: Head and neck paraganglioma
     who_volume: Head and Neck Tumours
     site: Head and neck
     lineage_broad: Endocrine
-    parent: PGG
+    parent: PGL
     lineage_detail:
     families:
     - paraganglioma
@@ -7250,7 +7238,7 @@ tumor_types:
     - heart_tumor
     - cyst
 
-  HRT_COND_HART:
+  HRT_COND_HAM:
     name: Conduction system hamartoma
     who_volume: Thoracic Tumours
     site: Heart
@@ -7318,7 +7306,7 @@ tumor_types:
     - soft_tissue_tumor
     - adipocytic_tumor
 
-  HRT_LIPO_HART:
+  HRT_LIPO_HAM:
     name: Lipomatous hamartoma of the atrioventricular valve
     who_volume: Thoracic Tumours
     site: Heart
@@ -7342,7 +7330,7 @@ tumor_types:
     - sarcoma
     - smooth_muscle_tumor
 
-  HRT_MES_HART:
+  HRT_MES_HAM:
     name: Mesenchymal cardiac hamartoma
     who_volume: Thoracic Tumours
     site: Heart
@@ -7352,7 +7340,7 @@ tumor_types:
     - heart_tumor
     - hamartoma
 
-  HRT_MYO_HART:
+  HRT_MYO_HAM:
     name: Hamartoma of mature cardiac myocytes
     who_volume: Thoracic Tumours
     site: Heart
@@ -8849,7 +8837,7 @@ tumor_types:
     - lung_tumor
     - carcinoma
 
-  LU_HART:
+  LU_HAM:
     name: Pulmonary hamartoma
     who_volume: Thoracic Tumours
     site: Lung
@@ -9121,6 +9109,18 @@ tumor_types:
     - skin_adnexal_tumor
     - carcinoma
 
+  MALT:
+    name: Extranodal marginal zone lymphoma of mucosa-associated lymphoid tissue
+    who_volume: Haematolymphoid Tumours
+    site: Extranodal
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-cell
+    parent: MZL
+    families:
+    - lymphoma
+    - b_cell_lymphoma
+    - marginal_zone_lymphoma
+
   MAST:
     name: Systemic Mastocytosis
     who_volume: Haematolymphoid Tumours
@@ -9260,7 +9260,7 @@ tumor_types:
     - b_cell_lymphoma
     - mantle_cell_lymphoma
 
-  MCL_SOX11N:
+  MCL_SOX11_NEG:
     name: Mantle cell lymphoma (SOX11-)
     who_volume: Haematolymphoid Tumours
     site: Lymphoid
@@ -9269,7 +9269,7 @@ tumor_types:
     families:
     - mature_b_small_cell
 
-  MCL_SOX11P:
+  MCL_SOX11_POS:
     name: Mantle cell lymphoma (SOX11+)
     who_volume: Haematolymphoid Tumours
     site: Lymphoid
@@ -10500,6 +10500,16 @@ tumor_types:
     - b_cell_lymphoma
     - dlbcl
 
+  NASAL_CM_HAM:
+    name: Nasal chondromesenchymal hamartoma
+    who_volume: Head and Neck Tumours
+    site: Sinonasal tract
+    lineage_broad: Mesenchymal
+    lineage_detail:
+    families:
+    - sinonasal_tumor
+    - hamartoma
+
   NBL:
     name: Neuroblastoma
     who_volume:
@@ -10518,16 +10528,6 @@ tumor_types:
     lineage_detail: Neuroepithelial
     families:
     - neuroepithelial_tumor
-
-  NASAL_CM_HAM:
-    name: Nasal chondromesenchymal hamartoma
-    who_volume: Head and Neck Tumours
-    site: Sinonasal tract
-    lineage_broad: Mesenchymal
-    lineage_detail:
-    families:
-    - sinonasal_tumor
-    - hamartoma
 
   NCRISTIC:
     name: Superficial FET-ETS family neurocristic tumour
@@ -10880,7 +10880,7 @@ tumor_types:
     - bone_tumor
     - benign_tumor
 
-  NP_PAP_ADCA:
+  NP_ADCA_PAP:
     name: Low-grade nasopharyngeal papillary adenocarcinoma
     who_volume: Head and Neck Tumours
     site: Nasopharynx
@@ -11004,6 +11004,25 @@ tumor_types:
     families:
     - odontogenic_tumor
 
+  ODMYX:
+    name: Odontogenic myxoma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Jaw
+    lineage_broad: Mesenchymal
+    lineage_detail:
+    families:
+    - bone_tumor
+    - odontogenic_tumor
+
+  ODONTOMA:
+    name: Odontoma
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - odontogenic_tumor
+
   ODSARC:
     name: Odontogenic sarcomas
     who_volume: Head and Neck Tumours
@@ -11013,15 +11032,6 @@ tumor_types:
     families:
     - odontogenic_tumor
     - sarcoma
-
-  ODT:
-    name: Odontoma
-    who_volume: Head and Neck Tumours
-    site: Jaw
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - odontogenic_tumor
 
   OESTOCH:
     name: Osteochondroma
@@ -11120,16 +11130,6 @@ tumor_types:
     families:
     - premalignant_lesion
 
-  OMY:
-    name: Odontogenic myxoma
-    who_volume: Soft Tissue and Bone Tumours
-    site: Jaw
-    lineage_broad: Mesenchymal
-    lineage_detail:
-    families:
-    - bone_tumor
-    - odontogenic_tumor
-
   ONB:
     name: Olfactory Neuroblastoma
     who_volume: Head and Neck Tumours
@@ -11193,15 +11193,6 @@ tumor_types:
     - skin_tumor
     - nail_tumor
 
-  OPHP:
-    name: Hamartomatous polyps (oropharynx)
-    who_volume: Head and Neck Tumours
-    site: Oropharynx
-    lineage_broad: Mesenchymal
-    lineage_detail:
-    families:
-    - hamartoma
-
   OPMD:
     name: Oral potentially malignant disorders
     who_volume: Head and Neck Tumours
@@ -11233,15 +11224,14 @@ tumor_types:
     - low_grade_glioma
     - pilocytic_astrocytoma
 
-  ORAL_SCC_VERR:
-    name: Verrucous carcinoma of the oral cavity and mobile tongue
+  OP_HAM:
+    name: Hamartomatous polyps (oropharynx)
     who_volume: Head and Neck Tumours
-    site: Oral cavity / tongue
-    lineage_broad: Epithelial
+    site: Oropharynx
+    lineage_broad: Mesenchymal
     lineage_detail:
     families:
-    - carcinoma
-    - squamous_cell_carcinoma
+    - hamartoma
 
   ORBIT_GLH:
     name: Orbital glial heterotopia
@@ -11253,7 +11243,7 @@ tumor_types:
     - ocular_tumor
     - hamartoma
 
-  ORBIT_MES_HART:
+  ORBIT_MES_HAM:
     name: Mesenchymal hamartoma of the orbit
     who_volume: Eye and Orbit Tumours
     site: Orbit
@@ -11290,6 +11280,25 @@ tumor_types:
     parent: OR_DYS
     families:
     - precursor_lesion
+
+  OR_PAP:
+    name: Squamous papilloma
+    who_volume: Head and Neck Tumours
+    site: Oral cavity
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - papilloma
+
+  OR_SCC_VERR:
+    name: Verrucous carcinoma of the oral cavity and mobile tongue
+    who_volume: Head and Neck Tumours
+    site: Oral cavity / tongue
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - carcinoma
+    - squamous_cell_carcinoma
 
   OS:
     name: Osteosarcoma, NOS
@@ -11921,7 +11930,7 @@ tumor_types:
     - embryonal_tumor
 
   PAN_CA:
-    name: Pancreatic ductal adenocarcinoma
+    name: Pancreatic carcinoma, NOS
     who_volume: Digestive System Tumours
     site: Pancreas
     lineage_broad: Epithelial
@@ -12319,6 +12328,17 @@ tumor_types:
     - lymphoma
     - t_cell_lymphoma
 
+  PDAC:
+    name: Pancreatic ductal adenocarcinoma
+    who_volume: Digestive System Tumours
+    site: Pancreas
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: PAN_CA
+    families:
+    - gastrointestinal_tumor
+    - carcinoma
+
   PDS:
     name: Pleomorphic dermal sarcoma
     who_volume: Skin Tumours
@@ -12472,7 +12492,7 @@ tumor_types:
     - soft_tissue_tumor
     - fibrohistiocytic_tumor
 
-  PGG:
+  PGL:
     name: Paraganglioma
     who_volume: Endocrine and Neuroendocrine Tumours
     site: Extra-adrenal paraganglia
@@ -12482,18 +12502,18 @@ tumor_types:
     - paraganglioma
     - neuroendocrine_tumor
 
-  PGG_COMPOSITE:
+  PGL_COMPOSITE:
     name: Composite phaeochromocytomas and paragangliomas
     who_volume: Endocrine and Neuroendocrine Tumours
     site: Adrenal medulla / paraganglia
     lineage_broad: Endocrine
     lineage_detail:
-    parent: PGG
+    parent: PGL
     families:
     - paraganglioma
     - neuroendocrine_tumor
 
-  PGG_EXAD:
+  PGL_EXAD:
     name: Extra-adrenal paraganglioma
     who_volume:
     site: Peripheral nervous system
@@ -12503,7 +12523,7 @@ tumor_types:
     - paraganglioma
     - neuroendocrine_tumor
 
-  PGG_NC:
+  PGL_NC:
     name: Spinal paraganglioma, non-CIMP
     who_volume: Central Nervous System Tumours
     site: Spinal cord
@@ -12513,24 +12533,24 @@ tumor_types:
     - paraganglioma
     - neuroendocrine_tumor
 
-  PGG_PARASYM:
+  PGL_PARASYM:
     name: Parasympathetic paraganglioma
     who_volume: Endocrine and Neuroendocrine Tumours
     site: Extra-adrenal paraganglia
     lineage_broad: Endocrine
     lineage_detail:
-    parent: PGG
+    parent: PGL
     families:
     - paraganglioma
     - neuroendocrine_tumor
 
-  PGG_SYMP:
+  PGL_SYMP:
     name: Sympathetic paraganglioma
     who_volume: Endocrine and Neuroendocrine Tumours
     site: Extra-adrenal paraganglia
     lineage_broad: Endocrine
     lineage_detail:
-    parent: PGG
+    parent: PGL
     families:
     - paraganglioma
     - neuroendocrine_tumor
@@ -12905,16 +12925,7 @@ tumor_types:
     site:
     lineage_broad: Epithelial
     lineage_detail:
-    parent: PLEO_AD_MYO
-    families:
-    - salivary_gland_tumor
-
-  PLEO_AD_MYO:
-    name: Salivary Gland Myoepithelioma / Pleomorphic Adenoma
-    who_volume:
-    site:
-    lineage_broad: Epithelial
-    lineage_detail:
+    parent: PLEO_MYO
     families:
     - salivary_gland_tumor
 
@@ -12928,6 +12939,15 @@ tumor_types:
     - skin_tumor
     - soft_tissue_tumor
     - fibroblastic_tumor
+
+  PLEO_MYO:
+    name: Salivary Gland Myoepithelioma / Pleomorphic Adenoma
+    who_volume:
+    site:
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - salivary_gland_tumor
 
   PLEX_ADULT:
     name: Choroid plexus tumor, adult
@@ -13726,16 +13746,6 @@ tumor_types:
     families:
     - histiocytic_neoplasm
 
-  RESP_HAM:
-    name: Respiratory epithelial adenomatoid hamartoma
-    who_volume: Head and Neck Tumours
-    site: Sinonasal tract
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - sinonasal_tumor
-    - hamartoma
-
   REN_ANASARC:
     name: Anaplastic sarcoma of the kidney
     who_volume: Urinary and Male Genital Tumours
@@ -13845,6 +13855,16 @@ tumor_types:
     families:
     - renal_tumor
     - perivascular_tumor
+
+  RESP_HAM:
+    name: Respiratory epithelial adenomatoid hamartoma
+    who_volume: Head and Neck Tumours
+    site: Sinonasal tract
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - sinonasal_tumor
+    - hamartoma
 
   RETE_AD:
     name: Adenoma of the collecting ducts and rete testis
@@ -14036,7 +14056,7 @@ tumor_types:
     - ocular_tumor
     - reactive
 
-  RPE_HART:
+  RPE_HAM:
     name: Hamartoma of the retinal pigment epithelium
     who_volume: Eye and Orbit Tumours
     site: Retinal pigment epithelium
@@ -14269,7 +14289,7 @@ tumor_types:
     - peripheral_nerve_sheath_tumor
     - benign_tumor
 
-  SCHW_HART:
+  SCHW_HAM:
     name: Schwann cell hamartoma
     who_volume: Soft Tissue and Bone Tumours
     site: Gastrointestinal tract
@@ -14361,6 +14381,15 @@ tumor_types:
     - genital_tumor
     - sex_cord_stromal_tumor
 
+  SDC:
+    name: Salivary Duct Carcinoma
+    who_volume: Head and Neck Tumours
+    site:
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - salivary_gland_tumor
+
   SDRPL:
     name: Splenic diffuse red pulp small B-cell lymphoma
     who_volume: Haematolymphoid Tumours
@@ -14445,6 +14474,16 @@ tumor_types:
     - germ_cell_tumor
     - testicular_tumor
 
+  SEROM_HAM:
+    name: Seromucinous hamartoma
+    who_volume: Head and Neck Tumours
+    site: Sinonasal tract
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - sinonasal_tumor
+    - hamartoma
+
   SETTLE:
     name: Spindle epithelial tumour with thymus-like elements
     who_volume: Endocrine and Neuroendocrine Tumours
@@ -14493,15 +14532,6 @@ tumor_types:
     families:
     - hamartoma
 
-  SG_ACIN_CA:
-    name: Salivary Gland Acinic Cell Carcinoma
-    who_volume:
-    site:
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - salivary_gland_tumor
-
   SG_BC_AD:
     name: Basal cell adenoma
     who_volume: Head and Neck Tumours
@@ -14512,7 +14542,7 @@ tumor_types:
     - salivary_gland_tumor
     - adenoma
 
-  SG_BC_CA:
+  SG_BC_ADCA:
     name: Salivary Gland Basal Cell Adenocarcinoma
     who_volume: Head and Neck Tumours
     site: Salivary gland
@@ -14521,6 +14551,15 @@ tumor_types:
     families:
     - salivary_gland_tumor
     - carcinoma
+
+  SG_BL:
+    name: Sialoblastoma
+    who_volume: Head and Neck Tumours
+    site:
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - salivary_gland_tumor
 
   SG_CANL_AD:
     name: Salivary Gland Canalicular Adenoma
@@ -14531,7 +14570,7 @@ tumor_types:
     families:
     - salivary_gland_tumor
 
-  SG_CRIB_CA:
+  SG_CRIB_ADCA:
     name: Cribriform Adenocarcinoma
     who_volume: Head and Neck Tumours
     site: Salivary gland
@@ -14559,15 +14598,6 @@ tumor_types:
     families:
     - salivary_gland_tumor
 
-  SG_DUCT_CA:
-    name: Salivary Duct Carcinoma
-    who_volume: Head and Neck Tumours
-    site:
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - salivary_gland_tumor
-
   SG_DUCT_PAP:
     name: Salivary Gland Ductal Papillomas
     who_volume:
@@ -14577,7 +14607,7 @@ tumor_types:
     families:
     - salivary_gland_tumor
 
-  SG_EPMYO_CA:
+  SG_EPIMYO_CA:
     name: Epithelial-myoepithelial carcinoma
     who_volume: Head and Neck Tumours
     site: Salivary gland
@@ -14605,7 +14635,7 @@ tumor_types:
     families:
     - salivary_gland_tumor
 
-  SG_INTRAD_CA:
+  SG_INTRA_CA:
     name: Salivary Gland Intraductal Carcinoma
     who_volume:
     site:
@@ -14632,7 +14662,7 @@ tumor_types:
     families:
     - salivary_gland_tumor
 
-  SG_MIX:
+  SG_MIX_GRP:
     name: Salivary gland mixed group tumor
     who_volume: Head and Neck Tumours
     site: Salivary gland
@@ -14665,24 +14695,24 @@ tumor_types:
     site:
     lineage_broad: Epithelial
     lineage_detail:
-    parent: PLEO_AD_MYO
+    parent: PLEO_MYO
     families:
     - salivary_gland_tumor
     - myoepithelial_tumor
 
-  SG_MYOEP_CA:
-    name: Salivary Gland Myoepithelial Carcinoma
-    who_volume:
-    site:
+  SG_MYOEP_5P5Q:
+    name: Salivary Gland Biphasic Myoepithelial Carcinoma with 5p/5q Loss
+    who_volume: Head and Neck Tumours
+    site: Salivary gland
     lineage_broad: Epithelial
     lineage_detail:
     families:
     - salivary_gland_tumor
 
-  SG_MYOEP_CA_5P5Q:
-    name: Salivary Gland Biphasic Myoepithelial Carcinoma with 5p/5q Loss
-    who_volume: Head and Neck Tumours
-    site: Salivary gland
+  SG_MYOEP_CA:
+    name: Salivary Gland Myoepithelial Carcinoma
+    who_volume:
+    site:
     lineage_broad: Epithelial
     lineage_detail:
     families:
@@ -14716,7 +14746,7 @@ tumor_types:
     families:
     - squamous_lesion
 
-  SG_SCLMIC_CA:
+  SG_SCLMIC_ADCA:
     name: Sclerosing Microcystic Adenocarcinoma
     who_volume: Head and Neck Tumours
     site:
@@ -14743,7 +14773,7 @@ tumor_types:
     families:
     - salivary_gland_tumor
 
-  SG_SEB_CA:
+  SG_SEB_ADCA:
     name: Sebaceous Adenocarcinoma
     who_volume: Head and Neck Tumours
     site:
@@ -14761,7 +14791,16 @@ tumor_types:
     families:
     - salivary_gland_tumor
 
-  SG_SIALPAP:
+  SG_SIALO_LIPO:
+    name: Sialolipoma
+    who_volume: Head and Neck Tumours
+    site:
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - salivary_gland_tumor
+
+  SG_SIAL_PAP:
     name: Sialadenoma Papilliferum
     who_volume: Head and Neck Tumours
     site:
@@ -14773,24 +14812,6 @@ tumor_types:
   SG_STR_AD:
     name: Striated Duct Adenoma
     who_volume:
-    site:
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - salivary_gland_tumor
-
-  SIALOLIPO:
-    name: Sialolipoma
-    who_volume: Head and Neck Tumours
-    site:
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - salivary_gland_tumor
-
-  SIALO_BL:
-    name: Sialoblastoma
-    who_volume: Head and Neck Tumours
     site:
     lineage_broad: Epithelial
     lineage_detail:
@@ -15369,7 +15390,7 @@ tumor_types:
     - b_cell_lymphoma
     - marginal_zone_lymphoma
 
-  SM_HART:
+  SM_HAM:
     name: Smooth muscle hamartoma
     who_volume: Skin Tumours
     site: Skin
@@ -15437,6 +15458,17 @@ tumor_types:
     families:
     - soft_tissue_tumor
 
+  SN_CA_SMARCB1:
+    name: Sinonasal SMARCB1-deficient carcinoma
+    who_volume: Head and Neck Tumours
+    site: Sinonasal tract
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - sinonasal_tumor
+    - carcinoma
+    - smarcb1_deficient_tumor
+
   SN_GPC:
     name: Sinonasal Glomangiopericytoma
     who_volume: Head and Neck Tumours
@@ -15445,6 +15477,15 @@ tumor_types:
     lineage_detail:
     families:
     - perivascular_tumor
+
+  SN_HMSC:
+    name: HPV-Related Multiphenotypic Sinonasal Carcinoma
+    who_volume: Head and Neck Tumours
+    site:
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - sinonasal_tumor
 
   SN_NEC_IDH2:
     name: Sinonasal Neuroendocrine Carcinoma with IDH2 mutations
@@ -15502,27 +15543,6 @@ tumor_types:
     - carcinoma
     - squamous_cell_carcinoma
 
-  SN_SMARCB1:
-    name: Sinonasal SMARCB1-deficient carcinoma
-    who_volume: Head and Neck Tumours
-    site: Sinonasal tract
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - sinonasal_tumor
-    - carcinoma
-    - smarcb1_deficient_tumor
-
-  SEROM_HAM:
-    name: Seromucinous hamartoma
-    who_volume: Head and Neck Tumours
-    site: Sinonasal tract
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - sinonasal_tumor
-    - hamartoma
-
   SN_TCS:
     name: Teratocarcinosarcoma
     who_volume: Head and Neck Tumours
@@ -15570,15 +15590,6 @@ tumor_types:
     families:
     - odontogenic_tumor
 
-  SPAP:
-    name: Squamous papilloma
-    who_volume: Head and Neck Tumours
-    site: Oral cavity
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - papilloma
-
   SPERMATO:
     name: Spermatocytic tumour
     who_volume: Urinary and Male Genital Tumours
@@ -15621,7 +15632,7 @@ tumor_types:
     - melanocytic_tumor
     - spitz_tumor
 
-  SPL_HART:
+  SPL_HAM:
     name: Splenic hamartoma
     who_volume: Haematolymphoid Tumours
     site: Spleen

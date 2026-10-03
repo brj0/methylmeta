@@ -106,7 +106,7 @@ def methylation_class(row):
         "PXA": "PXA",
         "CHGL": "CHGL",
         "CHORDM": "CHORD",
-        "PGG, nC": "PGG_NC",
+        "PGG, nC": "PGL_NC",
         "ENB, A": "ONB_A",
         "ENB, B": "ONB_B",
         "LYMPHO": "CNSL",

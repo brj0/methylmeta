@@ -23,7 +23,7 @@ def diagnosis(row):
 
 def methylation_class(row):
     mapping = {
-        "PDAC sample": "PAN_CA",
+        "PDAC sample": "PDAC",
         "PT sample": "CTRL_PAN",
     }
     return mapping[row["Description"]]

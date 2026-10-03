@@ -19,12 +19,12 @@ def diagnosis(row):
 
 def methylation_class(row):
     mapping = {
-        "small cell MALT lymphoma": "ENMZL_MALT",
-        "large cell MALT lymphoma": "ENMZL_MALT",
+        "small cell MALT lymphoma": "MALT",
+        "large cell MALT lymphoma": "MALT",
         "composite lymphomas including both the large and small-cell "
-        "components": "ENMZL_MALT",
-        "small cell component of composite lymphoma": "ENMZL_MALT",
-        "large cell component of composite lymphoma": "ENMZL_MALT",
+        "components": "MALT",
+        "small cell component of composite lymphoma": "MALT",
+        "large cell component of composite lymphoma": "MALT",
     }
     return mapping[row["tissue"]]
 

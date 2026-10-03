@@ -170,7 +170,7 @@ def methylation_class(row):
         ("pancreas", "Carcinosarcoma, NOS"): "PAN_CA",
         # cholangiocarcinoma reported for a pancreatic primary
         ("pancreas", "Cholangiocarcinoma"): None,
-        ("pancreas", "Infiltrating duct carcinoma, NOS"): "PAN_CA",
+        ("pancreas", "Infiltrating duct carcinoma, NOS"): "PDAC",
         (
             "pancreas",
             "Intraductal papillary-mucinous carcinoma, invasive",

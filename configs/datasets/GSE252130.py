@@ -34,7 +34,7 @@ def diagnosis(row):
 
 def methylation_class(row):
     mapping = {
-        "PAAD": "PAN_CA",
+        "PAAD": "PDAC",
         "LUAD": "LU_ADCA",
         "UCEC": "ENDOM_CA",
         "STAD": "GAST_ADCA",

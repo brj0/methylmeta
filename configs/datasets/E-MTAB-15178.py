@@ -38,4 +38,4 @@ def tumor_grade(row):
 
 
 def methylation_class(row):
-    return "PGG"
+    return "PGL"

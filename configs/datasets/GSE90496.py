@@ -87,7 +87,7 @@ def methylation_class(row):
         "PLEX, AD": "PLEX_ADULT",
         "PLEX, PED A": "PLEX_PED_A",
         "PLEX, PED B": "PLEX_PED_B",
-        "PGG, nC": "PGG_NC",
+        "PGG, nC": "PGL_NC",
         "SCHW": "SCHW",
         "SCHW, MEL": "SCHW_MEL",
         "MNG": "MNG",

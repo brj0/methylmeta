@@ -28,8 +28,8 @@ def methylation_class(row):
     value = row["Characteristics[disease]"]
     mapping = {
         "pheochromocytoma": "PHEO",
-        "extra-adrenal paraganglioma": "PGG_EXAD",
-        "head and neck paraganglioma": "HN_PGG",
+        "extra-adrenal paraganglioma": "PGL_EXAD",
+        "head and neck paraganglioma": "HN_PGL",
         "normal": "CTRL_ADREN",
     }
     return mapping[value]

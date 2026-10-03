@@ -41,7 +41,7 @@ def methylation_class(row):
         "Upper limb, NOS": "skin",
     }
     class_map = {
-        ("pancreas", "Infiltrating duct carcinoma, NOS"): "PAN_CA",
+        ("pancreas", "Infiltrating duct carcinoma, NOS"): "PDAC",
         ("pancreas", "Adenocarcinoma, NOS"): "PAN_CA",
         ("pancreas", "Adenocarcinoma with mixed subtypes"): "PAN_CA",
         ("pancreas", "Mucinous adenocarcinoma"): "PAN_CA",

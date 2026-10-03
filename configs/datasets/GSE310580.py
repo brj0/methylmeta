@@ -42,7 +42,7 @@ def methylation_class(row):
     mapping = {
         "CRC": "CR_CA",
         "STAD": "GAST_ADCA",
-        "PAAD": "PAN_CA",
+        "PAAD": "PDAC",
         "CHOL": "CCA",
         "LUAD": "LU_ADCA",
         "ESCA": "ESO_ADCA",

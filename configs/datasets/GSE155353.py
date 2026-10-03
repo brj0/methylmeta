@@ -27,7 +27,7 @@ def diagnosis(row):
 def methylation_class(row):
     value = row["Description"]
     mapping = {
-        "Pamcreatic ductal adenocarcinoma": "PAN_CA",
+        "Pamcreatic ductal adenocarcinoma": "PDAC",
         "Non-cancerous pancreatic tissue": "CTRL_PAN",
     }
     return mapping[value]

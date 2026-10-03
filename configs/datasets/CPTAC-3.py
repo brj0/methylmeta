@@ -108,7 +108,7 @@ def methylation_class(row):
         ("kidney", "Urothelial carcinoma, NOS"): "URO_CA",
         ("lung", "Adenocarcinoma, NOS"): "LU_ADCA",
         ("lung", "Squamous cell carcinoma, NOS"): "LU_SCC",
-        ("pancreas", "Infiltrating duct carcinoma, NOS"): "PAN_CA",
+        ("pancreas", "Infiltrating duct carcinoma, NOS"): "PDAC",
         ("skin", "Malignant melanoma, NOS"): "SKIN_MEL",
         ("stomach", "Adenocarcinoma, NOS"): "GAST_ADCA",
         ("urethra", "Malignant melanoma, NOS"): "MUC_MEL",

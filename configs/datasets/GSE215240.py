@@ -139,7 +139,7 @@ def methylation_class(row):
         "Langerhans cell histiocytosis (LCH)": "LCH",
         "Neurofibroma": "NFIB",
         "Pineocytoma": "PINE_CYT",
-        "Paraganglioma": "PGG",
+        "Paraganglioma": "PGL",
         "Pineal parenchymal tumor of intermediate differentiation (PPTID)": "PINE_PPT",
         "Pituitary adenoma": "PIT_AD",
         "Angiocentric neuroepithelial tumor (ANET)": "ACG",

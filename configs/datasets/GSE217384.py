@@ -32,7 +32,7 @@ def diagnosis(row):
 
 def methylation_class(row):
     mapping = {
-        "PAAD": "PAN_CA",
+        "PAAD": "PDAC",
         "iCCA": "CCA_INT",
     }
     return mapping[_tumor(row)]

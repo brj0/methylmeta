@@ -19,7 +19,7 @@ def methylation_class(row):
     mapping = {
         "BCL, favor MZL": "MZL",
         "CLL/SLL": "CLL",
-        "EMZL": "ENMZL_MALT",
+        "EMZL": "MALT",
         "FL": "FL",
         "MCL": "MCL",
         "MZL": "MZL",
