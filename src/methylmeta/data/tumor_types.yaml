@@ -2188,7 +2188,7 @@ tumor_types:
     name: Biphenotypic sinonasal sarcoma
     who_volume: Head and Neck Tumours
     site:
-    lineage_broad: Epithelial
+    lineage_broad: Mesenchymal
     lineage_detail:
     families:
     - sinonasal_tumor
@@ -7092,6 +7092,15 @@ tumor_types:
     - cns_tumor
     - vascular_tumor
 
+  HMSC:
+    name: HPV-Related Multiphenotypic Sinonasal Carcinoma
+    who_volume: Head and Neck Tumours
+    site:
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - sinonasal_tumor
+
   HN_NET:
     name: Neuroendocrine tumour (head and neck)
     who_volume: Head and Neck Tumours
@@ -10267,7 +10276,7 @@ tumor_types:
     site: Bone marrow
     lineage_broad: Hematolymphoid
     lineage_detail: Plasma cell
-    parent: PLASMACYT_CELL
+    parent: PCN
     families:
     - plasma_cell
 
@@ -12272,6 +12281,15 @@ tumor_types:
     - b_cell_lymphoma
     - marginal_zone_lymphoma
 
+  PCN:
+    name: Plasma cell neoplasm
+    who_volume: Haematolymphoid Tumours
+    site: Bone marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Plasma cell
+    families:
+    - plasma_cell
+
   PC_ACRAL_CD8:
     name: Primary cutaneous acral CD8-positive T-cell lymphoproliferative disorder
     who_volume: Skin Tumours
@@ -12909,15 +12927,6 @@ tumor_types:
     families:
     - plasma_cell_neoplasm
     - hematolymphoid
-
-  PLASMACYT_CELL:
-    name: Plasma cell neoplasm
-    who_volume: Haematolymphoid Tumours
-    site: Bone marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Plasma cell
-    families:
-    - plasma_cell
 
   PLEO_AD:
     name: Pleomorphic Adenoma
@@ -14626,18 +14635,18 @@ tumor_types:
     families:
     - salivary_gland_tumor
 
-  SG_INTERC_AD:
-    name: Intercalated Duct Adenoma and Hyperplasia
-    who_volume: Head and Neck Tumours
+  SG_IDUCT_CA:
+    name: Salivary Gland Intraductal Carcinoma
+    who_volume:
     site:
     lineage_broad: Epithelial
     lineage_detail:
     families:
     - salivary_gland_tumor
 
-  SG_INTRA_CA:
-    name: Salivary Gland Intraductal Carcinoma
-    who_volume:
+  SG_INTERC_AD:
+    name: Intercalated Duct Adenoma and Hyperplasia
+    who_volume: Head and Neck Tumours
     site:
     lineage_broad: Epithelial
     lineage_detail:
@@ -15477,15 +15486,6 @@ tumor_types:
     lineage_detail:
     families:
     - perivascular_tumor
-
-  SN_HMSC:
-    name: HPV-Related Multiphenotypic Sinonasal Carcinoma
-    who_volume: Head and Neck Tumours
-    site:
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - sinonasal_tumor
 
   SN_NEC_IDH2:
     name: Sinonasal Neuroendocrine Carcinoma with IDH2 mutations

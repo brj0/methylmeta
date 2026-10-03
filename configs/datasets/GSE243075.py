@@ -26,7 +26,7 @@ def methylation_class(row):
         "CCC": "SG_HYAL_CCC",
         "C_AD": "SG_CANL_AD",
         "EPMYOC": "SG_EPIMYO_CA",
-        "IDC": "SG_INTRA_CA",
+        "IDC": "SG_IDUCT_CA",
         "MC": "MEC",
         "MSADC": "SG_MSECR_ADCA",
         "MYOCA": "SG_MYOEP_CA",
