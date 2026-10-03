@@ -75,7 +75,7 @@ TUMOR_TYPES = {
     "BSNS",
     "HAIRP",
     "SN_HMSC",
-    "NASAL_CM_HAM",
+    "NCMH",
     "NP_ADCA_PAP",
     "ONB",
     "ONB_A",

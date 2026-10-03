@@ -57,7 +57,7 @@ def methylation_class(row):
         "LGESS": "ESS_LG",
         "HGESS": "ESS_HG",
         "PB": "PIT_BL",
-        "NCMH": "NASAL_CM_HAM",
+        "NCMH": "NCMH",
         "PCA": "THYR_PTC",
     }
     return mapping[row["Source"]]

@@ -6785,6 +6785,15 @@ tumor_types:
     families:
     - hepatobiliary_tumor
 
+  HETTOPIA_CA:
+    name: Heterotopia-associated carcinoma
+    who_volume: Head and Neck Tumours
+    site: Neck
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - carcinoma
+
   HFLT:
     name: Haemosiderotic fibrolipomatous tumour
     who_volume: Soft Tissue and Bone Tumours
@@ -7415,15 +7424,6 @@ tumor_types:
     lineage_detail: T-cell
     families:
     - mature_t_nk
-
-  HTAC:
-    name: Heterotopia-associated carcinoma
-    who_volume: Head and Neck Tumours
-    site: Neck
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - carcinoma
 
   HTLV1_ATL:
     name: HTLV-1 adult T-cell leukemia/lymphoma
@@ -10500,16 +10500,6 @@ tumor_types:
     - b_cell_lymphoma
     - dlbcl
 
-  NASAL_CM_HAM:
-    name: Nasal chondromesenchymal hamartoma
-    who_volume: Head and Neck Tumours
-    site: Sinonasal tract
-    lineage_broad: Mesenchymal
-    lineage_detail:
-    families:
-    - sinonasal_tumor
-    - hamartoma
-
   NBL:
     name: Neuroblastoma
     who_volume:
@@ -10528,6 +10518,16 @@ tumor_types:
     lineage_detail: Neuroepithelial
     families:
     - neuroepithelial_tumor
+
+  NCMH:
+    name: Nasal chondromesenchymal hamartoma
+    who_volume: Head and Neck Tumours
+    site: Sinonasal tract
+    lineage_broad: Mesenchymal
+    lineage_detail:
+    families:
+    - sinonasal_tumor
+    - hamartoma
 
   NCRISTIC:
     name: Superficial FET-ETS family neurocristic tumour
