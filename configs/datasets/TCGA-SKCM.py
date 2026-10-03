@@ -40,7 +40,7 @@ def methylation_class(row):
         "Acral lentiginous melanoma, malignant": "ACR_MEL",
         # non-melanoma entities (second / other primaries)
         "Basal cell carcinoma, NOS": "BCC",
-        "Spindle cell nevus, NOS": "NEV_BNG",
+        "Spindle cell nevus, NOS": "NEV_BEN",
         "Papillary urothelial carcinoma": "URO_CA",
         "Intraductal carcinoma, noninfiltrating, NOS": "DCIS",
         "Chronic myeloid leukemia, NOS": "CML",

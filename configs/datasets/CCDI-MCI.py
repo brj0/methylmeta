@@ -296,7 +296,7 @@ def methylation_class(row):
         "Desmoplastic nodular medulloblastoma": "MB",
         "Desmoplastic small round cell tumor": "DSRCT",
         "Dysembryoplastic neuroepithelial tumor": "LGG_DNT",
-        "Embryonal carcinoma, NOS": "EMBCA",
+        "Embryonal carcinoma, NOS": "EMB_CA",
         "Embryonal rhabdomyosarcoma, NOS": "RMS_EMB",
         "Embryonal sarcoma": None,
         "Endometrioid adenocarcinoma, NOS": "ENDOM_EC",

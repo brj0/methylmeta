@@ -32,7 +32,7 @@ def methylation_class(row):
         "Transitional cell carcinoma": "URO_CA",
         # 8130/3 Papillary transitional cell carcinoma, WHO 4
         "Papillary transitional cell carcinoma": "URO_CA",
-        "Papillary transitional cell carcinoma, non-invasive": "URO_CA_NI_PAP",
+        "Papillary transitional cell carcinoma, non-invasive": "URO_NIPC",
         "Carcinoma in situ, NOS": "URO_CIS",
         "Carcinoma, NOS": "URO_CA",
         "Squamous cell carcinoma, NOS": "URO_SCC",

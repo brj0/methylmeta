@@ -83,7 +83,7 @@ def methylation_class(row):
         "bl, ebv": "BURK",
         "burkitt": "BURK",
         "sezary": "SEZARY",  # fixed: WHO acronym is SZ, not SEZARY
-        "plasma cell neoplasm": "PLASMACYT_CELL",
+        "plasma cell neoplasm": "PCN",
         "plasmazytoma": "PLASMACYT",
         "plasmacytoma": "PLASMACYT",
         "dendritic": "FDCS",  # after lymphoblastic keys (avoids FDCS clash)

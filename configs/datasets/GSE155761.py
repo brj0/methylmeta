@@ -22,7 +22,7 @@ def diagnosis(row):
 
 def methylation_class(row):
     mapping = {
-        "Adjacent Normal Fallopian Tube Epithelia": "CTRL_TUB",
+        "Adjacent Normal Fallopian Tube Epithelia": "CTRL_TUBE",
         "Concomitant High Grade Serous Carcinoma Tumor": "OVA_HGSC",
         "Dormant Serous Tubal Intraepithelial Carcinoma": "STIC",
         "P53 Signature Lesion": None,
@@ -30,7 +30,7 @@ def methylation_class(row):
         "cervical mucosa from cancer-free normal control": "CTRL_CERV",
         "endometrial endometrioid carcinoma": "ENDOM_EC",
         "endometrial mucosa from cancer-free normal control": "CTRL_ENDOM",
-        "fallopian tube mucosa from cancer-free normal control": "CTRL_TUB",
+        "fallopian tube mucosa from cancer-free normal control": "CTRL_TUBE",
         "high-grade serous ovarian carcinoma": "OVA_HGSC",
         "poorly differentiated ovarian tumor": "OVA_CA",
         "uterine serous carcinoma": "ENDOM_SC",

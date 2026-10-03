@@ -21,7 +21,7 @@ def methylation_class(row):
     mapping = {
         "Endometrial cancer": "ENDOM_CA",
         "Endometrial carcinoma cell line": "ENDOM_CA",
-        "Endometrial hyperplasia": "EMH",
+        "Endometrial hyperplasia": "ENDOM_HYP",
     }
     return mapping[row["primary disease dx"]]
 

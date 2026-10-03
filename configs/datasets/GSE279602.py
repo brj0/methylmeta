@@ -18,7 +18,7 @@ def diagnosis(row):
 
 
 def methylation_class(row):
-    return "BPLL"
+    return "B_PLL"
 
 
 def sample_site(row):

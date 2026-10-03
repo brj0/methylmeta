@@ -214,10 +214,10 @@ the stem "sounds right" — if the entity's compartment isn't already
 listed below, decide whether it's really a new compartment (add a new
 stem, document why in a comment) or the same one (reuse the existing
 stem).
-
 | System                 | Organ / site                       | Stem    | Notes                                                                         |
 | ---------------------- | ---------------------------------- | ------- | ----------------------------------------------------------------------------- |
-| Thoracic               | Lung                               | `LU`    |                                                                               |
+| Thoracic               | Heart                              | `HRT`   | distinct from `THYM`/`THYMO`; 16 codes use it                        |
+|                        | Lung                               | `LU`    |                                                                               |
 |                        | Larynx                             | `LAR`   | also covers larynx/hypopharynx                                                |
 | Breast                 | Breast                             | `BR`    | male breast folds in here too                                                 |
 | GI                     | Esophagus                          | `ESO`   |                                                                               |
@@ -235,7 +235,7 @@ stem).
 |                        | Liver (hepatocellular)             | `LIV`   |                                                                               |
 |                        | Pancreas                           | `PAN`   |                                                                               |
 | GU                     | Kidney (non-RCC entities)          | `REN`   | `RCC` itself stays bare (Rule 3)                                              |
-|                        | Bladder                            | `BLAD`  |                                                                               |
+|                        | Bladder                            | `BLA`   |                                                                               |
 |                        | Urinary tract (general/multi-site) | `URO`   |                                                                               |
 |                        | Urethra                            | `URETH` |                                                                               |
 |                        | Prostate                           | `PROS`  |                                                                               |
@@ -267,6 +267,7 @@ stem).
 |                        | Soft tissue                        | `SOFT`  |                                                                               |
 | Head & neck            | Salivary gland                     | `SG`    |                                                                               |
 |                        | Sinonasal tract                    | `SN`    | most use established bare names instead (Rule 3) — `SINO` only if none exists |
+|                        | Oral cavity                        | `OR`    | mouth proper (gingiva, floor of mouth, tongue covered separately)   |
 |                        | Head and neck (general/multi-site) | `HN`    |                                                                               |
 |                        | Nasopharyn                         | `NP`    |                                                                               |
 | Ear                    | Middle ear                         | `EAR`   | compartment split — see above                                                 |
@@ -278,6 +279,8 @@ stem).
 |                        | Lacrimal drainage system           | `LAC`   |                                                                               |
 | CNS / peripheral nerve | Meninges                           | `MEN`   | distinct from `MNG` (meningioma, a bare entity)                               |
 |                        | Choroid plexus                     | `PLEX`  |                                                                               |
+| Eye / ocular adnexa    | Eye / ocular adnexa (general)      | `OCUL`  |                                                                               |
+|                        | Orbit                              | `ORB`   |                                                                               |
 | Other                  | Anal canal                         | `ANAL`  |                                                                               |
 |                        | Spleen                             | `SPL`   |                                                                               |
 
@@ -311,27 +314,41 @@ Prefer this vocabulary; extend it with a new row (plus a one-line
 reason) when a genuinely recurring behavior isn't covered, rather than
 inventing an inconsistent one-off elsewhere.
 
-| Suffix        | Meaning                                         |
-| ------------- | ----------------------------------------------- |
-| `_ADCA`       | adenocarcinoma                                  |
-| `_ADSARC`     | adenosarcoma                                    |
-| `_AD`         | adenoma                                         |
-| `_ASC`        | adenosquamous carcinoma                         |
-| `_BL`         | blastoma                                        |
-| `_CA`         | carcinoma                                       |
-| `_CSARC`      | carcinosarcoma                                  |
-| `_CYSTADCA`   | cystadenocarcinoma                              |
-| `_CYSTAD`     | cystadenoma                                     |
-| `_HAM`        | hamartoma                                       |
-| `_HEM`        | haemangioma                                     |
-| `_HG` / `_LG` | high-grade / low-grade                          |
-| `_HYP`        | hyperplasia                                     |
-| `_LPD`        | lymphoproliferative disorder                    |
-| `_NEC`        | neuroendocrine carcinoma, poorly differentiated |
-| `_NET`        | neuroendocrine tumor, well-differentiated       |
-| `_PAP`        | papilloma / papillary                           |
-| `_SARC`       | sarcoma                                         |
-| `_SCC`        | squamous cell carcinoma                         |
+| Suffix            | Meaning                                             |
+| ----------------- | --------------------------------------------------- |
+| `_ADCA`           | adenocarcinoma                                  |
+| `_ADSARC`         | adenosarcoma                                    |
+| `_AD`             | adenoma                                         |
+| `_ASC`            | adenosquamous carcinoma                         |
+| `_BEN`            | benign (not `BNG`)                              |
+| `_BL`             | blastoma                                        |
+| `_BOT`            | borderline tumour (use `BOT`, not `BOR`)        |
+| `_CA`             | carcinoma                                       |
+| `_CSARC`          | carcinosarcoma                                  |
+| `_CYSTADCA`       | cystadenocarcinoma                              |
+| `_CYSTAD`         | cystadenoma                                     |
+| `_CYST`           | cyst                                            |
+| `_DYS`            | dysplasia                                       |
+| `_HAM`            | hamartoma                                       |
+| `_HEM`            | haemangioma                                     |
+| `_HG` / `_LG`     | high-grade / low-grade                          |
+| `_HPVA` / `_HPVI` | HPV-associated / HPV-independent                |
+| `_HYP`            | hyperplasia                                     |
+| `_ITIS`           | inflammatory (`APP_ITIS`, `CONJ_ITIS`)          |
+| `_LIKE`           | "-like"                                         |
+| `_LPD`            | lymphoproliferative disorder                    |
+| `_MAL`            | malignant                                       |
+| `_MIX`            | mixed (not `MIXED`)                             |
+| `_NEC`            | neuroendocrine carcinoma, poorly differentiated |
+| `_NET`            | neuroendocrine tumor, well-differentiated       |
+| `_NOS`            | not otherwise specified (17 uses)               |
+| `_OTH`            | other (not `OTHER`)                             |
+| `_PAP`            | papilloma / papillary                           |
+| `_PED`            | paediatric                                      |
+| `_POLYP`          | polyp                                           |
+| `_POS` / `_NEG`   | marker positive / negative                      |
+| `_SARC`           | sarcoma                                         |
+| `_SCC`            | squamous cell carcinoma                         |
 
 
 Notes on three of these:

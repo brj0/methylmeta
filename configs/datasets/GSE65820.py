@@ -21,7 +21,7 @@ def diagnosis(row):
 
 def methylation_class(row):
     mapping = {
-        "normal": "CTRL_TUB",
+        "normal": "CTRL_TUBE",
         "high grade serous ovarian cancer": "OVA_HGSC",
     }
     return mapping[row["cell type"]]

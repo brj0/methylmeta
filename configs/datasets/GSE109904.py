@@ -21,7 +21,7 @@ def methylation_class(row):
     value = row["tissue"]
     mapping = {
         "histiocytic sarcoma": "HISTSARC",
-        "leukemia": "HL_NOS",
+        "leukemia": "HEMA_NOS",
     }
     return mapping[value]
 

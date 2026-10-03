@@ -24,7 +24,7 @@ def diagnosis(row):
 def methylation_class(row):
     mapping = {
         "AEH": "EIN",
-        "NAEH": "EMH_NOATY",
+        "NAEH": "ENDOM_HYP_NOATY",
     }
     return mapping[row["Source"]]
 

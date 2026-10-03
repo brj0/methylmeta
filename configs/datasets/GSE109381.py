@@ -44,7 +44,7 @@ def methylation_class(row):
         "LGG, MYB": "LGG_MYB",
         "LGG, SEGA": "LGG_SEGA",
         "LGG, DIG/DIA": "LGG_DIG_DIA",
-        "ANA PA": "ANA_PA",
+        "ANA PA": "PA_ANA",
         "DLGNT": "DLGNT",
         "LIPN": "LIPN",
         "CN": "CNEUROCYT",

@@ -53,11 +53,11 @@ def methylation_class(row):
         "Testis": "testis",
     }
     classes = {
-        ("ovary", "EC"): "OVA_EMBCA",
+        ("ovary", "EC"): "OVA_EMB_CA",
         ("ovary", "MIX"): "OVA_MGCT",
         ("ovary", "SE"): "DYSGERM",
         ("ovary", "YST"): "OVA_YST",
-        ("ovotestis", "EC"): "EMBCA",
+        ("ovotestis", "EC"): "EMB_CA",
         ("ovotestis", "MIX"): "MGCT",
         ("ovotestis", "SE"): "SEMIN",
         ("ovotestis", "YST"): "YST",

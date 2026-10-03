@@ -22,7 +22,7 @@ def methylation_class(row):
     value = row["Characteristics[disease]"]
     mapping = {
         "cutaneous melanoma": "SKIN_MEL",
-        "melanocytic nevus": "NEV_BNG",
+        "melanocytic nevus": "NEV_BEN",
         None: "CTRL_SKIN",
     }
     return mapping[value]

@@ -122,7 +122,6 @@ sites:
   - Blood
   - Blood vessel
   - Blood / lymphoid tissue
-  - Blood vessels (great vessels)
   - Body cavities
   - Bone
   - Bone (axial skeleton)
@@ -177,7 +176,6 @@ sites:
   - Heart / vascular
   - Iris
   - Jaw
-  - Jaw (gingiva)
   - Jejunum / ileum
   - Kidney
   - Lacrimal drainage system
@@ -193,7 +191,6 @@ sites:
   - Lung / pleura
   - Lung / thorax
   - Lymph node
-  - Lymphoid
   - Lymphoid tissue
   - Lymphoid tissue / extranodal
   - Lymphoid tissue / soft tissue
@@ -202,7 +199,6 @@ sites:
   - Meninges
   - Middle ear
   - Multiple
-  - Multisystem
   - Nail unit
   - Nasal cavity
   - Nasopharynx
@@ -214,8 +210,6 @@ sites:
   - Optic nerve
   - Oral cavity
   - Oral cavity (gingiva)
-  - Oral cavity (jaw)
-  - Oral cavity / tongue
   - Orbit
   - Oropharynx
   - Ovary
@@ -244,7 +238,6 @@ sites:
   - Scrotum
   - Sellar region
   - Seminal vesicle
-  - Sinonasal
   - Sinonasal tract
   - Skin
   - Skin / multiple
@@ -266,7 +259,6 @@ sites:
   - Soft tissue / heart
   - Soft tissue / kidney
   - Soft tissue / skin
-  - Soft tissue, skin
   - Spinal cord
   - Spine / soft tissue
   - Spleen
@@ -335,7 +327,6 @@ families:
   - dlbcl
   - ear_tumor
   - ebv_associated
-  - ebv_associated_lymphoma
   - embryonal_tumor
   - endocrine_tumor
   - endometrial_carcinoma
@@ -345,7 +336,6 @@ families:
   - epithelial_tumor
   - esophageal_carcinoma
   - ewing_like_tumor
-  - ewing_sarcoma
   - ewing_sarcoma_family
   - fibro_osseous_lesion
   - fibro_osseous_tumor
@@ -354,12 +344,10 @@ families:
   - fibrohistiocytic_tumor
   - fibrous_dysplasia
   - follicular_lymphoma
-  - functional_net
   - functioning_net
   - ganglioneuroma
   - gastrointestinal_tumor
   - genetic_syndrome
-  - genetic_tumor_syndrome
   - genital_tumor
   - germ_cell_tumor
   - gestational_trophoblastic_disease
@@ -373,7 +361,6 @@ families:
   - hamartoma
   - head_neck_tumor
   - heart_tumor
-  - hematolymphoid
   - hematolymphoid_leukemia
   - hematolymphoid_leukemia_all
   - hematolymphoid_leukemia_ambiguous_lineage
@@ -403,7 +390,6 @@ families:
   - high_grade_carcinoma
   - high_grade_glioma
   - high_grade_neuroepithelial_tumor
-  - histiocytic
   - histiocytic_neoplasm
   - hodgkin_lymphoma
   - hyperplasia
@@ -420,7 +406,6 @@ families:
   - low_tumor_content
   - lung_tumor
   - lymphoid
-  - lymphoid_neoplasm
   - lymphoma
   - lymphoproliferative_disorder
   - male_breast_tumor
@@ -447,10 +432,8 @@ families:
   - monodermal_teratoma
   - mpn
   - muscle_disease
-  - myelodysplastic_syndrome
   - myelofibrosis
   - myeloid_neoplasm
-  - myeloproliferative_neoplasm
   - myoepithelial_tumor
   - myofibroblastic_tumor
   - naevus
@@ -488,14 +471,11 @@ families:
   - pineal_tumor
   - pituitary_tumor
   - plasma_cell
-  - plasma_cell_neoplasm
   - polyp
   - poor_quality_sample
   - precursor_lesion
-  - premalignant_lesion
   - prostatic_tumor
   - reactive
-  - reactive_lesion
   - renal_tumor
   - rhabdomyosarcoma
   - salivary_gland_like_tumor
@@ -518,7 +498,6 @@ families:
   - stromal_lesion
   - t_all
   - t_cell_lymphoma
-  - t_cell_neoplasm
   - technical
   - teratoma
   - testicular_tumor

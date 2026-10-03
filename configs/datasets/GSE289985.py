@@ -18,7 +18,7 @@ def diagnosis(row):
 
 
 def methylation_class(row):
-    return "ALKLBCL"
+    return "LBCL_ALK"
 
 
 def sample_type(row):

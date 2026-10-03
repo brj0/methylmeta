@@ -75,7 +75,7 @@ def methylation_class(row):
         (
             "bladder",
             "Papillary transitional cell carcinoma, non-invasive",
-        ): "URO_CA_NI_PAP",
+        ): "URO_NIPC",
         ("bladder", "Transitional cell carcinoma"): "URO_CA",
         ("bone", "Ewing sarcoma"): "EWS",
         ("bone", "Osteosarcoma, NOS"): "OS",

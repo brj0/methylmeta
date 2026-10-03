@@ -18,7 +18,7 @@ def diagnosis(row):
 
 
 def methylation_class(row):
-    return "IMET_FET"
+    return "ICMT"
 
 
 def sample_type(row):

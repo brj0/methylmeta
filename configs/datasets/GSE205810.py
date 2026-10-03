@@ -15,7 +15,7 @@ def diagnosis(row):
 
 
 def methylation_class(row):
-    return "HGG_TYPE_F"
+    return "HGG_F"
 
 
 def sample_site(row):

@@ -23,7 +23,7 @@ def diagnosis(row):
 def methylation_class(row):
     mapping = {
         "primary invasive melanoma": "SKIN_MEL",
-        "nevus": "NEV_BNG",
+        "nevus": "NEV_BEN",
     }
     return mapping[row["tissue"]]
 

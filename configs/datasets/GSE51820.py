@@ -33,7 +33,7 @@ def methylation_class(row):
         "endometrioid": "OVA_ENDOID_CA",
         "mucinous": "OVA_MUC_CA",
         "serous": "OVA_HGSC",
-        "fallopian tube epithelium": "CTRL_TUB",
+        "fallopian tube epithelium": "CTRL_TUBE",
         "ovarian surface epithelium": "CTRL_OVA",
         "normal lymphocyte DNA": "CTRL_BLOOD",
         "universally methylated DNA": None,

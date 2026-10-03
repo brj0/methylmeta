@@ -34,7 +34,7 @@ def methylation_class(row):
         "diffuse intrinsic pontine glioma": "DMG_K27",
         "anaplastic oligodendroglioma": "OLIGO_IDH_ANA",
         "anaplastic ganglioglioma": "LGG_GG",
-        "anaplastic pilomyxoid astrocytoma": "ANA_PA",
+        "anaplastic pilomyxoid astrocytoma": "PA_ANA",
         "pleomorphic anaplastic xanthoastrocytoma": "PXA",
     }
     return mapping[row["Characteristics[disease]"]]

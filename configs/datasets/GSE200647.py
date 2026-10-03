@@ -26,7 +26,7 @@ def diagnosis(row):
 def methylation_class(row):
     mapping = {
         "GBM": "GBM_NOS",
-        "GBM-F3T3-O": "DG_F3T3_O",
+        "GBM-F3T3-O": "DG_FGFR3_TACC3",
         "GBM-G34": "DHG_G34",
         "Ganglioglioma": "LGG_GG",
     }

@@ -23,9 +23,9 @@ def methylation_class(row):
     mapping = {
         "ALK-positive anaplastic large lymphoma": "ALCL_ALK_POS",
         "ALK-positive large B-cell lymphoma, after treatment with "
-        "Crizotinib": "ALKLBCL",
+        "Crizotinib": "LBCL_ALK",
         "PDX model of a ALK-positive large B-cell lymphoma, after "
-        "treatment with Crizotinib": "ALKLBCL",
+        "treatment with Crizotinib": "LBCL_ALK",
     }
     return mapping[value]
 

@@ -42,7 +42,7 @@ def methylation_class(row):
         "Yolk sac tumor": "YST",
         "Mature teratoma": "TER",
         "Immature teratoma": "TER",
-        "Embryonal carcinoma": "EMBCA",
+        "Embryonal carcinoma": "EMB_CA",
         "Choriocarcinoma": "CHORCA",
         "Non-germinoma component": "MGCT",
         "Germinoma, Embryonal carcinoma": "MGCT",

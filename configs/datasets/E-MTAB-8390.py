@@ -21,7 +21,7 @@ def diagnosis(row):
 
 
 def methylation_class(row):
-    return "ANA_PA"
+    return "PA_ANA"
 
 
 def sample_site(row):

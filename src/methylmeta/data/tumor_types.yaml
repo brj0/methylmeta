@@ -35,8 +35,8 @@ tumor_types:
 
   ACICC:
     name: Salivary Gland Acinic Cell Carcinoma
-    who_volume:
-    site:
+    who_volume: Head and Neck Tumours
+    site: Salivary gland
     lineage_broad: Epithelial
     lineage_detail:
     families:
@@ -124,17 +124,6 @@ tumor_types:
     lineage_detail:
     families:
     - salivary_gland_tumor
-    - carcinoma
-
-  ADNX_ADCA:
-    name: Adnexal adenocarcinoma NOS
-    who_volume: Skin Tumours
-    site: Skin
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - skin_tumor
-    - skin_adnexal_tumor
     - carcinoma
 
   ADREN_ADTUM:
@@ -360,9 +349,9 @@ tumor_types:
     - acute_leukemia_of_ambiguous_lineage
 
   ALCL:
-    name: ALCL
+    name: Anaplastic large cell lymphoma
     who_volume: Haematolymphoid Tumours
-    site: Lymphoid
+    site: Lymphoid tissue
     lineage_broad: Hematolymphoid
     lineage_detail: T/NK
     families:
@@ -409,25 +398,6 @@ tumor_types:
     families:
     - sarcoma
     - ewing_sarcoma_family
-
-  ALKLBCL:
-    name: ALK+ large B-cell lymphoma
-    who_volume: Haematolymphoid Tumours
-    site: Lymphoid
-    lineage_broad: Hematolymphoid
-    lineage_detail: B-cell
-    families:
-    - mature_b_non_small_cell
-
-  ALK_HISTIO:
-    name: ALK-positive histiocytosis
-    who_volume: Skin Tumours
-    site: Skin
-    lineage_broad: Hematolymphoid
-    lineage_detail:
-    families:
-    - skin_tumor
-    - histiocytic_neoplasm
 
   ALMO_MPC:
     name: Angioleiomyoma / myopericytoma
@@ -488,6 +458,15 @@ tumor_types:
     families:
     - odontogenic_tumor
 
+  AMBL_FIB:
+    name: Ameloblastic fibroma
+    who_volume: Head and Neck Tumours
+    site: Jaw
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - odontogenic_tumor
+
   AMBL_META:
     name: Metastasizing ameloblastoma
     who_volume: Head and Neck Tumours
@@ -501,7 +480,7 @@ tumor_types:
   AMBL_PERIPH:
     name: Ameloblastoma, extraosseous / peripheral
     who_volume: Head and Neck Tumours
-    site: Jaw (gingiva)
+    site: Oral cavity (gingiva)
     lineage_broad: Epithelial
     lineage_detail:
     parent: AMBL
@@ -515,15 +494,6 @@ tumor_types:
     lineage_broad: Epithelial
     lineage_detail:
     parent: AMBL
-    families:
-    - odontogenic_tumor
-
-  AMELOFIB:
-    name: Ameloblastic fibroma
-    who_volume: Head and Neck Tumours
-    site: Jaw
-    lineage_broad: Epithelial
-    lineage_detail:
     families:
     - odontogenic_tumor
 
@@ -825,7 +795,7 @@ tumor_types:
     families:
     - aml
 
-  AML_OTHER_GEN:
+  AML_OTH_GEN:
     name: Acute myeloid leukemia with other defined genetic alterations
     who_volume: Haematolymphoid Tumours
     site: Bone marrow
@@ -982,17 +952,6 @@ tumor_types:
     families:
     - gastrointestinal_tumor
     - precursor_lesion
-
-  ANA_PA:
-    name: Anaplastic pilocytic astrocytoma
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Neural
-    lineage_detail: Glial
-    families:
-    - glioma
-    - astrocytoma
-    - pilocytic_astrocytoma
 
   ANGIOKERATOMA:
     name: Angiokeratoma
@@ -1278,8 +1237,8 @@ tumor_types:
 
   BARRETT:
     name: Barrett's Esophagus
-    who_volume:
-    site:
+    who_volume: Digestive System Tumours
+    site: Esophagus
     lineage_broad: Epithelial
     lineage_detail:
     families:
@@ -1319,6 +1278,17 @@ tumor_types:
 
   BCC_BSQ:
     name: Basosquamous carcinoma
+    who_volume: Skin Tumours
+    site: Skin
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: BCC
+    families:
+    - skin_tumor
+    - carcinoma
+
+  BCC_FIBEPI:
+    name: Fibroepithelial basal cell carcinoma
     who_volume: Skin Tumours
     site: Skin
     lineage_broad: Epithelial
@@ -1426,6 +1396,15 @@ tumor_types:
     - hepatobiliary_tumor
     - adenoma
 
+  BD_AFIB:
+    name: Biliary adenofibroma
+    who_volume: Digestive System Tumours
+    site: Liver (bile duct)
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - hepatobiliary_tumor
+
   BD_IOPN:
     name: Intraductal oncocytic papillary neoplasm of the bile ducts
     who_volume: Digestive System Tumours
@@ -1464,35 +1443,15 @@ tumor_types:
     - hepatobiliary_tumor
     - neuroendocrine_tumor
 
-  BEN_KER_OTH:
-    name: Other benign keratoses
-    who_volume: Skin Tumours
-    site: Skin
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - skin_tumor
-    - benign_tumor
-
   BEN_VASC_ENDO:
     name: Benign vascular tumours of endocrine organs
     who_volume: Endocrine and Neuroendocrine Tumours
     site: Endocrine organs
     lineage_broad: Mesenchymal
     lineage_detail: Vascular
-    parent: BONE_HEM
     families:
     - endocrine_tumor
     - vascular_tumor
-
-  BG_AFIB:
-    name: Biliary adenofibroma
-    who_volume: Digestive System Tumours
-    site: Liver (bile duct)
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - hepatobiliary_tumor
 
   BILIN:
     name: Biliary intraepithelial neoplasia
@@ -1504,7 +1463,7 @@ tumor_types:
     - hepatobiliary_tumor
     - precursor_lesion
 
-  BLAD_VC:
+  BLA_VC:
     name: Verrucous carcinoma of the bladder
     who_volume: Urinary and Male Genital Tumours
     site: Bladder
@@ -1557,15 +1516,15 @@ tumor_types:
 
   BOWEN:
     name: Bowen's Disease of the Skin
-    who_volume:
-    site:
+    who_volume: Skin Tumours
+    site: Skin
     lineage_broad: Epithelial
     lineage_detail:
     families:
     - squamous_lesion
 
   BPDCN:
-    name: BPDCN
+    name: Blastic plasmacytoid dendritic cell neoplasm
     who_volume: Haematolymphoid Tumours
     site: Blood
     lineage_broad: Hematolymphoid
@@ -1573,15 +1532,6 @@ tumor_types:
     families:
     - hematolymphoid_neoplasm
     - dendritic_cell_neoplasm
-
-  BPLL:
-    name: B-prolymphocytic leukemia
-    who_volume: Haematolymphoid Tumours
-    site: Blood
-    lineage_broad: Hematolymphoid
-    lineage_detail: B-cell
-    families:
-    - mature_b_small_cell
 
   BPOP:
     name: Bizarre parosteal osteochondromatous proliferation
@@ -1619,7 +1569,7 @@ tumor_types:
     families:
     - gynecologic_tumor
 
-  BRENNER_BOR:
+  BRENNER_BOT:
     name: Borderline Brenner tumour
     who_volume: Female Genital Tumours
     site: Ovary
@@ -2028,7 +1978,6 @@ tumor_types:
     site: Breast
     lineage_broad: Mixed
     lineage_detail:
-    parent: HAIRP
     families:
     - breast_tumor
     - hamartoma
@@ -2083,7 +2032,6 @@ tumor_types:
     site: Breast
     lineage_broad: Endocrine
     lineage_detail:
-    parent: HN_NET
     families:
     - breast_tumor
     - neuroendocrine_tumor
@@ -2094,7 +2042,6 @@ tumor_types:
     site: Nipple / breast
     lineage_broad: Epithelial
     lineage_detail:
-    parent: VULV_PAGET
     families:
     - breast_tumor
     - nipple_tumor
@@ -2206,7 +2153,7 @@ tumor_types:
   BURK_EBV_NEG:
     name: Burkitt lymphoma (EBV-)
     who_volume: Haematolymphoid Tumours
-    site: Lymphoid
+    site: Lymphoid tissue
     lineage_broad: Hematolymphoid
     lineage_detail: B-cell
     parent: BURK
@@ -2216,7 +2163,7 @@ tumor_types:
   BURK_EBV_POS:
     name: Burkitt lymphoma (EBV+)
     who_volume: Haematolymphoid Tumours
-    site: Lymphoid
+    site: Lymphoid tissue
     lineage_broad: Hematolymphoid
     lineage_detail: B-cell
     parent: BURK
@@ -2256,7 +2203,7 @@ tumor_types:
     site: Bone marrow
     lineage_broad: Hematolymphoid
     lineage_detail: B-cell
-    parent: B_ALL_OTHER_GEN
+    parent: B_ALL_OTH_GEN
     families:
     - bcp_all
 
@@ -2316,7 +2263,7 @@ tumor_types:
     site: Bone marrow
     lineage_broad: Hematolymphoid
     lineage_detail: B-cell
-    parent: B_ALL_OTHER_GEN
+    parent: B_ALL_OTH_GEN
     families:
     - bcp_all
 
@@ -2346,7 +2293,7 @@ tumor_types:
     site: Bone marrow
     lineage_broad: Hematolymphoid
     lineage_detail: B-cell
-    parent: B_ALL_OTHER_GEN
+    parent: B_ALL_OTH_GEN
     families:
     - bcp_all
 
@@ -2356,7 +2303,7 @@ tumor_types:
     site: Bone marrow
     lineage_broad: Hematolymphoid
     lineage_detail: B-cell
-    parent: B_ALL_OTHER_GEN
+    parent: B_ALL_OTH_GEN
     families:
     - bcp_all
 
@@ -2376,11 +2323,11 @@ tumor_types:
     site: Bone marrow
     lineage_broad: Hematolymphoid
     lineage_detail: B-cell
-    parent: B_ALL_OTHER_GEN
+    parent: B_ALL_OTH_GEN
     families:
     - bcp_all
 
-  B_ALL_OTHER_GEN:
+  B_ALL_OTH_GEN:
     name: B-lymphoblastic leukemia/lymphoma with other defined genetic alterations
     who_volume: Haematolymphoid Tumours
     site: Bone marrow
@@ -2396,7 +2343,7 @@ tumor_types:
     site: Bone marrow
     lineage_broad: Hematolymphoid
     lineage_detail: B-cell
-    parent: B_ALL_OTHER_GEN
+    parent: B_ALL_OTH_GEN
     families:
     - bcp_all
 
@@ -2406,7 +2353,7 @@ tumor_types:
     site: Bone marrow
     lineage_broad: Hematolymphoid
     lineage_detail: B-cell
-    parent: B_ALL_OTHER_GEN
+    parent: B_ALL_OTH_GEN
     families:
     - bcp_all
 
@@ -2436,9 +2383,18 @@ tumor_types:
     site: Bone marrow
     lineage_broad: Hematolymphoid
     lineage_detail: B-cell
-    parent: B_ALL_OTHER_GEN
+    parent: B_ALL_OTH_GEN
     families:
     - bcp_all
+
+  B_PLL:
+    name: B-prolymphocytic leukemia
+    who_volume: Haematolymphoid Tumours
+    site: Blood
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-cell
+    families:
+    - mature_b_small_cell
 
   CAF:
     name: Calcifying aponeurotic fibroma
@@ -2818,7 +2774,7 @@ tumor_types:
     - squamous_cell_carcinoma
 
   CERV_SCC_HPVA:
-    name: Cervical squamous cell carcinoma, HPV-positive
+    name: Cervical squamous cell carcinoma, HPV-associated
     who_volume: Female Genital Tumours
     site: Cervix
     lineage_broad: Epithelial
@@ -3139,7 +3095,7 @@ tumor_types:
     - naevus
 
   CML:
-    name: CML
+    name: Chronic myeloid leukaemia
     who_volume: Haematolymphoid Tumours
     site: Bone marrow
     lineage_broad: Hematolymphoid
@@ -3165,16 +3121,6 @@ tumor_types:
     families:
     - renal_tumor
     - embryonal_tumor
-
-  CMN_DOWN:
-    name: Myeloid proliferations associated with Down syndrome
-    who_volume: Haematolymphoid Tumours
-    site: Bone marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    parent: DS_GATA1
-    families:
-    - aml
 
   CNEUROCYT:
     name: Central neurocytoma
@@ -3497,16 +3443,6 @@ tumor_types:
     - urinary_tract_tumor
     - carcinoma
 
-  CPC_PED:
-    name: Choroid plexus carcinoma, pediatric
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - cns_tumor
-    - choroid_plexus_tumor
-
   CPDN:
     name: Cystic partially differentiated nephroblastoma
     who_volume: Urinary and Male Genital Tumours
@@ -3589,7 +3525,7 @@ tumor_types:
     families:
     - gastrointestinal_tumor
     - adenoma
-    - premalignant_lesion
+    - precursor_lesion
 
   CR_AD_HG:
     name: Colorectal adenoma, high-grade
@@ -3601,7 +3537,7 @@ tumor_types:
     families:
     - gastrointestinal_tumor
     - adenoma
-    - premalignant_lesion
+    - precursor_lesion
 
   CR_AD_LG:
     name: Colorectal adenoma, low-grade
@@ -3613,7 +3549,7 @@ tumor_types:
     families:
     - gastrointestinal_tumor
     - adenoma
-    - premalignant_lesion
+    - precursor_lesion
 
   CR_CA:
     name: Colorectal carcinoma
@@ -4031,7 +3967,7 @@ tumor_types:
     - normal_tissue
 
   CTRL_GB:
-    name: Control - Gastric
+    name: Control - Gallbladder
     who_volume:
     site:
     lineage_broad: Epithelial
@@ -4130,7 +4066,7 @@ tumor_types:
     - normal_tissue
 
   CTRL_MUSCLE:
-    name: Control skeletal muscle
+    name: Control skeletal or smooth muscle
     who_volume:
     site: Skeletal muscle
     lineage_broad: Mesenchymal
@@ -4294,7 +4230,7 @@ tumor_types:
   CTRL_SN:
     name: Control - Sinonasal
     who_volume:
-    site: Sinonasal
+    site: Sinonasal tract
     lineage_broad:
     lineage_detail:
     families:
@@ -4347,7 +4283,7 @@ tumor_types:
     families:
     - normal_tissue
 
-  CTRL_TUB:
+  CTRL_TUBE:
     name: Normal fallopian tube
     who_volume:
     site: Fallopian tube
@@ -4393,16 +4329,6 @@ tumor_types:
     families:
     - carcinoma
     - squamous_cell_carcinoma
-
-  CUT_LYM:
-    name: Cutaneous lymphoma
-    who_volume: Skin Tumours
-    site: Skin
-    lineage_broad: Hematolymphoid
-    lineage_detail: Lymphoid
-    families:
-    - lymphoma
-    - skin_tumor
 
   CXPA:
     name: Carcinoma ex Pleomorphic Adenoma
@@ -4472,17 +4398,6 @@ tumor_types:
     - breast_tumor
     - carcinoma_in_situ
 
-  DERMATOMYOFIB:
-    name: Dermatomyofibroma
-    who_volume: Skin Tumours
-    site: Skin
-    lineage_broad: Mesenchymal
-    lineage_detail:
-    families:
-    - skin_tumor
-    - soft_tissue_tumor
-    - fibroblastic_tumor
-
   DERMOID_CYST:
     name: Dermoid cyst
     who_volume: Head and Neck Tumours
@@ -4491,29 +4406,6 @@ tumor_types:
     lineage_detail:
     families:
     - cyst
-
-  DERM_CCS:
-    name: Dermal clear cell sarcoma
-    who_volume: Skin Tumours
-    site: Skin
-    lineage_broad: Mesenchymal
-    lineage_detail:
-    families:
-    - skin_tumor
-    - soft_tissue_tumor
-    - sarcoma
-
-  DERM_MEL:
-    name: Dermal melanoma
-    who_volume: Skin Tumours
-    site: Skin
-    lineage_broad: Melanocytic
-    lineage_detail:
-    parent: SKIN_MEL
-    families:
-    - skin_tumor
-    - melanocytic_tumor
-    - melanoma
 
   DESMOID:
     name: Desmoid fibromatosis
@@ -4575,7 +4467,7 @@ tumor_types:
     - cns_tumor
     - glioneuronal_tumor
 
-  DG_F3T3_O:
+  DG_FGFR3_TACC3:
     name: Diffuse glioma, FGFR3-TACC3 fusion
     who_volume: Central Nervous System Tumours
     site: Central nervous system
@@ -4675,7 +4567,7 @@ tumor_types:
     families:
     - lymphoma
     - b_cell_lymphoma
-    - ebv_associated_lymphoma
+    - ebv_associated
 
   DLBCL_GCB:
     name: Diffuse large B-cell lymphoma, germinal-center B-cell type
@@ -4966,11 +4858,11 @@ tumor_types:
   ECD:
     name: Erdheim-Chester disease
     who_volume: Haematolymphoid Tumours
-    site: Multisystem
+    site: Multiple
     lineage_broad: Hematolymphoid
     lineage_detail: Histiocytic
     families:
-    - histiocytic
+    - histiocytic_neoplasm
 
   ECTOMES:
     name: Ectomesenchymoma
@@ -5007,7 +4899,7 @@ tumor_types:
     site: Endometrium
     lineage_broad: Epithelial
     lineage_detail:
-    parent: EMH
+    parent: ENDOM_HYP
     families:
     - gynecologic_tumor
     - precursor_lesion
@@ -5032,7 +4924,7 @@ tumor_types:
     - cns_tumor
     - ear_tumor
 
-  EMBCA:
+  EMB_CA:
     name: Embryonal carcinoma
     who_volume: Female Genital Tumours
     site:
@@ -5060,26 +4952,6 @@ tumor_types:
     lineage_detail:
     families:
     - soft_tissue_tumor
-
-  EMH:
-    name: Endometrial Hyperplasia
-    who_volume: Female Genital Tumours
-    site: Endometrium
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - epithelial_tumor
-
-  EMH_NOATY:
-    name: Endometrial hyperplasia without atypia
-    who_volume: Female Genital Tumours
-    site: Endometrium
-    lineage_broad: Epithelial
-    lineage_detail:
-    parent: EMH
-    families:
-    - gynecologic_tumor
-    - precursor_lesion
 
   EMPD:
     name: Extramammary Paget disease
@@ -5177,6 +5049,26 @@ tumor_types:
     - endometrial_carcinoma
     - carcinoma
 
+  ENDOM_HYP:
+    name: Endometrial Hyperplasia
+    who_volume: Female Genital Tumours
+    site: Endometrium
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - epithelial_tumor
+
+  ENDOM_HYP_NOATY:
+    name: Endometrial hyperplasia without atypia
+    who_volume: Female Genital Tumours
+    site: Endometrium
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: ENDOM_HYP
+    families:
+    - gynecologic_tumor
+    - precursor_lesion
+
   ENDOM_MIXC:
     name: Mixed carcinoma (uterus)
     who_volume: Female Genital Tumours
@@ -5223,7 +5115,7 @@ tumor_types:
   ENKTL:
     name: Extranodal NK/T-cell lymphoma
     who_volume: Haematolymphoid Tumours
-    site: Lymphoid
+    site: Lymphoid tissue
     lineage_broad: Hematolymphoid
     lineage_detail: T/NK
     families:
@@ -5555,7 +5447,7 @@ tumor_types:
   ETCL_NONSETD2:
     name: Extranodal T-cell lymphoma (non-SETD2)
     who_volume: Haematolymphoid Tumours
-    site: Lymphoid
+    site: Lymphoid tissue
     lineage_broad: Hematolymphoid
     lineage_detail: T-cell
     families:
@@ -5564,7 +5456,7 @@ tumor_types:
   ETCL_SETD2:
     name: Extranodal T-cell lymphoma (SETD2)
     who_volume: Haematolymphoid Tumours
-    site: Lymphoid
+    site: Lymphoid tissue
     lineage_broad: Hematolymphoid
     lineage_detail: T-cell
     families:
@@ -5671,21 +5563,10 @@ tumor_types:
     - bone_tumor
     - cartilaginous_tumor
 
-  FCTN:
-    name: Fibroblastic connective tissue naevus
-    who_volume: Skin Tumours
-    site: Skin
-    lineage_broad: Mesenchymal
-    lineage_detail:
-    families:
-    - skin_tumor
-    - soft_tissue_tumor
-    - fibroblastic_tumor
-
   FDCS:
     name: Follicular dendritic cell sarcoma
     who_volume: Haematolymphoid Tumours
-    site: Lymphoid
+    site: Lymphoid tissue
     lineage_broad: Hematolymphoid
     lineage_detail: Dendritic/Stromal
     families:
@@ -5783,7 +5664,7 @@ tumor_types:
   FL:
     name: Follicular lymphoma
     who_volume: Haematolymphoid Tumours
-    site: Lymphoid
+    site: Lymphoid tissue
     lineage_broad: Hematolymphoid
     lineage_detail: B-cell
     families:
@@ -5853,7 +5734,7 @@ tumor_types:
   FTHCL:
     name: Follicular T-helper cell lymphoma
     who_volume: Haematolymphoid Tumours
-    site: Lymphoid
+    site: Lymphoid tissue
     lineage_broad: Hematolymphoid
     lineage_detail: T-cell
     families:
@@ -5910,16 +5791,6 @@ tumor_types:
     families:
     - pituitary_tumor
     - neuronal_tumor
-
-  GANGNEU:
-    name: Ganglioneuroma and ganglioneuromatosis
-    who_volume: Digestive System Tumours
-    site: Gastrointestinal tract
-    lineage_broad: Neural
-    lineage_detail:
-    families:
-    - gastrointestinal_tumor
-    - neural_tumor
 
   GAST_ADCA:
     name: Gastric adenocarcinoma
@@ -6358,17 +6229,6 @@ tumor_types:
     - gastrointestinal_tumor
     - neuroendocrine_tumor
 
-  GNM_NET_NOEND:
-    name: Composite gangliocytoma/neuroma and neuroendocrine tumour
-    who_volume: Endocrine and Neuroendocrine Tumours
-    site: Multiple
-    lineage_broad: Endocrine
-    lineage_detail:
-    parent: GNM_NET
-    families:
-    - neuroendocrine_tumor
-    - neural_tumor
-
   GONADOBLAST:
     name: Gonadoblastoma
     who_volume: Female Genital Tumours
@@ -6544,6 +6404,15 @@ tumor_types:
     families:
     - soft_tissue_tumor
     - vascular_tumor
+
+  HEMA_NOS:
+    name: Hematolymphoid Tumor, Not otherwise specified
+    who_volume:
+    site:
+    lineage_broad: Hematolymphoid
+    lineage_detail:
+    families:
+    - hematolymphoid_neoplasm
 
   HEM_ANAST:
     name: Anastomosing haemangioma
@@ -6761,7 +6630,7 @@ tumor_types:
   HEM_TUFTED:
     name: Tufted angioma
     who_volume: Soft Tissue and Bone Tumours
-    site: Soft tissue, skin
+    site: Soft tissue / skin
     lineage_broad: Mesenchymal
     lineage_detail: Vascular
     families:
@@ -6844,8 +6713,28 @@ tumor_types:
     families:
     - glioma
 
+  HGG_B:
+    name: Adult-type diffuse high-grade glioma, IDH-wildtype, subtype B
+    who_volume: Central Nervous System Tumours
+    site: Central nervous system
+    lineage_broad: Neural
+    lineage_detail: Glial
+    families:
+    - glioma
+    - high_grade_glioma
+
   HGG_E:
     name: Adult-type high-grade glioma, methylation class E
+    who_volume: Central Nervous System Tumours
+    site: Central nervous system
+    lineage_broad: Neural
+    lineage_detail: Glial
+    families:
+    - glioma
+    - high_grade_glioma
+
+  HGG_F:
+    name: High-grade glioma, methylation class F
     who_volume: Central Nervous System Tumours
     site: Central nervous system
     lineage_broad: Neural
@@ -6963,26 +6852,6 @@ tumor_types:
     - glioma
     - high_grade_glioma
 
-  HGG_TYPE_B:
-    name: Adult-type diffuse high-grade glioma, IDH-wildtype, subtype B
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Neural
-    lineage_detail: Glial
-    families:
-    - glioma
-    - high_grade_glioma
-
-  HGG_TYPE_F:
-    name: High-grade glioma, methylation class F
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Neural
-    lineage_detail: Glial
-    families:
-    - glioma
-    - high_grade_glioma
-
   HGNET_MN1:
     name: CNS high-grade neuroepithelial tumor with MN1 alteration
     who_volume: Central Nervous System Tumours
@@ -7054,6 +6923,16 @@ tumor_types:
     - skin_tumor
     - skin_adnexal_tumor
 
+  HISTIO_ALK:
+    name: ALK-positive histiocytosis
+    who_volume: Skin Tumours
+    site: Skin
+    lineage_broad: Hematolymphoid
+    lineage_detail:
+    families:
+    - skin_tumor
+    - histiocytic_neoplasm
+
   HISTSARC:
     name: Histiocytic sarcoma
     who_volume: Haematolymphoid Tumours
@@ -7072,15 +6951,6 @@ tumor_types:
     lineage_detail:
     families:
     - lymphoproliferative_disorder
-
-  HL_NOS:
-    name: Hematolymphoid Tumor, Not otherwise specified
-    who_volume:
-    site:
-    lineage_broad: Hematolymphoid
-    lineage_detail:
-    families:
-    - hematolymphoid_neoplasm
 
   HMB:
     name: Hemangioblastoma
@@ -7165,7 +7035,7 @@ tumor_types:
     - head_neck_tumor
 
   HN_SCC_HPVI:
-    name: HPV-Negative Head and Neck Squamous Cell Carcinoma
+    name: HPV-independent Head and Neck Squamous Cell Carcinoma
     who_volume: Head and Neck Tumours
     site: Head and neck
     lineage_broad: Epithelial
@@ -7188,8 +7058,8 @@ tumor_types:
 
   HOCT:
     name: Hybrid oncocytic/chromophobe renal tumour
-    who_volume:
-    site:
+    who_volume: Urinary and Male Genital Tumours
+    site: Kidney
     lineage_broad:
     lineage_detail:
     families:
@@ -7197,7 +7067,7 @@ tumor_types:
   HODG:
     name: Hodgkin lymphoma
     who_volume: Haematolymphoid Tumours
-    site: Lymphoid
+    site: Lymphoid tissue
     lineage_broad: Hematolymphoid
     lineage_detail: B-cell
     families:
@@ -7428,7 +7298,7 @@ tumor_types:
   HSTCL:
     name: Hepatosplenic T-cell lymphoma
     who_volume: Haematolymphoid Tumours
-    site: Lymphoid
+    site: Lymphoid tissue
     lineage_broad: Hematolymphoid
     lineage_detail: T-cell
     families:
@@ -7594,16 +7464,6 @@ tumor_types:
     - glioma
     - pediatric_glioma
 
-  IMET_FET:
-    name: Intracranial mesenchymal tumor, FET::CREB fusion
-    who_volume: Central Nervous System Tumours
-    site: Central nervous system
-    lineage_broad: Mesenchymal
-    lineage_detail:
-    families:
-    - cns_tumor
-    - mesenchymal_tumor
-
   IMN:
     name: Infectious mononucleosis
     who_volume:
@@ -7667,7 +7527,7 @@ tumor_types:
   INTIM_SARC:
     name: Intimal sarcoma
     who_volume: Soft Tissue and Bone Tumours
-    site: Blood vessels (great vessels)
+    site: Blood vessel
     lineage_broad: Mesenchymal
     lineage_detail:
     families:
@@ -7824,7 +7684,7 @@ tumor_types:
     lineage_broad: Hematolymphoid
     lineage_detail: T-cell
     families:
-    - t_cell_neoplasm
+    - t_cell_lymphoma
     - reactive
 
   ITO_OTA:
@@ -8202,6 +8062,15 @@ tumor_types:
     lineage_detail:
     families:
     - papilloma
+
+  LBCL_ALK:
+    name: ALK+ large B-cell lymphoma
+    who_volume: Haematolymphoid Tumours
+    site: Lymphoid tissue
+    lineage_broad: Hematolymphoid
+    lineage_detail: B-cell
+    families:
+    - mature_b_non_small_cell
 
   LBLLT:
     name: Lipoblastoma-like tumour
@@ -9272,7 +9141,7 @@ tumor_types:
   MCL_SOX11_NEG:
     name: Mantle cell lymphoma (SOX11-)
     who_volume: Haematolymphoid Tumours
-    site: Lymphoid
+    site: Lymphoid tissue
     lineage_broad: Hematolymphoid
     lineage_detail: B-cell
     families:
@@ -9281,7 +9150,7 @@ tumor_types:
   MCL_SOX11_POS:
     name: Mantle cell lymphoma (SOX11+)
     who_volume: Haematolymphoid Tumours
-    site: Lymphoid
+    site: Lymphoid tissue
     lineage_broad: Hematolymphoid
     lineage_detail: B-cell
     families:
@@ -9476,12 +9345,14 @@ tumor_types:
 
   MEITL:
     name: Monomorphic Epitheliotropic Intestinal T-cell Lymphoma
-    who_volume:
-    site:
+    who_volume: Haematolymphoid Tumours
+    site: Small intestine
     lineage_broad: Hematolymphoid
-    lineage_detail:
+    lineage_detail: T-cell
     families:
     - hematolymphoid_neoplasm
+    - lymphoma
+    - t_cell_lymphoma
 
   MEL:
     name: Melanoma
@@ -9826,17 +9697,6 @@ tumor_types:
     - melanocytic_tumor
     - melanocytoma
 
-  MIX_TUM_MAL:
-    name: Malignant mixed tumour
-    who_volume: Skin Tumours
-    site: Skin
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - skin_tumor
-    - skin_adnexal_tumor
-    - carcinoma
-
   MLN_ETV6_ABL1:
     name: Myeloid/lymphoid neoplasm with ETV6::ABL1 fusion
     who_volume: Haematolymphoid Tumours
@@ -9988,10 +9848,19 @@ tumor_types:
     - meningioma
     - malignant_tumor
 
+  MNPCT:
+    name: Myeloid neoplasm post cytotoxic therapy
+    who_volume: Haematolymphoid Tumours
+    site: Bone marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    families:
+    - mds_mpn
+
   MNTI:
     name: Melanotic neuroectodermal tumour of infancy
     who_volume: Head and Neck Tumours
-    site: Oral cavity (jaw)
+    site: Jaw
     lineage_broad: Neural
     lineage_detail:
     families:
@@ -10006,15 +9875,6 @@ tumor_types:
     parent: REN_METAD
     families:
     - renal_tumor
-
-  MN_GERMLINE:
-    name: Myeloid neoplasms associated with germline predisposition
-    who_volume: Haematolymphoid Tumours
-    site: Bone marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    families:
-    - mds_mpn
 
   MN_STROM:
     name: Metanephric stromal tumour
@@ -10181,15 +10041,6 @@ tumor_types:
     families:
     - mpn
 
-  MPN_POST_CT:
-    name: Myeloid neoplasm post cytotoxic therapy
-    who_volume: Haematolymphoid Tumours
-    site: Bone marrow
-    lineage_broad: Hematolymphoid
-    lineage_detail: Myeloid
-    families:
-    - mds_mpn
-
   MPN_PRE_PMF:
     name: Prefibrotic primary myelofibrosis
     who_volume: Haematolymphoid Tumours
@@ -10280,6 +10131,25 @@ tumor_types:
     families:
     - plasma_cell
 
+  MYELO_DS:
+    name: Myeloid proliferations associated with Down syndrome
+    who_volume: Haematolymphoid Tumours
+    site: Bone marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    parent: DS_GATA1
+    families:
+    - aml
+
+  MYELO_GERMLINE:
+    name: Myeloid neoplasms associated with germline predisposition
+    who_volume: Haematolymphoid Tumours
+    site: Bone marrow
+    lineage_broad: Hematolymphoid
+    lineage_detail: Myeloid
+    families:
+    - mds_mpn
+
   MYOEP:
     name: Myoepithelioma
     who_volume: Soft Tissue and Bone Tumours
@@ -10336,7 +10206,7 @@ tumor_types:
     - soft_tissue_tumor
     - myoepithelial_tumor
 
-  MYOEP_MIXED:
+  MYOEP_MIX:
     name: Mixed tumour
     who_volume: Soft Tissue and Bone Tumours
     site: Soft tissue
@@ -10445,7 +10315,7 @@ tumor_types:
     lineage_broad: Mesenchymal
     lineage_detail:
     families:
-    - reactive_lesion
+    - reactive
 
   MYPROL:
     name: Myositis proliferans
@@ -10454,7 +10324,7 @@ tumor_types:
     lineage_broad: Mesenchymal
     lineage_detail:
     families:
-    - reactive_lesion
+    - reactive
 
   MYX:
     name: Myxoma
@@ -10488,7 +10358,7 @@ tumor_types:
   MZL:
     name: Marginal zone B-cell lymphoma
     who_volume: Haematolymphoid Tumours
-    site: Lymphoid
+    site: Lymphoid tissue
     lineage_broad: Hematolymphoid
     lineage_detail: B-cell
     families:
@@ -10595,6 +10465,15 @@ tumor_types:
     - melanocytic_tumor
     - naevus
 
+  NEV_BEN:
+    name: Benign Melanocytic Nevus
+    who_volume:
+    site:
+    lineage_broad: Melanocytic
+    lineage_detail: Melanocytic
+    families:
+    - normal_tissue
+
   NEV_BLUE:
     name: Blue naevus
     who_volume: Skin Tumours
@@ -10605,15 +10484,6 @@ tumor_types:
     - skin_tumor
     - melanocytic_tumor
     - naevus
-
-  NEV_BNG:
-    name: Benign Melanocytic Nevus
-    who_volume:
-    site:
-    lineage_broad: Melanocytic
-    lineage_detail: Melanocytic
-    families:
-    - normal_tissue
 
   NEV_COMB:
     name: Combined naevus
@@ -10754,7 +10624,7 @@ tumor_types:
     lineage_broad: Mesenchymal
     lineage_detail:
     families:
-    - reactive_lesion
+    - reactive
     - fibroblastic_tumor
 
   NFIB:
@@ -10977,12 +10847,16 @@ tumor_types:
     - bone_tumor
     - cartilaginous_tumor
 
-  OCULAR_CLL_SLL:
+  OCUL_CLL:
     name: Chronic lymphocytic leukaemia / small lymphocytic lymphoma (ocular adnexa)
     who_volume: Eye and Orbit Tumours
     site: Ocular adnexa
     lineage_broad: Hematolymphoid
     lineage_detail: B-cell
+    families:
+    - ocular_tumor
+    - lymphoma
+    - b_cell_lymphoma
 
   OCUL_MELCYTOS:
     name: Ocular melanocytosis
@@ -11041,15 +10915,6 @@ tumor_types:
     families:
     - odontogenic_tumor
     - sarcoma
-
-  OESTOCH:
-    name: Osteochondroma
-    who_volume: Soft Tissue and Bone Tumours
-    site: Bone
-    lineage_broad: Mesenchymal
-    lineage_detail:
-    families:
-    - bone_tumor
 
   OFD:
     name: Osteofibrous dysplasia
@@ -11137,7 +11002,7 @@ tumor_types:
     lineage_broad: Epithelial
     lineage_detail:
     families:
-    - premalignant_lesion
+    - precursor_lesion
 
   ONB:
     name: Olfactory Neuroblastoma
@@ -11227,7 +11092,6 @@ tumor_types:
     site: Optic nerve
     lineage_broad: Neural
     lineage_detail: Glial
-    parent: LGG_PA_PF
     families:
     - glioma
     - low_grade_glioma
@@ -11242,7 +11106,7 @@ tumor_types:
     families:
     - hamartoma
 
-  ORBIT_GLH:
+  ORB_GLH:
     name: Orbital glial heterotopia
     who_volume: Eye and Orbit Tumours
     site: Orbit
@@ -11252,7 +11116,7 @@ tumor_types:
     - ocular_tumor
     - hamartoma
 
-  ORBIT_MES_HAM:
+  ORB_MES_HAM:
     name: Mesenchymal hamartoma of the orbit
     who_volume: Eye and Orbit Tumours
     site: Orbit
@@ -11302,7 +11166,7 @@ tumor_types:
   OR_SCC_VERR:
     name: Verrucous carcinoma of the oral cavity and mobile tongue
     who_volume: Head and Neck Tumours
-    site: Oral cavity / tongue
+    site: Tongue
     lineage_broad: Epithelial
     lineage_detail:
     families:
@@ -11368,6 +11232,15 @@ tumor_types:
     families:
     - bone_tumor
     - osteogenic_tumor
+
+  OSTEOCH:
+    name: Osteochondroma
+    who_volume: Soft Tissue and Bone Tumours
+    site: Bone
+    lineage_broad: Mesenchymal
+    lineage_detail:
+    families:
+    - bone_tumor
 
   OSTEOID_OST:
     name: Osteoid osteoma
@@ -11491,7 +11364,7 @@ tumor_types:
     lineage_broad: Epithelial
     lineage_detail:
     families:
-    - premalignant_lesion
+    - precursor_lesion
 
   OVA_CA:
     name: Ovarian carcinoma
@@ -11547,13 +11420,12 @@ tumor_types:
     - gynecologic_tumor
     - carcinosarcoma
 
-  OVA_EMBCA:
+  OVA_EMB_CA:
     name: Embryonal carcinoma (ovary)
     who_volume: Female Genital Tumours
     site: Ovary
     lineage_broad: Germ cell
     lineage_detail:
-    parent: TES_EMB_CA
     families:
     - gynecologic_tumor
     - germ_cell_tumor
@@ -12138,7 +12010,7 @@ tumor_types:
     - neuroendocrine_tumor
     - functioning_net
 
-  PAN_SEROUS:
+  PAN_SER:
     name: Serous neoplasms of the pancreas
     who_volume: Digestive System Tumours
     site: Pancreas
@@ -12215,6 +12087,17 @@ tumor_types:
     families:
     - parathyroid_tumor
     - adenoma
+
+  PA_ANA:
+    name: Anaplastic pilocytic astrocytoma
+    who_volume: Central Nervous System Tumours
+    site: Central nervous system
+    lineage_broad: Neural
+    lineage_detail: Glial
+    families:
+    - glioma
+    - astrocytoma
+    - pilocytic_astrocytoma
 
   PA_NF1:
     name: Pilocytic astrocytoma, arising in the setting of NF1
@@ -12665,16 +12548,6 @@ tumor_types:
     - breast_tumor
     - fibroepithelial_tumor
 
-  PID_LPD:
-    name: Primary immunodeficiency-associated lymphoproliferative disorders
-    who_volume: Paediatric Tumours
-    site: Lymphoid tissue
-    lineage_broad: Hematolymphoid
-    lineage_detail:
-    parent: IEI_LPD
-    families:
-    - lymphoproliferative_disorder
-
   PILA:
     name: Papillary intralymphatic angioendothelioma
     who_volume: Soft Tissue and Bone Tumours
@@ -12925,8 +12798,8 @@ tumor_types:
     lineage_broad: Hematolymphoid
     lineage_detail: B-cell
     families:
-    - plasma_cell_neoplasm
-    - hematolymphoid
+    - plasma_cell
+    - hematolymphoid_neoplasm
 
   PLEO_AD:
     name: Pleomorphic Adenoma
@@ -13077,7 +12950,7 @@ tumor_types:
     lineage_broad: Hematolymphoid
     lineage_detail: Myeloid
     families:
-    - myeloproliferative_neoplasm
+    - mpn
     - myelofibrosis
 
   PMT:
@@ -13386,7 +13259,7 @@ tumor_types:
   PTFL:
     name: Pediatric-type follicular lymphoma
     who_volume: Haematolymphoid Tumours
-    site: Lymphoid
+    site: Lymphoid tissue
     lineage_broad: Hematolymphoid
     lineage_detail: B-cell
     families:
@@ -13844,7 +13717,7 @@ tumor_types:
     families:
     - renal_tumor
 
-  REN_ONC_OTHER:
+  REN_ONC_OTH:
     name: Other oncocytic tumours of the kidney
     who_volume: Urinary and Male Genital Tumours
     site: Kidney
@@ -14134,7 +14007,7 @@ tumor_types:
     - small_round_cell_tumor
 
   SARC_NFATC2S:
-    name: NATC2-altered sarcoma
+    name: NFATC2-altered sarcoma
     who_volume: Soft Tissue and Bone Tumours
     site: Soft tissue / bone
     lineage_broad: Mesenchymal
@@ -14871,6 +14744,17 @@ tumor_types:
     - carcinoma
     - squamous_cell_carcinoma
 
+  SKIN_ADNX_ADCA:
+    name: Adnexal adenocarcinoma NOS
+    who_volume: Skin Tumours
+    site: Skin
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - skin_tumor
+    - skin_adnexal_tumor
+    - carcinoma
+
   SKIN_AK:
     name: Actinic Keratosis
     who_volume:
@@ -14936,6 +14820,16 @@ tumor_types:
     - vascular_tumor
     - sarcoma
 
+  SKIN_BEN_KER:
+    name: Other benign keratoses
+    who_volume: Skin Tumours
+    site: Skin
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - skin_tumor
+    - benign_tumor
+
   SKIN_BPDCN:
     name: Blastic plasmacytoid dendritic cell neoplasm
     who_volume: Skin Tumours
@@ -14947,7 +14841,7 @@ tumor_types:
     - histiocytic_neoplasm
     - dendritic_cell_neoplasm
 
-  SKIN_B_LL:
+  SKIN_B_ALL:
     name: B-lymphoblastic leukaemia/lymphoma
     who_volume: Skin Tumours
     site: Skin
@@ -14957,6 +14851,17 @@ tumor_types:
     - skin_tumor
     - lymphoma
     - b_cell_lymphoma
+
+  SKIN_CCS:
+    name: Dermal clear cell sarcoma
+    who_volume: Skin Tumours
+    site: Skin
+    lineage_broad: Mesenchymal
+    lineage_detail:
+    families:
+    - skin_tumor
+    - soft_tissue_tumor
+    - sarcoma
 
   SKIN_CLL:
     name: Chronic lymphocytic leukaemia / small lymphocytic lymphoma
@@ -14979,6 +14884,28 @@ tumor_types:
     - skin_tumor
     - skin_adnexal_tumor
     - carcinoma
+
+  SKIN_DMF:
+    name: Dermatomyofibroma
+    who_volume: Skin Tumours
+    site: Skin
+    lineage_broad: Mesenchymal
+    lineage_detail:
+    families:
+    - skin_tumor
+    - soft_tissue_tumor
+    - fibroblastic_tumor
+
+  SKIN_FCTN:
+    name: Fibroblastic connective tissue naevus
+    who_volume: Skin Tumours
+    site: Skin
+    lineage_broad: Mesenchymal
+    lineage_detail:
+    families:
+    - skin_tumor
+    - soft_tissue_tumor
+    - fibroblastic_tumor
 
   SKIN_KA:
     name: Keratoacanthoma
@@ -15012,19 +14939,19 @@ tumor_types:
     - lymphoma
     - b_cell_lymphoma
 
+  SKIN_LYM:
+    name: Cutaneous lymphoma
+    who_volume: Skin Tumours
+    site: Skin
+    lineage_broad: Hematolymphoid
+    lineage_detail: Lymphoid
+    families:
+    - lymphoma
+    - skin_tumor
+
   SKIN_MAST:
     name: Cutaneous mastocytosis
     who_volume: Haematolymphoid Tumours
-    site: Skin
-    lineage_broad: Hematolymphoid
-    lineage_detail:
-    families:
-    - skin_tumor
-    - mast_cell_neoplasm
-
-  SKIN_MASTO:
-    name: Mastocytosis
-    who_volume: Skin Tumours
     site: Skin
     lineage_broad: Hematolymphoid
     lineage_detail:
@@ -15039,6 +14966,18 @@ tumor_types:
     lineage_broad: Melanocytic
     lineage_detail:
     families:
+    - melanocytic_tumor
+    - melanoma
+
+  SKIN_MEL_DERM:
+    name: Dermal melanoma
+    who_volume: Skin Tumours
+    site: Skin
+    lineage_broad: Melanocytic
+    lineage_detail:
+    parent: SKIN_MEL
+    families:
+    - skin_tumor
     - melanocytic_tumor
     - melanoma
 
@@ -15062,6 +15001,17 @@ tumor_types:
     families:
     - skin_tumor
     - skin_adnexal_tumor
+
+  SKIN_MIX_MAL:
+    name: Malignant mixed tumour
+    who_volume: Skin Tumours
+    site: Skin
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - skin_tumor
+    - skin_adnexal_tumor
+    - carcinoma
 
   SKIN_MUC_CA:
     name: Mucinous carcinoma
@@ -15160,17 +15110,6 @@ tumor_types:
     - carcinoma
     - squamous_cell_carcinoma
 
-  SKIN_SCC_FIBEPI:
-    name: Fibroepithelial basal cell carcinoma
-    who_volume: Skin Tumours
-    site: Skin
-    lineage_broad: Epithelial
-    lineage_detail:
-    parent: BCC
-    families:
-    - skin_tumor
-    - carcinoma
-
   SKIN_SCC_SARC:
     name: Squamous cell carcinoma with sarcomatoid differentiation
     who_volume: Skin Tumours
@@ -15206,17 +15145,6 @@ tumor_types:
     - skin_tumor
     - carcinoma
     - squamous_cell_carcinoma
-
-  SKIN_SCL:
-    name: Spindle cell / pleomorphic lipoma
-    who_volume: Skin Tumours
-    site: Skin
-    lineage_broad: Mesenchymal
-    lineage_detail:
-    families:
-    - skin_tumor
-    - soft_tissue_tumor
-    - adipocytic_tumor
 
   SKIN_SEBK:
     name: Seborrheic Keratosis
@@ -15461,7 +15389,7 @@ tumor_types:
   SN_BCAT:
     name: Sinonasal beta-catenin-positive (SFT-like) neoplasm
     who_volume: Head and Neck Tumours
-    site: Sinonasal
+    site: Sinonasal tract
     lineage_broad: Mesenchymal
     lineage_detail:
     families:
@@ -15680,7 +15608,7 @@ tumor_types:
     lineage_broad: Epithelial
     lineage_detail:
     families:
-    - premalignant_lesion
+    - precursor_lesion
 
   SSL_DYS:
     name: Colorectal sessile serrated lesion with dysplasia
@@ -15689,7 +15617,7 @@ tumor_types:
     lineage_broad: Epithelial
     lineage_detail:
     families:
-    - premalignant_lesion
+    - precursor_lesion
 
   SSN:
     name: "Special-site naevi (of the breast, axilla, scalp, and ear)"
@@ -16030,16 +15958,7 @@ tumor_types:
     - genital_tumor
     - borderline_tumor
 
-  TESA_MUC_CYSTAD:
-    name: Mucinous cystadenoma (testicular adnexa)
-    who_volume: Urinary and Male Genital Tumours
-    site: Testicular adnexa
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - genital_tumor
-
-  TESA_MUC_CYSTADCA:
+  TESA_MUC_CA:
     name: Mucinous cystadenocarcinoma (testicular adnexa)
     who_volume: Urinary and Male Genital Tumours
     site: Testicular adnexa
@@ -16048,6 +15967,15 @@ tumor_types:
     families:
     - genital_tumor
     - carcinoma
+
+  TESA_MUC_CYSTAD:
+    name: Mucinous cystadenoma (testicular adnexa)
+    who_volume: Urinary and Male Genital Tumours
+    site: Testicular adnexa
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - genital_tumor
 
   TESA_SER_BOT:
     name: Serous tumour of borderline malignancy (testicular adnexa)
@@ -16059,16 +15987,7 @@ tumor_types:
     - genital_tumor
     - borderline_tumor
 
-  TESA_SER_CYSTAD:
-    name: Serous cystadenoma (testicular adnexa)
-    who_volume: Urinary and Male Genital Tumours
-    site: Testicular adnexa
-    lineage_broad: Epithelial
-    lineage_detail:
-    families:
-    - genital_tumor
-
-  TESA_SER_CYSTADCA:
+  TESA_SER_CA:
     name: Serous cystadenocarcinoma (testicular adnexa)
     who_volume: Urinary and Male Genital Tumours
     site: Testicular adnexa
@@ -16078,12 +15997,22 @@ tumor_types:
     - genital_tumor
     - carcinoma
 
+  TESA_SER_CYSTAD:
+    name: Serous cystadenoma (testicular adnexa)
+    who_volume: Urinary and Male Genital Tumours
+    site: Testicular adnexa
+    lineage_broad: Epithelial
+    lineage_detail:
+    families:
+    - genital_tumor
+
   TES_EMB_CA:
     name: Testicular embryonal carcinoma
     who_volume: Urinary and Male Genital Tumours
     site: Testis
     lineage_broad: Germ cell
     lineage_detail:
+    parent: EMB_CA
     families:
     - germ_cell_tumor
     - testicular_tumor
@@ -16785,7 +16714,7 @@ tumor_types:
     families:
     - t_all
 
-  T_ALL_OTHER:
+  T_ALL_OTH:
     name: Other T-ALL/LBL
     who_volume: Haematolymphoid Tumours
     site: Bone marrow
@@ -16845,16 +16774,6 @@ tumor_types:
     lineage_detail:
     families:
     - hamartoma
-
-  UMG_LCNEC:
-    name: Large cell neuroendocrine carcinoma (urinary / male genital)
-    who_volume: Urinary and Male Genital Tumours
-    site: Urinary tract / prostate / testis
-    lineage_broad: Endocrine
-    lineage_detail:
-    families:
-    - genital_tumor
-    - neuroendocrine_tumor
 
   UPS:
     name: Undifferentiated pleomorphic sarcoma
@@ -16927,39 +16846,6 @@ tumor_types:
     - urinary_tract_tumor
     - carcinoma
 
-  URO_CA_NI_PAP:
-    name: Non-invasive papillary urothelial carcinoma
-    who_volume: Urinary and Male Genital Tumours
-    site: Urinary tract
-    lineage_broad: Epithelial
-    lineage_detail:
-    parent: URO_CA
-    families:
-    - urinary_tract_tumor
-    - carcinoma
-
-  URO_CA_NI_PAP_HG:
-    name: Non-invasive papillary urothelial carcinoma, high-grade
-    who_volume: Urinary and Male Genital Tumours
-    site: Urinary tract
-    lineage_broad: Epithelial
-    lineage_detail:
-    parent: URO_CA_NI_PAP
-    families:
-    - urinary_tract_tumor
-    - carcinoma
-
-  URO_CA_NI_PAP_LG:
-    name: Non-invasive papillary urothelial carcinoma, low-grade
-    who_volume: Urinary and Male Genital Tumours
-    site: Urinary tract
-    lineage_broad: Epithelial
-    lineage_detail:
-    parent: URO_CA_NI_PAP
-    families:
-    - urinary_tract_tumor
-    - carcinoma
-
   URO_CIS:
     name: Urothelial carcinoma in situ
     who_volume: Urinary and Male Genital Tumours
@@ -16981,6 +16867,16 @@ tumor_types:
     - urinary_tract_tumor
     - carcinoma
 
+  URO_LCNEC:
+    name: Large cell neuroendocrine carcinoma (urinary / male genital)
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract / prostate / testis
+    lineage_broad: Endocrine
+    lineage_detail:
+    families:
+    - genital_tumor
+    - neuroendocrine_tumor
+
   URO_MINEN:
     name: Mixed neuroendocrine neoplasms (urinary / male genital)
     who_volume: Urinary and Male Genital Tumours
@@ -17000,6 +16896,17 @@ tumor_types:
     families:
     - genital_tumor
     - neuroendocrine_tumor
+
+  URO_NIPC:
+    name: Non-invasive papillary urothelial carcinoma
+    who_volume: Urinary and Male Genital Tumours
+    site: Urinary tract
+    lineage_broad: Epithelial
+    lineage_detail:
+    parent: URO_CA
+    families:
+    - urinary_tract_tumor
+    - carcinoma
 
   URO_NIPC_HG:
     name: Non-invasive papillary urothelial carcinoma, high-grade

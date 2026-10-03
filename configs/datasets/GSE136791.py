@@ -22,7 +22,7 @@ def diagnosis(row):
 def methylation_class(row):
     mapping = {
         "Carcinoma": "ENDOM_EC",
-        "Hyperplasia": "EMH",
+        "Hyperplasia": "ENDOM_HYP",
     }
     return mapping[row["tissue"]]
 

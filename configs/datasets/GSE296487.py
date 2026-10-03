@@ -83,7 +83,7 @@ def methylation_class(row):
         "DGONC": "DGONC",
         "MPNST_ATYP": "MPNST",
         # choroid plexus, craniopharyngioma, meningioma
-        "CPC_PED": "CPC_PED",
+        "CPC_PED": "PLEX_CA_PED",
         "CPP_PED": "PLEX_PED_A",
         "CPH_ADM": "CPH_ADM",
         "CPH_PAP": "CPH_PAP",

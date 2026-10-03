@@ -45,7 +45,7 @@ def methylation_class(row):
         "A IDH, HG": "ASTRO_IDH_HG",
         "O IDH": "OLIGO_IDH",
         "DMG, K27": "DMG_K27",
-        "ANA PA": "ANA_PA",
+        "ANA PA": "PA_ANA",
         "PXA": "PXA",
         "EPN, PF A": "EPN_PF_A",
         "EPN, PF B": "EPN_PF_B",
