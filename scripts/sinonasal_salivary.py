@@ -439,6 +439,51 @@ MERGE_MAP = {
     ],
 }
 
+# Repos to exclude, as there are no raw idat files available
+# Result from running check_idat.py
+NO_RAW_IDATS = {
+    "GSE109507",
+    "GSE110081",
+    "GSE114210",
+    "GSE118241",
+    "GSE123781",
+    "GSE232680",
+    "GSE272021",
+    "GSE278586",
+    "GSE328029",
+    "GSE37362",
+    "GSE38235",
+    "GSE38266",
+    "GSE39279",
+    "GSE42372",
+    "GSE43091",
+    "GSE44661",
+    "GSE49031",
+    "GSE49656",
+    "GSE50192",
+    "GSE51820",
+    "GSE53051",
+    "GSE56044",
+    "GSE56600",
+    "GSE57362",
+    "GSE58538",
+    "GSE61467",
+    "GSE66881",
+    "GSE67043",
+    "GSE69229",
+    "GSE69954",
+    "GSE70783",
+    "GSE73832",
+    "GSE74104",
+    "GSE76269",
+    "GSE76585",
+    "GSE79740",
+    "GSE80508",
+    "GSE81334",
+    "GSE90867",
+    "GSE99111",
+}
+
 
 DATASET_DIR = Path("~/methylmeta/data").expanduser()
 OUTPUT = Path(
@@ -498,8 +543,13 @@ def main() -> None:
         .replace(merge_lookup)
         .alias("methylation_class")
     )
+    df = df.filter(~pl.col("dataset_id").is_in(NO_RAW_IDATS))
     for key, count in Counter(df["methylation_class"]).most_common():
         print(f"{key}: {count}")
+
+    print("\nUsed datasets:")
+    for dset in sorted(df["dataset_id"].unique()):
+        print(f"{dset}")
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     df.write_csv(OUTPUT, separator="\t")
