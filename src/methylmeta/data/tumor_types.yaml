@@ -4191,6 +4191,15 @@ tumor_types:
     families:
     - normal_tissue
 
+  CTRL_SALIVA:
+    name: Control - Saliva
+    who_volume:
+    site: Saliva
+    lineage_broad: Epithelial
+    lineage_detail: Squamous
+    families:
+    - normal_tissue
+
   CTRL_SG:
     name: Control - Salivary Gland
     who_volume:
