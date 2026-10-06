@@ -13,18 +13,13 @@ from pathlib import Path
 import polars as pl
 
 from methylmeta import MetadataMerger
+from methylmeta.catalog import find_datasets, load_catalog
 from methylmeta.fetch import check_datasets, download_missing
 from methylmeta.paths import CONFIGS_DIR
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-
-ALL_DATASETS = sorted(
-    path.stem
-    for path in CONFIGS_DIR.glob("*.py")
-    if path.name != "__init__.py"
-)
 
 TUMOR_TYPES = {
     # ------------------------------------------------------------------
@@ -442,6 +437,7 @@ MERGE_MAP = {
 # Repos to exclude, as there are no raw idat files available
 # Result from running check_idat.py
 NO_RAW_IDATS = {
+    "GSE105420",
     "GSE109507",
     "GSE110081",
     "GSE114210",
@@ -497,13 +493,49 @@ COMPUTE_ARRAY_TYPES = False  # requires idats on disk; slow on large merges
 # -------------------------------------------------------------------
 
 
+def select_datasets() -> list[str]:
+    """Datasets whose config can produce any of TUMOR_TYPES.
+
+    Reads the configs statically (no metadata needed), so only the relevant
+    datasets are fetched instead of the whole catalog. Datasets without raw
+    IDATs are dropped up front.
+    """
+    catalog = load_catalog(CONFIGS_DIR)
+    matches = find_datasets(catalog, TUMOR_TYPES)
+    selected = {m.entry.dataset_id for m in matches}
+
+    # Configs whose classes are computed dynamically (e.g. `return
+    # row["class"]`) can't be analysed statically. Keep them rather than
+    # silently dropping them; the class filter after merging removes
+    # irrelevant rows anyway.
+    undetectable = {
+        dataset_id for dataset_id, e in catalog.items() if not e.classes
+    }
+    if undetectable:
+        logger.warning(
+            "Keeping %d dataset(s) with no statically detectable classes: %s",
+            len(undetectable),
+            sorted(undetectable),
+        )
+    selected |= undetectable
+
+    selected -= NO_RAW_IDATS
+    logger.info(
+        "Selected %d of %d datasets containing the requested classes",
+        len(selected),
+        len(catalog),
+    )
+    return sorted(selected)
+
+
 def main() -> None:
     merger = MetadataMerger(config_dir=CONFIGS_DIR, dataset_dir=DATASET_DIR)
+    datasets = select_datasets()
 
     # 1. Every wanted dataset needs a harmonizer config before it can be
     # merged - fail fast and say which ones are missing, rather than
     # discovering it mid-merge.
-    missing_configs = merger.missing_configs(ALL_DATASETS)
+    missing_configs = merger.missing_configs(datasets)
     if missing_configs:
         raise SystemExit(
             "No config yet for: "
@@ -513,9 +545,7 @@ def main() -> None:
         )
 
     # 2. Check what's already on disk, fetch what's missing.
-    statuses = check_datasets(
-        ALL_DATASETS, DATASET_DIR, check_idat=DOWNLOAD_IDAT
-    )
+    statuses = check_datasets(datasets, DATASET_DIR, check_idat=DOWNLOAD_IDAT)
     for status in statuses:
         logger.info(status)
 
@@ -531,7 +561,7 @@ def main() -> None:
             )
 
     # 3. Harmonize and merge.
-    df = merger.merge(dataset_ids=ALL_DATASETS)
+    df = merger.merge(dataset_ids=datasets)
     df = df.filter(pl.col("methylation_class").is_in(TUMOR_TYPES))
     merge_lookup = {
         tumor_type: group

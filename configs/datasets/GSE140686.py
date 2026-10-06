@@ -7,7 +7,7 @@ def description(row):
 
 
 def sample_id(row):
-    return row["ID"]
+    return row["IDAT"]
 
 
 def diagnosis(row):
