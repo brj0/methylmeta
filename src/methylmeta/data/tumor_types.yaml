@@ -10022,6 +10022,16 @@ tumor_types:
     - sarcoma
     - peripheral_nerve_sheath_tumor
 
+  MPNST_LIKE_SARC:
+    name: Malignant peripheral nerve sheath tumor
+    who_volume: Soft Tissue and Bone Tumours
+    site: Peripheral nervous system
+    lineage_broad: Neural
+    lineage_detail:
+    families:
+    - sarcoma
+    - peripheral_nerve_sheath_tumor
+
   MPN_ET:
     name: Essential thrombocythemia
     who_volume: Haematolymphoid Tumours

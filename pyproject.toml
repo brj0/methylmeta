@@ -21,6 +21,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
+    "fastexcel",
     "mypy",
     "pytest",
     "pytest-cov",
