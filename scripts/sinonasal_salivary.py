@@ -21,7 +21,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-TUMOR_TYPES = {
+TARGET_CLASSES = {
     # ------------------------------------------------------------------
     # Salivary gland tumours
     # ------------------------------------------------------------------
@@ -433,6 +433,11 @@ MERGE_MAP = {
         "ONB_B",
     ],
 }
+MERGE_LOOKUP = {
+    tumor_type: group
+    for group, tumor_types in MERGE_MAP.items()
+    for tumor_type in tumor_types
+}
 
 # Repos to exclude, as there are no raw idat files available
 # Result from running check_idat.py
@@ -494,14 +499,14 @@ COMPUTE_ARRAY_TYPES = False  # requires idats on disk; slow on large merges
 
 
 def select_datasets() -> list[str]:
-    """Datasets whose config can produce any of TUMOR_TYPES.
+    """Datasets whose config can produce any of TARGET_CLASSES.
 
     Reads the configs statically (no metadata needed), so only the relevant
     datasets are fetched instead of the whole catalog. Datasets without raw
     IDATs are dropped up front.
     """
     catalog = load_catalog(CONFIGS_DIR)
-    matches = find_datasets(catalog, TUMOR_TYPES)
+    matches = find_datasets(catalog, TARGET_CLASSES)
     selected = {m.entry.dataset_id for m in matches}
 
     # Configs whose classes are computed dynamically (e.g. `return
@@ -509,7 +514,9 @@ def select_datasets() -> list[str]:
     # silently dropping them; the class filter after merging removes
     # irrelevant rows anyway.
     undetectable = {
-        dataset_id for dataset_id, e in catalog.items() if not e.classes
+        dataset_id
+        for dataset_id, entry in catalog.items()
+        if not entry.classes
     }
     if undetectable:
         logger.warning(
@@ -562,18 +569,16 @@ def main() -> None:
 
     # 3. Harmonize and merge.
     df = merger.merge(dataset_ids=datasets)
-    df = df.filter(pl.col("methylation_class").is_in(TUMOR_TYPES))
-    merge_lookup = {
-        tumor_type: group
-        for group, tumor_types in MERGE_MAP.items()
-        for tumor_type in tumor_types
-    }
-    df = df.with_columns(
-        pl.col("methylation_class")
-        .replace(merge_lookup)
-        .alias("methylation_class")
-    )
-    df = df.filter(~pl.col("dataset_id").is_in(NO_RAW_IDATS))
+    df = df.filter(pl.col("methylation_class").is_in(TARGET_CLASSES))
+
+    # Exclude cell lines
+    # df = df.filter(
+    #     pl.col("material_type").ne_missing("cell_line")
+    # )
+
+    # Merge classes
+    df = df.with_columns(pl.col("methylation_class").replace(MERGE_LOOKUP))
+
     for key, count in Counter(df["methylation_class"]).most_common():
         print(f"{key}: {count}")
 
