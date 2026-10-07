@@ -494,6 +494,9 @@ OUTPUT = Path(
 DOWNLOAD_MISSING = True  # set False to only report what's missing
 DOWNLOAD_IDAT = False  # idats are large - opt in explicitly
 COMPUTE_ARRAY_TYPES = False  # requires idats on disk; slow on large merges
+ADD_IDAT_PATHS = True  # idat_path column; null if no IDAT on disk
+DROP_INVALID = False  # drop rows w/o IDAT or array_type invalid_array
+ADD_PURITIES = False  # RFpurify; requires idats on disk, slow, cached
 
 # -------------------------------------------------------------------
 
@@ -572,9 +575,7 @@ def main() -> None:
     df = df.filter(pl.col("methylation_class").is_in(TARGET_CLASSES))
 
     # Exclude cell lines
-    # df = df.filter(
-    #     pl.col("material_type").ne_missing("cell_line")
-    # )
+    df = df.filter(pl.col("material_type").ne_missing("cell_line"))
 
     # Merge classes
     df = df.with_columns(pl.col("methylation_class").replace(MERGE_LOOKUP))
@@ -597,6 +598,17 @@ def main() -> None:
         logger.info(
             "Wrote %d samples -> %s (with array_type)", len(df), OUTPUT
         )
+
+    # 5. Optional: IDAT paths, drop unusable rows, purities. Runs on the
+    # class-filtered table, so purity is only computed for selected samples.
+    if ADD_IDAT_PATHS or DROP_INVALID or ADD_PURITIES:
+        df = merger.add_idat_paths(df)
+        if DROP_INVALID:
+            df = merger.drop_invalid(df)
+        if ADD_PURITIES:
+            df = merger.add_purities(df)
+        df.write_csv(OUTPUT, separator="\t")
+        logger.info("Wrote %d samples -> %s (with idat_path)", len(df), OUTPUT)
 
 
 if __name__ == "__main__":

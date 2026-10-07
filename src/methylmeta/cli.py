@@ -52,6 +52,27 @@ def cli() -> None:
     ),
 )
 @click.option(
+    "--idat_paths/--no_idat_paths",
+    default=True,
+    help="Add idat_path: absolute IDAT basepath (null if no IDAT on disk).",
+)
+@click.option(
+    "--drop_invalid/--keep_invalid",
+    default=False,
+    help=(
+        "Drop rows without IDAT or with array_type invalid_array "
+        "(needs --idat_paths)."
+    ),
+)
+@click.option(
+    "--purities/--no_purities",
+    default=False,
+    help=(
+        "Add purity_absolute / purity_estimate (RFpurify, needs IDATs). "
+        "Cached per dataset in the methylmeta cache dir."
+    ),
+)
+@click.option(
     "--datasets",
     default=None,
     help=(
@@ -74,6 +95,9 @@ def merge(
     output: Path | None,
     strict: bool,
     array_types: bool,
+    idat_paths: bool,
+    drop_invalid: bool,
+    purities: bool,
     datasets: str | None,
     list_missing: bool,
 ) -> None:
@@ -100,6 +124,8 @@ def merge(
 
     if output is None:
         raise click.UsageError("--output is required unless --list_missing.")
+    if (drop_invalid or purities) and not idat_paths:
+        raise click.UsageError("--drop_invalid/--purities need --idat_paths.")
 
     output = Path(output).expanduser()
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -114,6 +140,15 @@ def merge(
         df = merger.add_array_types(df)
         df.write_csv(output, separator="\t")
         click.echo(f"Wrote {len(df)} samples → {output} (with array_type)")
+
+    if idat_paths:
+        df = merger.add_idat_paths(df)
+        if drop_invalid:
+            df = merger.drop_invalid(df)
+        if purities:
+            df = merger.add_purities(df)
+        df.write_csv(output, separator="\t")
+        click.echo(f"Wrote {len(df)} samples → {output} (with idat_path)")
 
 
 @cli.command()

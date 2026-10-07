@@ -12,7 +12,7 @@ from typing import Any
 import polars as pl
 
 from methylmeta.loader import load_dataset_module
-from methylmeta.paths import METADATA_OVERRIDES_DIR
+from methylmeta.paths import CACHE_DIR, METADATA_OVERRIDES_DIR
 from methylmeta.schema import SampleMetadata
 
 logger = logging.getLogger(__name__)
@@ -745,6 +745,173 @@ class MetadataMerger:
                 array_types.append("invalid_array")
 
         return df.with_columns(pl.Series("array_type", array_types))
+
+    def add_idat_paths(self, df: pl.DataFrame) -> pl.DataFrame:
+        """Add `idat_path`: absolute IDAT basepath (no `_Grn.idat` suffix).
+
+        Samples without a valid IDAT pair on disk get null.
+        """
+        from mepylome.dtypes.beads import idat_basepaths
+
+        if "dataset_id" not in df.columns or "sample_id" not in df.columns:
+            raise ValueError("df must have dataset_id and sample_id columns")
+
+        basepaths_by_dataset: dict[str, dict[str, Path]] = {}
+        paths: list[str | None] = []
+
+        for dataset_id, sample_id in df.select(
+            "dataset_id", "sample_id"
+        ).iter_rows():
+            if dataset_id not in basepaths_by_dataset:
+                dataset_path = self.dataset_dir / dataset_id
+                found = (
+                    idat_basepaths(dataset_path, only_valid=True)
+                    if dataset_path.is_dir()
+                    else []
+                )
+                basepaths_by_dataset[dataset_id] = {p.name: p for p in found}
+
+            basepath = basepaths_by_dataset[dataset_id].get(sample_id)
+            paths.append(str(basepath.resolve()) if basepath else None)
+
+        return df.with_columns(pl.Series("idat_path", paths, dtype=pl.String))
+
+    @staticmethod
+    def drop_invalid(df: pl.DataFrame) -> pl.DataFrame:
+        """Drop rows without a usable IDAT pair.
+
+        That is: no `idat_path`, or (if the column exists) `array_type` is
+        `invalid_array`. Run after `add_idat_paths` / `add_array_types`.
+        """
+        if "idat_path" not in df.columns:
+            raise ValueError("df needs an idat_path column (add_idat_paths)")
+
+        no_idat = pl.col("idat_path").is_null()
+        bad_array = (
+            pl.col("array_type").eq_missing("invalid_array")
+            if "array_type" in df.columns
+            else pl.lit(False)
+        )
+        n_no_idat, n_bad = df.select(
+            no_idat.sum().alias("no_idat"),
+            (~no_idat & bad_array).sum().alias("bad_array"),
+        ).row(0)
+        logger.info(
+            "Dropping %d rows without IDAT and %d with invalid array "
+            "(keeping %d)",
+            n_no_idat,
+            n_bad,
+            df.height - n_no_idat - n_bad,
+        )
+        return df.filter(~no_idat & ~bad_array)
+
+    def add_purities(
+        self,
+        df: pl.DataFrame,
+        methods: tuple[str, ...] = ("absolute", "estimate"),
+        n_jobs: int | None = None,
+        show_progress: bool = True,
+        cache_dir: str | Path | None = None,
+    ) -> pl.DataFrame:
+        """Add `purity_<method>` columns (RFpurify, predicted from IDATs).
+
+        Needs `idat_path` (see `add_idat_paths`). Results are cached per
+        dataset in `<cache_dir>/<dataset_id>.json` (default:
+        `CACHE_DIR/purity`, never inside the dataset folders) and reused
+        across merges; the cache is ignored if the mepylome version differs.
+        Samples that are missing or fail get null (and are not cached).
+        """
+        import json
+        import os
+        from concurrent.futures import ThreadPoolExecutor
+        from importlib.metadata import version
+
+        from mepylome import MethylData
+
+        if "idat_path" not in df.columns:
+            raise ValueError("df needs an idat_path column (add_idat_paths)")
+
+        cache_dir = Path(cache_dir) if cache_dir else CACHE_DIR / "purity"
+        cache_dir.mkdir(parents=True, exist_ok=True)
+        columns = [f"purity_{m}" for m in methods]
+        mepylome_version = version("mepylome")
+        n_jobs = n_jobs or min(8, os.cpu_count() or 1)
+
+        def predict(basepath: str) -> dict[str, float]:
+            md = MethylData(file=basepath, prep="noob")
+            return {
+                f"purity_{m}": round(float(md.predict_purity(m).iloc[0]), 3)
+                for m in methods
+            }
+
+        results: dict[tuple[str, str], dict[str, float]] = {}
+
+        for dataset_id in df["dataset_id"].unique(maintain_order=True):
+            cache_path = cache_dir / f"{dataset_id}.json"
+            cache: dict[str, dict[str, float]] = {}
+            if cache_path.is_file():
+                stored = json.loads(cache_path.read_text())
+                if stored.get("mepylome") == mepylome_version:
+                    cache = stored["samples"]
+
+            rows = df.filter(
+                (pl.col("dataset_id") == dataset_id)
+                & pl.col("idat_path").is_not_null()
+                & pl.col("sample_id").is_not_null()
+            ).select("sample_id", "idat_path")
+            todo = [
+                (sid, path)
+                for sid, path in rows.iter_rows()
+                if not all(c in cache.get(sid, {}) for c in columns)
+            ]
+
+            if todo:
+                with ThreadPoolExecutor(max_workers=n_jobs) as pool:
+                    futures = {
+                        sid: pool.submit(predict, path) for sid, path in todo
+                    }
+                    items = futures.items()
+                    if show_progress:
+                        from tqdm import tqdm
+
+                        items = tqdm(
+                            items,
+                            total=len(futures),
+                            desc=f"Purity {dataset_id}",
+                        )
+                    for sid, future in items:
+                        try:
+                            cache.setdefault(sid, {}).update(future.result())
+                        except Exception:
+                            logger.warning(
+                                "%s/%s: could not predict purity",
+                                dataset_id,
+                                sid,
+                                exc_info=True,
+                            )
+                cache_path.write_text(
+                    json.dumps(
+                        {"mepylome": mepylome_version, "samples": cache}
+                    )
+                )
+
+            for sid, _ in rows.iter_rows():
+                if all(c in cache.get(sid, {}) for c in columns):
+                    results[(dataset_id, sid)] = cache[sid]
+
+        return df.with_columns(
+            pl.Series(
+                col,
+                [
+                    results.get((d, s), {}).get(col)
+                    for d, s in df.select(
+                        "dataset_id", "sample_id"
+                    ).iter_rows()
+                ],
+                dtype=pl.Float64,
+            )
+            for col in columns
+        )
 
     def profile(
         self,

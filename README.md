@@ -103,6 +103,12 @@ Every row is validated against the `SampleMetadata` schema
 | `sex`, `age` | Patient sex and age in years |
 | `array_type` | Added by `add_array_types` / `merge` from the IDAT header |
 
+`methylmeta merge` also adds columns derived from the IDATs (not part of the
+schema): `idat_path` (absolute IDAT basepath, null if missing; default on),
+and, on request, `--purities` (`purity_absolute`, `purity_estimate`, RFpurify;
+cached per dataset in `purity_cache.json`) and `--drop_invalid` (drops rows
+without IDAT or with `array_type == invalid_array`).
+
 `methylation_class` must be a key in `tumor_types.yaml`, so typos and
 legacy acronyms fail loudly. `(dataset_id, sample_id)` must be unique across
 the merge.
