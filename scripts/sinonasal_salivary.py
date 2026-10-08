@@ -493,10 +493,10 @@ OUTPUT = Path(
 
 DOWNLOAD_MISSING = True  # set False to only report what's missing
 DOWNLOAD_IDAT = False  # idats are large - opt in explicitly
-COMPUTE_ARRAY_TYPES = True  # requires idats on disk; slow on large merges
+COMPUTE_ARRAY_TYPES = False  # requires idats on disk; slow on large merges
 ADD_IDAT_PATHS = True  # idat_path column; null if no IDAT on disk
 DROP_INVALID = False  # drop rows w/o IDAT or array_type invalid_array
-ADD_PURITIES = True  # RFpurify; requires idats on disk, slow, cached
+ADD_PURITIES = False  # RFpurify; requires idats on disk, slow, cached
 
 # -------------------------------------------------------------------
 
