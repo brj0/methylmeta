@@ -13,6 +13,7 @@ from pathlib import Path
 import polars as pl
 
 from methylmeta import MetadataMerger
+from methylmeta.vocab import all_tumor_types
 from methylmeta.catalog import find_datasets, load_catalog
 from methylmeta.fetch import check_datasets, download_missing
 from methylmeta.paths import CONFIGS_DIR
@@ -433,6 +434,26 @@ MERGE_MAP = {
         "ONB_B",
     ],
 }
+MERGE_NAMES = {
+    "DLBCL": "Diffuse large B-cell lymphoma",
+    "LYMPHOMA_B_OTH": "Other B-cell lymphomas",
+    "LYMPHOMA_TNK": "T-cell and NK-cell lymphomas",
+    "SN_ADCA": "Sinonasal adenocarcinoma",
+    "PLASMA_CELL": "Plasma cell neoplasms",
+    "HISTIOCYTIC": "Histiocytic neoplasms",
+    "CTRL_OTH": "Other controls",
+    "AMBL": "Ameloblastoma",
+    "RMS": "Rhabdomyosarcoma",
+    "OR_DYS": "Oral epithelial dysplasia",
+    "PLEO_MYO": "Pleomorphic adenoma / myoepithelioma",
+    "THYR_CA": "Thyroid carcinoma",
+    "NSCLC": "Non-small cell lung carcinoma",
+    "MEL_MET": "Melanoma metastasis",
+    "RCC": "Renal cell carcinoma",
+    "PGL": "Paraganglioma",
+    "BR_CA": "Breast carcinoma",
+    "ONB": "Olfactory neuroblastoma",
+}
 MERGE_LOOKUP = {
     tumor_type: group
     for group, tumor_types in MERGE_MAP.items()
@@ -579,6 +600,15 @@ def main() -> None:
 
     # Merge classes
     df = df.with_columns(pl.col("methylation_class").replace(MERGE_LOOKUP))
+
+    # Add full name
+    full_name_map = {tum.acronym: tum.name for tum in all_tumor_types()}
+    full_name_map.update(MERGE_NAMES)
+    df = df.with_columns(
+        pl.col("methylation_class")
+        .replace(full_name_map)
+        .alias("methylation_class_name")
+    )
 
     for key, count in Counter(df["methylation_class"]).most_common():
         print(f"{key}: {count}")
