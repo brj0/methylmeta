@@ -809,24 +809,25 @@ class MetadataMerger:
         self,
         df: pl.DataFrame,
         methods: tuple[str, ...] = ("absolute", "estimate"),
-        n_jobs: int | None = None,
         show_progress: bool = True,
         cache_dir: str | Path | None = None,
     ) -> pl.DataFrame:
         """Add `purity_<method>` columns (RFpurify, predicted from IDATs).
 
-        Needs `idat_path` (see `add_idat_paths`). Results are cached per
-        dataset in `<cache_dir>/<dataset_id>.json` (default:
-        `CACHE_DIR/purity`, never inside the dataset folders) and reused
-        across merges; the cache is ignored if the mepylome version differs.
+        Needs `idat_path` (see `add_idat_paths`). Per dataset, one mepylome
+        `MethylAnalysis` reads the missing samples' IDATs and runs
+        `predict_purity` on all of them at once (a batched random-forest
+        call, far faster than predicting sample by sample).
+
+        Results are cached per dataset in `<cache_dir>/<dataset_id>.json`
+        (default: `CACHE_DIR/purity`, never inside the dataset folders) and
+        reused across merges; the cache is ignored if the mepylome version
+        differs. The beta values mepylome extracts (`<cache_dir>/betas`) are
+        deleted again once the purities are computed.
         Samples that are missing or fail get null (and are not cached).
         """
         import json
-        import os
-        from concurrent.futures import ThreadPoolExecutor
         from importlib.metadata import version
-
-        from mepylome import MethylData
 
         if "idat_path" not in df.columns:
             raise ValueError("df needs an idat_path column (add_idat_paths)")
@@ -835,18 +836,18 @@ class MetadataMerger:
         cache_dir.mkdir(parents=True, exist_ok=True)
         columns = [f"purity_{m}" for m in methods]
         mepylome_version = version("mepylome")
-        n_jobs = n_jobs or min(8, os.cpu_count() or 1)
-
-        def predict(basepath: str) -> dict[str, float]:
-            md = MethylData(file=basepath, prep="noob")
-            return {
-                f"purity_{m}": round(float(md.predict_purity(m).iloc[0]), 3)
-                for m in methods
-            }
 
         results: dict[tuple[str, str], dict[str, float]] = {}
 
         for dataset_id in df["dataset_id"].unique(maintain_order=True):
+            rows = df.filter(
+                (pl.col("dataset_id") == dataset_id)
+                & pl.col("idat_path").is_not_null()
+                & pl.col("sample_id").is_not_null()
+            ).select("sample_id", "idat_path")
+            if rows.is_empty():
+                continue  # no IDATs: nothing to predict, no mepylome needed
+
             cache_path = cache_dir / f"{dataset_id}.json"
             cache: dict[str, dict[str, float]] = {}
             if cache_path.is_file():
@@ -854,40 +855,33 @@ class MetadataMerger:
                 if stored.get("mepylome") == mepylome_version:
                     cache = stored["samples"]
 
-            rows = df.filter(
-                (pl.col("dataset_id") == dataset_id)
-                & pl.col("idat_path").is_not_null()
-                & pl.col("sample_id").is_not_null()
-            ).select("sample_id", "idat_path")
-            todo = [
-                (sid, path)
+            todo = {
+                sid: path
                 for sid, path in rows.iter_rows()
                 if not all(c in cache.get(sid, {}) for c in columns)
-            ]
+            }
 
             if todo:
-                with ThreadPoolExecutor(max_workers=n_jobs) as pool:
-                    futures = {
-                        sid: pool.submit(predict, path) for sid, path in todo
-                    }
-                    items = futures.items()
-                    if show_progress:
-                        from tqdm import tqdm
-
-                        items = tqdm(
-                            items,
-                            total=len(futures),
-                            desc=f"Purity {dataset_id}",
-                        )
-                    for sid, future in items:
-                        try:
-                            cache.setdefault(sid, {}).update(future.result())
-                        except Exception:
+                try:
+                    predicted = self._predict_purities(
+                        dataset_id, todo, methods, cache_dir, show_progress
+                    )
+                except Exception:
+                    logger.warning(
+                        "%s: could not predict purity",
+                        dataset_id,
+                        exc_info=True,
+                    )
+                    predicted = None
+                if predicted is not None:
+                    for sid in todo:
+                        if sid in predicted:
+                            cache.setdefault(sid, {}).update(predicted[sid])
+                        else:
                             logger.warning(
                                 "%s/%s: could not predict purity",
                                 dataset_id,
                                 sid,
-                                exc_info=True,
                             )
                 cache_path.write_text(
                     json.dumps(
@@ -912,6 +906,58 @@ class MetadataMerger:
             )
             for col in columns
         )
+
+    def _predict_purities(
+        self,
+        dataset_id: str,
+        todo: dict[str, str],
+        methods: tuple[str, ...],
+        cache_dir: Path,
+        show_progress: bool,
+    ) -> dict[str, dict[str, float]]:
+        """Predict purities for `todo` ({sample_id: idat_path}) of a dataset.
+
+        Returns {sample_id: {"purity_<method>": value}}; samples whose IDATs
+        could not be read are left out.
+        """
+        import shutil
+
+        import numpy as np
+        from mepylome.analysis import MethylAnalysis
+
+        id_of = {sid: Path(path).name for sid, path in todo.items()}
+
+        # analysis_ids restricts the IDAT reading to the needed samples.
+        analysis = MethylAnalysis(
+            analysis_dir=self.dataset_dir / dataset_id,
+            analysis_ids=sorted(set(id_of.values())),
+            output_dir=cache_dir / "betas",
+            prep="noob",
+            # Purity needs only its own probes, so skip the array-type
+            # scan and the full beta matrix.
+            cpgs=[],
+            load_full_betas=False,
+            verbose=1 if show_progress else 0,
+        )
+        predictions = {
+            m: analysis.predict_purity(m).astype(float) for m in methods
+        }
+        basename_to_id = analysis.idat_handler.basename_to_id
+        shutil.rmtree(cache_dir / "betas", ignore_errors=True)  # drop betas
+
+        out: dict[str, dict[str, float]] = {}
+        for sid, basename in id_of.items():
+            key = basename_to_id.get(basename)
+            if all(
+                key in predictions[m].index
+                and np.isfinite(predictions[m][key])
+                for m in methods
+            ):
+                out[sid] = {
+                    f"purity_{m}": round(float(predictions[m][key]), 3)
+                    for m in methods
+                }
+        return out
 
     def profile(
         self,

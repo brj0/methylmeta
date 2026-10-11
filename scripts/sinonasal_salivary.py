@@ -13,10 +13,10 @@ from pathlib import Path
 import polars as pl
 
 from methylmeta import MetadataMerger
-from methylmeta.vocab import all_tumor_types
 from methylmeta.catalog import find_datasets, load_catalog
 from methylmeta.fetch import check_datasets, download_missing
 from methylmeta.paths import CONFIGS_DIR
+from methylmeta.vocab import all_tumor_types
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

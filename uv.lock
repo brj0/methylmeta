@@ -1480,8 +1480,8 @@ wheels = [
 
 [[package]]
 name = "mepylome"
-version = "0.13.1"
-source = { git = "https://github.com/brj0/mepylome.git?rev=dev#1bc116672fe47f80e28012a8f52aeac53a35ebc4" }
+version = "0.13.2"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "dash" },
     { name = "dash-bootstrap-components" },
@@ -1500,6 +1500,10 @@ dependencies = [
     { name = "umap-learn" },
     { name = "xlrd" },
     { name = "xxhash" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/63/d7/a192b013b3b1f301b3b5db8d37d3221df1af7a4efdbcab80073caeffba86/mepylome-0.13.2.tar.gz", hash = "sha256:9ad2dd83546c911d77ccbbe0564fc6c7ce63eb8eb64b6d398a1f55456ab66769", size = 649062, upload-time = "2026-10-11T15:05:28.091Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/83/f9/ef9b4e4f0d3fdd28a7c23f893206869b5417f316a9b2c21ea0d6ce9519e5/mepylome-0.13.2-py3-none-any.whl", hash = "sha256:0ba845b402bb57c4a3686dca4d5e7a3ed626a61c249f0cc9483029ff64790289", size = 687940, upload-time = "2026-10-11T15:05:26.221Z" },
 ]
 
 [[package]]
@@ -1530,7 +1534,7 @@ dev = [
 requires-dist = [
     { name = "click" },
     { name = "fastexcel", marker = "extra == 'dev'" },
-    { name = "mepylome", git = "https://github.com/brj0/mepylome.git?rev=dev" },
+    { name = "mepylome", specifier = ">=0.13.2" },
     { name = "mypy", marker = "extra == 'dev'" },
     { name = "platformdirs" },
     { name = "polars" },
