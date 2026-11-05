@@ -257,27 +257,27 @@ TARGET_CLASSES = {
     "RCC_TR",
     "RCC_TUBULOCYST",
     # Breast
-    "BR_CA",
-    "BR_CA_APOCRINE",
-    "BR_CA_CRIB",
-    "BR_CA_HER2",
-    "BR_CA_HRP",
-    "BR_CA_INV_PAP",
-    "BR_CA_LOB",
-    "BR_CA_MALE",
-    "BR_CA_META",
-    "BR_CA_MICROINV",
-    "BR_CA_MICROPAP",
-    "BR_CA_MUC",
-    "BR_CA_NST",
-    "BR_CA_TALL",
-    "BR_CA_TN",
-    "BR_CA_TUB",
-    "BR_CYSTADCA",
-    "BR_ENC_PAP_CA",
-    "BR_SOL_PAP_CA",
+    # "BR_CA",
+    # "BR_CA_APOCRINE",
+    # "BR_CA_CRIB",
+    # "BR_CA_HER2",
+    # "BR_CA_HRP",
+    # "BR_CA_INV_PAP",
+    # "BR_CA_LOB",
+    # "BR_CA_MALE",
+    # "BR_CA_META",
+    # "BR_CA_MICROINV",
+    # "BR_CA_MICROPAP",
+    # "BR_CA_MUC",
+    # "BR_CA_NST",
+    # "BR_CA_TALL",
+    # "BR_CA_TN",
+    # "BR_CA_TUB",
+    # "BR_CYSTADCA",
+    # "BR_ENC_PAP_CA",
+    # "BR_SOL_PAP_CA",
     # Col
-    "CR_CA",
+    # "CR_CA",
     # Other
     "CCA",
     "GAST_CA",
@@ -375,9 +375,10 @@ MERGE_MAP = {
         "LU_SCC",
         "NSCLC",
     ],
-    "MEL_MET": [
+    "MEL": [
         "ACR_MEL",
         "MEL",
+        "MUC_MEL",
         "MEL_DESMO",
         "SKIN_MEL",
     ],
@@ -511,6 +512,9 @@ DATASET_DIR = Path("~/methylmeta/data").expanduser()
 OUTPUT = Path(
     "~/methylmeta/merged_metadata_sinonasal_salivary.tsv"
 ).expanduser()
+ACRONYMS_OUTPUT = Path(
+    "~/methylmeta/merged_metadata_sinonasal_salivary_acronyms.tsv"
+).expanduser()
 
 DOWNLOAD_MISSING = True  # set False to only report what's missing
 DOWNLOAD_IDAT = False  # idats are large - opt in explicitly
@@ -639,6 +643,15 @@ def main() -> None:
             df = merger.add_purities(df)
         df.write_csv(OUTPUT, separator="\t")
         logger.info("Wrote %d samples -> %s (with idat_path)", len(df), OUTPUT)
+
+    # 6. Second TSV: acronym -> full name for the classes in the final table.
+    acronyms = (
+        df.select("methylation_class", "methylation_class_name")
+        .unique()
+        .sort("methylation_class")
+    )
+    acronyms.write_csv(ACRONYMS_OUTPUT, separator="\t")
+    logger.info("Wrote %d classes -> %s", len(acronyms), ACRONYMS_OUTPUT)
 
 
 if __name__ == "__main__":
