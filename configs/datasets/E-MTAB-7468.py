@@ -7,8 +7,7 @@ def description(row):
 
 
 def sample_id(row):
-    suffix = len("_Grn.idat")
-    return row["Sample_ID"][:-suffix]
+    return row["Sample_ID"]
 
 
 def diagnosis(row):

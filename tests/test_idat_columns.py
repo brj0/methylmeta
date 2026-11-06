@@ -50,31 +50,28 @@ def test_drop_invalid_needs_paths() -> None:
 def test_add_purities_uses_cache(
     merger: MetadataMerger, monkeypatch: pytest.MonkeyPatch
 ) -> None:
-    import mepylome
+    calls: list[list[str]] = []
 
-    calls: list[str] = []
+    def fake_predict(self, dataset_id, todo, methods, cache_dir, show):
+        calls.append(sorted(todo))
+        return {
+            sid: {"purity_absolute": 0.8, "purity_estimate": 0.6}
+            for sid in todo
+        }
 
-    class FakeMethylData:
-        def __init__(self, file: str, prep: str) -> None:
-            calls.append(file)
-
-        def predict_purity(self, method: str) -> object:
-            import pandas as pd
-
-            return pd.Series([0.8 if method == "absolute" else 0.6])
-
-    monkeypatch.setattr(mepylome, "MethylData", FakeMethylData)
+    monkeypatch.setattr(MetadataMerger, "_predict_purities", fake_predict)
     df = merger.add_idat_paths(table())
 
     cache_dir = merger.dataset_dir.parent / "cache"
     out = merger.add_purities(df, show_progress=False, cache_dir=cache_dir)
     assert out["purity_absolute"].to_list() == [0.8, 0.8, None]
     assert out["purity_estimate"].to_list() == [0.6, 0.6, None]
-    assert len(calls) == 2
+    assert calls == [["s1", "s2"]]  # one batched call per dataset
 
     cache = json.loads((cache_dir / "TST1.json").read_text())
     assert set(cache["samples"]) == {"s1", "s2"}
     assert not list((merger.dataset_dir / "TST1").glob("*.json"))
 
     merger.add_purities(df, show_progress=False, cache_dir=cache_dir)
-    assert len(calls) == 2  # second run hits the cache
+    assert len(calls) == 1  # second run hits the cache
+

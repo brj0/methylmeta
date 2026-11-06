@@ -139,21 +139,22 @@ molecular and study context), never from a single column.
     datasets. Only when the class depends on a site or organ column in addition
     to the histology — typical for structured sources such as some TCGA cohorts
     that span several organs, and when the diagnosis is too general (e.g.
-    "Adenocarcinoma NOS", "SCC") — use two module-level dicts: _ORGAN (site
-    value → short organ name) and _CLASS keyed by (organ, histology), with one
-    line for every combination that occurs in the dataset, including those that
-    map to None. Do not add a catch-all default: unlisted combinations must
-    return None, so that a reviewer can spot them immediately and apply
-    changes. No complicated and nested if/elif per organ.
+    "Adenocarcinoma NOS", "SCC") — use two dicts defined INSIDE
+    methylation_class: organ (site value → short organ name) and mapping keyed
+    by (organ, histology), with one line for every combination that occurs in
+    the dataset, including those that map to None. Do not add a catch-all
+    default: unlisted combinations must return None, so that a reviewer can
+    spot them immediately and apply changes. No complicated and nested if/elif
+    per organ.
  4. Histology is the most reliable column for identifying the subtype. A
     morphology code (ICD-O-3) can help pin down the concrete subtype, but
     prefer the written text if no extra information is inside the code — it is
     easier to review. If you do use codes (ICD-O-3 morphology, ICD-10 site),
-    add a _-prefixed dict that translates each code into its human-readable
-    name (e.g. _MORPH_LABEL = {{"8140/3": "Adenocarcinoma, NOS"}}) and use it
-    in methylation_class, so a reviewer can follow the logic without knowing
-    the codes. Codes and WHO diagnosis terms change between editions, and some
-    are obsolete. Choose the best term in the current vocabulary (via
+    add a dict inside methylation_class that translates each code into its
+    human-readable name (e.g. morph_label = {{"8140/3": "Adenocarcinoma,
+    NOS"}}) and use it there, so a reviewer can follow the logic without
+    knowing the codes. Codes and WHO diagnosis terms change between editions,
+    and some are obsolete. Choose the best term in the current vocabulary (via
     search_tumor_vocabulary) and use the broader category if necessary.
  5. Fallback hierarchy when the class cannot be resolved at full specificity:
     - Always aim for the organ-specific subclass (e.g. SKIN_SCC). Fall back to
@@ -164,11 +165,12 @@ molecular and study context), never from a single column.
 Only define functions named exactly like canonical fields (plus dataset_id and
 description). Any other public function name is reported by test_config as a
 failure because the harmonizer would silently ignore it (e.g. `material`
-instead of `material_type`). Module-level dicts with a _ prefix are allowed
-and preferred for lookup tables. Otherwise avoid helper functions; if a helper
-is genuinely necessary, its name must start with _. Do not use a helper
-function for logic that only one field function uses — move the code inside
-that function instead.
+instead of `material_type`). Config files may contain only top-level function
+definitions: any other top-level statement (including a module-level dict or
+constant) is refused when the config is written, so define lookup tables inside
+the function that uses them. Avoid helper functions; if a helper is genuinely
+necessary, its name must start with _. Do not use a helper function for logic
+that only one field function uses — move the code inside that function instead.
 
 **IMPORTANT**
 Every raw metadata row must be harmonized. Some raw metadata
